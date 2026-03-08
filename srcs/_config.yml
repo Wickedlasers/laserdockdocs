@@ -1,0 +1,11 @@
+# Site settings
+title: "Project Documentation"
+description: "A comprehensive guide to our open-source project."
+theme: jekyll-theme-minimal # You can also try 'jekyll-theme-cayman' or 'jekyll-theme-slate'
+
+# Navigation Links (if your theme supports it)
+show_downloads: true
+google_analytics: # Add your UA-XXXXX-Y code here if you have one
+
+# Build settings
+remote_theme: pages-themes/minimal@v0.2.0
