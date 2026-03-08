@@ -1,2 +1,2 @@
 # laserdockdocs.github.io
-Official Laserdock Documentation Page
+Official Laserdock Documentation
