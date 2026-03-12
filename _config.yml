@@ -1,10 +1,17 @@
 # Site settings
-title: "Laserdock and LaserOS Documentations"
-description: "Converted from the original wiki format. Contains official documentation for Laserdock hardware, Laseros software, and related projects. Brought to you by the Laserdock Team from Wicked Lasers."
+title: "Laserdock and LaserOS Documentation"
+description: "Official documentation for Laserdock hardware and LaserOS software. Brought to you by the Laserdock Team."
+
+# Theme Selection
 theme: jekyll-theme-slate
 
-# Google Analytics (Optional)
-google_analytics: [Your-UA-Code]
+# CRITICAL FOR CUSTOM DOMAINS:
+# Since you're using a subdomain, the baseurl must be empty
+baseurl: "" 
+url: "https://laserdockdocs.wickedlasers.com"
 
-# Header button settings for built-in themes
+# Header settings
 show_downloads: true
+
+# Google Analytics
+# google_analytics: UA-XXXXXXXX-Xrue
