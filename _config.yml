@@ -1,11 +1,10 @@
 # Site settings
-title: "Project Documentation"
-description: "A comprehensive guide to our open-source project."
-theme: jekyll-theme-minimal # You can also try 'jekyll-theme-cayman' or 'jekyll-theme-slate'
+title: "Laserdock and LaserOS Documentations"
+description: "Converted from the original wiki format. Contains official documentation for Laserdock hardware, Laseros software, and related projects. Brought to you by the Laserdock Team from Wicked Lasers."
+theme: jekyll-theme-slate
 
-# Navigation Links (if your theme supports it)
+# Google Analytics (Optional)
+google_analytics: [Your-UA-Code]
+
+# Header button settings for built-in themes
 show_downloads: true
-google_analytics: # Add your UA-XXXXX-Y code here if you have one
-
-# Build settings
-remote_theme: pages-themes/minimal@v0.2.0
