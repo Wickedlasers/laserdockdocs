@@ -1,19 +1,26 @@
+---
+draft: false
+title: Laserdock Full Manual
+toc: true
+---
+
+
 # <span id="anchor"></span>Declaration Of Conformity
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000003E80000056085DFB847.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000003E80000056085DFB847.jpg"
 style="width:15.24cm;height:20.971cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000004F4000007029017E676.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000004F4000007029017E676.jpg"
 style="width:16.503cm;height:23.349cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000004F400000702828DCDF7.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000004F400000702828DCDF7.jpg"
 style="width:15.24cm;height:21.562cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000004F4000007024E0751E6.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000004F4000007024E0751E6.jpg"
 style="width:15.24cm;height:21.562cm" />
 
 # 
@@ -21,7 +28,7 @@ style="width:15.24cm;height:21.562cm" />
 # <span id="anchor-1"></span>Safety Warning
 
 <span id="anchor-2"></span><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000001B30000018313BD7FA6.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000001B30000018313BD7FA6.png"
 style="width:5.027cm;height:4.471cm" /> **WARNING!**
 
 **LASER RADIATION**
@@ -44,7 +51,7 @@ Laser Safety Officer (LSO).**
 **FOR PROFESSIONAL USE ONLY.**
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000D8E4000028C20000061D5E5100AB.emf"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000D8E4000028C20000061D5E5100AB.emf"
 style="width:10.47cm;height:1.614cm" />
 
 12/F, San Toi Building, 137-139
@@ -133,7 +140,7 @@ to contact LaserDock Ltd. directly.
 > 
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000522000007BCC49CE081.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000522000007BCC49CE081.png"
 > style="width:15.171cm;height:22.86cm" />
 
 # 
@@ -319,17 +326,17 @@ latest safety standard IEC 60825-1</td>
 # <span id="anchor-5"></span>Product Labelling and Placement
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000003EC000003D08E2217CA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000003EC000003D08E2217CA.png"
 style="width:9.225cm;height:8.968cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000C80000005A255D295D.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000C80000005A255D295D.jpg"
 style="width:5.297cm;height:2.378cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000016200000104B6A30C86.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000016200000104B6A30C86.png"
 style="width:5.676cm;height:4.172cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000002EA0000039A472BE24B.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000002EA0000039A472BE24B.png"
 style="width:8.608cm;height:10.634cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000003EC000003D08E2217CA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000003EC000003D08E2217CA.png"
 style="width:9.225cm;height:8.968cm" />
 
 # <span id="anchor-6"></span>Safety Guidelines and Proper Usage
@@ -496,7 +503,7 @@ laser products used for the purposes of visual entertainment.
 
 <figure>
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000003F2000001E0A4D9C7FB.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000003F2000001E0A4D9C7FB.png"
 style="width:15.24cm;height:7.243cm" />
 <figcaption aria-hidden="true"></figcaption>
 </figure>
@@ -508,9 +515,9 @@ style="width:15.24cm;height:7.243cm" />
 This part of the guide is only relevant to the US version of the MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000001B1000002B076B4CB4A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000001B1000002B076B4CB4A.png"
 style="width:4.949cm;height:7.867cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000178000002B3252F4301.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000178000002B3252F4301.png"
 style="width:4.284cm;height:7.867cm" />
 
 1\) Connect the e-stop pendant to the LaserCube.
@@ -532,7 +539,7 @@ flashing more quickly, once every second. After 10 seconds the LEDS will
 remain solidly on and the laser will be capable of emission.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000004F3000001A243958368.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000004F3000001A243958368.png"
 style="width:14.57cm;height:4.807cm" />
 
 NOTE: In case of an emergency and you need to stop the laser, press the
@@ -551,14 +558,14 @@ above the floor level where people may be present. **Eye exposure to
 laser light can cause instant injury and permanent blindness.**
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000399000002F7049CBEAD.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000399000002F7049CBEAD.png"
 style="width:12.421cm;height:10.243cm" />
 
 2\. Place appropriate compliant ANSI area warning sign(s) in and around
 the laser show venue especially areas accessible to the audience.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000006B40000040B51480D28.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000006B40000040B51480D28.png"
 style="width:16.406cm;height:9.894cm" />
 
 **Visit** [**www.laseros.com/guide**](http://www.laseros.com/guide)
@@ -572,7 +579,7 @@ Ultra Mk2 guide.**
 
 The rear panel LCD displays certain status information and allows
 configuration of the Control Mode and Connection Settings<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000002BC0000017337C5089F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000002BC0000017337C5089F.png"
 style="width:12.947cm;height:6.862cm" />
 
 # <span id="anchor-17"></span>MK2 Control Modes
@@ -600,9 +607,9 @@ other third party software.
 1)  Select Control Mode, LaserOS
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A5F3C3F9.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A5F3C3F9.png"
 > style="width:3.293cm;height:4.392cm" /><img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F4DB06AC.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F4DB06AC.png"
 > style="width:3.293cm;height:4.392cm" />
 
 > 
@@ -611,11 +618,11 @@ other third party software.
     is congested)
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140093C94D8.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140093C94D8.png"
 > style="width:3.507cm;height:4.674cm" /><img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014036541C9C.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014036541C9C.png"
 > style="width:3.493cm;height:4.657cm" /><img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A1880E4F.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A1880E4F.png"
 > style="width:3.493cm;height:4.657cm" />
 
 > 
@@ -626,13 +633,13 @@ other third party software.
     Server.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140093C94D8.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140093C94D8.png"
 style="width:3.334cm;height:4.445cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001409D4CA66C.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001409D4CA66C.png"
 style="width:3.334cm;height:4.445cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F4B55E87.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F4B55E87.png"
 style="width:3.321cm;height:4.427cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140BAFD1B0E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140BAFD1B0E.png"
 style="width:3.334cm;height:4.445cm" />
 
 4)  If using LAN, we recommend using LAN Client. If no DHCP server is
@@ -640,11 +647,11 @@ style="width:3.334cm;height:4.445cm" />
     self-assign an APIPA address.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140093C94D8.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140093C94D8.png"
 style="width:3.413cm;height:4.551cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014036541C9C.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014036541C9C.png"
 style="width:3.413cm;height:4.551cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140B71EF241.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140B71EF241.png"
 style="width:3.422cm;height:4.563cm" />
 
 > If changing connection method, the Laser cube may ask to reboot.
@@ -654,7 +661,7 @@ style="width:3.422cm;height:4.563cm" />
 > 
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014066AA589C.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014066AA589C.bmp"
 style="width:3.678cm;height:4.904cm" />
 
 ### <span id="anchor-19"></span>Installing LaserOS 0.17.7 or later
@@ -665,7 +672,7 @@ to <http://www.laseros.com/> and scroll down until you see the download
 links as shown in the image below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000004E00000036122E30F7D.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000004E00000036122E30F7D.png"
 style="width:17cm;height:11.781cm" />
 
 Alternatively, you can use the direct web links provided below for
@@ -684,7 +691,7 @@ only. Adding content must be done via PC/Mac version.
   “more info” to enable the “run anyway option”.  Click on “run anyway”.
 
 #### <span id="anchor-21"></span><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000004D8000002367B86816B.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000004D8000002367B86816B.png"
 style="width:17cm;height:7.758cm" /> MacOS Platform
 
 - Follow this link to [download and install for Mac
@@ -705,7 +712,7 @@ turned on or off from the power menu in the top left corner of the app.
 Pressing the ESC key will also turn it off.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000000000017F000000EE3A344951.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000000000017F000000EE3A344951.jpg"
 style="width:8.945cm;height:5.593cm" />
 
 Note: While securing projector aiming, turn off the unit and remove the
@@ -717,7 +724,7 @@ and laser show effects available. Audio, power level, colour/hue and
 other settings can also be adjusted from here.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000000000022400000141865A7806.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000000000022400000141865A7806.jpg"
 style="width:12.051cm;height:7.064cm" />
 
 ## <span id="anchor-25"></span>Playlist Control Mode
@@ -729,9 +736,9 @@ It can be selected by going to the Control Mode menu and selecting
 “Playlist” from the options.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001402D9B28C5.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001402D9B28C5.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001400D60C535.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001400D60C535.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### <span id="anchor-26"></span>Creating a custom playlist
@@ -748,7 +755,7 @@ You can create a new playlist by selecting the playlists app from the
 centre pane, then click the small ‘+’ icon as shown in the image below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000002CD0000017B64D99980.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000002CD0000017B64D99980.png"
 style="width:12.917cm;height:6.828cm" />
 
 Once you create a playlist, you will now be able to drag content from
@@ -761,7 +768,7 @@ simply save the empty playlist with the name of your choice as shown
 below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000004620000028B1AACD4BA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000004620000028B1AACD4BA.png"
 style="width:13.106cm;height:7.606cm" />
 
 When you click the “save playlist” button you will need to give the
@@ -770,7 +777,7 @@ only display a limited number of characters on the LCD when selecting a
 playlist from the drop down menu on the MK2 LCD.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000046000000286103F085E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000046000000286103F085E.png"
 style="width:14.446cm;height:8.331cm" />
 
 In this example guide we name the new playlist “Content 1”.
@@ -786,7 +793,7 @@ click the “Add” button to add the item to the chosen playlist as shown
 below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045F00000284D3824741.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045F00000284D3824741.png"
 style="width:15.473cm;height:8.904cm" />Note: The above image also shows
 a manual “Assign Duration” option which can be set to disabled for now,
 and its purpose is described further down in this document.
@@ -798,7 +805,7 @@ a company logo in SVG file format, you can add this to the playlist by
 using the import app within LaserOS.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045F000002868111205F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045F000002868111205F.png"
 style="width:17cm;height:9.813cm" />
 
 Select the import app, then select the playlist you wish to import
@@ -812,7 +819,7 @@ Select the SVG file you wish to add using the file browser window which
 appears after clicking the “import File button”
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045D00000280FB86CC44.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045D00000280FB86CC44.png"
 style="width:14.284cm;height:8.183cm" />
 
 In our example we are importing the Wicked Lasers Logo as an SVG file.
@@ -827,7 +834,7 @@ length and other parameters with a live preview of the result, as shown
 below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000443000003008894245F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000443000003008894245F.png"
 style="width:10.657cm;height:7.502cm" />
 
 After importing your custom image you can return to the playlists app
@@ -839,7 +846,7 @@ via the right click popup menu. The image below shows the newly added
 custom SVG called “WL Logo”
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045F00000285D7EB338D.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045F00000285D7EB338D.png"
 style="width:12.716cm;height:7.329cm" />
 
 Some content imported from SVG may need its render quality changing
@@ -857,7 +864,7 @@ playlist and turning on the “assign render quality” toggle followed by
 adjusting the render quality slider as shown below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045F0000028466006F7A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045F0000028466006F7A.png"
 style="width:14.319cm;height:8.239cm" />
 
 It is also possible to assign a manual duration override to the playlist
@@ -904,7 +911,7 @@ then select the playlist you wish to export, then finally click the SD
 card export button as shown in the image below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045F00000285BCC87EC8.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045F00000285BCC87EC8.png"
 style="width:15.113cm;height:8.71cm" />
 
 Your OS may ask for permission to access files on a removable volume, if
@@ -915,7 +922,7 @@ export progress bar depending on how many items need exporting to the SD
 card.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000004600000028BFBD43A10.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000004600000028BFBD43A10.png"
 style="width:15.034cm;height:8.738cm" />
 
 If the playlist already exists on the SD card (as you may have already
@@ -923,7 +930,7 @@ added it once before) you may be prompted as to whether you wish to
 overwrite the playlist on the SD card or not, as shown below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000045B000002832AB914EE.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000045B000002832AB914EE.png"
 style="width:15.238cm;height:8.788cm" />
 
 If you accept to replace the playlist then the previous playlist on the
@@ -941,7 +948,7 @@ it does not then you need to download the factory SD card image again
 from our GitHub here: <https://github.com/Wickedlasers/mk2SDContent>
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000003A1000001D5DA72B162.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000003A1000001D5DA72B162.png"
 style="width:13.448cm;height:6.789cm" />The image below shows the
 contents of the SD card with the new “Content 1” playlist folder and
 files added.
@@ -966,7 +973,7 @@ This is an extract of the Beams 1 playlist “.ldpl” JSON file viewed in a
 text editor:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000027B00000211DBABF6C6.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000027B00000211DBABF6C6.png"
 style="width:10.377cm;height:8.647cm" />
 
 This file has been edited after export in order to add custom MIDI
@@ -1025,7 +1032,7 @@ The photo below shows the custom SVG that was imported to LaserOS, then
 exported to the MK2 as “Content 1” playlist.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000002EA0000041E2108CC67.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000002EA0000041E2108CC67.jpg"
 style="width:9.518cm;height:13.446cm" />
 
 ### <span id="anchor-31"></span>Playlist Player UI
@@ -1034,11 +1041,11 @@ The playlist that the MK2 will use is selected from the Playlist
 selection menu drop down.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001402E9F996E.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001402E9F996E.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014043F681DA.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014043F681DA.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001409E69CD80.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001409E69CD80.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The chosen playlist selection will be saved and used again even through
@@ -1056,7 +1063,7 @@ options menu.
 The main media controls for the playlist player are shown below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404DB9C2B2.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404DB9C2B2.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Auto-Play (when enabled) will automatically cycle through another CUE in
@@ -1077,7 +1084,7 @@ The playlist can also be shuffled in order to randomize the order of
 CUE’s in the playlist.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140475EFE1E.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140475EFE1E.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### <span id="anchor-32"></span>CUE playback Speed
@@ -1088,9 +1095,9 @@ in the playlist control mode.
 This can be done using the Settings→Playback Speed menu
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408B33BB66.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408B33BB66.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001402F2A03BB.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001402F2A03BB.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The playback speed slider can also be assigned to a MIDI knob or fader
@@ -1119,7 +1126,7 @@ Example image of the playlist web app being served from the MK2 to
 Firefox macOS browser:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000217000002E6087E2ADC.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000217000002E6087E2ADC.png"
 style="width:9.638cm;height:13.367cm" />
 
 ## 
@@ -1132,7 +1139,7 @@ as projection size, rotation, and output power.
 An example of the quick image settings menu is shown below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000021F000002962DED4B42.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000021F000002962DED4B42.png"
 style="width:7.59cm;height:9.253cm" />
 
 Note: Any of the image settings can be reset to their default values by
@@ -1159,7 +1166,7 @@ This menu also shows the interlock status, current battery percentage,
 and cube internal temperature at the bottom of the menu.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000022000000295A33E4B33.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000022000000295A33E4B33.png"
 style="width:7.535cm;height:9.156cm" />
 
 - Theme Selection
@@ -1205,7 +1212,7 @@ The colour intensity (saturation / alpha) can also be adjusted using the
 Intensity Slider.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000220000002955BB9CB3C.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000220000002955BB9CB3C.png"
 style="width:7.59cm;height:9.222cm" />
 
 Note: The projection re-colour effect will only work if you have enabled
@@ -1219,9 +1226,9 @@ The playlist options menu is present on the top level menu (below the
 playlist player menu item) of the MK2 LCD when in playlist control mode
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404C44791F.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404C44791F.bmp"
 style="width:3.942cm;height:5.256cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140B32EFF16.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140B32EFF16.bmp"
 style="width:3.942cm;height:5.256cm" />
 
 This menu allows the source of the web app html to be selected, and also
@@ -1237,7 +1244,7 @@ the provided web app, assuming the user has the relevant HTML/CSS/JS
 knowledge.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A0418ABB.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A0418ABB.bmp"
 style="width:3.942cm;height:5.256cm" />
 
 Note: The web app is provided on the latest SD card image in the
@@ -1253,19 +1260,19 @@ Card Contents](https://github.com/Wickedlasers/mk2SDContent)
 ## <span id="anchor-38"></span><span id="anchor-39"></span>Laser Show Control Mode
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140203B6FB9.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140203B6FB9.png"
 style="width:3.942cm;height:5.256cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014016D5EF32.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014016D5EF32.png"
 style="width:3.942cm;height:5.256cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140B1450E8F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140B1450E8F.png"
 style="width:3.956cm;height:5.274cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140209CE050.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140209CE050.bmp"
 style="width:3.995cm;height:5.327cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C9F97C93.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C9F97C93.bmp"
 style="width:4.008cm;height:5.345cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140E837EBBD.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140E837EBBD.bmp"
 style="width:4.008cm;height:5.345cm" />
 
 > The latest version of the laser show player now has a categories
@@ -1333,13 +1340,13 @@ commands
 > Master
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140622AC15E.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140622AC15E.png"
 > style="width:3.307cm;height:4.41cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014063C21C6C.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014063C21C6C.png"
 > style="width:3.307cm;height:4.41cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140AC40A616.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140AC40A616.png"
 > style="width:3.281cm;height:4.374cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140DCDA1340.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140DCDA1340.png"
 > style="width:3.281cm;height:4.374cm" />
 
 > 
@@ -1347,13 +1354,13 @@ commands
 > Slave
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140622AC15E.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140622AC15E.png"
 > style="width:3.307cm;height:4.41cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014008442071.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014008442071.png"
 > style="width:3.281cm;height:4.374cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014017394292.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014017394292.png"
 > style="width:3.268cm;height:4.357cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140AAE686DC.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140AAE686DC.png"
 > style="width:3.268cm;height:4.357cm" />
 
 > 
@@ -1371,11 +1378,11 @@ commands
 > 
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140148EAA59.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140148EAA59.png"
 > style="width:3.24cm;height:4.322cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140B9E9F4BA.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140B9E9F4BA.png"
 > style="width:3.293cm;height:4.392cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140E48D960F.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140E48D960F.png"
 > style="width:3.293cm;height:4.392cm" />
 
 > 
@@ -1390,7 +1397,7 @@ The factory supplied SD card also includes MIDI mapping of some of these
 visualizers to the APC40 MK2 / APC mini MK2 grid buttons.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140CE6D1EF9.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140CE6D1EF9.bmp"
 style="width:4.048cm;height:5.398cm" />
 
 CubeOS has a number of built-in audio reactive visualizers, and these
@@ -1398,7 +1405,7 @@ can be manually selected via the drop-down list in addition to the
 previous and next buttons.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140B88F589A.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140B88F589A.bmp"
 style="width:4.06cm;height:5.415cm" />
 
 These react to the Audio Input source configured in Settings -\> Audio
@@ -1412,9 +1419,9 @@ when moving between visualizer CUE’s can also be adjusted through the
 Viz Options menu. Auto play at power-on can also be adjusted.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C817037D.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C817037D.bmp"
 style="width:4.06cm;height:5.415cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F448796E.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F448796E.bmp"
 style="width:4.06cm;height:5.415cm" />
 
 *Note: Since the audio visualizers are internally generated, live, they
@@ -1424,19 +1431,19 @@ is enabled.*
 Spectrum1
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000000000035D000001DA2259B609.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000000000035D000001DA2259B609.jpg"
 style="width:11.342cm;height:6.242cm" />
 
 Spectrum2
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000002A800000295F3638FC4.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000002A800000295F3638FC4.jpg"
 style="width:7.743cm;height:7.537cm" />
 
 Voice
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000000000043C000001ED7AE37915.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000000000043C000001ED7AE37915.jpg"
 style="width:12.233cm;height:5.556cm" />
 
 The Visualizers can also have effects added to them, configured from the
@@ -1448,51 +1455,51 @@ or the online wiki for more info on the built in effects, and also the
 speed of some BPM based effects.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001407F20D147.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001407F20D147.png"
 style="width:4.048cm;height:5.398cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014010677FDC.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014010677FDC.png"
 style="width:4.048cm;height:5.398cm" />
 
 Filter UI for a single effect, or All effects
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001400F95A70E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001400F95A70E.png"
 style="width:4.154cm;height:5.539cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404AA68E4D.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404AA68E4D.png"
 style="width:4.166cm;height:5.556cm" />
 
 Color Cycle Effect
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001405EC5A5CA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001405EC5A5CA.png"
 style="width:4.339cm;height:5.786cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140BF79E124.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140BF79E124.png"
 style="width:4.339cm;height:5.786cm" />
 
 Zoom Effect
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140DA97991A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140DA97991A.png"
 style="width:4.339cm;height:5.786cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F2A692E3.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F2A692E3.png"
 style="width:4.339cm;height:5.786cm" />
 
 Hue Effect
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408225B272.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408225B272.png"
 style="width:4.219cm;height:5.627cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D1F0817E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D1F0817E.png"
 style="width:4.219cm;height:5.627cm" />
 
 Colorize Effect Flash Effect Strobe Effect
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001401FBB4D16.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001401FBB4D16.png"
 style="width:4.216cm;height:5.622cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404818DEAE.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404818DEAE.png"
 style="width:4.154cm;height:5.539cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140B0C599C8.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140B0C599C8.png"
 style="width:4.128cm;height:5.503cm" />
 
 ## <span id="anchor-43"></span>ArtNet Control Mode
@@ -1503,14 +1510,14 @@ The ArtNet mode can be selected by going into Control Mode and selecting
 it
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001401D889BC7.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001401D889BC7.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Once selected the MK2 will restart into ArtNet mode, and the ArtNet
 settings will now be available from the top level menu as shown below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014000C348A4.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014000C348A4.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### <span id="anchor-45"></span>ArtNet settings Menu
@@ -1520,7 +1527,7 @@ style="width:4.001cm;height:5.339cm" />
 This sets which universe the MK2 will respond to on the network.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404C7CD495.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404C7CD495.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 #### <span id="anchor-47"></span>ArtNet Start Address
@@ -1530,7 +1537,7 @@ the 16 channel profile start address within the ArtNet/DMX address range
 of 1-512.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001405100285C.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001405100285C.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 #### <span id="anchor-48"></span>Fixture Profile
@@ -1546,7 +1553,7 @@ Map](#12.7.DMX/ArtNet Default Fixture Channel Allocation|outline) or the
 wiki (or PDF supplied on the factory SD card).
 
 #### <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C058A64E.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C058A64E.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Note: The default profile is compatible with the FB3/FB4 16 channel
@@ -1565,7 +1572,7 @@ Playlist, so the first CUE selected over ArtNet using the CUE/Page
 channel will project the first item in the playlist.
 
 #### <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140FDBA0F7B.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140FDBA0F7B.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 #### <span id="anchor-50"></span>Defaults
@@ -1574,7 +1581,7 @@ This button will reset all items within the DMX menu to their factory
 defaults.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A4C818FC.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A4C818FC.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### <span id="anchor-51"></span>ArtNet Status 
@@ -1588,7 +1595,7 @@ will show a green tick to the right of the DMX label and a valid IP
 address will be shown below it.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014080FA2260.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014080FA2260.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 If ArtNet data is not being correctly received then the status bar will
@@ -1608,14 +1615,14 @@ The DMX mode can be selected by going into Control Mode and selecting
 DMX-512
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140609817E0.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140609817E0.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Once selected the MK2 will restart into DMX-512 mode, and the DMX
 settings will now be available from the top level menu as shown below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408C6A91A8.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408C6A91A8.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### 
@@ -1629,7 +1636,7 @@ to move the 16 channel profile start address within the DMX address
 range of 1-512.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001407F256315.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001407F256315.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 #### <span id="anchor-56"></span>Fixture Profile
@@ -1644,7 +1651,7 @@ Map](#12.7.DMX/ArtNet Default Fixture Channel Allocation|outline) or on
 the wiki (or PDF on the factory supplied SD card).
 
 #### <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408AB0792E.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408AB0792E.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Note: The default profile is compatible with the FB3/FB4 16 channel
@@ -1663,7 +1670,7 @@ Playlist, so the first CUE selected over DMX using the CUE/Page channel
 will project the first item in the playlist.
 
 #### <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001400ED515E4.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001400ED515E4.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 #### <span id="anchor-58"></span>Defaults
@@ -1672,7 +1679,7 @@ This button will reset all items within the DMX menu to their factory
 defaults.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C60A1F96.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C60A1F96.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### 
@@ -1687,7 +1694,7 @@ DMX In connector, the status bar will show a green tick to the right of
 the DMX label as shown below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140230AEACB.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140230AEACB.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 If DMX is not being received then the status bar will show a red cross.
@@ -1871,28 +1878,28 @@ full saturation (S = 1.0, V = 1.0).
 > Test Patterns are still accessible though.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D818A2BA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D818A2BA.png"
 style="width:3.321cm;height:4.427cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001405A9A625A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001405A9A625A.png"
 style="width:3.307cm;height:4.41cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001403475ED36.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001403475ED36.png"
 style="width:3.298cm;height:4.397cm" />
 
 > By selecting one of the other control modes, such as Visualizer, the
 > CubeOS stand-alone image settings are made available:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014051735956.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014051735956.png"
 style="width:3.307cm;height:4.41cm" />
 
 ### <span id="anchor-67"></span><span id="anchor-68"></span><span id="anchor-69"></span><span id="anchor-70"></span>Image Setup
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140160D7C1D.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140160D7C1D.png"
 style="width:3.334cm;height:4.445cm" /> ****<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A41929A1.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A41929A1.png"
 style="width:3.316cm;height:4.42cm" /> ****<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A6D29B68.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A6D29B68.png"
 style="width:3.334cm;height:4.445cm" />
 
 > Image power, rotation, X-size, Y-size, X-Flip, Y-Flip, X-Position and
@@ -1915,11 +1922,11 @@ style="width:3.334cm;height:4.445cm" />
 ### <span id="anchor-71"></span>Colour Balance
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404EE66917.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404EE66917.png"
 style="width:3.401cm;height:4.533cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140EED9CFB7.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140EED9CFB7.png"
 style="width:3.413cm;height:4.551cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140470661B3.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140470661B3.png"
 style="width:3.422cm;height:4.563cm" />
 
 > Colour balance settings allow for fine adjustments of maximum and
@@ -1931,17 +1938,17 @@ style="width:3.422cm;height:4.563cm" />
 ### <span id="anchor-72"></span>Safety Zone
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014030BCDA75.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014030BCDA75.png"
 style="width:3.637cm;height:4.851cm" /> ****<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D7317285.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D7317285.png"
 style="width:3.612cm;height:4.815cm" /> ****<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140FCFB2D8B.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140FCFB2D8B.png"
 style="width:3.581cm;height:4.775cm" /> ****
 
 ****<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014016743A27.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014016743A27.png"
 style="width:3.572cm;height:4.763cm" /> ****<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C6CCE962.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C6CCE962.png"
 style="width:3.56cm;height:4.745cm" />
 
 The Safety Zone setting, when enabled allows a basic shape to be created
@@ -1973,21 +1980,21 @@ located.
 Keep Within Safety Zone
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000000000526000001B755B18CD7.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000000000526000001B755B18CD7.jpg"
 style="width:15.187cm;height:5.062cm" />
 
 Keep Out Safety Zone
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000000000525000001DC82110C19.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000000000525000001DC82110C19.jpg"
 style="width:15.222cm;height:5.503cm" />
 
 ### <span id="anchor-73"></span>Test Patterns
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140BE68634B.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140BE68634B.png"
 style="width:3.798cm;height:5.062cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001403BECC7E5.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001403BECC7E5.png"
 style="width:3.798cm;height:5.062cm" />
 
 > The built-in test patterns are provided to verify correct operation of
@@ -2023,9 +2030,9 @@ The tempo menu can be accessed by going to Settings→Tempo when in either
 playlist or visualizer control mode.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F0949A36.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F0949A36.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F678F662.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F678F662.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The tempo can be set using the BPM slider, or can be set using the “Tap
@@ -2044,7 +2051,7 @@ buttons on an APC40 MK2 if using the factory supplied MIDI mappings.
 Note: MK2 menu items in yellow (as shown in image above) mean they have
 been MIDI mapped to a dial/fader on an external MIDI controller. They
 will only show in yellow when a compatible MIDI controller is conn<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000021A000001529F4FC536.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000021A000001529F4FC536.png"
 style="width:8.493cm;height:5.336cm" />ected to the USB port of the MK2.
 
 ## <span id="anchor-75"></span>Mk2 Settings – Audio
@@ -2053,7 +2060,7 @@ Audio settings can be adjusted by going into Settings-\>Audio as shown
 below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A4D35C4D.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A4D35C4D.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The audio settings allow changes to the audio output volume, audio
@@ -2073,7 +2080,7 @@ press again on the knob to exit and save this value (preserved through
 power cycle).
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014018E1179F.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014018E1179F.bmp"
 style="width:4.001cm;height:5.339cm" />To map the audio volume output
 slider to a MIDI controller then ensure USB MIDI is enabled in
 settings-\>USB MIDI and a compatible APC MIDI device is connected, then
@@ -2095,7 +2102,7 @@ extra audio processing present on the device connected to the line
 output port of the MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001405D42114F.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001405D42114F.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Example: Some portable amplified speakers have a DSP in order to provide
@@ -2115,7 +2122,7 @@ mode, as all audio is handled by LaserOS in this case.
 
 This dropdown is used to change the audio input source used by the MK2,
 and can be set to either the built in microphone or the stereo <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001409C19DB74.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001409C19DB74.bmp"
 style="width:4.001cm;height:5.339cm" />line input connector.
 
 The audio reactive visualizers and effects built into the MK2 will be
@@ -2134,9 +2141,9 @@ Equally setting a too high gain will result in over driven visualizers.
 Both inputs can have their gain adjusted from 0dB to 50dB in 5dB steps.
 
 ### <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140004C5F6B.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140004C5F6B.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001409352A0C4.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001409352A0C4.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### <span id="anchor-80"></span> Audio Defaults
@@ -2144,7 +2151,7 @@ style="width:4.001cm;height:5.339cm" />
 The entire audio settings can be reset to factory default values by
 clicking this button and accepting the pop-up message box asking to
 reset the values.<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F8F9E926.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F8F9E926.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ## 
@@ -2152,9 +2159,9 @@ style="width:4.001cm;height:5.339cm" />
 ## <span id="anchor-81"></span>Mk2 Settings – Connection
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001405764E6E1.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001405764E6E1.png"
 style="width:4.057cm;height:5.41cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001407A909C8A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001407A909C8A.png"
 style="width:4.057cm;height:5.41cm" />
 
 Select the connection type (required for control via LaserOS, ArtNet or
@@ -2166,7 +2173,7 @@ set to LAN Client mode on a network without a DHCP server, the Laser
 cubes will self-assign an APIPA address.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408AA24156.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408AA24156.png"
 style="width:4.008cm;height:5.345cm" />
 
 The tick by LAN-C indicates that the Mk2 Laser cube has connected in LAN
@@ -2179,9 +2186,9 @@ The Network settings can be customized under the [*Network
 menu*](http://wiki.laseros.com/index.php/UltraMk2Network).
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404D455DC7.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404D455DC7.png"
 style="width:3.863cm;height:5.151cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140061687DE.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140061687DE.png"
 style="width:3.881cm;height:5.173cm" />
 
 Note: If the connection mode is changed, the Mk2 Laser cube will need to
@@ -2191,7 +2198,7 @@ Move the red cursor to highlight “Yes” and push the rotary knob to
 confirm.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014066AA589C.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014066AA589C.bmp"
 style="width:4.323cm;height:5.764cm" />
 
 #### <span id="anchor-82"></span>APIPA mode explained
@@ -2225,9 +2232,9 @@ be done in order to connect with our LaserOS software using APIPA:
 ## <span id="anchor-83"></span>Mk2 Settings – Network
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D818A2BA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D818A2BA.png"
 style="width:3.321cm;height:4.427cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001402AE41C7A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001402AE41C7A.png"
 style="width:3.307cm;height:4.41cm" />
 
 ### <span id="anchor-84"></span><span id="anchor-85"></span><span id="anchor-86"></span>LAN Client Mode
@@ -2246,13 +2253,13 @@ Auto mode. Uses DHCP server if present, or AIPIPA.
 Static IP. Manual configuration of IP Address, Net Mask and Gateway
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A6F2D637.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A6F2D637.png"
 style="width:3.348cm;height:4.463cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014062E83824.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014062E83824.png"
 style="width:3.351cm;height:4.47cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014035799B1B.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014035799B1B.png"
 style="width:3.348cm;height:4.463cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014076342E69.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014076342E69.png"
 style="width:3.316cm;height:4.42cm" />
 
 To enter the IP address, short press with the entry box highlighted.
@@ -2262,9 +2269,9 @@ Select the tick button to close the entry box.
 The gateway address and subnet mask can be edited in the same way.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014070E1086E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014070E1086E.png"
 style="width:3.348cm;height:4.463cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001409102BA06.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001409102BA06.png"
 style="width:3.334cm;height:4.445cm" />
 
 ### 
@@ -2279,7 +2286,7 @@ be far easier to implement, however it is retained for most flexibility.
 Manual configuration of IP Address and Net Mask
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140045F0CD0.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140045F0CD0.png"
 style="width:3.478cm;height:4.639cm" />
 
 ### <span id="anchor-91"></span><span id="anchor-92"></span>WiFi Server Mode
@@ -2300,17 +2307,17 @@ SSID, Password, Channel (including Auto), Bandwidth, IP Address, Net
 Mask
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001400A98068C.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001400A98068C.png"
 style="width:3.307cm;height:4.41cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C81B5C7A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C81B5C7A.png"
 style="width:3.293cm;height:4.392cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014057171006.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014057171006.png"
 style="width:3.298cm;height:4.397cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140E4904C62.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140E4904C62.png"
 style="width:3.254cm;height:4.339cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001402613E951.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001402613E951.png"
 style="width:3.246cm;height:4.327cm" />
 
 ### 
@@ -2329,19 +2336,19 @@ wireless modes.
 SSID, Password, IP Mode - Auto / Static (IP Address, Gateway, Net Mask)
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001406671C9A9.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001406671C9A9.png"
 style="width:3.016cm;height:4.022cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140599E2C16.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140599E2C16.png"
 style="width:2.99cm;height:3.986cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140990D5DCC.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140990D5DCC.png"
 style="width:3.254cm;height:4.339cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140C6A3EA71.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140C6A3EA71.png"
 style="width:3.254cm;height:4.339cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140996CEBE9.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140996CEBE9.png"
 style="width:3.246cm;height:4.327cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001400772B2B8.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001400772B2B8.png"
 style="width:3.24cm;height:4.322cm" />
 
 To enter the IP address, short press with the entry box highlighted.
@@ -2376,7 +2383,7 @@ and pin configuration will be indicated by the status bar background on
 each slave turning from black to purple.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001406EE4C13E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001406EE4C13E.png"
 style="width:3.374cm;height:4.498cm" />
 
 #### <span id="anchor-97"></span>Cube Link Mode Customisations
@@ -2384,17 +2391,17 @@ style="width:3.374cm;height:4.498cm" />
 Enable, Master/Slave, Link Channel, PIN, Group
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408A34D6F2.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408A34D6F2.png"
 style="width:3.293cm;height:4.392cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014069617B4B.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014069617B4B.png"
 style="width:3.263cm;height:4.352cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D1E60984.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D1E60984.png"
 style="width:3.246cm;height:4.327cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014055370281.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014055370281.png"
 style="width:3.56cm;height:4.745cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001409B4CCD0F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001409B4CCD0F.png"
 style="width:3.56cm;height:4.745cm" />
 
 > To set the PIN, either use the + and – buttons to increase / decrease
@@ -2415,21 +2422,21 @@ In order to use any of these MIDI devices, the USB must be enabled by
 going to the Settings -\>USB MIDI menu.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001407F27FF45.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001407F27FF45.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140FB4F133A.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140FB4F133A.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A78D5750.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A78D5750.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Note: USB MIDI does **NOT** operate when the unit is in LaserOS / ArtNet
 / DMX control modes, as these modes ar<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A9A20B7D.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A9A20B7D.bmp"
 style="width:4.001cm;height:5.339cm" />e controlled using alternate
 communication protocols.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001403852FCAE.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001403852FCAE.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 If a compatible device is detected on the MK2 USB port then the status
@@ -2446,9 +2453,9 @@ in the playlist control mode.
 This can be done using the Settings→Playback Speed menu
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001408B33BB66.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001408B33BB66.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001402F2A03BB.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001402F2A03BB.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The playback speed slider can also be assigned to a MIDI knob or fader
@@ -2475,9 +2482,9 @@ the MK2. With no ILDA cable connected, this item will be greyed out on
 the MK2 menu UI.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001407DF9851A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001407DF9851A.png"
 style="width:4.048cm;height:5.398cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140100AD2C1.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140100AD2C1.png"
 style="width:4.048cm;height:5.398cm" />
 
 When an external DAC is connected via the ILDA input connector, an
@@ -2503,9 +2510,9 @@ the colour balance at low intensities. To compensate, the ILDA Input Cfg
 restored. This allows errors from external DACs to be tuned out.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140696B6717.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140696B6717.png"
 style="width:4.008cm;height:5.345cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140599B8C82.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140599B8C82.png"
 style="width:4.008cm;height:5.345cm" />
 
 # <span id="anchor-102"></span>MK2 Built in Effects
@@ -2534,7 +2541,7 @@ The Effects menu can be accessed from the top level menu when the MK2 is
 in playlist or visualizer control mode as shown in the image below:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F577A18A.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F577A18A.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 In order to be able to use the effects they must be enabled. If no
@@ -2542,7 +2549,7 @@ effects are required then it is recommended to have the effects disabled
 to prevent unintentional changes to the projection.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140603C49F4.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140603C49F4.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Any of the effect parameters changed via the LCD menu UI will be
@@ -2591,7 +2598,7 @@ through the effect menu. If a specific effect filter is selected then
 only the parameters for that effect will be visible.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140DE9DD66E.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140DE9DD66E.bmp"
 style="width:4.001cm;height:5.339cm" />*Note: The effect filter is only
 for filtering effects in the UI to allow faster config of the chosen
 effect, but does not have any bearing on which effects are activated.*
@@ -2607,20 +2614,20 @@ effect speed setting (tempo can be set via settings→tempo menu).
 The colour sequence is currently fixed to the following:
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000014400000112FAB7EC74.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000014400000112FAB7EC74.png"
 style="width:2.819cm;height:2.383cm" />Blue → Green → Cyan → Red →
 Magenta → Yellow
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000145000001100760404E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000145000001100760404E.png"
 style="width:2.819cm;height:2.383cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000014100000112F6AB42AE.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000014100000112F6AB42AE.png"
 style="width:2.819cm;height:2.383cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000014400000105727FD791.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000014400000105727FD791.png"
 style="width:2.819cm;height:2.383cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000014500000114D89F73DA.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000014500000114D89F73DA.png"
 style="width:2.819cm;height:2.383cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000143000001112C285928.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000143000001112C285928.png"
 style="width:2.819cm;height:2.383cm" />The above images show the colour
 cycle effect colours when +White parameter is OFF.
 
@@ -2629,11 +2636,11 @@ cycle effect colours when +White parameter is OFF.
 #### <span id="anchor-107"></span>Colour cycle effect parameters
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F87AA280.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F87AA280.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014086551E1B.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014086551E1B.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140AC8DCE4C.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140AC8DCE4C.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The adjustable parameters for the colour cycle effect are Intensity,
@@ -2666,9 +2673,9 @@ The +White parameter is useful when using fan beam patterns as shown
 below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000145000001035A2DF249.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000145000001035A2DF249.png"
 style="width:5.854cm;height:4.665cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000001440000010303DD7723.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000001440000010303DD7723.png"
 style="width:5.837cm;height:4.665cm" />
 
 With +White off, only non white parts of the beam pattern will be
@@ -2682,7 +2689,7 @@ using our default MIDI mapping provided on the SD card shipped with the
 MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000003FC0000027E5464D862.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000003FC0000027E5464D862.png"
 style="width:17cm;height:10.633cm" />
 
 ### <span id="anchor-109"></span>Zoom Effect
@@ -2718,7 +2725,7 @@ using our default MIDI mapping provided on the SD card shipped with the
 MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000047F000002CA12706841.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000047F000002CA12706841.png"
 style="width:17cm;height:10.545cm" />
 
 ### 
@@ -2734,11 +2741,11 @@ adjustments.
 The images below show the available user parameters for the hue effect.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D95EEE7D.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D95EEE7D.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014096A56829.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014096A56829.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140322236BB.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140322236BB.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The “+White” works the same as described in the Colour cycle effect
@@ -2756,7 +2763,7 @@ The hue slider allows a colour to be selected within the hue range of 0
 to 360 degrees as shown in the image below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000001410000002F68B1AB08.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000001410000002F68B1AB08.png"
 style="width:10.971cm;height:1.605cm" />
 
 The “Force On” button is intended to be MIDI mapped to an APC button for
@@ -2782,7 +2789,7 @@ using our default MIDI mapping provided on the SD card shipped with the
 MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000047F000002CA9961B92D.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000047F000002CA9961B92D.png"
 style="width:17cm;height:10.545cm" />
 
 ### <span id="anchor-115"></span>Colourize Effect
@@ -2790,22 +2797,22 @@ style="width:17cm;height:10.545cm" />
 This effect will apply a rotating colour hue on the projection.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000001440000012D467B9A06.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000001440000012D467B9A06.png"
 style="width:5.837cm;height:5.422cm" />The left image is without the
 effect applied, and the right with the effect applied.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000013E00000129B46BE63F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000013E00000129B46BE63F.png"
 style="width:5.729cm;height:5.35cm" />
 
 #### <span id="anchor-116"></span>Colourize effect parameters
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140ECC676EF.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140ECC676EF.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140EB88E597.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140EB88E597.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404888522A.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404888522A.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The intensity parameter determines how much of the colour effect will be
@@ -2827,7 +2834,7 @@ when using our default MIDI mapping provided on the SD card shipped with
 the MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000047F000002CA9C863F35.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000047F000002CA9C863F35.png"
 style="width:17cm;height:10.545cm" />
 
 ### <span id="anchor-118"></span>Flash Effect
@@ -2838,9 +2845,9 @@ multiple of the current beat, based on the current tempo.
 #### <span id="anchor-119"></span>Flash effect parameters
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F8533FB0.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F8533FB0.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404AE7D36B.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404AE7D36B.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The intensity parameter determines how much of the projection will have
@@ -2862,7 +2869,7 @@ when using our default MIDI mapping provided on the SD card shipped with
 the MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000047F000002CA7DACD152.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000047F000002CA7DACD152.png"
 style="width:17cm;height:10.545cm" />
 
 ### 
@@ -2877,9 +2884,9 @@ menu).
 #### <span id="anchor-122"></span>Strobe effect parameters
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F8533FB0.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F8533FB0.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014060CC21E1.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014060CC21E1.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The intensity parameter determines the amount the projection will have
@@ -2901,7 +2908,7 @@ when using our default MIDI mapping provided on the SD card shipped with
 the MK2.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000047F000002CA831C4284.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000047F000002CA831C4284.png"
 style="width:17cm;height:10.545cm" />
 
 # <span id="anchor-124"></span>Status Info Page
@@ -2911,19 +2918,19 @@ hardware/network status. It is useful when info like SD card free status
 or buffering status need to be checked by the user.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001406FBAC429.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001406FBAC429.png"
 style="width:3.651cm;height:4.868cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140BD86AA68.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140BD86AA68.png"
 style="width:3.667cm;height:4.891cm" />
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014096C77EA5.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014096C77EA5.png"
 style="width:3.625cm;height:4.833cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014087A2819E.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014087A2819E.png"
 style="width:3.634cm;height:4.845cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140312215D0.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140312215D0.png"
 style="width:3.651cm;height:4.868cm" /> <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140F908991A.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140F908991A.png"
 style="width:3.634cm;height:4.845cm" />
 
 > **Battery:** The Battery gauge shows an estimation of battery state of
@@ -2956,9 +2963,9 @@ Gigabytes
 > 
 
 > <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A08DC84B.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A08DC84B.png"
 > style="width:3.649cm;height:4.867cm" /> <img
-> src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140E7CC16F7.png"
+> src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140E7CC16F7.png"
 > style="width:3.634cm;height:4.845cm" />
 
 > 
@@ -3017,21 +3024,21 @@ In order to use any of these MIDI devices, the USB must be enabled by
 going to the Settings -\>USB MIDI menu.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001407F27FF45.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001407F27FF45.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140FB4F133A.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140FB4F133A.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A78D5750.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A78D5750.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Note: USB MIDI does **NOT** operate when the unit is in LaserOS / ArtNet
 / DMX control modes, as these modes ar<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140A9A20B7D.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140A9A20B7D.bmp"
 style="width:4.001cm;height:5.339cm" />e controlled using alternate
 communication protocols.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001403852FCAE.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001403852FCAE.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 If a compatible device is detected on the MK2 USB port then the status
@@ -3047,11 +3054,11 @@ press on a slider to enter edit mode, then long press to bring up the
 context menu, and then select “Link MIDI Knob” as shown below.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001400032D2C4.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001400032D2C4.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014090228FA2.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014090228FA2.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140D6DB1305.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140D6DB1305.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 Once “Link MIDI knob” is selected, the MK2 will wait for the user to
@@ -3063,7 +3070,7 @@ another control then the MIDI info will be shown in orange instead of
 green.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001404281142B.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001404281142B.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 If the user accepts this APC control while the MIDI status is orange,
@@ -3088,14 +3095,14 @@ editing the slider on the MK2 menu UI will also update the APC’s led
 ring as they are always kept in sync with each other.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140501207D3.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140501207D3.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The image below shows how an APC dial will look once mapped to a MK2
 slider element.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000000000300000004001B84800D.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000000000300000004001B84800D.jpg"
 style="width:6.502cm;height:8.67cm" />
 
 Note: When an APC dial is un-linked from a MK2 UI element, the LED ring
@@ -3109,11 +3116,11 @@ press to bring up the context menu, then select “unlink MIDI Knob”
 option.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140567C66A0.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140567C66A0.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014081122E39.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014081122E39.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001405B010FD2.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001405B010FD2.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The images above show all the options available on the slider pop-up
@@ -3142,16 +3149,16 @@ instead of a blue colour.
 The images below show the MK2 in playlist control mode with it’s play
 button MIDI mapped to an APC button. If the APC button selected has an
 RGB LED associated with it then the button will l<img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140E696B544.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140E696B544.bmp"
 style="width:4.001cm;height:5.339cm" />ight up on the APC with the
 colour selected from the colour dropdown.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140BD52F4E2.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140BD52F4E2.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014029E7DFBB.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014029E7DFBB.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014047BDCCAD.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014047BDCCAD.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 ### 
@@ -3184,13 +3191,13 @@ single LED colour, then only select the first colour from the colour
 drop down.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014017CC487F.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014017CC487F.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F0000001401C17C152.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F0000001401C17C152.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F00000014023581B81.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F00000014023581B81.bmp"
 style="width:4.001cm;height:5.339cm" /><img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000000F000000140E696B544.bmp"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000000F000000140E696B544.bmp"
 style="width:4.001cm;height:5.339cm" />
 
 The drop down UI element will now be shown in yellow, indicating a
@@ -3198,7 +3205,7 @@ mapping to an APC button, and the APC button (top right) will change to
 the selected colour (Magenta in this example).
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000000000400000003005306EF8D.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000000000400000003005306EF8D.jpg"
 style="width:8.67cm;height:6.502cm" />
 
 ### <span id="anchor-133"></span>Default APC40 MK2 MIDI mapping
@@ -3214,7 +3221,7 @@ control mode, and items in yellow are global device adjustments linked
 to items within Settings→Projection→Image Setup.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/100000010000047F000002CA63883700.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/100000010000047F000002CA63883700.png"
 style="width:18.464cm;height:11.453cm" />
 
 > 
@@ -3228,7 +3235,7 @@ updates.
 1\. Note the IP address from the bottom right corner of the LCD.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000002BC0000017337C5089F.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000002BC0000017337C5089F.png"
 style="width:12.947cm;height:6.862cm" />
 
 2\. Open a web browser and type in that same IP address.
@@ -3255,7 +3262,7 @@ Firmware Active Partition. There are 2 partitions to allow fall back to
 a good working state should an update fail or be interrupted.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000003620000036DD608080D.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000003620000036DD608080D.jpg"
 style="width:11.972cm;height:12.134cm" />
 
 ## <span id="anchor-136"></span><span id="anchor-137"></span>Config Menu
@@ -3269,7 +3276,7 @@ The Config Menu has 3 tabs, for network set-up and mode selection:
 ### <span id="anchor-138"></span><span id="anchor-139"></span>WiFi Tab
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000003400000035CF6EE9CD3.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000003400000035CF6EE9CD3.jpg"
 style="width:13.166cm;height:13.637cm" />
 
 Where WiFi interference is present, the LaserCubeWiFi channel can be
@@ -3289,7 +3296,7 @@ support WPS.
 ### <span id="anchor-140"></span><span id="anchor-141"></span>LAN Tab
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000000000003500000020A32B4D081.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000000000003500000020A32B4D081.jpg"
 style="width:13.944cm;height:8.594cm" />
 
 The IP address and subnet can be set for when the LaserCube is operating
@@ -3299,7 +3306,7 @@ APIPA is preferred though.)
 ### <span id="anchor-142"></span><span id="anchor-143"></span>General Tab
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000000000345000001D9BEE39301.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000000000345000001D9BEE39301.jpg"
 style="width:15.111cm;height:8.541cm" />
 
 The network operating mode can be set from the drop down tab.
@@ -3336,7 +3343,7 @@ Click Upload.
 Wait for the update to complete and the LaserCube reboot.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000000000340000001B1F4A671DB.jpg"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000000000340000001B1F4A671DB.jpg"
 style="width:12.368cm;height:6.458cm" />
 
 # <span id="anchor-145"></span>Factory Reset Procedure
@@ -3346,7 +3353,7 @@ defaults, you can perform the factory reset as shown below. This should
 only be done if absolutely necessary.
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/10000001000001AA000002126D77E36C.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/10000001000001AA000002126D77E36C.png"
 style="width:7.675cm;height:9.548cm" />
 
 To Factory reset the MK2, firstly ensure the unit is powered OFF.
@@ -3396,7 +3403,7 @@ factory micro SD card then these are available from here:
 <https://github.com/Wickedlasers/mk2SDContent>
 
 <img
-src="ULTRA_MK2_Full_Manual_v1-3/Pictures/1000000100000449000002EE84CC2053.png"
+src="content/docs/guides/laserdock-full-manual/Pictures/1000000100000449000002EE84CC2053.png"
 style="width:12.762cm;height:8.724cm" />
 
 You will need to unzip the downloaded file before copying the
