@@ -1,17 +1,19 @@
 # Site settings
 title: "Laserdock and LaserOS Documentation"
-description: "Official documentation for Laserdock hardware and LaserOS software. Brought to you by the Laserdock Team."
+description: "Official documentation for Laserdock hardware and LaserOS software."
 
-# Theme Selection
-theme: jekyll-theme-slate
+# Theme Settings
+remote_theme: "just-the-docs/just-the-docs"
+# Setting 'theme' to nil ensures the remote_theme takes priority
+theme: 
 
-# CRITICAL FOR CUSTOM DOMAINS:
-# Since you're using a subdomain, the baseurl must be empty
-baseurl: "" 
+# Custom Domain Settings
 url: "https://laserdockdocs.wickedlasers.com"
+baseurl: ""
 
-# Header settings
-show_downloads: true
+# Theme Specific Configurations
+aux_links:
+  "Wicked Lasers Home": "https://www.wickedlasers.com"
 
-# Google Analytics
-# google_analytics: UA-XXXXXXXX-Xrue
+# Enable search
+search_enabled: true
