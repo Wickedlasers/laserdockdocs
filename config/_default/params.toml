@@ -1,7 +1,7 @@
 # Hugo
 title = "My Docs"
 description = "Congrats on setting up a new Doks project!"
-images = ["cover.png"]
+images = ["images/LaserOSLogo.png"]
 
 # mainSections
 mainSections = ["docs"]
@@ -132,14 +132,14 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
   [seo.description]
     summaryFallback = "" # "" (default)
   [seo.favicons]
-    icon = "favicon.png" # favicon.png (default)
-    svgIcon = "favicon.svg" # favicon.svg (default)
+    icon = "images/LaserOSLogo.png" # site icon / logo
+    svgIcon = "icon.svg" # keep existing svg icon
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
-    logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
+    logo = "images/LaserOSLogo.png" # Organization logo
     name = "Thulite" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
-    images = ["cover.png"] # ["cover.png"] (default)
+    images = ["images/LaserOSLogo.png"] # default images
     article = [] # Article sections
     newsArticle = [] # NewsArticle sections
     blogPosting = ["blog"] # BlogPosting sections
