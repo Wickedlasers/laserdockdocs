@@ -66,7 +66,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
   # UX
   headerBar = false # true (default) or false
   backgroundDots = true # true (default) or false
-  aiButtons = true # true (default) or false
+  aiButtons = false # true (default) or false
 
   # Homepage
   sectionFooter = false # false (default) or true
