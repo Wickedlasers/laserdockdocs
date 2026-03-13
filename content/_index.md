@@ -1,5 +1,5 @@
 ---
-title: Welcome to the official documentation site for the Laserdock and LaserOS ecosystem.
+title: Welcome to official docs of the Laserdock and LaserOS ecosystem.
 description: ""
 lead: "from Laseros.com and Wickedlasers.com"
 date: 2023-09-07T16:33:54+02:00

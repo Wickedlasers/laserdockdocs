@@ -51,6 +51,8 @@
   }
 
   /* Quick Links styles (adapted from docs.thulite.io) */
+  /* Ensure consistent padding on all sides: 16px */
+  #quick-links-section { margin-top: 0 !important; padding: 1rem !important; }
   #quick-links-section .card-grid {
     display: grid;
     grid-template-columns: 100%;
@@ -83,6 +85,9 @@
   #quick-links-section .card .body li { margin: .3rem 0; }
   #quick-links-section .card a { text-decoration: none; }
   #quick-links-section .card a:hover { text-decoration: underline; }
+
+  /* Remove vertical margins on each quick link article */
+  #quick-links-section > div > div > div > article { margin-top: 0 !important; margin-bottom: 0 !important; }
 
   /* Per-card icon colors to mimic source */
   #quick-links-section .card:nth-child(1) .icon {
