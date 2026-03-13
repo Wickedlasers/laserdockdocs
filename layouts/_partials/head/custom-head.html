@@ -43,5 +43,31 @@
     padding-left: 36px; /* space for logo */
     min-height: 28px;
   }
+
+  /* Quick Links styles (adapted from docs.thulite.io) */
+  #quick-links-section .card-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+  @media (min-width: 50rem) {
+    #quick-links-section .card-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  }
+  #quick-links-section .card {
+    border: 1px solid var(--sl-color-gray-5, #2b2f31);
+    background-color: var(--sl-color-black, #0b0d0e);
+    padding: clamp(1rem, calc(.125rem + 3vw), 2.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(.5rem, calc(.125rem + 1vw), 1rem);
+    border-radius: .5rem;
+  }
+  #quick-links-section .card .title { font-weight: 600; font-size: 1.125rem; color: var(--sl-color-white, #e6e6e6); line-height: 1.2; gap: 1rem; align-items: center; display: flex; }
+  #quick-links-section .card .icon { color: var(--sl-color-gray-3, #a0a7ad); }
+  #quick-links-section .card .body { margin: 0; }
+  #quick-links-section .card .body ul { margin: 0; padding-left: 1.25rem; }
+  #quick-links-section .card .body li { margin: .3rem 0; }
+  #quick-links-section .card a { text-decoration: none; }
+  #quick-links-section .card a:hover { text-decoration: underline; }
 </style>
 <!-- Custom head -->
