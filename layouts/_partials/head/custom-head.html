@@ -38,6 +38,15 @@
   .docs-content ul, .docs-content ol { padding-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 1rem; }
   .docs-content li { margin: 0.25rem 0; }
 
+  /* Section navigation: remove top padding */
+  nav.section-nav.docs-links { padding-top: 0 !important; }
+
+  /* Right TOC heading: zero top margin, 16px top padding */
+  body > div.wrap.container-xl > div > div > nav > div > h3 {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+  }
+
   /* Navbar brand: show LaserOS logo left of title */
   .navbar .navbar-brand {
     display: inline-flex;
