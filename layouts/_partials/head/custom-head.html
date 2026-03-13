@@ -54,12 +54,13 @@
   /* Ensure consistent padding on all sides: 16px */
   #quick-links-section { margin-top: 0 !important; padding: 1rem !important; }
   #quick-links-section .card-grid {
-    display: grid;
-    grid-template-columns: 100%;
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
   }
-  @media (min-width: 50rem) {
-    #quick-links-section .card-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  #quick-links-section .card-grid > article {
+    flex: 1 1 16rem; /* grow, shrink, base width */
+    max-width: 100%;
   }
   #quick-links-section .card {
     border: 1px solid var(--sl-color-gray-5, #2b2f31);
