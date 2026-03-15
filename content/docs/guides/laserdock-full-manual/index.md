@@ -53,8 +53,8 @@ Laser Safety Officer (LSO).**
 **FOR PROFESSIONAL USE ONLY.**
 
 <img
-src="Pictures/1000D8E4000028C20000061D5E5100AB.emf"
-style="width:10.47cm;height:1.614cm" />
+src="Pictures/1000D8E4000028C20000061D5E5100AB.svg"
+style="width:10.47cm;height:auto" />
 
 12/F, San Toi Building, 137-139
 
@@ -654,9 +654,7 @@ style="width:3.422cm;height:4.563cm" />
 
 >
 
-<img
-src="Pictures/10000000000000F00000014066AA589C.bmp"
-style="width:3.678cm;height:4.904cm" />
+{{< img src="Pictures/10000000000000F00000014066AA589C.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-19"></span>Installing LaserOS 0.17.7 or later
 
@@ -729,9 +727,7 @@ LaserOS app to the SD card.
 It can be selected by going to the Control Mode menu and selecting
 “Playlist” from the options.
 
-<img
-src="Pictures/10000000000000F0000001402D9B28C5.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001402D9B28C5.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F0000001400D60C535.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -1032,9 +1028,7 @@ style="width:9.518cm;height:13.446cm" />
 The playlist that the MK2 will use is selected from the Playlist
 selection menu drop down.
 
-<img
-src="Pictures/10000000000000F0000001402E9F996E.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001402E9F996E.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014043F681DA.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F0000001409E69CD80.bmp"
@@ -1054,9 +1048,7 @@ options menu.
 
 The main media controls for the playlist player are shown below.
 
-<img
-src="Pictures/10000000000000F0000001404DB9C2B2.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001404DB9C2B2.bmp" formats="webp jpeg" >}}
 
 Auto-Play (when enabled) will automatically cycle through another CUE in
 the currently selected playlist every \<cue delay\> seconds. Auto play
@@ -1075,9 +1067,7 @@ until the Auto-play button is selected again.
 The playlist can also be shuffled in order to randomize the order of
 CUE’s in the playlist.
 
-<img
-src="Pictures/10000000000000F000000140475EFE1E.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140475EFE1E.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-32"></span>CUE playback Speed
 
@@ -1086,9 +1076,7 @@ in the playlist control mode.
 
 This can be done using the Settings→Playback Speed menu
 
-<img
-src="Pictures/10000000000000F0000001408B33BB66.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F0000001402F2A03BB.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -1213,9 +1201,7 @@ not operate until they are enabled.
 The playlist options menu is present on the top level menu (below the
 playlist player menu item) of the MK2 LCD when in playlist control mode
 
-<img
-src="Pictures/10000000000000F0000001404C44791F.bmp"
-style="width:3.942cm;height:5.256cm" /><img
+{{< img src="Pictures/10000000000000F0000001404C44791F.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140B32EFF16.bmp"
 style="width:3.942cm;height:5.256cm" />
 
@@ -1231,9 +1217,7 @@ or SD card. The SD card option is useful if the user wishes to customise
 the provided web app, assuming the user has the relevant HTML/CSS/JS
 knowledge.
 
-<img
-src="Pictures/10000000000000F000000140A0418ABB.bmp"
-style="width:3.942cm;height:5.256cm" />
+{{< img src="Pictures/10000000000000F000000140A0418ABB.bmp" formats="webp jpeg" >}}
 
 Note: The web app is provided on the latest SD card image in the
 following location: /Lasercube/res/web/playlist_index.html
@@ -1255,9 +1239,7 @@ style="width:3.942cm;height:5.256cm" /> <img
 src="Pictures/10000000000000F000000140B1450E8F.png"
 style="width:3.956cm;height:5.274cm" />
 
-<img
-src="Pictures/10000000000000F000000140209CE050.bmp"
-style="width:3.995cm;height:5.327cm" /> <img
+{{< img src="Pictures/10000000000000F000000140209CE050.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140C9F97C93.bmp"
 style="width:4.008cm;height:5.345cm" /> <img
 src="Pictures/10000000000000F000000140E837EBBD.bmp"
@@ -1384,17 +1366,13 @@ firmware updates.
 The factory supplied SD card also includes MIDI mapping of some of these
 visualizers to the APC40 MK2 / APC mini MK2 grid buttons.
 
-<img
-src="Pictures/10000000000000F000000140CE6D1EF9.bmp"
-style="width:4.048cm;height:5.398cm" />
+{{< img src="Pictures/10000000000000F000000140CE6D1EF9.bmp" formats="webp jpeg" >}}
 
 CubeOS has a number of built-in audio reactive visualizers, and these
 can be manually selected via the drop-down list in addition to the
 previous and next buttons.
 
-<img
-src="Pictures/10000000000000F000000140B88F589A.bmp"
-style="width:4.06cm;height:5.415cm" />
+{{< img src="Pictures/10000000000000F000000140B88F589A.bmp" formats="webp jpeg" >}}
 
 These react to the Audio Input source configured in Settings -\> Audio
 -\> Audio Input, and can be either the built in microphone, or the 3.5mm
@@ -1406,9 +1384,7 @@ which can be set in Settings→Tempo menu on the LCD. The transition time
 when moving between visualizer CUE’s can also be adjusted through the
 Viz Options menu. Auto play at power-on can also be adjusted.
 
-<img
-src="Pictures/10000000000000F000000140C817037D.bmp"
-style="width:4.06cm;height:5.415cm" /><img
+{{< img src="Pictures/10000000000000F000000140C817037D.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140F448796E.bmp"
 style="width:4.06cm;height:5.415cm" />
 
@@ -1497,16 +1473,12 @@ style="width:4.128cm;height:5.503cm" />
 The ArtNet mode can be selected by going into Control Mode and selecting
 it
 
-<img
-src="Pictures/10000000000000F0000001401D889BC7.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001401D889BC7.bmp" formats="webp jpeg" >}}
 
 Once selected the MK2 will restart into ArtNet mode, and the ArtNet
 settings will now be available from the top level menu as shown below:
 
-<img
-src="Pictures/10000000000000F00000014000C348A4.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014000C348A4.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-45"></span>ArtNet settings Menu
 
@@ -1514,9 +1486,7 @@ style="width:4.001cm;height:5.339cm" />
 
 This sets which universe the MK2 will respond to on the network.
 
-<img
-src="Pictures/10000000000000F0000001404C7CD495.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001404C7CD495.bmp" formats="webp jpeg" >}}
 
 #### <span id="anchor-47"></span>ArtNet Start Address
 
@@ -1524,9 +1494,7 @@ The start address can be changed (default is address 1) in order to move
 the 16 channel profile start address within the ArtNet/DMX address range
 of 1-512.
 
-<img
-src="Pictures/10000000000000F0000001405100285C.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001405100285C.bmp" formats="webp jpeg" >}}
 
 #### <span id="anchor-48"></span>Fixture Profile
 
@@ -1540,9 +1508,7 @@ Channel
 Map](#12.7.DMX/ArtNet Default Fixture Channel Allocation|outline) or the
 wiki (or PDF supplied on the factory SD card).
 
-<img
-src="Pictures/10000000000000F000000140C058A64E.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140C058A64E.bmp" formats="webp jpeg" >}}
 
 Note: The default profile is compatible with the FB3/FB4 16 channel
 profile, so any DMX/ArtNet capable lighting controller with FB3/4
@@ -1559,18 +1525,14 @@ The CUE selection is based on the order of items within the chosen
 Playlist, so the first CUE selected over ArtNet using the CUE/Page
 channel will project the first item in the playlist.
 
-<img
-src="Pictures/10000000000000F000000140FDBA0F7B.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140FDBA0F7B.bmp" formats="webp jpeg" >}}
 
 #### <span id="anchor-50"></span>Defaults
 
 This button will reset all items within the DMX menu to their factory
 defaults.
 
-<img
-src="Pictures/10000000000000F000000140A4C818FC.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140A4C818FC.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-51"></span>ArtNet Status
 
@@ -1582,9 +1544,7 @@ are being received on the correct ArtNet Universe then the status bar
 will show a green tick to the right of the DMX label and a valid IP
 address will be shown below it.
 
-<img
-src="Pictures/10000000000000F00000014080FA2260.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014080FA2260.bmp" formats="webp jpeg" >}}
 
 If ArtNet data is not being correctly received then the status bar will
 show a red cross instead of a green tick.
@@ -1602,16 +1562,12 @@ universe.
 The DMX mode can be selected by going into Control Mode and selecting
 DMX-512
 
-<img
-src="Pictures/10000000000000F000000140609817E0.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140609817E0.bmp" formats="webp jpeg" >}}
 
 Once selected the MK2 will restart into DMX-512 mode, and the DMX
 settings will now be available from the top level menu as shown below:
 
-<img
-src="Pictures/10000000000000F0000001408C6A91A8.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001408C6A91A8.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-54"></span>DMX settings Menu
 
@@ -1621,9 +1577,7 @@ The DMX start address can be changed (default is DMX address 1) in order
 to move the 16 channel profile start address within the DMX address
 range of 1-512.
 
-<img
-src="Pictures/10000000000000F0000001407F256315.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001407F256315.bmp" formats="webp jpeg" >}}
 
 #### <span id="anchor-56"></span>Fixture Profile
 
@@ -1636,9 +1590,7 @@ The default 16 channel map is available here: [DMX Channel
 Map](#12.7.DMX/ArtNet Default Fixture Channel Allocation|outline) or on
 the wiki (or PDF on the factory supplied SD card).
 
-<img
-src="Pictures/10000000000000F0000001408AB0792E.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001408AB0792E.bmp" formats="webp jpeg" >}}
 
 Note: The default profile is compatible with the FB3/FB4 16 channel
 profile, so any DMX lighting controller with FB3/4 support should also
@@ -1655,18 +1607,14 @@ The CUE selection is based on the order of items within the chosen
 Playlist, so the first CUE selected over DMX using the CUE/Page channel
 will project the first item in the playlist.
 
-<img
-src="Pictures/10000000000000F0000001400ED515E4.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001400ED515E4.bmp" formats="webp jpeg" >}}
 
 #### <span id="anchor-58"></span>Defaults
 
 This button will reset all items within the DMX menu to their factory
 defaults.
 
-<img
-src="Pictures/10000000000000F000000140C60A1F96.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140C60A1F96.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-59"></span>DMX Status
 
@@ -1677,9 +1625,7 @@ When the MK2 is connected to DMX and receiving the 512 channels via the
 DMX In connector, the status bar will show a green tick to the right of
 the DMX label as shown below.
 
-<img
-src="Pictures/10000000000000F000000140230AEACB.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140230AEACB.bmp" formats="webp jpeg" >}}
 
 If DMX is not being received then the status bar will show a red cross.
 
@@ -2008,9 +1954,7 @@ effects assigned to dials/faders on a MIDI controller.
 The tempo menu can be accessed by going to Settings→Tempo when in either
 playlist or visualizer control mode.
 
-<img
-src="Pictures/10000000000000F000000140F0949A36.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140F0949A36.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140F678F662.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -2038,9 +1982,7 @@ style="width:8.493cm;height:5.336cm" />ected to the USB port of the MK2.
 Audio settings can be adjusted by going into Settings-\>Audio as shown
 below:
 
-<img
-src="Pictures/10000000000000F000000140A4D35C4D.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140A4D35C4D.bmp" formats="webp jpeg" >}}
 
 The audio settings allow changes to the audio output volume, audio
 output delay, audio input selection, and input gain controls.
@@ -2058,9 +2000,7 @@ Press on the menu knob to edit the slider and make adjustments, then
 press again on the knob to exit and save this value (preserved through
 power cycle).
 
-<img
-src="Pictures/10000000000000F00000014018E1179F.bmp"
-style="width:4.001cm;height:5.339cm" />To map the audio volume output
+{{< img src="Pictures/10000000000000F00000014018E1179F.bmp" formats="webp jpeg" >}}
 slider to a MIDI controller then ensure USB MIDI is enabled in
 settings-\>USB MIDI and a compatible APC MIDI device is connected, then
 single press the menu knob to enter slider edit mode (slider bar turns
@@ -2080,9 +2020,7 @@ show mode) in order to compensate for any audio processing delay due any
 extra audio processing present on the device connected to the line
 output port of the MK2.
 
-<img
-src="Pictures/10000000000000F0000001405D42114F.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001405D42114F.bmp" formats="webp jpeg" >}}
 
 Example: Some portable amplified speakers have a DSP in order to provide
 audio reactive light effects etc, and this can cause the audio going
@@ -2119,9 +2057,7 @@ result in some audio reactive visualizers showing very little change.
 Equally setting a too high gain will result in over driven visualizers.
 Both inputs can have their gain adjusted from 0dB to 50dB in 5dB steps.
 
-<img
-src="Pictures/10000000000000F000000140004C5F6B.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140004C5F6B.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F0000001409352A0C4.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -2173,9 +2109,7 @@ restart.
 Move the red cursor to highlight “Yes” and push the rotary knob to
 confirm.
 
-<img
-src="Pictures/10000000000000F00000014066AA589C.bmp"
-style="width:4.323cm;height:5.764cm" />
+{{< img src="Pictures/10000000000000F00000014066AA589C.bmp" formats="webp jpeg" >}}
 
 #### <span id="anchor-82"></span>APIPA mode explained
 
@@ -2391,9 +2325,7 @@ style="width:3.56cm;height:4.745cm" />
 In order to use any of these MIDI devices, the USB must be enabled by
 going to the Settings -\>USB MIDI menu.
 
-<img
-src="Pictures/10000000000000F0000001407F27FF45.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001407F27FF45.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140FB4F133A.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F000000140A78D5750.bmp"
@@ -2405,9 +2337,7 @@ src="Pictures/10000000000000F000000140A9A20B7D.bmp"
 style="width:4.001cm;height:5.339cm" />e controlled using alternate
 communication protocols.
 
-<img
-src="Pictures/10000000000000F0000001403852FCAE.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001403852FCAE.bmp" formats="webp jpeg" >}}
 
 If a compatible device is detected on the MK2 USB port then the status
 bar will briefly show an updated connected status, and unplugging a
@@ -2422,9 +2352,7 @@ in the playlist control mode.
 
 This can be done using the Settings→Playback Speed menu
 
-<img
-src="Pictures/10000000000000F0000001408B33BB66.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F0000001402F2A03BB.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -2510,17 +2438,13 @@ mapped only, and are used for live effect activation using an APC40 MK2
 The Effects menu can be accessed from the top level menu when the MK2 is
 in playlist or visualizer control mode as shown in the image below:
 
-<img
-src="Pictures/10000000000000F000000140F577A18A.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140F577A18A.bmp" formats="webp jpeg" >}}
 
 In order to be able to use the effects they must be enabled. If no
 effects are required then it is recommended to have the effects disabled
 to prevent unintentional changes to the projection.
 
-<img
-src="Pictures/10000000000000F000000140603C49F4.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140603C49F4.bmp" formats="webp jpeg" >}}
 
 Any of the effect parameters changed via the LCD menu UI will be
 preserved through a power cycle. This is to allow the unit to start up
@@ -2565,9 +2489,7 @@ filter is set to “ALL” so all filters can be accessed by scrolling
 through the effect menu. If a specific effect filter is selected then
 only the parameters for that effect will be visible.
 
-<img
-src="Pictures/10000000000000F000000140DE9DD66E.bmp"
-style="width:4.001cm;height:5.339cm" />*Note: The effect filter is only
+{{< img src="Pictures/10000000000000F000000140DE9DD66E.bmp" formats="webp jpeg" >}}
 for filtering effects in the UI to allow faster config of the chosen
 effect, but does not have any bearing on which effects are activated.*
 
@@ -2599,9 +2521,7 @@ cycle effect colours when +White parameter is OFF.
 
 #### <span id="anchor-107"></span>Colour cycle effect parameters
 
-<img
-src="Pictures/10000000000000F000000140F87AA280.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140F87AA280.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014086551E1B.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F000000140AC8DCE4C.bmp"
@@ -2702,9 +2622,7 @@ adjustments.
 
 The images below show the available user parameters for the hue effect.
 
-<img
-src="Pictures/10000000000000F000000140D95EEE7D.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140D95EEE7D.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014096A56829.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F000000140322236BB.bmp"
@@ -2767,9 +2685,7 @@ style="width:5.729cm;height:5.35cm" />
 
 #### <span id="anchor-116"></span>Colourize effect parameters
 
-<img
-src="Pictures/10000000000000F000000140ECC676EF.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140ECC676EF.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140EB88E597.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F0000001404888522A.bmp"
@@ -2804,9 +2720,7 @@ multiple of the current beat, based on the current tempo.
 
 #### <span id="anchor-119"></span>Flash effect parameters
 
-<img
-src="Pictures/10000000000000F000000140F8533FB0.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140F8533FB0.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F0000001404AE7D36B.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -2841,9 +2755,7 @@ menu).
 
 #### <span id="anchor-122"></span>Strobe effect parameters
 
-<img
-src="Pictures/10000000000000F000000140F8533FB0.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140F8533FB0.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014060CC21E1.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -2981,9 +2893,7 @@ text editor if required.
 In order to use any of these MIDI devices, the USB must be enabled by
 going to the Settings -\>USB MIDI menu.
 
-<img
-src="Pictures/10000000000000F0000001407F27FF45.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001407F27FF45.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F000000140FB4F133A.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F000000140A78D5750.bmp"
@@ -2995,9 +2905,7 @@ src="Pictures/10000000000000F000000140A9A20B7D.bmp"
 style="width:4.001cm;height:5.339cm" />e controlled using alternate
 communication protocols.
 
-<img
-src="Pictures/10000000000000F0000001403852FCAE.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001403852FCAE.bmp" formats="webp jpeg" >}}
 
 If a compatible device is detected on the MK2 USB port then the status
 bar will briefly show an updated connected status, and unplugging a
@@ -3011,9 +2919,7 @@ To map a slider in the menu to an APC dial or fader control, single
 press on a slider to enter edit mode, then long press to bring up the
 context menu, and then select “Link MIDI Knob” as shown below.
 
-<img
-src="Pictures/10000000000000F0000001400032D2C4.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F0000001400032D2C4.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014090228FA2.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F000000140D6DB1305.bmp"
@@ -3027,9 +2933,7 @@ If the MIDI channel and CC chosen by the user is already assigned to
 another control then the MIDI info will be shown in orange instead of
 green.
 
-<img
-src="Pictures/10000000000000F0000001404281142B.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001404281142B.bmp" formats="webp jpeg" >}}
 
 If the user accepts this APC control while the MIDI status is orange,
 the previous function will be un-mapped and re-assigned to the current
@@ -3052,9 +2956,7 @@ on the APC dial will also reflect the slider’s current value, and
 editing the slider on the MK2 menu UI will also update the APC’s led
 ring as they are always kept in sync with each other.
 
-<img
-src="Pictures/10000000000000F000000140501207D3.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140501207D3.bmp" formats="webp jpeg" >}}
 
 The image below shows how an APC dial will look once mapped to a MK2
 slider element.
@@ -3073,9 +2975,7 @@ the control by short press on the slider to enter edit mode, then long
 press to bring up the context menu, then select “unlink MIDI Knob”
 option.
 
-<img
-src="Pictures/10000000000000F000000140567C66A0.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140567C66A0.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014081122E39.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F0000001405B010FD2.bmp"
@@ -3111,9 +3011,7 @@ src="Pictures/10000000000000F000000140E696B544.bmp"
 style="width:4.001cm;height:5.339cm" />ight up on the APC with the
 colour selected from the colour dropdown.
 
-<img
-src="Pictures/10000000000000F000000140BD52F4E2.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F000000140BD52F4E2.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F00000014029E7DFBB.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F00000014047BDCCAD.bmp"
@@ -3146,9 +3044,7 @@ buttons can have an RGB colour assigned. If an APC button only has a
 single LED colour, then only select the first colour from the colour
 drop down.
 
-<img
-src="Pictures/10000000000000F00000014017CC487F.bmp"
-style="width:4.001cm;height:5.339cm" /><img
+{{< img src="Pictures/10000000000000F00000014017CC487F.bmp" formats="webp jpeg" >}}
 src="Pictures/10000000000000F0000001401C17C152.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F00000014023581B81.bmp"

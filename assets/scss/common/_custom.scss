@@ -15,21 +15,31 @@
   padding-left: 0.75rem;
 }
 
-// Ensure scrolling to headings accounts for the fixed header for H1 as well
-.docs-content > h1[id]::before {
-  display: block;
-  height: 6rem;
-  margin-top: -6rem;
-  content: "";
+// Prefer scroll-margin-top for anchor offsets; disable ::before hacks to help ScrollSpy
+.docs-content > h1[id]::before,
+.docs-content > h2[id]::before,
+.docs-content > h3[id]::before,
+.docs-content > h4[id]::before {
+  display: none !important;
+  content: none !important;
+  height: 0 !important;
+  margin-top: 0 !important;
 }
 
-// Match theme’s mobile/medium offsets for H1 anchors
+.docs-content h1[id],
+.docs-content h2[id],
+.docs-content h3[id],
+.docs-content h4[id] {
+  scroll-margin-top: 6rem;
+}
+
+// Larger offsets on smaller screens where header is taller
 @include media-breakpoint-down(xl) {
-  .docs-content > h1[id]::before {
-    display: block;
-    height: 144px !important;
-    margin-top: -144px !important;
-    content: "";
+  .docs-content h1[id],
+  .docs-content h2[id],
+  .docs-content h3[id],
+  .docs-content h4[id] {
+    scroll-margin-top: 144px;
   }
 }
 
@@ -41,10 +51,10 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .docs-content > h1[id]::before {
-    display: block;
-    height: 128px !important;
-    margin-top: -128px !important;
-    content: "";
+  .docs-content h1[id],
+  .docs-content h2[id],
+  .docs-content h3[id],
+  .docs-content h4[id] {
+    scroll-margin-top: 128px;
   }
 }
