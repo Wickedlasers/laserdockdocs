@@ -2,12 +2,14 @@
 weight: 1
 description: ""
 draft: false
-title: Laserdock Full Manual
+title: Laserdock Full Manual v1.3
 toc: true
+slug: laserdock-full-manual-v1.3
+aliases:
+  - "/docs/guides/laserdock-full-manual/"
 ---
 
-
-# <span id="anchor"></span>Declaration Of Conformity
+# <span id="anchor"></span>Declaration Of Conformit
 
 <img
 src="Pictures/10000000000003E80000056085DFB847.jpg"
@@ -25,7 +27,7 @@ style="width:15.24cm;height:21.562cm" />
 src="Pictures/10000000000004F4000007024E0751E6.jpg"
 style="width:15.24cm;height:21.562cm" />
 
-# 
+#
 
 # <span id="anchor-1"></span>Safety Warning
 
@@ -92,7 +94,7 @@ to contact LaserDock Ltd. directly.
 > required to be operated with an E-Stop for FDA compliance and will not
 > work with only the safety jumper installed. *
 
-> 
+>
 
 9.  **Emission LEDs:** Indicate when the Laser is emitting or ready to
     emit.
@@ -126,7 +128,7 @@ to contact LaserDock Ltd. directly.
 > LaserOS DAC signals, of those of an external DAC when connected to the
 > ILDA input.
 
-> 
+>
 
 22. **DMX connectors (In/Out):** Connect to a lighting desk / controller
 
@@ -134,18 +136,18 @@ to contact LaserDock Ltd. directly.
 
 > **22b.** DMX Output
 
-> 
+>
 
 23. **Safety Eye Bolt:** When mounted at height, attach safety cable
     through the eye.
 
-> 
+>
 
 > <img
 > Pictures/1000000100000522000007BCC49CE081.png"
 > style="width:15.171cm;height:22.86cm" />
 
-# 
+#
 
 # <span id="anchor-4"></span>Technical Specifications
 
@@ -497,7 +499,7 @@ This document expands upon the principles considered in IEC TR 60825-14,
 providing specific technical guidance appropriate for the safe use of
 laser products used for the purposes of visual entertainment.
 
-# 
+#
 
 # <span id="anchor-8"></span><span id="anchor-9"></span><span id="anchor-10"></span>Enabling the Laser E-Stop / Interlock
 
@@ -510,7 +512,7 @@ style="width:15.24cm;height:7.243cm" />
 <figcaption aria-hidden="true"></figcaption>
 </figure>
 
-# 
+#
 
 # <span id="anchor-12"></span>E-STOP Setup Guide
 
@@ -614,7 +616,7 @@ other third party software.
 > Pictures/10000000000000F000000140F4DB06AC.png"
 > style="width:3.293cm;height:4.392cm" />
 
-> 
+>
 
 2)  Select Settings, Connection (LAN Client preferred where local WiFi
     is congested)
@@ -627,7 +629,7 @@ other third party software.
 > Pictures/10000000000000F000000140A1880E4F.png"
 > style="width:3.493cm;height:4.657cm" />
 
-> 
+>
 
 3)  If using WiFi server, connect to the Laser cube’s Access Point. By
     default, the SSID is LaserCube. The default WiFi password is
@@ -660,7 +662,7 @@ style="width:3.422cm;height:4.563cm" />
 > Highlight “YES” using the red cursor box then push the encoder knob to
 > confirm.
 
-> 
+>
 
 <img
 src="Pictures/10000000000000F00000014066AA589C.bmp"
@@ -704,7 +706,7 @@ Follow the instructions for installing LaserOS on your chosen platform,
 then run the software by opening Launchpad on MacOS, or click the icon
 for LaserOS on your desktop if using a Windows platform.
 
-### 
+###
 
 ### <span id="anchor-22"></span><span id="anchor-23"></span><span id="anchor-24"></span>Using LaserOS
 
@@ -896,7 +898,7 @@ playlist player CUE delay time.
 Note: The “Assign Effect” option in right-click CUE popup is not
 currently supported on the MK2.
 
-### 
+###
 
 ### <span id="anchor-28"></span>Exporting a Playlist to the MK2 micro SD card
 
@@ -1131,7 +1133,7 @@ Firefox macOS browser:
 src="Pictures/1000000100000217000002E6087E2ADC.png"
 style="width:9.638cm;height:13.367cm" />
 
-## 
+##
 
 ### <span id="anchor-34"></span>Playlist Web App Quick Image Settings
 
@@ -1203,7 +1205,7 @@ style="width:7.535cm;height:9.156cm" />
   This adjusts the animation speed of any animated projections (100 = 1x
   play speed)
 
-### 
+###
 
 ### <span id="anchor-36"></span>Playlist Web App Quick Colour Effect Settings
 
@@ -1285,7 +1287,7 @@ style="width:4.008cm;height:5.345cm" />
 > categories (EDM, Christmas, Thanksgiving, New Year, Birthday, Wedding,
 > Halloween).
 
-> 
+>
 
 > After choosing a category, selecting the Play icon will begin the
 > show, and the player will advance to the next show in the selected
@@ -1293,7 +1295,7 @@ style="width:4.008cm;height:5.345cm" />
 > choosing a different show from the playlist drop-down will also start
 > the show, and also selecting via a connected MIDI controller.
 
-> 
+>
 
 > Show audio will be played from the 3.5mm stereo audio output socket.
 
@@ -1311,7 +1313,7 @@ Cube Link Slave devices configured with the same Link Channel and PIN.
 > all cube link devices have the same show category selected before
 > starting play (e.g. all devices have “EDM Shows” selected).
 
-> 
+>
 
 *Note: The Laser shows are provided on the SD card supplied with the
 MK2. If no items are shown in the drop down then this could be due to
@@ -1351,7 +1353,7 @@ commands
 > Pictures/10000000000000F000000140DCDA1340.png"
 > style="width:3.281cm;height:4.374cm" />
 
-> 
+>
 
 > Slave
 
@@ -1365,19 +1367,19 @@ commands
 > Pictures/10000000000000F000000140AAE686DC.png"
 > style="width:3.268cm;height:4.357cm" />
 
-> 
+>
 
 > For a 2 channel show using 4 projectors, set 2 projectors to Group 1
 > and 2 projectors to Group 2. Only have one configured as a master
 > though.
 
-> 
+>
 
 > Selecting Alive (2CH) on the master will now start projection on all
 > devices, providing the same playlist (EDM Shows in this example) is
 > already selected on all devices.
 
-> 
+>
 
 > <img
 > Pictures/10000000000000F000000140148EAA59.png"
@@ -1387,7 +1389,7 @@ commands
 > Pictures/10000000000000F000000140E48D960F.png"
 > style="width:3.293cm;height:4.392cm" />
 
-> 
+>
 
 ## <span id="anchor-42"></span>**Visualizer Control Mode**
 
@@ -1586,7 +1588,7 @@ defaults.
 src="Pictures/10000000000000F000000140A4C818FC.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-### <span id="anchor-51"></span>ArtNet Status 
+### <span id="anchor-51"></span>ArtNet Status
 
 The status of the ArtNet connection is shown in the status bar at the
 bottom right of the LCD.
@@ -1627,7 +1629,7 @@ settings will now be available from the top level menu as shown below:
 src="Pictures/10000000000000F0000001408C6A91A8.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-### 
+###
 
 ### <span id="anchor-54"></span>DMX settings Menu
 
@@ -1684,9 +1686,9 @@ defaults.
 src="Pictures/10000000000000F000000140C60A1F96.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-### 
+###
 
-### <span id="anchor-59"></span>DMX Status 
+### <span id="anchor-59"></span>DMX Status
 
 The status of the DMX is shown in the status bar at the bottom right of
 the LCD.
@@ -1705,7 +1707,7 @@ If the status shows as not connected when you have a cable connected and
 are running DMX from a controller, then please check cabling and also
 check that the DMX is correctly terminated.
 
-## 
+##
 
 ## <span id="anchor-60"></span>DMX/ArtNet Default Fixture Channel Allocation
 
@@ -1919,7 +1921,7 @@ style="width:3.334cm;height:4.445cm" />
 > (see Test Patterns below) then adjust image size and position in the
 > Image Setup menu.
 
-> 
+>
 
 ### <span id="anchor-71"></span>Colour Balance
 
@@ -2007,7 +2009,7 @@ style="width:3.798cm;height:5.062cm" />
 > affected by the rotation, X-size, Y-size, X-Position and Y-Position
 > sliders in Image Setup.
 
-### 
+###
 
 ## <span id="anchor-74"></span>Mk2 Settings – Tempo
 
@@ -2156,7 +2158,7 @@ reset the values.<img
 src="Pictures/10000000000000F000000140F8F9E926.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-## 
+##
 
 ## <span id="anchor-81"></span>Mk2 Settings – Connection
 
@@ -2276,7 +2278,7 @@ style="width:3.348cm;height:4.463cm" /> <img
 src="Pictures/10000000000000F0000001409102BA06.png"
 style="width:3.334cm;height:4.445cm" />
 
-### 
+###
 
 ### <span id="anchor-88"></span>LAN Server Mode
 
@@ -2322,7 +2324,7 @@ style="width:3.254cm;height:4.339cm" /> <img
 src="Pictures/10000000000000F0000001402613E951.png"
 style="width:3.246cm;height:4.327cm" />
 
-### 
+###
 
 ### <span id="anchor-94"></span>WiFi Client Mode
 
@@ -2357,7 +2359,7 @@ To enter the IP address, short press with the entry box highlighted.
 
 Select the tick button to close the entry box.
 
-### 
+###
 
 ### <span id="anchor-96"></span>Cube Link Mode
 
@@ -2560,7 +2562,7 @@ with any effect chosen by the user without any additional actions which
 is perfect for when the device just needs to be powered on and interlock
 activated.
 
-### 
+###
 
 ### <span id="anchor-103"></span>Available Effects
 
@@ -2605,7 +2607,7 @@ style="width:4.001cm;height:5.339cm" />*Note: The effect filter is only
 for filtering effects in the UI to allow faster config of the chosen
 effect, but does not have any bearing on which effects are activated.*
 
-### 
+###
 
 ### <span id="anchor-106"></span>Colour Cycle effect
 
@@ -2633,7 +2635,7 @@ src="Pictures/1000000100000143000001112C285928.png"
 style="width:2.819cm;height:2.383cm" />The above images show the colour
 cycle effect colours when +White parameter is OFF.
 
-#### 
+####
 
 #### <span id="anchor-107"></span>Colour cycle effect parameters
 
@@ -2730,7 +2732,7 @@ MK2.
 src="Pictures/100000010000047F000002CA12706841.png"
 style="width:17cm;height:10.545cm" />
 
-### 
+###
 
 ### <span id="anchor-112"></span>Hue Effect
 
@@ -2782,7 +2784,7 @@ indicate the current power on value using the associated APC LED ring.
 Absolute faders will always override any effect slider value set in the
 menu UI, since Faders have a finite start and end position.
 
-#### 
+####
 
 #### <span id="anchor-114"></span>Default APC40 MK2 Hue Effect MIDI mapping
 
@@ -2874,7 +2876,7 @@ the MK2.
 src="Pictures/100000010000047F000002CA7DACD152.png"
 style="width:17cm;height:10.545cm" />
 
-### 
+###
 
 ### <span id="anchor-121"></span>Strobe Effect
 
@@ -2962,7 +2964,7 @@ Gigabytes
 > <span id="anchor-125"></span>Clicking on this entry will reset the
 > count to zero.
 
-> 
+>
 
 > <img
 > Pictures/10000000000000F000000140A08DC84B.png"
@@ -2970,7 +2972,7 @@ Gigabytes
 > Pictures/10000000000000F000000140E7CC16F7.png"
 > style="width:3.634cm;height:4.845cm" />
 
-> 
+>
 
 > <span id="anchor-126"></span>**DAC Empty Events:** displays the number
 > of buffer under-run events.
@@ -2979,13 +2981,13 @@ Gigabytes
 > selecting the test patterns. Clicking on this entry will reset the
 > count to zero.
 
-> 
+>
 
 > **DAC Full Events:** displays the number of buffer overflow events.
 
 > Clicking on this entry will reset the count to zero.
 
-> 
+>
 
 > **PKT Loss Events:** displays the number of lost packets. Lost UDP
 > packets are common when using WiFi, especially in “congested” areas
@@ -2996,11 +2998,11 @@ Gigabytes
 > Ethernet connection will minimize this. Clicking on this entry will
 > reset the count to zero.
 
-> 
+>
 
 > **MAC Address:** MAC Address, unique to each Ultra Mk2 laser cube.
 
-> 
+>
 
 # <span id="anchor-127"></span>MIDI Mapping using an APC40 MK II or APC Mini MK II
 
@@ -3163,7 +3165,7 @@ style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F00000014047BDCCAD.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-### 
+###
 
 ### <span id="anchor-132"></span>MIDI Mapping a Drop Down control
 
@@ -3226,7 +3228,7 @@ to items within Settings→Projection→Image Setup.
 src="Pictures/100000010000047F000002CA63883700.png"
 style="width:18.464cm;height:11.453cm" />
 
-> 
+>
 
 # <span id="anchor-134"></span>LaserCube Web Admin Page
 
@@ -3255,7 +3257,7 @@ The Web Admin Page has 3 Menu sections:
 - **Update Menu**[, for performing remote firmware
   update](#_sortqr24vwrb)s.
 
-#### 
+####
 
 ## <span id="anchor-135"></span>Home Menu
 
@@ -3293,7 +3295,7 @@ If connecting to a router in WiFi Client mode, the SSID and WiFi
 password can be entered directly. This is useful if the router does not
 support WPS.
 
-##### 
+#####
 
 ### <span id="anchor-140"></span><span id="anchor-141"></span>LAN Tab
 
