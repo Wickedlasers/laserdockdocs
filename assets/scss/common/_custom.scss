@@ -1,1 +1,50 @@
 // Put your custom SCSS code here
+
+// Reduce font size of the in-page Table of Contents links
+.page-links a {
+  font-size: 0.85em; // smaller than default
+  line-height: 1.35;
+}
+
+// Slightly tighten vertical rhythm in the TOC
+.page-links li {
+  margin-top: 0.25rem;
+  padding-top: 0.25rem;
+}
+.page-links li ul li {
+  padding-left: 0.75rem;
+}
+
+// Ensure scrolling to headings accounts for the fixed header for H1 as well
+.docs-content > h1[id]::before {
+  display: block;
+  height: 6rem;
+  margin-top: -6rem;
+  content: "";
+}
+
+// Match theme’s mobile/medium offsets for H1 anchors
+@include media-breakpoint-down(xl) {
+  .docs-content > h1[id]::before {
+    display: block;
+    height: 144px !important;
+    margin-top: -144px !important;
+    content: "";
+  }
+}
+
+// Do not bold the active TOC link; keep all weights consistent
+#toc a.active,
+.page-links a.active,
+.docs-link.active {
+  font-weight: inherit !important;
+}
+
+@include media-breakpoint-down(lg) {
+  .docs-content > h1[id]::before {
+    display: block;
+    height: 128px !important;
+    margin-top: -128px !important;
+    content: "";
+  }
+}

@@ -463,7 +463,7 @@ Guidance**](https://www.en-standard.eu/iec-tr-60825-3-2022-safety-of-laser-produ
 
 [*https://www.en-standard.eu/iec-tr-60825-3-2022-safety-of-laser-products-part-3-guidance-for-laser-displays-and-shows/*](https://www.en-standard.eu/iec-tr-60825-3-2022-safety-of-laser-products-part-3-guidance-for-laser-displays-and-shows/)
 
-### <span id="anchor-7"></span>**Abstract**
+### <span id="anchor-7"></span>Abstract
 
 IEC/TR 60825-3:2022
 
@@ -542,7 +542,7 @@ style="width:14.57cm;height:4.807cm" />
 NOTE: In case of an emergency and you need to stop the laser, press the
 big red button.
 
-# <span id="anchor-13"></span>**Hardware Installation**
+# <span id="anchor-13"></span>Hardware Installation
 
 1\. Adjust the beam block with the unit powered off, make sure the key
 is not connected, secure projector aiming, then make adjustments to the
@@ -1375,7 +1375,7 @@ style="width:3.293cm;height:4.392cm" />
 
 >
 
-## <span id="anchor-42"></span>**Visualizer Control Mode**
+## <span id="anchor-42"></span>Visualizer Control Mode
 
 There are currently 24 audio reactive visuals in the current (v0.19)
 release of the MK2 firmware. More visualizers will be added in future
@@ -2444,7 +2444,7 @@ you intend to use a mix of old WiFi cubes and new MK2 laser cubes on the
 same network with LaserOS (you will also need LaserOS version \>=
 v0.17.7).
 
-## <span id="anchor-101"></span>**MK2 Settings – ILDA Input Cfg**
+## <span id="anchor-101"></span>MK2 Settings – ILDA Input Cfg
 
 The parameters set in the ILDA Input Configuration menu are valid when
 an external DAC is connected to the ILDA input connector on the back of
