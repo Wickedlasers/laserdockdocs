@@ -9,7 +9,7 @@ aliases:
   - "/docs/guides/laserdock-full-manual/"
 ---
 
-# <span id="anchor"></span>Declaration Of Conformit
+# <span id="anchor"></span>Declaration Of Conformity
 
 <img
 src="Pictures/10000000000003E80000056085DFB847.jpg"
@@ -26,8 +26,6 @@ style="width:15.24cm;height:21.562cm" />
 <img
 src="Pictures/10000000000004F4000007024E0751E6.jpg"
 style="width:15.24cm;height:21.562cm" />
-
-#
 
 # <span id="anchor-1"></span>Safety Warning
 
@@ -145,7 +143,6 @@ to contact LaserDock Ltd. directly.
 src="Pictures/1000000100000522000007BCC49CE081.png"
 style="width:15.171cm;height:22.86cm" />
 
-#
 
 # <span id="anchor-4"></span>Technical Specifications
 
@@ -497,11 +494,10 @@ This document expands upon the principles considered in IEC TR 60825-14,
 providing specific technical guidance appropriate for the safe use of
 laser products used for the purposes of visual entertainment.
 
-#
 
 # <span id="anchor-8"></span><span id="anchor-9"></span><span id="anchor-10"></span>Enabling the Laser E-Stop / Interlock
 
-#### <span id="anchor-11"></span>
+<span id="anchor-11"></span>
 
 <figure>
 <img
@@ -510,7 +506,6 @@ style="width:15.24cm;height:7.243cm" />
 <figcaption aria-hidden="true"></figcaption>
 </figure>
 
-#
 
 # <span id="anchor-12"></span>E-STOP Setup Guide
 
@@ -689,9 +684,11 @@ only. Adding content must be done via PC/Mac version.
 - Occasionally, Windows will display the following warning.  Click on
   “more info” to enable the “run anyway option”.  Click on “run anyway”.
 
-#### <span id="anchor-21"></span><img
+<img
 src="Pictures/10000001000004D8000002367B86816B.png"
-style="width:17cm;height:7.758cm" /> MacOS Platform
+style="width:17cm;height:7.758cm" />
+
+#### MacOS Platform
 
 - Follow this link to [download and install for Mac
   OS](https://laseros.s3.amazonaws.com/releases/LaserOS.pkg)*.*
@@ -700,8 +697,6 @@ style="width:17cm;height:7.758cm" /> MacOS Platform
 Follow the instructions for installing LaserOS on your chosen platform,
 then run the software by opening Launchpad on MacOS, or click the icon
 for LaserOS on your desktop if using a Windows platform.
-
-###
 
 ### <span id="anchor-22"></span><span id="anchor-23"></span><span id="anchor-24"></span>Using LaserOS
 
@@ -892,8 +887,6 @@ playlist player CUE delay time.
 
 Note: The “Assign Effect” option in right-click CUE popup is not
 currently supported on the MK2.
-
-###
 
 ### <span id="anchor-28"></span>Exporting a Playlist to the MK2 micro SD card
 
@@ -1128,8 +1121,6 @@ Firefox macOS browser:
 src="Pictures/1000000100000217000002E6087E2ADC.png"
 style="width:9.638cm;height:13.367cm" />
 
-##
-
 ### <span id="anchor-34"></span>Playlist Web App Quick Image Settings
 
 The Quick image settings allow you to adjust basic projection items such
@@ -1199,8 +1190,6 @@ style="width:7.535cm;height:9.156cm" />
 
   This adjusts the animation speed of any animated projections (100 = 1x
   play speed)
-
-###
 
 ### <span id="anchor-36"></span>Playlist Web App Quick Colour Effect Settings
 
@@ -1551,7 +1540,7 @@ Channel
 Map](#12.7.DMX/ArtNet Default Fixture Channel Allocation|outline) or the
 wiki (or PDF supplied on the factory SD card).
 
-#### <img
+<img
 src="Pictures/10000000000000F000000140C058A64E.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -1570,7 +1559,7 @@ The CUE selection is based on the order of items within the chosen
 Playlist, so the first CUE selected over ArtNet using the CUE/Page
 channel will project the first item in the playlist.
 
-#### <img
+<img
 src="Pictures/10000000000000F000000140FDBA0F7B.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -1624,8 +1613,6 @@ settings will now be available from the top level menu as shown below:
 src="Pictures/10000000000000F0000001408C6A91A8.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-###
-
 ### <span id="anchor-54"></span>DMX settings Menu
 
 #### <span id="anchor-55"></span>DMX start Address
@@ -1649,7 +1636,7 @@ The default 16 channel map is available here: [DMX Channel
 Map](#12.7.DMX/ArtNet Default Fixture Channel Allocation|outline) or on
 the wiki (or PDF on the factory supplied SD card).
 
-#### <img
+<img
 src="Pictures/10000000000000F0000001408AB0792E.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -1668,7 +1655,7 @@ The CUE selection is based on the order of items within the chosen
 Playlist, so the first CUE selected over DMX using the CUE/Page channel
 will project the first item in the playlist.
 
-#### <img
+<img
 src="Pictures/10000000000000F0000001400ED515E4.bmp"
 style="width:4.001cm;height:5.339cm" />
 
@@ -1680,8 +1667,6 @@ defaults.
 <img
 src="Pictures/10000000000000F000000140C60A1F96.bmp"
 style="width:4.001cm;height:5.339cm" />
-
-###
 
 ### <span id="anchor-59"></span>DMX Status
 
@@ -1701,9 +1686,6 @@ If DMX is not being received then the status bar will show a red cross.
 If the status shows as not connected when you have a cable connected and
 are running DMX from a controller, then please check cabling and also
 check that the DMX is correctly terminated.
-
-##
-
 ## <span id="anchor-60"></span>DMX/ArtNet Default Fixture Channel Allocation
 
 ### <span id="anchor-61"></span>Overview
@@ -2004,8 +1986,6 @@ style="width:3.798cm;height:5.062cm" />
 > affected by the rotation, X-size, Y-size, X-Position and Y-Position
 > sliders in Image Setup.
 
-###
-
 ## <span id="anchor-74"></span>Mk2 Settings – Tempo
 
 The tempo settings are used to control the speed of any enabled effects
@@ -2139,7 +2119,7 @@ result in some audio reactive visualizers showing very little change.
 Equally setting a too high gain will result in over driven visualizers.
 Both inputs can have their gain adjusted from 0dB to 50dB in 5dB steps.
 
-### <img
+<img
 src="Pictures/10000000000000F000000140004C5F6B.bmp"
 style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F0000001409352A0C4.bmp"
@@ -2152,9 +2132,6 @@ clicking this button and accepting the pop-up message box asking to
 reset the values.<img
 src="Pictures/10000000000000F000000140F8F9E926.bmp"
 style="width:4.001cm;height:5.339cm" />
-
-##
-
 ## <span id="anchor-81"></span>Mk2 Settings – Connection
 
 <img
@@ -2273,8 +2250,6 @@ style="width:3.348cm;height:4.463cm" /> <img
 src="Pictures/10000000000000F0000001409102BA06.png"
 style="width:3.334cm;height:4.445cm" />
 
-###
-
 ### <span id="anchor-88"></span>LAN Server Mode
 
 This is not recommended, and in most cases LAN Client Mode’s AIPIPA will
@@ -2319,8 +2294,6 @@ style="width:3.254cm;height:4.339cm" /> <img
 src="Pictures/10000000000000F0000001402613E951.png"
 style="width:3.246cm;height:4.327cm" />
 
-###
-
 ### <span id="anchor-94"></span>WiFi Client Mode
 
 For connecting to an existing WiFi router. Performance may vary
@@ -2353,8 +2326,6 @@ style="width:3.24cm;height:4.322cm" />
 To enter the IP address, short press with the entry box highlighted.
 
 Select the tick button to close the entry box.
-
-###
 
 ### <span id="anchor-96"></span>Cube Link Mode
 
@@ -2557,8 +2528,6 @@ with any effect chosen by the user without any additional actions which
 is perfect for when the device just needs to be powered on and interlock
 activated.
 
-###
-
 ### <span id="anchor-103"></span>Available Effects
 
 There are currently 6 effects that can be applied to the currently
@@ -2602,8 +2571,6 @@ style="width:4.001cm;height:5.339cm" />*Note: The effect filter is only
 for filtering effects in the UI to allow faster config of the chosen
 effect, but does not have any bearing on which effects are activated.*
 
-###
-
 ### <span id="anchor-106"></span>Colour Cycle effect
 
 This effect will cycle through a series of primary colours to the
@@ -2629,8 +2596,6 @@ style="width:2.819cm;height:2.383cm" /><img
 src="Pictures/1000000100000143000001112C285928.png"
 style="width:2.819cm;height:2.383cm" />The above images show the colour
 cycle effect colours when +White parameter is OFF.
-
-####
 
 #### <span id="anchor-107"></span>Colour cycle effect parameters
 
@@ -2727,8 +2692,6 @@ MK2.
 src="Pictures/100000010000047F000002CA12706841.png"
 style="width:17cm;height:10.545cm" />
 
-###
-
 ### <span id="anchor-112"></span>Hue Effect
 
 This effect will re-colour the current projection to a user selected
@@ -2778,8 +2741,6 @@ MK2 then any dials assigned to an effect or other device setting will
 indicate the current power on value using the associated APC LED ring.
 Absolute faders will always override any effect slider value set in the
 menu UI, since Faders have a finite start and end position.
-
-####
 
 #### <span id="anchor-114"></span>Default APC40 MK2 Hue Effect MIDI mapping
 
@@ -2870,8 +2831,6 @@ the MK2.
 <img
 src="Pictures/100000010000047F000002CA7DACD152.png"
 style="width:17cm;height:10.545cm" />
-
-###
 
 ### <span id="anchor-121"></span>Strobe Effect
 
@@ -3160,8 +3119,6 @@ style="width:4.001cm;height:5.339cm" /><img
 src="Pictures/10000000000000F00000014047BDCCAD.bmp"
 style="width:4.001cm;height:5.339cm" />
 
-###
-
 ### <span id="anchor-132"></span>MIDI Mapping a Drop Down control
 
 Most of the drop down UI controls within the MK2 menu UI can be linked
@@ -3252,8 +3209,6 @@ The Web Admin Page has 3 Menu sections:
 - **Update Menu**[, for performing remote firmware
   update](#_sortqr24vwrb)s.
 
-####
-
 ## <span id="anchor-135"></span>Home Menu
 
 The Home Menu shows the Model Name, Interlock type, firmware version and
@@ -3289,8 +3244,6 @@ The WiFi Server mode default SSID and Password can also be changed.
 If connecting to a router in WiFi Client mode, the SSID and WiFi
 password can be entered directly. This is useful if the router does not
 support WPS.
-
-#####
 
 ### <span id="anchor-140"></span><span id="anchor-141"></span>LAN Tab
 
