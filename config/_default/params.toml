@@ -53,7 +53,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
-  scrollSpy = true # true (default) or false
+  scrollSpy = false # disable Bootstrap ScrollSpy; use custom logic
 
   # Multilingual
   multilingualMode = false # false (default) or true
