@@ -50,6 +50,19 @@
   font-weight: inherit !important;
 }
 
+// Ensure anchor jumps account for sticky header height
+html, body {
+  scroll-padding-top: 6rem; // default desktop header height
+}
+
+@include media-breakpoint-down(xl) {
+  html, body { scroll-padding-top: 144px; }
+}
+
+@include media-breakpoint-down(lg) {
+  html, body { scroll-padding-top: 128px; }
+}
+
 @include media-breakpoint-down(lg) {
   .docs-content h1[id],
   .docs-content h2[id],
