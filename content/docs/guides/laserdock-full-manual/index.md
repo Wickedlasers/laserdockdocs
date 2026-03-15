@@ -141,11 +141,9 @@ to contact LaserDock Ltd. directly.
 23. **Safety Eye Bolt:** When mounted at height, attach safety cable
     through the eye.
 
->
-
-> <img
-> Pictures/1000000100000522000007BCC49CE081.png"
-> style="width:15.171cm;height:22.86cm" />
+<img
+src="Pictures/1000000100000522000007BCC49CE081.png"
+style="width:15.171cm;height:22.86cm" />
 
 #
 
@@ -610,26 +608,23 @@ other third party software.
 
 1)  Select Control Mode, LaserOS
 
-> <img
-> Pictures/10000000000000F000000140A5F3C3F9.png"
-> style="width:3.293cm;height:4.392cm" /><img
-> Pictures/10000000000000F000000140F4DB06AC.png"
-> style="width:3.293cm;height:4.392cm" />
+<img
+src="Pictures/10000000000000F000000140A5F3C3F9.png"
+style="width:3.293cm;height:4.392cm" /><img
+src="Pictures/10000000000000F000000140F4DB06AC.png"
+style="width:3.293cm;height:4.392cm" />
 
->
 
 2)  Select Settings, Connection (LAN Client preferred where local WiFi
     is congested)
 
-> <img
-> Pictures/10000000000000F000000140093C94D8.png"
-> style="width:3.507cm;height:4.674cm" /><img
-> Pictures/10000000000000F00000014036541C9C.png"
-> style="width:3.493cm;height:4.657cm" /><img
-> Pictures/10000000000000F000000140A1880E4F.png"
-> style="width:3.493cm;height:4.657cm" />
-
->
+<img
+src="Pictures/10000000000000F000000140093C94D8.png"
+style="width:3.507cm;height:4.674cm" /><img
+src="Pictures/10000000000000F00000014036541C9C.png"
+style="width:3.493cm;height:4.657cm" /><img
+src="Pictures/10000000000000F000000140A1880E4F.png"
+style="width:3.493cm;height:4.657cm" />
 
 3)  If using WiFi server, connect to the Laser cube’s Access Point. By
     default, the SSID is LaserCube. The default WiFi password is
@@ -1343,29 +1338,29 @@ commands
 
 > Master
 
-> <img
-> Pictures/10000000000000F000000140622AC15E.png"
-> style="width:3.307cm;height:4.41cm" /> <img
-> Pictures/10000000000000F00000014063C21C6C.png"
-> style="width:3.307cm;height:4.41cm" /> <img
-> Pictures/10000000000000F000000140AC40A616.png"
-> style="width:3.281cm;height:4.374cm" /> <img
-> Pictures/10000000000000F000000140DCDA1340.png"
-> style="width:3.281cm;height:4.374cm" />
+<img
+src="Pictures/10000000000000F000000140622AC15E.png"
+style="width:3.307cm;height:4.41cm" /> <img
+src="Pictures/10000000000000F00000014063C21C6C.png"
+style="width:3.307cm;height:4.41cm" /> <img
+src="Pictures/10000000000000F000000140AC40A616.png"
+style="width:3.281cm;height:4.374cm" /> <img
+src="Pictures/10000000000000F000000140DCDA1340.png"
+style="width:3.281cm;height:4.374cm" />
 
 >
 
 > Slave
 
-> <img
-> Pictures/10000000000000F000000140622AC15E.png"
-> style="width:3.307cm;height:4.41cm" /> <img
-> Pictures/10000000000000F00000014008442071.png"
-> style="width:3.281cm;height:4.374cm" /> <img
-> Pictures/10000000000000F00000014017394292.png"
-> style="width:3.268cm;height:4.357cm" /> <img
-> Pictures/10000000000000F000000140AAE686DC.png"
-> style="width:3.268cm;height:4.357cm" />
+<img
+src="Pictures/10000000000000F000000140622AC15E.png"
+style="width:3.307cm;height:4.41cm" /> <img
+src="Pictures/10000000000000F00000014008442071.png"
+style="width:3.281cm;height:4.374cm" /> <img
+src="Pictures/10000000000000F00000014017394292.png"
+style="width:3.268cm;height:4.357cm" /> <img
+src="Pictures/10000000000000F000000140AAE686DC.png"
+style="width:3.268cm;height:4.357cm" />
 
 >
 
@@ -1381,13 +1376,13 @@ commands
 
 >
 
-> <img
-> Pictures/10000000000000F000000140148EAA59.png"
-> style="width:3.24cm;height:4.322cm" /> <img
-> Pictures/10000000000000F000000140B9E9F4BA.png"
-> style="width:3.293cm;height:4.392cm" /> <img
-> Pictures/10000000000000F000000140E48D960F.png"
-> style="width:3.293cm;height:4.392cm" />
+<img
+src="Pictures/10000000000000F000000140148EAA59.png"
+style="width:3.24cm;height:4.322cm" /> <img
+src="Pictures/10000000000000F000000140B9E9F4BA.png"
+style="width:3.293cm;height:4.392cm" /> <img
+src="Pictures/10000000000000F000000140E48D960F.png"
+style="width:3.293cm;height:4.392cm" />
 
 >
 
@@ -2966,11 +2961,11 @@ Gigabytes
 
 >
 
-> <img
-> Pictures/10000000000000F000000140A08DC84B.png"
-> style="width:3.649cm;height:4.867cm" /> <img
-> Pictures/10000000000000F000000140E7CC16F7.png"
-> style="width:3.634cm;height:4.845cm" />
+<img
+src="Pictures/10000000000000F000000140A08DC84B.png"
+style="width:3.649cm;height:4.867cm" /> <img
+src="Pictures/10000000000000F000000140E7CC16F7.png"
+style="width:3.634cm;height:4.845cm" />
 
 >
 
