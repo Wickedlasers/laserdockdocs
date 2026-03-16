@@ -3108,7 +3108,7 @@ button MIDI mapped to an APC button. If the APC button selected has an
 RGB LED associated with it then the button will light up on the APC with the
 colour selected from the colour dropdown.
 
-<div class="row g-3 align-items-start images-equal-row row-cols-4">
+<div class="row g-3 align-items-start images-equal-row row-cols-2 row-cols-sm-4">
   <div class="col">
     {{< img src="Pictures/10000000000000F000000140E696B544.bmp" formats="webp jpeg" class="img-equal" >}}
   </div>
