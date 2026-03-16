@@ -1238,13 +1238,17 @@ Card Contents](https://github.com/Wickedlasers/mk2SDContent)
 
 ## <span id="anchor-38"></span><span id="anchor-39"></span>Laser Show Control Mode
 
-<img
-src="Pictures/10000000000000F000000140203B6FB9.png"
-style="width:3.942cm;height:5.256cm" /> <img
-src="Pictures/10000000000000F00000014016D5EF32.png"
-style="width:3.942cm;height:5.256cm" /> <img
-src="Pictures/10000000000000F000000140B1450E8F.png"
-style="width:3.956cm;height:5.274cm" />
+<div class="row g-3 align-items-start">
+  <div class="col">
+    {{< img src="Pictures/10000000000000F000000140203B6FB9.png" formats="webp jpeg" >}}
+  </div>
+  <div class="col">
+    {{< img src="Pictures/10000000000000F00000014016D5EF32.png" formats="webp jpeg" >}}
+  </div>
+  <div class="col">
+    {{< img src="Pictures/10000000000000F000000140B1450E8F.png" formats="webp jpeg" >}}
+  </div>
+</div>
 
 <div class="row g-3 align-items-start">
   <div class="col">
