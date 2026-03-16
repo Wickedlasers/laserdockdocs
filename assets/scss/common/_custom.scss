@@ -1,5 +1,18 @@
 // Put your custom SCSS code here
 
+// Ensure specific image rows display equal-sized images side by side
+.images-equal-row .img-equal {
+  width: 180px;   // set a consistent width
+  height: 240px;  // set a consistent height
+  object-fit: contain; // keep aspect ratio within the box
+  display: block;
+}
+
+// Prevent unexpected wrapping gaps
+.images-equal-row img {
+  font-size: 0;
+}
+
 // Reduce font size of the in-page Table of Contents links
 .page-links a {
   font-size: 0.85em; // smaller than default
