@@ -1059,7 +1059,14 @@ in the playlist control mode.
 
 This can be done using the Settings→Playback Speed menu
 
-{{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}{{< img src="Pictures/10000000000000F0000001402F2A03BB.bmp" formats="webp jpeg" >}}
+<div class="row g-3 align-items-start">
+  <div class="col-6">
+    {{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}
+  </div>
+  <div class="col-6">
+    {{< img src="Pictures/10000000000000F0000001402F2A03BB.bmp" formats="webp jpeg" >}}
+  </div>
+  </div>
 
 The playback speed slider can also be assigned to a MIDI knob or fader
 if using an APC40 MK2 or APC mini MK2 (see [MIDI
@@ -1088,7 +1095,7 @@ Firefox macOS browser:
 
 <img
 src="Pictures/1000000100000217000002E6087E2ADC.png"
-style="width:9.638cm;height:13.367cm" />
+/>
 
 ### <span id="anchor-34"></span>Playlist Web App Quick Image Settings
 
