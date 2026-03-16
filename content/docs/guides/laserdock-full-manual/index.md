@@ -1282,13 +1282,12 @@ Card Contents](https://github.com/Wickedlasers/mk2SDContent)
 
 > Show audio will be played from the 3.5mm stereo audio output socket.
 
-If Cube Link is enabled – see the Cube Link entry here: [Cube
-Link](#14.5.7.Cube Link Mode|outline)
+> If Cube Link is enabled – see the Cube Link entry here: <a href="#anchor-96">Cube Link</a>
 
-Selecting Play on a Cube Link Master will begin playback on the Master,
-plus any
+> Selecting Play on a Cube Link Master will begin playback on the Master,
+> plus any
 
-Cube Link Slave devices configured with the same Link Channel and PIN.
+> Cube Link Slave devices configured with the same Link Channel and PIN.
 
 > For laser shows designed for more than one projector, ensure the Group
 > number is set on each Cube Link device. Cube Link connected Slave
@@ -2293,7 +2292,8 @@ To enter the IP address, short press with the entry box highlighted.
 
 Select the tick button to close the entry box.
 
-### <span id="anchor-96"></span>Cube Link Mode
+<span id="anchor-96"></span>
+### Cube Link Mode
 
 Wireless Cube Link (only available when connection mode is not set to
 WiFi) is a method of synchronising playback of content across multiple
