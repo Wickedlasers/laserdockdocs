@@ -54,7 +54,17 @@
     overflow-y: auto;
     /* Improve scroll aesthetics on desktop */
     overscroll-behavior: contain;
+    /* Prevent horizontal white-space scroll; allow inner elements to manage their own overflow */
+    overflow-x: hidden;
+    max-width: 100%;
   }
+  /* Belt-and-suspenders: prevent any ancestor from creating horizontal scrollbars */
+  body.single.section.docs .content,
+  body.single.section.docs .row.flex-xl-nowrap { overflow-x: hidden; }
+
+  /* Allow code blocks to scroll horizontally without causing page overflow */
+  .docs-content pre { overflow-x: auto; max-width: 100%; }
+  .docs-content table { max-width: 100%; display: block; overflow-x: auto; }
   /* Keep side navs fixed in view; allow internal scroll if taller than viewport */
   body.single.section.docs .docs-sidebar,
   body.single.section.docs .docs-toc {
