@@ -1999,9 +1999,11 @@ buttons on an APC40 MK2 if using the factory supplied MIDI mappings.
 
 Note: MK2 menu items in yellow (as shown in image above) mean they have
 been MIDI mapped to a dial/fader on an external MIDI controller. They
-will only show in yellow when a compatible MIDI controller is conn<img
+will only show in yellow when a compatible MIDI controller is connected to the USB port of the MK2.
+
+<img
 src="Pictures/100000010000021A000001529F4FC536.png"
-style="width:8.493cm;height:5.336cm" />ected to the USB port of the MK2.
+style="width:8.493cm;height:5.336cm" />
 
 ## <span id="anchor-75"></span>Mk2 Settings – Audio
 
