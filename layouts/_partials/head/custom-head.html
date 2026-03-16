@@ -60,15 +60,17 @@
   }
 
   /* Quick Links styles (adapted from docs.thulite.io) */
-  /* Ensure consistent padding on all sides: 16px */
-  #quick-links-section { margin-top: 0 !important; padding: 1rem !important; }
+  /* Make section edge-to-edge and reduce side gutters */
+  #quick-links-section { margin-top: 0 !important; padding-top: 1rem !important; padding-bottom: 1rem !important; padding-left: 0 !important; padding-right: 0 !important; }
+  #quick-links-section .row { --bs-gutter-x: 0; }
+  #quick-links-section .col-12 { padding-left: 0 !important; padding-right: 0 !important; }
   #quick-links-section .card-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 1.5rem;
   }
   #quick-links-section .card-grid > article {
-    flex: 1 1 16rem; /* grow, shrink, base width */
+    flex: 1 1 22rem; /* wider base width so cards use more horizontal space */
     max-width: 100%;
   }
   #quick-links-section .card {
