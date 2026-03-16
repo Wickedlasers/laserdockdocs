@@ -1,6 +1,7 @@
 {
   "htmlElements": {
     "tags": [
+      "*",
       "a",
       "article",
       "aside",
@@ -248,6 +249,8 @@
       "wrap"
     ],
     "ids": [
+      "25-ultra-mk2",
+      "75-ultra-mk2",
       "TableOfContents",
       "abstract",
       "adding-a-custom-svg-to-the-playlist",

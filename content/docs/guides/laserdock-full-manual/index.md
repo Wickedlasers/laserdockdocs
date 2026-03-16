@@ -31,7 +31,9 @@ style="width:15.24cm;height:21.562cm" />
 
 <span id="anchor-2"></span><img
 src="Pictures/10000000000001B30000018313BD7FA6.png"
-style="width:5.027cm;height:4.471cm" /> **WARNING!**
+style="width:5.027cm;height:4.471cm" />
+
+<span style="font-size:40px; font-weight:bold;">WARNING!</span>
 
 **LASER RADIATION**
 
@@ -146,7 +148,7 @@ style="width:15.171cm;height:22.86cm" />
 
 # <span id="anchor-4"></span>Technical Specifications
 
-7.5 Ultra MK2
+## 7.5 Ultra MK2
 
 <table>
 <tbody>
@@ -234,7 +236,7 @@ latest safety standard IEC 60825-1</td>
 </tbody>
 </table>
 
-2.5 Ultra MK2
+## 2.5 Ultra MK2
 
 <table>
 <tbody>
@@ -325,18 +327,9 @@ latest safety standard IEC 60825-1</td>
 # <span id="anchor-5"></span>Product Labelling and Placement
 
 <img
-src="Pictures/10000001000003EC000003D08E2217CA.png"
-style="width:9.225cm;height:8.968cm" />
+src="Pictures/labels.png"
+style="" />
 
-<img
-src="Pictures/10000000000000C80000005A255D295D.jpg"
-style="width:5.297cm;height:2.378cm" /><img
-src="Pictures/100000010000016200000104B6A30C86.png"
-style="width:5.676cm;height:4.172cm" /><img
-src="Pictures/10000001000002EA0000039A472BE24B.png"
-style="width:8.608cm;height:10.634cm" /><img
-src="Pictures/10000001000003EC000003D08E2217CA.png"
-style="width:9.225cm;height:8.968cm" />
 
 # <span id="anchor-6"></span>Safety Guidelines and Proper Usage
 
@@ -503,8 +496,15 @@ laser products used for the purposes of visual entertainment.
 <img
 src="Pictures/10000001000003F2000001E0A4D9C7FB.png"
 style="width:15.24cm;height:7.243cm" />
-<figcaption aria-hidden="true"></figcaption>
-</figure>
+
+**Follow these steps:**
+* **Connect the safety jumper** to one of the **E-Stop RJ45 ports**.
+    * *Note: For the US version of the LaserCube, you must connect the E-Stop included with the unit (see the E-Stop Setup Guide). This is required for FDA compliance; the laser will not function without it.*
+* **Insert the safety key** and rotate it from the **OFF** to the **ON** position.
+    * The **EMISSION LEDs** will illuminate, indicating the LaserCube is capable of emission.
+* **To disable laser emission**, turn the safety key from **ON** to **OFF** and remove the key.
+
+
 
 
 # <span id="anchor-12"></span>E-STOP Setup Guide
@@ -978,23 +978,9 @@ button will be (if RGB is available on the chosen APC button).
 
 The available values for “apc_color” field are:
 
-|     |            |
-|-----|------------|
-| 1   | Red        |
-| 2   | Green      |
-| 3   | Blue       |
-| 4   | Yellow     |
-| 5   | Cyan       |
-| 6   | Magenta    |
-| 7   | White      |
-| 8   | Orange     |
-| 9   | Purple     |
-| 10  | Salmon     |
-| 11  | Pink       |
-| 12  | Lime       |
-| 13  | Cornflower |
-| 14  | Mocha      |
-| 15  | Ice Blue   |
+<img
+src="Pictures/colors.png"
+style="" />
 
 If playlist items do not have these fields present in the JSON file when
 an APC40 MK2 or APC mini MK2 is used in the playlist control mode then
@@ -1048,7 +1034,7 @@ options menu.
 
 The main media controls for the playlist player are shown below.
 
-{{< img src="Pictures/10000000000000F0000001404DB9C2B2.bmp" formats="webp jpeg" >}}
+{{<img src="Pictures/10000000000000F0000001404DB9C2B2.bmp" formats="webp jpeg" >}}
 
 Auto-Play (when enabled) will automatically cycle through another CUE in
 the currently selected playlist every \<cue delay\> seconds. Auto play
@@ -1076,9 +1062,7 @@ in the playlist control mode.
 
 This can be done using the Settings→Playback Speed menu
 
-{{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F0000001402F2A03BB.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}{{< img src="Pictures/10000000000000F0000001402F2A03BB.bmp" formats="webp jpeg" >}}
 
 The playback speed slider can also be assigned to a MIDI knob or fader
 if using an APC40 MK2 or APC mini MK2 (see [MIDI
