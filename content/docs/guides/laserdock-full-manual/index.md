@@ -1844,9 +1844,9 @@ style="width:3.307cm;height:4.41cm" />
 
 <img
 src="Pictures/10000000000000F000000140160D7C1D.png"
-style="width:3.334cm;height:4.445cm" /> ****<img
+style="width:3.334cm;height:4.445cm" /> <img
 src="Pictures/10000000000000F000000140A41929A1.png"
-style="width:3.316cm;height:4.42cm" /> ****<img
+style="width:3.316cm;height:4.42cm" /> <img
 src="Pictures/10000000000000F000000140A6D29B68.png"
 style="width:3.334cm;height:4.445cm" />
 
