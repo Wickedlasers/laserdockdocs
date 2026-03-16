@@ -34,6 +34,26 @@
   }
   .docs-content { margin-inline: auto; padding-top: 32px; }
 
+  /* Docs page: only main content scrolls */
+  body.single.section.docs .wrap.container-xl {
+    height: calc(100vh - var(--header-offset, 0px));
+    overflow: hidden; /* prevent whole-page scroll */
+  }
+  body.single.section.docs .docs-content {
+    height: calc(100vh - var(--header-offset, 0px));
+    overflow-y: auto;
+    /* Improve scroll aesthetics on desktop */
+    overscroll-behavior: contain;
+  }
+  /* Keep side navs fixed in view; allow internal scroll if taller than viewport */
+  body.single.section.docs .docs-sidebar,
+  body.single.section.docs .docs-toc {
+    position: sticky;
+    top: var(--header-offset, 0px);
+    max-height: calc(100vh - var(--header-offset, 0px));
+    overflow: auto;
+  }
+
   /* Improve readability of lists */
   .docs-content ul, .docs-content ol { padding-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 1rem; }
   .docs-content li { margin: 0.25rem 0; }
