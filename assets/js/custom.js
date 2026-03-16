@@ -15,12 +15,29 @@
     return h + 8;
   }
 
+  function getScrollContainer() {
+    const container = document.querySelector('.docs-content');
+    return container || window;
+  }
+
+  function setHeaderOffsetVar() {
+    const h = getHeaderOffset();
+    try { document.documentElement.style.setProperty('--header-offset', h + 'px'); } catch (_) {}
+  }
+
   function scrollToId(id, replaceHash = false) {
     if (!id) return;
     const el = document.getElementById(id);
     if (!el) return;
-    const y = window.pageYOffset + el.getBoundingClientRect().top - getHeaderOffset();
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    const sc = getScrollContainer();
+    if (sc === window) {
+      const y = window.pageYOffset + el.getBoundingClientRect().top - getHeaderOffset();
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    } else {
+      // When scrolling inside docs-content, don't subtract header offset
+      const y = el.offsetTop; // relative to offsetParent; docs-content is ancestor
+      try { sc.scrollTo({ top: y, behavior: 'smooth' }); } catch (_) { sc.scrollTop = y; }
+    }
     if (replaceHash) {
       try { history.replaceState(null, '', '#' + id); } catch (_) {}
     }
@@ -55,10 +72,12 @@
   // If page loads with a hash, correct initial position
   window.addEventListener('load', function () {
     const id = (location.hash || '').replace(/^#/, '');
+    setHeaderOffsetVar();
     if (id) {
       setTimeout(function () { scrollToId(id); }, 0);
     }
   });
+  window.addEventListener('resize', setHeaderOffsetVar);
 
   // Custom ScrollSpy: keep active link until the next section is within 100px
   const TOC_SELECTORS = '#toc a, #TableOfContents a, .toc-mobile a';
@@ -89,12 +108,21 @@
 
   function updateActiveOnScroll() {
     if (!headings.length) return;
-    const offset = getHeaderOffset();
-    // Find the first heading that is below the header. Only switch when it's within 100px
+    const sc = getScrollContainer();
+    const offset = (sc === window) ? getHeaderOffset() : 0;
+    // Find the first heading that is below the header/top. Only switch when it's within 100px
     let candidateIndex = -1;
-    for (let i = 0; i < headings.length; i++) {
-      const top = headings[i].getBoundingClientRect().top - offset;
-      if (top <= 100) candidateIndex = i; else break;
+    if (sc === window) {
+      for (let i = 0; i < headings.length; i++) {
+        const top = headings[i].getBoundingClientRect().top - offset;
+        if (top <= 100) candidateIndex = i; else break;
+      }
+    } else {
+      const st = sc.scrollTop;
+      for (let i = 0; i < headings.length; i++) {
+        const top = (headings[i].offsetTop - st) - offset;
+        if (top <= 100) candidateIndex = i; else break;
+      }
     }
     if (candidateIndex >= 0) {
       setActive(headings[candidateIndex].id);
@@ -119,6 +147,8 @@
   window.addEventListener('load', collectHeadings);
   window.addEventListener('resize', collectHeadings);
   document.addEventListener('DOMContentLoaded', collectHeadings);
+  const scInit = getScrollContainer();
+  if (scInit && scInit.addEventListener) scInit.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('scroll', onScroll, { passive: true });
   // Run once to set initial state
   updateActiveOnScroll();
