@@ -89,6 +89,19 @@
     padding-top: 10px !important;
   }
 
+  /* Anchor offset for headings when mobile TOC is sticky within docs-content */
+  @media (max-width: 1199.98px) {
+    body.single.section.docs .docs-content > h1[id]::before,
+    body.single.section.docs .docs-content > h2[id]::before,
+    body.single.section.docs .docs-content > h3[id]::before,
+    body.single.section.docs .docs-content > h4[id]::before {
+      display: block;
+      height: var(--toc-mobile-height, 0px) !important;
+      margin-top: calc(-1 * var(--toc-mobile-height, 0px)) !important;
+      content: "";
+    }
+  }
+
   /* Navbar brand: show LaserOS logo left of title */
   .sticky-top { z-index: 1030; }
   .navbar .navbar-brand {

@@ -15,6 +15,26 @@
     return h + 8;
   }
 
+  function getMobileTocOffset() {
+    try {
+      const container = document.querySelector('.docs-content');
+      if (!container) return 0;
+      const toc = container.querySelector('.toc-mobile-sticky');
+      if (!toc) return 0;
+      // Use summary height when closed; otherwise nav height
+      const details = toc.querySelector('details');
+      const summary = details ? details.querySelector('summary') : null;
+      let h = 0;
+      if (summary && summary.offsetParent !== null) {
+        h = Math.ceil(summary.getBoundingClientRect().height);
+      }
+      if (!h) {
+        h = Math.ceil(toc.getBoundingClientRect().height);
+      }
+      return h || 0;
+    } catch (_) { return 0; }
+  }
+
   function getScrollContainer() {
     const container = document.querySelector('.docs-content');
     return container || window;
@@ -23,6 +43,8 @@
   function setHeaderOffsetVar() {
     const h = getHeaderOffset();
     try { document.documentElement.style.setProperty('--header-offset', h + 'px'); } catch (_) {}
+    const mt = getMobileTocOffset();
+    try { document.documentElement.style.setProperty('--toc-mobile-height', mt + 'px'); } catch (_) {}
   }
 
   function scrollToId(id, replaceHash = false) {
@@ -34,8 +56,10 @@
       const y = window.pageYOffset + el.getBoundingClientRect().top - getHeaderOffset();
       window.scrollTo({ top: y, behavior: 'smooth' });
     } else {
-      // When scrolling inside docs-content, don't subtract header offset
-      const y = el.offsetTop; // relative to offsetParent; docs-content is ancestor
+      // When scrolling inside docs-content, subtract the mobile TOC height if present
+      const rect = el.getBoundingClientRect();
+      const baseTop = rect.top + sc.scrollTop - sc.getBoundingClientRect().top;
+      const y = Math.max(0, baseTop - getMobileTocOffset());
       try { sc.scrollTo({ top: y, behavior: 'smooth' }); } catch (_) { sc.scrollTop = y; }
     }
     if (replaceHash) {
@@ -79,7 +103,7 @@
     }
   });
   window.addEventListener('resize', setHeaderOffsetVar);
-
+  
   // Custom ScrollSpy: keep active link until the next section is within 100px
   const TOC_SELECTORS = '#toc a, #TableOfContents a, .toc-mobile a';
   let headings = [];
