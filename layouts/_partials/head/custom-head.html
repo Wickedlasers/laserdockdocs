@@ -74,6 +74,21 @@
     }
     /* Remove the top padding so the mobile TOC sits flush under the navbar */
     body.single.section.docs .docs-content { padding-top: 0 !important; }
+
+    /* When mobile TOC is open, scroll the TOC panel itself, not the main content */
+    .toc-mobile-sticky details[open] .page-links {
+      max-height: calc(100vh - var(--header-offset, 68px));
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      background: var(--bs-body-bg);
+      position: relative;
+      z-index: 1010; /* above content */
+    }
+    .toc-mobile-sticky details[open] {
+      background: var(--bs-body-bg);
+      box-shadow: 0 1px 0 var(--bs-border-color);
+    }
   }
 
   /* Improve readability of lists */
