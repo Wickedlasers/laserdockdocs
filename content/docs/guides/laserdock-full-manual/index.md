@@ -728,8 +728,7 @@ It can be selected by going to the Control Mode menu and selecting
 “Playlist” from the options.
 
 {{< img src="Pictures/10000000000000F0000001402D9B28C5.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F0000001400D60C535.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001400D60C535.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-26"></span>Creating a custom playlist
 
@@ -1015,10 +1014,8 @@ The playlist that the MK2 will use is selected from the Playlist
 selection menu drop down.
 
 {{< img src="Pictures/10000000000000F0000001402E9F996E.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014043F681DA.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F0000001409E69CD80.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014043F681DA.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F0000001409E69CD80.bmp" formats="webp jpeg" >}}
 
 The chosen playlist selection will be saved and used again even through
 a power cycle of the device.
@@ -1034,7 +1031,7 @@ options menu.
 
 The main media controls for the playlist player are shown below.
 
-{{<img src="Pictures/10000000000000F0000001404DB9C2B2.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F0000001404DB9C2B2.bmp" formats="webp jpeg" >}}
 
 Auto-Play (when enabled) will automatically cycle through another CUE in
 the currently selected playlist every \<cue delay\> seconds. Auto play
@@ -1186,8 +1183,7 @@ The playlist options menu is present on the top level menu (below the
 playlist player menu item) of the MK2 LCD when in playlist control mode
 
 {{< img src="Pictures/10000000000000F0000001404C44791F.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140B32EFF16.bmp"
-style="width:3.942cm;height:5.256cm" />
+{{< img src="Pictures/10000000000000F000000140B32EFF16.bmp" formats="webp jpeg" >}}
 
 This menu allows the source of the web app html to be selected, and also
 allows the user to select whether the playlist starts projecting at
@@ -1224,10 +1220,8 @@ src="Pictures/10000000000000F000000140B1450E8F.png"
 style="width:3.956cm;height:5.274cm" />
 
 {{< img src="Pictures/10000000000000F000000140209CE050.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140C9F97C93.bmp"
-style="width:4.008cm;height:5.345cm" /> <img
-src="Pictures/10000000000000F000000140E837EBBD.bmp"
-style="width:4.008cm;height:5.345cm" />
+{{< img src="Pictures/10000000000000F000000140C9F97C93.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140E837EBBD.bmp" formats="webp jpeg" >}}
 
 > The latest version of the laser show player now has a categories
 > selection drop-down menu, allowing the user to choose the type of
@@ -1369,8 +1363,7 @@ when moving between visualizer CUE’s can also be adjusted through the
 Viz Options menu. Auto play at power-on can also be adjusted.
 
 {{< img src="Pictures/10000000000000F000000140C817037D.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140F448796E.bmp"
-style="width:4.06cm;height:5.415cm" />
+{{< img src="Pictures/10000000000000F000000140F448796E.bmp" formats="webp jpeg" >}}
 
 *Note: Since the audio visualizers are internally generated, live, they
 will be projected as soon as the emission key-switch or pendant E-stop
@@ -1939,8 +1932,7 @@ The tempo menu can be accessed by going to Settings→Tempo when in either
 playlist or visualizer control mode.
 
 {{< img src="Pictures/10000000000000F000000140F0949A36.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140F678F662.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140F678F662.bmp" formats="webp jpeg" >}}
 
 The tempo can be set using the BPM slider, or can be set using the “Tap
 BPM” button.
@@ -2042,8 +2034,7 @@ Equally setting a too high gain will result in over driven visualizers.
 Both inputs can have their gain adjusted from 0dB to 50dB in 5dB steps.
 
 {{< img src="Pictures/10000000000000F000000140004C5F6B.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F0000001409352A0C4.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001409352A0C4.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-80"></span> Audio Defaults
 
@@ -2310,10 +2301,8 @@ In order to use any of these MIDI devices, the USB must be enabled by
 going to the Settings -\>USB MIDI menu.
 
 {{< img src="Pictures/10000000000000F0000001407F27FF45.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140FB4F133A.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F000000140A78D5750.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140FB4F133A.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140A78D5750.bmp" formats="webp jpeg" >}}
 
 Note: USB MIDI does **NOT** operate when the unit is in LaserOS / ArtNet
 / DMX control modes, as these modes ar<img
@@ -2337,8 +2326,7 @@ in the playlist control mode.
 This can be done using the Settings→Playback Speed menu
 
 {{< img src="Pictures/10000000000000F0000001408B33BB66.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F0000001402F2A03BB.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001402F2A03BB.bmp" formats="webp jpeg" >}}
 
 The playback speed slider can also be assigned to a MIDI knob or fader
 if using an APC40 MK2 or APC mini MK2 (see [MIDI
@@ -2506,10 +2494,8 @@ cycle effect colours when +White parameter is OFF.
 #### <span id="anchor-107"></span>Colour cycle effect parameters
 
 {{< img src="Pictures/10000000000000F000000140F87AA280.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014086551E1B.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F000000140AC8DCE4C.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014086551E1B.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140AC8DCE4C.bmp" formats="webp jpeg" >}}
 
 The adjustable parameters for the colour cycle effect are Intensity,
 Speed, and Include White (+white).
@@ -2607,10 +2593,8 @@ adjustments.
 The images below show the available user parameters for the hue effect.
 
 {{< img src="Pictures/10000000000000F000000140D95EEE7D.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014096A56829.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F000000140322236BB.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014096A56829.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140322236BB.bmp" formats="webp jpeg" >}}
 
 The “+White” works the same as described in the Colour cycle effect
 documented previously, and determines whether white portions of the
@@ -2670,10 +2654,8 @@ style="width:5.729cm;height:5.35cm" />
 #### <span id="anchor-116"></span>Colourize effect parameters
 
 {{< img src="Pictures/10000000000000F000000140ECC676EF.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140EB88E597.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F0000001404888522A.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140EB88E597.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F0000001404888522A.bmp" formats="webp jpeg" >}}
 
 The intensity parameter determines how much of the colour effect will be
 applied to the projection between 0% and 100%.
@@ -2705,8 +2687,7 @@ multiple of the current beat, based on the current tempo.
 #### <span id="anchor-119"></span>Flash effect parameters
 
 {{< img src="Pictures/10000000000000F000000140F8533FB0.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F0000001404AE7D36B.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001404AE7D36B.bmp" formats="webp jpeg" >}}
 
 The intensity parameter determines how much of the projection will have
 the flash fade applied, and is between 0% and 100%.
@@ -2740,8 +2721,7 @@ menu).
 #### <span id="anchor-122"></span>Strobe effect parameters
 
 {{< img src="Pictures/10000000000000F000000140F8533FB0.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014060CC21E1.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014060CC21E1.bmp" formats="webp jpeg" >}}
 
 The intensity parameter determines the amount the projection will have
 the strobe applied, and is between 0% and 100%.
@@ -2878,10 +2858,8 @@ In order to use any of these MIDI devices, the USB must be enabled by
 going to the Settings -\>USB MIDI menu.
 
 {{< img src="Pictures/10000000000000F0000001407F27FF45.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F000000140FB4F133A.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F000000140A78D5750.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F000000140FB4F133A.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140A78D5750.bmp" formats="webp jpeg" >}}
 
 Note: USB MIDI does **NOT** operate when the unit is in LaserOS / ArtNet
 / DMX control modes, as these modes ar<img
@@ -2904,10 +2882,8 @@ press on a slider to enter edit mode, then long press to bring up the
 context menu, and then select “Link MIDI Knob” as shown below.
 
 {{< img src="Pictures/10000000000000F0000001400032D2C4.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014090228FA2.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F000000140D6DB1305.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014090228FA2.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140D6DB1305.bmp" formats="webp jpeg" >}}
 
 Once “Link MIDI knob” is selected, the MK2 will wait for the user to
 turn or move a control on the APC. Once a control is moved then the
@@ -2960,10 +2936,8 @@ press to bring up the context menu, then select “unlink MIDI Knob”
 option.
 
 {{< img src="Pictures/10000000000000F000000140567C66A0.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014081122E39.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F0000001405B010FD2.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014081122E39.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F0000001405B010FD2.bmp" formats="webp jpeg" >}}
 
 The images above show all the options available on the slider pop-up
 context menu, including the un-link option. The “Default Val” button
@@ -2996,10 +2970,8 @@ style="width:4.001cm;height:5.339cm" />ight up on the APC with the
 colour selected from the colour dropdown.
 
 {{< img src="Pictures/10000000000000F000000140BD52F4E2.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F00000014029E7DFBB.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F00000014047BDCCAD.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F00000014029E7DFBB.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F00000014047BDCCAD.bmp" formats="webp jpeg" >}}
 
 ### <span id="anchor-132"></span>MIDI Mapping a Drop Down control
 
@@ -3029,12 +3001,9 @@ single LED colour, then only select the first colour from the colour
 drop down.
 
 {{< img src="Pictures/10000000000000F00000014017CC487F.bmp" formats="webp jpeg" >}}
-src="Pictures/10000000000000F0000001401C17C152.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F00000014023581B81.bmp"
-style="width:4.001cm;height:5.339cm" /><img
-src="Pictures/10000000000000F000000140E696B544.bmp"
-style="width:4.001cm;height:5.339cm" />
+{{< img src="Pictures/10000000000000F0000001401C17C152.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F00000014023581B81.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140E696B544.bmp" formats="webp jpeg" >}}
 
 The drop down UI element will now be shown in yellow, indicating a
 mapping to an APC button, and the APC button (top right) will change to
