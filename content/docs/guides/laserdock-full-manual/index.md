@@ -1382,7 +1382,7 @@ firmware updates.
 The factory supplied SD card also includes MIDI mapping of some of these
 visualizers to the APC40 MK2 / APC mini MK2 grid buttons.
 
-{{< img src="Pictures/10000000000000F000000140CE6D1EF9.bmp" formats="webp jpeg" >}}
+{{< img src="Pictures/10000000000000F000000140CE6D1EF9.png" formats="webp jpeg" >}}
 
 CubeOS has a number of built-in audio reactive visualizers, and these
 can be manually selected via the drop-down list in addition to the
@@ -2370,12 +2370,17 @@ going to the Settings -\>USB MIDI menu.
 </div>
 
 Note: USB MIDI does **NOT** operate when the unit is in LaserOS / ArtNet
-/ DMX control modes, as these modes ar<img
-src="Pictures/10000000000000F000000140A9A20B7D.bmp"
-style="width:4.001cm;height:5.339cm" />e controlled using alternate
+/ DMX control modes, as these modes are controlled using alternate
 communication protocols.
 
-{{< img src="Pictures/10000000000000F0000001403852FCAE.bmp" formats="webp jpeg" >}}
+<div class="row g-3 align-items-start">
+  <div class="col-auto">
+    {{< img src="Pictures/10000000000000F000000140A9A20B7D.bmp" formats="webp jpeg" >}}
+  </div>
+  <div class="col-auto">
+    {{< img src="Pictures/10000000000000F0000001403852FCAE.bmp" formats="webp jpeg" >}}
+  </div>
+</div>
 
 If a compatible device is detected on the MK2 USB port then the status
 bar will briefly show an updated connected status, and unplugging a
@@ -2977,12 +2982,17 @@ going to the Settings -\>USB MIDI menu.
 </div>
 
 Note: USB MIDI does **NOT** operate when the unit is in LaserOS / ArtNet
-/ DMX control modes, as these modes ar<img
-src="Pictures/10000000000000F000000140A9A20B7D.bmp"
-style="width:4.001cm;height:5.339cm" />e controlled using alternate
+/ DMX control modes, as these modes are controlled using alternate
 communication protocols.
 
-{{< img src="Pictures/10000000000000F0000001403852FCAE.bmp" formats="webp jpeg" >}}
+<div class="row g-3 align-items-start">
+  <div class="col-auto">
+    {{< img src="Pictures/10000000000000F000000140A9A20B7D.bmp" formats="webp jpeg" >}}
+  </div>
+  <div class="col-auto">
+    {{< img src="Pictures/10000000000000F0000001403852FCAE.bmp" formats="webp jpeg" >}}
+  </div>
+</div>
 
 If a compatible device is detected on the MK2 USB port then the status
 bar will briefly show an updated connected status, and unplugging a
@@ -3095,20 +3105,21 @@ instead of a blue colour.
 
 The images below show the MK2 in playlist control mode with it’s play
 button MIDI mapped to an APC button. If the APC button selected has an
-RGB LED associated with it then the button will l<img
-src="Pictures/10000000000000F000000140E696B544.bmp"
-style="width:4.001cm;height:5.339cm" />ight up on the APC with the
+RGB LED associated with it then the button will light up on the APC with the
 colour selected from the colour dropdown.
 
-<div class="row g-3 align-items-start">
+<div class="row g-3 align-items-start images-equal-row row-cols-4">
   <div class="col">
-    {{< img src="Pictures/10000000000000F000000140BD52F4E2.bmp" formats="webp jpeg" >}}
+    {{< img src="Pictures/10000000000000F000000140E696B544.bmp" formats="webp jpeg" class="img-equal" >}}
   </div>
   <div class="col">
-    {{< img src="Pictures/10000000000000F00000014029E7DFBB.bmp" formats="webp jpeg" >}}
+    {{< img src="Pictures/10000000000000F000000140BD52F4E2.bmp" formats="webp jpeg" class="img-equal" >}}
   </div>
   <div class="col">
-    {{< img src="Pictures/10000000000000F00000014047BDCCAD.bmp" formats="webp jpeg" >}}
+    {{< img src="Pictures/10000000000000F00000014029E7DFBB.bmp" formats="webp jpeg" class="img-equal" >}}
+  </div>
+  <div class="col">
+    {{< img src="Pictures/10000000000000F00000014047BDCCAD.bmp" formats="webp jpeg" class="img-equal" >}}
   </div>
 </div>
 
@@ -3202,10 +3213,9 @@ Password: **Laser2020**
 
 The Web Admin Page has 3 Menu sections:
 
-- [**H**](#_y7yarf9ho2l)**ome Menu**, showing general info.
+- **Home Menu**, showing general info.
 - **Config Menu**, for Network and mode settings.
-- **Update Menu**[, for performing remote firmware
-  update](#_sortqr24vwrb)s.
+- **Update Menu**, for performing remote firmware updates.
 
 ## <span id="anchor-135"></span>Home Menu
 
