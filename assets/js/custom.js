@@ -70,6 +70,7 @@
   });
 
   // If page loads with a hash, correct initial position
+  window.addEventListener('DOMContentLoaded', setHeaderOffsetVar);
   window.addEventListener('load', function () {
     const id = (location.hash || '').replace(/^#/, '');
     setHeaderOffsetVar();
