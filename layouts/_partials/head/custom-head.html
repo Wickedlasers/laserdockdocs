@@ -66,10 +66,14 @@
 
   /* Mobile TOC: stick directly under the top navbar (no extra gap) */
   @media (max-width: 1199.98px) { /* d-xl-none visible range */
+    /* Because .docs-content starts below the sticky header and is the scroll container,
+       the mobile TOC should stick to the top of that scrollport (not add header offset). */
     .toc-mobile-sticky {
-      top: var(--header-offset, 58px) !important; /* align with measured header */
-      margin-top: -32px !important; /* keep theme's compensation for docs-content padding */
+      top: 0 !important;
+      margin-top: 0 !important; /* we'll remove docs-content padding on mobile */
     }
+    /* Remove the top padding so the mobile TOC sits flush under the navbar */
+    body.single.section.docs .docs-content { padding-top: 0 !important; }
   }
 
   /* Improve readability of lists */
