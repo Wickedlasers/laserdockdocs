@@ -30,63 +30,137 @@
   <div class="row justify-content-center">
     <div class="col-12">
       <div class="card-grid">
+        {{- $manual := relref . "docs/guides/laserdock-full-manual/index.md" -}}
+        <!-- Safety & Setup (consecutive upfront sections) -->
         <article class="card sl-flex">
           <p class="title sl-flex">
-            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
-              style="--sl-icon-size: 1.333em;">
-              <path
-                d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z" />
-            </svg>
-            <span>Control Mode</span>
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 14h-2v-2h2v2Zm0-4h-2V6h2v6Z"/></svg>
+            <span>Safety &amp; Setup</span>
           </p>
           <div class="body">
             <ul>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Playlist_Control_Mode">Playlist Control Mode</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/UltraMkCMLaserOS">LaserOS</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/UltraMkCMArtnet">Art-Net</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/UltraMkCMDMX-512">DMX-512</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Visualizer">Visualizer</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/UltraMk2Playlist">Playlist</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Laser_Show">Laser Show</a></li>
+              <li><a href="{{ $manual }}#declaration-of-conformity">Declaration Of Conformity</a></li>
+              <li><a href="{{ $manual }}#safety-warning">Safety Warning</a></li>
+              <li><a href="{{ $manual }}#lasercube-parts-diagram">LaserCube Parts Diagram</a></li>
+              <li><a href="{{ $manual }}#technical-specifications">Technical Specifications</a></li>
+              <li><a href="{{ $manual }}#product-labelling-and-placement">Product Labelling and Placement</a></li>
+              <li><a href="{{ $manual }}#safety-guidelines-and-proper-usage">Safety Guidelines and Proper Usage</a></li>
+              <li><a href="{{ $manual }}#enabling-the-laser-e-stop--interlock">Enabling the Laser E‑Stop / Interlock</a></li>
+              <li><a href="{{ $manual }}#e-stop-setup-guide">E‑STOP Setup Guide</a></li>
+              <li><a href="{{ $manual }}#hardware-installation">Hardware Installation</a></li>
+              <li><a href="{{ $manual }}#cubeos-lcd-settings-and-status">CubeOS LCD Settings and Status</a></li>
             </ul>
           </div>
         </article>
+
+        <!-- Control Modes (consecutive subsections under MK2 Control Modes) -->
         <article class="card sl-flex">
           <p class="title sl-flex">
-            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
-              style="--sl-icon-size: 1.333em;">
-              <path
-                d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z" />
-            </svg>
-            <span>Settings</span>
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+            <span>Control Modes</span>
           </p>
           <div class="body">
             <ul>
-              <li><a href="https://wiki.laseros.com/index.php/UltraMk2Settings">Settings Overview</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Connection">Connection</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Network">Network</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Status_Info">Status Info</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Settings_ILDA_Input_Cfg">ILDA Input Config</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Tempo_Menu">Tempo Menu</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Audio_Settings">Audio Settings</a></li>
+              <li><a href="{{ $manual }}#laseros-control-mode">LaserOS Control Mode</a></li>
+              <li><a href="{{ $manual }}#playlist-control-mode">Playlist Control Mode</a></li>
+              <li><a href="{{ $manual }}#playlist-player-web-app">Playlist Player Web App</a></li>
+              <li><a href="{{ $manual }}#laser-show-control-mode">Laser Show Control Mode</a></li>
+              <li><a href="{{ $manual }}#visualizer-control-mode">Visualizer Control Mode</a></li>
+              <li><a href="{{ $manual }}#artnet-control-mode">ArtNet Control Mode</a></li>
+              <li><a href="{{ $manual }}#dmx-control-mode">DMX Control Mode</a></li>
+              <li><a href="{{ $manual }}#dmxartnet-default-fixture-channel-allocation">DMX/ArtNet Default Fixture Channel Allocation</a></li>
             </ul>
           </div>
         </article>
+
+        <!-- MK2 Settings (consecutive subsections) -->
         <article class="card sl-flex">
           <p class="title sl-flex">
-            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
-              style="--sl-icon-size: 1.333em;">
-              <path
-                d="M9 10h1a1 1 0 1 0 0-2H9a1 1 0 0 0 0 2Zm0 2a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2H9Zm11-3.06a1.3 1.3 0 0 0-.06-.27v-.09c-.05-.1-.11-.2-.19-.28l-6-6a1.07 1.07 0 0 0-.28-.19h-.09a.88.88 0 0 0-.33-.11H7a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8.94Zm-6-3.53L16.59 8H15a1 1 0 0 1-1-1V5.41ZM18 19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5v3a3 3 0 0 0 3 3h3v9Zm-3-3H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2Z" />
-            </svg>
-            <span>Misc</span>
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm8.94 3a8.06 8.06 0 0 0-.46-1.11l2.06-2.06-2.83-2.83-2.06 2.06c-.36-.2-.73-.36-1.11-.46L16 2h-4l-.44 4.6c-.38.1-.75.26-1.11.46L8.39 5l-2.83 2.83 2.06 2.06c-.2.36-.36.73-.46 1.11L2 12v4l4.6.44c.1.38.26.75.46 1.11L5 19.61 7.83 22l2.06-2.06c.36.2.73.36 1.11.46L12 26h4l.44-4.6c.38-.1.75-.26 1.11-.46L19.61 21 22 18.17l-2.06-2.06c.2-.36.36-.73.46-1.11L26 16v-4l-4.6-.44Z"/></svg>
+            <span>MK2 Settings</span>
           </p>
           <div class="body">
             <ul>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Midi_Mapping_Explained">MIDI Mapping Explained</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Effects">Effects</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_Projection">Projection</a></li>
-              <li><a href="https://wiki.laseros.com/index.php/ULTRA_MK2_LaserOS_Playlist_Export_Guide">LaserOS Playlist Export Guide</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--projection">Projection</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--tempo">Tempo</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--audio">Audio</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--connection">Connection</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--network">Network</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--usb-midi">USB MIDI</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--playback-speed">Playback Speed</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--general">General</a></li>
+              <li><a href="{{ $manual }}#mk2-settings--ilda-input-cfg">ILDA Input Config</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Effects (consecutive within Effects section) -->
+        <article class="card sl-flex">
+          <p class="title sl-flex">
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M12 2l2.09 6.26L20 9l-5 3.64L16.18 20 12 16.9 7.82 20 9 12.64 4 9l5.91-.74L12 2z"/></svg>
+            <span>Built‑in Effects</span>
+          </p>
+          <div class="body">
+            <ul>
+              <li><a href="{{ $manual }}#mk2-built-in-effects">Overview</a></li>
+              <li><a href="{{ $manual }}#available-effects">Available Effects</a></li>
+              <li><a href="{{ $manual }}#effects-filter-drop-down">Effects Filter</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Status & Info -->
+        <article class="card sl-flex">
+          <p class="title sl-flex">
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M11 7h2v2h-2V7Zm0 4h2v6h-2v-6Zm1-9a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/></svg>
+            <span>Status &amp; Info</span>
+          </p>
+          <div class="body">
+            <ul>
+              <li><a href="{{ $manual }}#status-info-page">Status Info Page</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MIDI Mapping -->
+        <article class="card sl-flex">
+          <p class="title sl-flex">
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M4 5h16v14H4zM7 8h2v2H7zM11 8h2v2h-2zM15 8h2v2h-2z"/></svg>
+            <span>MIDI Mapping</span>
+          </p>
+          <div class="body">
+            <ul>
+              <li><a href="{{ $manual }}#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">APC40/APC Mini MK II</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Web Admin (consecutive subsections) -->
+        <article class="card sl-flex">
+          <p class="title sl-flex">
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M3 4h18v2H3zm0 6h18v10H3z"/></svg>
+            <span>Web Admin</span>
+          </p>
+          <div class="body">
+            <ul>
+              <li><a href="{{ $manual }}#lasercube-web-admin-page">Overview</a></li>
+              <li><a href="{{ $manual }}#home-menu">Home Menu</a></li>
+              <li><a href="{{ $manual }}#config-menu">Config Menu</a></li>
+              <li><a href="{{ $manual }}#firmware-update">Firmware Update</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Maintenance (consecutive end sections) -->
+        <article class="card sl-flex">
+          <p class="title sl-flex">
+            <svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M7 21h10v-2H7v2ZM12 3l4 4h-3v7h-2V7H8l4-4Z"/></svg>
+            <span>Maintenance</span>
+          </p>
+          <div class="body">
+            <ul>
+              <li><a href="{{ $manual }}#factory-reset-procedure">Factory Reset Procedure</a></li>
+              <li><a href="{{ $manual }}#sd-card-information">SD Card Information</a></li>
             </ul>
           </div>
         </article>

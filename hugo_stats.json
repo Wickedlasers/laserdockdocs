@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "*",
       "a",
       "article",
       "aside",
@@ -15,7 +14,6 @@
       "details",
       "div",
       "em",
-      "figcaption",
       "figure",
       "footer",
       "form",
@@ -216,7 +214,6 @@
       "rounded-pill",
       "row",
       "row-cols-2",
-      "row-cols-4",
       "row-cols-sm-4",
       "search-form",
       "search-input",
