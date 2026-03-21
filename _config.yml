@@ -8,7 +8,7 @@ remote_theme: "just-the-docs/just-the-docs"
 theme: 
 
 # Custom Domain Settings
-url: "https://laserdockdocs.wickedlasers.com"
+url: "https://wiki.laseros.com"
 baseurl: ""
 
 # Theme Specific Configurations
