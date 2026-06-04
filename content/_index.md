@@ -1,7 +1,7 @@
 ---
-title: Welcome to official docs of the Laserdock and LaserOS ecosystem.
+title: Welcome to the official wiki for LaserCube
 description: ""
-lead: "from Laseros.com and Wickedlasers.com"
+lead: "from Laseros.com"
 date: 2023-09-07T16:33:54+02:00
 lastmod: 2026-02-16T16:10:57+01:00
 draft: false
