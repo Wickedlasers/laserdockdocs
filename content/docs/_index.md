@@ -16,5 +16,5 @@ params:
   section:
     title: "Documentation"
     iconName: "book"
-    startUrl: "/docs/guides/laserdock-full-manual/"
+    startUrl: "/docs/guides/ultra-mk2-full-manual-v1.4/"
 ---
