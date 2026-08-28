@@ -10,7 +10,7 @@
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3"
-        href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/laserdock-full-manual/"
+        href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/ultra-mk2-full-manual-v1.4/"
         role="button">Full Manual</a>
       {{ .Content }}
     </div>
@@ -30,7 +30,7 @@
   <div class="row justify-content-center">
     <div class="col-12">
       <div class="card-grid">
-        {{- $manual := relref . "docs/guides/laserdock-full-manual/index.md" -}}
+        {{- $manual := relref . "docs/guides/ultra-mk2-full-manual-v1.4/index.md" -}}
         <!-- Safety & Setup (consecutive upfront sections) -->
         <article class="card sl-flex">
           <p class="title sl-flex">
@@ -66,6 +66,7 @@
               <li><a href="{{ $manual }}#playlist-player-web-app">Playlist Player Web App</a></li>
               <li><a href="{{ $manual }}#laser-show-control-mode">Laser Show Control Mode</a></li>
               <li><a href="{{ $manual }}#visualizer-control-mode">Visualizer Control Mode</a></li>
+              <li><a href="{{ $manual }}#visualizer-web-app">Visualizer Web App</a></li>
               <li><a href="{{ $manual }}#artnet-control-mode">ArtNet Control Mode</a></li>
               <li><a href="{{ $manual }}#dmx-control-mode">DMX Control Mode</a></li>
               <li><a href="{{ $manual }}#dmxartnet-default-fixture-channel-allocation">DMX/ArtNet Default Fixture Channel Allocation</a></li>
@@ -81,15 +82,16 @@
           </p>
           <div class="body">
             <ul>
-              <li><a href="{{ $manual }}#mk2-settings--projection">Projection</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--tempo">Tempo</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--audio">Audio</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--connection">Connection</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--network">Network</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--usb-midi">USB MIDI</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--playback-speed">Playback Speed</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--general">General</a></li>
-              <li><a href="{{ $manual }}#mk2-settings--ilda-input-cfg">ILDA Input Config</a></li>
+              <li><a href="{{ $manual }}#projection-settings">Projection</a></li>
+              <li><a href="{{ $manual }}#tempo-settings">Tempo</a></li>
+              <li><a href="{{ $manual }}#audio-settings">Audio</a></li>
+              <li><a href="{{ $manual }}#connection-settings">Connection</a></li>
+              <li><a href="{{ $manual }}#network-settings">Network</a></li>
+              <li><a href="{{ $manual }}#usb-midi-settings">USB MIDI</a></li>
+              <li><a href="{{ $manual }}#playback-speed-settings">Playback Speed</a></li>
+              <li><a href="{{ $manual }}#general-settings">General</a></li>
+              <li><a href="{{ $manual }}#ilda-input-config-settings">ILDA Input Config</a></li>
+              <li><a href="{{ $manual }}#menu-language-settings">Menu Language</a></li>
             </ul>
           </div>
         </article>
@@ -102,9 +104,15 @@
           </p>
           <div class="body">
             <ul>
-              <li><a href="{{ $manual }}#mk2-built-in-effects">Overview</a></li>
+              <li><a href="{{ $manual }}#built-in-effects">Overview</a></li>
               <li><a href="{{ $manual }}#available-effects">Available Effects</a></li>
-              <li><a href="{{ $manual }}#effects-filter-drop-down">Effects Filter</a></li>
+              <li><a href="{{ $manual }}#effect-config-drop-down">Effect Config</a></li>
+              <li><a href="{{ $manual }}#colour-cycle-effect">Colour Cycle</a></li>
+              <li><a href="{{ $manual }}#zoom-effect">Zoom</a></li>
+              <li><a href="{{ $manual }}#hue-effect">Hue</a></li>
+              <li><a href="{{ $manual }}#colourize-effect">Colourize</a></li>
+              <li><a href="{{ $manual }}#flash-effect">Flash</a></li>
+              <li><a href="{{ $manual }}#strobe-effect">Strobe</a></li>
             </ul>
           </div>
         </article>
@@ -131,6 +139,10 @@
           <div class="body">
             <ul>
               <li><a href="{{ $manual }}#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">APC40/APC Mini MK II</a></li>
+              <li><a href="{{ $manual }}#enabling-usb-midi">Enabling USB MIDI</a></li>
+              <li><a href="{{ $manual }}#midi-mapping-a-slider-control">Mapping a Slider</a></li>
+              <li><a href="{{ $manual }}#midi-mapping-a-button-control-or-switch">Mapping a Button</a></li>
+              <li><a href="{{ $manual }}#default-apc40-mk2-midi-mapping">Default APC40 MK2 Mapping</a></li>
             </ul>
           </div>
         </article>
