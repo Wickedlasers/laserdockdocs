@@ -1,17 +1,894 @@
-<!doctype html><html lang=en-US data-bs-theme=light><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=preload href=./fonts/vendor/jost/jost-v4-latin-regular.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=./fonts/vendor/jost/jost-v4-latin-500.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=./fonts/vendor/jost/jost-v4-latin-700.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href="/main.284703db3840eda6c70a874916301574551c6f0a2cb2f424cf8e04166920772ed707fae7b36005856f23c32ef7d8a5607b742692cc80138fe3ac6ecc62641d95.css" integrity="sha512-KEcD2zhA7abHCodJFjAVdFUcbwossvQkz44EFmkgdy7XB/rns2AFhW8jwy732KVge3QmksyAE4/jrG7MYmQdlQ==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><base href=./><link rel=canonical href=./><link rel=alternate type=application/rss+xml href=./index.xml title=LaserOS><link rel=sitemap type=application/xml href=./sitemap.xml title=LaserOS><link rel=alternate type=text/plain href=./llms.txt title=LaserOS><title>Welcome to the official wiki for LaserCube | LaserOS</title><meta name=description content><link rel=manifest href=./manifest.webmanifest><meta property="og:url" content="/"><meta property="og:site_name" content="LaserOS"><meta property="og:title" content="Welcome to the official wiki for LaserCube"><meta property="og:description" content="Congrats on setting up a new Doks project!"><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:image" content="/images/LaserOSLogo.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/LaserOSLogo.png"><meta name=twitter:title content="Welcome to the official wiki for LaserCube"><meta name=twitter:description content="Congrats on setting up a new Doks project!"><meta name=twitter:site content="@getdoks"><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","url":"/","name":"My Docs","description":"Congrats on setting up a new Doks project!"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Organization","url":"/","name":"Thulite","image":[{"@id":"/images/LaserOSLogo.png"}],"logo":{"@id":"/images/LaserOSLogo.png"}}]}</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel=stylesheet><script>(function(){try{"scrollRestoration"in history&&(history.scrollRestoration="manual")}catch{}if(location.hash)try{window.scrollTo(0,0)}catch{}})()</script><style>:root{--font-sans:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--sl-text-xs:0.8125rem;--sl-text-sm:0.9375rem;--sl-text-base:1rem;--sl-text-lg:1.125rem;--sl-text-h4:1.25rem}body{font-family:var(--font-sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}p{margin-top:.75rem;margin-bottom:.75rem}h1,h2,h3,h4,h5,h6{font-family:var(--font-sans);font-weight:700;letter-spacing:-.01em}h1{font-size:2rem;line-height:1.2;margin-top:.5rem;margin-bottom:1rem}h2{font-size:1.5rem;line-height:1.3;margin-top:2rem;margin-bottom:.75rem}code,pre,kbd,samp{font-family:var(--font-mono);font-size:.95em}@media(min-width:1200px){.docs-sidebar{max-width:300px}.docs-toc{max-width:280px}.docs-content{max-width:860px}}@media(min-width:1400px){.docs-content{max-width:900px}}.docs-content{margin-inline:auto;padding-top:32px}body.single.section.docs{overflow:hidden}body.single.section.docs .wrap.container-xl{height:calc(100vh - var(--header-offset,68px));overflow:hidden}body.single.section.docs .docs-content{height:calc(100vh - var(--header-offset,68px));overflow-y:auto;overscroll-behavior:contain;overflow-x:hidden;max-width:100%}body.single.section.docs .content,body.single.section.docs .row.flex-xl-nowrap{overflow-x:hidden}.docs-content pre{overflow-x:auto;max-width:100%}.docs-content table{max-width:100%;display:block;overflow-x:auto}body.single.section.docs .docs-sidebar,body.single.section.docs .docs-toc{position:sticky;top:var(--header-offset,68px);max-height:calc(100vh - var(--header-offset,68px));overflow:auto}@media(max-width:1199.98px){.toc-mobile-sticky{top:0!important;margin-top:0!important}body.single.section.docs .docs-content{padding-top:0!important}.toc-mobile-sticky details[open] .page-links{max-height:calc(100vh - var(--header-offset,68px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--bs-body-bg);position:relative;z-index:1010}.toc-mobile-sticky details[open]{background:var(--bs-body-bg);box-shadow:0 1px 0 var(--bs-border-color)}}.docs-content ul,.docs-content ol{padding-left:1.25rem;margin-top:.5rem;margin-bottom:1rem}.docs-content li{margin:.25rem 0}nav.section-nav.docs-links{padding-top:0!important}body>div.wrap.container-xl>div>div>nav>div>h3{margin-top:0!important;padding-top:10px!important}@media(max-width:1199.98px){body.single.section.docs .docs-content>h1[id]::before,body.single.section.docs .docs-content>h2[id]::before,body.single.section.docs .docs-content>h3[id]::before,body.single.section.docs .docs-content>h4[id]::before{display:block;height:var(--toc-mobile-height,0px)!important;margin-top:calc(-1 * var(--toc-mobile-height,0px))!important;content:""}}.sticky-top{z-index:1030}.navbar .navbar-brand{display:inline-flex;align-items:center;background-image:url(/images/LaserOSLogo.png);background-repeat:no-repeat;background-position:0;background-size:28px 28px;padding-left:36px;min-height:28px}#quick-links-section{margin-top:0!important;padding-top:1rem!important;padding-bottom:1rem!important;padding-left:0!important;padding-right:0!important}#quick-links-section .row{--bs-gutter-x:0}#quick-links-section .col-12{padding-left:0!important;padding-right:0!important}#quick-links-section .card-grid{display:flex;flex-wrap:wrap;gap:1rem 1.5rem}#quick-links-section .card-grid>article{flex:1 1 22rem;max-width:100%}#quick-links-section .card{border:1px solid var(--sl-color-gray-5,#2b2f31);background-color:var(--sl-color-black,#0b0d0e);padding:clamp(1rem,calc(.125rem + 3vw),2.5rem);display:flex;flex-direction:column;gap:clamp(.5rem,calc(.125rem + 1vw),1rem);border-radius:.5rem}#quick-links-section .card .title{font-weight:600;font-size:var(--sl-text-h4);color:var(--sl-color-white,#e6e6e6);line-height:1.2;gap:1rem;align-items:center;display:flex}#quick-links-section .card .title .icon{width:1.4em;height:1.4em;flex:none}#quick-links-section .card .icon{color:var(--sl-color-gray-3,#a0a7ad);border:1px solid var(--ql-icon-border,#3a3f43);background-color:var(--ql-icon-bg,rgba(160,167,173,8%));padding:.25em;border-radius:.25rem}#quick-links-section .card .body{margin:0;font-size:clamp(var(--sl-text-sm),calc(.5rem + 1vw),var(--sl-text-base))}#quick-links-section .card .body ul{margin:0;padding-left:1.25rem}#quick-links-section .card .body li{margin:.3rem 0}#quick-links-section .card a{text-decoration:none}#quick-links-section .card a:hover{text-decoration:underline}#quick-links-section>div>div>div>article{margin-top:0!important;margin-bottom:0!important}#quick-links-section .card:nth-child(1) .icon{--ql-icon-border:#f59f0b;--ql-icon-bg:rgba(245,159,11,0.15);color:#f59f0b}#quick-links-section .card:nth-child(2) .icon{--ql-icon-border:#a855f7;--ql-icon-bg:rgba(168,85,247,0.15);color:#a855f7}#quick-links-section .card:nth-child(3) .icon{--ql-icon-border:#22c55e;--ql-icon-bg:rgba(34,197,94,0.15);color:#22c55e}#quick-links-section .card:nth-child(4) .icon{--ql-icon-border:#ef4444;--ql-icon-bg:rgba(239,68,68,0.15);color:#ef4444}</style></head><body class="single home"><div class=sticky-top><header class="navbar navbar-expand-lg"><div class=container-xl><a class="navbar-brand me-auto me-lg-3" href=./>LaserOS</a>
-<button type=button id=searchToggleMobile class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
-<svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-</button>
-<button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasNavMain aria-controls=offcanvasNavMain aria-label="Open main navigation menu">
-<svg class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg></button><div class="offcanvas offcanvas-end h-auto" tabindex=-1 id=offcanvasNavMain aria-labelledby=offcanvasNavMainLabel><div class=offcanvas-header><h5 class=offcanvas-title id=offcanvasNavMainLabel>LaserOS</h5><button type=button class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss=offcanvas aria-label=Close>
-<svg class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg></button></div><div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between"><ul class="navbar-nav flex-grow-1"><li class=nav-item><a class=nav-link href=./docs/guides/ultra-mk2-full-manual-v1.4/>Docs</a></li></ul><button type=button id=searchToggleDesktop class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
-<svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></button><ul id=socialMenu class="nav flex-row order-lg-4"><li class=nav-item><a class="nav-link social-link" href=https://github.com/Wickedlasers/laserdockdocs><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><small class="ms-2 visually-hidden">GitHub</small></a></li></ul></div></div></div></header></div><div class=modal id=searchModal tabindex=-1 aria-labelledby=searchModalLabel aria-hidden=true><div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down"><div class=modal-content><div class=modal-header><h2 class="modal-title fs-5 visually-hidden" id=searchModalLabel>Search</h2><button type=button class="btn-close visually-hidden" data-bs-dismiss=modal aria-label=Close></button><div class="search-input flex-grow-1 d-none"><form id=search-form class=search-form action=# method=post accept-charset=UTF-8 role=search><label for=query class=visually-hidden>Search</label><div class=d-flex><input type=search id=query name=query class="search-text form-control form-control-lg" placeholder=Search aria-label=Search maxlength=128 autocomplete=off>
-<button type=button class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss=modal aria-label=Close>Cancel</button></div></form></div></div><div class=modal-body><p class="search-loading status message d-none mt-3 text-center">Loading search index…</p><p class="search-no-recent message d-none mt-3 text-center">No recent searches</p><p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class=query-no-results>Query here</span></strong>"</p><div id=searchResults class=search-results></div><template><article class="search-result list-view"><div class="card my-3"><div class=card-body><header><h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href=#>Title here</a></h2><div class="submitted d-none"><time class=created-date datetime=1970-01-01T08:00:00+08:00>1970-01-01T08:00:00+08:00</time></div></header><div class=content>Summary here</div></div></div></article></template></div><div class=modal-footer><ul class="list-inline me-auto d-none d-md-block"><li class=list-inline-item><kbd class=me-2><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4m3 3-3-3 3-3"/></g></svg></kbd><span class=DocSearch-Label>to select</span></li><li class=list-inline-item><kbd class=me-2><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8m3-3-3 3-3-3"/></g></svg></kbd><kbd class=me-2><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8m3 3-3-3-3 3"/></g></svg></kbd><span class=DocSearch-Label>to navigate</span></li><li class=list-inline-item><kbd class=me-2><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993.0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016s1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5s-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864.0 1.6425 1.031 1.5443 2.2492h-2.956"/></g></svg></kbd><span class=DocSearch-Label>to close</span></li></ul><p class=d-md-none>Search by <a class=text-decoration-none href=https://github.com/nextapps-de/flexsearch>FlexSearch</a></p></div></div></div></div><div class="wrap container-xl" role=document><div class=content><section class="section container-fluid pb-3"><div class="row justify-content-center"><div class="col-lg-12 text-center"><h1>Welcome to the official wiki for LaserCube</h1></div><div class="col-lg-9 col-xl-8 text-center"><p class=lead>from Laseros.com</p><a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href=./docs/guides/ultra-mk2-full-manual-v1.4/ role=button>Full Manual</a></div></div></section></div></div><div class="d-flex justify-content-start"><div class=bg-dots></div></div><section id=quick-links-section class="section container-fluid mt-n3 pb-3"><div class="row justify-content-center"><div class=col-12><div class=card-grid><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"/></svg>
-<span>Safety & Setup</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#declaration-of-conformity>Declaration Of Conformity</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#safety-warning>Safety Warning</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#lasercube-parts-diagram>LaserCube Parts Diagram</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#technical-specifications>Technical Specifications</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#product-labelling-and-placement>Product Labelling and Placement</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#safety-guidelines-and-proper-usage>Safety Guidelines and Proper Usage</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#enabling-the-laser-e-stop--interlock>Enabling the Laser E‑Stop / Interlock</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#e-stop-setup-guide>E‑STOP Setup Guide</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#hardware-installation>Hardware Installation</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#cubeos-lcd-settings-and-status>CubeOS LCD Settings and Status</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
-<span>Control Modes</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#laseros-control-mode>LaserOS Control Mode</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#playlist-control-mode>Playlist Control Mode</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#playlist-player-web-app>Playlist Player Web App</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#laser-show-control-mode>Laser Show Control Mode</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#visualizer-control-mode>Visualizer Control Mode</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#visualizer-web-app>Visualizer Web App</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#artnet-control-mode>ArtNet Control Mode</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#dmx-control-mode>DMX Control Mode</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#dmxartnet-default-fixture-channel-allocation>DMX/ArtNet Default Fixture Channel Allocation</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zm8.94 3a8.06 8.06.0 00-.46-1.11l2.06-2.06L19.71 5l-2.06 2.06c-.36-.2-.73-.36-1.11-.46L16 2h-4l-.44 4.6c-.38.1-.75.26-1.11.46L8.39 5 5.56 7.83l2.06 2.06c-.2.36-.36.73-.46 1.11L2 12v4l4.6.44c.1.38.26.75.46 1.11L5 19.61 7.83 22l2.06-2.06c.36.2.73.36 1.11.46L12 26h4l.44-4.6c.38-.1.75-.26 1.11-.46L19.61 21 22 18.17l-2.06-2.06c.2-.36.36-.73.46-1.11L26 16v-4l-4.6-.44z"/></svg>
-<span>MK2 Settings</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#projection-settings>Projection</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#tempo-settings>Tempo</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#audio-settings>Audio</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#connection-settings>Connection</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#network-settings>Network</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#usb-midi-settings>USB MIDI</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#playback-speed-settings>Playback Speed</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#general-settings>General</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#ilda-input-config-settings>ILDA Input Config</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#menu-language-settings>Menu Language</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M12 2l2.09 6.26L20 9l-5 3.64L16.18 20 12 16.9 7.82 20 9 12.64 4 9l5.91-.74L12 2z"/></svg>
-<span>Built‑in Effects</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#built-in-effects>Overview</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#available-effects>Available Effects</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#effect-config-drop-down>Effect Config</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#colour-cycle-effect>Colour Cycle</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#zoom-effect>Zoom</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#hue-effect>Hue</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#colourize-effect>Colourize</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#flash-effect>Flash</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#strobe-effect>Strobe</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9a10 10 0 1010 10A10 10 0 0012 2z"/></svg>
-<span>Status & Info</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#status-info-page>Status Info Page</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M4 5h16v14H4zM7 8h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
-<span>MIDI Mapping</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii>APC40/APC Mini MK II</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#enabling-usb-midi>Enabling USB MIDI</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#midi-mapping-a-slider-control>Mapping a Slider</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#midi-mapping-a-button-control-or-switch>Mapping a Button</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#default-apc40-mk2-midi-mapping>Default APC40 MK2 Mapping</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M3 4h18v2H3zm0 6h18v10H3z"/></svg>
-<span>Web Admin</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#lasercube-web-admin-page>Overview</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#home-menu>Home Menu</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#config-menu>Config Menu</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#firmware-update>Firmware Update</a></li></ul></div></article><article class="card sl-flex"><p class="title sl-flex"><svg aria-hidden="true" class="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size:1.333em"><path d="M7 21h10v-2H7v2zM12 3l4 4h-3v7h-2V7H8l4-4z"/></svg>
-<span>Maintenance</span></p><div class=body><ul><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#factory-reset-procedure>Factory Reset Procedure</a></li><li><a href=./docs/guides/ultra-mk2-full-manual-v1.4/#sd-card-information>SD Card Information</a></li></ul></div></article></div></div></div></section><section class="section section-md section-features" style=display:none><div class=container><div class="row justify-content-center text-center"><div class=col-lg-5><h2 class=h4>Update content</h2><p>Edit <code>content/_index.md</code> to see this page change.</p></div><div class=col-lg-5><h2 class=h4>Add new content</h2><p>Add Markdown files to <code>content</code> to create new pages.</p></div><div class=col-lg-5><h2 class=h4>Configure your site</h2><p>Edit your config in <code>config/_default/params.toml</code>.</p></div><div class=col-lg-5><h2 class=h4>Read the docs</h2><p>Learn more in the <a href=https://getdoks.org/>Docs</a>.</p></div></div></div></section><footer class="footer text-muted"><div class=container-xl><div class=row><div class="col-lg-8 text-lg-start"><ul class=list-inline><li class=list-inline-item><a class=text-muted href=./privacy/>Privacy Policy</a></li></ul></div><div class="col-lg-8 text-lg-end"><ul class=list-inline><li class=list-inline-item>Brought to you by <a class=text-muted href=https://www.laseros.com/>Laseros.com</a></li></ul></div></div></div></footer><script async src=./js/app.a87dd983392f240155fa3a44ea668acf531bb7f340aafea4806bcbaca485ed16.js integrity="sha256-qH3ZgzkvJAFV+jpE6maKz1Mbt/NAqv6kgGvLrKSF7RY="></script><script async src=./js/flexsearch.7eba00eb5215ef91f56d713f7ca4ed0ed15a03229dad461712f9fbf791d16a25.js integrity="sha256-froA61IV75H1bXE/fKTtDtFaAyKdrUYXEvn795HRaiU="></script><script async src=./js/search-modal.96e662d8f691fe25c859a3437074b485f2d7bed0bca612725028c6cf4322e2f2.js integrity="sha256-luZi2PaR/iXIWaNDcHS0hfLXvtC8phJyUCjGz0Mi4vI="></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LaserCube User Wiki · Ultra MK2 and Pro manual</title>
+<meta name="description" content="The official manual and video guides for LaserCube Ultra MK2 and LaserCube Pro: safety, setup, control modes, DMX and ArtNet, settings and maintenance.">
+<link rel="canonical" href="https://wiki.laseros.com/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/">
+<meta property="og:title" content="LaserCube User Wiki">
+<meta property="og:description" content="The official LaserCube Ultra MK2 and Pro manual and video guides: setup, safety, DMX/ArtNet and settings, searchable by section.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"LaserCube User Wiki","url":"https://wiki.laseros.com/","publisher":{"@type":"Organization","name":"LaserCube","url":"https://www.laseros.com/"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/home/ultra-mk2-rear.webp" imagesrcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" imagesizes="(max-width: 900px) 90vw, 560px" fetchpriority="high">
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{
+  --bg:#ffffff;--bg-2:#f5f5f7;--line:rgba(10,10,20,.1);--line-2:rgba(10,10,20,.18);
+  --text:#0a0a0c;--muted:#55555f;--subtle:#696973;
+  --accent:#2b62fd;--accent-hover:#1844c8;--accent-soft:rgba(43,98,253,.09);
+  --mark:rgba(43,98,253,.17);--shadow:0 30px 70px -30px rgba(10,10,20,.35);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --stage:#0a0a0c;--yellow:#ffd60a;--wm:url(#wm-ink);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a0a0c;--bg-2:#121216;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.17);
+    --text:#f2f2f5;--muted:#a2a2ad;--subtle:#8e8e9a;
+    --accent:#86a5ff;--accent-hover:#b3c6ff;--accent-soft:rgba(134,165,255,.12);
+    --mark:rgba(134,165,255,.24);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"],.stage{
+  --bg:#0a0a0c;--bg-2:#121216;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.17);
+  --text:#f2f2f5;--muted:#a2a2ad;--subtle:#8e8e9a;
+  --accent:#86a5ff;--accent-hover:#b3c6ff;--accent-soft:rgba(134,165,255,.12);
+  --mark:rgba(134,165,255,.24);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
+}
+:root[data-theme="dark"]{color-scheme:dark}
+.stage{background:var(--stage);color:var(--text)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+button{font:inherit;color:inherit}
+h1,h2,h3{text-wrap:balance}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#fff;color:#000;padding:8px 14px;border-radius:6px}
+.skip:focus{left:16px}
+.container{width:100%;max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.label{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--subtle)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(10,10,12,.97);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
+.site-header .container{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:14px;flex:none}
+.wordmark{width:148px;height:auto}
+.brand-sep{width:1px;height:18px;background:var(--line-2)}
+.brand-name{font-size:14.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.nav{display:flex;gap:22px}
+.nav a{font-size:14.5px;color:var(--muted);transition:color .15s}
+.nav a:hover{color:var(--text)}
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:6px}
+.search-pill{display:flex;align-items:center;gap:10px;height:36px;width:240px;padding:0 6px 0 12px;border-radius:8px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:var(--subtle);font-size:14px;cursor:pointer;transition:border-color .15s,color .15s}
+.search-pill:hover{border-color:rgba(255,255,255,.35);color:var(--muted)}
+.search-pill .icon{width:16px;height:16px}
+.kbd{margin-left:auto;font:500 11px/1 var(--mono);color:var(--subtle);border:1px solid var(--line-2);border-radius:5px;padding:4px 6px;white-space:nowrap}
+.icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
+.icon-btn:hover{background:rgba(255,255,255,.07);color:var(--text)}
+.only-mobile{display:none}
+.theme-dark-icon{display:none}
+:root[data-theme="dark"] .theme-dark-icon{display:block}
+:root[data-theme="dark"] .theme-light-icon{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .theme-dark-icon{display:block}
+  :root:not([data-theme="light"]) .theme-light-icon{display:none}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:40px;align-items:center;min-height:620px}
+.hero-copy{padding:72px 0}
+.hero h1{margin:18px 0 18px;font-size:clamp(38px,5.2vw,62px);line-height:1.02;letter-spacing:-.04em;font-weight:600;max-width:12.5ch}
+.hero .lead{margin:0;max-width:30em;font-size:18px;line-height:1.55;color:var(--muted)}
+.hero-search{margin-top:36px;width:100%;max-width:520px;display:flex;align-items:center;gap:12px;height:54px;padding:0 10px 0 16px;border-radius:10px;border:1px solid var(--line-2);background:rgba(255,255,255,.05);color:var(--subtle);font-size:16px;text-align:left;cursor:text;transition:border-color .15s,background .15s}
+.hero-search:hover{border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.07)}
+.hero-search .icon{width:20px;height:20px;color:var(--text)}
+.hero-search .ph{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.quick{margin:16px 0 0;font-size:14px;color:var(--subtle);max-width:520px}
+.quick a{color:var(--muted);border-bottom:1px solid var(--line-2);transition:color .15s,border-color .15s}
+.quick a:hover{color:var(--text);border-color:var(--text)}
+.quick .sep{margin:0 8px;opacity:.5}
+
+.hero-figure{margin:0;align-self:end;position:relative}
+.product{position:relative;width:100%;aspect-ratio:1200/1280}
+.product img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 78%,transparent),linear-gradient(to right,transparent,#000 14%,#000 90%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 78%,transparent),linear-gradient(to right,transparent,#000 14%,#000 90%,transparent);mask-composite:intersect}
+.hs{position:absolute;left:var(--x);top:var(--y);width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:grid;place-items:center;z-index:1}
+.hs::before{content:"";width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.22),0 0 18px rgba(134,165,255,.9);transition:transform .15s}
+.hs::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px solid rgba(255,255,255,.7);animation:ping 2.8s cubic-bezier(.2,.6,.3,1) infinite;animation-delay:var(--d,0s)}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}70%,100%{transform:scale(2.1);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hs::after{animation:none;opacity:0}}
+.hs:hover::before,.hs:focus-visible::before{transform:scale(1.25)}
+.tip{position:absolute;left:calc(100% + 6px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;font:500 13px/1 var(--font);color:#0a0a0c;background:#fff;border-radius:6px;padding:8px 10px;box-shadow:0 8px 30px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}
+.tip::after{content:" →";color:#2b62fd}
+.hs.l .tip{left:auto;right:calc(100% + 6px);transform:translate(4px,-50%)}
+.hs:hover .tip,.hs:focus-visible .tip{opacity:1;transform:translate(0,-50%)}
+.hs:focus-visible{outline-offset:0;border-radius:50%}
+.hero-figure figcaption{position:absolute;left:14%;right:0;bottom:22px;font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--subtle)}
+
+/* models */
+.models{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.models .label{align-self:center;padding:22px 28px 22px 0;max-width:150px;line-height:1.5}
+.model{display:flex;align-items:center;gap:16px;padding:18px 20px;border-left:1px solid var(--line);transition:background .15s}
+.model:hover{background:var(--bg-2)}
+.model img{width:64px;height:64px;object-fit:cover;border-radius:8px;background:#000;flex:none}
+.model strong{display:block;font-size:15px;font-weight:600;letter-spacing:-.005em}
+.model span{display:block;font-size:13.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+.model .go{margin-left:auto;color:var(--subtle);transition:color .15s,transform .15s}
+.model:hover .go{color:var(--accent);transform:translateX(2px)}
+
+/* sections */
+.block{padding-top:96px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px}
+.head h2{margin:8px 0 0;font-size:clamp(26px,3vw,34px);line-height:1.15;letter-spacing:-.03em;font-weight:600}
+.head p{margin:10px 0 0;color:var(--muted);max-width:40em}
+.more{display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:500;color:var(--accent);white-space:nowrap}
+.more:hover{color:var(--accent-hover)}
+.more .icon{width:16px;height:16px}
+
+.course{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 0 0 1px var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.thumb:hover img{transform:scale(1.03)}
+.thumb .play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px 0 8px;border-radius:6px;background:rgba(0,0,0,.72);color:#fff;font:500 12px/1 var(--font);backdrop-filter:blur(6px)}
+.thumb .play svg{width:14px;height:14px;fill:#fff;stroke:none}
+.course h3,.vids h3{margin:14px 0 0;font-size:16.5px;line-height:1.35;letter-spacing:-.01em;font-weight:600}
+.vids h3{margin-top:6px}
+.course h3 a:hover,.vids h3 a:hover{color:var(--accent)}
+.also{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:14px;color:var(--subtle)}
+.also a{color:var(--text);border-bottom:1px solid var(--line-2)}
+.also a:hover{color:var(--accent);border-color:var(--accent)}
+
+.chapters{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.chapter{padding:26px 24px 30px 0;border-bottom:1px solid var(--line)}
+.chapter + .chapter{padding-left:24px;border-left:1px solid var(--line)}
+.chapter:nth-child(4n+1){padding-left:0;border-left:0}
+.chapter .num{font:500 12px/1 var(--mono);color:var(--subtle);letter-spacing:.06em}
+.chapter h3{margin:10px 0 12px;font-size:17px;letter-spacing:-.01em;font-weight:600}
+.chapter h3 a:hover{color:var(--accent)}
+.chapter ul{list-style:none;margin:0;padding:0}
+.chapter li a{display:block;padding:3px 0;font-size:14.5px;color:var(--muted);transition:color .12s}
+.chapter li a:hover{color:var(--text)}
+
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px}
+.vids .label{display:block;margin-top:14px}
+
+.downloads{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.dl{display:flex;align-items:center;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line);transition:background .15s}
+.dl:nth-child(odd){padding-right:28px}
+.dl:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
+.dl:hover{background:var(--bg-2)}
+.dl .ico{display:grid;place-items:center;width:40px;height:40px;border-radius:8px;border:1px solid var(--line-2);color:var(--text);flex:none}
+.dl strong{display:block;font-size:15.5px;font-weight:600}
+.dl span{display:block;font-size:14px;color:var(--muted)}
+.dl .go{margin-left:auto;color:var(--subtle)}
+.dl:hover .go{color:var(--accent)}
+
+.safety{margin-top:96px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);overflow:hidden;border-radius:14px}
+.safety-img{position:relative;min-height:360px;background:#07060f}
+.safety-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.safety-body{padding:48px 48px 44px}
+.warn-tag{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#000;font:700 12px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:3px}
+.warn-tag svg{width:16px;height:16px;stroke:#000;stroke-width:2}
+.safety h2{margin:22px 0 14px;font-size:clamp(24px,2.6vw,30px);line-height:1.2;letter-spacing:-.025em;font-weight:600}
+.safety p{margin:0 0 12px;color:var(--muted);max-width:36em}
+.safety p strong{color:var(--text);font-weight:600}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:8px;font-size:14.5px;font-weight:500;border:1px solid var(--line-2);transition:border-color .15s,background .15s}
+.btn:hover{border-color:var(--text)}
+.btn.solid{background:#fff;color:#0a0a0c;border-color:#fff}
+.btn.solid:hover{background:#e6e6ea}
+
+.help{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:28px;padding:56px 0 0}
+.help h2{margin:6px 0 0;font-size:22px;letter-spacing:-.02em;font-weight:600}
+.help a.opt{display:block;padding:18px 0 0;border-top:1px solid var(--line)}
+.help a.opt strong{display:flex;align-items:center;gap:8px;font-size:15.5px;font-weight:600}
+.help a.opt span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}
+.help a.opt:hover strong{color:var(--accent)}
+
+.site-footer{margin-top:96px;border-top:1px solid var(--line);padding:28px 0 36px;font-size:14px;color:var(--subtle)}
+.site-footer .container{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+.site-footer .wordmark{width:104px;opacity:.8}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.site-footer nav a:hover{color:var(--text)}
+.site-footer .copy{margin-left:auto}
+
+/* search dialog */
+dialog.search{padding:0;border:1px solid var(--line-2);border-radius:14px;background:var(--bg);color:var(--text);width:min(700px,calc(100vw - 32px));max-height:min(660px,calc(100vh - 96px));margin:10vh auto auto;box-shadow:var(--shadow);overflow:hidden}
+dialog.search[open]{display:flex;flex-direction:column}
+dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
+.search-bar{display:flex;align-items:center;gap:12px;padding:0 14px 0 18px;height:60px;border-bottom:1px solid var(--line);flex:none}
+.search-bar .icon{color:var(--subtle);width:20px;height:20px}
+.search-bar input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;color:var(--text);font:400 17px var(--font)}
+.search-bar input::placeholder{color:var(--subtle)}
+.search-bar input::-webkit-search-cancel-button{display:none}
+.search-bar .kbd{margin-left:0;background:transparent;cursor:pointer}
+.results{overflow-y:auto;padding:8px;flex:1;overscroll-behavior:contain}
+.results .hint{padding:12px 12px 6px;font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--subtle)}
+.results .msg{padding:28px 16px;text-align:center;color:var(--muted);font-size:15px}
+.results .msg a{color:var(--accent);font-weight:500}
+.result{display:flex;gap:14px;align-items:flex-start;padding:10px 12px;border-radius:8px;scroll-margin:8px}
+.result .r-body{min-width:0}
+.result .r-path{font-size:12.5px;color:var(--subtle);margin-bottom:1px}
+.result .r-title{font-weight:600;font-size:15.5px}
+.result .r-snip{font-size:13.5px;color:var(--muted);line-height:1.5;margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.result .r-thumb{width:96px;aspect-ratio:16/9;border-radius:5px;object-fit:cover;flex:none;background:#000}
+.result mark{background:var(--mark);color:var(--text);border-radius:3px;padding:0 1px}
+.result[aria-selected="true"]{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.search-foot{display:flex;gap:18px;align-items:center;padding:10px 16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--subtle);flex:none}
+.search-foot span{display:inline-flex;align-items:center;gap:6px}
+.search-foot .kbd{margin:0}
+
+@media (max-width:1100px){
+  .models{grid-template-columns:1fr 1fr 1fr}
+  .models .label{grid-column:1/-1;max-width:none;padding:18px 0 4px}
+  .model:nth-of-type(1){border-left:0;padding-left:0}
+  .course,.vids{grid-template-columns:repeat(2,1fr)}
+  .chapters{grid-template-columns:repeat(2,1fr)}
+  .chapter:nth-child(4n+1){padding-left:24px;border-left:1px solid var(--line)}
+  .chapter:nth-child(2n+1){padding-left:0;border-left:0}
+  .help{grid-template-columns:1fr 1fr}
+  .help>div:first-child{grid-column:1/-1}
+}
+@media (max-width:900px){
+  .nav,.search-pill,.brand-sep,.brand-name{display:none}
+  .only-mobile{display:inline-grid}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
+  .hero-copy{padding:56px 0 8px}
+  .hero-figure{max-width:520px;width:100%;margin:0 auto}
+  .product img{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+  .hero-figure figcaption{left:0;text-align:center}
+  .safety{grid-template-columns:1fr}
+  .safety-img{min-height:260px}
+  .safety-body{padding:32px 28px}
+}
+@media (max-width:640px){
+  .container{padding-left:16px;padding-right:16px}
+  .wordmark{width:124px}
+  .models{grid-template-columns:1fr}
+  .model,.model:nth-of-type(1){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
+  .block{padding-top:72px}
+  .head{flex-direction:column;align-items:flex-start;margin-bottom:24px}
+  .course,.vids{grid-template-columns:1fr 1fr;gap:28px 16px}
+  .course h3,.vids h3{font-size:15px}
+  .also{font-size:13px}
+  .chapter,.chapter + .chapter{padding:20px 12px 22px 14px}
+  .chapter:nth-child(2n+1),.chapter:nth-child(4n+1){padding-left:0}
+  .chapter h3{font-size:15.5px}
+  .chapter li a{font-size:14px}
+  .downloads{grid-template-columns:1fr}
+  .dl:nth-child(odd),.dl:nth-child(even){padding:16px 0;border-left:0}
+  .safety{margin-top:72px;border-radius:12px}
+  .help{grid-template-columns:1fr}
+  .site-footer .copy{margin-left:0}
+  dialog.search{margin-top:12px;max-height:calc(100vh - 24px)}
+  .search-foot,.result .r-thumb{display:none}
+  .tip{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-sd" viewBox="0 0 24 24"><path d="M8 3h9a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6l3-3Z"/><path d="M9 7v3M12 7v3M15 7v3"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="./" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="#videos">Videos</a>
+      <a href="#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-pill" type="button" data-open-search aria-label="Search the manual">
+        <svg class="icon"><use href="#i-search"/></svg>Search<span class="kbd" data-kbd>Ctrl K</span>
+      </button>
+      <button class="icon-btn only-mobile" type="button" data-open-search aria-label="Search the manual"><svg class="icon"><use href="#i-search"/></svg></button>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero stage">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="label">LaserCube Ultra MK2 &amp; Pro</p>
+        <h1>Set up, control and look after your LaserCube.</h1>
+        <p class="lead">The official manual and video guides, searchable down to the section.</p>
+        <button class="hero-search" type="button" data-open-search aria-label="Search the manual">
+          <svg class="icon"><use href="#i-search"/></svg>
+          <span class="ph">Try “factory reset”, “DMX address” or “WiFi”</span>
+          <span class="kbd" data-kbd>Ctrl K</span>
+        </button>
+        <p class="quick">Popular:
+          <a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">DMX channels</a>
+        </p>
+      </div>
+      <figure class="hero-figure">
+        <div class="product">
+          <img src="images/home/ultra-mk2-rear.webp" srcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" sizes="(max-width: 900px) 90vw, 560px" width="1200" height="1280" alt="Rear panel of the LaserCube Ultra MK2 with its ports, screen and safety key">
+          <a aria-label="ILDA in / out, in the manual" class="hs" style="--x:48.3%;--y:47.1%;--d:0s" href="docs/guides/ultra-mk2-pro-manual/#ilda-input-config-settings"><span class="tip" aria-hidden="true">ILDA in / out</span></a>
+          <a aria-label="WiFi antenna, in the manual" class="hs l" style="--x:62.8%;--y:44.5%;--d:.4s" href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode"><span class="tip" aria-hidden="true">WiFi antenna</span></a>
+          <a aria-label="CubeOS screen, in the manual" class="hs l" style="--x:70.3%;--y:51.3%;--d:.8s" href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status"><span class="tip" aria-hidden="true">CubeOS screen</span></a>
+          <a aria-label="Audio in / out and mic, in the manual" class="hs l" style="--x:79.2%;--y:43.4%;--d:1.2s" href="docs/guides/ultra-mk2-pro-manual/#audio-settings"><span class="tip" aria-hidden="true">Audio in / out and mic</span></a>
+          <a aria-label="USB for MIDI controllers, in the manual" class="hs l" style="--x:79.2%;--y:51.6%;--d:1.6s" href="docs/guides/ultra-mk2-pro-manual/#usb-midi-settings"><span class="tip" aria-hidden="true">USB for MIDI controllers</span></a>
+          <a aria-label="DMX in / out, in the manual" class="hs" style="--x:43.3%;--y:62.6%;--d:2s" href="docs/guides/ultra-mk2-pro-manual/#dmx-control-mode"><span class="tip" aria-hidden="true">DMX in / out</span></a>
+          <a aria-label="Ethernet (LAN), in the manual" class="hs l" style="--x:61.9%;--y:61.1%;--d:.6s" href="docs/guides/ultra-mk2-pro-manual/#lan-client-mode"><span class="tip" aria-hidden="true">Ethernet (LAN)</span></a>
+          <a aria-label="E-Stop / interlock, in the manual" class="hs" style="--x:44.2%;--y:72.9%;--d:1s" href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock"><span class="tip" aria-hidden="true">E‑Stop / interlock</span></a>
+          <a aria-label="Safety key, in the manual" class="hs l" style="--x:61.9%;--y:69.2%;--d:1.4s" href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram"><span class="tip" aria-hidden="true">Safety key</span></a>
+        </div>
+        <figcaption>Ultra MK2 rear panel · select a port</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="models" aria-label="Which LaserCube do you have?">
+      <p class="label">Which LaserCube do you have?</p>
+      <a class="model" href="docs/guides/ultra-mk2-pro-manual/#technical-specifications">
+        <img src="images/home/ultra-mk2.webp" alt="" width="64" height="64" loading="lazy">
+        <div><strong>LaserCube Ultra MK2</strong><span>The full-size cube: ILDA, XLR DMX, Ethernet and WiFi.</span></div>
+        <svg class="icon go"><use href="#i-arrow"/></svg>
+      </a>
+      <a class="model" href="docs/guides/ultra-mk2-pro-manual/#technical-specifications">
+        <img src="images/home/pro.webp" alt="" width="64" height="64" loading="lazy">
+        <div><strong>LaserCube Pro</strong><span>The compact Ultra MK2, with DMX on 3.5 mm jacks.</span></div>
+        <svg class="icon go"><use href="#i-arrow"/></svg>
+      </a>
+      <a class="model" href="https://www.laseros.com/tutorials/">
+        <img src="images/home/wifi.webp" alt="" width="64" height="64" loading="lazy">
+        <div><strong>LaserCube WiFi</strong><span>Not covered here. Its guides are on laseros.com.</span></div>
+        <svg class="icon go"><use href="#i-ext"/></svg>
+      </a>
+    </section>
+
+    <section class="block" aria-labelledby="start-h">
+      <div class="head">
+        <div>
+          <p class="label">Start here</p>
+          <h2 id="start-h">The beginner’s guide, in four short videos</h2>
+          <p>Watch them in order, then keep the matching manual chapter open next to your cube.</p>
+        </div>
+      </div>
+      <ol class="course">
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener"><img src="images/home/videos/xgV1FQHKFsQ.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 1</span></a>
+          <h3><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Unboxing</a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></p>
+        </li>
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener"><img src="images/home/videos/UYQt4zhQks8.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 2</span></a>
+          <h3><a href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener">First start</a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></p>
+        </li>
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener"><img src="images/home/videos/Yr7jZidnk9I.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 3</span></a>
+          <h3><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">CubeOS software overview</a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS LCD settings</a></p>
+        </li>
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener"><img src="images/home/videos/hFmpDOsEG_k.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 4</span></a>
+          <h3><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Connection modes</a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Network settings</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block" aria-labelledby="manual-h">
+      <div class="head">
+        <div>
+          <p class="label">Manual</p>
+          <h2 id="manual-h">Every chapter of the manual</h2>
+        </div>
+        <a class="more" href="docs/guides/ultra-mk2-pro-manual/">Open the full manual <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="chapters">
+        <div class="chapter">
+          <span class="num">01</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#safety-warning">Safety and setup</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop and interlock</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#e-stop-setup-guide">E‑Stop setup guide</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#technical-specifications">Technical specifications</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#product-labelling-and-placement">Product labelling</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#declaration-of-conformity">Declaration of conformity</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">02</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#control-modes">Control modes</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#laseros-control-mode">LaserOS</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#playlist-control-mode">Playlist</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#playlist-player-web-app">Playlist Player web app</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#laser-show-control-mode">Laser Show</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#visualizer-control-mode">Visualizer</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#visualizer-web-app">Visualizer web app</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">03</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#dmx-control-mode">DMX and ArtNet</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#dmx-control-mode">DMX control mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#connecting-dmx-cables-to-the-lasercube-pro">DMX cables for the Pro</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#artnet-control-mode">ArtNet control mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#dmxartnet-default-fixture-channel-allocation">Default fixture channels</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">Channel layout</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">04</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Networking</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#wifi-server-mode">WiFi server mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#lan-client-mode">LAN client mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#lan-server-mode">LAN server mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#cube-link-mode">Cube Link mode</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#multi-projector-laser-shows">Multi-projector shows</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">05</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#settings">Settings</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#projection-settings">Projection</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#tempo-settings">Tempo</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#audio-settings">Audio</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#connection-settings">Connection</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#usb-midi-settings">USB MIDI</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#playback-speed-settings">Playback speed</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#general-settings">General</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#ilda-input-config-settings">ILDA input config</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#menu-language-settings">Menu language</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">06</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#built-in-effects">Built-in effects</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#available-effects">Available effects</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#effect-config-drop-down">Effect config</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#colour-cycle-effect">Colour cycle</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#zoom-effect">Zoom</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#hue-effect">Hue</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#colourize-effect">Colourize</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#flash-effect">Flash</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#strobe-effect">Strobe</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">07</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI mapping</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#enabling-usb-midi">Enabling USB MIDI</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#midi-mapping-a-slider-control">Mapping a slider</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#midi-mapping-a-button-control-or-switch">Mapping a button</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#default-apc40-mk2-midi-mapping">Default APC40 MK2 mapping</a></li>
+          </ul>
+        </div>
+        <div class="chapter">
+          <span class="num">08</span>
+          <h3><a href="docs/guides/ultra-mk2-pro-manual/#lasercube-web-admin-page">Web admin and maintenance</a></h3>
+          <ul>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#lasercube-web-admin-page">Web admin page</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#config-menu">Config menu</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#status-info-page">Status info page</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#sd-card-information">SD card information</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="videos" aria-labelledby="videos-h">
+      <div class="head">
+        <div>
+          <p class="label">Video guides</p>
+          <h2 id="videos-h">See it done</h2>
+        </div>
+        <a class="more" href="https://www.laseros.com/tutorials/">All tutorials on laseros.com <svg class="icon"><use href="#i-ext"/></svg></a>
+      </div>
+      <div class="vids">
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener"><img src="images/home/videos/KiuFqWiXBPA.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">Safety</span>
+          <h3><a href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener">Using the emergency stop button</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener"><img src="images/home/videos/0CMHLSTWcWY.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">Safety</span>
+          <h3><a href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener">Setting up safety zones in LaserOS</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener"><img src="images/home/videos/aC7mLKLXRWk.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">DMX</span>
+          <h3><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener">What DMX is and how to use it with LaserCube</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener"><img src="images/home/videos/f1f-hoGJaYE.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">Playlists</span>
+          <h3><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Importing a playlist to the SD card</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener"><img src="images/home/videos/A80UjLxKDZs.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">MIDI</span>
+          <h3><a href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener">Connecting a MIDI controller</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener"><img src="images/home/videos/Jtd9Il9sAus.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">Firmware</span>
+          <h3><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Firmware 2.0: what’s new and how to upgrade</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener"><img src="images/home/videos/8a95SdH_2ek.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">Web app</span>
+          <h3><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Controlling built-in shows from the web app</a></h3>
+        </article>
+        <article>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener"><img src="images/home/videos/56A0RWEOAs8.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <span class="label">Multi-cube</span>
+          <h3><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Wireless multi-cube shows with CubeLink</a></h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="downloads" aria-labelledby="dl-h">
+      <div class="head">
+        <div>
+          <p class="label">Downloads</p>
+          <h2 id="dl-h">Software and files</h2>
+        </div>
+      </div>
+      <div class="downloads">
+        <a class="dl" href="https://www.laseros.com/tutorials/">
+          <span class="ico"><svg class="icon"><use href="#i-monitor"/></svg></span>
+          <div><strong>LaserOS for Windows and Mac</strong><span>Stream to the cube and export playlists to the SD card</span></div>
+          <svg class="icon go"><use href="#i-ext"/></svg>
+        </a>
+        <a class="dl" href="https://apps.apple.com/app/laseros/id1559204525">
+          <span class="ico"><svg class="icon"><use href="#i-phone"/></svg></span>
+          <div><strong>LaserOS for iPhone and iPad</strong><span>App Store</span></div>
+          <svg class="icon go"><use href="#i-ext"/></svg>
+        </a>
+        <a class="dl" href="https://play.google.com/store/apps/details?id=com.wickedlasers.laserOS">
+          <span class="ico"><svg class="icon"><use href="#i-phone"/></svg></span>
+          <div><strong>LaserOS for Android</strong><span>Google Play</span></div>
+          <svg class="icon go"><use href="#i-ext"/></svg>
+        </a>
+        <a class="dl" href="https://github.com/Wickedlasers/mk2SDContent">
+          <span class="ico"><svg class="icon"><use href="#i-sd"/></svg></span>
+          <div><strong>Firmware and factory SD card files</strong><span>GitHub: Wickedlasers/mk2SDContent</span></div>
+          <svg class="icon go"><use href="#i-ext"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="safety stage" aria-labelledby="safety-h">
+      <div class="safety-img"><img src="images/home/aperture.webp" alt="Laser aperture of a LaserCube with its yellow warning label" loading="lazy" width="900" height="720"></div>
+      <div class="safety-body">
+        <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Class 4 laser product</span>
+        <h2 id="safety-h">Read the safety guidelines before your first show</h2>
+        <p>Ultra MK2 and Pro are <strong>Class 4 lasers</strong> and are not for outdoor use. Keep every beam at least <strong>3 m (10 ft) above</strong> any floor where people may be present, and set the beam block and E‑Stop before you start.</p>
+        <p>Some places require a licence, registration or a trained Laser Safety Officer.</p>
+        <div class="btn-row">
+          <a class="btn solid" href="docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a>
+          <a class="btn" href="docs/guides/ultra-mk2-pro-manual/#safety-warning">Safety warning</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="help" aria-labelledby="help-h">
+      <div>
+        <p class="label">Support</p>
+        <h2 id="help-h">Still need help?</h2>
+      </div>
+      <a class="opt" href="https://www.laseros.com/contact-us-lasercube-laser-light-projectors/"><strong><svg class="icon"><use href="#i-chat"/></svg>Contact support</strong><span>Setup questions, orders and repairs</span></a>
+      <a class="opt" href="mailto:support@laseros.com"><strong><svg class="icon"><use href="#i-mail"/></svg>Email us</strong><span>support@laseros.com</span></a>
+      <a class="opt" href="https://www.laseros.com/faq/"><strong><svg class="icon"><use href="#i-book"/></svg>FAQ</strong><span>Shipping, warranty and quick answers</span></a>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="https://www.laseros.com/contact-us-lasercube-laser-light-projectors/">Contact</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© LaserDock Limited</span>
+  </div>
+</footer>
+
+<dialog class="search" id="search" aria-label="Search the manual">
+  <div class="search-bar">
+    <svg class="icon"><use href="#i-search"/></svg>
+    <input id="q" type="search" placeholder="Search the manual and videos" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="results" aria-autocomplete="list">
+    <button class="kbd" type="button" data-close>Esc</button>
+  </div>
+  <div class="results" id="results" role="listbox" aria-label="Results"></div>
+  <div class="search-foot" aria-hidden="true">
+    <span><span class="kbd">↑</span><span class="kbd">↓</span> move</span>
+    <span><span class="kbd">Enter</span> open</span>
+    <span><span class="kbd">Esc</span> close</span>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var MANUAL = "docs/guides/ultra-mk2-pro-manual/";
+  var root = document.documentElement;
+
+  // Theme: follows the system until the visitor picks one.
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  function isDark() { return root.dataset.theme ? root.dataset.theme === "dark" : mq.matches; }
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("wiki-theme", next); } catch (e) {}
+  });
+
+  var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+  document.querySelectorAll("[data-kbd]").forEach(function (k) { k.textContent = isMac ? "⌘ K" : "Ctrl K"; });
+
+  // Search: manual sections are indexed in the browser from the manual page
+  // itself, so the index never goes stale. Videos are a short fixed list.
+  var dlg = document.getElementById("search");
+  var input = document.getElementById("q");
+  var box = document.getElementById("results");
+  var index = null, loading = null, failed = false, active = -1, items = [];
+
+  var VIDEOS = [
+    ["xgV1FQHKFsQ", "Beginner’s guide 1: unboxing", "beginner start new box parts"],
+    ["UYQt4zhQks8", "Beginner’s guide 2: first start", "beginner start setup power safety cutoff"],
+    ["Yr7jZidnk9I", "Beginner’s guide 3: CubeOS software overview", "beginner cubeos lcd screen menu knob settings"],
+    ["hFmpDOsEG_k", "Beginner’s guide 4: connection modes", "beginner wifi ethernet lan network connect"],
+    ["KiuFqWiXBPA", "Using the emergency stop button", "estop e-stop emergency interlock safety"],
+    ["0CMHLSTWcWY", "Setting up safety zones in LaserOS", "safety zone audience scanning"],
+    ["aC7mLKLXRWk", "What DMX is and how to use it with LaserCube", "dmx lighting desk console address channel"],
+    ["f1f-hoGJaYE", "Importing a playlist to the SD card", "playlist sd card micro export import"],
+    ["A80UjLxKDZs", "Connecting a MIDI controller", "midi apc40 apc mini usb controller mapping"],
+    ["Jtd9Il9sAus", "Firmware 2.0: what’s new and how to upgrade", "firmware update upgrade"],
+    ["8a95SdH_2ek", "Controlling built-in shows from the web app", "web app webapp phone browser playlist player"],
+    ["56A0RWEOAs8", "Wireless multi-cube shows with CubeLink", "cubelink cube link multi projector wireless sync"]
+  ];
+  var POPULAR = [
+    ["factory-reset-procedure", "Factory Reset Procedure", "Maintenance"],
+    ["firmware-update", "Firmware Update", "LaserCube Web Admin Page"],
+    ["wifi-client-mode", "WiFi Client Mode", "Settings › Network Settings"],
+    ["dmxart-net-channel-layout", "DMX/Art-Net Channel Layout", "Control Modes"],
+    ["e-stop-setup-guide", "E-STOP Setup Guide", "Safety"],
+    ["exporting-a-playlist-to-the-micro-sd-card", "Exporting a Playlist to the micro SD card", "Control Modes › Playlist Control Mode"]
+  ];
+
+  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[‐-―]/g, "-"); }
+  function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function terms(q) { return norm(q).split(/[^a-z0-9]+/).filter(Boolean); }
+
+  var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2]); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
+
+  function load() {
+    if (index || loading) return loading;
+    loading = fetch(MANUAL).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.text();
+    }).then(function (html) {
+      var doc = new DOMParser().parseFromString(html, "text/html");
+      var body = doc.querySelector(".docs-content") || doc.body;
+      body.querySelectorAll("nav, .page-header, .docs-toc, script, style, noscript, .toc-mobile-sticky").forEach(function (n) { n.remove(); });
+      var out = [], stack = [], cur = null, n;
+      var w = doc.createTreeWalker(body, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
+      while ((n = w.nextNode())) {
+        if (n.nodeType === 1) {
+          if (/^H[1-4]$/.test(n.tagName) && n.id) {
+            var level = +n.tagName[1];
+            var title = n.textContent.replace(/#\s*$/, "").replace(/\s+/g, " ").trim();
+            while (stack.length && stack[stack.length - 1].level >= level) stack.pop();
+            cur = { id: n.id, title: title, level: level, path: stack.map(function (s) { return s.title; }).join(" › "), text: "" };
+            stack.push(cur);
+            out.push(cur);
+          }
+        } else if (cur && !(n.parentElement && n.parentElement.closest("h1,h2,h3,h4"))) {
+          cur.text += " " + n.nodeValue;
+        }
+      }
+      out.forEach(function (e) {
+        e.text = e.text.replace(/\s+/g, " ").trim();
+        e.t = norm(e.title); e.tc = compact(e.t);
+        e.x = norm(e.text); e.xc = compact(e.x);
+      });
+      index = out;
+    }).catch(function () { failed = true; });
+    return loading;
+  }
+
+  function titleScore(t, tc, term) {
+    if (t.indexOf(term) < 0 && tc.indexOf(term) < 0) return 0;
+    var s = 12;
+    if (new RegExp("(^|[^a-z0-9])" + reEsc(term)).test(t)) s += 6;
+    if (new RegExp("(^|[^a-z0-9])" + reEsc(term) + "($|[^a-z0-9])").test(t)) s += 4;
+    return s;
+  }
+
+  function searchSections(q) {
+    var nq = norm(q).trim(), ts = terms(q), res = [];
+    index.forEach(function (e) {
+      var score = 0;
+      for (var i = 0; i < ts.length; i++) {
+        var s = titleScore(e.t, e.tc, ts[i]);
+        var hits = e.x.split(ts[i]).length - 1;
+        if (!hits && ts[i].length > 3 && e.xc.indexOf(ts[i]) > -1) hits = 1;
+        if (hits) s += 2 + Math.min(hits, 6);
+        if (!s) return;
+        score += s;
+      }
+      if (e.t.indexOf(nq) > -1) score += 25;
+      if (e.t === nq) score += 15;
+      score += (5 - e.level) * 0.5 - e.title.length / 30;
+      res.push({ e: e, score: score });
+    });
+    res.sort(function (a, b) { return b.score - a.score; });
+    return res.slice(0, 10).map(function (r) { return r.e; });
+  }
+
+  function searchVideos(q) {
+    var ts = terms(q), res = [];
+    videoIndex.forEach(function (v) {
+      var score = 0;
+      for (var i = 0; i < ts.length; i++) { var s = titleScore(v.t, v.tc, ts[i]); if (!s) return; score += s; }
+      res.push({ v: v, score: score });
+    });
+    res.sort(function (a, b) { return b.score - a.score; });
+    return res.slice(0, 3).map(function (r) { return r.v; });
+  }
+
+  function snippet(text, ts) {
+    if (!text) return "";
+    var low = text.toLowerCase(), at = -1;
+    ts.forEach(function (t) { var i = low.indexOf(t); if (i > -1 && (at < 0 || i < at)) at = i; });
+    var start = Math.max(0, at - 50);
+    return mark((start > 0 ? "…" : "") + text.slice(start, start + 170) + (start + 170 < text.length ? "…" : ""), ts);
+  }
+  function mark(s, ts) {
+    var h = esc(s), list = ts.filter(function (t) { return t.length > 1; }).map(reEsc);
+    return list.length ? h.replace(new RegExp("(" + list.join("|") + ")", "gi"), "<mark>$1</mark>") : h;
+  }
+
+  var rowCount = 0;
+  function row(href, title, path, snip, thumb, ext) {
+    var i = rowCount++;
+    return '<a class="result" role="option" id="r' + i + '" aria-selected="false" href="' + esc(href) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" +
+      (thumb ? '<img class="r-thumb" src="' + thumb + '" alt="" loading="lazy">' : "") +
+      '<div class="r-body">' + (path ? '<div class="r-path">' + esc(path) + "</div>" : "") +
+      '<div class="r-title">' + title + "</div>" +
+      (snip ? '<div class="r-snip">' + snip + "</div>" : "") + "</div></a>";
+  }
+
+  function render() {
+    var q = input.value, ts = terms(q), html = "";
+    rowCount = 0;
+    if (!ts.length) {
+      html = '<div class="hint">Popular</div>' + POPULAR.map(function (p) { return row(MANUAL + "#" + p[0], esc(p[1]), p[2], ""); }).join("");
+    } else if (failed) {
+      html = '<div class="msg">Search couldn’t load. <a href="' + MANUAL + '">Open the full manual</a> and use your browser’s find (Ctrl F).</div>';
+    } else if (!index) {
+      box.innerHTML = '<div class="msg">Loading the manual…</div>';
+      load().then(render);
+      return;
+    } else {
+      var secs = searchSections(q), vids = searchVideos(q);
+      if (secs.length) html += '<div class="hint">Manual</div>' + secs.map(function (e) { return row(MANUAL + "#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join("");
+      if (vids.length) html += '<div class="hint">Videos</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "images/home/videos/" + v.id + ".webp", true); }).join("");
+      if (!html) html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>Try fewer or different words, or <a href="' + MANUAL + '">browse the full manual</a>.</div>';
+    }
+    box.innerHTML = html;
+    items = Array.prototype.slice.call(box.querySelectorAll(".result"));
+    setActive(items.length ? 0 : -1);
+  }
+
+  function setActive(i) {
+    if (items[active]) items[active].setAttribute("aria-selected", "false");
+    active = i;
+    if (items[i]) {
+      items[i].setAttribute("aria-selected", "true");
+      items[i].scrollIntoView({ block: "nearest" });
+      input.setAttribute("aria-activedescendant", items[i].id);
+    } else {
+      input.removeAttribute("aria-activedescendant");
+    }
+  }
+
+  function open() {
+    if (dlg.open) return;
+    dlg.showModal();
+    input.select();
+    load();
+    render();
+  }
+
+  document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
+  dlg.querySelector("[data-close]").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  input.addEventListener("input", render);
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(active + 1, items.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0)); }
+    else if (e.key === "Enter" && items[active]) { e.preventDefault(); items[active].click(); }
+  });
+  box.addEventListener("mousemove", function (e) {
+    var r = e.target.closest(".result");
+    if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
+  });
+  document.addEventListener("keydown", function (e) {
+    var typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
+    if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
+    else if (e.key === "/" && !typing && !dlg.open) { e.preventDefault(); open(); }
+  });
+})();
+</script>
+</body>
+</html>
