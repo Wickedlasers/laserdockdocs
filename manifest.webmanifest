@@ -1,18 +1,17 @@
-
 {
-  "name": "LaserOS",
-  "short_name": "LaserOS",
+  "name": "LaserCube User Wiki",
+  "short_name": "User Wiki",
   "lang": "en-US",
   "icons": [
     {
-      "src": "/favicon-192x192.png",
-      "sizes": "192x192",
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/favicon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "theme_color": "#ffffff",
