@@ -28,3 +28,31 @@ from the LaserCube manual's LibreOffice `.odt`. That project is still here on th
 `wlweb/wiki.laseros.com/HANDOFF.md` in `wlmisc.git`.
 
 Until October 2026 the site was edited on goldmine and rsynced into this repo.
+
+## Homepage (`index.html`)
+
+One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. Images are in
+`images/home/`, fonts are self-hosted in `fonts/inter/` and `fonts/jetbrains-mono/` (SIL OFL).
+
+- **It depends on the manual's heading ids.** About 60 links (the port hotspots on the hero photo,
+  the chapter index, the beginner videos' "Manual:" links, the popular searches) point to
+  `docs/guides/ultra-mk2-pro-manual/#<heading-id>`. Renaming a heading in the manual breaks them
+  silently, so run this check before pushing any change to either page:
+
+  ```bash
+  python3 - <<'EOF'
+  import re
+  home = open('index.html', encoding='utf-8').read()
+  manual = open('docs/guides/ultra-mk2-pro-manual/index.html', encoding='utf-8').read()
+  ids = set(re.findall(r'\bid="?([^" >]+)', manual))
+  used = set(re.findall(r'ultra-mk2-pro-manual/#([^"]+)"', home)) | set(re.findall(r'\["([a-z0-9-]+)", "', home))
+  print('missing anchors:', sorted(used - ids) or 'none')
+  EOF
+  ```
+- **Search** fetches the manual page in the browser and indexes every `h1`-`h4` that has an `id`
+  inside `.docs-content`. Keep that wrapper and the heading ids if the manual is restyled.
+- **Videos:** the `VIDEOS` list in the script and the two video sections in the HTML use YouTube ids;
+  thumbnails are `images/home/videos/<id>.webp` (640x360). Source: laseros.com/tutorials.
+- **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
+  If that photo is replaced, re-measure them.
+- `index.html` is written by hand now; don't regenerate it from the old Hugo project on `hugo-source`.

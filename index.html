@@ -22,19 +22,19 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"LaserCube User Wiki","url":"https://wiki.laseros.com/","publisher":{"@type":"Organization","name":"LaserCube","url":"https://www.laseros.com/"}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/home/ultra-mk2-rear.webp" imagesrcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" imagesizes="(max-width: 900px) 90vw, 560px" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter/inter-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="images/home/ultra-mk2-rear.webp" imagesrcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" imagesizes="(max-width: 600px) 90vw, (max-width: 1100px) 520px, 560px" fetchpriority="high">
 <script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
+/* Self-hosted (SIL OFL, licences next to the files) so the page never waits on Google. */
+@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter/inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter/inter-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
 :root{
   --bg:#ffffff;--bg-2:#f5f5f7;--line:rgba(10,10,20,.1);--line-2:rgba(10,10,20,.18);
   --text:#0a0a0c;--muted:#55555f;--subtle:#696973;
   --accent:#2b62fd;--accent-hover:#1844c8;--accent-soft:rgba(43,98,253,.09);
   --mark:rgba(43,98,253,.17);--shadow:0 30px 70px -30px rgba(10,10,20,.35);
   --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --stage:#0a0a0c;--yellow:#ffd60a;--wm:url(#wm-ink);
   color-scheme:light;
 }
@@ -67,7 +67,7 @@ h1,h2,h3{text-wrap:balance}
 .skip:focus{left:16px}
 .container{width:100%;max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
 .icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.label{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--subtle)}
+.label{font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(10,10,12,.97);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
@@ -80,13 +80,20 @@ h1,h2,h3{text-wrap:balance}
 .nav a{font-size:14.5px;color:var(--muted);transition:color .15s}
 .nav a:hover{color:var(--text)}
 .header-actions{margin-left:auto;display:flex;align-items:center;gap:6px}
-.search-pill{display:flex;align-items:center;gap:10px;height:36px;width:240px;padding:0 6px 0 12px;border-radius:8px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:var(--subtle);font-size:14px;cursor:pointer;transition:border-color .15s,color .15s}
+.search-pill{display:flex;align-items:center;gap:10px;height:36px;width:240px;padding:0 6px 0 12px;border-radius:8px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:var(--subtle);font-size:14px;cursor:pointer;transition:border-color .15s,color .15s,opacity .2s,visibility .2s}
+.hero-in-view .search-pill{visibility:hidden;opacity:0}
 .search-pill:hover{border-color:rgba(255,255,255,.35);color:var(--muted)}
 .search-pill .icon{width:16px;height:16px}
-.kbd{margin-left:auto;font:500 11px/1 var(--mono);color:var(--subtle);border:1px solid var(--line-2);border-radius:5px;padding:4px 6px;white-space:nowrap}
+.kbd{margin-left:auto;font:500 11px/1 var(--font);color:var(--subtle);border:1px solid var(--line-2);border-radius:5px;padding:4px 6px;white-space:nowrap}
 .icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
 .icon-btn:hover{background:rgba(255,255,255,.07);color:var(--text)}
 .only-mobile{display:none}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer}
+.menu summary::-webkit-details-marker{display:none}
+.menu-panel{position:absolute;right:0;top:calc(100% + 12px);z-index:50;display:grid;min-width:210px;padding:6px;border-radius:10px;border:1px solid var(--line-2);background:#121216;box-shadow:var(--shadow)}
+.menu-panel a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;font-size:15px;color:var(--muted)}
+.menu-panel a:hover{background:rgba(255,255,255,.06);color:var(--text)}
 .theme-dark-icon{display:none}
 :root[data-theme="dark"] .theme-dark-icon{display:block}
 :root[data-theme="dark"] .theme-light-icon{display:none}
@@ -115,16 +122,18 @@ h1,h2,h3{text-wrap:balance}
 .product img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 78%,transparent),linear-gradient(to right,transparent,#000 14%,#000 90%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 78%,transparent),linear-gradient(to right,transparent,#000 14%,#000 90%,transparent);mask-composite:intersect}
 .hs{position:absolute;left:var(--x);top:var(--y);width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:grid;place-items:center;z-index:1}
 .hs::before{content:"";width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.22),0 0 18px rgba(134,165,255,.9);transition:transform .15s}
-.hs::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px solid rgba(255,255,255,.7);animation:ping 2.8s cubic-bezier(.2,.6,.3,1) infinite;animation-delay:var(--d,0s)}
+.hs::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px solid rgba(255,255,255,.7);animation:ping 2.8s cubic-bezier(.2,.6,.3,1) 3;animation-delay:var(--d,0s)}
 @keyframes ping{0%{transform:scale(.6);opacity:.9}70%,100%{transform:scale(2.1);opacity:0}}
 @media (prefers-reduced-motion:reduce){.hs::after{animation:none;opacity:0}}
 .hs:hover::before,.hs:focus-visible::before{transform:scale(1.25)}
+.hs:hover,.hs:focus-visible{z-index:2}
 .tip{position:absolute;left:calc(100% + 6px);top:50%;transform:translate(-4px,-50%);white-space:nowrap;font:500 13px/1 var(--font);color:#0a0a0c;background:#fff;border-radius:6px;padding:8px 10px;box-shadow:0 8px 30px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s}
 .tip::after{content:" →";color:#2b62fd}
 .hs.l .tip{left:auto;right:calc(100% + 6px);transform:translate(4px,-50%)}
 .hs:hover .tip,.hs:focus-visible .tip{opacity:1;transform:translate(0,-50%)}
 .hs:focus-visible{outline-offset:0;border-radius:50%}
-.hero-figure figcaption{position:absolute;left:14%;right:0;bottom:22px;font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--subtle)}
+.ports{display:none}
+.hero-figure figcaption{position:absolute;left:14%;right:0;bottom:22px;font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
 
 /* models */
 .models{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
@@ -150,10 +159,8 @@ h1,h2,h3{text-wrap:balance}
 .thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 0 0 1px var(--line)}
 .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .thumb:hover img{transform:scale(1.03)}
-.thumb .play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px 0 8px;border-radius:6px;background:rgba(0,0,0,.72);color:#fff;font:500 12px/1 var(--font);backdrop-filter:blur(6px)}
-.thumb .play svg{width:14px;height:14px;fill:#fff;stroke:none}
-.course h3,.vids h3{margin:14px 0 0;font-size:16.5px;line-height:1.35;letter-spacing:-.01em;font-weight:600}
-.vids h3{margin-top:6px}
+.course .label,.vids .label{display:block;margin-top:14px}
+.course h3,.vids h3{margin:6px 0 0;font-size:16.5px;line-height:1.35;letter-spacing:-.01em;font-weight:600}
 .course h3 a:hover,.vids h3 a:hover{color:var(--accent)}
 .also{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:14px;color:var(--subtle)}
 .also a{color:var(--text);border-bottom:1px solid var(--line-2)}
@@ -163,7 +170,7 @@ h1,h2,h3{text-wrap:balance}
 .chapter{padding:26px 24px 30px 0;border-bottom:1px solid var(--line)}
 .chapter + .chapter{padding-left:24px;border-left:1px solid var(--line)}
 .chapter:nth-child(4n+1){padding-left:0;border-left:0}
-.chapter .num{font:500 12px/1 var(--mono);color:var(--subtle);letter-spacing:.06em}
+.chapter .num{font:600 12px/1 var(--font);color:var(--subtle);letter-spacing:.06em;font-variant-numeric:tabular-nums}
 .chapter h3{margin:10px 0 12px;font-size:17px;letter-spacing:-.01em;font-weight:600}
 .chapter h3 a:hover{color:var(--accent)}
 .chapter ul{list-style:none;margin:0;padding:0}
@@ -171,7 +178,6 @@ h1,h2,h3{text-wrap:balance}
 .chapter li a:hover{color:var(--text)}
 
 .vids{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px}
-.vids .label{display:block;margin-top:14px}
 
 .downloads{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
 .dl{display:flex;align-items:center;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line);transition:background .15s}
@@ -184,7 +190,7 @@ h1,h2,h3{text-wrap:balance}
 .dl .go{margin-left:auto;color:var(--subtle)}
 .dl:hover .go{color:var(--accent)}
 
-.safety{margin-top:96px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);overflow:hidden;border-radius:14px}
+.safety{margin-top:96px;box-shadow:0 0 0 1px var(--line);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);overflow:hidden;border-radius:14px}
 .safety-img{position:relative;min-height:360px;background:#07060f}
 .safety-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
 .safety-body{padding:48px 48px 44px}
@@ -222,9 +228,15 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 .search-bar input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;color:var(--text);font:400 17px var(--font)}
 .search-bar input::placeholder{color:var(--subtle)}
 .search-bar input::-webkit-search-cancel-button{display:none}
-.search-bar .kbd{margin-left:0;background:transparent;cursor:pointer}
+.close-btn{border:0;background:none;padding:0;cursor:pointer;display:flex;align-items:center}
+.close-btn .kbd{margin-left:0}
+.close-btn .cancel{display:none;align-items:center;height:44px;padding:0 4px;font-size:15px;font-weight:500;color:var(--accent)}
+@media (hover:none),(pointer:coarse){
+  .kbd[data-kbd],.close-btn .kbd{display:none}
+  .close-btn .cancel{display:flex}
+}
 .results{overflow-y:auto;padding:8px;flex:1;overscroll-behavior:contain}
-.results .hint{padding:12px 12px 6px;font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--subtle)}
+.results .hint{padding:12px 12px 6px;font:600 11px/1 var(--font);letter-spacing:.08em;text-transform:uppercase;color:var(--subtle)}
 .results .msg{padding:28px 16px;text-align:center;color:var(--muted);font-size:15px}
 .results .msg a{color:var(--accent);font-weight:500}
 .result{display:flex;gap:14px;align-items:flex-start;padding:10px 12px;border-radius:8px;scroll-margin:8px}
@@ -240,6 +252,12 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 .search-foot .kbd{margin:0}
 
 @media (max-width:1100px){
+  .search-pill{width:200px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
+  .hero-copy{padding:56px 0 8px}
+  .hero-figure{max-width:520px;width:100%;margin:0 auto}
+  .product img{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+  .hero-figure figcaption{left:0;text-align:center}
   .models{grid-template-columns:1fr 1fr 1fr}
   .models .label{grid-column:1/-1;max-width:none;padding:18px 0 4px}
   .model:nth-of-type(1){border-left:0;padding-left:0}
@@ -247,26 +265,35 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .chapters{grid-template-columns:repeat(2,1fr)}
   .chapter:nth-child(4n+1){padding-left:24px;border-left:1px solid var(--line)}
   .chapter:nth-child(2n+1){padding-left:0;border-left:0}
-  .help{grid-template-columns:1fr 1fr}
+  .help{grid-template-columns:repeat(3,1fr)}
   .help>div:first-child{grid-column:1/-1}
 }
+@media (max-width:1000px){
+  .nav{display:none}
+  .menu{display:block}
+}
 @media (max-width:900px){
-  .nav,.search-pill,.brand-sep,.brand-name{display:none}
-  .only-mobile{display:inline-grid}
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
-  .hero-copy{padding:56px 0 8px}
-  .hero-figure{max-width:520px;width:100%;margin:0 auto}
-  .product img{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-  .hero-figure figcaption{left:0;text-align:center}
+  .models{grid-template-columns:1fr}
+  .model,.model:nth-of-type(1){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
   .safety{grid-template-columns:1fr}
   .safety-img{min-height:260px}
   .safety-body{padding:32px 28px}
 }
+@media (max-width:760px){
+  .search-pill{display:none}
+  .only-mobile{display:inline-grid}
+}
 @media (max-width:640px){
   .container{padding-left:16px;padding-right:16px}
-  .wordmark{width:124px}
-  .models{grid-template-columns:1fr}
-  .model,.model:nth-of-type(1){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
+  .site-header .container{gap:12px}
+  .brand{gap:10px}
+  .wordmark{width:118px}
+  .brand-name{font-size:13.5px}
+  .hs{display:none}
+  .hero-figure figcaption{position:static;margin:-28px 0 10px;text-align:left}
+  .ports{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;list-style:none;margin:0 0 28px;padding:0;border-top:1px solid var(--line)}
+  .ports a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+  .ports a::after{content:"→";color:var(--subtle)}
   .block{padding-top:72px}
   .head{flex-direction:column;align-items:flex-start;margin-bottom:24px}
   .course,.vids{grid-template-columns:1fr 1fr;gap:28px 16px}
@@ -283,7 +310,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .site-footer .copy{margin-left:0}
   dialog.search{margin-top:12px;max-height:calc(100vh - 24px)}
   .search-foot,.result .r-thumb{display:none}
-  .tip{display:none}
+}
+@media (max-width:359px){
+  .brand-sep,.brand-name{display:none}
 }
 </style>
 </head>
@@ -307,9 +336,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
     <symbol id="i-sd" viewBox="0 0 24 24"><path d="M8 3h9a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6l3-3Z"/><path d="M9 7v3M12 7v3M15 7v3"/></symbol>
     <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9Z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
   </defs>
@@ -333,6 +362,15 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <svg class="icon"><use href="#i-search"/></svg>Search<span class="kbd" data-kbd>Ctrl K</span>
       </button>
       <button class="icon-btn only-mobile" type="button" data-open-search aria-label="Search the manual"><svg class="icon"><use href="#i-search"/></svg></button>
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Main">
+          <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="#videos">Videos</a>
+          <a href="#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
       <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
         <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
         <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
@@ -351,7 +389,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <button class="hero-search" type="button" data-open-search aria-label="Search the manual">
           <svg class="icon"><use href="#i-search"/></svg>
           <span class="ph">Try “factory reset”, “DMX address” or “WiFi”</span>
-          <span class="kbd" data-kbd>Ctrl K</span>
         </button>
         <p class="quick">Popular:
           <a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">DMX channels</a>
@@ -359,7 +396,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       </div>
       <figure class="hero-figure">
         <div class="product">
-          <img src="images/home/ultra-mk2-rear.webp" srcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" sizes="(max-width: 900px) 90vw, 560px" width="1200" height="1280" alt="Rear panel of the LaserCube Ultra MK2 with its ports, screen and safety key">
+          <img src="images/home/ultra-mk2-rear.webp" srcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" sizes="(max-width: 600px) 90vw, (max-width: 1100px) 520px, 560px" width="1200" height="1280" alt="Rear panel of the LaserCube Ultra MK2 with its ports, screen and safety key">
           <a aria-label="ILDA in / out, in the manual" class="hs" style="--x:48.3%;--y:47.1%;--d:0s" href="docs/guides/ultra-mk2-pro-manual/#ilda-input-config-settings"><span class="tip" aria-hidden="true">ILDA in / out</span></a>
           <a aria-label="WiFi antenna, in the manual" class="hs l" style="--x:62.8%;--y:44.5%;--d:.4s" href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode"><span class="tip" aria-hidden="true">WiFi antenna</span></a>
           <a aria-label="CubeOS screen, in the manual" class="hs l" style="--x:70.3%;--y:51.3%;--d:.8s" href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status"><span class="tip" aria-hidden="true">CubeOS screen</span></a>
@@ -368,9 +405,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           <a aria-label="DMX in / out, in the manual" class="hs" style="--x:43.3%;--y:62.6%;--d:2s" href="docs/guides/ultra-mk2-pro-manual/#dmx-control-mode"><span class="tip" aria-hidden="true">DMX in / out</span></a>
           <a aria-label="Ethernet (LAN), in the manual" class="hs l" style="--x:61.9%;--y:61.1%;--d:.6s" href="docs/guides/ultra-mk2-pro-manual/#lan-client-mode"><span class="tip" aria-hidden="true">Ethernet (LAN)</span></a>
           <a aria-label="E-Stop / interlock, in the manual" class="hs" style="--x:44.2%;--y:72.9%;--d:1s" href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock"><span class="tip" aria-hidden="true">E‑Stop / interlock</span></a>
-          <a aria-label="Safety key, in the manual" class="hs l" style="--x:61.9%;--y:69.2%;--d:1.4s" href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram"><span class="tip" aria-hidden="true">Safety key</span></a>
+          <a aria-label="Safety key, in the manual" class="hs l" style="--x:61.9%;--y:69.2%;--d:1.4s" href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock"><span class="tip" aria-hidden="true">Safety key</span></a>
         </div>
         <figcaption>Ultra MK2 rear panel · select a port</figcaption>
+        <ul class="ports" aria-label="Ports on the rear panel"></ul>
       </figure>
     </div>
   </section>
@@ -383,14 +421,14 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <div><strong>LaserCube Ultra MK2</strong><span>The full-size cube: ILDA, XLR DMX, Ethernet and WiFi.</span></div>
         <svg class="icon go"><use href="#i-arrow"/></svg>
       </a>
-      <a class="model" href="docs/guides/ultra-mk2-pro-manual/#technical-specifications">
+      <a class="model" href="docs/guides/ultra-mk2-pro-manual/#connecting-dmx-cables-to-the-lasercube-pro">
         <img src="images/home/pro.webp" alt="" width="64" height="64" loading="lazy">
-        <div><strong>LaserCube Pro</strong><span>The compact Ultra MK2, with DMX on 3.5 mm jacks.</span></div>
+        <div><strong>LaserCube Pro</strong><span>The compact Ultra MK2. Its DMX uses 3.5 mm jacks: see the cable guide.</span></div>
         <svg class="icon go"><use href="#i-arrow"/></svg>
       </a>
-      <a class="model" href="https://www.laseros.com/tutorials/">
+      <a class="model" href="https://www.laseros.com/CUBE2-CUBE2ULTRA.manual-20241003.pdf">
         <img src="images/home/wifi.webp" alt="" width="64" height="64" loading="lazy">
-        <div><strong>LaserCube WiFi</strong><span>Not covered here. Its guides are on laseros.com.</span></div>
+        <div><strong>LaserCube WiFi</strong><span>Not covered here. Open the WiFi manual (PDF).</span></div>
         <svg class="icon go"><use href="#i-ext"/></svg>
       </a>
     </section>
@@ -405,22 +443,26 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       </div>
       <ol class="course">
         <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener"><img src="images/home/videos/xgV1FQHKFsQ.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 1</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener"><img src="images/home/videos/xgV1FQHKFsQ.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 1</span>
           <h3><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Unboxing</a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></p>
         </li>
         <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener"><img src="images/home/videos/UYQt4zhQks8.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 2</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener"><img src="images/home/videos/UYQt4zhQks8.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 2</span>
           <h3><a href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener">First start</a></h3>
-          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></p>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop, jumper and key</a></p>
         </li>
         <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener"><img src="images/home/videos/Yr7jZidnk9I.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 3</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener"><img src="images/home/videos/Yr7jZidnk9I.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 3</span>
           <h3><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">CubeOS software overview</a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS LCD settings</a></p>
         </li>
         <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener"><img src="images/home/videos/hFmpDOsEG_k.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Part 4</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener"><img src="images/home/videos/hFmpDOsEG_k.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 4</span>
           <h3><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Connection modes</a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Network settings</a></p>
         </li>
@@ -430,7 +472,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" aria-labelledby="manual-h">
       <div class="head">
         <div>
-          <p class="label">Manual</p>
           <h2 id="manual-h">Every chapter of the manual</h2>
         </div>
         <a class="more" href="docs/guides/ultra-mk2-pro-manual/">Open the full manual <svg class="icon"><use href="#i-arrow"/></svg></a>
@@ -444,6 +485,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
             <li><a href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop and interlock</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#e-stop-setup-guide">E‑Stop setup guide</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS LCD settings and status</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#technical-specifications">Technical specifications</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#product-labelling-and-placement">Product labelling</a></li>
@@ -549,42 +591,42 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       </div>
       <div class="vids">
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener"><img src="images/home/videos/KiuFqWiXBPA.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener"><img src="images/home/videos/KiuFqWiXBPA.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Safety</span>
           <h3><a href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener">Using the emergency stop button</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener"><img src="images/home/videos/0CMHLSTWcWY.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener"><img src="images/home/videos/0CMHLSTWcWY.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Safety</span>
           <h3><a href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener">Setting up safety zones in LaserOS</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener"><img src="images/home/videos/aC7mLKLXRWk.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener"><img src="images/home/videos/aC7mLKLXRWk.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">DMX</span>
           <h3><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener">What DMX is and how to use it with LaserCube</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener"><img src="images/home/videos/f1f-hoGJaYE.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener"><img src="images/home/videos/f1f-hoGJaYE.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Playlists</span>
           <h3><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Importing a playlist to the SD card</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener"><img src="images/home/videos/A80UjLxKDZs.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener"><img src="images/home/videos/A80UjLxKDZs.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">MIDI</span>
           <h3><a href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener">Connecting a MIDI controller</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener"><img src="images/home/videos/Jtd9Il9sAus.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener"><img src="images/home/videos/Jtd9Il9sAus.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Firmware</span>
           <h3><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Firmware 2.0: what’s new and how to upgrade</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener"><img src="images/home/videos/8a95SdH_2ek.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener"><img src="images/home/videos/8a95SdH_2ek.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Web app</span>
           <h3><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Controlling built-in shows from the web app</a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener"><img src="images/home/videos/56A0RWEOAs8.webp" alt="" loading="lazy" width="640" height="360"><span class="play"><svg><use href="#i-play"/></svg>Watch</span></a>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener"><img src="images/home/videos/56A0RWEOAs8.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Multi-cube</span>
           <h3><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Wireless multi-cube shows with CubeLink</a></h3>
         </article>
@@ -594,7 +636,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" id="downloads" aria-labelledby="dl-h">
       <div class="head">
         <div>
-          <p class="label">Downloads</p>
           <h2 id="dl-h">Software and files</h2>
         </div>
       </div>
@@ -627,8 +668,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <div class="safety-body">
         <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Class 4 laser product</span>
         <h2 id="safety-h">Read the safety guidelines before your first show</h2>
-        <p>Ultra MK2 and Pro are <strong>Class 4 lasers</strong> and are not for outdoor use. Keep every beam at least <strong>3 m (10 ft) above</strong> any floor where people may be present, and set the beam block and E‑Stop before you start.</p>
-        <p>Some places require a licence, registration or a trained Laser Safety Officer.</p>
+        <p>Ultra MK2 and Pro are <strong>Class 4 lasers</strong> for professional use, not for outdoor use. Keep every beam at least <strong>3 m (10 ft) above</strong> any floor where people may be present, and set the beam block and connect the E‑Stop or safety jumper before you start.</p>
+        <p>In the United States an <strong>FDA variance</strong> is required. Many places also require a licence, registration or operation under a trained Laser Safety Officer.</p>
         <div class="btn-row">
           <a class="btn solid" href="docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a>
           <a class="btn" href="docs/guides/ultra-mk2-pro-manual/#safety-warning">Safety warning</a>
@@ -638,12 +679,11 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 
     <section class="help" aria-labelledby="help-h">
       <div>
-        <p class="label">Support</p>
         <h2 id="help-h">Still need help?</h2>
       </div>
-      <a class="opt" href="https://www.laseros.com/contact-us-lasercube-laser-light-projectors/"><strong><svg class="icon"><use href="#i-chat"/></svg>Contact support</strong><span>Setup questions, orders and repairs</span></a>
-      <a class="opt" href="mailto:support@laseros.com"><strong><svg class="icon"><use href="#i-mail"/></svg>Email us</strong><span>support@laseros.com</span></a>
-      <a class="opt" href="https://www.laseros.com/faq/"><strong><svg class="icon"><use href="#i-book"/></svg>FAQ</strong><span>Shipping, warranty and quick answers</span></a>
+      <a class="opt" href="mailto:support@laseros.com"><strong><svg class="icon"><use href="#i-mail"/></svg>Email support</strong><span>support@laseros.com: setup questions, orders and repairs</span></a>
+      <a class="opt" href="https://www.laseros.com/faq/"><strong><svg class="icon"><use href="#i-book"/></svg>FAQ</strong><span>Quick answers about LaserCube and LaserOS</span></a>
+      <a class="opt" href="https://www.laseros.com/tutorials/"><strong><svg class="icon"><use href="#i-play"/></svg>Tutorials</strong><span>All LaserCube and LaserOS video guides</span></a>
     </section>
   </div>
 </main>
@@ -655,7 +695,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <a href="https://www.laseros.com/">laseros.com</a>
       <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
       <a href="https://www.laseros.com/faq/">FAQ</a>
-      <a href="https://www.laseros.com/contact-us-lasercube-laser-light-projectors/">Contact</a>
+      <a href="mailto:support@laseros.com">Email support</a>
       <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
     </nav>
     <span class="copy">© LaserDock Limited</span>
@@ -665,8 +705,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 <dialog class="search" id="search" aria-label="Search the manual">
   <div class="search-bar">
     <svg class="icon"><use href="#i-search"/></svg>
-    <input id="q" type="search" placeholder="Search the manual and videos" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="results" aria-autocomplete="list">
-    <button class="kbd" type="button" data-close>Esc</button>
+    <input id="q" type="search" placeholder="Search the manual and videos" autocomplete="off" spellcheck="false" maxlength="200" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
+    <button class="close-btn" type="button" data-close aria-label="Close search"><span class="kbd">Esc</span><span class="cancel">Cancel</span></button>
   </div>
   <div class="results" id="results" role="listbox" aria-label="Results"></div>
   <div class="search-foot" aria-hidden="true">
@@ -690,6 +730,29 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     try { localStorage.setItem("wiki-theme", next); } catch (e) {}
   });
 
+  // Phones get a plain list of the photo's ports instead of the small dots.
+  var ports = document.querySelector(".ports");
+  document.querySelectorAll(".hs").forEach(function (h) {
+    var li = document.createElement("li"), a = document.createElement("a");
+    a.href = h.getAttribute("href");
+    a.textContent = h.querySelector(".tip").textContent;
+    li.appendChild(a);
+    ports.appendChild(li);
+  });
+
+  var menu = document.querySelector(".menu");
+  menu.addEventListener("click", function (e) { if (e.target.closest("a")) menu.open = false; });
+  document.addEventListener("click", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+
+  // One search box at a time: the header one appears once the hero one scrolls away.
+  var heroSearch = document.querySelector(".hero-search");
+  if (heroSearch && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      root.classList.toggle("hero-in-view", entries[0].isIntersecting);
+    }).observe(heroSearch);
+  }
+
   var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
   document.querySelectorAll("[data-kbd]").forEach(function (k) { k.textContent = isMac ? "⌘ K" : "Ctrl K"; });
 
@@ -698,7 +761,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   var dlg = document.getElementById("search");
   var input = document.getElementById("q");
   var box = document.getElementById("results");
-  var index = null, loading = null, failed = false, active = -1, items = [];
+  var index = null, loading = null, failed = false, waiting = false, active = -1, items = [];
 
   var VIDEOS = [
     ["xgV1FQHKFsQ", "Beginner’s guide 1: unboxing", "beginner start new box parts"],
@@ -714,26 +777,39 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     ["8a95SdH_2ek", "Controlling built-in shows from the web app", "web app webapp phone browser playlist player"],
     ["56A0RWEOAs8", "Wireless multi-cube shows with CubeLink", "cubelink cube link multi projector wireless sync"]
   ];
+  // Manual section ids; titles and breadcrumbs come from the manual once it has loaded.
   var POPULAR = [
-    ["factory-reset-procedure", "Factory Reset Procedure", "Maintenance"],
-    ["firmware-update", "Firmware Update", "LaserCube Web Admin Page"],
-    ["wifi-client-mode", "WiFi Client Mode", "Settings › Network Settings"],
-    ["dmxart-net-channel-layout", "DMX/Art-Net Channel Layout", "Control Modes"],
-    ["e-stop-setup-guide", "E-STOP Setup Guide", "Safety"],
-    ["exporting-a-playlist-to-the-micro-sd-card", "Exporting a Playlist to the micro SD card", "Control Modes › Playlist Control Mode"]
+    ["factory-reset-procedure", "Factory Reset Procedure"],
+    ["firmware-update", "Firmware Update"],
+    ["wifi-client-mode", "WiFi Client Mode"],
+    ["dmxart-net-channel-layout", "DMX/Art-Net Channel Layout"],
+    ["e-stop-setup-guide", "E-STOP Setup Guide"],
+    ["exporting-a-playlist-to-the-micro-sd-card", "Exporting a Playlist to the micro SD card"]
   ];
 
-  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[‐-―]/g, "-"); }
+  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-"); }
   function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
   function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-  function terms(q) { return norm(q).split(/[^a-z0-9]+/).filter(Boolean); }
+  var STOP = {};
+  // "lasercube", "laser" and "cube" are in almost every section, so they only add noise.
+  "a an and are can cube do does for from how i in is it its laser lasercube me my of on or the to what when where which why with you your".split(" ").forEach(function (w) { STOP[w] = 1; });
+  // Query words: unique, without filler words, at most 8, so questions and long pastes stay fast.
+  function terms(q) {
+    var all = norm(q.slice(0, 200)).split(/[^a-z0-9]+/).filter(Boolean), seen = {}, out = [];
+    all.forEach(function (t) { if (!seen[t] && !STOP[t]) { seen[t] = 1; out.push(t); } });
+    return (out.length ? out : all.slice(0, 1)).slice(0, 8);
+  }
 
   var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2]); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
 
   function load() {
     if (index || loading) return loading;
-    loading = fetch(MANUAL).then(function (r) {
+    // Give up after 15 s so a stalled request shows the fallback instead of "Loading" forever.
+    var ctrl = "AbortController" in window ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 15000);
+    loading = fetch(MANUAL, ctrl ? { signal: ctrl.signal } : {}).then(function (r) {
+      clearTimeout(timer);
       if (!r.ok) throw new Error(r.status);
       return r.text();
     }).then(function (html) {
@@ -756,50 +832,63 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           cur.text += " " + n.nodeValue;
         }
       }
+      out.forEach(function (e) { e.text = e.text.replace(/\s+/g, " ").trim(); });
+      // A sub-chapter with (almost) no text of its own, like "DMX Control Mode", is searched with its
+      // sub-sections' text. Not the top chapters ("Settings"): they would match nearly everything.
+      out.forEach(function (e, i) {
+        if (e.level < 2 || e.text.length >= 40) return;
+        for (var j = i + 1; j < out.length && out[j].level > e.level; j++) e.text += " " + out[j].text;
+        e.text = e.text.trim();
+      });
       out.forEach(function (e) {
-        e.text = e.text.replace(/\s+/g, " ").trim();
         e.t = norm(e.title); e.tc = compact(e.t);
         e.x = norm(e.text); e.xc = compact(e.x);
       });
       index = out;
-    }).catch(function () { failed = true; });
+    }).catch(function () { failed = true; loading = null; });
     return loading;
   }
 
-  function titleScore(t, tc, term) {
-    if (t.indexOf(term) < 0 && tc.indexOf(term) < 0) return 0;
-    var s = 12;
-    if (new RegExp("(^|[^a-z0-9])" + reEsc(term)).test(t)) s += 6;
-    if (new RegExp("(^|[^a-z0-9])" + reEsc(term) + "($|[^a-z0-9])").test(t)) s += 4;
-    return s;
+  function compile(ts) {
+    return ts.map(function (term) {
+      return { term: term, start: new RegExp("(^|[^a-z0-9])" + reEsc(term)), word: new RegExp("(^|[^a-z0-9])" + reEsc(term) + "($|[^a-z0-9])") };
+    });
+  }
+  function titleScore(t, tc, c) {
+    if (t.indexOf(c.term) < 0 && tc.indexOf(c.term) < 0) return 0;
+    return 12 + (c.start.test(t) ? 6 : 0) + (c.word.test(t) ? 4 : 0);
   }
 
-  function searchSections(q) {
-    var nq = norm(q).trim(), ts = terms(q), res = [];
+  function searchSections(q, ts) {
+    var nq = norm(q).trim(), cs = compile(ts), every = [], some = [];
     index.forEach(function (e) {
-      var score = 0;
+      var score = 0, matched = 0;
       for (var i = 0; i < ts.length; i++) {
-        var s = titleScore(e.t, e.tc, ts[i]);
+        var s = titleScore(e.t, e.tc, cs[i]);
         var hits = e.x.split(ts[i]).length - 1;
         if (!hits && ts[i].length > 3 && e.xc.indexOf(ts[i]) > -1) hits = 1;
         if (hits) s += 2 + Math.min(hits, 6);
-        if (!s) return;
-        score += s;
+        if (s) { matched++; score += s; }
       }
+      if (!matched) return;
       if (e.t.indexOf(nq) > -1) score += 25;
       if (e.t === nq) score += 15;
-      score += (5 - e.level) * 0.5 - e.title.length / 30;
-      res.push({ e: e, score: score });
+      if (e.t.indexOf(nq) === 0) score += 4;
+      // Broader sections (h1/h2) win ties against their own sub-sections.
+      score += matched * 20 + (5 - e.level) * 4 - e.title.length / 30;
+      (matched === ts.length ? every : some).push({ e: e, score: score });
     });
+    // Sections with every word first; if there are none, the best partial matches.
+    var res = every.length ? every : some;
     res.sort(function (a, b) { return b.score - a.score; });
     return res.slice(0, 10).map(function (r) { return r.e; });
   }
 
-  function searchVideos(q) {
-    var ts = terms(q), res = [];
+  function searchVideos(ts) {
+    var cs = compile(ts), res = [];
     videoIndex.forEach(function (v) {
       var score = 0;
-      for (var i = 0; i < ts.length; i++) { var s = titleScore(v.t, v.tc, ts[i]); if (!s) return; score += s; }
+      for (var i = 0; i < cs.length; i++) { var s = titleScore(v.t, v.tc, cs[i]); if (!s) return; score += s; }
       res.push({ v: v, score: score });
     });
     res.sort(function (a, b) { return b.score - a.score; });
@@ -814,8 +903,12 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     return mark((start > 0 ? "…" : "") + text.slice(start, start + 170) + (start + 170 < text.length ? "…" : ""), ts);
   }
   function mark(s, ts) {
-    var h = esc(s), list = ts.filter(function (t) { return t.length > 1; }).map(reEsc);
-    return list.length ? h.replace(new RegExp("(" + list.join("|") + ")", "gi"), "<mark>$1</mark>") : h;
+    var list = ts.filter(function (t) { return t.length > 1; }).map(reEsc);
+    if (!list.length) return esc(s);
+    // Split on the raw text (odd pieces are matches), then escape each piece.
+    return s.split(new RegExp("(" + list.join("|") + ")", "gi")).map(function (part, i) {
+      return i % 2 ? "<mark>" + esc(part) + "</mark>" : esc(part);
+    }).join("");
   }
 
   var rowCount = 0;
@@ -831,31 +924,42 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   function render() {
     var q = input.value, ts = terms(q), html = "";
     rowCount = 0;
-    if (!ts.length) {
-      html = '<div class="hint">Popular</div>' + POPULAR.map(function (p) { return row(MANUAL + "#" + p[0], esc(p[1]), p[2], ""); }).join("");
+    if (!q.trim()) {
+      html = '<div class="hint" aria-hidden="true">Popular</div>' + POPULAR.map(function (p) {
+        var e = index && index.filter(function (x) { return x.id === p[0]; })[0];
+        return row(MANUAL + "#" + p[0], esc(e ? e.title : p[1]), e ? e.path : "", "");
+      }).join("");
+    } else if (!ts.length) {
+      // Only punctuation or a non-Latin script: the manual is in English.
+      html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>The manual is in English: try words like “DMX” or “reset”.</div>';
     } else if (failed) {
       html = '<div class="msg">Search couldn’t load. <a href="' + MANUAL + '">Open the full manual</a> and use your browser’s find (Ctrl F).</div>';
     } else if (!index) {
       box.innerHTML = '<div class="msg">Loading the manual…</div>';
-      load().then(render);
+      items = [];
+      setActive(-1);
+      input.setAttribute("aria-expanded", "false");
+      if (!waiting) { waiting = true; load().then(function () { waiting = false; render(); }); }
       return;
     } else {
-      var secs = searchSections(q), vids = searchVideos(q);
-      if (secs.length) html += '<div class="hint">Manual</div>' + secs.map(function (e) { return row(MANUAL + "#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join("");
-      if (vids.length) html += '<div class="hint">Videos</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "images/home/videos/" + v.id + ".webp", true); }).join("");
+      var secs = searchSections(q, ts), vids = searchVideos(ts);
+      if (secs.length) html += '<div class="hint" aria-hidden="true">Manual</div>' + secs.map(function (e) { return row(MANUAL + "#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join("");
+      if (vids.length) html += '<div class="hint" aria-hidden="true">Videos</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "images/home/videos/" + v.id + ".webp", true); }).join("");
       if (!html) html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>Try fewer or different words, or <a href="' + MANUAL + '">browse the full manual</a>.</div>';
     }
     box.innerHTML = html;
+    box.scrollTop = 0;
     items = Array.prototype.slice.call(box.querySelectorAll(".result"));
     setActive(items.length ? 0 : -1);
+    input.setAttribute("aria-expanded", items.length ? "true" : "false");
   }
 
-  function setActive(i) {
+  function setActive(i, scroll) {
     if (items[active]) items[active].setAttribute("aria-selected", "false");
     active = i;
     if (items[i]) {
       items[i].setAttribute("aria-selected", "true");
-      items[i].scrollIntoView({ block: "nearest" });
+      if (scroll) items[i].scrollIntoView({ block: "nearest" });
       input.setAttribute("aria-activedescendant", items[i].id);
     } else {
       input.removeAttribute("aria-activedescendant");
@@ -864,6 +968,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 
   function open() {
     if (dlg.open) return;
+    failed = false; // retry a manual fetch that failed earlier
     dlg.showModal();
     input.select();
     load();
@@ -872,19 +977,24 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 
   document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
   dlg.querySelector("[data-close]").addEventListener("click", function () { dlg.close(); });
-  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  // Close on a backdrop click, but not when a text selection started in the input ends there.
+  var downOnBackdrop = false;
+  dlg.addEventListener("mousedown", function (e) { downOnBackdrop = e.target === dlg; });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg && downOnBackdrop) dlg.close(); });
   input.addEventListener("input", render);
   input.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(active + 1, items.length - 1)); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0)); }
-    else if (e.key === "Enter" && items[active]) { e.preventDefault(); items[active].click(); }
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(active + 1, items.length - 1), true); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0), true); }
+    else if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229 && items[active]) { e.preventDefault(); items[active].click(); }
+    // A search field's own Escape only clears the text; close the dialog in one press.
+    else if (e.key === "Escape") { e.preventDefault(); dlg.close(); }
   });
   box.addEventListener("mousemove", function (e) {
     var r = e.target.closest(".result");
     if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
   });
   document.addEventListener("keydown", function (e) {
-    var typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
+    var a = document.activeElement, typing = !!a && (/INPUT|TEXTAREA|SELECT/.test(a.tagName) || a.isContentEditable);
     if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
     else if (e.key === "/" && !typing && !dlg.open) { e.preventDefault(); open(); }
   });
