@@ -174,7 +174,7 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .docs-content p>img+img{margin-left:8px}
 .docs-content .ink{filter:var(--ink)}
 .row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin:20px 0 24px}
-.row>.col{flex:1 1 150px;min-width:0}
+.row>.col{flex:1 1 0;min-width:0}
 .row img{display:block}
 figure{margin:24px 0}
 figure img{display:block}
@@ -311,6 +311,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .docs-content h3{font-size:17.5px}
   .docs-content blockquote{padding-left:14px}
   .doc-pages{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row>.col{flex:0 1 calc(50% - 6px)}
+  .row>.col:only-child{flex-basis:100%}
   .warning-panel{padding:20px 18px 16px;border-left-width:5px}
   .spec{padding:2px 14px 4px}
   table.specs td:first-child{width:40%}
@@ -325,7 +327,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 }
 @media print{
   .site-header,.toc-side,.toc-bar,.start,.site-footer,.anchor,dialog{display:none!important}
-  .m-hero,.stage{background:#fff;color:#000;border:0;--text:#000;--muted:#333;--subtle:#555;--line:#ccc;--line-2:#999}
+  :root,.stage{--bg:#fff!important;--bg-2:#f5f5f7!important;--text:#000!important;--muted:#333!important;--subtle:#555!important;--line:#ccc!important;--line-2:#999!important;--ink:none!important}
+  body,.m-hero,.stage{background:#fff;color:#000;border:0}
+  table.swatches td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .layout{display:block}
   .docs-content{max-width:none;padding:0}
   .docs-content a:not(.anchor){color:inherit;text-decoration:none}
@@ -2766,9 +2770,10 @@ the SD card.</p>
   measure();
 
   // Fonts can shift the text a little after a deep link has scrolled into place.
-  var moved = false;
-  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { window.addEventListener(ev, function () { moved = true; }, { once: true, passive: true }); });
+  // Plain passive listeners: a { once: true } touchstart listener stopped taps in WebKit.
   if (document.fonts && location.hash.length > 1) {
+    var moved = false;
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { window.addEventListener(ev, function () { moved = true; }, { passive: true }); });
     document.fonts.ready.then(function () {
       var id = location.hash.slice(1), t;
       try { id = decodeURIComponent(id); } catch (e) {}
