@@ -178,7 +178,7 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .row img{display:block}
 figure{margin:24px 0}
 figure img{display:block}
-figcaption,.parts figcaption{margin:0 0 10px;font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
+figcaption{margin:0 0 10px;font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
 .docs-content .small{font-size:14px;color:var(--subtle)}
 
 /* tables */
@@ -325,7 +325,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 }
 @media print{
   .site-header,.toc-side,.toc-bar,.start,.site-footer,.anchor,dialog{display:none!important}
-  .m-hero,.stage{background:#fff;color:#000;border:0}
+  .m-hero,.stage{background:#fff;color:#000;border:0;--text:#000;--muted:#333;--subtle:#555;--line:#ccc;--line-2:#999}
   .layout{display:block}
   .docs-content{max-width:none;padding:0}
   .docs-content a:not(.anchor){color:inherit;text-decoration:none}
@@ -347,7 +347,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     </linearGradient>
     <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
@@ -409,7 +408,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <ul class="start-grid" aria-labelledby="start-label">
         <li><a href="#safety-guidelines-and-proper-usage"><span class="ico"><svg class="icon"><use href="#i-warn"/></svg></span><span><strong>Safety guidelines</strong><span class="d">Class 4 laser: read these before your first show</span></span></a></li>
         <li><a href="#hardware-installation"><span class="ico"><svg class="icon"><use href="#i-cube"/></svg></span><span><strong>Hardware installation</strong><span class="d">Beam block, aiming and warning signs</span></span></a></li>
-        <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet and DMX</span></span></a></li>
+        <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet, DMX, IDN and Ether Dream</span></span></a></li>
         <li><a href="#dmxart-net-channel-layout"><span class="ico"><svg class="icon"><use href="#i-grid"/></svg></span><span><strong>DMX channels</strong><span class="d">What each of the 16 channels does</span></span></a></li>
         <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card, LaserOS or the web admin page</span></span></a></li>
         <li><a href="#factory-reset-procedure"><span class="ico"><svg class="icon"><use href="#i-reset"/></svg></span><span><strong>Factory reset</strong><span class="d">Back to factory firmware and default settings</span></span></a></li>
@@ -436,8 +435,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
      built from the same headings, so a new section only needs a heading with an id.
      Images: WebP copies in Pictures/web/, with width and height set so deep links land right. -->
 <h1 id="declaration-of-conformity"><span id="anchor"></span>Declaration Of Conformity<a href="#declaration-of-conformity" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
-<div class="doc-pages"><a href="Pictures/10000000000003E80000056085DFB847.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000003E80000056085DFB847-440.webp" width="220" height="303" alt="EU Declaration of Conformity, page 1 of 4" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F4000007029017E676.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F4000007029017E676-440.webp" width="220" height="311" alt="EU Declaration of Conformity, page 2 of 4" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F400000702828DCDF7.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F400000702828DCDF7-440.webp" width="220" height="311" alt="EU Declaration of Conformity, page 3 of 4" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F4000007024E0751E6.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F4000007024E0751E6-440.webp" width="220" height="311" alt="EU Declaration of Conformity, page 4 of 4" loading="lazy" decoding="async"></a></div>
-<p class="small">Select a page to open it full size.</p>
+<div class="doc-pages"><a href="Pictures/10000000000003E80000056085DFB847.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000003E80000056085DFB847-440.webp" width="220" height="303" alt="EU Declaration of Conformity for the LaserCube, LaserDock Limited, 10 April 2025" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F4000007029017E676.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F4000007029017E676-440.webp" width="220" height="311" alt="CE Declaration of Conformity for the Huntkey HKA06519034-6J power adapter" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F400000702828DCDF7.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F400000702828DCDF7-440.webp" width="220" height="311" alt="CE Declaration of Conformity for the Huntkey HKA12019063-6B power adapter" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F4000007024E0751E6.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F4000007024E0751E6-440.webp" width="220" height="311" alt="CE Declaration of Conformity for the Huntkey HKA15019079-6C power adapter" loading="lazy" decoding="async"></a></div>
+<p class="small">The LaserCube’s declaration, then the power adapters’. Select one to open it full size.</p>
 <h1 id="safety-warning"><span id="anchor-1"></span>Safety Warning<a href="#safety-warning" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <div class="warning-panel"><p><span id="anchor-2"></span><img src="Pictures/web/10000000000001B30000018313BD7FA6-380.webp" width="190" height="169" alt="Laser radiation warning symbol" loading="lazy" decoding="async"></p><p><span class="warn-big">WARNING!</span></p><p><strong>LASER RADIATION</strong></p><p><strong>AVOID EYE OR SKIN EXPOSURE TO</strong></p><p><strong>DIRECT OR SCATTERED RADIATION</strong></p><p><strong>CLASS 4 LASER PRODUCT</strong></p><p><strong>BEFORE USING THIS PRODUCT, READ AND FOLLOW ALL NOTICES AND SAFETY
 INFORMATION THROUGHOUT THIS GUIDE.</strong></p><p><strong>Some US states require additional licensing and/or registration. Many
@@ -852,7 +851,7 @@ only. Adding content must be done via PC/Mac version.</p>
 Windows</a><em>.</em></li><li>Double click on the downloaded .exe file to install LaserOS.&nbsp;&nbsp;</li><li>Occasionally, Windows will display the following warning.&nbsp; Click on
 “more info” to enable the “run anyway option”.&nbsp; Click on “run anyway”.</li></ul>
 <img src="Pictures/web/10000001000004D8000002367B86816B-1240.webp" width="643" height="293" alt="" loading="lazy" decoding="async">
-<span id="anchor-25"></span>
+<h4 id="macos-platform"><span id="anchor-25"></span>MacOS Platform<a href="#macos-platform" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <ul><li>Follow this link to&nbsp;
 <a href="https://www.laseros.com/downloads/LaserOS_0.18.1.pkg" rel="external">download and install for Mac
 OS</a><em>.</em></li><li>Double-click on the .pkg file and run the installer app.</li></ul>
@@ -1108,7 +1107,7 @@ in the playlist control mode.</p>
 <p>This can be done using the Settings→Playback Speed menu</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140ED7194DC_hu_79315d4f24809687-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140E74E4BE8_hu_df430c99a455b5e-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The playback speed slider can also be assigned to a MIDI knob or fader
-if using an APC40 MK2 or APC mini MK2 (see <a href="#anchor-133">MIDI Mapping</a>
+if using an APC40 MK2 or APC mini MK2 (see <a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI Mapping</a>
 or the online wiki).</p>
 <h2 id="playlist-player-web-app"><span id="anchor-37"></span>Playlist Player Web App<a href="#playlist-player-web-app" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The playlist control mode includes a web server which can be used to
@@ -1162,7 +1161,7 @@ items with a blue mark in the bottom right will bring up any adjustments
 that can be made to the selected effect. Note the effect must be
 selected before accessing the effects adjustments.</p>
 <p><img src="Pictures/web/10000001000004940000067CC273E75E-492.webp" width="246" height="348" alt="" loading="lazy" decoding="async"> <img src="Pictures/web/10000001000004900000067AF758D28F-462.webp" width="231" height="328" alt="" loading="lazy" decoding="async"></p>
-<p>You can see a description of all the available effects in the <a href="#anchor-109">Effects Section</a></p>
+<p>You can see a description of all the available effects in the <a href="#available-effects">Effects Section</a></p>
 <p>Note: You can only have one image effect and one colour effect active at
 once. Choose “No Effect” to turn off any active image/colour effect.</p>
 <h3 id="playlist-options-menu"><span id="anchor-41"></span>Playlist Options Menu<a href="#playlist-options-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
@@ -1208,7 +1207,7 @@ category after the current show has finished playing. Manually
 choosing a different show from the playlist drop-down will also start
 the show, and also selecting via a connected MIDI controller.</p></blockquote>
 <blockquote><p>Show audio will be played from the 3.5mm stereo audio output socket.</p></blockquote>
-<p>If Cube Link is enabled – see the Cube Link entry here: <a href="#anchor-101">Cube Link</a></p>
+<p>If Cube Link is enabled – see the Cube Link entry here: <a href="#cube-link-mode">Cube Link</a></p>
 <p>Selecting Play on a Cube Link Master will begin playback on the Master,
 plus any</p>
 <p>Cube Link Slave devices configured with the same Link Channel and PIN.</p>
@@ -1380,9 +1379,9 @@ Viz Options menu. Auto play at power-on can also be adjusted.</p>
 </tbody></table></div>
 <p>The Visualizers can also have additional audio reactive image/colour
 effects added to them, configured from the Effects menu.</p>
-<p>See the effects page here: <a href="#anchor-108">Effects</a>
+<p>See the effects page here: <a href="#built-in-effects">Effects</a>
 or the online wiki for more info on the built in effects, and also the
-<a href="#anchor-79">tempo</a> menu which will affect the
+<a href="#tempo-settings">tempo</a> menu which will affect the
 speed of some BPM based effects.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001404619E973_hu_e92ec7d1d1239d04-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001408A45449E_hu_ec502d0133228241-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>Select an effect to configure from the “effect config” drop-down list,
@@ -1445,7 +1444,7 @@ of 1-512.</p>
 Currently there is only one profile available which occupies 16 channels
 of the ArtNet/DMX address range.</p>
 <p>A profile determines which ArtNet/DMX channels control what feature of
-the laser cube. The default 16 channel map is available here: <a href="#anchor-65">DMX Channel Map</a> or the
+the laser cube. The default 16 channel map is available here: <a href="#dmxartnet-default-fixture-channel-allocation">DMX Channel Map</a> or the
 wiki (or PDF supplied on the factory SD card).</p>
 <img src="Pictures/web/10000000000000F000000140C058A64E_hu_dbacaffd9b167ac8-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <p>Note: The default profile is compatible with the FB3/FB4 16 channel
@@ -1506,7 +1505,7 @@ range of 1-512.</p>
 Currently there is only one profile available which occupies 16 channels
 of the DMX address range.</p>
 <p>A profile determines which DMX channels control what feature of the
-laser cube. The default 16 channel map is available here: <a href="#anchor-65">DMX Channel Map</a> or on
+laser cube. The default 16 channel map is available here: <a href="#dmxartnet-default-fixture-channel-allocation">DMX Channel Map</a> or on
 the wiki (or PDF on the factory supplied SD card).</p>
 <img src="Pictures/web/10000000000000F0000001408AB0792E_hu_be00690b2e3ece10-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <p>Note: The default profile is compatible with the FB3/FB4 16 channel
@@ -1720,7 +1719,7 @@ sliders in Image Setup.</p></blockquote>
 <h2 id="tempo-settings"><span id="anchor-79"></span>Tempo Settings<a href="#tempo-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The tempo settings are used to control the speed of any enabled effects
 applied to the projection (see device effects wiki or in this guide
-here: <a href="#anchor-108">Effects</a>), e.g. The strobe
+here: <a href="#built-in-effects">Effects</a>), e.g. The strobe
 effect will flash faster as you increase the BPM slider in the tempo
 menu, and flash slower when reducing the BPM slider.</p>
 <p>The purpose of the tempo menu is mainly for live DJ effects while a
@@ -1831,7 +1830,7 @@ Laser cubes will self-assign an APIPA address.</p>
 Client Mode.</p>
 <p>The A-IP indicates that the IP address shown – 169.254.129.54 is an
 APIPA one.</p>
-<p>The Network settings can be customized under the <a href="#anchor-88">Network menu</a>.</p>
+<p>The Network settings can be customized under the <a href="#network-settings">Network menu</a>.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140210BB151_hu_5f16cdfbf821fee2-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014022BCAF89_hu_12334b661bc804e-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <h4 id="apipa-mode-explained"><span id="anchor-87"></span>APIPA mode explained<a href="#apipa-mode-explained" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <img src="Pictures/web/10000000000009B00000036D8CE24CA2-1284.webp" width="642" height="227" alt="" loading="lazy" decoding="async">
@@ -1973,7 +1972,7 @@ in the playlist control mode. This can be done using the
 Settings→Playback Speed menu</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140ED7194DC_hu_79315d4f24809687-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001402F2A03BB_hu_cb89052d506a14cb-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The playback speed slider can also be assigned to a MIDI knob or fader
-if using an APC40 MK2 or APC mini MK2 (see <a href="#anchor-133">MIDI Mapping</a>
+if using an APC40 MK2 or APC mini MK2 (see <a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI Mapping</a>
 in this guide, or the online wiki).</p>
 <h2 id="general-settings"><span id="anchor-105"></span>General Settings<a href="#general-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>This menu has options to change the LCD brightness, enable backward
@@ -2034,7 +2033,7 @@ tempo based modifier.</p>
 <p>If an effect is dependant on the current setting of the tempo, then this
 can be accessed from settings→tempo, or set using tap tempo on an APC40
 MK2 device (see wiki section on
-<a href="#anchor-79">tempo</a>).</p>
+<a href="#tempo-settings">tempo</a>).</p>
 <p>Any of the effect parameters can be MIDI mapped to an APC40 MK2 or APC
 mini MK2 in order to allow live modification of the effects (see our
 DEMO APC40 MK2 MIDI mapping on the SD card provided with the laser
@@ -2205,7 +2204,7 @@ laser cube.</p>
 <img src="Pictures/web/10000000000003FC0000027EAE4B5252-1020.webp" width="643" height="402" alt="" loading="lazy" decoding="async">
 <h3 id="zoom-effect"><span id="anchor-115"></span>Zoom Effect<a href="#zoom-effect" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>This effect will zoom the projection in/out in sync with the beat based
-on the current tempo (see <a href="#anchor-79">tempo</a> in
+on the current tempo (see <a href="#tempo-settings">tempo</a> in
 the wiki).</p>
 <h4 id="zoom-effect-parameters"><span id="anchor-116"></span>Zoom effect parameters<a href="#zoom-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>The zoom effect has several parameters that can be adjusted by the user,
@@ -2304,7 +2303,7 @@ the LaserCube.</p>
 <h3 id="strobe-effect"><span id="anchor-127"></span>Strobe Effect<a href="#strobe-effect" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The strobe effect will strobe the current projection on/off to the beat,
 fraction of the beat, or multiple of the current beat, based on the
-current tempo (see wiki for <a href="#anchor-79">tempo</a>
+current tempo (see wiki for <a href="#tempo-settings">tempo</a>
 menu).</p>
 <h4 id="strobe-effect-parameters"><span id="anchor-128"></span>Strobe effect parameters<a href="#strobe-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F00000014060CC21E1_hu_43c4950d6f9cb02f-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140F8533FB0_hu_5f54adb7841ee98c-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
@@ -2667,20 +2666,16 @@ the SD card.</p>
     if (h.tagName === "H1") chapters.push({ h: h, all: [] });
     else if (chapters.length) chapters[chapters.length - 1].all.push(h);
   });
-  var owner = [];
-  chapters.forEach(function (c, ci) {
+  chapters.forEach(function (c) {
     var h2 = c.all.filter(function (h) { return h.tagName === "H2"; });
     c.kids = h2.length ? h2 : c.all.filter(function (h) { return h.tagName === "H3"; });
   });
+  // For each heading: its chapter and the contents entry above it (-1 = the chapter itself).
+  var owner = [], oc = -1, ok = -1;
   heads.forEach(function (h) {
-    var ci = -1, ki = -1;
-    chapters.forEach(function (c, i) { if (c.h === h || c.all.indexOf(h) > -1) ci = i; });
-    if (ci > -1) {
-      var c = chapters[ci];
-      for (var i = 0; i < c.kids.length; i++) if (c.kids[i] === h || c.kids[i].compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING) ki = i;
-      if (c.h === h) ki = -1;
-    }
-    owner.push({ c: ci, k: ki });
+    if (h.tagName === "H1") { oc++; ok = -1; }
+    else if (oc > -1 && chapters[oc].kids.indexOf(h) > -1) ok = chapters[oc].kids.indexOf(h);
+    owner.push({ c: oc, k: ok });
   });
 
   function tocHtml(prefix) {
@@ -2688,11 +2683,11 @@ the SD card.</p>
       var id = prefix + "-" + ci, sub = "", btn = "";
       if (c.kids.length) {
         sub = '<ol class="toc-sub" id="' + id + '">' + c.kids.map(function (h, ki) {
-          return '<li><a href="#' + h.id + '" data-c="' + ci + '" data-k="' + ki + '">' + esc(label(h)) + "</a></li>";
+          return '<li><a href="#' + esc(h.id) + '" data-c="' + ci + '" data-k="' + ki + '">' + esc(label(h)) + "</a></li>";
         }).join("") + "</ol>";
         btn = '<button class="toc-tog" type="button" aria-expanded="false" aria-controls="' + id + '" aria-label="Sections in ' + esc(label(c.h)) + '"><svg class="icon"><use href="#i-chev"/></svg></button>';
       }
-      return '<li class="toc-ch" data-c="' + ci + '"><div class="toc-row"><a href="#' + c.h.id + '" data-c="' + ci + '" data-k="-1">' + esc(label(c.h)) + "</a>" + btn + "</div>" + sub + "</li>";
+      return '<li class="toc-ch" data-c="' + ci + '"><div class="toc-row"><a href="#' + esc(c.h.id) + '" data-c="' + ci + '" data-k="-1">' + esc(label(c.h)) + "</a>" + btn + "</div>" + sub + "</li>";
     }).join("") + "</ol>";
   }
   var tocs = Array.prototype.slice.call(document.querySelectorAll("[data-toc]"));
@@ -2731,7 +2726,7 @@ the SD card.</p>
     if (r.top < s.top + 48 || r.bottom > s.bottom - 48) box.scrollTop += r.top - s.top - s.height / 3;
   }
 
-  function setActive(ci, ki) {
+  function setCurrent(ci, ki) {
     if (ci === activeC && ki === activeK) return;
     if (ci !== activeC) pinned = {}; // a new chapter: fold the others back
     activeC = ci; activeK = ki;
@@ -2760,8 +2755,8 @@ the SD card.</p>
     var found = -1, lo = 0, hi = tops.length - 1;
     while (lo <= hi) { var mid = (lo + hi) >> 1; if (tops[mid] <= line) { found = mid; lo = mid + 1; } else hi = mid - 1; }
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2 && tops.length) found = tops.length - 1;
-    if (found < 0) setActive(-1, -1);
-    else setActive(owner[found].c, owner[found].k);
+    if (found < 0) setCurrent(-1, -1);
+    else setCurrent(owner[found].c, owner[found].k);
   }
   window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
   var resizeTimer;
@@ -2775,7 +2770,9 @@ the SD card.</p>
   ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { window.addEventListener(ev, function () { moved = true; }, { once: true, passive: true }); });
   if (document.fonts && location.hash.length > 1) {
     document.fonts.ready.then(function () {
-      var t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      var id = location.hash.slice(1), t;
+      try { id = decodeURIComponent(id); } catch (e) {}
+      t = document.getElementById(id);
       if (t && !moved) t.scrollIntoView();
     });
   }
@@ -2816,7 +2813,7 @@ the SD card.</p>
   ];
   var POPULAR = ["factory-reset-procedure", "firmware-update", "wifi-client-mode", "dmxart-net-channel-layout", "e-stop-setup-guide", "exporting-a-playlist-to-the-micro-sd-card"];
 
-  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[‐-―]/g, "-"); }
+  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-"); }
   function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
   var STOP = {};
@@ -2957,11 +2954,11 @@ the SD card.</p>
     box.innerHTML = html;
     box.scrollTop = 0;
     items = Array.prototype.slice.call(box.querySelectorAll(".result"));
-    setResult(items.length ? 0 : -1);
+    setActive(items.length ? 0 : -1);
     input.setAttribute("aria-expanded", items.length ? "true" : "false");
   }
 
-  function setResult(i, scroll) {
+  function setActive(i, scroll) {
     if (items[active]) items[active].setAttribute("aria-selected", "false");
     active = i;
     if (items[i]) {
@@ -2992,15 +2989,15 @@ the SD card.</p>
   });
   input.addEventListener("input", render);
   input.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowDown") { e.preventDefault(); setResult(Math.min(active + 1, items.length - 1), true); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setResult(Math.max(active - 1, 0), true); }
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(active + 1, items.length - 1), true); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0), true); }
     else if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229 && items[active]) { e.preventDefault(); items[active].click(); }
     // A search field's own Escape only clears the text; close the dialog in one press.
     else if (e.key === "Escape") { e.preventDefault(); dlg.close(); }
   });
   box.addEventListener("mousemove", function (e) {
     var r = e.target.closest(".result");
-    if (r) { var i = items.indexOf(r); if (i !== active) setResult(i); }
+    if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
   });
   document.addEventListener("keydown", function (e) {
     var a = document.activeElement, typing = !!a && (/INPUT|TEXTAREA|SELECT/.test(a.tagName) || a.isContentEditable);
