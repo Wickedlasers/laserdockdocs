@@ -32,7 +32,7 @@ Until October 2026 the site was edited on goldmine and rsynced into this repo.
 ## Homepage (`index.html`)
 
 One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. Images are in
-`images/home/`, fonts are self-hosted in `fonts/inter/` and `fonts/jetbrains-mono/` (SIL OFL).
+`images/home/`, the Inter font is self-hosted in `fonts/inter/` (SIL OFL).
 
 - **It depends on the manual's heading ids.** About 60 links (the port hotspots on the hero photo,
   the chapter index, the beginner videos' "Manual:" links, the popular searches) point to
@@ -47,6 +47,8 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   ids = set(re.findall(r'\bid="?([^" >]+)', manual))
   used = set(re.findall(r'ultra-mk2-pro-manual/#([^"]+)"', home)) | set(re.findall(r'\["([a-z0-9-]+)", "', home))
   print('missing anchors:', sorted(used - ids) or 'none')
+  own = set(re.findall(r'href="#([a-z0-9-]+)"', manual))
+  print('broken links inside the manual:', sorted(own - ids) or 'none')
   EOF
   ```
 - **Search** fetches the manual page in the browser and indexes every `h1`-`h4` that has an `id`
@@ -55,6 +57,10 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   thumbnails are `images/home/videos/<id>.webp` (640x360). Source: laseros.com/tutorials.
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
   If that photo is replaced, re-measure them.
+- **Shared with the manual:** the manual page carries copies of the theme script in `<head>`, the
+  `:root` colour tokens, the header (nav and the narrow-screen menu), the footer, and the search
+  dialog's HTML, CSS and JS (including the `VIDEOS` and `STOP` lists). A change to any of these here
+  needs the same change there.
 - `index.html` is written by hand now; don't regenerate it from the old Hugo project on `hugo-source`.
 
 ## Manual (`docs/guides/ultra-mk2-pro-manual/index.html`)
@@ -63,14 +69,21 @@ One self-contained file like the homepage (same header, colours, font and search
 October 2026 from the old Doks page. The manual text is the `<main class="docs-content">` block;
 edit it by hand.
 
-- **Keep every heading id.** The homepage links and search, this page's search and the old
-  `ultra-mk2-full-manual-v1.4/` redirect all use them. Run the anchor check above after any change.
+- **Keep every heading id**, and the empty `<span id="anchor-NN">` inside headings (old link
+  targets from the .odt conversion). The homepage links and search, this page's search and the old
+  `ultra-mk2-full-manual-v1.4/` redirect use them. Run the anchor check above after any change.
 - **Contents and search are built in the browser** from the `h1`-`h4` headings that have an `id`:
-  chapters are the `h1`s, with their `h2`s (or `h3`s when a chapter has none). A new section only
-  needs a heading with an id. Keep the heading levels; they also set the search ranking.
-- **Images:** the page shows WebP copies in `Pictures/web/` (about 5 MB in all), sized for the
-  760 px text column at 2x. Give every `<img>` its `width` and `height`, or deep links land in the
-  wrong place while lazy images load. The original `Pictures/*.png|jpg` files stay as the sources
-  (the Declaration of Conformity thumbnails link to them full size).
-- The search code is a copy of the homepage's (it indexes this page instead of fetching it), so a
-  fix in one belongs in the other.
+  the contents list shows the `h1`s with their `h2`s (or `h3`s when a chapter has none); `h4`s only
+  feed the search and the "you are here" highlight. A new section only needs a heading with an id.
+  Keep the heading levels; they also set the search ranking.
+- **Images:** the page shows WebP copies in `Pictures/web/` (about 5 MB in all), named
+  `<original name>-<file width>.webp` and made at twice the shown size, at most 2 x 760 px. In the
+  `<img>`, `width` and `height` are the size shown on the page (half the file's pixels), e.g.
+  `cwebp -q 82 -resize 1200 0 Pictures/x.png -o Pictures/web/x-1200.webp` and
+  `<img src="Pictures/web/x-1200.webp" width="600" height="..." alt="" loading="lazy" decoding="async">`.
+  Without `width`/`height`, deep links land in the wrong place while lazy images load. The sources
+  stay in `Pictures/` (for the 240x320 CubeOS screenshots the lossless originals are the `.bmp`
+  files); the Declaration of Conformity thumbnails link to their full-size scans.
+- **The search code is a copy of the homepage's** (it indexes this page's own DOM instead of
+  fetching it, and closes the dialog when a result on this page is picked). Function and variable
+  names match the homepage's, so a fix can be copied across; see "Shared with the manual" above.
