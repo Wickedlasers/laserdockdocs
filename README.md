@@ -56,3 +56,21 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
   If that photo is replaced, re-measure them.
 - `index.html` is written by hand now; don't regenerate it from the old Hugo project on `hugo-source`.
+
+## Manual (`docs/guides/ultra-mk2-pro-manual/index.html`)
+
+One self-contained file like the homepage (same header, colours, font and search), redesigned in
+October 2026 from the old Doks page. The manual text is the `<main class="docs-content">` block;
+edit it by hand.
+
+- **Keep every heading id.** The homepage links and search, this page's search and the old
+  `ultra-mk2-full-manual-v1.4/` redirect all use them. Run the anchor check above after any change.
+- **Contents and search are built in the browser** from the `h1`-`h4` headings that have an `id`:
+  chapters are the `h1`s, with their `h2`s (or `h3`s when a chapter has none). A new section only
+  needs a heading with an id. Keep the heading levels; they also set the search ranking.
+- **Images:** the page shows WebP copies in `Pictures/web/` (about 5 MB in all), sized for the
+  760 px text column at 2x. Give every `<img>` its `width` and `height`, or deep links land in the
+  wrong place while lazy images load. The original `Pictures/*.png|jpg` files stay as the sources
+  (the Declaration of Conformity thumbnails link to them full size).
+- The search code is a copy of the homepage's (it indexes this page instead of fetching it), so a
+  fix in one belongs in the other.
