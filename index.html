@@ -994,7 +994,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
   });
   document.addEventListener("keydown", function (e) {
-    var a = document.activeElement, typing = !!a && (/INPUT|TEXTAREA|SELECT/.test(a.tagName) || a.isContentEditable);
+    // WebKit can leave focus on the search box inside the closed dialog; that isn't typing.
+    var a = document.activeElement, typing = !!a && (/INPUT|TEXTAREA|SELECT/.test(a.tagName) || a.isContentEditable) && !a.closest("dialog:not([open])");
     if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
     else if (e.key === "/" && !typing && !dlg.open) { e.preventDefault(); open(); }
   });
