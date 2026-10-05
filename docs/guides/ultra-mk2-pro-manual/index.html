@@ -202,7 +202,7 @@ table.swatches{width:auto;min-width:240px}
 table.swatches td{padding:7px 14px;border-bottom:2px solid var(--bg)}
 table.dmx{width:auto;min-width:min(100%,440px)}
 table.dmx caption{caption-side:top;text-align:left;padding:0 0 10px;font-size:16px;font-weight:600}
-.ch{display:inline-block;margin-right:10px;padding:4px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent-hover);font:600 12px/1 var(--font);letter-spacing:.02em;font-variant-numeric:tabular-nums;vertical-align:2px}
+.ch{display:inline-block;margin-right:6px;padding:4px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent-hover);font:600 12px/1 var(--font);letter-spacing:.02em;font-variant-numeric:tabular-nums;vertical-align:2px}
 table.dmx td:first-child{width:9.5em;padding-right:28px;color:var(--muted);white-space:nowrap}
 
 /* specification cards */
@@ -1548,7 +1548,7 @@ the Access Mode.</p>
 <p>• DMX CH 14 Reserved for future use.</p>
 <p>• DMX CH 16 Reserved for future use.</p>
 <h3 id="dmxart-net-channel-layout"><span id="anchor-68"></span>DMX/Art-Net Channel Layout<a href="#dmxart-net-channel-layout" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 1</span>Access Mode</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 1</span> Access Mode</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-31</td><td>Blackout</td></tr>
 <tr><td>33-95</td><td>Basic 4 CH</td></tr>
 <tr><td>97-159</td><td>Standard 8 CH</td></tr>
@@ -1568,7 +1568,7 @@ previous value.</p>
 <p>• Page 2 plays cues from index 48 onwards.</p>
 <p>• Page 3 plays cues from index 96 onwards, etc.</p>
 <p>• Allows up to 432 cues per playlist (9 * 48).</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 2</span>Page</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 2</span> Page</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-15</td><td>1</td></tr>
 <tr><td>17-31</td><td>2</td></tr>
 <tr><td>33-47</td><td>3</td></tr>
@@ -1583,7 +1583,7 @@ previous value.</p>
 <p>• Cue selection is based on Page &amp; Cue DMX channels.</p>
 <p>• Page 1 = Cues 1-48, Page 2 = Cues 49-96, etc.</p>
 <p>• Maximum of 432 cues (48 cues per page * 9 pages).</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 3</span>Cue Select</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 3</span> Cue Select</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-31</td><td>Blackout</td></tr>
 <tr><td>33-35</td><td>Cue 1</td></tr>
 <tr><td>37-39</td><td>Cue 2</td></tr>
@@ -1592,54 +1592,54 @@ previous value.</p>
 </tbody></table></div>
 <p>Note: Used in conjunction with channel 2 (page) in order to select cues
 from the currently selected playlist.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 4</span>Speed</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 4</span> Speed</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-15</td><td>100%</td></tr>
 <tr><td>17-31</td><td>Pause</td></tr>
 <tr><td>33 … 64 … 128 … 255</td><td>25% … 50% … 100% … 200%</td></tr>
 </tbody></table></div>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 5</span>Fader</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 5</span> Fader</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-255</td><td>Black … Full Brightness</td></tr>
 </tbody></table></div>
 <p>Note: If access mode is below Standard, fade is fixed at 100%.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 6</span>Scale</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 6</span> Scale</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-255</td><td>Zero Size … Full Size</td></tr>
 </tbody></table></div>
 <p>Note: If access mode is below Standard, scale is fixed at 100%.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 7</span>X Size</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 7</span> X Size</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 128 … 255</td><td>Negative Full Size … Zero Size … Positive Full Size</td></tr>
 </tbody></table></div>
 <p>Note: Negative full size = Horizontally mirrored from original.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 8</span>Y Size</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 8</span> Y Size</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 128 … 255</td><td>Negative Full Size … Zero Size … Positive Full Size</td></tr>
 </tbody></table></div>
 <p>Note: Negative full size = Vertically flipped from original.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 9</span>Rotation</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 9</span> Rotation</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 255</td><td>0 degrees … 360 degrees</td></tr>
 </tbody></table></div>
 <p>Note: If access mode is below Extended, no rotation will occur.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 10</span>X Position</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 10</span> X Position</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 128 … 255</td><td>Left … Center … Right</td></tr>
 </tbody></table></div>
 <p>Note: If access mode is below Extended, X Position is fixed at 128
 (center).</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 11</span>Y Position</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 11</span> Y Position</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 128 … 255</td><td>Down … Center … Up</td></tr>
 </tbody></table></div>
 <p>Note: If access mode is below Extended, Y Position is fixed at 128
 (center).</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 12</span>Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 12</span> Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 255</td><td>NOT IMPLEMENTED</td></tr>
 </tbody></table></div>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 13</span>Scan Rate</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 13</span> Scan Rate</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-31</td><td>Default (35K pps)</td></tr>
 <tr><td>33-223</td><td>6K-29K pps</td></tr>
 <tr><td>225-255</td><td>30K pps</td></tr>
 </tbody></table></div>
 <p>Note: If access mode is below Full, scan rate defaults to 35K pps.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 14</span>Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 14</span> Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 255</td><td>NOT IMPLEMENTED</td></tr>
 </tbody></table></div>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 15</span>Recolor</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 15</span> Recolor</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-31</td><td>Default</td></tr>
 <tr><td>33-223</td><td>RED - ORANGE - YELLOW - LIME - GREEN - CYAN - BLUE - PURPLE - PINK - RED</td></tr>
 <tr><td>225-255</td><td>White</td></tr>
@@ -1650,7 +1650,7 @@ from the currently selected playlist.</p>
 <p>• The values 33-223 adjust the hue range between 0 and 360 degrees with
 full saturation (S = 1.0, V = 1.0).</p>
 <p>• If access mode is below Full, no re-colour will occur.</p>
-<div class="table-wrap"><table class="dmx"><caption><span class="ch">CH 16</span>Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
+<div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 16</span> Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 255</td><td>NOT IMPLEMENTED</td></tr>
 </tbody></table></div>
 <h1 id="settings"><span id="anchor-70"></span>Settings<a href="#settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
@@ -3005,7 +3005,8 @@ the SD card.</p>
     if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
   });
   document.addEventListener("keydown", function (e) {
-    var a = document.activeElement, typing = !!a && (/INPUT|TEXTAREA|SELECT/.test(a.tagName) || a.isContentEditable);
+    // Focus can stay on the input of the closed dialog (WebKit); that isn't typing.
+    var a = document.activeElement, typing = !!a && (/INPUT|TEXTAREA|SELECT/.test(a.tagName) || a.isContentEditable) && !a.closest("dialog:not([open])");
     if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
     else if (e.key === "/" && !typing && !dlg.open) { e.preventDefault(); open(); }
   });
