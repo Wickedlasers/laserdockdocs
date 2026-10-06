@@ -980,7 +980,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   // Give focus back to whatever opened search (WebKit can leave it on the hidden input).
   dlg.addEventListener("close", function () {
     var a = document.activeElement;
-    if (opener && opener.isConnected && (!a || a === document.body || dlg.contains(a))) opener.focus();
+    if (opener && opener.isConnected && (!a || a === document.body || dlg.contains(a))) opener.focus({ preventScroll: true });
   });
 
   document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
