@@ -114,10 +114,9 @@ html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!import
 .hero-search:hover{border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.07)}
 .hero-search .icon{width:20px;height:20px;color:var(--text)}
 .hero-search .ph{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.quick{margin:16px 0 0;font-size:14px;color:var(--subtle);max-width:520px}
+.quick{margin:16px 0 0;font-size:14px;color:var(--subtle);max-width:520px;display:flex;flex-wrap:wrap;column-gap:14px;row-gap:4px}
 .quick a{white-space:nowrap;color:var(--muted);border-bottom:1px solid var(--line-2);transition:color .15s,border-color .15s}
 .quick a:hover{color:var(--text);border-color:var(--text)}
-.quick .sep{margin:0 2px;opacity:.5}
 
 .hero-figure{margin:0;align-self:end;position:relative}
 .product{position:relative;width:100%;aspect-ratio:1200/1280}
@@ -295,7 +294,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .brand-name{font-size:13.5px}
   .js .hs{display:none}
   .hero-figure figcaption{position:static;margin:-28px 0 10px;text-align:left}
-  .js .ports{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;list-style:none;margin:0 0 28px;padding:0;border-top:1px solid var(--line)}
+  .js .ports{display:grid;width:100%;max-width:520px;justify-self:center;grid-template-columns:1fr 1fr;column-gap:16px;list-style:none;margin:0 0 28px;padding:0;border-top:1px solid var(--line)}
   .ports a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
   .ports a::after{content:"→";content:"→"/"";color:var(--subtle)}
   .block{padding-top:72px}
@@ -395,7 +394,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           <span class="ph">Try “factory reset” or “DMX address”</span>
         </button>
         <p class="quick">Popular:
-          <a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a> <span class="sep">·</span> <a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a> <span class="sep">·</span> <a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a> <span class="sep">·</span> <a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">DMX channels</a>
+          <a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a> <a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a> <a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a> <a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">DMX channels</a>
         </p>
       </div>
       <figure class="hero-figure">
@@ -786,7 +785,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     ["exporting-a-playlist-to-the-micro-sd-card", "Exporting a Playlist to the micro SD card"]
   ];
 
-  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-"); }
+  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-").replace(/['\u2019]/g, ""); }
   function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
   function esc(s) { return s.replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
@@ -968,8 +967,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   function open() {
     if (dlg.open) return;
     failed = false; // retry a manual fetch that failed earlier
-    menu.open = false;
     opener = document.activeElement;
+    if (menu.contains(opener)) opener = menu.querySelector("summary");
+    menu.open = false;
     dlg.showModal();
     input.select();
     var p = load();
@@ -980,7 +980,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   // Give focus back to whatever opened search (WebKit can leave it on the hidden input).
   dlg.addEventListener("close", function () {
     var a = document.activeElement;
-    if (opener && opener.isConnected && (!a || a === document.body || dlg.contains(a))) opener.focus({ preventScroll: true });
+    if (a && a !== document.body && !dlg.contains(a)) return;
+    if (opener && opener !== document.body && opener.isConnected) opener.focus({ preventScroll: true });
+    if (dlg.contains(document.activeElement)) document.activeElement.blur();
   });
 
   document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
@@ -995,7 +997,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0), true); }
     else if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229 && items[active]) { e.preventDefault(); items[active].click(); }
     // A search field's own Escape only clears the text; close the dialog in one press.
-    else if (e.key === "Escape" && !e.isComposing) { e.preventDefault(); dlg.close(); }
+    else if (e.key === "Escape" && !e.isComposing && e.keyCode !== 229) { e.preventDefault(); dlg.close(); }
   });
   // WebKit fires mousemove when the list scrolls under a still pointer; only real moves select a row.
   var lastX = -1, lastY = -1;
