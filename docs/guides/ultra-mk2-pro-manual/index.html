@@ -86,7 +86,7 @@ h1,h2,h3{text-wrap:balance}
 .icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
 .icon-btn:hover{background:rgba(255,255,255,.07);color:var(--text)}
 .only-mobile{display:none}
-html:not(.js) [data-open-search],html:not(.js) #theme-toggle,html:not(.js) .toc-btn{display:none!important}
+html:not(.js) [data-open-search],html:not(.js) #theme-toggle,html:not(.js) .toc-btn,html:not(.js) #toc-bar,html:not(.js) #toc-side{display:none!important}
 .menu{display:none;position:relative}
 .menu summary{list-style:none;cursor:pointer}
 .menu summary::-webkit-details-marker{display:none}
@@ -2821,7 +2821,7 @@ the SD card.</p>
   ];
   var POPULAR = ["factory-reset-procedure", "firmware-update", "wifi-client-mode", "dmxart-net-channel-layout", "e-stop-setup-guide", "exporting-a-playlist-to-the-micro-sd-card"];
 
-  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-"); }
+  function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-").replace(/['\u2019]/g, ""); }
   function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
   var STOP = {};
@@ -2981,8 +2981,9 @@ the SD card.</p>
   function open() {
     if (dlg.open) return;
     if (sheet.open) sheet.close();
-    menu.open = false;
     opener = document.activeElement;
+    if (menu.contains(opener)) opener = menu.querySelector("summary");
+    menu.open = false;
     dlg.showModal();
     input.select();
     render();
@@ -2991,7 +2992,9 @@ the SD card.</p>
   // except after jumping to a section on this page.
   dlg.addEventListener("close", function () {
     var a = document.activeElement;
-    if (opener && opener.isConnected && (!a || a === document.body || dlg.contains(a))) opener.focus({ preventScroll: true });
+    if (a && a !== document.body && !dlg.contains(a)) return;
+    if (opener && opener !== document.body && opener.isConnected) opener.focus({ preventScroll: true });
+    if (dlg.contains(document.activeElement)) document.activeElement.blur();
   });
 
   document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
@@ -3009,7 +3012,7 @@ the SD card.</p>
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0), true); }
     else if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229 && items[active]) { e.preventDefault(); items[active].click(); }
     // A search field's own Escape only clears the text; close the dialog in one press.
-    else if (e.key === "Escape" && !e.isComposing) { e.preventDefault(); dlg.close(); }
+    else if (e.key === "Escape" && !e.isComposing && e.keyCode !== 229) { e.preventDefault(); dlg.close(); }
   });
   // WebKit fires mousemove when the list scrolls under a still pointer; only real moves select a row.
   var lastX = -1, lastY = -1;
