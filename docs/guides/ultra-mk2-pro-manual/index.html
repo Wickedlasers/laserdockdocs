@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LaserCube User Wiki","item":"https://wiki.laseros.com/"},{"@type":"ListItem","position":2,"name":"LaserCube Ultra MK2 & Pro Manual","item":"https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/"}]}</script>
 <link rel="preload" as="font" type="font/woff2" href="../../../fonts/inter/inter-latin.woff2" crossorigin>
-<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
 /* Self-hosted (SIL OFL, licence next to the files), the same font as the homepage. */
 @font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(../../../fonts/inter/inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
@@ -86,6 +86,7 @@ h1,h2,h3{text-wrap:balance}
 .icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
 .icon-btn:hover{background:rgba(255,255,255,.07);color:var(--text)}
 .only-mobile{display:none}
+html:not(.js) [data-open-search],html:not(.js) #theme-toggle,html:not(.js) .toc-btn{display:none!important}
 .menu{display:none;position:relative}
 .menu summary{list-style:none;cursor:pointer}
 .menu summary::-webkit-details-marker{display:none}
@@ -386,7 +387,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <button class="icon-btn only-mobile" type="button" data-open-search aria-label="Search the manual"><svg class="icon"><use href="#i-search"/></svg></button>
       <details class="menu">
         <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
-        <nav class="menu-panel" aria-label="Main">
+        <nav class="menu-panel" aria-label="Menu">
           <a href="./" aria-current="page">Manual</a>
           <a href="../../../#videos">Videos</a>
           <a href="../../../#downloads">Downloads</a>
@@ -2652,13 +2653,15 @@ the SD card.</p>
 
   var menu = document.querySelector(".menu");
   menu.addEventListener("click", function (e) { if (e.target.closest("a")) menu.open = false; });
-  document.addEventListener("click", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  // pointerdown, not click: iOS sends no click for a tap on plain content.
+  document.addEventListener("pointerdown", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  menu.addEventListener("focusout", function (e) { if (e.relatedTarget && !menu.contains(e.relatedTarget)) menu.open = false; });
 
   var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
   document.querySelectorAll("[data-kbd]").forEach(function (k) { k.textContent = isMac ? "⌘ K" : "Ctrl K"; });
 
-  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function esc(s) { return s.replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function label(h) { return h.textContent.replace(/#\s*$/, "").replace(/\s+/g, " ").trim(); }
 
   // ---------- contents ----------
@@ -2823,7 +2826,7 @@ the SD card.</p>
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
   var STOP = {};
   // "lasercube", "laser" and "cube" are in almost every section, so they only add noise.
-  "a an and are can cube do does for from how i in is it its laser lasercube me my of on or the to what when where which why with you your".split(" ").forEach(function (w) { STOP[w] = 1; });
+  "a an and are can cannot cant cube do does doesnt dont for from how i in is isnt it its laser lasercube me my not of on or the to what when where which why with wont you your".split(" ").forEach(function (w) { STOP[w] = 1; });
   // Query words: unique, without filler words, at most 8, so questions and long pastes stay fast.
   function terms(q) {
     var all = norm(q.slice(0, 200)).split(/[^a-z0-9]+/).filter(Boolean), seen = {}, out = [];
@@ -2895,10 +2898,9 @@ the SD card.</p>
       score += matched * 20 + (5 - e.level) * 4 - e.title.length / 30;
       (matched === ts.length ? every : some).push({ e: e, score: score });
     });
-    // Sections with every word first; if there are none, the best partial matches.
-    var res = every.length ? every : some;
-    res.sort(function (a, b) { return b.score - a.score; });
-    return res.slice(0, 10).map(function (r) { return r.e; });
+    // Sections with every word first, then the best partial matches.
+    var byScore = function (a, b) { return b.score - a.score; };
+    return every.sort(byScore).concat(some.sort(byScore)).slice(0, 10).map(function (r) { return r.e; });
   }
 
   function searchVideos(ts) {
@@ -2975,13 +2977,22 @@ the SD card.</p>
     }
   }
 
+  var opener = null;
   function open() {
     if (dlg.open) return;
     if (sheet.open) sheet.close();
+    menu.open = false;
+    opener = document.activeElement;
     dlg.showModal();
     input.select();
     render();
   }
+  // Give focus back to whatever opened search (WebKit can leave it on the hidden input),
+  // except after jumping to a section on this page.
+  dlg.addEventListener("close", function () {
+    var a = document.activeElement;
+    if (opener && opener.isConnected && (!a || a === document.body || dlg.contains(a))) opener.focus({ preventScroll: true });
+  });
 
   document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
   dlg.querySelector("[data-close]").addEventListener("click", function () { dlg.close(); });
@@ -2990,7 +3001,7 @@ the SD card.</p>
   dlg.addEventListener("mousedown", function (e) { downOnBackdrop = e.target === dlg; });
   dlg.addEventListener("click", function (e) {
     if (e.target === dlg && downOnBackdrop) dlg.close();
-    else if (e.target.closest(".result:not([target])")) dlg.close(); // a section on this page
+    else if (e.target.closest(".result:not([target])")) { opener = null; dlg.close(); } // a section on this page
   });
   input.addEventListener("input", render);
   input.addEventListener("keydown", function (e) {
@@ -2998,9 +3009,13 @@ the SD card.</p>
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0), true); }
     else if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229 && items[active]) { e.preventDefault(); items[active].click(); }
     // A search field's own Escape only clears the text; close the dialog in one press.
-    else if (e.key === "Escape") { e.preventDefault(); dlg.close(); }
+    else if (e.key === "Escape" && !e.isComposing) { e.preventDefault(); dlg.close(); }
   });
+  // WebKit fires mousemove when the list scrolls under a still pointer; only real moves select a row.
+  var lastX = -1, lastY = -1;
   box.addEventListener("mousemove", function (e) {
+    if (e.clientX === lastX && e.clientY === lastY) return;
+    lastX = e.clientX; lastY = e.clientY;
     var r = e.target.closest(".result");
     if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
   });
