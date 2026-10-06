@@ -58,9 +58,11 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
   If that photo is replaced, re-measure them.
 - **Shared with the manual:** the manual page carries copies of the theme script in `<head>`, the
-  `:root` colour tokens, the header (nav and the narrow-screen menu), the footer, and the search
+  `:root` colour tokens, the `@font-face` block, the SVG sprite (wordmark gradients and icons), the
+  header (nav and the narrow-screen menu, with its theme/menu/key-hint JS), the footer, and the search
   dialog's HTML, CSS and JS (including the `VIDEOS` and `STOP` lists). A change to any of these here
-  needs the same change there.
+  needs the same change there. The two `render()`/`open()` functions differ (the manual indexes its own
+  page and its `POPULAR` has another shape), so copy fixes by hand, not by pasting whole functions.
 - `index.html` is written by hand now; don't regenerate it from the old Hugo project on `hugo-source`.
 
 ## Manual (`docs/guides/ultra-mk2-pro-manual/index.html`)

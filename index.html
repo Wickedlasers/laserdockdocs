@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -24,7 +24,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"LaserCube User Wiki","url":"https://wiki.laseros.com/","publisher":{"@type":"Organization","name":"Wicked Lasers","url":"https://www.laseros.com/"}}</script>
 <link rel="preload" as="font" type="font/woff2" href="fonts/inter/inter-latin.woff2" crossorigin>
 <link rel="preload" as="image" href="images/home/ultra-mk2-rear.webp" imagesrcset="images/home/ultra-mk2-rear-640.webp 640w, images/home/ultra-mk2-rear.webp 1200w" imagesizes="(max-width: 600px) 90vw, (max-width: 1100px) 520px, 560px" fetchpriority="high">
-<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
 /* Self-hosted (SIL OFL, licences next to the files) so the page never waits on Google. */
 @font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter/inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
@@ -63,6 +63,7 @@ img,svg{display:block}
 button{font:inherit;color:inherit}
 h1,h2,h3{text-wrap:balance}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#fff;color:#000;padding:8px 14px;border-radius:6px}
 .skip:focus{left:16px}
 .container{width:100%;max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
@@ -88,6 +89,7 @@ h1,h2,h3{text-wrap:balance}
 .icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
 .icon-btn:hover{background:rgba(255,255,255,.07);color:var(--text)}
 .only-mobile{display:none}
+html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!important}
 .menu{display:none;position:relative}
 .menu summary{list-style:none;cursor:pointer}
 .menu summary::-webkit-details-marker{display:none}
@@ -113,9 +115,9 @@ h1,h2,h3{text-wrap:balance}
 .hero-search .icon{width:20px;height:20px;color:var(--text)}
 .hero-search .ph{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .quick{margin:16px 0 0;font-size:14px;color:var(--subtle);max-width:520px}
-.quick a{color:var(--muted);border-bottom:1px solid var(--line-2);transition:color .15s,border-color .15s}
+.quick a{white-space:nowrap;color:var(--muted);border-bottom:1px solid var(--line-2);transition:color .15s,border-color .15s}
 .quick a:hover{color:var(--text);border-color:var(--text)}
-.quick .sep{margin:0 8px;opacity:.5}
+.quick .sep{margin:0 2px;opacity:.5}
 
 .hero-figure{margin:0;align-self:end;position:relative}
 .product{position:relative;width:100%;aspect-ratio:1200/1280}
@@ -170,8 +172,7 @@ h1,h2,h3{text-wrap:balance}
 .chapter{padding:26px 24px 30px 0;border-bottom:1px solid var(--line)}
 .chapter + .chapter{padding-left:24px;border-left:1px solid var(--line)}
 .chapter:nth-child(4n+1){padding-left:0;border-left:0}
-.chapter .num{font:600 12px/1 var(--font);color:var(--subtle);letter-spacing:.06em;font-variant-numeric:tabular-nums}
-.chapter h3{margin:10px 0 12px;font-size:17px;letter-spacing:-.01em;font-weight:600}
+.chapter h3{margin:0 0 12px;font-size:17px;letter-spacing:-.01em;font-weight:600}
 .chapter h3 a:hover{color:var(--accent)}
 .chapter ul{list-style:none;margin:0;padding:0}
 .chapter li a{display:block;padding:3px 0;font-size:14.5px;color:var(--muted);transition:color .12s}
@@ -253,14 +254,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 
 @media (max-width:1100px){
   .search-pill{width:200px}
-  .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
-  .hero-copy{padding:56px 0 8px}
-  .hero-figure{max-width:520px;width:100%;margin:0 auto}
-  .product img{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-  .hero-figure figcaption{left:0;text-align:center}
-  .models{grid-template-columns:1fr 1fr 1fr}
-  .models .label{grid-column:1/-1;max-width:none;padding:18px 0 4px}
-  .model:nth-of-type(1){border-left:0;padding-left:0}
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:32px;min-height:560px}
   .course,.vids{grid-template-columns:repeat(2,1fr)}
   .chapters{grid-template-columns:repeat(2,1fr)}
   .chapter:nth-child(4n+1){padding-left:24px;border-left:1px solid var(--line)}
@@ -268,13 +262,23 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .help{grid-template-columns:repeat(3,1fr)}
   .help>div:first-child{grid-column:1/-1}
 }
+@media (max-width:1250px){
+  .models{grid-template-columns:1fr 1fr 1fr}
+  .models .label{grid-column:1/-1;max-width:none;padding:18px 0 4px}
+  .model:nth-of-type(1){border-left:0;padding-left:0}
+}
 @media (max-width:1000px){
+  .models{grid-template-columns:1fr}
+  .model,.model:nth-of-type(1){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
   .nav{display:none}
   .menu{display:block}
 }
 @media (max-width:900px){
-  .models{grid-template-columns:1fr}
-  .model,.model:nth-of-type(1){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
+  .hero-copy{padding:56px 0 8px}
+  .hero-figure{max-width:520px;width:100%;margin:0 auto}
+  .product img{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 80%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+  .hero-figure figcaption{left:0;text-align:center}
   .safety{grid-template-columns:1fr}
   .safety-img{min-height:260px}
   .safety-body{padding:32px 28px}
@@ -289,11 +293,11 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .brand{gap:10px}
   .wordmark{width:118px}
   .brand-name{font-size:13.5px}
-  .hs{display:none}
+  .js .hs{display:none}
   .hero-figure figcaption{position:static;margin:-28px 0 10px;text-align:left}
-  .ports{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;list-style:none;margin:0 0 28px;padding:0;border-top:1px solid var(--line)}
+  .js .ports{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;list-style:none;margin:0 0 28px;padding:0;border-top:1px solid var(--line)}
   .ports a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
-  .ports a::after{content:"→";color:var(--subtle)}
+  .ports a::after{content:"→";content:"→"/"";color:var(--subtle)}
   .block{padding-top:72px}
   .head{flex-direction:column;align-items:flex-start;margin-bottom:24px}
   .course,.vids{grid-template-columns:1fr 1fr;gap:28px 16px}
@@ -364,7 +368,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <button class="icon-btn only-mobile" type="button" data-open-search aria-label="Search the manual"><svg class="icon"><use href="#i-search"/></svg></button>
       <details class="menu">
         <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
-        <nav class="menu-panel" aria-label="Main">
+        <nav class="menu-panel" aria-label="Menu">
           <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
           <a href="#videos">Videos</a>
           <a href="#downloads">Downloads</a>
@@ -388,10 +392,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <p class="lead">The official manual and video guides, searchable down to the section.</p>
         <button class="hero-search" type="button" data-open-search aria-label="Search the manual">
           <svg class="icon"><use href="#i-search"/></svg>
-          <span class="ph">Try “factory reset”, “DMX address” or “WiFi”</span>
+          <span class="ph">Try “factory reset” or “DMX address”</span>
         </button>
         <p class="quick">Popular:
-          <a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a><span class="sep">·</span><a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">DMX channels</a>
+          <a href="docs/guides/ultra-mk2-pro-manual/#factory-reset-procedure">Factory reset</a> <span class="sep">·</span> <a href="docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a> <span class="sep">·</span> <a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a> <span class="sep">·</span> <a href="docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">DMX channels</a>
         </p>
       </div>
       <figure class="hero-figure">
@@ -408,8 +412,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           <a aria-label="Safety key, in the manual" class="hs l" style="--x:61.9%;--y:69.2%;--d:1.4s" href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock"><span class="tip" aria-hidden="true">Safety key</span></a>
         </div>
         <figcaption>Ultra MK2 rear panel · select a port</figcaption>
-        <ul class="ports" aria-label="Ports on the rear panel"></ul>
       </figure>
+      <ul class="ports" aria-label="Ports on the rear panel"></ul>
     </div>
   </section>
 
@@ -428,7 +432,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       </a>
       <a class="model" href="https://www.laseros.com/CUBE2-CUBE2ULTRA.manual-20241003.pdf">
         <img src="images/home/wifi.webp" alt="" width="64" height="64" loading="lazy">
-        <div><strong>LaserCube WiFi</strong><span>Not covered here. Open the WiFi manual (PDF).</span></div>
+        <div><strong>LaserCube WiFi or original Ultra</strong><span>Not covered here. Open their manual (PDF).</span></div>
         <svg class="icon go"><use href="#i-ext"/></svg>
       </a>
     </section>
@@ -446,25 +450,25 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener"><img src="images/home/videos/xgV1FQHKFsQ.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Part 1</span>
-          <h3><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Unboxing</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Unboxing<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></p>
         </li>
         <li>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener"><img src="images/home/videos/UYQt4zhQks8.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Part 2</span>
-          <h3><a href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener">First start</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener">First start<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop, jumper and key</a></p>
         </li>
         <li>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener"><img src="images/home/videos/Yr7jZidnk9I.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Part 3</span>
-          <h3><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">CubeOS software overview</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">CubeOS software overview<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS LCD settings</a></p>
         </li>
         <li>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener"><img src="images/home/videos/hFmpDOsEG_k.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Part 4</span>
-          <h3><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Connection modes</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Connection modes<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
           <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Network settings</a></p>
         </li>
       </ol>
@@ -473,13 +477,12 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" aria-labelledby="manual-h">
       <div class="head">
         <div>
-          <h2 id="manual-h">Every chapter of the manual</h2>
+          <h2 id="manual-h">The manual by topic</h2>
         </div>
         <a class="more" href="docs/guides/ultra-mk2-pro-manual/">Open the full manual <svg class="icon"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="chapters">
         <div class="chapter">
-          <span class="num">01</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#safety-warning">Safety and setup</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a></li>
@@ -494,7 +497,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">02</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#control-modes">Control modes</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#laseros-control-mode">LaserOS</a></li>
@@ -506,7 +508,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">03</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#dmx-control-mode">DMX and ArtNet</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#dmx-control-mode">DMX control mode</a></li>
@@ -517,7 +518,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">04</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Networking</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#wifi-client-mode">WiFi client mode</a></li>
@@ -529,7 +529,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">05</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#settings">Settings</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#projection-settings">Projection</a></li>
@@ -544,7 +543,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">06</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#built-in-effects">Built-in effects</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#available-effects">Available effects</a></li>
@@ -558,7 +556,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">07</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI mapping</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#enabling-usb-midi">Enabling USB MIDI</a></li>
@@ -568,7 +565,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           </ul>
         </div>
         <div class="chapter">
-          <span class="num">08</span>
           <h3><a href="docs/guides/ultra-mk2-pro-manual/#lasercube-web-admin-page">Web admin and maintenance</a></h3>
           <ul>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#lasercube-web-admin-page">Web admin page</a></li>
@@ -594,42 +590,42 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener"><img src="images/home/videos/KiuFqWiXBPA.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Safety</span>
-          <h3><a href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener">Using the emergency stop button</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener">Using the emergency stop button<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener"><img src="images/home/videos/0CMHLSTWcWY.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Safety</span>
-          <h3><a href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener">Setting up safety zones in LaserOS</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener">Setting up safety zones in LaserOS<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener"><img src="images/home/videos/aC7mLKLXRWk.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">DMX</span>
-          <h3><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener">What DMX is and how to use it with LaserCube</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener">What DMX is and how to use it with LaserCube<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener"><img src="images/home/videos/f1f-hoGJaYE.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Playlists</span>
-          <h3><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Importing a playlist to the SD card</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Importing a playlist to the SD card<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener"><img src="images/home/videos/A80UjLxKDZs.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">MIDI</span>
-          <h3><a href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener">Connecting a MIDI controller</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener">Connecting a MIDI controller<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener"><img src="images/home/videos/Jtd9Il9sAus.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Firmware</span>
-          <h3><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Firmware 2.0: what’s new and how to upgrade</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Firmware 2.0: what’s new and how to upgrade<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener"><img src="images/home/videos/8a95SdH_2ek.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Web app</span>
-          <h3><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Controlling built-in shows from the web app</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Controlling built-in shows from the web app<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener"><img src="images/home/videos/56A0RWEOAs8.webp" alt="" loading="lazy" width="640" height="360"></a>
           <span class="label">Multi-cube</span>
-          <h3><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Wireless multi-cube shows with CubeLink</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Wireless multi-cube shows with CubeLink<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
       </div>
     </section>
@@ -669,7 +665,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <div class="safety-body">
         <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Class 4 laser product</span>
         <h2 id="safety-h">Read the safety guidelines before your first show</h2>
-        <p>Ultra MK2 and Pro are <strong>Class 4 lasers</strong> for professional use. Keep every beam at least <strong>3 m (10 ft) above</strong> any floor where people may be present, and set the beam block and connect the E‑Stop or safety jumper before you start.</p>
+        <p>Ultra MK2 and Pro are <strong>Class 4 lasers</strong> for professional use. Keep every beam at least <strong>3 m (10 ft) above</strong> any floor where people may be present, and set the beam block and connect the safety jumper (US units: the E‑Stop) before you start.</p>
         <p>In the United States an <strong>FDA variance</strong> is required. Many places also require a licence, registration or operation under a trained Laser Safety Officer.</p>
         <div class="btn-row">
           <a class="btn solid" href="docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a>
@@ -707,7 +703,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   <div class="search-bar">
     <svg class="icon"><use href="#i-search"/></svg>
     <input id="q" type="search" placeholder="Search the manual and videos" autocomplete="off" spellcheck="false" maxlength="200" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list">
-    <button class="close-btn" type="button" data-close aria-label="Close search"><span class="kbd">Esc</span><span class="cancel">Cancel</span></button>
+    <button class="close-btn" type="button" data-close title="Close search"><span class="kbd">Esc</span><span class="cancel">Cancel</span></button>
   </div>
   <div class="results" id="results" role="listbox" aria-label="Results"></div>
   <div class="search-foot" aria-hidden="true">
@@ -743,8 +739,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 
   var menu = document.querySelector(".menu");
   menu.addEventListener("click", function (e) { if (e.target.closest("a")) menu.open = false; });
-  document.addEventListener("click", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  // pointerdown, not click: iOS sends no click for a tap on plain content.
+  document.addEventListener("pointerdown", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  menu.addEventListener("focusout", function (e) { if (e.relatedTarget && !menu.contains(e.relatedTarget)) menu.open = false; });
 
   // One search box at a time: the header one appears once the hero one scrolls away.
   var heroSearch = document.querySelector(".hero-search");
@@ -790,11 +788,11 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 
   function norm(s) { return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u2010-\u2015]/g, "-"); }
   function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
-  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function esc(s) { return s.replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
   var STOP = {};
   // "lasercube", "laser" and "cube" are in almost every section, so they only add noise.
-  "a an and are can cube do does for from how i in is it its laser lasercube me my of on or the to what when where which why with you your".split(" ").forEach(function (w) { STOP[w] = 1; });
+  "a an and are can cannot cant cube do does doesnt dont for from how i in is isnt it its laser lasercube me my not of on or the to what when where which why with wont you your".split(" ").forEach(function (w) { STOP[w] = 1; });
   // Query words: unique, without filler words, at most 8, so questions and long pastes stay fast.
   function terms(q) {
     var all = norm(q.slice(0, 200)).split(/[^a-z0-9]+/).filter(Boolean), seen = {}, out = [];
@@ -810,10 +808,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     var ctrl = "AbortController" in window ? new AbortController() : null;
     var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 15000);
     loading = fetch(MANUAL, ctrl ? { signal: ctrl.signal } : {}).then(function (r) {
-      clearTimeout(timer);
       if (!r.ok) throw new Error(r.status);
       return r.text();
     }).then(function (html) {
+      clearTimeout(timer);
       var doc = new DOMParser().parseFromString(html, "text/html");
       var body = doc.querySelector(".docs-content") || doc.body;
       body.querySelectorAll("nav, .page-header, .docs-toc, script, style, noscript, .toc-mobile-sticky").forEach(function (n) { n.remove(); });
@@ -846,7 +844,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         e.x = norm(e.text); e.xc = compact(e.x);
       });
       index = out;
-    }).catch(function () { failed = true; loading = null; });
+    }).catch(function () { clearTimeout(timer); failed = true; loading = null; });
     return loading;
   }
 
@@ -879,10 +877,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       score += matched * 20 + (5 - e.level) * 4 - e.title.length / 30;
       (matched === ts.length ? every : some).push({ e: e, score: score });
     });
-    // Sections with every word first; if there are none, the best partial matches.
-    var res = every.length ? every : some;
-    res.sort(function (a, b) { return b.score - a.score; });
-    return res.slice(0, 10).map(function (r) { return r.e; });
+    // Sections with every word first, then the best partial matches.
+    var byScore = function (a, b) { return b.score - a.score; };
+    return every.sort(byScore).concat(some.sort(byScore)).slice(0, 10).map(function (r) { return r.e; });
   }
 
   function searchVideos(ts) {
@@ -967,14 +964,24 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     }
   }
 
+  var opener = null;
   function open() {
     if (dlg.open) return;
     failed = false; // retry a manual fetch that failed earlier
+    menu.open = false;
+    opener = document.activeElement;
     dlg.showModal();
     input.select();
-    load();
+    var p = load();
     render();
+    // The Popular rows get their breadcrumbs once the manual has loaded.
+    if (p) p.then(function () { if (dlg.open && index && !input.value.trim()) render(); });
   }
+  // Give focus back to whatever opened search (WebKit can leave it on the hidden input).
+  dlg.addEventListener("close", function () {
+    var a = document.activeElement;
+    if (opener && opener.isConnected && (!a || a === document.body || dlg.contains(a))) opener.focus();
+  });
 
   document.querySelectorAll("[data-open-search]").forEach(function (b) { b.addEventListener("click", open); });
   dlg.querySelector("[data-close]").addEventListener("click", function () { dlg.close(); });
@@ -988,9 +995,13 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0), true); }
     else if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229 && items[active]) { e.preventDefault(); items[active].click(); }
     // A search field's own Escape only clears the text; close the dialog in one press.
-    else if (e.key === "Escape") { e.preventDefault(); dlg.close(); }
+    else if (e.key === "Escape" && !e.isComposing) { e.preventDefault(); dlg.close(); }
   });
+  // WebKit fires mousemove when the list scrolls under a still pointer; only real moves select a row.
+  var lastX = -1, lastY = -1;
   box.addEventListener("mousemove", function (e) {
+    if (e.clientX === lastX && e.clientY === lastY) return;
+    lastX = e.clientX; lastY = e.clientY;
     var r = e.target.closest(".result");
     if (r) { var i = items.indexOf(r); if (i !== active) setActive(i); }
   });
