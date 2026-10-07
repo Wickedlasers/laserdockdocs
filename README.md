@@ -49,7 +49,7 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
 `images/home/`, the Inter font is self-hosted in `fonts/inter/` (SIL OFL).
 
 - **It depends on the manual's heading ids.** About 60 links (the port hotspots on the hero photo,
-  the chapter index, the popular searches) point to
+  the chapter index, the getting-started videos' "Manual:" links, the popular searches) point to
   `docs/guides/ultra-mk2-pro-manual/#<heading-id>`. Renaming a heading in the manual breaks them
   silently, so run this check before pushing any change to either page:
 
