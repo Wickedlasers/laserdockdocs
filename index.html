@@ -190,6 +190,8 @@ html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!import
 .path .desc{margin:8px 0 0;max-width:34em;font-size:15px;line-height:1.55;color:var(--muted)}
 .path .more{margin-top:auto;padding-top:18px;align-self:flex-start}
 
+.label.sub{margin:0 0 16px}
+.course + .label.sub{margin-top:56px}
 .vids{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px}
 
 .downloads{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
@@ -475,7 +477,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li class="path">
           <p class="label">Watch</p>
           <h3>Tutorials</h3>
-          <p class="desc">Short videos, one task each: the E‑Stop, safety zones, playlists, DMX, MIDI, firmware updates and multi-cube shows.</p>
+          <p class="desc">Short videos: a four-part getting-started series, then one video per task, from the E‑Stop and safety zones to DMX, MIDI and firmware updates.</p>
           <a class="more" href="#videos">See the tutorials <svg class="icon"><use href="#i-arrow"/></svg></a>
         </li>
       </ul>
@@ -589,10 +591,38 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <div class="head">
         <div>
           <h2 id="videos-h">Tutorials</h2>
-          <p>Short videos that show one task at a time.</p>
+          <p>New to your cube? Watch the four getting-started videos in order. Then pick a topic.</p>
         </div>
         <a class="more" href="https://www.laseros.com/tutorials/">All tutorials on laseros.com <svg class="icon"><use href="#i-ext"/></svg></a>
       </div>
+      <p class="label sub">Getting started, in order</p>
+      <ol class="course" aria-label="Getting started, in order">
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener"><img src="images/home/videos/xgV1FQHKFsQ.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 1</span>
+          <h3><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Unboxing<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></p>
+        </li>
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener"><img src="images/home/videos/UYQt4zhQks8.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 2</span>
+          <h3><a href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener">First start<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop, jumper and key</a></p>
+        </li>
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener"><img src="images/home/videos/Yr7jZidnk9I.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 3</span>
+          <h3><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">CubeOS software overview<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS LCD settings</a></p>
+        </li>
+        <li>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener"><img src="images/home/videos/hFmpDOsEG_k.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <span class="label">Part 4</span>
+          <h3><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Connection modes<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
+          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Network settings</a></p>
+        </li>
+      </ol>
+      <p class="label sub">By topic</p>
       <div class="vids">
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener"><img src="images/home/videos/KiuFqWiXBPA.webp" alt="" loading="lazy" width="640" height="360"></a>
