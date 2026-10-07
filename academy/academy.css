@@ -41,6 +41,7 @@ h1,h2,h3{text-wrap:balance}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#fff;color:#000;padding:8px 14px;border-radius:6px}
 .skip:focus{left:16px}
+#main:focus{outline:none} /* focused by "Skip to content"; the content itself needs no ring */
 .sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .container{width:100%;max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
 .icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
@@ -288,7 +289,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .card{grid-template-columns:1fr}
   .card-img{min-height:240px}
 }
-@media (max-width:800px){
+@media (max-width:1100px){
   .two.parts{grid-template-columns:1fr}
   .two.parts figure{max-width:520px}
 }

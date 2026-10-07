@@ -50,6 +50,14 @@
     menu.addEventListener("focusout", function (e) { if (e.relatedTarget && !menu.contains(e.relatedTarget)) menu.open = false; });
   }
 
+  // "Skip to content": focus the content without a hash change, so the address keeps the open lesson
+  var skip = document.querySelector(".skip"), mainEl = document.getElementById("main");
+  if (skip && mainEl) skip.addEventListener("click", function (e) {
+    e.preventDefault();
+    mainEl.setAttribute("tabindex", "-1");
+    mainEl.focus();
+  });
+
   // Videos: a local thumbnail until the visitor presses play, then YouTube's privacy-enhanced player.
   $$(".video[data-yt]").forEach(function (v) {
     var b = $("button", v);
@@ -447,11 +455,16 @@
   function certKey(name) { return name + "|" + state.passed.date + "|" + state.passed.version; }
 
   // Draw once Inter (including the subset the name needs) has loaded, or after 2.5 s with whatever font there is.
+  // If the font is late, draw with the fallback first and again once it has loaded.
   function drawWhenReady(name) {
-    var ready = document.fonts && document.fonts.load
+    var loaded = false;
+    var ready = (document.fonts && document.fonts.load
       ? Promise.all([document.fonts.load("600 58px Inter", name), document.fonts.load("400 17px Inter"), document.fonts.load("600 28px Inter")]).catch(function () {})
-      : Promise.resolve();
-    return Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () { drawCert(name); });
+      : Promise.resolve()).then(function () { loaded = true; });
+    return Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () {
+      drawCert(name);
+      if (!loaded) { drawn = ""; ready.then(function () { if (state.name === name) drawCert(name); }); }
+    });
   }
 
   function spaced(c, text, x, y, spacing, align) {
@@ -593,7 +606,7 @@
     drawn = certKey(name);
     var img = $("#cert-img");
     if (img && canvas.toBlob) canvas.toBlob(function (b) {
-      if (!b) return;
+      if (!b) { img.src = canvas.toDataURL("image/png"); return; }
       if (shownUrl) URL.revokeObjectURL(shownUrl);
       shownUrl = URL.createObjectURL(b);
       img.src = shownUrl;
