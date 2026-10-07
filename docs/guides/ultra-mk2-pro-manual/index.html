@@ -196,10 +196,10 @@ figcaption{margin:0 0 10px;font:600 14px/1.4 var(--font);color:var(--muted)}
 .docs-content thead th{padding-top:0;font:600 11px/1.4 var(--font);letter-spacing:.08em;text-transform:uppercase;color:var(--subtle);border-bottom-color:var(--line-2)}
 .docs-content td p{margin:0 0 4px}
 .docs-content td p:last-child{margin:0}
-table.media td{vertical-align:middle}
+table.media td,table.media th{vertical-align:middle}
 table.media td:first-child{width:56px}
 table.media td:first-child img{width:40px;border-radius:6px}
-table.media td:nth-child(2){min-width:8em;font-weight:600}
+table.media th{min-width:8em;font-weight:600}
 table.media td:last-child{color:var(--muted)}
 table.layout,table.layout tbody{display:block}
 table.layout tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 32px}
@@ -290,7 +290,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .toc-where b{font-weight:500;color:var(--text)}
   .start-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media (max-width:1000px){
+@media (max-width:1060px){
   .nav{display:none}
   .menu{display:block}
 }
@@ -461,7 +461,7 @@ hesitate</p><p>to contact LaserDock Ltd. directly.</p></div>
 <ol><li><strong>Laser Aperture:</strong> Laser light is emitted from this opening.</li><li><strong>Beam Block:</strong> Prevents laser emission and also restricts the laser
 scan from going into an audience. Can be locked using the screws
 either side.</li><li><strong>Mounting Bracket:</strong> For secure installation. Tilt may be locked
-using Screws 3a</li><li><strong>WiFi Antenna Connector:</strong> to facilitate wireless connection.</li><li><strong>Status LED:</strong> For showing Connection Mode.</li><li><strong>RJ-45 Ethernet Port:</strong> For cable connection to network.</li><li><strong>Safety Key Control:</strong> Prevents accidental operation. Resetting of
+using Screws 3a</li><li><strong>WiFi antenna Connector:</strong> to facilitate wireless connection.</li><li><strong>Status LED:</strong> For showing Connection Mode.</li><li><strong>RJ-45 Ethernet Port:</strong> For cable connection to network.</li><li><strong>Safety Key Control:</strong> Prevents accidental operation. Resetting of
 the key control will be required if there is a power loss or remote
 interlock cycling.</li><li><strong>RJ45 Remote Interlock Connectors:</strong> In/Through. Provides a safety
 shut-off for terminating the laser emission via a jumper connection.
@@ -473,7 +473,7 @@ work with only the safety jumper installed.&nbsp;*</p></blockquote>
 <ol start="9"><li><strong>Emission LEDs:</strong> Indicate when the Laser is emitting or ready to
 emit.</li><li><strong>Power Switch:</strong> Toggles the power ON or OFF.</li><li><strong>Power LED:</strong> Indicates when the Power Switch is ON.</li><li><strong>Power (19V DC) Input:</strong> Power connection/charging port via wall
 outlet.</li><li><strong>Charging Status LED indicator:</strong> Red = Charging, Green = Fully
-Charged</li><li><strong>Rotary / Push Menu Knob:</strong> Navigate CubeOS and adjust settings.</li><li><strong>LCD Display for CubeOS</strong>.</li><li><strong>USB Port:</strong> Connect a USB MIDI device (APC40 MK2 / APC Mini MK2)</li><li><strong>MicroSD Card slot:</strong> Stores content for MIDI, ArtNet, DMX and
+Charged</li><li><strong>Rotary / Push Menu Knob:</strong> Navigate CubeOS and adjust settings.</li><li><strong>LCD Display for CubeOS</strong>.</li><li><strong>USB Port:</strong> Connect a USB MIDI device (APC40 MK2 / APC mini MK2)</li><li><strong>MicroSD Card slot:</strong> Stores content for MIDI, ArtNet, DMX and
 Stand Alone mode.</li><li><strong>Internal Microphone:</strong> Audio input source for built-in
 visualisers.</li><li><strong>3.5mm Audio Line Input:</strong> Audio input source for built-in
 visualisers</li><li><strong>3.5mm Audio Line Output:</strong> Audio Laser show output to powered
@@ -673,7 +673,7 @@ has a broken manufacturer’s seal. Contact us to return the unit to the
 factory for service and/or maintenance immediately.</p>
 <p>12. Should you have difficulty operating the laser properly and
 troubleshooting does not work, go to
-<a href="https://www.laseros.com/" rel="external">www.LaserOS.com</a> for support and RMA
+<a href="https://www.laseros.com/" rel="external">www.laseros.com</a> for support and RMA
 assistance if necessary. Do not attempt to service, modify or fix the
 laser yourself. You will be provided with instructions on how to send
 the laser projector back for repair.</p>
@@ -723,7 +723,7 @@ how to safely and effectively use our products!</p>
 <p><a href="https://www.en-standard.eu/iec-tr-60825-3-2022-safety-of-laser-products-part-3-guidance-for-laser-displays-and-shows/" rel="external"><strong>IEC/TR 60825-3:2022 Laser Show
 Guidance</strong></a></p>
 <p><a href="https://www.en-standard.eu/iec-tr-60825-3-2022-safety-of-laser-products-part-3-guidance-for-laser-displays-and-shows/" rel="external"><em>https://www.en-standard.eu/iec-tr-60825-3-2022-safety-of-laser-products-part-3-guidance-for-laser-displays-and-shows/</em></a></p>
-<h2 id="abstract"><span id="anchor-9"></span>Abstract<a href="#abstract" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<h2 id="abstract"><span id="anchor-9"></span>IEC TR 60825-3 Abstract<a href="#abstract" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>IEC/TR 60825-3:2022</p>
 <p>Safety of laser products - Part 3: Guidance for laser displays and shows</p>
 <p>IEC TR 60825-3:2022 gives guidance on the planning and design, set-up
@@ -759,11 +759,11 @@ This is required for FDA compliance and the laser will not work without it.</em>
 <h1 id="e-stop-setup-guide"><span id="anchor-14"></span>E-Stop Setup Guide<a href="#e-stop-setup-guide" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>This part of the guide only applies to LaserCubes sold in the US.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000001000001B1000002B076B4CB4A-433.webp" width="433" height="688" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/1000000100000178000002B3252F4301-376.webp" width="376" height="691" alt="" loading="lazy" decoding="async"></div></div>
-<p>1) Connect the e-stop pendant to the LaserCube.</p>
+<p>1) Connect the E-Stop pendant to the LaserCube.</p>
 <p>2) On the laser, turn key to the “ON” position.</p>
-<p>3) On the e-stop pendant, if the red STOP switch is pushed in, rotate
+<p>3) On the E-Stop pendant, if the red STOP switch is pushed in, rotate
 clockwise until it can be raised.</p>
-<p>4) On the e-stop pendant, turn the key clockwise to the “ON” position.</p>
+<p>4) On the E-Stop pendant, turn the key clockwise to the “ON” position.</p>
 <p>5) With the red STOP switch raised plus keys on both the laser and
 pendant set to the “ON” position the Interlock / Emission LEDs will
 flash slowly, once every 3 seconds.</p>
@@ -804,14 +804,14 @@ samples received over the network, or internally generated projections,
 NOT data from the analog ILDA port on the back of the device.</p>
 <h1 id="control-modes"><span id="anchor-21"></span>Control Modes<a href="#control-modes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The Ultra MK2 / Pro currently has 8 selectable control modes:</p>
-<ul><li>LaserOS control mode</li><li>ArtNet control mode</li><li>DMX control mode</li><li>Visualizer control mode</li><li>Playlist control mode</li><li>Laser show control mode</li><li>IDN (ILDA digital network protocol, streaming up to 35K pps)</li><li>Ether-dream (DAC network protocol)</li></ul>
+<ul><li>LaserOS control mode</li><li>ArtNet control mode</li><li>DMX control mode</li><li>Visualizer control mode</li><li>Playlist control mode</li><li>Laser show control mode</li><li>IDN (ILDA digital network protocol, streaming up to 35K pps)</li><li>Ether Dream (DAC network protocol)</li></ul>
 <img src="Pictures/web/10000000000007D80000050063744350-1286.webp" width="643" height="410" alt="" loading="lazy" decoding="async">
 <h2 id="laseros-control-mode"><span id="anchor-22"></span>LaserOS Control Mode<a href="#laseros-control-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>This mode is used when you want our LaserOS application to be in
 complete control of the LaserCube, or you wish to use any of the
 supported third party applications like Liberation, LaserShowGen,
 Madmapper, Touch Designer etc.</p>
-<p>In this mode all projections are streamed over LAN/WiFI directly to the
+<p>In this mode all projections are streamed over LAN/WiFi directly to the
 LaserCube, so the Settings→Projection menu items will not be available
 since these are now adjusted via the LaserOS settings menu, or other
 third party software projection settings.</p>
@@ -865,7 +865,7 @@ only. Adding content must be done via PC/Mac version.</p>
 Windows</a><em>.</em></li><li>Double click on the downloaded .exe file to install LaserOS.&nbsp;&nbsp;</li><li>Occasionally, Windows will display the following warning.&nbsp; Click on
 “more info” to enable the “run anyway option”.&nbsp; Click on “run anyway”.</li></ul>
 <img src="Pictures/web/10000001000004D8000002367B86816B-1240.webp" width="643" height="293" alt="" loading="lazy" decoding="async">
-<h4 id="macos-platform"><span id="anchor-25"></span>MacOS Platform<a href="#macos-platform" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
+<h4 id="macos-platform"><span id="anchor-25"></span>macOS Platform<a href="#macos-platform" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <ul><li>Follow this link to&nbsp;
 <a href="https://www.laseros.com/downloads/LaserOS_0.18.1.pkg" rel="external">download and install for Mac
 OS</a><em>.</em></li><li>Double-click on the .pkg file and run the installer app.</li></ul>
@@ -1239,10 +1239,10 @@ GitHub Here:</em>
 Contents</a>
 (https://github.com/Wickedlasers/mk2SDContent)</p>
 <h3 id="multi-projector-laser-shows"><span id="anchor-44"></span>Multi-projector Laser Shows<a href="#multi-projector-laser-shows" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>Using Cube-Link, the playback of multi-projector laser shows can be
+<p>Using Cube Link, the playback of multi-projector laser shows can be
 synchronized.</p>
 <p><em>Note: Ensure WiFi antennas are connected on all units before using
-Cube-Link.</em></p>
+Cube Link.</em></p>
 <h4 id="example-alive-2ch-laser-show"><span id="anchor-45"></span>Example: Alive (2CH) Laser Show<a href="#example-alive-2ch-laser-show" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>Choose one LaserCube to be the Master. This will be the one which
 commands</p>
@@ -1291,105 +1291,105 @@ Viz Options menu. Auto play at power-on can also be adjusted.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140F448796E_hu_733dacbc21bf3f89-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140C817037D_hu_fe27ee537fc3347b-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>Below is the current list of visualizers present in the v2.0 Ultra MK2 / Pro firmware in visualizer ctrl mode:</p>
 <p>Spectrum, Waveform &amp; Audio Meters (16)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/100000000000007800000078FC9B38E8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spectrum 1</td><td>FFT spectrum analyser - a row of vertical frequency bars rising from the baseline, coloured across the spectrum.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078BEE9FFB2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spectrum 2</td><td>Spectrum-analyser variant drawn in a second bar style.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F22564EB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spectrum 3</td><td>Spectrum analyser mirrored about the centre line, bars growing up and down from the middle.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000784F5418FB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spectrum W1</td><td>Terrain-style spectrum wave (port of ldTerra) - the FFT drawn as a rolling illuminated waveform landscape.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078EE4516DE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spectrum W2</td><td>A second spectrum-wave style with a different rolling FFT waveform.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000780E614A5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Voice</td><td>Voice / FFT-reactive visualizer that shapes the beam to the vocal content of the audio.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078DE6B4469-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Vocoder</td><td>Vocoder-style channels - the spectrum split into bands that pump with the music.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B0C7A570-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Waveform</td><td>A live oscilloscope trace of the raw audio waveform drawn straight across the frame.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000782BAB296C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>FFT Beams</td><td>One radial beam per FFT bin fanning out from centre; length follows magnitude, hue runs bass=red to treble=violet.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078393D98B0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Audio Horizon</td><td>A mountain-skyline silhouette from 16 FFT bins, mirrored on a centre line; it scrolls and its peaks ride the audio.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078485D09C3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Audio River</td><td>A horizontal waveform from three bass/mid/treble sines with a dim reflection below, scrolling like a river of light.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078CEB9FD54-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Audio Curtain</td><td>A column of hanging vertical strands that sway to their own FFT bin, with a travelling wave rippling through them.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078CAF7418B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Audio Marquee</td><td>Vertical FFT bars scroll in from the right and wrap around the edges like a marquee; height, speed and hue track audio.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078191C96CF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Chord Choir</td><td>Seven staggered horizontal bars, each spanning with its own spectral band and drifting side to side; hues reshuffle on the beat.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785EC89C97-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Mesh Wave</td><td>A woven cross-hatch of six warp and six weft lines; the raw waveform pushes each vertex radially so the sound ripples through the cloth.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007876296A15-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Pulse Matrix</td><td>A digital square-wave grid of rows toggling high/low with per-row FFT coupling; rows scroll together then split by phase on the beat.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078FC9B38E8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 1</th><td>FFT spectrum analyser - a row of vertical frequency bars rising from the baseline, coloured across the spectrum.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078BEE9FFB2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 2</th><td>Spectrum-analyser variant drawn in a second bar style.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F22564EB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 3</th><td>Spectrum analyser mirrored about the centre line, bars growing up and down from the middle.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000784F5418FB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum W1</th><td>Terrain-style spectrum wave (port of ldTerra) - the FFT drawn as a rolling illuminated waveform landscape.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078EE4516DE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum W2</th><td>A second spectrum-wave style with a different rolling FFT waveform.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000780E614A5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Voice</th><td>Voice / FFT-reactive visualizer that shapes the beam to the vocal content of the audio.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078DE6B4469-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Vocoder</th><td>Vocoder-style channels - the spectrum split into bands that pump with the music.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B0C7A570-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Waveform</th><td>A live oscilloscope trace of the raw audio waveform drawn straight across the frame.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000782BAB296C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">FFT Beams</th><td>One radial beam per FFT bin fanning out from centre; length follows magnitude, hue runs bass=red to treble=violet.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078393D98B0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio Horizon</th><td>A mountain-skyline silhouette from 16 FFT bins, mirrored on a centre line; it scrolls and its peaks ride the audio.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078485D09C3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio River</th><td>A horizontal waveform from three bass/mid/treble sines with a dim reflection below, scrolling like a river of light.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078CEB9FD54-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio Curtain</th><td>A column of hanging vertical strands that sway to their own FFT bin, with a travelling wave rippling through them.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078CAF7418B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio Marquee</th><td>Vertical FFT bars scroll in from the right and wrap around the edges like a marquee; height, speed and hue track audio.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078191C96CF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Chord Choir</th><td>Seven staggered horizontal bars, each spanning with its own spectral band and drifting side to side; hues reshuffle on the beat.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785EC89C97-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mesh Wave</th><td>A woven cross-hatch of six warp and six weft lines; the raw waveform pushes each vertex radially so the sound ripples through the cloth.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007876296A15-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pulse Matrix</th><td>A digital square-wave grid of rows toggling high/low with per-row FFT coupling; rows scroll together then split by phase on the beat.</td></tr>
 </tbody></table></div>
 <p>Particles, Swarms &amp; Trails (22)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/1000000000000078000000786C47F67C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Flying Stars</td><td>Stars flying through the frame to the beat (port of ldFlyingStars).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078D32AFDD0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Snake</td><td>A beam snake that slithers around the frame (port of ldBeamSnake).</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000782A7B5C81-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Stars</td><td>Classic hyperspace warp - white stars streak outward from a vanishing point; bass drives the warp speed.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007831FF5969-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Fireflies</td><td>A grid of bouncing dot particles, each trapped in its own cell, whose speed and movement style shift with the FFT every few bars.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078E1F56B2C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Constellation</td><td>Ten stars faintly linked in a cycle, each on its own audio-driven path bouncing off the bounds so the shape keeps morphing.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000787A63BE9A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Radial Bursts</td><td>Expanding ring bursts spawn at random angles on audio peaks, over a slow inner heartbeat ring.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788338AECC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Meteor Swirl</td><td>Falling meteors on curved, wind-sheared trajectories, continuously spawned with audio-driven density and bend.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000783FEA02C4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Fireworks</td><td>Radial firework bursts fired on each audio peak (BPM-synced at silence); particles drift out under gravity and fade.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000780222032D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Audio Fountain</td><td>Particles erupt from the bottom-centre, arc up and fall under gravity with bright trails - a fountain of light driven by sound.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078703D0239-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Polar Snake</td><td>A ring-buffer trail wandering toward random targets that re-roll on each bass peak; hue rotates along the trail.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078FCA8C3AE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Streaks</td><td>Particle streaks fly outward from centre along log-spiral arms; the scene rotates and flips direction on each bass peak.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A7C3075D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Radial Dots</td><td>Eight-fold radial symmetry of dwell-dots on curved outward paths; bins drive activity, bass speed, treble hue.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A3B9BC6F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Emberlight</td><td>An ember column rising from the bottom, each particle trailing a warm gradient tail along a swaying sinusoidal path.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785A05FB41-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Facet Storm</td><td>Eight faceted hexagonal jewels orbit the centre, each spinning and flipping direction on bass peaks - a polyrhythmic storm.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B158734F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Flare Garden</td><td>Five flares rooted on a ground line, each a swept stem capped by a bloom; stems grow on bass, sway on mid, blooms pulse per bin.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078C209629C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Radial Cascade</td><td>Twelve spokes each carrying a stack of tick marks travelling outward and wrapping back, each pulsing at its FFT bin’s rate.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007891D125A2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Lanterns</td><td>A swarm of hexagonal lantern silhouettes wandering on Lissajous orbits, each growing on hits of its own FFT bin.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AA1C3615-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spark Rings</td><td>Orbiting emitters on concentric circular tracks, each driven by its own band, spraying tight rings of spark dots.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781C54D7D0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Fleas</td><td>Fleas settle inside a circular bowl; a beat hit makes them jump up and swirl again.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F00035FD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Flow Field</td><td>Particles advected by a sin/cos vector field, leaving hue-aged curved trails.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AB64A3A5-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Gale Ribbons</td><td>Wind-streak particles flowing along a turbulent vector field; raw audio gusts them into long braided ribbon tails.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000784DD7B120-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Starfield Drift</td><td>A parallax star swarm streaming outward toward the viewer, bass warping the drift forward and easing back in quiet.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/1000000000000078000000786C47F67C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Flying Stars</th><td>Stars flying through the frame to the beat (port of ldFlyingStars).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078D32AFDD0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Snake</th><td>A beam snake that slithers around the frame (port of ldBeamSnake).</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000782A7B5C81-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Stars</th><td>Classic hyperspace warp - white stars streak outward from a vanishing point; bass drives the warp speed.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007831FF5969-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Fireflies</th><td>A grid of bouncing dot particles, each trapped in its own cell, whose speed and movement style shift with the FFT every few bars.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078E1F56B2C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Constellation</th><td>Ten stars faintly linked in a cycle, each on its own audio-driven path bouncing off the bounds so the shape keeps morphing.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000787A63BE9A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Radial Bursts</th><td>Expanding ring bursts spawn at random angles on audio peaks, over a slow inner heartbeat ring.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788338AECC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Meteor Swirl</th><td>Falling meteors on curved, wind-sheared trajectories, continuously spawned with audio-driven density and bend.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000783FEA02C4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Fireworks</th><td>Radial firework bursts fired on each audio peak (BPM-synced at silence); particles drift out under gravity and fade.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000780222032D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio Fountain</th><td>Particles erupt from the bottom-centre, arc up and fall under gravity with bright trails - a fountain of light driven by sound.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078703D0239-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Polar Snake</th><td>A ring-buffer trail wandering toward random targets that re-roll on each bass peak; hue rotates along the trail.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078FCA8C3AE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Streaks</th><td>Particle streaks fly outward from centre along log-spiral arms; the scene rotates and flips direction on each bass peak.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A7C3075D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Radial Dots</th><td>Eight-fold radial symmetry of dwell-dots on curved outward paths; bins drive activity, bass speed, treble hue.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A3B9BC6F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Emberlight</th><td>An ember column rising from the bottom, each particle trailing a warm gradient tail along a swaying sinusoidal path.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785A05FB41-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Facet Storm</th><td>Eight faceted hexagonal jewels orbit the centre, each spinning and flipping direction on bass peaks - a polyrhythmic storm.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B158734F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Flare Garden</th><td>Five flares rooted on a ground line, each a swept stem capped by a bloom; stems grow on bass, sway on mid, blooms pulse per bin.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078C209629C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Radial Cascade</th><td>Twelve spokes each carrying a stack of tick marks travelling outward and wrapping back, each pulsing at its FFT bin’s rate.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007891D125A2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lanterns</th><td>A swarm of hexagonal lantern silhouettes wandering on Lissajous orbits, each growing on hits of its own FFT bin.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AA1C3615-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spark Rings</th><td>Orbiting emitters on concentric circular tracks, each driven by its own band, spraying tight rings of spark dots.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781C54D7D0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Fleas</th><td>Fleas settle inside a circular bowl; a beat hit makes them jump up and swirl again.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F00035FD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Flow Field</th><td>Particles advected by a sin/cos vector field, leaving hue-aged curved trails.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AB64A3A5-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Gale Ribbons</th><td>Wind-streak particles flowing along a turbulent vector field; raw audio gusts them into long braided ribbon tails.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000784DD7B120-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Starfield Drift</th><td>A parallax star swarm streaming outward toward the viewer, bass warping the drift forward and easing back in quiet.</td></tr>
 </tbody></table></div>
 <p>Geometric &amp; Parametric Patterns (35)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/100000000000007800000078C4F438F3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Swirly Spheres</td><td>Nested swirling spheres of light (port of ldSwirlySphere).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078933D4FDC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Synesthesia</td><td>A flowing synesthetic colour-and-form field reacting to the music (port of ldSynesthesia3).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078CA5A260B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Cubes</td><td>A spinning 3D cube (port of ld3dCube).</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007853077D07-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Sunshine</td><td>A radiant sun with pulsing rays reacting to the music (port of ldSunshine).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078DEF62887-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Wave Circles</td><td>Concentric circles rippling with the audio (port of ldWaveCircles).</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007870AF6D2A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Lotus</td><td>An unfolding lotus-flower geometry animated to the music (port of ldLotus).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078BD67ED8D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Circle Arc</td><td>A rotating 3D circle-arc figure (port of ld3dCircleArc).</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781DCE41EF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Atomic</td><td>Orbiting electron rings around a nucleus, spinning to the beat (port of ldAtomic).</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007860BF21FB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Plasma Ball</td><td>A plasma-ball orb with arcing tendrils reacting to sound (port of ldPlasmaBall).</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000789DBC220A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Butterfly</td><td>A butterfly-curve figure fluttering to the audio.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007812CBAD33-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Halo</td><td>A glowing halo ring that breathes with the audio.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AD618926-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Turbine</td><td>Spinning turbine blades radiating from centre, rotating to the beat.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078CAD0B8BB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Lissajous</td><td>Animated Lissajous figures morphing through figure-eight, pretzel and knot shapes; bass accelerates the phase across five ratios.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078C34BE262-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Orbit Collider</td><td>Eight bright points orbiting an invisible circle with lossless elastic collisions; bass bins drive the circle radius.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781B744169-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Tunnel</td><td>Concentric hexagonal rings flying toward the viewer for a warp-tunnel effect; each ring’s colour follows its FFT band, bass sets speed.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007878ADF237-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Arc Carousel</td><td>Three concentric rings of arc segments spinning in alternating directions; bass expands radii, treble cycles hue.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785D15ACFB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Orbital Chain</td><td>Eight dots on a closed chain morphing circle -&gt; ellipse -&gt; figure-8 with audio, traced by a thin connecting line.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007834D0F7F8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Phasor Grid</td><td>A 3x3 grid of little rotating radial phasors, phase-offset by cell so they read as a propagating wave when energetic.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007872AA5B4C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Radial Wedges</td><td>Pie-slice wedges fanning from centre, their widths and tip radii breathing unevenly with the audio bands.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007857919CBF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Ripple Grid</td><td>A coarse grid of horizontal curves poked by a moving radial ripple from an orbiting source; amplitude pulses with bass.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007894F31D81-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Pulse Chevron</td><td>A vertical stack of chevrons sliding upward and wrapping; width and tilt breathe with the FFT bands.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B940921C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Kaleido Dots</td><td>A 3-fold kaleidoscope of always-on drifting dots; bass swells radii, mid widens the sway, treble cycles hue.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B0C855AD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Kaleido Lines</td><td>A 10-fold kaleidoscope traced as one continuous mirrored polyline through five reflection axes.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788A1E3A09-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Bell Pulse</td><td>Four bell-shaped silhouettes on the cardinal axes, their width breathing with bass and hue pushed by treble.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078EBADEEA8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Phase Swirl</td><td>A 3:2 Lissajous with a continuously drifting, bass-driven phase, walking the figure through every shape in the family.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785D1F4E27-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Red Hot</td><td>Eight rectangular arms forming an asterisk; each FFT band shortens an opposing arm pair, staying symmetric across centre.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781773D9A1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Damped Swirl</td><td>A harmonograph - one long damped Lissajous curve whose parameters drift so the figure morphs without ever resetting.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AD307410-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Fractal</td><td>Recursive 5-branch fractal subdivision on triangle / square / line bases that morph on audio peaks, with a depth-based hue gradient (port of ldFractal4).</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007872EDF9A3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Sine Grid</td><td>Phase-offset strands weaving through each other with a corkscrew twist; bass drives scroll and rotation, peaks flip direction.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078C0FAB105-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Sonar Ping</td><td>Concentric expanding wavefronts drawn as isolated radial tick-marks pinging outward, like a sonar sweep.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000787E3CC1EC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Quasar Braid</td><td>Six strands twisted into one left-to-right braid; each strand’s FFT bin drives its sway, bass tightens the corkscrew twist.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007812A3877F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spiral Fill</td><td>A space-filling Archimedean spiral with four colour modes (helix, bands, tri-helix, vertical bands) cycling every bar.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000780835EBC6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Hypocycloid R</td><td>A single hypocycloid rosette whose inner-radius ratio sweeps each bar to morph cusp counts; treble runs hue, bass sharpens cusps.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AC3A0208-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Pie Beam</td><td>Two rotating pie cones of stratified rays sweeping the frame; bass opens the cone angle, modes cycle each bar.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781CC2637D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Cissoid Flick</td><td>A mirrored pair of parametric cissoid cusps rotating with tempo; bass peaks flick the cusps to a new shape then settle.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078C4F438F3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Swirly Spheres</th><td>Nested swirling spheres of light (port of ldSwirlySphere).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078933D4FDC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Synesthesia</th><td>A flowing synesthetic colour-and-form field reacting to the music (port of ldSynesthesia3).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078CA5A260B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cubes</th><td>A spinning 3D cube (port of ld3dCube).</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007853077D07-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sunshine</th><td>A radiant sun with pulsing rays reacting to the music (port of ldSunshine).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078DEF62887-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Wave Circles</th><td>Concentric circles rippling with the audio (port of ldWaveCircles).</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007870AF6D2A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lotus</th><td>An unfolding lotus-flower geometry animated to the music (port of ldLotus).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078BD67ED8D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Circle Arc</th><td>A rotating 3D circle-arc figure (port of ld3dCircleArc).</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781DCE41EF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Atomic</th><td>Orbiting electron rings around a nucleus, spinning to the beat (port of ldAtomic).</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007860BF21FB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Plasma Ball</th><td>A plasma-ball orb with arcing tendrils reacting to sound (port of ldPlasmaBall).</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000789DBC220A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Butterfly</th><td>A butterfly-curve figure fluttering to the audio.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007812CBAD33-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Halo</th><td>A glowing halo ring that breathes with the audio.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AD618926-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Turbine</th><td>Spinning turbine blades radiating from centre, rotating to the beat.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078CAD0B8BB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lissajous</th><td>Animated Lissajous figures morphing through figure-eight, pretzel and knot shapes; bass accelerates the phase across five ratios.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078C34BE262-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Orbit Collider</th><td>Eight bright points orbiting an invisible circle with lossless elastic collisions; bass bins drive the circle radius.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781B744169-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Tunnel</th><td>Concentric hexagonal rings flying toward the viewer for a warp-tunnel effect; each ring’s colour follows its FFT band, bass sets speed.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007878ADF237-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Arc Carousel</th><td>Three concentric rings of arc segments spinning in alternating directions; bass expands radii, treble cycles hue.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785D15ACFB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Orbital Chain</th><td>Eight dots on a closed chain morphing circle -&gt; ellipse -&gt; figure-8 with audio, traced by a thin connecting line.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007834D0F7F8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Phasor Grid</th><td>A 3x3 grid of little rotating radial phasors, phase-offset by cell so they read as a propagating wave when energetic.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007872AA5B4C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Radial Wedges</th><td>Pie-slice wedges fanning from centre, their widths and tip radii breathing unevenly with the audio bands.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007857919CBF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ripple Grid</th><td>A coarse grid of horizontal curves poked by a moving radial ripple from an orbiting source; amplitude pulses with bass.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007894F31D81-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pulse Chevron</th><td>A vertical stack of chevrons sliding upward and wrapping; width and tilt breathe with the FFT bands.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B940921C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Kaleido Dots</th><td>A 3-fold kaleidoscope of always-on drifting dots; bass swells radii, mid widens the sway, treble cycles hue.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B0C855AD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Kaleido Lines</th><td>A 10-fold kaleidoscope traced as one continuous mirrored polyline through five reflection axes.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788A1E3A09-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Bell Pulse</th><td>Four bell-shaped silhouettes on the cardinal axes, their width breathing with bass and hue pushed by treble.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078EBADEEA8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Phase Swirl</th><td>A 3:2 Lissajous with a continuously drifting, bass-driven phase, walking the figure through every shape in the family.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785D1F4E27-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Red Hot</th><td>Eight rectangular arms forming an asterisk; each FFT band shortens an opposing arm pair, staying symmetric across centre.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781773D9A1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Damped Swirl</th><td>A harmonograph - one long damped Lissajous curve whose parameters drift so the figure morphs without ever resetting.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AD307410-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Fractal</th><td>Recursive 5-branch fractal subdivision on triangle / square / line bases that morph on audio peaks, with a depth-based hue gradient (port of ldFractal4).</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007872EDF9A3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sine Grid</th><td>Phase-offset strands weaving through each other with a corkscrew twist; bass drives scroll and rotation, peaks flip direction.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078C0FAB105-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sonar Ping</th><td>Concentric expanding wavefronts drawn as isolated radial tick-marks pinging outward, like a sonar sweep.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000787E3CC1EC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Quasar Braid</th><td>Six strands twisted into one left-to-right braid; each strand’s FFT bin drives its sway, bass tightens the corkscrew twist.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007812A3877F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spiral Fill</th><td>A space-filling Archimedean spiral with four colour modes (helix, bands, tri-helix, vertical bands) cycling every bar.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000780835EBC6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Hypocycloid R</th><td>A single hypocycloid rosette whose inner-radius ratio sweeps each bar to morph cusp counts; treble runs hue, bass sharpens cusps.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AC3A0208-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pie Beam</th><td>Two rotating pie cones of stratified rays sweeping the frame; bass opens the cone angle, modes cycle each bar.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781CC2637D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cissoid Flick</th><td>A mirrored pair of parametric cissoid cusps rotating with tempo; bass peaks flick the cusps to a new shape then settle.</td></tr>
 </tbody></table></div>
 <p>Beams, Lines &amp; Mirrors (14)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/100000000000007800000078592D7B87-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Crossed Lines</td><td>Beams drawn as crossing lines sweeping the frame (port of ldBeamCrossedLines).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078CC9ECA4B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Solaris 1</td><td>A sun-flare beam burst radiating from centre (style 1).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A89957E9-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Solaris 2</td><td>A sun-flare beam burst radiating from centre (style 2).</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781DC56891-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Rage Bass 1</td><td>A high-energy beam pattern that slams with the bass.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F3F6A2B6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Dashed Lines</td><td>Dashed beam lines animated to the music.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000783E936358-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spotlights C</td><td>Circular spotlights sweeping across the frame to the beat.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000782E00C929-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spotlights T</td><td>Triangular spotlights sweeping across the frame to the beat.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078D9E97D78-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Linear C</td><td>A circle base shape animated with linear beam sweeps.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781543D2B6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Linear L</td><td>A line base shape animated with linear beam sweeps.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007862085EEF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Linear S</td><td>A square base shape animated with linear beam sweeps.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A949923C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Mirror Curves</td><td>Symmetric mirrored curves reflected across the frame’s axes.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078FEC8D201-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Mirror Lines 1</td><td>A mirror-symmetric straight-line beam pattern (style 1).</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000784B6BE94F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Mirror Lines 2</td><td>A mirror-symmetric straight-line beam pattern (style 2).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F62A914C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Mirror Rays</td><td>Rays radiating with mirror symmetry across the frame.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078592D7B87-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Crossed Lines</th><td>Beams drawn as crossing lines sweeping the frame (port of ldBeamCrossedLines).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078CC9ECA4B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Solaris 1</th><td>A sun-flare beam burst radiating from centre (style 1).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A89957E9-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Solaris 2</th><td>A sun-flare beam burst radiating from centre (style 2).</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781DC56891-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Rage Bass 1</th><td>A high-energy beam pattern that slams with the bass.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F3F6A2B6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dashed Lines</th><td>Dashed beam lines animated to the music.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000783E936358-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spotlights C</th><td>Circular spotlights sweeping across the frame to the beat.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000782E00C929-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spotlights T</th><td>Triangular spotlights sweeping across the frame to the beat.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078D9E97D78-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Linear C</th><td>A circle base shape animated with linear beam sweeps.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781543D2B6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Linear L</th><td>A line base shape animated with linear beam sweeps.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007862085EEF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Linear S</th><td>A square base shape animated with linear beam sweeps.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A949923C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Curves</th><td>Symmetric mirrored curves reflected across the frame’s axes.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078FEC8D201-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Lines 1</th><td>A mirror-symmetric straight-line beam pattern (style 1).</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000784B6BE94F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Lines 2</th><td>A mirror-symmetric straight-line beam pattern (style 2).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F62A914C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Rays</th><td>Rays radiating with mirror symmetry across the frame.</td></tr>
 </tbody></table></div>
 <p>Characters &amp; Novelty (4)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/100000000000007800000078407E8B5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Disco Stu</td><td>A dancing stick figure that performs shuffled dance moves to the music, ending each on a bass kick with crossfaded poses.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078731B4095-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Sunflower</td><td>A potted sunflower that dances to the music, using the same move-sequencing engine as Disco Stu.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007892174A4D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Cactus</td><td>A potted saguaro cactus that dances to the music, sharing the dancing-figure engine.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788DC3449F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Lazer Lips</td><td>Two animated lip curves whose openness, spread and sibilance follow the audio - a lip-sync mouth.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078407E8B5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Disco Stu</th><td>A dancing stick figure that performs shuffled dance moves to the music, ending each on a bass kick with crossfaded poses.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078731B4095-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sunflower</th><td>A potted sunflower that dances to the music, using the same move-sequencing engine as Disco Stu.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007892174A4D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cactus</th><td>A potted saguaro cactus that dances to the music, sharing the dancing-figure engine.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788DC3449F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lazer Lips</th><td>Two animated lip curves whose openness, spread and sibilance follow the audio - a lip-sync mouth.</td></tr>
 </tbody></table></div>
 <p>The Visualizers can also have additional audio reactive image/colour
 effects added to them, configured from the Effects menu.</p>
@@ -1480,13 +1480,13 @@ defaults.</p>
 <h3 id="artnet-status"><span id="anchor-56"></span>ArtNet Status<a href="#artnet-status" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The status of the ArtNet connection is shown in the status bar at the
 bottom right of the LCD.</p>
-<p>When the LaserCube is connected to a valid ethernet network and ArtNet
+<p>When the LaserCube is connected to a valid Ethernet network and ArtNet
 packets are being received on the correct ArtNet Universe then the
 status bar will show a green tick to the right of the DMX label and a
 valid IP address will be shown below it.</p>
 <p>If ArtNet data is not being correctly received then the status bar will
 show a red cross instead of a green tick.</p>
-<p>If the status shows as not connected when you have an ethernet cable
+<p>If the status shows as not connected when you have an Ethernet cable
 attached to your network which also has the ArtNet controller present,
 then please check for a network issue first like no IP address being
 shown in the status bar, and also check you are on the correct ArtNet
@@ -1557,7 +1557,7 @@ the Access Mode.</p>
 <p>• DMX CH 12 Reserved for future use.</p>
 <p>• DMX CH 14 Reserved for future use.</p>
 <p>• DMX CH 16 Reserved for future use.</p>
-<h3 id="dmxart-net-channel-layout"><span id="anchor-68"></span>DMX/Art-Net Channel Layout<a href="#dmxart-net-channel-layout" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="dmxart-net-channel-layout"><span id="anchor-68"></span>DMX/ArtNet Channel Layout<a href="#dmxart-net-channel-layout" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 1</span> Access Mode</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0-31</td><td>Blackout</td></tr>
 <tr><td>33-95</td><td>Basic 4 CH</td></tr>
@@ -1850,18 +1850,17 @@ APIPA one.</p>
 <img src="Pictures/web/10000000000009B00000036D8CE24CA2-1284.webp" width="642" height="227" alt="" loading="lazy" decoding="async">
 <p>When using LAN client mode, the LaserCube will try to obtain an IP
 address from a DHCP server on your network. If you have connected the
-LaserCube directly to your home router, or via an ethernet switch to
-your home router then you will see that the LaserCube will be given an
-IP address according to your network (e.g. 192.168.x.x).</p>
+LaserCube directly to your home router, or via an Ethernet switch to
+your home router then the cube will be given an IP address according to your network (e.g. 192.168.x.x).</p>
 <p>If you are not connecting the cube via a home router or DHCP server (due
 to connecting a cable directly between PC/Mac/iOS and the LaserCube)
-then the cube will self assign itself an IP address using the Auto IP
+then the cube will assign itself an IP address using the Auto IP
 protocol after around 20 seconds.</p>
 <p>APIPA addresses start with 169.254.x.x.</p>
 <p>If you are using Windows or an Apple MacBook then the following should
 be done in order to connect with our LaserOS software using APIPA:</p>
-<ol><li>Temporarily turn off WiFi on your PC/MacBook</li><li>ensure LaserOS is not running, and close it if it is.</li><li>Turn on your LaserCube and connect an ethernet cable from the LAN
-port on the cube to the LAN port on your PC/macBook.</li><li>Wait until the LaserCube self assign’s an APIPA address.</li><li>Start LaserOS on your macBook and check that the device is detected
+<ol><li>Temporarily turn off WiFi on your PC/MacBook</li><li>ensure LaserOS is not running, and close it if it is.</li><li>Turn on your LaserCube and connect an Ethernet cable from the LAN
+port on the cube to the LAN port on your PC/MacBook.</li><li>Wait until the cube self-assigns an APIPA address.</li><li>Start LaserOS on your MacBook and check that the device is detected
 (Laser ON button in the top right corner of LaserOS software should
 NOT be greyed out).</li><li>Turn your PC/MacBook WiFi back on if you need internet access.</li></ol>
 <h2 id="network-settings"><span id="anchor-88"></span>Network Settings<a href="#network-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
@@ -1892,10 +1891,10 @@ provided USB→LAN adapter.</p>
 <h3 id="wifi-server-mode"><span id="anchor-96"></span><span id="anchor-97"></span>WiFi Server Mode<a href="#wifi-server-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Useful for cable free, single cube LaserOS operation in areas with no
 WiFi congestion.</p>
-<p>Note: Make sure you connect the provided WiFi Antenna before using any
+<p>Note: Make sure you connect the provided WiFi antenna before using any
 wireless modes.</p>
-<p>It is preferable to leave the WiFI channel set to Auto, which will make
-the device scan for the quietest WiFI channel to use at each power on of
+<p>It is preferable to leave the WiFi channel set to Auto, which will make
+the device scan for the quietest WiFi channel to use at each power on of
 the device.</p>
 <h4 id="wifi-server-mode-customisations"><span id="anchor-98"></span>WiFi Server Mode Customisations<a href="#wifi-server-mode-customisations" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>SSID, Password, Channel (including Auto), Bandwidth, IP Address, Net
@@ -1927,7 +1926,7 @@ in WiFi server network connection mode.</p>
 <p>For connecting to an existing WiFi router. Performance may vary
 depending on the quality of the router, amount of WiFi congestion and
 the amount of existing network traffic.</p>
-<p>Note: Make sure you connect the provided WiFi Antenna before using any
+<p>Note: Make sure you connect the provided WiFi antenna before using any
 wireless modes.</p>
 <h4 id="wifi-client-mode-customisations"><span id="anchor-100"></span>WiFi Client Mode Customisations<a href="#wifi-client-mode-customisations" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>SSID, Password, IP Mode - Auto / Static (IP Address, Gateway, Net Mask)</p>
@@ -1938,20 +1937,15 @@ wireless modes.</p>
 <h3 id="cube-link-mode"><span id="anchor-101"></span>Cube Link Mode<a href="#cube-link-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Wireless Cube Link (only available when connection mode is not set to
 WiFi) is a method of synchronising playback of content across multiple
-LaserCubes. Cube Link does not require a WiFI network to be present as
+LaserCubes. Cube Link does not require a WiFi network to be present as
 it creates its own wireless network to communicate between master and
 slave devices within ~20-40m line-of-sight range using a low data rate
 communication protocol.</p>
-<p>Note: Make sure you connect the provided WiFi Antenna before using any
+<p>Note: Make sure you connect the provided WiFi antenna before using any
 wireless modes.</p>
-<p>In order to set up a Cube Link network, it must be enabled on each
-LaserCube, then one LaserCube must be set to Master, and the other
-LaserCubes as slaves. To exist on the same Cube Link Network, they must all
-share the same Link Channel and Link Pin. The Group determines what
-content that particular LaserCube will project. For a 2 projector Laser
-show, the first projector content will be shown on all LaserCubes set
-to Group 1 and the second projector content will be shown on all
-LaserCubes set to group 2.</p>
+<p>In order to set up a Cube Link network, it must be enabled on each LaserCube, then one cube must be set to Master, and the others as slaves. To exist on the same Cube Link Network, they must all
+share the same Link Channel and Link Pin. The Group determines what content that cube will project. For a 2 projector Laser
+show, the first projector content will be shown on all cubes set to Group 1 and the second projector content will be shown on all cubes set to Group 2.</p>
 <p>Slave devices that are in range of a Master that have a matching channel
 and pin configuration will be indicated by the status bar background on
 each slave turning from black to purple.</p>
@@ -1972,7 +1966,7 @@ entry box highlighted.</p></blockquote>
 going to the Settings -&gt;USB MIDI menu.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001408894CF71_hu_3b35401d5c9ddbd6-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001404EE58297_hu_1e94067e83b38187-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140D1E6FA2F_hu_42387201dcb4b761-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>Note: USB MIDI does <strong>NOT</strong> operate when the unit is in LaserOS / ArtNet
-/ DMX / IDN / Ether-Dream control modes, as these modes are controlled
+/ DMX / IDN / Ether Dream control modes, as these modes are controlled
 using alternate communication protocols.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140A9A20B7D_hu_2a57fb743f146800-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001403852FCAE_hu_fbc16b20de8a9252-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>If a compatible device is detected on the LaserCube’s USB port, then
@@ -2072,94 +2066,94 @@ activated.</p>
 projected image, and each effect has its own set of user adjustable
 parameters depending on the chosen effect.</p>
 <p>Movement &amp; 3D (17)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/10000000000000780000007895F940A4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Zoom Effect</td><td>Scales the whole image in and out with an eased sweep, locked to the tap tempo. A Linear switch gives constant-rate zoom.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007834B33CB9-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Spin</td><td>Spins the image about the vertical axis in an eased forward / rest / reverse / rest cycle, synced to tempo.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007829D68EA3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Column</td><td>Wraps the image around a rotating vertical cylinder whose radius slowly breathes in and out, with perspective depth.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078234C5CCD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Globe A</td><td>Re-interprets each point as yaw/pitch on a rotating sphere, projected back to 2D with a perspective depth fade.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078780DFD07-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Globe B</td><td>Globe spin at half speed and reversed, sitting closer to the camera with a quadratic radius depth fade.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000782998557C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Gyro A</td><td>Tumbles in 3D on three spinning axes; each tempo tick starts or stops a random axis. Telephoto perspective.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000787805E037-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Gyro B</td><td>Gyro that swaps axes twice as often, spins faster, and uses the closer perspective with a radius fade.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000784FCEAF95-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Flip A</td><td>Performs one full revolution per cycle around a random in-plane axis with a telephoto perspective, tempo-synced.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078981472F1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Flip B</td><td>Flip with an added out-of-plane tilt and a close-up perspective with radius fade.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A4E5A11A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Twist A</td><td>Rotates about the horizontal axis with the angle offset by x, twisting the image like a ribbon that rolls continuously.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000783986E573-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Twist B</td><td>Ribbon twist that eases back and forth in a raised-cosine wobble instead of rolling all the way round.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078EDB914C8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Twist C</td><td>Corkscrew wobble about the vertical axis, blending sine and cosine oscillation from the bottom to the top of the frame.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078C6FB2A3B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Tumble A</td><td>Tumbles end-over-end around the horizontal axis, with lit strokes pushed out in front of the image plane.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000789C925612-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Tumble B</td><td>Tumble where each stroke gets a random depth offset whose strength rides a bass x treble audio energy gate.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078046355ED-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Flag</td><td>Drapes the image onto a rippling flag surface with a drifting wave phase and two slow sways around the pole.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078426EC9AC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>3D Jellyfish</td><td>Ripples the image radially through a damped-sine bell while five slow oscillators wobble it around in 3D.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078817537DF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Spiral</td><td>Twists the image into a spiral (rotation grows with radius); the twist steps through quarter/half turns on tempo.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/10000000000000780000007895F940A4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Zoom Effect</th><td>Scales the whole image in and out with an eased sweep, locked to the tap tempo. A Linear switch gives constant-rate zoom.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007834B33CB9-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Spin</th><td>Spins the image about the vertical axis in an eased forward / rest / reverse / rest cycle, synced to tempo.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007829D68EA3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Column</th><td>Wraps the image around a rotating vertical cylinder whose radius slowly breathes in and out, with perspective depth.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078234C5CCD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Globe A</th><td>Re-interprets each point as yaw/pitch on a rotating sphere, projected back to 2D with a perspective depth fade.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078780DFD07-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Globe B</th><td>Globe spin at half speed and reversed, sitting closer to the camera with a quadratic radius depth fade.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000782998557C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Gyro A</th><td>Tumbles in 3D on three spinning axes; each tempo tick starts or stops a random axis. Telephoto perspective.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000787805E037-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Gyro B</th><td>Gyro that swaps axes twice as often, spins faster, and uses the closer perspective with a radius fade.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000784FCEAF95-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Flip A</th><td>Performs one full revolution per cycle around a random in-plane axis with a telephoto perspective, tempo-synced.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078981472F1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Flip B</th><td>Flip with an added out-of-plane tilt and a close-up perspective with radius fade.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A4E5A11A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Twist A</th><td>Rotates about the horizontal axis with the angle offset by x, twisting the image like a ribbon that rolls continuously.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000783986E573-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Twist B</th><td>Ribbon twist that eases back and forth in a raised-cosine wobble instead of rolling all the way round.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078EDB914C8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Twist C</th><td>Corkscrew wobble about the vertical axis, blending sine and cosine oscillation from the bottom to the top of the frame.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078C6FB2A3B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Tumble A</th><td>Tumbles end-over-end around the horizontal axis, with lit strokes pushed out in front of the image plane.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000789C925612-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Tumble B</th><td>Tumble where each stroke gets a random depth offset whose strength rides a bass x treble audio energy gate.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078046355ED-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Flag</th><td>Drapes the image onto a rippling flag surface with a drifting wave phase and two slow sways around the pole.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078426EC9AC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">3D Jellyfish</th><td>Ripples the image radially through a damped-sine bell while five slow oscillators wobble it around in 3D.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078817537DF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spiral</th><td>Twists the image into a spiral (rotation grows with radius); the twist steps through quarter/half turns on tempo.</td></tr>
 </tbody></table></div>
 <p>Warps &amp; Distortion (19)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/1000000000000078000000782D1C0E07-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Circle</td><td>Radial remap using a chebyshev/euclidean ratio so square framings bulge outward into circles.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078330FC6BD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Square</td><td>The inverse remap - circular framings squash inward into squares.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AD52FE03-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Clover</td><td>Manhattan-distance ratio pinches the image into a four-lobed clover-leaf shape.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007884C88CE3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Diamond</td><td>The inverse of Clover, stretching the image out into a diamond.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000781C1C42EC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Orbital</td><td>Circle warp without the square root - a double-strength radial bulge.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B981D8A6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Warp Bubble</td><td>Magnifies the centre up to 1.68x inside a fixed ring, like looking through a bubble lens.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078FDC16488-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Telescope</td><td>Fisheye radial zoom - magnifies the centre, compresses the edges, clipped to a clean circular rim.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078846EA3C6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Ripple A</td><td>A travelling pond ripple: a radial wave scales each point’s distance from centre. Plain speed slider.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AECFC14C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Ripple B</td><td>The same ripple, but its position rides the tap-tempo phase.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B0FB154E-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Gong A</td><td>A wave crashes outward from the centre on each tap-tempo beat.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788F75C80C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Gong B</td><td>A standing radial wave pumped by the audio reactor’s fast bass spin (music aware).</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007847818BD5-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Wavy</td><td>A three-octave sine ripple displaces the image horizontally; amplitude rides the bass, the pattern scrolls on tempo.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078D841C3BA-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Jelly A</td><td>Squashes the image on two oscillating axes so it wobbles like jelly, driven by slow bass and treble walkers.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078903762D6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Jelly B</td><td>Beat-locked jelly wobble: x squashes at double the beat rate, y on the beat.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078DC863E9F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Jelly C</td><td>Beat-locked jelly wobble: x squashes per beat, y per bar.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000780C0D7B49-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Squiggle</td><td>Adds a continuously rotating circular offset so straight lines are drawn as tight corkscrew squiggles.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000780827E7DB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Scramble</td><td>Squiggle’s alt: the offset circle reverses each revolution, scribbling instead of corkscrewing.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788D7FC54B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Shake</td><td>Jolts the whole image along a circular path on each beat onset - still between hits, alternating direction.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000782634C4BB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Diffract</td><td>Displaces points sideways by an amount taken from their hue, so differently coloured strokes separate like a prism.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/1000000000000078000000782D1C0E07-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Circle</th><td>Radial remap using a chebyshev/euclidean ratio so square framings bulge outward into circles.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078330FC6BD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Square</th><td>The inverse remap - circular framings squash inward into squares.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AD52FE03-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Clover</th><td>Manhattan-distance ratio pinches the image into a four-lobed clover-leaf shape.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007884C88CE3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Diamond</th><td>The inverse of Clover, stretching the image out into a diamond.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000781C1C42EC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Orbital</th><td>Circle warp without the square root - a double-strength radial bulge.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B981D8A6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Bubble</th><td>Magnifies the centre up to 1.68x inside a fixed ring, like looking through a bubble lens.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078FDC16488-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Telescope</th><td>Fisheye radial zoom - magnifies the centre, compresses the edges, clipped to a clean circular rim.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078846EA3C6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ripple A</th><td>A travelling pond ripple: a radial wave scales each point’s distance from centre. Plain speed slider.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AECFC14C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ripple B</th><td>The same ripple, but its position rides the tap-tempo phase.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B0FB154E-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Gong A</th><td>A wave crashes outward from the centre on each tap-tempo beat.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788F75C80C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Gong B</th><td>A standing radial wave pumped by the audio reactor’s fast bass spin (music aware).</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007847818BD5-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Wavy</th><td>A three-octave sine ripple displaces the image horizontally; amplitude rides the bass, the pattern scrolls on tempo.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078D841C3BA-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Jelly A</th><td>Squashes the image on two oscillating axes so it wobbles like jelly, driven by slow bass and treble walkers.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078903762D6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Jelly B</th><td>Beat-locked jelly wobble: x squashes at double the beat rate, y on the beat.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078DC863E9F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Jelly C</th><td>Beat-locked jelly wobble: x squashes per beat, y per bar.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000780C0D7B49-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Squiggle</th><td>Adds a continuously rotating circular offset so straight lines are drawn as tight corkscrew squiggles.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000780827E7DB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Scramble</th><td>Squiggle’s alt: the offset circle reverses each revolution, scribbling instead of corkscrewing.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788D7FC54B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Shake</th><td>Jolts the whole image along a circular path on each beat onset - still between hits, alternating direction.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000782634C4BB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Diffract</th><td>Displaces points sideways by an amount taken from their hue, so differently coloured strokes separate like a prism.</td></tr>
 </tbody></table></div>
 <p>Colour &amp; Recolour (31)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/100000000000007800000078411344C4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Effect</td><td>Recolours the image with a single hue that sweeps over it, cycling on a speed slider.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078DD1B9DDE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colour Cycle Effect</td><td>Smoothly cycles the whole image through the colour spectrum over time, with a +White exclude option.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078420D53F6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Hue Effect</td><td>Fades every colour toward one fixed hue and saturation; intensity blends, with an optional +White exclude.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007861460779-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Hue Shift</td><td>Rotates every colour’s hue by a set angle (an RGB rotation about the grey axis); greys and white pass through.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000786CDF0529-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Shimmer A</td><td>Wobbles the whole image’s hue sinusoidally around its original value, two wobbles per beat.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007836163EBE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Shimmer B</td><td>The hue jumps to random offsets on strong audio events, scaled by the current level (music aware).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F5D71ADF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Acid A</td><td>A drifting acid-wash colour field from four crossfading, zooming plasma grids, mapped over the full hue wheel.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007809195215-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Acid B</td><td>Acid wash mapped through a black-primary-secondary-white ramp that permutes its channels once per bar.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007823E82EB1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Aura A</td><td>A glowing aura colour wash - noise grids plus a radial centre glow, with a brightness floor so it never goes dark.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785C3CB92A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Aura B</td><td>Aura with a rotating channel permutation each bar and deeper, sub-white colours.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000782733B875-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Scroll A</td><td>Horizontal scrolling bands of hue sweep across the image at a fixed speed, keeping the original brightness.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000786B7F1B40-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Scroll B</td><td>Vertical hue bands whose scroll speed rides the bass, with the band curve warped by it.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AF0784F7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Scroll C</td><td>Horizontal S-curved hue bands with a saturation dip and hue drift driven by the treble.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007850A8C2DF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Panel</td><td>A 5x5 grid of hue panels flood-fills to new colours with hard edges, drops fired by bass onsets.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007815785390-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Crumble</td><td>A 12x12 bilinear-smoothed hue grid crumbling to new colours, free-running.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000789E1CBEC7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Rainbeam</td><td>Broad curved rainbow bands radiate from an orbiting far-off centre; the hue scrolls and troughs flash white.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F6141D2F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Colorize Flames</td><td>Audio-reactive fire recolour - a rippling flame edge licks up from the bottom; bass raises it, beats flare.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078139C2565-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Prism</td><td>Colours each segment by its direction: angle picks the hue, beam speed picks saturation. A stained-glass look.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788119FC21-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Beat Prism</td><td>Prism colouring that rides the audio onset envelope, fading back to the original colours between beats.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007838C2186B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Blobs A</td><td>48 soft colour blobs drift outward on a polar plane while the whole palette slowly rotates the hue wheel.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007848F20F7A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Blobs B</td><td>Harder-edged blobs at 4x drift speed with a constant red floor.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078BAFE72C7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Blobs C</td><td>Double-size blobs over three channels, colourised through the tempo/beat palette (music aware).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078AA837099-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Volt A</td><td>Electric recolour through a black-&gt;primary-&gt;secondary-&gt;white ramp keyed to each point’s original hue sector.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785577AB9B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Volt B</td><td>Hue sweeps with brightness, pushed further up the spectrum by the bass level (music aware).</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078C75C9704-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Shiny A</td><td>Concentric white specular shine bands sweep in from the corners, breathing with the bass level.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078935C7F46-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Shiny B</td><td>Shine bands run from the centre outward on volume, darkening between bands with a colour sparkle.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078FF9BD82D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Freq A</td><td>Colours the image like a spectrum analyser from the live FFT - below the level green, above red, on it white.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A0C28744-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Freq B</td><td>Spectrum colouring mirrored around centre from bass/mid/high meters, slowly rotating the hue.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B9594A52-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Freq C</td><td>Spectrum-analyser colouring like A/B, but the meter is recoloured through the tempo/beat palette.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000788247D910-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Beat Saturate A</td><td>Colour purity pumps with the music - colours over-saturate on hits.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A14935A1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Color Beat Saturate B</td><td>Inverted and snappier - colours wash toward white on hits.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078411344C4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Effect</th><td>Recolours the image with a single hue that sweeps over it, cycling on a speed slider.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078DD1B9DDE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colour Cycle Effect</th><td>Smoothly cycles the whole image through the colour spectrum over time, with a +White exclude option.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078420D53F6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Hue Effect</th><td>Fades every colour toward one fixed hue and saturation; intensity blends, with an optional +White exclude.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007861460779-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Hue Shift</th><td>Rotates every colour’s hue by a set angle (an RGB rotation about the grey axis); greys and white pass through.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000786CDF0529-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Shimmer A</th><td>Wobbles the whole image’s hue sinusoidally around its original value, two wobbles per beat.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007836163EBE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Shimmer B</th><td>The hue jumps to random offsets on strong audio events, scaled by the current level (music aware).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F5D71ADF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Acid A</th><td>A drifting acid-wash colour field from four crossfading, zooming plasma grids, mapped over the full hue wheel.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007809195215-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Acid B</th><td>Acid wash mapped through a black-primary-secondary-white ramp that permutes its channels once per bar.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007823E82EB1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Aura A</th><td>A glowing aura colour wash - noise grids plus a radial centre glow, with a brightness floor so it never goes dark.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785C3CB92A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Aura B</th><td>Aura with a rotating channel permutation each bar and deeper, sub-white colours.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000782733B875-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Scroll A</th><td>Horizontal scrolling bands of hue sweep across the image at a fixed speed, keeping the original brightness.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000786B7F1B40-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Scroll B</th><td>Vertical hue bands whose scroll speed rides the bass, with the band curve warped by it.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AF0784F7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Scroll C</th><td>Horizontal S-curved hue bands with a saturation dip and hue drift driven by the treble.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007850A8C2DF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Panel</th><td>A 5x5 grid of hue panels flood-fills to new colours with hard edges, drops fired by bass onsets.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007815785390-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Crumble</th><td>A 12x12 bilinear-smoothed hue grid crumbling to new colours, free-running.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000789E1CBEC7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Rainbeam</th><td>Broad curved rainbow bands radiate from an orbiting far-off centre; the hue scrolls and troughs flash white.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F6141D2F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Colorize Flames</th><td>Audio-reactive fire recolour - a rippling flame edge licks up from the bottom; bass raises it, beats flare.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078139C2565-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Prism</th><td>Colours each segment by its direction: angle picks the hue, beam speed picks saturation. A stained-glass look.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788119FC21-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Beat Prism</th><td>Prism colouring that rides the audio onset envelope, fading back to the original colours between beats.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007838C2186B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Blobs A</th><td>48 soft colour blobs drift outward on a polar plane while the whole palette slowly rotates the hue wheel.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007848F20F7A-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Blobs B</th><td>Harder-edged blobs at 4x drift speed with a constant red floor.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078BAFE72C7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Blobs C</th><td>Double-size blobs over three channels, colourised through the tempo/beat palette (music aware).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078AA837099-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Volt A</th><td>Electric recolour through a black-&gt;primary-&gt;secondary-&gt;white ramp keyed to each point’s original hue sector.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785577AB9B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Volt B</th><td>Hue sweeps with brightness, pushed further up the spectrum by the bass level (music aware).</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078C75C9704-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Shiny A</th><td>Concentric white specular shine bands sweep in from the corners, breathing with the bass level.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078935C7F46-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Shiny B</th><td>Shine bands run from the centre outward on volume, darkening between bands with a colour sparkle.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078FF9BD82D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Freq A</th><td>Colours the image like a spectrum analyser from the live FFT - below the level green, above red, on it white.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A0C28744-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Freq B</th><td>Spectrum colouring mirrored around centre from bass/mid/high meters, slowly rotating the hue.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B9594A52-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Freq C</th><td>Spectrum-analyser colouring like A/B, but the meter is recoloured through the tempo/beat palette.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000788247D910-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Beat Saturate A</th><td>Colour purity pumps with the music - colours over-saturate on hits.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A14935A1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Color Beat Saturate B</th><td>Inverted and snappier - colours wash toward white on hits.</td></tr>
 </tbody></table></div>
 <p>Beat, Texture &amp; Flash (11)</p>
-<div class="table-wrap"><table class="media" role="presentation"><tbody><tr><td><img src="Pictures/web/10000000000000780000007839732987-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Beat Ring</td><td>Each beat radiates outward as an expanding ring of brightness, mixing the tap tempo with live audio onsets.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007869628BF3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Cross A</td><td>A rotating cross orbits over the image, whitening everything inside its arms and fading the rest toward black.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078A2DE20D7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Cross B</td><td>Draws only the white outline band of the orbiting cross, its centre breathing in and out on the bass.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078B2CF7242-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Stripe</td><td>Uses the same orbiting, rotating frame as Cross but paints three red / green / blue colour bands across it.</td></tr>
-<tr><td><img src="Pictures/web/10000000000000780000007887A25D60-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Dots</td><td>Chops the beam into regular on/off dots, blanking the gaps so it burns points instead of streaks.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000783B86AA2C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Dashes</td><td>Randomised chop lengths give irregular dashes.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078C60DE078-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Dots Bright</td><td>Dot chop where the gaps get a 180-degree hue flip instead of being blanked.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000789FF480C1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Dashes Bright</td><td>Randomised dash chop with the hue-flip gaps.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078BD6D327C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Flash Effect</td><td>Flashes the whole image bright then decays on each beat - a tempo-synced brightness pulse.</td></tr>
-<tr><td><img src="Pictures/web/100000000000007800000078F7B3C8FE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Strobe Effect</td><td>Blanks the image on and off in time with the tempo; intensity sets the blackout depth.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785982DB11-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><td>Vignette</td><td>Fades brightness toward all four edges so the frame darkens to black at the borders.</td></tr>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/10000000000000780000007839732987-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Beat Ring</th><td>Each beat radiates outward as an expanding ring of brightness, mixing the tap tempo with live audio onsets.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007869628BF3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cross A</th><td>A rotating cross orbits over the image, whitening everything inside its arms and fading the rest toward black.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078A2DE20D7-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cross B</th><td>Draws only the white outline band of the orbiting cross, its centre breathing in and out on the bass.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078B2CF7242-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Stripe</th><td>Uses the same orbiting, rotating frame as Cross but paints three red / green / blue colour bands across it.</td></tr>
+<tr><td><img src="Pictures/web/10000000000000780000007887A25D60-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dots</th><td>Chops the beam into regular on/off dots, blanking the gaps so it burns points instead of streaks.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000783B86AA2C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dashes</th><td>Randomised chop lengths give irregular dashes.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078C60DE078-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dots Bright</th><td>Dot chop where the gaps get a 180-degree hue flip instead of being blanked.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000789FF480C1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dashes Bright</th><td>Randomised dash chop with the hue-flip gaps.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078BD6D327C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Flash Effect</th><td>Flashes the whole image bright then decays on each beat - a tempo-synced brightness pulse.</td></tr>
+<tr><td><img src="Pictures/web/100000000000007800000078F7B3C8FE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Strobe Effect</th><td>Blanks the image on and off in time with the tempo; intensity sets the blackout depth.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785982DB11-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Vignette</th><td>Fades brightness toward all four edges so the frame darkens to black at the borders.</td></tr>
 </tbody></table></div>
 <p>More effects will be added with each firmware release for the Ultra MK2 / Pro product range, allowing for more varied live projection
 modifications.</p>
-<h3 id="master-effect-slider"><span id="anchor-110"></span>Master Effect slider<a href="#master-effect-slider" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="master-effect-slider"><span id="anchor-110"></span>Master Effect Slider<a href="#master-effect-slider" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The intensity applied to the projection from any of the available
 effects are controlled by a master intensity slider. This is set to 100%
 by default, and can be changed via the menu UI or MIDI mapped to a
@@ -2169,12 +2163,12 @@ applied to the projection.</p>
 APC40 MK2 has the main effect intensity slider mapped to the APC40 MK2
 Master fader, and must be moved to a value &gt;0% for any effects to be
 applied,</p>
-<h3 id="effect-config-drop-down"><span id="anchor-111"></span>Effect Config drop down<a href="#effect-config-drop-down" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="effect-config-drop-down"><span id="anchor-111"></span>Effect Config Drop-Down<a href="#effect-config-drop-down" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>In order adjust one of the many built-in effects, the user can use the
 effect config drop down followed by selecting the effect you wish to
 adjust.</p>
 <img src="Pictures/web/10000000000000F000000140DE9DD66E_hu_5eb759c0bc05c81-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
-<h2 id="colour-cycle-effect"><span id="anchor-112"></span>Colour Cycle effect<a href="#colour-cycle-effect" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<h2 id="colour-cycle-effect"><span id="anchor-112"></span>Colour Cycle Effect<a href="#colour-cycle-effect" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>This effect will cycle through a series of primary colours to the
 current beat or multiple of the beat based on the current tempo and
 effect speed setting (tempo can be set via settings→tempo menu).</p>
@@ -2183,7 +2177,7 @@ effect speed setting (tempo can be set via settings→tempo menu).</p>
 <div class="row"><div class="col"><img src="Pictures/web/100000010000014400000112FAB7EC74-232.webp" width="324" height="274" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/1000000100000145000001100760404E-232.webp" width="325" height="272" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/100000010000014100000112F6AB42AE-232.webp" width="321" height="274" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/100000010000014400000105727FD791-232.webp" width="324" height="261" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/100000010000014500000114D89F73DA-232.webp" width="325" height="276" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/1000000100000143000001112C285928-232.webp" width="323" height="273" alt="" loading="lazy" decoding="async"></div></div>
 <p>The above images show the colour cycle effect colours when +White
 parameter is OFF.</p>
-<h3 id="colour-cycle-effect-parameters"><span id="anchor-113"></span>Colour cycle effect parameters<a href="#colour-cycle-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="colour-cycle-effect-parameters"><span id="anchor-113"></span>Colour Cycle Effect Parameters<a href="#colour-cycle-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140F87AA280_hu_3889ea39bc1629b9-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014086551E1B_hu_d72cf2f1205ba5ac-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140AC8DCE4C_hu_34c0f1bacd23a9d7-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The adjustable parameters for the colour cycle effect are Intensity,
 Speed, and Include White (+white).</p>
@@ -2211,7 +2205,7 @@ below.</p>
 <p>With +White off, only non white parts of the beam pattern will be
 replaced by the cycle effect colour. With +White On, the whole beam
 pattern will be re-coloured.</p>
-<h3 id="default-apc40-mk2-colour-cycle-effect-midi-mapping"><span id="anchor-114"></span>Default APC40 MK2 Colour Cycle Effect MIDI mapping<a href="#default-apc40-mk2-colour-cycle-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="default-apc40-mk2-colour-cycle-effect-midi-mapping"><span id="anchor-114"></span>Default APC40 MK2 Colour Cycle Effect MIDI Mapping<a href="#default-apc40-mk2-colour-cycle-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The image below shows how this effect is mapped to an APC40 MK2 when
 using our default MIDI mapping provided on the SD card shipped with the
 LaserCube.</p>
@@ -2220,7 +2214,7 @@ LaserCube.</p>
 <p>This effect will zoom the projection in/out in sync with the beat based
 on the current tempo (see <a href="#tempo-settings">tempo</a> in
 the wiki).</p>
-<h3 id="zoom-effect-parameters"><span id="anchor-116"></span>Zoom effect parameters<a href="#zoom-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="zoom-effect-parameters"><span id="anchor-116"></span>Zoom Effect Parameters<a href="#zoom-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The zoom effect has several parameters that can be adjusted by the user,
 including intensity, speed, and zoom type.</p>
 <p>The intensity slider adjusts how much of the zoom in/out effect is
@@ -2234,7 +2228,7 @@ fashion or a logarithmic one.</p>
 live activation of the effect. When this button is activated, the
 intensity slider is briefly changed to 100% while the button is held
 down, and then returns to its previous value once released.</p>
-<h3 id="default-apc40-mk2-zoom-effect-midi-mapping"><span id="anchor-117"></span>Default APC40 MK2 Zoom Effect MIDI mapping<a href="#default-apc40-mk2-zoom-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="default-apc40-mk2-zoom-effect-midi-mapping"><span id="anchor-117"></span>Default APC40 MK2 Zoom Effect MIDI Mapping<a href="#default-apc40-mk2-zoom-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The image below shows how this effect is mapped to an APC40 MK2 when
 using our default MIDI mapping provided on the SD card shipped with the
 LaserCube.</p>
@@ -2243,7 +2237,7 @@ LaserCube.</p>
 <p>This effect will re-colour the current projection to a user selected
 colour based on the hue, saturation, and intensity parameter
 adjustments.</p>
-<h3 id="hue-effect-parameters"><span id="anchor-119"></span>Hue effect parameters<a href="#hue-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="hue-effect-parameters"><span id="anchor-119"></span>Hue Effect Parameters<a href="#hue-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The images below show the available user parameters for the hue effect.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140D95EEE7D_hu_1f1b9ddef47a12b6-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014096A56829_hu_a3ce84a9c430a58f-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140322236BB_hu_cf39bd04e6101f74-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The “+White” works the same as described in the Colour cycle effect
@@ -2269,7 +2263,7 @@ LaserCube then any dials assigned to an effect or other device setting will
 indicate the current power on value using the associated APC LED ring.
 Absolute faders will always override any effect slider value set in the
 menu UI, since Faders have a finite start and end position.</p>
-<h3 id="default-apc40-mk2-hue-effect-midi-mapping"><span id="anchor-120"></span>Default APC40 MK2 Hue Effect MIDI mapping<a href="#default-apc40-mk2-hue-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="default-apc40-mk2-hue-effect-midi-mapping"><span id="anchor-120"></span>Default APC40 MK2 Hue Effect MIDI Mapping<a href="#default-apc40-mk2-hue-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The image below shows how the hue effect is mapped to an APC40 MK2 when
 using our default MIDI mapping provided on the SD card shipped with the
 LaserCube.</p>
@@ -2279,7 +2273,7 @@ LaserCube.</p>
 <p>The left image is without the effect applied, and the right with the
 effect applied.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000001000001440000012D467B9A06-324.webp" width="324" height="301" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/100000010000013E00000129B46BE63F-318.webp" width="318" height="297" alt="" loading="lazy" decoding="async"></div></div>
-<h3 id="colourize-effect-parameters"><span id="anchor-122"></span>Colourize effect parameters<a href="#colourize-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="colourize-effect-parameters"><span id="anchor-122"></span>Colourize Effect Parameters<a href="#colourize-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140EB88E597_hu_3ee2645d63ccb357-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140ECC676EF_hu_bfe209f89f02657c-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001404888522A_hu_e0749484fab6ed85-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The intensity parameter determines how much of the colour effect will be
 applied to the projection between 0% and 100%.</p>
@@ -2290,7 +2284,7 @@ live activation of the effect. When this button is activated, the
 intensity slider is briefly changed to 100% while the button is held
 down (fully activating the colourize effect), and then returns to its
 previous value once released.</p>
-<h3 id="default-apc40-mk2-colourize-effect-midi-mapping"><span id="anchor-123"></span>Default APC40 MK2 Colourize Effect MIDI mapping<a href="#default-apc40-mk2-colourize-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="default-apc40-mk2-colourize-effect-midi-mapping"><span id="anchor-123"></span>Default APC40 MK2 Colourize Effect MIDI Mapping<a href="#default-apc40-mk2-colourize-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The image below shows how the colourize effect is mapped to an APC40 MK2
 when using our default MIDI mapping provided on the SD card shipped with
 the LaserCube.</p>
@@ -2298,7 +2292,7 @@ the LaserCube.</p>
 <h2 id="flash-effect"><span id="anchor-124"></span>Flash Effect<a href="#flash-effect" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The flash effect will fade the current projection in/out to the beat or
 multiple of the current beat, based on the current tempo.</p>
-<h3 id="flash-effect-parameters"><span id="anchor-125"></span>Flash effect parameters<a href="#flash-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="flash-effect-parameters"><span id="anchor-125"></span>Flash Effect Parameters<a href="#flash-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001404AE7D36B_hu_a6295c8d438a1bbd-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140F8533FB0_hu_5f54adb7841ee98c-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The intensity parameter determines how much of the projection will have
 the flash fade applied, and is between 0% and 100%.</p>
@@ -2309,7 +2303,7 @@ live activation of the effect. When this button is activated, the
 intensity slider is briefly changed to 100% while the button is held
 down (fully activating the flash effect), and then returns to its
 previous value once released.</p>
-<h3 id="default-apc40-mk2-flash-effect-midi-mapping"><span id="anchor-126"></span>Default APC40 MK2 Flash Effect MIDI mapping<a href="#default-apc40-mk2-flash-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="default-apc40-mk2-flash-effect-midi-mapping"><span id="anchor-126"></span>Default APC40 MK2 Flash Effect MIDI Mapping<a href="#default-apc40-mk2-flash-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The image below shows how the flash effect is mapped to an APC40 MK2
 when using our default MIDI mapping provided on the SD card shipped with
 the LaserCube.</p>
@@ -2319,7 +2313,7 @@ the LaserCube.</p>
 fraction of the beat, or multiple of the current beat, based on the
 current tempo (see wiki for <a href="#tempo-settings">tempo</a>
 menu).</p>
-<h3 id="strobe-effect-parameters"><span id="anchor-128"></span>Strobe effect parameters<a href="#strobe-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="strobe-effect-parameters"><span id="anchor-128"></span>Strobe Effect Parameters<a href="#strobe-effect-parameters" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F00000014060CC21E1_hu_43c4950d6f9cb02f-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140F8533FB0_hu_5f54adb7841ee98c-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The intensity parameter determines the amount the projection will have
 the strobe applied, and is between 0% and 100%.</p>
@@ -2330,7 +2324,7 @@ live activation of the effect. When this button is activated, the
 intensity slider is briefly changed to 100% while the button is held
 down (fully activating the strobe effect), and then returns to its
 previous value once released.</p>
-<h3 id="default-apc40-mk2-strobe-effect-midi-mapping"><span id="anchor-129"></span>Default APC40 MK2 Strobe Effect MIDI mapping<a href="#default-apc40-mk2-strobe-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="default-apc40-mk2-strobe-effect-midi-mapping"><span id="anchor-129"></span>Default APC40 MK2 Strobe Effect MIDI Mapping<a href="#default-apc40-mk2-strobe-effect-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The image below shows how the strobe effect is mapped to an APC40 MK2
 when using our default MIDI mapping provided on the SD card shipped with
 the LaserCube.</p>
@@ -2377,9 +2371,9 @@ Ethernet connection will minimize this. Clicking on this entry will
 reset the count to zero.</p></blockquote>
 <blockquote><p><strong>MAC Address:</strong> MAC Address, unique to each Ultra MK2 / Pro
 LaserCube.</p></blockquote>
-<h1 id="midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii"><span id="anchor-133"></span>MIDI Mapping using an APC40 MK II or APC Mini MK II<a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
-<p>The Ultra MK2 / Pro is capable of being controlled directly using an APC
-40 MK2 or an APC mini MK2 (others will be added TBD.) connected to the
+<h1 id="midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii"><span id="anchor-133"></span>MIDI Mapping using an APC40 MK2 or APC mini MK2<a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>The Ultra MK2 / Pro is capable of being controlled directly using an
+APC40 MK2 or an APC mini MK2 (others will be added TBD.) connected to the
 USB port on the rear of the unit.</p>
 <p>In order for any MIDI mapping to be saved, an SD card must be inserted
 with the correct path to the settings folder present on the card. The
@@ -2523,7 +2517,7 @@ a good working state should an update fail or be interrupted.</p>
 <ul><li><strong>WiFi Tab</strong>, for Wireless ConnectionSettings</li><li><strong>LAN Tab</strong>, for Wired Connection Settings</li><li><strong>General Tab</strong>, for Connection Mode Selection</li></ul>
 <h3 id="wifi-tab"><span id="anchor-144"></span><span id="anchor-145"></span>WiFi Tab<a href="#wifi-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <img src="Pictures/web/10000000000003400000035CF6EE9CD3-832.webp" width="498" height="515" alt="" loading="lazy" decoding="async">
-<p>Where WiFi interference is present, the LaserCubeWiFi channel can be
+<p>Where WiFi interference is present, the LaserCube WiFi channel can be
 changed.</p>
 <p>The IP address and Subnet can be set for when the LaserCube is operating
 in WiFi Server mode, where it provides a DHCP service.</p>
@@ -2575,7 +2569,7 @@ factory version, the unit will offer to immediately update to the latest
 version. This should be done to ensure the latest firmware is running in
 your device.</p>
 <h1 id="sd-card-information"><span id="anchor-152"></span>SD Card Information<a href="#sd-card-information" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
-<p>The Ultra MK2 / Pro LaserCube is supplied with a pre-loaded micro SD
+<p>The LaserCube Ultra MK2 / Pro is supplied with a pre-loaded micro SD
 card containing all demo laser shows, Playlists, and MIDI mappings for
 APC40 MK2 and APC mini MK2.</p>
 <p>If you need additional SD cards then these can be obtained from places
