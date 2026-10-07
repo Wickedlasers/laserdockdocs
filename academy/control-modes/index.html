@@ -93,7 +93,7 @@
       <h1>Control modes for the Ultra MK2 and Pro</h1>
       <p class="lead">Eight short lessons on running your cube without a laptop, or from your lighting desk: your own playlists from the SD card, shows that follow the music, laser shows on several cubes at once, DMX and Art‑Net, and MIDI controllers. Pass the final quiz and download your certificate.</p>
       <ul class="meta">
-        <li><svg class="icon"><use href="#i-book"/></svg>8 lessons + quiz, about 45 minutes</li>
+        <li><svg class="icon"><use href="#i-book"/></svg>8 lessons + quiz, about 45 minutes plus videos</li>
         <li><svg class="icon"><use href="#i-cube"/></svg>Ultra MK2 &amp; Pro</li>
         <li><svg class="icon"><use href="#i-user"/></svg>No account needed</li>
         <li><svg class="icon"><use href="#i-award"/></svg>Free certificate</li>
@@ -156,7 +156,7 @@
   </ul>
   <div class="warn">
     <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
-    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies in every control mode: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, two ways to stop the laser within reach, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies in every control mode: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, two ways to stop the laser within reach, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
   </div>
   <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/">LaserCube Ultra MK2 &amp; Pro manual</a>, and our video tutorials. If a video and the manual differ, follow the manual.</p>
   <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
@@ -191,7 +191,7 @@
         <li><strong>IDN:</strong> the ILDA Digital Network protocol, streaming up to 35,000 points per second.</li>
         <li><strong>Ether Dream:</strong> the Ether Dream network protocol, for third‑party laser software.</li>
       </ul>
-      <p class="note"><strong>ILDA input:</strong> an external ILDA interface (DAC) from other show software plugs into the ILDA input on the back. The cube switches to it by itself, and it overrides the current mode. The manual suggests setting that software’s scan rate to 30,000 points per second.</p>
+      <p class="note"><strong>ILDA input:</strong> other show software can send its signal through its own interface box (a DAC) into the ILDA input, the standard laser show connector. The cube switches to it by itself, overriding the current mode. The manual suggests 30,000 points per second in that software, and raising In Mute under Settings → ILDA Input Cfg if a faint beam stays on.</p>
     </div>
   </div>
 
@@ -218,12 +218,16 @@
     <p>In Playlist mode, the last playlist starts as soon as the interlock is enabled, because Power‑On Play is on by default. Effect settings you change on the cube are kept after a power cycle. So once the key is on and the interlock is ready (on US cubes, after the E‑Stop start), the show may start straight away.</p>
   </div>
 
-  <h3>The SD card</h3>
+  <h3>Before you start: update the firmware</h3>
   <ul class="points">
-    <li>The microSD card in the cube holds the content for the stand‑alone modes, DMX, Art‑Net and MIDI: the built‑in laser shows, demo playlists and MIDI mappings come on it.</li>
-    <li>Missing files? The latest card contents are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Unzip them and copy the “Lasercube” folder to the root of the card. Deleting the old folder also deletes your own playlists and MIDI mappings.</li>
-    <li>Need a new card? The one the manual names as tested is the Lexar A2 Silver Plus 64GB. Cheaper cards may fail to stream the laser shows. If you format it, use exFAT, and name the card “WL”.</li>
+    <li>This course follows the manual, which describes firmware 2.0 (for example its 91 visualizers).</li>
+    <li>The manual’s preferred way to update is the SD card: when the card has newer firmware, the cube asks whether to update. LaserOS also offers updates. The latest card contents on GitHub (lesson 2) include the newest firmware.</li>
   </ul>
+  <div class="video" data-yt="Jtd9Il9sAus" data-title="LaserCube Ultra MK2 Firmware 2.0 upgrade: what's new and how to upgrade">
+    <button type="button" aria-label="Play video: firmware 2.0, what’s new and how to upgrade"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/Jtd9Il9sAus.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Firmware 2.0: what’s new and how to upgrade</span><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Watch on YouTube</a></p>
 
   <div class="practice">
     <h3>Check yourself</h3>
@@ -259,7 +263,7 @@
     </fieldset>
   </div>
 
-  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#control-modes">Control modes</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS screen and status bar</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#projection-settings">Projection settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#sd-card-information">SD card</a></p>
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#control-modes">Control modes</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS screen and status bar</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#projection-settings">Projection settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#firmware-update">Firmware update</a></p>
   <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 2.</p>
   <nav class="pager" aria-label="Lesson 1: back and next"><a data-nav href="#overview"><span>Back</span>How this course works</a><a class="next" data-nav href="#lesson-2"><span>Next</span>Build a playlist in LaserOS</a></nav>
 </section>
@@ -277,11 +281,18 @@
   </div>
   <p class="video-meta"><span>Importing a playlist to the SD card</span><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Watch on YouTube</a></p>
 
+  <h3>The SD card</h3>
+  <ul class="points">
+    <li>The microSD card in the cube holds the content for the stand‑alone modes, DMX, Art‑Net and MIDI: the built‑in laser shows, demo playlists and MIDI mappings come on it.</li>
+    <li>Missing files? The latest card contents, including the newest firmware, are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Unzip them and copy the “Lasercube” folder to the root of the card. Deleting the old folder also deletes your own playlists and MIDI mappings.</li>
+    <li>Need a new card? The one the manual names as tested is the Lexar A2 Silver Plus 64GB. Cheaper cards may fail to stream the laser shows. If you format it, use exFAT, and name the card “WL”.</li>
+  </ul>
+
   <h3>Make the playlist</h3>
   <ul class="points">
     <li>Use LaserOS 0.18.1 or later on a Windows or Mac computer. The phone and tablet apps only stream to the cube: they can’t put content on its SD card.</li>
     <li>Open the Playlists app, click the small <strong>+</strong> and save the new playlist. Keep the name short: the cube’s screen can only show a limited number of characters.</li>
-    <li>Add content: drag cues into the playlist pane on the right, or right‑click any cue, pick your playlist under “Add To Playlist” and click Add.</li>
+    <li>Add content: drag cues (each item in LaserOS, such as an animation, is a cue) into the playlist pane on the right, or right‑click any cue, pick your playlist under “Add To Playlist” and click Add.</li>
   </ul>
 
   <h3>Add your own logo</h3>
@@ -298,9 +309,9 @@
   <ul class="points">
     <li>Put the cube’s microSD card in a USB 3.x card reader and connect it to the computer. It shows up as a drive called <strong>WL</strong>, with a folder called “Lasercube”.</li>
     <li>In the Playlists app, select the playlist and click the SD card export button. If the computer asks for access to the card, allow it. If the playlist is already on the card, you can replace it.</li>
-    <li>“SD card not found”? Check that the card is properly in the reader, that it’s named WL (rename it if not) and that it has the Lasercube folder (if not, get the card contents from GitHub, lesson 1).</li>
+    <li>“SD card not found”? Check that the card is properly in the reader, that it’s named WL (rename it if not) and that it has the Lasercube folder (if not, get the card contents from GitHub, above).</li>
     <li>On the card, each playlist is a “.ldpl” file plus a folder with the same name. The cube only lists the playlist if both are there. The .ldpl file is plain text, and its order is the play order (with shuffle off).</li>
-    <li>Eject the card safely before you take it out, then put it back in the cube.</li>
+    <li>Eject the card safely before you take it out. Put it back in the cube, then switch the cube on.</li>
   </ul>
 
   <div class="practice">
@@ -312,7 +323,7 @@
         <li>Add cues and import your logo</li>
         <li>Export it to the SD card, in a USB 3.x reader</li>
         <li>Eject the card safely</li>
-        <li>Put the card in the cube and choose Playlist mode</li>
+        <li>Put the card back in the cube and switch it on</li>
       </ol>
       <p class="why" hidden>Build the playlist first, export it to the card on the computer, and eject the card safely before it goes back in the cube.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
@@ -350,7 +361,7 @@
     </fieldset>
   </div>
 
-  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#creating-a-custom-playlist">Creating a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-a-custom-svg-to-the-playlist">Adding your own SVG</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#exporting-a-playlist-to-the-micro-sd-card">Exporting to the SD card</a></p>
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#creating-a-custom-playlist">Creating a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-a-custom-svg-to-the-playlist">Adding your own SVG</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#exporting-a-playlist-to-the-micro-sd-card">Exporting to the SD card</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#sd-card-information">SD card</a></p>
   <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 3.</p>
   <nav class="pager" aria-label="Lesson 2: back and next"><a data-nav href="#lesson-1"><span>Back</span>Pick a control mode</a><a class="next" data-nav href="#lesson-3"><span>Next</span>Play it on the cube</a></nav>
 </section>
@@ -426,7 +437,7 @@
     <fieldset class="check" data-answer="c">
       <legend><span class="qn">Question 3</span>Your phone is on the cube’s WiFi, which uses the factory settings. Which address opens the web app?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l3q3" value="a"><span>www.laseros.com/webapp</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="a"><span>Your home router’s address</span></label>
         <label class="opt"><input type="radio" name="l3q3" value="b"><span>The cube’s MAC address</span></label>
         <label class="opt"><input type="radio" name="l3q3" value="c"><span>192.168.4.1</span></label>
       </div>
@@ -469,12 +480,13 @@
   <ul class="points">
     <li>In Playlist and Visualizer modes, the Effects menu adds effects that warp or re‑colour the image: zooms, 3D spins, ripples, colour cycles, strobes and more, 78 in all. Most react to the sound or the tempo.</li>
     <li>Effects only work once they’re enabled. The manual recommends keeping them disabled when you don’t need them, so the projection doesn’t change by accident.</li>
+    <li>The Master Effect slider sets how strongly all effects apply: 100% by default; at 0% no effect is applied.</li>
     <li>Effect settings you change on the cube are kept after a power cycle.</li>
     <li>In the web apps’ quick effect menu, you pick one image effect and one colour effect at a time; “No Effect” turns one off.</li>
   </ul>
 
   <h3>The Visualizer web app</h3>
-  <p>Visualizer mode has its own web app, opened like the playlist one. In it you pick playlists and make your own: long‑press a visual to add it to a playlist, and hold and drag to change the order. The built‑in “All” and “Classics” playlists can’t be deleted. If the previews show as blank squares, update the SD card from GitHub (lesson 1).</p>
+  <p>Visualizer mode has its own web app, opened like the playlist one. In it you pick playlists and make your own: long‑press a visual to add it to a playlist, and hold and drag to change the order. The built‑in “All” and “Classics” playlists can’t be deleted. If the previews show as blank squares, update the SD card from GitHub (lesson 2).</p>
 
   <div class="practice">
     <h3>Check yourself</h3>
@@ -525,7 +537,7 @@
   <h3>Play a built‑in show</h3>
   <ul class="points">
     <li>Choose <strong>Control Mode → Laser Show</strong>, pick a category, then press play. There are 38 shows in 7 categories: EDM, Christmas, Thanksgiving, New Year, Birthday, Wedding and Halloween. When a show ends, the next one in the category starts.</li>
-    <li>Empty list? The SD card is missing, or it doesn’t have the factory contents (lesson 1).</li>
+    <li>Empty list? The SD card is missing, or it doesn’t have the factory contents (lesson 2).</li>
     <li>The music comes out of the green 3.5&nbsp;mm jack marked A‑OUT: connect powered speakers. <strong>Settings → Audio → Audio Output Volume</strong> sets the level.</li>
     <li>Some speakers with built‑in light effects delay the sound, by as much as 300&nbsp;ms. Then use <strong>Audio Output Delay</strong> to bring the music and the laser back in sync. A new delay applies when you stop and start the show again.</li>
   </ul>
@@ -537,13 +549,18 @@
   </div>
   <p class="video-meta"><span>Wireless multi‑cube shows with Cube Link</span><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Watch on YouTube</a></p>
   <ul class="points">
-    <li>Cube Link makes its own wireless link between the cubes, over about 20 to 40&nbsp;m with a clear line of sight. Connect the WiFi antenna on every cube first. It isn’t available while the cube’s connection mode is set to WiFi.</li>
-    <li>On every cube, enable Cube Link and set the <strong>same Link Channel and the same PIN</strong>.</li>
+    <li>Cube Link makes its own wireless link between the cubes, over about 20 to 40&nbsp;m with a clear line of sight. Connect the WiFi antenna on every cube first.</li>
+    <li>It’s under <strong>Settings → Network → Cube Link</strong>, and it’s only available when the connection mode isn’t WiFi. If it is, choose a LAN mode under Settings → Connection first; the cube restarts.</li>
+    <li>On every cube, choose Laser Show mode, enable Cube Link and set the <strong>same Link Channel and the same PIN</strong>. For the PIN, highlight the PIN box and short‑press to open it; turn the knob to change the highlighted digit, short‑press to move to another digit, and long‑press to close it.</li>
     <li>Make <strong>one</strong> cube the Master and all the others Slaves.</li>
     <li>Set each cube’s <strong>Group</strong>. A show made for two projectors, such as Alive (2CH), has two parts: Group 1 cubes play one, Group 2 cubes the other. With four cubes, put two in each group.</li>
     <li>Pick the same show category on every cube. Pressing play on the master then starts them all.</li>
     <li>A slave that has found its master shows a purple status bar. Status Info shows how many slaves are connected (“Remote Slaves”).</li>
   </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Every cube is its own laser</span>
+    <p>Pressing play on the master starts lasers that may be 20 to 40&nbsp;m away. Each cube has its own key and interlock. On every cube: its beam block set (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>), and every beam and where it lands in view of someone who can get that laser stopped at once (<a class="link" href="../start-here/#lesson-4">lesson 4</a>).</p>
+  </div>
   <div class="two shots">
     <figure>
       <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F0000001408A34D6F2-240.webp" alt="The Cube Link menu on a master cube, from the manual: Enable is on and Cube Link is set to Master. The status bar is black." width="240" height="320" loading="lazy">
@@ -567,12 +584,12 @@
       <p class="task">Put the Cube Link set‑up in order.</p>
       <ol>
         <li>Connect the WiFi antenna on every cube</li>
-        <li>Enable Cube Link on every cube</li>
+        <li>Set a LAN connection, then enable Cube Link on every cube</li>
         <li>Set one Master and the rest Slaves, all on the same channel and PIN</li>
         <li>Check that every slave’s status bar turns purple</li>
         <li>Press play on the master</li>
       </ol>
-      <p class="why" hidden>Antennas first, then enable Cube Link on each cube, then one master and the slaves, all on the same channel and PIN. Once every slave shows purple, play on the master starts them all.</p>
+      <p class="why" hidden>Antennas first, then a LAN connection and Cube Link on each cube, then one master and the slaves, all on the same channel and PIN. Once every slave shows purple, play on the master starts them all.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -629,13 +646,14 @@
   <h3>DMX or Art‑Net?</h3>
   <ul class="points">
     <li><strong>DMX:</strong> a DMX cable from the desk or controller into the cube’s DMX In.</li>
-    <li><strong>Art‑Net:</strong> the same control over the network (Ethernet), from desks and software that speak Art‑Net.</li>
+    <li><strong>Art‑Net:</strong> the same control over the network (Ethernet), from desks and software that speak Art‑Net. Connect a network cable and choose the connection under Settings → Connection, for example LAN client (<a class="link" href="../start-here/#lesson-7">Start here, lesson 7</a>).</li>
   </ul>
+  <p class="note"><strong>Who runs the laser:</strong> whoever runs the desk is running a Class 4 laser. The manual says only people trained in laser safety may operate it, and Start here’s rules still apply: every beam in view of someone who can stop the laser, and two ways to stop it, tested before the show.</p>
 
   <h3>DMX cables</h3>
   <ul class="points">
     <li><strong>Ultra MK2:</strong> full‑size XLR DMX In and Out. Standard DMX cables plug straight in.</li>
-    <li><strong>Pro:</strong> DMX In and Out are two 3.5&nbsp;mm TRS jacks, In on the left and Out on the right. Each needs an adapter cable, not included: for DMX In a 3.5&nbsp;mm TRS plug to 3‑pin XLR male, for DMX Out a 3.5&nbsp;mm TRS plug to 3‑pin XLR female.</li>
+    <li><strong>Pro:</strong> DMX In and Out are two 3.5&nbsp;mm TRS jacks (headphone‑size sockets), In on the left and Out on the right. Each needs an adapter cable, not included: for DMX In a 3.5&nbsp;mm TRS plug to 3‑pin XLR male (the end with pins), for DMX Out a 3.5&nbsp;mm TRS plug to 3‑pin XLR female (the end with holes).</li>
     <li>Both Pro cables are wired tip to XLR pin 3, ring to pin 2, sleeve to pin 1. Ordinary 3.5&nbsp;mm‑to‑XLR audio cables are wired the other way round, so they won’t work. The manual names Eurolite’s “DMX‑Adapter IN Jack 3,5/XLR” and “DMX‑Adapter OUT Jack 3,5/XLR”.</li>
   </ul>
 
@@ -643,8 +661,8 @@
   <ul class="points">
     <li>Choose <strong>Control Mode → DMX‑512</strong> (or ArtNet). The cube restarts, and the DMX (or ArtNet) menu is now in the main menu.</li>
     <li><strong>Start Address:</strong> where the cube’s 16 channels begin, from 1 to 512 (default 1). Set the same address for the cube on your desk.</li>
-    <li><strong>Universe</strong> (Art‑Net only): the Art‑Net universe the cube listens to.</li>
-    <li><strong>Fixture Profile:</strong> there’s one, with 16 channels. It matches the FB3/FB4 16‑channel profile, so desks that support FB3/FB4 should work with it.</li>
+    <li><strong>Universe</strong> (Art‑Net only): the Art‑Net universe, a numbered set of 512 channels on the network, that the cube listens to.</li>
+    <li><strong>Fixture Profile:</strong> decides which channel controls which feature. There’s one, with 16 channels (lesson 7; the channel map is also a PDF on the factory SD card). It’s compatible with the FB3/FB4 16‑channel profile, so desks that support FB3/FB4 should work with it.</li>
     <li><strong>CUE Selection:</strong> the playlist on the SD card that the desk picks cues from. Cue 1 is the playlist’s first item. Export your own from LaserOS (lesson 2) or use one that came on the card.</li>
     <li><strong>Defaults</strong> puts every item in the menu back to its factory setting.</li>
   </ul>
@@ -680,7 +698,7 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="a">
-      <legend><span class="qn">Question 2</span>Your desk has the cube patched at address 101. What do you set on the cube?</legend>
+      <legend><span class="qn">Question 2</span>On your desk, the cube is set to start at address 101. What do you set on the cube?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l6q2" value="a"><span>DMX start address 101</span></label>
         <label class="opt"><input type="radio" name="l6q2" value="b"><span>Art‑Net universe 101</span></label>
@@ -734,6 +752,9 @@
     <li><strong>Channel 2, page:</strong> moves on in steps of 48 cues. 0&#8288;–&#8288;15 is page 1 (cues 1&#8288;–&#8288;48), 17&#8288;–&#8288;31 is page 2 (cues 49&#8288;–&#8288;96), and so on up to page 9 (129&#8288;–&#8288;255). That’s up to 432 cues in a playlist.</li>
     <li>Example: cue 50 of your playlist is page 2 (channel 2 at 17&#8288;–&#8288;31), cue 2 on that page (channel 3 at 37&#8288;–&#8288;39).</li>
   </ul>
+
+  <h3>A first test</h3>
+  <p>Send channel 1 at 33&#8288;–&#8288;95 (Basic), channel 2 at 0&#8288;–&#8288;15 (page 1), channel 3 at 33&#8288;–&#8288;35 (cue 1) and channel 4 at 0&#8288;–&#8288;15 (normal speed). The cube plays the first item of the CUE Selection playlist, at full brightness and full size (in Basic, channels 5 and 6 stay at 100%). With every channel at 0, it shows nothing: channel 1 at 0 is blackout.</p>
 
   <h3>The other channels</h3>
   <ul class="points">
@@ -811,7 +832,7 @@
 
   <h3>The ready‑made mapping</h3>
   <ul class="points">
-    <li>The SD card that comes with the cube has ready‑made mappings for the APC40 MK2 and the APC mini MK2. In the APC40 MK2 one, the blue items work in Playlist mode, the red ones are effects (Playlist and Visualizer modes), and the yellow ones are image settings for the whole cube, such as power, rotation, zoom and position. The tempo buttons are mapped too.</li>
+    <li>The SD card that comes with the cube has ready‑made mappings for the APC40 MK2 and the APC mini MK2. In the APC40 MK2 one, the blue items work in Playlist mode, the red ones are effects (Playlist and Visualizer modes), and the yellow ones are image settings for the whole cube, such as power, rotation, zoom and position. The tempo buttons are mapped too. The Master fader is the master effect intensity: no effect shows until it’s above 0%.</li>
     <li>In Playlist mode, the playlist’s items are put on the APC’s grid buttons by themselves. To choose the button and colour for each item, edit the playlist’s .ldpl file (the manual explains the apc_note and apc_color fields).</li>
   </ul>
   <figure>
@@ -828,6 +849,7 @@
     <li><strong>Buttons, switches and drop‑down lists</strong> (such as the playlist or the laser show list): highlight it (in a list, pick the item first), long‑press, choose “Link MIDI Note”, press a button on the APC and pick its light colour, one of 15.</li>
     <li>To remove a mapping, open the same menu and choose Unlink.</li>
   </ul>
+  <p class="note"><strong>Safety:</strong> with the factory mapping, the yellow dials change the power, rotation, zoom and position of the image while it plays. Whatever the controller sends, the beam block is your hard stop (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>).</p>
 
   <div class="practice">
     <h3>Check yourself</h3>
@@ -887,35 +909,30 @@
   <div id="quiz-result" class="result" hidden></div>
 
   <div class="bank" hidden>
-    <fieldset class="check" data-answer="c" data-group="modes" data-lesson="1"><legend><span class="qn"></span>The venue’s lighting technician wants to run your cube from their desk, over the network. Which mode?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Playlist</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Visualizer</span></label>
+    <fieldset class="check" data-answer="c" data-group="modes" data-lesson="1"><legend><span class="qn"></span>You want to run the cube from a lighting desk over the network. Which mode?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>DMX</span></label>
+      <label class="opt"><input type="radio" value="b"><span>LaserOS</span></label>
       <label class="opt"><input type="radio" value="c"><span>Art‑Net</span></label></div>
-      <p class="why" hidden>Art‑Net is DMX‑style control over the network. Over a DMX cable, it would be DMX mode.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="a" data-group="modes" data-lesson="1"><legend><span class="qn"></span>Which of these modes needs software streaming to the cube the whole time?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>IDN</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Laser Show</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Visualizer</span></label></div>
-      <p class="why" hidden>IDN streams laser data over the network. Laser Show and Visualizer play on the cube by themselves.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>Art‑Net is lighting‑desk control over the network. DMX uses a DMX cable; LaserOS mode is for LaserOS and other software streaming laser data.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="modes" data-lesson="1"><legend><span class="qn"></span>You plug show software’s own ILDA interface into the cube’s ILDA input. What happens?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Nothing until you choose an ILDA mode</span></label>
       <label class="opt"><input type="radio" value="b"><span>The cube restarts in DMX mode</span></label>
       <label class="opt"><input type="radio" value="c"><span>The cube switches to it by itself</span></label></div>
       <p class="why" hidden>The cube switches to the ILDA input automatically, and it overrides the current mode. The status bar turns cyan.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="b" data-group="own" data-lesson="1"><legend><span class="qn"></span>You stream from LaserOS. Why are Image Setup and Safety Zone greyed out on the cube?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>The interlock is still open</span></label>
-      <label class="opt"><input type="radio" value="b"><span>LaserOS handles them in this mode</span></label>
-      <label class="opt"><input type="radio" value="c"><span>They need an SD card in the cube</span></label></div>
-      <p class="why" hidden>In LaserOS mode, LaserOS handles the image setup, colour balance and safety zones. In the cube’s own modes, its own settings apply.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="own" data-lesson="1"><legend><span class="qn"></span>You stream from LaserOS. Where do you set the colour balance?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In LaserOS’s own settings</span></label>
+      <label class="opt"><input type="radio" value="b"><span>On the cube, under Settings → Projection</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In the playlist web app</span></label></div>
+      <p class="why" hidden>In LaserOS mode, LaserOS handles the image setup, colour balance and safety zones, so those entries are greyed out on the cube.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="own" data-lesson="3"><legend><span class="qn"></span>Your cube’s battery ran flat. You recharge it, switch on, and the key and interlock are ready again. It’s in Playlist mode with Power‑On Play on. What happens?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The playlist starts projecting again</span></label>
       <label class="opt"><input type="radio" value="b"><span>Nothing until you press play</span></label>
       <label class="opt"><input type="radio" value="c"><span>Nothing until the web app connects</span></label></div>
       <p class="why" hidden>With Power‑On Play on, the last playlist starts as soon as the interlock is enabled. Set it to Disabled if the cube should wait for you.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="c" data-group="own" data-lesson="1"><legend><span class="qn"></span>You’re in Playlist mode. Where on the cube do you set the image size and power?</legend><div class="opts">
+    <fieldset class="check" data-answer="c" data-group="own" data-lesson="1"><legend><span class="qn"></span>You’re in Playlist mode. Where do you set the image size and power for the cube?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>In LaserOS’s own projection settings</span></label>
-      <label class="opt"><input type="radio" value="b"><span>The web app’s quick player settings</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Playlist Options menu</span></label>
       <label class="opt"><input type="radio" value="c"><span>Settings → Projection → Image Setup</span></label></div>
       <p class="why" hidden>In the cube’s own modes, its own Image Setup applies: power, rotation, size, flip and position.</p><p class="feedback"></p></fieldset>
 
@@ -929,11 +946,11 @@
       <label class="opt"><input type="radio" value="b"><span>PNG or JPG</span></label>
       <label class="opt"><input type="radio" value="c"><span>PDF or GIF</span></label></div>
       <p class="why" hidden>The manual recommends SVG or ILD. A PNG or JPG has to be turned into lines first.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="build" data-lesson="2"><legend><span class="qn"></span>A playlist’s folder is on the SD card, but its .ldpl file was deleted. What does the cube do?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Plays the folder in name order</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Leaves that playlist off its list</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Rebuilds the missing file itself</span></label></div>
-      <p class="why" hidden>The cube only lists a playlist when both the .ldpl file and its folder are on the card.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="build" data-lesson="2"><legend><span class="qn"></span>Your new playlist doesn’t show up on the cube. What must be on the SD card?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Its .ldpl file and its folder, both</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Only the folder with the cues</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A copy of LaserOS for the cube</span></label></div>
+      <p class="why" hidden>The cube only lists a playlist when both the .ldpl file and the folder with the same name are on the card.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="play" data-lesson="3"><legend><span class="qn"></span>Each cue should play for 30 seconds, then the next. Where do you set that?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The fade time in Playlist Options</span></label>
@@ -973,10 +990,10 @@
       <label class="opt"><input type="radio" value="c"><span>The audio output volume is set to 0%</span></label></div>
       <p class="why" hidden>The laser shows come on the SD card. Put the card in, or copy the factory contents from GitHub.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="shows" data-lesson="5"><legend><span class="qn"></span>Where does the music of a built‑in laser show come out?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>The cube’s own built‑in speaker</span></label>
-      <label class="opt"><input type="radio" value="b"><span>The DMX Out jack, to your desk</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The A‑OUT jack, to powered speakers</span></label></div>
-      <p class="why" hidden>Show audio plays from the green 3.5&nbsp;mm A‑OUT jack. Connect powered speakers there.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="a"><span>The pink A‑IN jack, to your speakers</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A USB speaker in the USB port</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The green A‑OUT jack, to powered speakers</span></label></div>
+      <p class="why" hidden>Show audio plays from the green 3.5&nbsp;mm A‑OUT jack. A‑IN is the audio input for the Visualizer.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="link" data-lesson="5"><legend><span class="qn"></span>Can you use Cube Link while the cube’s connection mode is WiFi server?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Yes, it shares that WiFi</span></label>
@@ -988,11 +1005,11 @@
       <label class="opt"><input type="radio" value="b"><span>Which cube is the master</span></label>
       <label class="opt"><input type="radio" value="c"><span>Which WiFi channel it uses</span></label></div>
       <p class="why" hidden>In a show made for two projectors, Group 1 cubes play one part and Group 2 cubes the other.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="c" data-group="link" data-lesson="5"><legend><span class="qn"></span>Does Cube Link need a WiFi network at the venue?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Yes, every cube must join it</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Only for more than two cubes</span></label>
-      <label class="opt"><input type="radio" value="c"><span>No, it makes its own link</span></label></div>
-      <p class="why" hidden>Cube Link makes its own wireless link between the cubes, over about 20 to 40&nbsp;m with a clear line of sight. Connect every cube’s antenna.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="link" data-lesson="5"><legend><span class="qn"></span>Four linked cubes play from the master. What does each cube need?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Only the master needs its beam block set</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Its beam block set and its beams watched</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Its own WiFi network to reach the master</span></label></div>
+      <p class="why" hidden>Each cube is its own laser with its own key and interlock. Start here’s rules apply to every one: its beam block set, and every beam in view of someone who can get that laser stopped at once.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Which cable goes into a Pro’s DMX In jack?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>3.5&nbsp;mm TRS to 3‑pin XLR female</span></label>
@@ -1001,14 +1018,19 @@
       <p class="why" hidden>DMX In takes a 3.5&nbsp;mm TRS plug to 3‑pin XLR male, wired for DMX. DMX Out takes the female version.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>The DMX desk is running, but the cube shows a red cross next to DMX. What do you check?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The cabling and the termination</span></label>
-      <label class="opt"><input type="radio" value="b"><span>The Cube Link channel and PIN</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The line gain and the tempo</span></label></div>
-      <p class="why" hidden>The manual says to check the cabling, and that the DMX line is correctly terminated.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="c" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Your lighting desk supports the FB3/FB4 16‑channel profile. What does the manual say?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>It won’t work: the cube has its own profile</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Only over Art‑Net, never over DMX</span></label>
-      <label class="opt"><input type="radio" value="c"><span>It should work: the profiles match</span></label></div>
-      <p class="why" hidden>The cube’s default profile is compatible with the FB3/FB4 16‑channel profile, so a desk with FB3/FB4 support should work with it, over DMX or Art‑Net.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="b"><span>The start address on the cube</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The CUE Selection playlist</span></label></div>
+      <p class="why" hidden>A red cross means no DMX is arriving. The manual says to check the cabling, and that the DMX line is correctly terminated.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Your desk asks for cue 1, but the cube shows something you didn’t expect. What decides which item is cue 1?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The start address on the cube</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The order of the CUE Selection playlist</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The order of the built‑in laser shows</span></label></div>
+      <p class="why" hidden>Cues follow the order of the playlist chosen under CUE Selection: cue 1 is its first item.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Who may run the lighting desk while it controls the cube?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Anyone the venue sends to run it</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Someone trained in laser safety</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Any DJ who knows that desk well</span></label></div>
+      <p class="why" hidden>Whoever runs the desk is running a Class 4 laser. The manual says only people trained in laser safety may operate it.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="channels" data-lesson="7"><legend><span class="qn"></span>You want the desk to rotate the image. What must channel 1 be set to, at least?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Basic (33&#8288;–&#8288;95)</span></label>
@@ -1026,11 +1048,11 @@
       <label class="opt"><input type="radio" value="c"><span>The image at half its normal width</span></label></div>
       <p class="why" hidden>0 is full size the other way round, so the image is mirrored. 128 is zero size; 255 is full size.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="c" data-group="midi" data-lesson="8"><legend><span class="qn"></span>Which MIDI controllers does the manual name for the cube?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Any USB MIDI keyboard</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Only DMX‑to‑MIDI converters</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The APC40 MK2 and APC mini MK2</span></label></div>
-      <p class="why" hidden>The cube works directly with an APC40 MK2 or APC mini MK2 on its USB port.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="midi" data-lesson="8"><legend><span class="qn"></span>With the factory APC40 MK2 mapping, you move the effect faders but nothing changes. What do you check?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>That the Master fader is above 0%</span></label>
+      <label class="opt"><input type="radio" value="b"><span>That the tempo dial is at 120 BPM</span></label>
+      <label class="opt"><input type="radio" value="c"><span>That the cue speed dial is at 100%</span></label></div>
+      <p class="why" hidden>The Master fader is the master effect intensity. At 0%, no effect is applied.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="midi" data-lesson="8"><legend><span class="qn"></span>You link a slider to an APC control that’s already mapped to something else. What does the screen show?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The MIDI info in orange</span></label>
       <label class="opt"><input type="radio" value="b"><span>An error, and nothing changes</span></label>
