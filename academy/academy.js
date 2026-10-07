@@ -350,6 +350,15 @@
     $("button[type=submit]", quizForm).hidden = false;
   }
 
+  // after a submit with blanks: clear a question's mark once it is answered, and keep the count right
+  if (quizList) quizList.addEventListener("change", function (e) {
+    var q = e.target.closest(".check");
+    if (q && q.classList.contains("missing")) { q.classList.remove("missing"); $(".feedback", q).textContent = ""; }
+    if (!quizMsg.textContent) return;
+    var left = $$(".check", quizList).filter(function (x) { return !$("input:checked", x); }).length;
+    quizMsg.textContent = left ? "Answer all " + PICK + " questions first (" + left + " left)." : "";
+  });
+
   function renderFinal() {
     if (!final) return;
     var missing = lessons.filter(function (l) { return !state.done[l.id]; });
