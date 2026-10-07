@@ -5,24 +5,28 @@ https://wiki.laseros.com (GitHub Pages) and on the office LAN at http://goldmine
 There is no build step: a push to `main` publishes these files as they are.
 
 The wiki is the **LaserCube User Wiki** for the LaserCube Ultra MK2 and the LaserCube Pro
-(the compact Ultra MK2, called "Evo" before launch). The manual lives at
+(the compact Ultra MK2). The manual lives at
 `docs/guides/ultra-mk2-pro-manual/`. Its old address `docs/guides/ultra-mk2-full-manual-v1.4/`
 is a redirect that keeps the `#anchor`, because laseros.com FAQ answers link to it.
 
 ## What goes where
 
-Three places, each with one job. The header menus (homepage, manual, 404 page) use these names in this order;
-the Academy's own header should match.
+Three places, each with one job. The header menus (homepage, manual, and the 404 page on wider screens) use these
+names in this order; the Academy's own header should match. This README is public too (the whole repo is published).
 
 | | What it's for | Who it's for | Add something here when |
 |---|---|---|---|
-| **Academy** (`academy/`) | Learn: a course, start to finish, with a quiz and a certificate | New owners, once | A beginner must know it before their first show |
+| **Academy** (`academy/`) | Learn: a course, start to finish, with a quiz and a certificate | New owners, once | A beginner must know it before their first show (facts only from the manual, X-Laser's course or the owner) |
 | **Manual** (`docs/guides/ultra-mk2-pro-manual/`) | Look it up: every setting, port, spec and DMX channel | Owners with a question | It's a fact, setting or spec (the manual is the source of truth) |
 | **Tutorials** (homepage `#videos`, all of them on laseros.com/tutorials) | Watch how: short videos, one task each | Owners who'd rather see it done | There's a new how-to video |
 
-Call them by these names everywhere (not "video guides", "free course" or "wiki" for the manual). New material goes
-in one place and links to the others, never copied into all three: a lesson links the manual section it is
-based on; a video gets a line in the matching manual section if it helps.
+Name them this way in menus, headings and link text: "Academy" or "LaserCube Academy" (it may be described as a
+free course), "Manual", "Tutorials" (not "Videos" or "Video guides"; the wiki is the whole site, not the manual).
+New material goes in one place and links to the others, never copied into all three: a lesson links the manual
+section it is based on; a video gets a line in the matching manual section if it helps.
+
+The header is a hand copy in each page. Before pushing a menu change, check that every copy matches:
+`grep -n -A7 'class="nav"\|class="menu-panel"' index.html docs/guides/ultra-mk2-pro-manual/index.html 404.html academy/index.html academy/*/index.html`
 
 ## Source of truth
 
