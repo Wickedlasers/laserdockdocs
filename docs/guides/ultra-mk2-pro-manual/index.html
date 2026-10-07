@@ -423,7 +423,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li><a href="#hardware-installation"><span class="ico"><svg class="icon"><use href="#i-cube"/></svg></span><span><strong>Hardware installation</strong><span class="d">Beam block, aiming and warning signs</span></span></a></li>
         <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet, DMX, IDN and Ether Dream</span></span></a></li>
         <li><a href="#dmxart-net-channel-layout"><span class="ico"><svg class="icon"><use href="#i-grid"/></svg></span><span><strong>DMX channels</strong><span class="d">What each of the 16 channels does</span></span></a></li>
-        <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card, LaserOS or the web admin page</span></span></a></li>
+        <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card or LaserOS</span></span></a></li>
         <li><a href="#factory-reset-procedure"><span class="ico"><svg class="icon"><use href="#i-reset"/></svg></span><span><strong>Factory reset</strong><span class="d">Back to factory firmware and default settings</span></span></a></li>
       </ul>
       <p class="start-note">New to LaserCube? Take the free <a href="../../../academy/start-here/">LaserCube Academy course</a> or watch the <a href="../../../#start-h">beginner’s video guide</a>.</p>
@@ -2495,63 +2495,12 @@ red are part of the effects provided when in playlist or visualizer
 control mode, and items in yellow are global device adjustments linked
 to items within Settings→Projection→Image Setup.</p>
 <img src="Pictures/web/100000000000047F000002CAD2A81B96-1151.webp" width="698" height="433" alt="" loading="lazy" decoding="async">
-<h1 id="lasercube-web-admin-page"><span id="anchor-140"></span>LaserCube Web Admin Page<a href="#lasercube-web-admin-page" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
-<p>The LaserCube has a legacy Web Admin Page for adjusting some of the
-devices network based configuration settings, and also performing remote
-firmware updates.</p>
-<p>1. Note the IP address from the bottom right corner of the LCD.</p>
-<img src="Pictures/web/10000001000002BC0000017337C5089F-700.webp" width="489" height="259" alt="" loading="lazy" decoding="async">
-<p>2. Open a web browser and type in that same IP address.</p>
-<p>Log in using the following credentials:</p>
-<p>User Name: <strong>LaserCubeUser</strong></p>
-<p>Password: <strong>Laser2020</strong></p>
-<p>The Web Admin Page has 3 Menu sections:</p>
-<ul><li><a href="#home-menu"><strong>Home Menu</strong></a>, showing general info.</li><li><a href="#config-menu"><strong>Config Menu</strong></a>, for network and mode settings.</li><li><a href="#firmware-update"><strong>Update Menu</strong></a>, for remote firmware updates.</li></ul>
-<h2 id="home-menu"><span id="anchor-141"></span>Home Menu<a href="#home-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>The Home Menu shows the Model Name, Interlock type, firmware version and
-Firmware Active Partition. There are 2 partitions to allow fall back to
-a good working state should an update fail or be interrupted.</p>
-<img src="Pictures/web/10000000000003620000036DD608080D-866.webp" width="452" height="458" alt="" loading="lazy" decoding="async">
-<h2 id="config-menu"><span id="anchor-142"></span><span id="anchor-143"></span>Config Menu<a href="#config-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>The Config Menu has 3 tabs, for network set-up and mode selection:</p>
-<ul><li><strong>WiFi Tab</strong>, for Wireless ConnectionSettings</li><li><strong>LAN Tab</strong>, for Wired Connection Settings</li><li><strong>General Tab</strong>, for Connection Mode Selection</li></ul>
-<h3 id="wifi-tab"><span id="anchor-144"></span><span id="anchor-145"></span>WiFi Tab<a href="#wifi-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<img src="Pictures/web/10000000000003400000035CF6EE9CD3-832.webp" width="498" height="515" alt="" loading="lazy" decoding="async">
-<p>Where WiFi interference is present, the LaserCube WiFi channel can be
-changed.</p>
-<p>The IP address and Subnet can be set for when the LaserCube is operating
-in WiFi Server mode, where it provides a DHCP service.</p>
-<p>The WiFi Server mode default SSID and Password can also be changed.</p>
-<p>If connecting to a router in WiFi Client mode, the SSID and WiFi
-password can be entered directly. This is useful if the router does not
-support WPS.</p>
-<h3 id="lan-tab"><span id="anchor-146"></span><span id="anchor-147"></span>LAN Tab<a href="#lan-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<img src="Pictures/web/10000000000003500000020A32B4D081-848.webp" width="527" height="324" alt="" loading="lazy" decoding="async">
-<p>The IP address and subnet can be set for when the LaserCube is operating
-in LAN Server mode, where it provides a DHCP service. LAN Client (with
-APIPA is preferred though.)</p>
-<h3 id="general-tab"><span id="anchor-148"></span><span id="anchor-149"></span>General Tab<a href="#general-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<img src="Pictures/web/1000000000000345000001D9BEE39301-837.webp" width="571" height="323" alt="" loading="lazy" decoding="async">
-<p>The network operating mode can be set from the drop down tab.</p>
-<p>The LaserCube will reboot after changing the mode.</p>
-<h2 id="firmware-update"><span id="anchor-150"></span>Firmware Update<a href="#firmware-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<h1 id="firmware-update"><span id="anchor-150"></span>Firmware Update<a href="#firmware-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>1. Via SD Card. This is the preferred update method. If the SD Card has
 a more recent firmware on it, you will be prompted to allow a firmware
 update.</p>
 <p>2. Via LaserOS. If LaserOS detects a more recent version of firmware is
 available, it will prompt to allow a firmware upgrade.</p>
-<p>3. Manually:</p>
-<p>Visit <strong>https://github.com/Wickedlasers/mk2SDContent</strong>&nbsp;to obtain the
-most recent OTA update binary from the <strong>Lasercube/Firmware</strong> folder.</p>
-<p>Connect to the LaserCube in WiFi Server mode, as described in
-<a href="#wifi-server-mode">WiFi Server Mode</a>.</p>
-<p>Browse to 192.168.4.1 and log in using the following credentials:</p>
-<p>User Name: <strong>LaserCubeUser</strong></p>
-<p>Password: <strong>Laser2020</strong></p>
-<p>Go to the Update Tab. Click Choose File and select the update binary.</p>
-<p>Click Upload.</p>
-<p>Wait for the update to complete and the LaserCube reboot.</p>
-<img src="Pictures/web/1000000000000340000001B1F4A671DB-832.webp" width="467" height="243" alt="" loading="lazy" decoding="async">
 <h1 id="factory-reset-procedure"><span id="anchor-151"></span>Factory Reset Procedure<a href="#factory-reset-procedure" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>If you need to reset the LaserCube back to its factory firmware
 defaults, you can perform the factory reset as shown below. This should
