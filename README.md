@@ -9,6 +9,21 @@ The wiki is the **LaserCube User Wiki** for the LaserCube Ultra MK2 and the Lase
 `docs/guides/ultra-mk2-pro-manual/`. Its old address `docs/guides/ultra-mk2-full-manual-v1.4/`
 is a redirect that keeps the `#anchor`, because laseros.com FAQ answers link to it.
 
+## What goes where
+
+Three places, each with one job. The header menus (homepage, manual, 404 page) use these names in this order;
+the Academy's own header should match.
+
+| | What it's for | Who it's for | Add something here when |
+|---|---|---|---|
+| **Academy** (`academy/`) | Learn: a course, start to finish, with a quiz and a certificate | New owners, once | A beginner must know it before their first show |
+| **Manual** (`docs/guides/ultra-mk2-pro-manual/`) | Look it up: every setting, port, spec and DMX channel | Owners with a question | It's a fact, setting or spec (the manual is the source of truth) |
+| **Tutorials** (homepage `#videos`, all of them on laseros.com/tutorials) | Watch how: short videos, one task each | Owners who'd rather see it done | There's a new how-to video |
+
+Call them by these names everywhere (not "video guides", "free course" or "wiki" for the manual). New material goes
+in one place and links to the others, never copied into all three: a lesson links the manual section it is
+based on; a video gets a line in the matching manual section if it helps.
+
 ## Source of truth
 
 **Since October 2026 this GitHub repo is the source of truth.** Edit here (branch, then merge
