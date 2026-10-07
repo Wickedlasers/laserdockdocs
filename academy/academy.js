@@ -311,7 +311,8 @@
         b.classList.add(ok ? "right" : "wrong");
         sc.classList.toggle("is-right", ok);
         sc.classList.toggle("is-wrong", !ok);
-        fb.innerHTML = verdict(ok, ok ? (why ? why.innerHTML : "") : "Think again about who or what the beam could reach.");
+        var hint = $(".hint", sc);
+        fb.innerHTML = verdict(ok, ok ? (why ? why.innerHTML : "") : hint ? hint.innerHTML : "Think again about who or what the beam could reach.");
         if (ok && sc.dataset.solved !== "1") { sc.dataset.solved = "1"; onSolved(); }
       });
     });
@@ -346,12 +347,23 @@
     return new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
   }
 
+  // One question per topic (data-group) first, so every quiz covers every part of the course; then fill up at random.
+  function pick() {
+    var seen = {}, firsts = [], rest = [];
+    shuffle(bank.slice()).forEach(function (q) {
+      var g = q.dataset.group;
+      if (g && !seen[g]) { seen[g] = true; firsts.push(q); } else rest.push(q);
+    });
+    var chosen = shuffle(firsts).slice(0, PICK);
+    return shuffle(chosen.concat(rest.slice(0, PICK - chosen.length)));
+  }
+
   function newQuiz() {
     quizList.textContent = "";
     quizResult.hidden = true;
     quizResult.textContent = "";
     quizMsg.textContent = "";
-    shuffle(bank.slice()).slice(0, PICK).forEach(function (src, i) {
+    pick().forEach(function (src, i) {
       var q = src.cloneNode(true);
       $$("input", q).forEach(function (inp, k) { inp.name = "fq" + i; inp.id = "fq" + i + "-" + k; inp.checked = false; inp.disabled = false; });
       var opts = $(".opts", q);
@@ -419,6 +431,9 @@
       if (!ok) { var r = $('input[value="' + q.dataset.answer + '"]', q); if (r) r.closest(".opt").classList.add("right"); }
       q.classList.add(ok ? "is-right" : "is-wrong");
       $(".feedback", q).innerHTML = verdict(ok, why ? why.innerHTML : "");
+      // a wrong answer points back to its lesson
+      var n = q.dataset.lesson;
+      if (!ok && /^\d+$/.test(n || "") && document.getElementById("lesson-" + n)) $(".feedback", q).insertAdjacentHTML("beforeend", ' <a class="link" data-nav href="#lesson-' + n + '">Review lesson ' + n + "</a>");
       $$("input", q).forEach(function (i) { i.disabled = true; });
     });
     $("button[type=submit]", quizForm).hidden = true;

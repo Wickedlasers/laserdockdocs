@@ -14,9 +14,11 @@ no build step, no server, no database, no accounts, no analytics.
 - **Lessons** are `<section class="view lesson" id="lesson-N">`. A lesson counts as done when every question,
   put-in-order exercise and scenario in it has been answered correctly (a lesson with nothing to answer: once opened).
   Progress from another open tab is merged, not overwritten; malformed stored data is ignored.
-- **The final quiz** unlocks when all lessons are done. It picks `data-pick` questions at random from the hidden
-  `.bank` in `#final` and passes at `data-pass` correct (now 10 and 8; never more than the number of questions shown).
-  Unlimited retries.
+- **The final quiz** unlocks when all lessons are done. It picks `data-pick` questions from the hidden `.bank` in
+  `#final` and passes at `data-pass` correct (now 10 and 8; never more than the number of questions shown).
+  Each bank question has a topic (`data-group`); the quiz takes one random question per topic first, then fills up at
+  random, so every quiz covers every topic (start-here: 26 questions in 10 topics). Options are shuffled. A wrong answer
+  shows its explanation and a "Review lesson N" link (`data-lesson`). Unlimited retries, with a new set each time.
 - **The certificate** is drawn in the browser on a canvas (A4 landscape, 300 dpi) and saved as a PDF or a PNG.
   It has no ID and no verification page, on purpose: it is a certificate of completion, not a credential.
   It shows the name the learner types, the course title and version, the date they passed, and a Wicked Lasers seal.
@@ -37,9 +39,13 @@ no build step, no server, no database, no accounts, no analytics.
      `<p class="feedback" aria-live="polite">`;
    - put-in-order: `<div class="order">` with an `<ol>` of at least two steps **in the right order** (the page
      shuffles them) and the "Check the order" button (`.check-order`); a list with fewer steps counts as solved;
-   - scenario: `<div class="scenario" data-answer="yes|no">` with the two buttons, a `why` and a `feedback`;
+   - scenario: `<div class="scenario" data-answer="yes|no">` with the two buttons, a `why`, an optional hidden
+     `<p class="hint">` (shown after a wrong choice instead of the general "Think again" line) and a `feedback`;
    - video: `<div class="video" data-yt="<YouTube id>">` plus a thumbnail saved as `images/home/videos/<id>.webp`.
-4. Update the contents list (`.toc`), the lesson count in the page text, and the final quiz bank.
+4. Update the contents list (`.toc`), the lesson count in the page text, and the final quiz bank: each question gets
+   `data-group` (its topic; keep at least as many topics as `data-pick` so every quiz covers them all) and
+   `data-lesson` (the lesson number it reviews). Keep the options the same length and plausible: in step 2 of
+   start-here (7 Oct 2026) the right answer had been the longest option in 17 of 20 questions.
 5. Add a card for it to `academy/index.html` (`data-progress-for` = the course's `data-course`, `data-lessons` = its count).
 6. Add both URLs to `sitemap.xml`.
 
