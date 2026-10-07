@@ -63,6 +63,7 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   dialog's HTML, CSS and JS (including the `VIDEOS` and `STOP` lists). A change to any of these here
   needs the same change there. The two `render()`/`open()` functions differ (the manual indexes its own
   page and its `POPULAR` has another shape), so copy fixes by hand, not by pasting whole functions.
+- **Search links:** `/?q=<words>` opens the search with those words (the 404 page's search box uses it).
 - `index.html` is written by hand now; don't regenerate it from the old Hugo project on `hugo-source`.
 
 ## Manual (`docs/guides/ultra-mk2-pro-manual/index.html`)
@@ -77,7 +78,8 @@ edit it by hand.
 - **Contents and search are built in the browser** from the `h1`-`h4` headings that have an `id`:
   the contents list shows the `h1`s with their `h2`s (or `h3`s when a chapter has none); `h4`s only
   feed the search and the "you are here" highlight. A new section only needs a heading with an id.
-  Keep the heading levels; they also set the search ranking.
+  Keep the heading levels; they also set the search ranking. Sub-headings go one level at a time
+  (h1 > h2 > h3 > h4, no jump from h1 to h3), which screen readers and the accessibility check need.
 - **Images:** the page shows WebP copies in `Pictures/web/` (about 5 MB in all), named
   `<original name>-<file width>.webp` and made at twice the shown size, at most 2 x 760 px. In the
   `<img>`, `width` and `height` are the size shown on the page (half the file's pixels), e.g.
@@ -89,6 +91,14 @@ edit it by hand.
 - **The search code is a copy of the homepage's** (it indexes this page's own DOM instead of
   fetching it, and closes the dialog when a result on this page is picked). Function and variable
   names match the homepage's, so a fix can be copied across; see "Shared with the manual" above.
+
+## 404 page (`404.html`)
+
+GitHub Pages serves it for any URL that doesn't exist, at that URL, so every link and asset in it is
+root-relative (`/fonts/...`). Old `/docs/...` links (the Doks site had `/docs/resources/`,
+`/docs/reference/`) jump straight to the manual, keeping any `#anchor`; anything else shows the page,
+whose search box sends `/?q=` to the homepage search. Its colour tokens, wordmark and header are copies
+of the homepage's (a fourth copy, see "Shared with the manual").
 
 ## Academy (`academy/`)
 

@@ -1006,6 +1006,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
     else if (e.key === "/" && !typing && !dlg.open) { e.preventDefault(); open(); }
   });
+  // "/?q=dmx+address" (the 404 page's search box) opens search with that text.
+  var startQ = "";
+  try { startQ = (new URLSearchParams(location.search).get("q") || "").slice(0, 200); } catch (e) {}
+  if (startQ.trim()) { open(); input.value = startQ; render(); }
 })();
 </script>
 </body>
