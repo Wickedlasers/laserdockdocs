@@ -426,7 +426,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card, LaserOS or the web admin page</span></span></a></li>
         <li><a href="#factory-reset-procedure"><span class="ico"><svg class="icon"><use href="#i-reset"/></svg></span><span><strong>Factory reset</strong><span class="d">Back to factory firmware and default settings</span></span></a></li>
       </ul>
-      <p class="start-note">New to LaserCube? <a href="../../../academy/start-here/">Start with the free course</a>. This manual is for looking things up.</p>
+      <p class="start-note">New to LaserCube? Take the free <a href="../../../academy/start-here/">LaserCube Academy course</a> or watch the <a href="../../../#start-h">four-part beginner’s guide</a>.</p>
     </div>
   </div>
 </section>
@@ -2958,7 +2958,7 @@ the SD card.</p>
     } else {
       var secs = searchSections(q, ts), vids = searchVideos(ts);
       if (secs.length) html += '<div class="hint" aria-hidden="true">Manual</div>' + secs.map(function (e) { return row("#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join("");
-      if (vids.length) html += '<div class="hint" aria-hidden="true">Videos</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "../../../images/home/videos/" + v.id + ".webp", true); }).join("");
+      if (vids.length) html += '<div class="hint" aria-hidden="true">Tutorials</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "../../../images/home/videos/" + v.id + ".webp", true); }).join("");
       if (!html) html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>Try fewer or different words.</div>';
     }
     box.innerHTML = html;
