@@ -31,7 +31,7 @@
   --bg:#ffffff;--bg-2:#f5f5f7;--line:rgba(10,10,20,.1);--line-2:rgba(10,10,20,.18);
   --text:#0a0a0c;--muted:#55555f;--subtle:#696973;
   --accent:#2b62fd;--accent-hover:#1844c8;--accent-soft:rgba(43,98,253,.09);
-  --mark:rgba(43,98,253,.17);--shadow:0 30px 70px -30px rgba(10,10,20,.35);
+  --mark:rgba(43,98,253,.17);--sel:rgba(43,98,253,.99);--shadow:0 30px 70px -30px rgba(10,10,20,.35);
   --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --stage:#0a0a0c;--yellow:#ffd60a;--wm:url(#wm-ink);--ink:none;
   --header:64px;--bar:0px;
@@ -42,7 +42,7 @@
     --bg:#0a0a0c;--bg-2:#121216;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.17);
     --text:#f2f2f5;--muted:#a2a2ad;--subtle:#8e8e9a;
     --accent:#86a5ff;--accent-hover:#b3c6ff;--accent-soft:rgba(134,165,255,.12);
-    --mark:rgba(134,165,255,.24);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);--ink:invert(1);
+    --mark:rgba(134,165,255,.24);--sel:rgba(134,165,255,.99);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);--ink:invert(1);
     color-scheme:dark;
   }
 }
@@ -50,7 +50,7 @@
   --bg:#0a0a0c;--bg-2:#121216;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.17);
   --text:#f2f2f5;--muted:#a2a2ad;--subtle:#8e8e9a;
   --accent:#86a5ff;--accent-hover:#b3c6ff;--accent-soft:rgba(134,165,255,.12);
-  --mark:rgba(134,165,255,.24);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
+  --mark:rgba(134,165,255,.24);--sel:rgba(134,165,255,.99);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
 }
 :root[data-theme="dark"]{color-scheme:dark;--ink:invert(1)}
 .stage{background:var(--stage);color:var(--text)}
@@ -67,6 +67,9 @@ h1,h2,h3{text-wrap:balance}
 .container{width:100%;max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
 .icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .label{font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
+/* --sel is .99 alpha: WebKit dims fully opaque selection colours */
+::selection{background:var(--sel);color:var(--bg)}
+input,textarea{caret-color:var(--accent)}
 
 /* header (as on the homepage) */
 .site-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(10,10,12,.97);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
@@ -161,6 +164,9 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .docs-content :is(h1,h2,h3,h4):hover .anchor{opacity:1}
 @media (hover:none){.anchor{display:none}}
 .docs-content p{margin:0 0 14px}
+.docs-content p,.docs-content li{max-width:38em}
+.docs-content .warning-panel p{max-width:none}
+.docs-content td,.docs-content th{font-variant-numeric:tabular-nums}
 .docs-content a:not(.anchor){color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--accent-soft);overflow-wrap:anywhere;transition:color .15s,text-decoration-color .15s}
 .docs-content a:not(.anchor):hover{color:var(--accent-hover);text-decoration-color:currentColor}
 .docs-content strong{font-weight:600}
@@ -179,7 +185,7 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .row img{display:block}
 figure{margin:24px 0}
 figure img{display:block}
-figcaption{margin:0 0 10px;font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
+figcaption{margin:0 0 10px;font:600 14px/1.4 var(--font);color:var(--muted)}
 .docs-content .small{font-size:14px;color:var(--subtle)}
 
 /* tables */
@@ -327,6 +333,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .brand-sep,.brand-name{display:none}
 }
 @media print{
+  .docs-content p,.docs-content li{max-width:none}
   .site-header,.toc-side,.toc-bar,.start,.site-footer,.anchor,dialog{display:none!important}
   :root,.stage{--bg:#fff!important;--bg-2:#f5f5f7!important;--text:#000!important;--muted:#333!important;--subtle:#555!important;--line:#ccc!important;--line-2:#999!important;--ink:none!important}
   body,.m-hero,.stage{background:#fff;color:#000;border:0}
@@ -409,8 +416,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <h1 id="manual-title">LaserCube Ultra MK2 &amp; Pro Manual</h1>
     <p class="lead">Version 1.5, October 2026. For the LaserCube Ultra MK2 and the LaserCube Pro, the compact version of the Ultra MK2. Both run the same CubeOS firmware, so everything in this manual applies to both unless it says otherwise.</p>
     <div class="start">
-      <p class="label" id="start-label">Start here</p>
-      <ul class="start-grid" aria-labelledby="start-label">
+      <ul class="start-grid" aria-label="Start here">
         <li><a href="#safety-guidelines-and-proper-usage"><span class="ico"><svg class="icon"><use href="#i-warn"/></svg></span><span><strong>Safety guidelines</strong><span class="d">Class 4 laser: read these before your first show</span></span></a></li>
         <li><a href="#hardware-installation"><span class="ico"><svg class="icon"><use href="#i-cube"/></svg></span><span><strong>Hardware installation</strong><span class="d">Beam block, aiming and warning signs</span></span></a></li>
         <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet, DMX, IDN and Ether Dream</span></span></a></li>
@@ -439,7 +445,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
      indexes this page's h1-h4 sections. The contents list and the search on this page are
      built from the same headings, so a new section only needs a heading with an id.
      Images: WebP copies in Pictures/web/, with width and height set so deep links land right. -->
-<h1 id="declaration-of-conformity"><span id="anchor"></span>Declaration Of Conformity<a href="#declaration-of-conformity" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<h1 id="declaration-of-conformity"><span id="anchor"></span>Declaration of Conformity<a href="#declaration-of-conformity" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <div class="doc-pages"><a href="Pictures/10000000000003E80000056085DFB847.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000003E80000056085DFB847-440.webp" width="220" height="303" alt="EU Declaration of Conformity for the LaserCube, LaserDock Limited, 10 April 2025" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F4000007029017E676.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F4000007029017E676-440.webp" width="220" height="311" alt="CE Declaration of Conformity for the Huntkey HKA06519034-6J power adapter" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F400000702828DCDF7.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F400000702828DCDF7-440.webp" width="220" height="311" alt="CE Declaration of Conformity for the Huntkey HKA12019063-6B power adapter" loading="lazy" decoding="async"></a><a href="Pictures/10000000000004F4000007024E0751E6.jpg" target="_blank" rel="noopener"><img src="Pictures/web/10000000000004F4000007024E0751E6-440.webp" width="220" height="311" alt="CE Declaration of Conformity for the Huntkey HKA15019079-6C power adapter" loading="lazy" decoding="async"></a></div>
 <p class="small">The LaserCube’s declaration, then the power adapters’. Select one to open it full size.</p>
 <h1 id="safety-warning"><span id="anchor-1"></span>Safety Warning<a href="#safety-warning" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
@@ -496,7 +502,7 @@ through the eye.</li></ol>
 <tr><td>Red 638nm:</td><td>2800mW</td></tr>
 <tr><td>Battery:</td><td>92.16Wh (3–4 hours runtime, 4 hours charging)</td></tr>
 <tr><td>Modulation:</td><td>Analog 70kHz</td></tr>
-<tr><td><strong>Scan speed:</strong></td><td><strong>&gt;35,000pps @ 7 deg</strong></td></tr>
+<tr><td>Scan speed:</td><td>&gt;35,000pps @ 7 deg</td></tr>
 <tr><td>Max Scan Angle:</td><td>&gt;37 degrees</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Ports (In/Out)</p><p>DMX Ports (In/Out)</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>15.5 x 15 x 15.5 cm</td></tr>
@@ -517,7 +523,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Red 638nm:</td><td>1800mW</td></tr>
 <tr><td>Battery:</td><td>92.16Wh (3–4 hours runtime, 4 hours charging)</td></tr>
 <tr><td>Modulation:</td><td>Analog 70kHz</td></tr>
-<tr><td><strong>Scan speed:</strong></td><td><strong>&gt;35,000pps @ 7 deg</strong></td></tr>
+<tr><td>Scan speed:</td><td>&gt;35,000pps @ 7 deg</td></tr>
 <tr><td>Max Scan Angle:</td><td>&gt;37 degrees</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Ports (In/Out)</p><p>DMX Ports (In/Out)</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>15.5 x 15 x 15.5 cm</td></tr>
@@ -538,7 +544,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Red 638nm:</td><td>1800mW</td></tr>
 <tr><td>Battery:</td><td>70Wh (2–3 hours runtime, 3 hours charging)</td></tr>
 <tr><td>Modulation:</td><td>Analog 70kHz</td></tr>
-<tr><td><strong>Scan speed:</strong></td><td><strong>&gt;35,000pps @ 7 deg</strong></td></tr>
+<tr><td>Scan speed:</td><td>&gt;35,000pps @ 7 deg</td></tr>
 <tr><td>Max Scan Angle:</td><td>&gt;37 degrees</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Port (In)</p><p>DMX Ports (In/Out), 3.5mm TRS jacks</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>13 x 13 x 13.5 cm</td></tr>
@@ -559,7 +565,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Red 638nm:</td><td>950mW</td></tr>
 <tr><td>Battery:</td><td>70Wh (2–3 hours runtime, 3 hours charging)</td></tr>
 <tr><td>Modulation:</td><td>Analog 70kHz</td></tr>
-<tr><td><strong>Scan speed:</strong></td><td><strong>&gt;35,000pps @ 7 deg</strong></td></tr>
+<tr><td>Scan speed:</td><td>&gt;35,000pps @ 7 deg</td></tr>
 <tr><td>Max Scan Angle:</td><td>&gt;37 degrees</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Port (In)</p><p>DMX Ports (In/Out), 3.5mm TRS jacks</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>13 x 13 x 13.5 cm</td></tr>
@@ -580,7 +586,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Red 638nm:</td><td>1500mW</td></tr>
 <tr><td>Battery:</td><td>92.16Wh</td></tr>
 <tr><td>Modulation:</td><td>Analog 70kHz</td></tr>
-<tr><td><strong>Scan speed:</strong></td><td><strong>&gt;35,000pps @ 7 deg</strong></td></tr>
+<tr><td>Scan speed:</td><td>&gt;35,000pps @ 7 deg</td></tr>
 <tr><td>Max Scan Angle:</td><td>&gt;37 degrees</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Ports (In/Out)</p><p>DMX Ports (In/Out)</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>15.5 x 15 x 15.5 cm</td></tr>
@@ -600,7 +606,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Red 638nm:</td><td>400mW</td></tr>
 <tr><td>Battery:</td><td>92.16Wh</td></tr>
 <tr><td>Modulation:</td><td>Analog 70kHz</td></tr>
-<tr><td><strong>Scan speed:</strong></td><td><strong>&gt;35,000pps @ 7 deg</strong></td></tr>
+<tr><td>Scan speed:</td><td>&gt;35,000pps @ 7 deg</td></tr>
 <tr><td>Max Scan Angle:</td><td>&gt;37 degrees</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Ports (In/Out)</p><p>DMX Ports (In/Out)</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>15.5 x 15 x 15.5 cm</td></tr>
@@ -1065,7 +1071,7 @@ the playlist items will be automatically allocated to the available APC
 grid buttons.</p>
 <p>Note: The Ultra MK2 / Pro has this playlist and others as part of the demo
 SD card provided with the device.</p>
-<h3 id="using-the-new-playlist-on-the-ultra-mk2--evo"><span id="anchor-34"></span>Using the new playlist on the Ultra MK2 / Pro.<a href="#using-the-new-playlist-on-the-ultra-mk2--evo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="using-the-new-playlist-on-the-ultra-mk2--evo"><span id="anchor-34"></span>Using the new playlist on the Ultra MK2 / Pro<a href="#using-the-new-playlist-on-the-ultra-mk2--evo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>To project the CUE’s from the example “Content 1” playlist we just
 exported from LaserOS, you need to firstly safely eject the SD card from
 your PC/Mac. This can be done by right clicking the SD card in file
@@ -1107,7 +1113,7 @@ until the Auto-play button is selected again.</p>
 <p>The playlist can also be shuffled in order to randomize the order of
 CUE’s in the playlist.</p>
 <img src="Pictures/web/10000000000000F0000001404A57E48E_hu_1d6ec62199639775-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
-<h3 id="cue-playback-speed"><span id="anchor-36"></span>CUE playback Speed<a href="#cue-playback-speed" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="cue-playback-speed"><span id="anchor-36"></span>CUE Playback Speed<a href="#cue-playback-speed" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The user can adjust the playback speed of any CUE being projected while
 in the playlist control mode.</p>
 <p>This can be done using the Settings→Playback Speed menu</p>
@@ -1436,7 +1442,7 @@ it</p>
 <p>Once selected the device will restart into ArtNet mode, and the ArtNet
 settings will now be available from the top level menu as shown below:</p>
 <img src="Pictures/web/10000000000000F00000014006D180CC_hu_ff3ccde38332bbfd-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
-<h3 id="artnet-settings-menu"><span id="anchor-50"></span>ArtNet settings Menu<a href="#artnet-settings-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h3 id="artnet-settings-menu"><span id="anchor-50"></span>ArtNet Settings Menu<a href="#artnet-settings-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <h4 id="artnet-universe"><span id="anchor-51"></span>ArtNet Universe<a href="#artnet-universe" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>This sets which universe the laser cube will respond to on the network.</p>
 <img src="Pictures/web/10000000000000F0000001404C7CD495_hu_3e9aae5d22ac2bd6-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
@@ -1500,8 +1506,8 @@ DMX-512</p>
 <p>Once selected the device will restart into DMX-512 mode, and the DMX
 settings will now be available from the top level menu as shown below:</p>
 <img src="Pictures/web/10000000000000F000000140E9E37788_hu_6870deb6268522e6-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
-<h3 id="dmx-settings-menu"><span id="anchor-59"></span>DMX settings Menu<a href="#dmx-settings-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<h4 id="dmx-start-address"><span id="anchor-60"></span>DMX start Address<a href="#dmx-start-address" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
+<h3 id="dmx-settings-menu"><span id="anchor-59"></span>DMX Settings Menu<a href="#dmx-settings-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<h4 id="dmx-start-address"><span id="anchor-60"></span>DMX Start Address<a href="#dmx-start-address" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <img src="Pictures/web/10000000000000F0000001407F256315_hu_de27bee5df7c80e-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <p>The DMX start address can be changed (default is DMX address 1) in order
 to move the 16 channel profile start address within the DMX address
@@ -1747,7 +1753,7 @@ playing music track will allow the laser cube to calculate the actual
 BPM of the music.</p>
 <p>The “Sync Beat” button will synchronize the beat to beat 1 of a 4 beat
 bar.</p>
-<p>The tempo parameters also also MIDI mapped to the dedicated tempo
+<p>The tempo parameters are also MIDI mapped to the dedicated tempo
 buttons on an APC40 MK2 if using the factory supplied MIDI mappings.</p>
 <p>Note: Menu items in yellow (as shown in image above) mean they have
 been MIDI mapped to a dial/fader on an external MIDI controller. They

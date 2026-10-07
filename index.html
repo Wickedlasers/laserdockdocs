@@ -33,7 +33,7 @@
   --bg:#ffffff;--bg-2:#f5f5f7;--line:rgba(10,10,20,.1);--line-2:rgba(10,10,20,.18);
   --text:#0a0a0c;--muted:#55555f;--subtle:#696973;
   --accent:#2b62fd;--accent-hover:#1844c8;--accent-soft:rgba(43,98,253,.09);
-  --mark:rgba(43,98,253,.17);--shadow:0 30px 70px -30px rgba(10,10,20,.35);
+  --mark:rgba(43,98,253,.17);--sel:rgba(43,98,253,.99);--shadow:0 30px 70px -30px rgba(10,10,20,.35);
   --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --stage:#0a0a0c;--yellow:#ffd60a;--wm:url(#wm-ink);
   color-scheme:light;
@@ -43,7 +43,7 @@
     --bg:#0a0a0c;--bg-2:#121216;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.17);
     --text:#f2f2f5;--muted:#a2a2ad;--subtle:#8e8e9a;
     --accent:#86a5ff;--accent-hover:#b3c6ff;--accent-soft:rgba(134,165,255,.12);
-    --mark:rgba(134,165,255,.24);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
+    --mark:rgba(134,165,255,.24);--sel:rgba(134,165,255,.99);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
     color-scheme:dark;
   }
 }
@@ -51,7 +51,7 @@
   --bg:#0a0a0c;--bg-2:#121216;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.17);
   --text:#f2f2f5;--muted:#a2a2ad;--subtle:#8e8e9a;
   --accent:#86a5ff;--accent-hover:#b3c6ff;--accent-soft:rgba(134,165,255,.12);
-  --mark:rgba(134,165,255,.24);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
+  --mark:rgba(134,165,255,.24);--sel:rgba(134,165,255,.99);--shadow:0 30px 80px -30px rgba(0,0,0,.9);--wm:url(#wm-white);
 }
 :root[data-theme="dark"]{color-scheme:dark}
 .stage{background:var(--stage);color:var(--text)}
@@ -69,6 +69,9 @@ h1,h2,h3{text-wrap:balance}
 .container{width:100%;max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
 .icon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .label{font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
+/* --sel is .99 alpha: WebKit dims fully opaque selection colours */
+::selection{background:var(--sel);color:var(--bg)}
+input,textarea{caret-color:var(--accent)}
 
 /* header */
 .site-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(10,10,12,.97);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
@@ -134,7 +137,7 @@ html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!import
 .hs:hover .tip,.hs:focus-visible .tip{opacity:1;transform:translate(0,-50%)}
 .hs:focus-visible{outline-offset:0;border-radius:50%}
 .ports{display:none}
-.hero-figure figcaption{position:absolute;left:14%;right:0;bottom:22px;font:600 11.5px/1.4 var(--font);letter-spacing:.09em;text-transform:uppercase;color:var(--subtle)}
+.hero-figure figcaption{position:absolute;left:14%;right:0;bottom:22px;font:400 13.5px/1.4 var(--font);color:var(--muted)}
 
 /* models */
 .models{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
@@ -160,8 +163,9 @@ html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!import
 .thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 0 0 1px var(--line)}
 .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .thumb:hover img{transform:scale(1.03)}
-.course .label,.vids .label{display:block;margin-top:14px}
+.course .label{display:block;margin-top:14px}
 .course h3,.vids h3{margin:6px 0 0;font-size:16.5px;line-height:1.35;letter-spacing:-.01em;font-weight:600}
+.vids h3{margin-top:14px}
 .course h3 a:hover,.vids h3 a:hover{color:var(--accent)}
 .also{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:14px;color:var(--subtle)}
 .also a{color:var(--text);border-bottom:1px solid var(--line-2)}
@@ -386,9 +390,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   <section class="hero stage">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="label">LaserCube Ultra MK2 &amp; Pro</p>
         <h1>Set up, control and look after your LaserCube.</h1>
-        <p class="lead">The official manual and video guides, searchable down to the section.</p>
+        <p class="lead">The official manual and video guides for the LaserCube Ultra MK2 and Pro, searchable down to the section.</p>
         <button class="hero-search" type="button" data-open-search aria-label="Search the manual">
           <svg class="icon"><use href="#i-search"/></svg>
           <span class="ph">Try “factory reset” or “DMX address”</span>
@@ -410,7 +413,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           <a aria-label="E-Stop / interlock, in the manual" class="hs" style="--x:44.2%;--y:72.9%;--d:1s" href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock"><span class="tip" aria-hidden="true">E‑Stop / interlock</span></a>
           <a aria-label="Safety key, in the manual" class="hs l" style="--x:61.9%;--y:69.2%;--d:1.4s" href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock"><span class="tip" aria-hidden="true">Safety key</span></a>
         </div>
-        <figcaption>Ultra MK2 rear panel · select a port</figcaption>
+        <figcaption>Ultra MK2 rear panel: select a port to open its section</figcaption>
       </figure>
       <ul class="ports" aria-label="Ports on the rear panel"></ul>
     </div>
@@ -439,7 +442,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" aria-labelledby="start-h">
       <div class="head">
         <div>
-          <p class="label">Start here</p>
           <h2 id="start-h">The beginner’s guide, in four short videos</h2>
           <p>Watch them in order, then keep the matching manual chapter open next to your cube.</p>
         </div>
@@ -580,50 +582,41 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" id="videos" aria-labelledby="videos-h">
       <div class="head">
         <div>
-          <p class="label">Video guides</p>
-          <h2 id="videos-h">See it done</h2>
+          <h2 id="videos-h">Video guides</h2>
         </div>
         <a class="more" href="https://www.laseros.com/tutorials/">All tutorials on laseros.com <svg class="icon"><use href="#i-ext"/></svg></a>
       </div>
       <div class="vids">
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener"><img src="images/home/videos/KiuFqWiXBPA.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Safety</span>
           <h3><a href="https://www.youtube.com/watch?v=KiuFqWiXBPA" target="_blank" rel="noopener">Using the emergency stop button<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener"><img src="images/home/videos/0CMHLSTWcWY.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Safety</span>
           <h3><a href="https://www.youtube.com/watch?v=0CMHLSTWcWY" target="_blank" rel="noopener">Setting up safety zones in LaserOS<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener"><img src="images/home/videos/aC7mLKLXRWk.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">DMX</span>
           <h3><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener">What DMX is and how to use it with LaserCube<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener"><img src="images/home/videos/f1f-hoGJaYE.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Playlists</span>
           <h3><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Importing a playlist to the SD card<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener"><img src="images/home/videos/A80UjLxKDZs.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">MIDI</span>
           <h3><a href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener">Connecting a MIDI controller<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener"><img src="images/home/videos/Jtd9Il9sAus.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Firmware</span>
           <h3><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Firmware 2.0: what’s new and how to upgrade<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener"><img src="images/home/videos/8a95SdH_2ek.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Web app</span>
           <h3><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Controlling built-in shows from the web app<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener"><img src="images/home/videos/56A0RWEOAs8.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Multi-cube</span>
           <h3><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Wireless multi-cube shows with CubeLink<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
       </div>
