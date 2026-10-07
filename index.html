@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LaserCube User Wiki · Ultra MK2 and Pro manual</title>
-<meta name="description" content="The official manual and video guides for LaserCube Ultra MK2 and LaserCube Pro: safety, setup, control modes, DMX and ArtNet, settings and maintenance.">
+<meta name="description" content="The official manual, free course and video tutorials for LaserCube Ultra MK2 and LaserCube Pro: safety, setup, control modes, DMX and ArtNet, settings and maintenance.">
 <link rel="canonical" href="https://wiki.laseros.com/">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -181,6 +181,15 @@ html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!import
 .chapter li a{display:block;padding:3px 0;font-size:14.5px;color:var(--muted);transition:color .12s}
 .chapter li a:hover{color:var(--text)}
 
+.paths{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.path{display:flex;flex-direction:column;padding:26px 28px 30px 0;border-bottom:1px solid var(--line)}
+.path + .path{padding-left:28px;border-left:1px solid var(--line)}
+.path .label{display:flex;align-items:center;gap:10px;min-height:20px;margin:0}
+.path .tag{font:600 11px/1 var(--font);letter-spacing:.04em;text-transform:none;color:var(--accent);background:var(--accent-soft);padding:4px 8px;border-radius:999px}
+.path h3{margin:10px 0 0;font-size:20px;line-height:1.25;letter-spacing:-.015em;font-weight:600}
+.path .desc{margin:8px 0 0;max-width:34em;font-size:15px;line-height:1.55;color:var(--muted)}
+.path .more{margin-top:auto;padding-top:18px;align-self:flex-start}
+
 .vids{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px}
 
 .downloads{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
@@ -277,6 +286,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .menu{display:block}
 }
 @media (max-width:900px){
+  .paths{grid-template-columns:1fr}
+  .path,.path + .path{padding:22px 0 24px;border-left:0}
   .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
   .hero-copy{padding:56px 0 8px}
   .hero-figure{max-width:520px;width:100%;margin:0 auto}
@@ -359,9 +370,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <span class="brand-name">User Wiki</span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
-      <a href="#videos">Videos</a>
       <a href="academy/">Academy</a>
+      <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="#videos">Tutorials</a>
       <a href="#downloads">Downloads</a>
       <a href="https://www.laseros.com/">laseros.com</a>
     </nav>
@@ -373,9 +384,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <details class="menu">
         <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
         <nav class="menu-panel" aria-label="Menu">
-          <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
-          <a href="#videos">Videos</a>
           <a href="academy/">Academy</a>
+          <a href="docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="#videos">Tutorials</a>
           <a href="#downloads">Downloads</a>
           <a href="https://www.laseros.com/">laseros.com</a>
         </nav>
@@ -393,7 +404,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>Set up, control and look after your LaserCube.</h1>
-        <p class="lead">The official manual and video guides for the LaserCube Ultra MK2 and Pro, searchable down to the section.</p>
+        <p class="lead">The official manual, course and video tutorials for the LaserCube Ultra MK2 and Pro.</p>
         <button class="hero-search" type="button" data-open-search>
           <svg class="icon"><use href="#i-search"/></svg>
           <span class="vh">Search the manual: </span><span class="ph">Try “factory reset” or “DMX address”</span>
@@ -444,37 +455,30 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" aria-labelledby="start-h">
       <div class="head">
         <div>
-          <h2 id="start-h">The beginner’s guide, in four short videos</h2>
-          <p>Watch them in order, then keep the matching manual chapter open next to your cube.</p>
+          <h2 id="start-h">Course, manual or tutorials?</h2>
+          <p>Each one has its own job. New to your LaserCube? Start with the course.</p>
         </div>
-        <a class="more" href="academy/start-here/">Take the free course <svg class="icon"><use href="#i-arrow"/></svg></a>
       </div>
-      <ol class="course">
-        <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener"><img src="images/home/videos/xgV1FQHKFsQ.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Part 1</span>
-          <h3><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Unboxing<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
-          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a></p>
+      <ul class="paths">
+        <li class="path">
+          <p class="label">Learn <span class="tag">Start here</span></p>
+          <h3>LaserCube Academy</h3>
+          <p class="desc">A free course for new owners: 10 short lessons from the box to your first safe show, then a quiz and a certificate. No account needed.</p>
+          <a class="more" href="academy/start-here/">Start the course <svg class="icon"><use href="#i-arrow"/></svg></a>
         </li>
-        <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener"><img src="images/home/videos/UYQt4zhQks8.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Part 2</span>
-          <h3><a href="https://www.youtube.com/watch?v=UYQt4zhQks8" target="_blank" rel="noopener">First start<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
-          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop, jumper and key</a></p>
+        <li class="path">
+          <p class="label">Look it up</p>
+          <h3>The manual</h3>
+          <p class="desc">Every setting, port, spec and DMX channel of the Ultra MK2 and Pro, on one searchable page. Keep it open next to your cube.</p>
+          <a class="more" href="docs/guides/ultra-mk2-pro-manual/">Open the manual <svg class="icon"><use href="#i-arrow"/></svg></a>
         </li>
-        <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener"><img src="images/home/videos/Yr7jZidnk9I.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Part 3</span>
-          <h3><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">CubeOS software overview<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
-          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS LCD settings</a></p>
+        <li class="path">
+          <p class="label">Watch</p>
+          <h3>Tutorials</h3>
+          <p class="desc">Short videos, one task each: the E‑Stop, safety zones, playlists, DMX, MIDI, firmware updates and multi-cube shows.</p>
+          <a class="more" href="#videos">See the tutorials <svg class="icon"><use href="#i-arrow"/></svg></a>
         </li>
-        <li>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener"><img src="images/home/videos/hFmpDOsEG_k.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <span class="label">Part 4</span>
-          <h3><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Connection modes<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
-          <p class="also">Manual: <a href="docs/guides/ultra-mk2-pro-manual/#network-settings">Network settings</a></p>
-        </li>
-      </ol>
+      </ul>
     </section>
 
     <section class="block" aria-labelledby="manual-h">
@@ -584,7 +588,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <section class="block" id="videos" aria-labelledby="videos-h">
       <div class="head">
         <div>
-          <h2 id="videos-h">Video guides</h2>
+          <h2 id="videos-h">Tutorials</h2>
+          <p>Short videos that show one task at a time.</p>
         </div>
         <a class="more" href="https://www.laseros.com/tutorials/">All tutorials on laseros.com <svg class="icon"><use href="#i-ext"/></svg></a>
       </div>
