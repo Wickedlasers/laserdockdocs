@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Control modes · LaserCube Academy</title>
+<meta name="description" content="A free course for LaserCube Ultra MK2 and Pro owners: Playlist and Visualizer modes, built-in laser shows, Cube Link, DMX and Art-Net, and MIDI controllers. Pass the quiz and download a certificate.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://wiki.laseros.com/academy/control-modes/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/academy/control-modes/">
+<meta property="og:title" content="Control modes for the Ultra MK2 and Pro">
+<meta property="og:description" content="A free LaserCube Academy course: run your Ultra MK2 or Pro from its SD card, a lighting desk or a MIDI controller. Certificate at the end.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/inter/inter-latin.woff2" crossorigin>
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../academy.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="../../" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="true">Academy</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="../../#videos">Tutorials</a>
+      <a href="../../#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="../" aria-current="true">Academy</a>
+          <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="../../#videos">Tutorials</a>
+          <a href="../../#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" data-course="control-modes" data-version="1.0" data-title="Control modes for the Ultra MK2 and Pro" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Next step">
+
+  <section class="hero stage">
+    <div class="container">
+      <p class="label"><a href="../">LaserCube Academy</a> · Next step</p>
+      <h1>Control modes for the Ultra MK2 and Pro</h1>
+      <p class="lead">Eight short lessons on running your cube without a laptop, or from your lighting desk: your own playlists from the SD card, shows that follow the music, laser shows on several cubes at once, DMX and Art‑Net, and MIDI controllers. Pass the final quiz and download your certificate.</p>
+      <ul class="meta">
+        <li><svg class="icon"><use href="#i-book"/></svg>8 lessons + quiz, about 45 minutes</li>
+        <li><svg class="icon"><use href="#i-cube"/></svg>Ultra MK2 &amp; Pro</li>
+        <li><svg class="icon"><use href="#i-user"/></svg>No account needed</li>
+        <li><svg class="icon"><use href="#i-award"/></svg>Free certificate</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-grid">
+
+      <aside class="toc" aria-label="Course contents">
+        <div class="progress js-progress js-only">
+          <div class="progress-bar"><span></span></div>
+          <p class="progress-text">0 of 8 lessons done</p>
+        </div>
+        <ol>
+          <li><a data-nav href="#overview"><span class="st" data-n="i">i</span>How this course works</a></li>
+          <li><a data-nav href="#lesson-1"><span class="st" data-n="1">1</span>Pick a control mode</a></li>
+          <li><a data-nav href="#lesson-2"><span class="st" data-n="2">2</span>Build a playlist in LaserOS</a></li>
+          <li><a data-nav href="#lesson-3"><span class="st" data-n="3">3</span>Play it on the cube</a></li>
+          <li><a data-nav href="#lesson-4"><span class="st" data-n="4">4</span>Visualizer: shows that follow the music</a></li>
+          <li><a data-nav href="#lesson-5"><span class="st" data-n="5">5</span>Laser shows on one cube or several</a></li>
+          <li><a data-nav href="#lesson-6"><span class="st" data-n="6">6</span>Connect a DMX or Art‑Net desk</a></li>
+          <li><a data-nav href="#lesson-7"><span class="st" data-n="7">7</span>The 16 DMX channels</a></li>
+          <li><a data-nav href="#lesson-8"><span class="st" data-n="8">8</span>MIDI controllers</a></li>
+          <li><a data-nav href="#final"><span class="st" data-n="Q">Q</span>Final quiz</a></li>
+          <li><a data-nav href="#certificate"><span class="st" data-n="★">★</span>Your certificate</a></li>
+        </ol>
+      </aside>
+
+      <div class="lessons-col">
+        <details class="toc-phone js-only">
+          <summary><span>Course contents</span><span class="small js-progress"><span class="progress-text">0 of 8 lessons done</span></span></summary>
+          <div class="inner">
+            <div class="progress js-progress"><div class="progress-bar"><span></span></div></div>
+          </div>
+        </details>
+        <p class="no-js-only small">The questions, the final quiz and the certificate need JavaScript. Without it you can still read every lesson below.</p>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="view" id="overview" aria-labelledby="overview-h">
+  <p class="label">Before you start</p>
+  <h2 id="overview-h">How this course works</h2>
+  <p class="intro">Streaming from LaserOS is only one way to run your cube. This course shows you the others: the cube playing on its own from its SD card, a lighting desk in charge, and knobs and buttons on a MIDI controller.</p>
+  <h3>By the end you can</h3>
+  <ul class="points">
+    <li>pick the right control mode for a job, and know which settings the cube uses in it;</li>
+    <li>put your own playlist on the SD card and play it from the cube’s screen or a web browser;</li>
+    <li>make the Visualizer follow the music, from the built‑in microphone or the line input;</li>
+    <li>play a built‑in laser show on several cubes in sync with Cube Link;</li>
+    <li>connect a DMX or Art‑Net desk and read the cube’s 16 channels;</li>
+    <li>use and map an APC40 MK2 or APC mini MK2 MIDI controller.</li>
+  </ul>
+  <h3>How the lessons work</h3>
+  <ul class="points">
+    <li>Each lesson takes about 5 minutes, plus its video. It has the key points and a few questions. Get a question wrong? Pick another answer.</li>
+    <li>Your progress is saved in this browser. There’s no account and nothing is sent to us. Clearing your browser data, or switching to another device, starts the course again.</li>
+    <li>When all eight lessons are done, take the final quiz: 10 questions, 8 right to pass, as many tries as you need.</li>
+    <li>Pass, then download your certificate as a PDF or an image.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
+    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies in every control mode: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, two ways to stop the laser within reach, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+  </div>
+  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/">LaserCube Ultra MK2 &amp; Pro manual</a>, and our video tutorials. If a video and the manual differ, follow the manual.</p>
+  <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
+</section>
+
+<!-- ============ LESSON 1 ============ -->
+<section class="view lesson" id="lesson-1" aria-labelledby="l1-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 1 of 8</p>
+  <h2 id="l1-h">Pick a control mode</h2>
+  <p class="intro">The control mode decides who is in charge of the laser: software on a computer or phone, the cube itself, or a lighting desk. One mode is active at a time.</p>
+
+  <h3>The eight control modes</h3>
+  <div class="two">
+    <div>
+      <p><strong>The cube plays on its own</strong>, from its SD card. No computer needed.</p>
+      <ul class="points">
+        <li><strong>Playlist:</strong> plays playlists you made in LaserOS (lessons 2 and 3).</li>
+        <li><strong>Visualizer:</strong> 91 built‑in visuals that react to sound (lesson 4).</li>
+        <li><strong>Laser Show:</strong> ready‑made laser shows with music, on one cube or several (lesson 5).</li>
+      </ul>
+      <p><strong>A lighting desk is in charge</strong></p>
+      <ul class="points">
+        <li><strong>DMX:</strong> a DMX desk or controller, over a DMX cable (lessons 6 and 7).</li>
+        <li><strong>Art‑Net:</strong> the same control over the network, from desks and software that speak Art‑Net.</li>
+      </ul>
+    </div>
+    <div>
+      <p><strong>Software streams to the cube</strong> over the network</p>
+      <ul class="points">
+        <li><strong>LaserOS:</strong> LaserOS is in complete control, as in the Start here course. It’s also the mode for supported third‑party apps such as Liberation, LaserShowGen, MadMapper and TouchDesigner.</li>
+        <li><strong>IDN:</strong> the ILDA Digital Network protocol, streaming up to 35,000 points per second.</li>
+        <li><strong>Ether Dream:</strong> the Ether Dream network protocol, for third‑party laser software.</li>
+      </ul>
+      <p class="note"><strong>ILDA input:</strong> an external ILDA interface (DAC) from other show software plugs into the ILDA input on the back. The cube switches to it by itself, and it overrides the current mode. The manual suggests setting that software’s scan rate to 30,000 points per second.</p>
+    </div>
+  </div>
+
+  <h3>Change the mode</h3>
+  <ul class="points">
+    <li>On the cube’s screen, choose <strong>Control Mode</strong> in the main menu, then the mode. Turn the knob to move, push it to select.</li>
+    <li>When you choose DMX or Art‑Net, the cube restarts in that mode, and its DMX or ArtNet menu appears in the main menu.</li>
+    <li>The status bar at the bottom of the screen shows the current mode, the connection and the cube’s IP address, plus an <strong>I‑LOCK</strong> warning while the interlock is open.</li>
+    <li>Its background colour tells you more: green while the cube receives laser data over the network, cyan while the ILDA input is in use, and purple on a Cube Link slave (lesson 5).</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-lcd-status-1286.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-lcd-status-1286.webp" alt="The cube’s screen, from the manual. The main menu has Control Mode, Settings, Preview and Status Info. The Control Mode list shows Playlist ticked, then Laser Show, IDN and Ether-Dream. The status bar at the bottom shows the battery level, WiFi status and channel, the laser data rate (35K), an I-LOCK warning when the interlock is open, the current control mode, the network connection mode and the cube’s IP address." width="1286" height="695" loading="lazy"></a>
+    <figcaption>The main menu, the Control Mode list and the status bar, from the manual. Select the picture to open it full size.</figcaption>
+  </figure>
+
+  <h3>Which settings the cube uses</h3>
+  <ul class="points">
+    <li>In <strong>LaserOS</strong> mode, LaserOS handles the image setup, colour balance and safety zones, so those entries are greyed out on the cube.</li>
+    <li>When you choose one of the cube’s other modes, such as Visualizer, the cube’s own settings become available under <strong>Settings → Projection</strong>: Image Setup (power, rotation, size, flip and position), Colour Balance and Safety Zone. Set the safety zone there, as in <a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>.</li>
+  </ul>
+
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>It can start by itself</span>
+    <p>In Playlist mode, the last playlist starts as soon as the interlock is enabled, because Power‑On Play is on by default. Visualizer mode has an auto‑play‑at‑power‑on setting too. Effect settings you change on the cube are kept after a power cycle. So when you turn the key on, the show may start straight away.</p>
+  </div>
+
+  <h3>The SD card</h3>
+  <ul class="points">
+    <li>The microSD card in the cube holds the content for the stand‑alone modes, DMX, Art‑Net and MIDI: the built‑in laser shows, demo playlists and MIDI mappings come on it.</li>
+    <li>Missing files? The latest card contents are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Unzip them and copy the “Lasercube” folder to the root of the card. Deleting the old folder also deletes your own playlists and MIDI mappings.</li>
+    <li>Need a new card? The one the manual names as tested is the Lexar A2 Silver Plus 64GB. Cheaper cards may fail to stream the laser shows. If you format it, use exFAT, and name the card “WL”.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>At a party you want the cube to play your logo and a few animations, with no computer connected. Which mode?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q1" value="a"><span>LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="b"><span>Playlist</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="c"><span>Ether Dream</span></label>
+      </div>
+      <p class="why" hidden>Playlist mode plays content from the SD card on its own. LaserOS and Ether Dream need software streaming to the cube.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>You’re running the Visualizer. Where do you set the safety zone?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q2" value="a"><span>In LaserOS, from your phone or laptop</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="b"><span>Nowhere: zones only work in LaserOS mode</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="c"><span>On the cube, under Settings → Projection</span></label>
+      </div>
+      <p class="why" hidden>In the cube’s own modes, its own Safety Zone setting is used: Settings → Projection → Safety Zone.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 3</span>The cube is in Playlist mode with the factory settings. You switch on and turn the key on. What happens?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q3" value="a"><span>The last playlist starts projecting</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="b"><span>Nothing until LaserOS connects</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="c"><span>It projects a test pattern first</span></label>
+      </div>
+      <p class="why" hidden>Power‑On Play is on by default, so the last playlist starts as soon as the interlock is enabled.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#control-modes">Control modes</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">CubeOS screen and status bar</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#projection-settings">Projection settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#sd-card-information">SD card</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 2.</p>
+  <nav class="pager" aria-label="Lesson 1: back and next"><a data-nav href="#overview"><span>Back</span>How this course works</a><a class="next" data-nav href="#lesson-2"><span>Next</span>Build a playlist in LaserOS</a></nav>
+</section>
+
+<!-- ============ LESSON 2 ============ -->
+<section class="view lesson" id="lesson-2" aria-labelledby="l2-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 2 of 8</p>
+  <h2 id="l2-h">Build a playlist in LaserOS</h2>
+  <p class="intro">Playlist mode plays the content you choose, straight from the SD card. You build the playlist in LaserOS on a computer, then copy it to the card.</p>
+
+  <div class="video" data-yt="f1f-hoGJaYE" data-title="LaserCube Ultra MK2: how to import a playlist to the SD card">
+    <button type="button" aria-label="Play video: how to import a playlist to the SD card"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/f1f-hoGJaYE.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Importing a playlist to the SD card</span><a href="https://www.youtube.com/watch?v=f1f-hoGJaYE" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Make the playlist</h3>
+  <ul class="points">
+    <li>Use LaserOS 0.18.1 or later on a Windows or Mac computer. The phone and tablet apps only stream to the cube: they can’t put content on its SD card.</li>
+    <li>Open the Playlists app, click the small <strong>+</strong> and save the new playlist. Keep the name short: the cube’s screen can only show a limited number of characters.</li>
+    <li>Add content: drag cues into the playlist pane on the right, or right‑click any cue, pick your playlist under “Add To Playlist” and click Add.</li>
+  </ul>
+
+  <h3>Add your own logo</h3>
+  <ul class="points">
+    <li>Open the Import app, pick the playlist, then click “Import files”. SVG and ILD files give the best results. A PNG or JPG is first turned into lines, in a window where you adjust sensitivity, line length and more, with a live preview.</li>
+    <li>A very detailed image can flicker: the scanners can only draw so many points per second. Turn on “Show FPS” in LaserOS (Settings → General). At 45 frames per second or more, it won’t appear to flicker.</li>
+    <li>If it flickers, lower its render quality: right‑click the item in the playlist, turn on “Assign render quality” and move the slider down.</li>
+  </ul>
+
+  <h3>How long each item plays</h3>
+  <p>Right‑click an item and turn on “Assign Duration”. Choose <strong>time</strong> (1 to 999 seconds) or <strong>cycles</strong> (how many times an animation plays, 1 to 999). One cycle suits scrolling text from the Text app: it scrolls once, then the next item plays. The “Beats” duration and “Assign Effect” aren’t supported on the cube.</p>
+
+  <h3>Copy it to the SD card</h3>
+  <ul class="points">
+    <li>Put the cube’s microSD card in a USB 3.x card reader and connect it to the computer. It shows up as a drive called <strong>WL</strong>, with a folder called “Lasercube”.</li>
+    <li>In the Playlists app, select the playlist and click the SD card export button. If the computer asks for access to the card, allow it. If the playlist is already on the card, you can replace it.</li>
+    <li>“SD card not found”? Check that the card is properly in the reader, that it’s named WL (rename it if not) and that it has the Lasercube folder (if not, get the card contents from GitHub, lesson 1).</li>
+    <li>On the card, each playlist is a “.ldpl” file plus a folder with the same name. The cube only lists the playlist if both are there. The .ldpl file is plain text, and its order is the play order (with shuffle off).</li>
+    <li>Eject the card safely before you take it out, then put it back in the cube.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the steps for a new playlist in order.</p>
+      <ol>
+        <li>Make and save a playlist in LaserOS on a computer</li>
+        <li>Add cues and import your logo</li>
+        <li>Put the SD card in a USB 3.x reader on the computer</li>
+        <li>Export the playlist to the card</li>
+        <li>Eject the card and put it back in the cube</li>
+      </ol>
+      <p class="why" hidden>Build the playlist first, then export it to the card, and eject the card safely before it goes back in the cube.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>You want to export a playlist to the cube’s SD card from LaserOS on your phone. Will that work?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q1" value="a"><span>Yes, every LaserOS app can export</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="b"><span>No, exporting needs LaserOS on a computer</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="c"><span>Yes, if the phone is on the cube’s WiFi</span></label>
+      </div>
+      <p class="why" hidden>The phone and tablet apps only stream to the cube. Adding content to the SD card needs LaserOS for Windows or Mac.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Your imported logo flickers on the cube. What helps?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q2" value="a"><span>Raise its render quality to the maximum</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="b"><span>Import it again as a JPG file instead</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="c"><span>Lower its render quality in the playlist</span></label>
+      </div>
+      <p class="why" hidden>Higher quality means more points to draw, and the scanners can only draw so many per second. Lower the render quality until it runs at 45 frames per second or more.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 3</span>LaserOS says “SD card not found”, but the card is in the reader. What do you check?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q3" value="a"><span>The card is named WL and has the Lasercube folder</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="b"><span>The cube is switched on and in Playlist mode</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="c"><span>The playlist name has fewer than ten letters</span></label>
+      </div>
+      <p class="why" hidden>LaserOS looks for a card named WL with a Lasercube folder. Rename the card, or get the card contents from GitHub.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#creating-a-custom-playlist">Creating a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-a-custom-svg-to-the-playlist">Adding your own SVG</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#exporting-a-playlist-to-the-micro-sd-card">Exporting to the SD card</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 3.</p>
+  <nav class="pager" aria-label="Lesson 2: back and next"><a data-nav href="#lesson-1"><span>Back</span>Pick a control mode</a><a class="next" data-nav href="#lesson-3"><span>Next</span>Play it on the cube</a></nav>
+</section>
+
+<!-- ============ LESSON 3 ============ -->
+<section class="view lesson" id="lesson-3" aria-labelledby="l3-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 3 of 8</p>
+  <h2 id="l3-h">Play it on the cube</h2>
+  <p class="intro">Now play your playlist: from the cube’s own screen, or from a web browser on your phone or laptop.</p>
+
+  <h3>The Playlist Player</h3>
+  <ul class="points">
+    <li>With the card in the cube, choose <strong>Control Mode → Playlist</strong>, open the Playlist Player and pick your playlist. The cube remembers it after a power cycle.</li>
+    <li><strong>Auto‑Play</strong> moves on to the next cue every “cue delay” seconds. Press pause to stay on the current cue.</li>
+    <li>Picking a cue yourself, with previous or next, the web app or an APC button, stops the auto‑play until you press play again.</li>
+    <li><strong>Shuffle</strong> plays the cues in random order. <strong>Settings → Playback Speed</strong> changes how fast they play.</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-playlist-player-1286.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-playlist-player-1286.webp" alt="The Playlist Player screen, from the manual: a playlist drop-down showing Beams 1, then buttons for previous cue, auto-play play and pause, next cue and projection on or off, and a Cue Delay slider set to 66 seconds. Notes say previous and next cue turn auto-play off." width="1286" height="450" loading="lazy"></a>
+    <figcaption>The Playlist Player on the cube, from the manual.</figcaption>
+  </figure>
+
+  <h3>Playlist options</h3>
+  <p>The Playlist Options menu sits below the Playlist Player in the main menu.</p>
+  <ul class="points">
+    <li><strong>Fade:</strong> how fast one item fades out and the next fades in. The default is 250&nbsp;ms; 0&nbsp;ms means no fade.</li>
+    <li><strong>Power‑On Play:</strong> on by default. The last playlist starts projecting as soon as the interlock is enabled after switching on. Set it to Disabled if you want the cube to wait until you press the projection button in the player or the web app.</li>
+    <li><strong>Web html:</strong> the factory web app, or your own version of it from the SD card.</li>
+  </ul>
+
+  <h3>Control it from a browser</h3>
+  <div class="video" data-yt="8a95SdH_2ek" data-title="WebApp: easy control of built-in content on the Ultra MK2">
+    <button type="button" aria-label="Play video: the Ultra MK2 web app"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/8a95SdH_2ek.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Controlling built‑in shows from the web app</span><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <ul class="points">
+    <li>Connect your phone or laptop to the cube, the same way as for LaserOS. With WiFi server, join the cube’s WiFi: “LaserCube”, password “Laser2020”, unless you changed them.</li>
+    <li>Open a web browser (the manual names Safari and Firefox) and type the cube’s IP address: 192.168.4.1 by default on WiFi server. It’s also shown at the bottom right of the status bar.</li>
+    <li>Pick a playlist at the top right, and tap a cue to play it.</li>
+    <li><strong>Quick image settings:</strong> rotation (up to 90° either way), zoom (10 to 100%) and power (0 to 100%).</li>
+    <li><strong>Quick player settings:</strong> shuffle, cue delay and play speed (100 is normal speed). At the bottom it shows the interlock status, the battery and the cube’s temperature.</li>
+    <li><strong>Quick effects:</strong> one image effect and one colour effect at a time (lesson 4).</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-webapp-960.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-webapp-960.webp" alt="The playlist web app in a browser, from the manual: a grid of cue previews from the Halloween 1 playlist, the current cue name at the top left and the playlist selector at the top right. Along the bottom: quick image settings, quick player settings, the quick effect menu, projection on or off (red means on), previous cue, auto-play play and pause, and next cue." width="960" height="848" loading="lazy"></a>
+    <figcaption>The playlist web app, from the manual. The projection button is red while the laser is on.</figcaption>
+  </figure>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>You don’t want the playlist to start the moment the key is turned on. What do you change?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q1" value="a"><span>Set the fade time to 0&nbsp;ms</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="b"><span>Set Power‑On Play to Disabled</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="c"><span>Turn Shuffle on in the web app</span></label>
+      </div>
+      <p class="why" hidden>With Power‑On Play disabled, the cube waits until you press the projection button in the player or the web app.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Auto‑Play is running and you tap a cue in the web app. What happens next?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>That cue stays until you press play again</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="b"><span>The playlist goes back to its first cue</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="c"><span>Auto‑Play moves on after the cue delay</span></label>
+      </div>
+      <p class="why" hidden>Picking a cue yourself stops the auto‑play until you press play again.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Your phone is on the cube’s WiFi, which uses the factory settings. Which address opens the web app?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q3" value="a"><span>www.laseros.com/webapp</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="b"><span>The cube’s MAC address</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="c"><span>192.168.4.1</span></label>
+      </div>
+      <p class="why" hidden>On WiFi server the cube is at 192.168.4.1 by default. The IP address is shown at the bottom right of the status bar.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#playlist-player-ui">Playlist Player</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#playlist-options-menu">Playlist options</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#playlist-player-web-app">Playlist web app</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 4.</p>
+  <nav class="pager" aria-label="Lesson 3: back and next"><a data-nav href="#lesson-2"><span>Back</span>Build a playlist in LaserOS</a><a class="next" data-nav href="#lesson-4"><span>Next</span>Visualizer: shows that follow the music</a></nav>
+</section>
+
+<!-- ============ LESSON 4 ============ -->
+<section class="view lesson" id="lesson-4" aria-labelledby="l4-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 4 of 8</p>
+  <h2 id="l4-h">Visualizer: shows that follow the music</h2>
+  <p class="intro">In Visualizer mode the cube draws its own visuals that react to sound. There’s no playlist to build and no computer to connect.</p>
+
+  <h3>Pick a visual</h3>
+  <ul class="points">
+    <li>Firmware 2.0 has 91 sound‑reactive visualizers: spectrum and waveform meters, particles and trails, geometric patterns, beams and mirrors, and a few characters, such as a dancing stick figure. The manual lists them all, with a picture of each.</li>
+    <li>Choose <strong>Control Mode → Visualizer</strong>. Pick a playlist (“All” has every visual), then a visual, or let auto‑play move through the list. Picking a visual yourself, or pressing previous or next, cancels the auto‑play.</li>
+    <li>The Viz Options menu sets the transition time between visuals. Auto‑play at power‑on can be set too.</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-visualizer-1286.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-visualizer-1286.webp" alt="The Audio Visualizer screen, from the manual: a playlist drop-down set to Classics, a visual drop-down set to Atomic, and buttons for previous, auto-play play and pause, next and projection on or off. Notes say that choosing a visual, previous or next cancels auto-play." width="1286" height="536" loading="lazy"></a>
+    <figcaption>The Visualizer player on the cube, from the manual.</figcaption>
+  </figure>
+
+  <h3>Give it sound</h3>
+  <ul class="points">
+    <li><strong>Settings → Audio → Audio Input:</strong> the built‑in microphone, or the line input. For the line input, plug the audio from a computer or another audio device into the pink 3.5&nbsp;mm jack marked A‑IN.</li>
+    <li><strong>Gain</strong> (Max Line Gain or Max Mic Gain, 0 to 50&nbsp;dB in 5&nbsp;dB steps): too low and some visuals hardly move; too high and they’re overdriven.</li>
+    <li><strong>Settings → Tempo:</strong> some visuals and effects follow the tempo. Press “Tap BPM” in time with the music so the cube works out its beats per minute, then press “Sync Beat” on the first beat of a bar.</li>
+  </ul>
+
+  <h3>Effects</h3>
+  <ul class="points">
+    <li>In Playlist and Visualizer modes, the Effects menu adds effects that warp or re‑colour the image: zooms, 3D spins, ripples, colour cycles, strobes and more, 78 in all. Most react to the sound or the tempo.</li>
+    <li>Effects only work once they’re enabled. The manual recommends keeping them disabled when you don’t need them, so the projection doesn’t change by accident.</li>
+    <li>One image effect and one colour effect can be active at a time. Effect settings you change on the cube are kept after a power cycle.</li>
+  </ul>
+
+  <h3>The Visualizer web app</h3>
+  <p>Visualizer mode has its own web app, opened like the playlist one. In it you pick playlists and make your own: long‑press a visual to add it to a playlist, and hold and drag to change the order. The built‑in “All” and “Classics” playlists can’t be deleted. If the previews show as blank squares, update the SD card from GitHub (lesson 1).</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>The music through the line input is loud, but the visuals barely move. What do you adjust?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q1" value="a"><span>The tempo, with Tap BPM</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="b"><span>The line gain, a step higher</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="c"><span>The fade time, a little longer</span></label>
+      </div>
+      <p class="why" hidden>Too little gain and some visuals hardly move. Raise Max Line Gain, but not so far that they’re overdriven.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Which sound can the Visualizer react to?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q2" value="a"><span>The built‑in microphone or the line input</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="b"><span>Only music streamed to it from LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="c"><span>Only its built‑in microphone, no cable</span></label>
+      </div>
+      <p class="why" hidden>Settings → Audio → Audio Input chooses between the built‑in microphone and the 3.5&nbsp;mm line input (A‑IN).</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>You don’t need any effects tonight. What does the manual recommend?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q3" value="a"><span>Pick a calm effect, such as a slow zoom</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="b"><span>Leave them enabled, at their default values</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="c"><span>Keep effects disabled in the Effects menu</span></label>
+      </div>
+      <p class="why" hidden>Keep effects disabled when you don’t need them, so the projection doesn’t change by accident.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#visualizer-control-mode">Visualizer mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#audio-settings">Audio settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#tempo-settings">Tempo</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#built-in-effects">Effects</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#visualizer-web-app">Visualizer web app</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 5.</p>
+  <nav class="pager" aria-label="Lesson 4: back and next"><a data-nav href="#lesson-3"><span>Back</span>Play it on the cube</a><a class="next" data-nav href="#lesson-5"><span>Next</span>Laser shows on one cube or several</a></nav>
+</section>
+
+<!-- ============ LESSON 5 ============ -->
+<section class="view lesson" id="lesson-5" aria-labelledby="l5-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 5 of 8</p>
+  <h2 id="l5-h">Laser shows on one cube or several</h2>
+  <p class="intro">Laser Show mode plays ready‑made shows with music, from the SD card. With Cube Link, several cubes play them in sync, with no computer and no WiFi network.</p>
+
+  <h3>Play a built‑in show</h3>
+  <ul class="points">
+    <li>Choose <strong>Control Mode → Laser Show</strong>, pick a category, then press play. There are 38 shows in 7 categories: EDM, Christmas, Thanksgiving, New Year, Birthday, Wedding and Halloween. When a show ends, the next one in the category starts.</li>
+    <li>Empty list? The SD card is missing, or it doesn’t have the factory contents (lesson 1).</li>
+    <li>The music comes out of the green 3.5&nbsp;mm jack marked A‑OUT: connect powered speakers. <strong>Settings → Audio → Audio Output Volume</strong> sets the level.</li>
+    <li>Some speakers with built‑in light effects delay the sound, by as much as 300&nbsp;ms. Then use <strong>Audio Output Delay</strong> to bring the music and the laser back in sync. A new delay applies when you stop and start the show again.</li>
+  </ul>
+
+  <h3>Several cubes with Cube Link</h3>
+  <div class="video" data-yt="56A0RWEOAs8" data-title="CubeLink: wireless multi-cube shows with the LaserCube Ultra MK2">
+    <button type="button" aria-label="Play video: wireless multi-cube shows with Cube Link"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/56A0RWEOAs8.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Wireless multi‑cube shows with Cube Link</span><a href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <ul class="points">
+    <li>Cube Link makes its own wireless link between the cubes, over about 20 to 40&nbsp;m with a clear line of sight. Connect the WiFi antenna on every cube first. It isn’t available while the cube’s connection mode is set to WiFi.</li>
+    <li>On every cube, enable Cube Link and set the <strong>same Link Channel and the same PIN</strong>.</li>
+    <li>Make <strong>one</strong> cube the Master and all the others Slaves.</li>
+    <li>Set each cube’s <strong>Group</strong>. A show made for two projectors, such as Alive (2CH), has two parts: Group 1 cubes play one, Group 2 cubes the other. With four cubes, put two in each group.</li>
+    <li>Pick the same show category on every cube. Pressing play on the master then starts them all.</li>
+    <li>A slave that has found its master shows a purple status bar. Status Info shows how many slaves are connected (“Remote Slaves”).</li>
+  </ul>
+  <div class="two shots">
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F0000001408A34D6F2-240.webp" alt="The Cube Link menu on a master cube, from the manual: Enable is on and Cube Link is set to Master. The status bar is black." width="240" height="320" loading="lazy">
+      <figcaption>Master: Cube Link enabled and set to Master.</figcaption>
+    </figure>
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F0000001406EE4C13E-240.webp" alt="The Cube Link menu on a slave cube, from the manual: Enable is on and Cube Link is set to Slave. The status bar is purple and reads Laser Show." width="240" height="320" loading="lazy">
+      <figcaption>Slave: the purple status bar means it has found its master.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Several cubes from LaserOS</h3>
+  <ul class="points">
+    <li>To stream to several cubes from LaserOS, or where WiFi is busy, the manual recommends network cables in LAN client mode (<a class="link" href="../start-here/#lesson-7">Start here, lesson 7</a>).</li>
+    <li>To match the colours of several projectors, fine‑tune each cube in <strong>Settings → Projection → Colour Balance</strong>. The defaults suit most situations.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the Cube Link set‑up in order.</p>
+      <ol>
+        <li>Connect the WiFi antenna on every cube</li>
+        <li>Enable Cube Link on each, with the same channel and PIN</li>
+        <li>Set one cube as Master and the others as Slaves</li>
+        <li>Check that every slave’s status bar turns purple</li>
+        <li>Press play on the master</li>
+      </ol>
+      <p class="why" hidden>Antennas first, then Cube Link with the same channel and PIN, then one master. Once every slave shows purple, play on the master starts them all.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>The music from your speakers lags behind the laser show. What do you use?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Settings → Tempo, then Tap BPM to the beat</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="b"><span>A higher Max Line Gain on the input</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Audio Output Delay, then restart the show</span></label>
+      </div>
+      <p class="why" hidden>Audio Output Delay shifts the sound to match the laser. It applies once you stop and start the show again.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Four cubes will play a show made for two projectors. How do you set them up?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q2" value="a"><span>One master; two cubes in Group 1, two in Group 2</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="b"><span>Two masters, one for each group of two cubes</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="c"><span>One master; each cube in a group of its own</span></label>
+      </div>
+      <p class="why" hidden>Only one master. Each group plays one part of the show, so two cubes go in Group 1 and two in Group 2.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>One slave’s status bar stays black. What do you check?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q3" value="a"><span>Its DMX start address and universe</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="b"><span>Its antenna, Link Channel and PIN</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="c"><span>Its audio input and line gain</span></label>
+      </div>
+      <p class="why" hidden>A slave turns purple once it finds a master with the same channel and PIN in range. Check the antenna, the channel and the PIN, and that its connection mode isn’t WiFi.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#laser-show-control-mode">Laser Show mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#multi-projector-laser-shows">Multi‑projector shows</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#cube-link-mode">Cube Link</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#audio-settings">Audio settings</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 6.</p>
+  <nav class="pager" aria-label="Lesson 5: back and next"><a data-nav href="#lesson-4"><span>Back</span>Visualizer: shows that follow the music</a><a class="next" data-nav href="#lesson-6"><span>Next</span>Connect a DMX or Art‑Net desk</a></nav>
+</section>
+
+<!-- ============ LESSON 6 ============ -->
+<section class="view lesson" id="lesson-6" aria-labelledby="l6-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 6 of 8</p>
+  <h2 id="l6-h">Connect a DMX or Art‑Net desk</h2>
+  <p class="intro">With DMX or Art‑Net, a lighting desk runs the cube alongside your other lights. The cube plays cues from a playlist on its SD card; the desk picks the cue and can change its size, position, colour and more.</p>
+
+  <div class="video" data-yt="aC7mLKLXRWk" data-title="What DMX is and how to use it with LaserCube">
+    <button type="button" aria-label="Play video: what DMX is and how to use it with LaserCube"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/aC7mLKLXRWk.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>What DMX is and how to use it with LaserCube</span><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>DMX or Art‑Net?</h3>
+  <ul class="points">
+    <li><strong>DMX:</strong> a DMX cable from the desk or controller into the cube’s DMX In.</li>
+    <li><strong>Art‑Net:</strong> the same control over the network (Ethernet), from desks and software that speak Art‑Net.</li>
+  </ul>
+
+  <h3>DMX cables</h3>
+  <ul class="points">
+    <li><strong>Ultra MK2:</strong> full‑size XLR DMX In and Out. Standard DMX cables plug straight in.</li>
+    <li><strong>Pro:</strong> DMX In and Out are two 3.5&nbsp;mm TRS jacks, In on the left and Out on the right. Each needs an adapter cable, not included: for DMX In a 3.5&nbsp;mm TRS plug to 3‑pin XLR male, for DMX Out a 3.5&nbsp;mm TRS plug to 3‑pin XLR female.</li>
+    <li>Both Pro cables are wired tip to XLR pin 3, ring to pin 2, sleeve to pin 1. Ordinary 3.5&nbsp;mm‑to‑XLR audio cables are wired the other way round, so they won’t work. The manual names Eurolite’s “DMX‑Adapter IN Jack 3,5/XLR” and “DMX‑Adapter OUT Jack 3,5/XLR”.</li>
+  </ul>
+
+  <h3>Set it up on the cube</h3>
+  <ul class="points">
+    <li>Choose <strong>Control Mode → DMX‑512</strong> (or ArtNet). The cube restarts, and the DMX (or ArtNet) menu is now in the main menu.</li>
+    <li><strong>Start Address:</strong> where the cube’s 16 channels begin, from 1 to 512 (default 1). Set the same address for the cube on your desk.</li>
+    <li><strong>Universe</strong> (Art‑Net only): the Art‑Net universe the cube listens to.</li>
+    <li><strong>Fixture Profile:</strong> there’s one, with 16 channels. It matches the FB3/FB4 16‑channel profile, so desks that support FB3/FB4 work with it.</li>
+    <li><strong>CUE Selection:</strong> the playlist on the SD card that the desk picks cues from. Cue 1 is the playlist’s first item. Export your own from LaserOS (lesson 2) or use one that came on the card.</li>
+    <li><strong>Defaults</strong> puts every item in the menu back to its factory setting.</li>
+  </ul>
+  <div class="two shots">
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F000000140E9E37788_hu_6870deb6268522e6-240.webp" alt="The main menu in DMX-512 mode, from the manual: Control Mode, Settings, Preview and a new DMX item. The status bar shows a red cross next to DMX." width="240" height="320" loading="lazy">
+      <figcaption>After the restart: the DMX menu. The red cross means no DMX is arriving yet.</figcaption>
+    </figure>
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F000000140230AEACB_hu_e2f2d5f6216afc8e-240.webp" alt="The DMX menu, from the manual: Start Address 001 and Fixture Profile default (16 CH). The status bar shows a green tick next to DMX." width="240" height="320" loading="lazy">
+      <figcaption>Start address 1, the 16‑channel profile, and a green tick: DMX is arriving.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Is it receiving?</h3>
+  <ul class="points">
+    <li>At the bottom right of the status bar, a green tick next to DMX means the cube is receiving; a red cross means it isn’t.</li>
+    <li>DMX red cross with the desk running: check the cabling, and that the DMX line is correctly terminated.</li>
+    <li>Art‑Net red cross: check the network first (is an IP address shown in the status bar?), then that the cube is on the right universe.</li>
+    <li>MIDI controllers don’t work in DMX or Art‑Net mode (lesson 8).</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>You connect a Pro to a DMX desk with a 3.5&nbsp;mm‑to‑XLR audio cable. Will it work?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q1" value="a"><span>Yes, any 3.5&nbsp;mm‑to‑XLR cable works</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="b"><span>No, audio cables are wired the other way</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="c"><span>Only if it goes into the DMX Out jack</span></label>
+      </div>
+      <p class="why" hidden>The Pro needs DMX adapter cables wired tip to pin 3. Audio cables go tip to pin 2, so they won’t work.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Your desk has the cube patched at address 101. What do you set on the cube?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q2" value="a"><span>DMX start address 101</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="b"><span>Art‑Net universe 101</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="c"><span>Fixture profile 101</span></label>
+      </div>
+      <p class="why" hidden>The start address tells the cube where its 16 channels begin. It has to match the desk.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Your desk tells the cube to play cue 1. Which item plays?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q3" value="a"><span>The first show in the Laser Show list</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="b"><span>The cue that LaserOS sent to it last</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="c"><span>The first item of the chosen playlist</span></label>
+      </div>
+      <p class="why" hidden>Cues follow the order of the playlist chosen under CUE Selection: cue 1 is its first item.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#dmx-control-mode">DMX mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#connecting-dmx-cables-to-the-lasercube-pro">DMX cables for the Pro</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#artnet-control-mode">Art‑Net mode</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 7.</p>
+  <nav class="pager" aria-label="Lesson 6: back and next"><a data-nav href="#lesson-5"><span>Back</span>Laser shows on one cube or several</a><a class="next" data-nav href="#lesson-7"><span>Next</span>The 16 DMX channels</a></nav>
+</section>
+
+<!-- ============ LESSON 7 ============ -->
+<section class="view lesson" id="lesson-7" aria-labelledby="l7-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 7 of 8</p>
+  <h2 id="l7-h">The 16 DMX channels</h2>
+  <p class="intro">The cube uses 16 channels, starting at its start address. The same channels work over DMX and Art‑Net. Channel 1 decides how many of them the cube listens to.</p>
+
+  <h3>Channel 1: access mode</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">Value</th><th scope="col">Mode</th><th scope="col">Channels used</th></tr></thead>
+      <tbody>
+        <tr><td class="n">0–31</td><td>Blackout</td><td>none</td></tr>
+        <tr><td class="n">33–95</td><td>Basic</td><td>1–4</td></tr>
+        <tr><td class="n">97–159</td><td>Standard</td><td>1–8</td></tr>
+        <tr><td class="n">161–223</td><td>Extended</td><td>1–12</td></tr>
+        <tr><td class="n">225–255</td><td>Full</td><td>all 16</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Channels above the mode’s range keep their default values. The values 32, 96, 160 and 224 don’t change the mode.</p>
+
+  <h3>Picking a cue: channels 2 and 3</h3>
+  <ul class="points">
+    <li><strong>Channel 3, cue:</strong> picks one of 48 cues. 0–31 is blackout, 33–35 is cue 1, 37–39 is cue 2, and so on up to 221–223 for cue 48.</li>
+    <li><strong>Channel 2, page:</strong> moves on in steps of 48 cues. 0–15 is page 1 (cues 1–48), 17–31 is page 2 (cues 49–96), and so on up to page 9 (129–255). That’s up to 432 cues in a playlist.</li>
+    <li>Example: cue 50 of your playlist is page 2 (channel 2 at 17–31), cue 2 on that page (channel 3 at 37–39).</li>
+  </ul>
+
+  <h3>The other channels</h3>
+  <ul class="points">
+    <li><strong>4, Speed:</strong> 0–15 normal speed; 17–31 pause; 33 to 255 runs from 25% to 200% (128 is 100%).</li>
+    <li><strong>5, Fader</strong> (Standard and up): black to full brightness.</li>
+    <li><strong>6, Scale</strong> (Standard and up): zero to full size.</li>
+    <li><strong>7 and 8, X size and Y size</strong> (Standard and up): 128 is zero size, 255 full size, and 0 full size mirrored (X) or flipped upside down (Y).</li>
+    <li><strong>9, Rotation</strong> (Extended and up): 0 to 360°.</li>
+    <li><strong>10 and 11, X and Y position</strong> (Extended and up): 128 is the centre.</li>
+    <li><strong>13, Scan rate</strong> (Full only): 0–31 the default, 35K points per second; 33–223 from 6K to 29K; 225–255 30K.</li>
+    <li><strong>15, Recolour</strong> (Full only): 0–31 the cue’s own colours; 33–223 one colour, from red through the rainbow back to red; 225–255 white.</li>
+    <li><strong>12, 14 and 16:</strong> reserved, not used yet.</li>
+  </ul>
+  <p>Below the mode a channel needs, the cube uses that channel’s default: fader and scale at 100%, no rotation, the image centred, the default scan rate and no recolouring.</p>
+  <p class="note"><strong>Safety:</strong> channels 6 to 11 let the desk resize, flip, rotate and move the image. Whatever the desk sends, the beam block is your hard stop: set and check it before the show, as in <a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>The desk sends 0 on channel 1. What does the cube do?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q1" value="a"><span>Blackout: no output</span></label>
+        <label class="opt"><input type="radio" name="l7q1" value="b"><span>Plays cue 1 of the playlist</span></label>
+        <label class="opt"><input type="radio" name="l7q1" value="c"><span>Switches to Full 16‑channel mode</span></label>
+      </div>
+      <p class="why" hidden>Channel 1 at 0–31 is blackout. 225–255 is Full mode.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Channel 1 is at 50 (Basic). You raise the fader on channel 5. What happens?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q2" value="a"><span>The image gets brighter</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="b"><span>The cube switches to Standard</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="c"><span>Nothing: the fader stays at 100%</span></label>
+      </div>
+      <p class="why" hidden>Basic mode only reads channels 1–4. The fader needs Standard (97–159) or higher; below that it’s fixed at 100%.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>You want cue 50 of the playlist. Which values do you send?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q3" value="a"><span>Channel 3 at 50, channel 2 at 0</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="b"><span>Channel 2 at 17–31, channel 3 at 37–39</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="c"><span>Channel 2 at 50, channel 3 at 0</span></label>
+      </div>
+      <p class="why" hidden>Each page holds 48 cues. Cue 50 is the second cue on page 2: page 2 is 17–31 on channel 2, cue 2 is 37–39 on channel 3.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#dmxartnet-default-fixture-channel-allocation">Default fixture channels</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#dmxart-net-channel-layout">Channel layout</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> One lesson to go.</p>
+  <nav class="pager" aria-label="Lesson 7: back and next"><a data-nav href="#lesson-6"><span>Back</span>Connect a DMX or Art‑Net desk</a><a class="next" data-nav href="#lesson-8"><span>Next</span>MIDI controllers</a></nav>
+</section>
+
+<!-- ============ LESSON 8 ============ -->
+<section class="view lesson" id="lesson-8" aria-labelledby="l8-h">
+  <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 8 of 8</p>
+  <h2 id="l8-h">MIDI controllers</h2>
+  <p class="intro">Plug an APC40 MK2 or APC mini MK2 into the cube’s USB port, and you get real buttons, knobs and faders for cues, effects and settings. No computer in between.</p>
+
+  <div class="video" data-yt="A80UjLxKDZs" data-title="LaserCube Ultra MK2: MIDI controller tutorial">
+    <button type="button" aria-label="Play video: connecting a MIDI controller"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/A80UjLxKDZs.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Connecting a MIDI controller</span><a href="https://www.youtube.com/watch?v=A80UjLxKDZs" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Connect it</h3>
+  <ul class="points">
+    <li>Plug the APC40 MK2 or APC mini MK2 into the USB port, then turn on <strong>Settings → USB MIDI</strong>. A green tick next to MIDI in the status bar means it’s connected.</li>
+    <li>MIDI works in Playlist, Visualizer and Laser Show modes. It doesn’t work in LaserOS, Art‑Net, DMX, IDN or Ether Dream mode: those are controlled another way.</li>
+    <li>To save your mappings, an SD card must be in the cube. They’re stored in its /Lasercube/settings folder, one file for each controller and control mode, as plain text you can also edit.</li>
+  </ul>
+
+  <h3>The ready‑made mapping</h3>
+  <ul class="points">
+    <li>The SD card that comes with the cube has ready‑made mappings for the APC40 MK2 and the APC mini MK2. In the APC40 MK2 one, the blue items work in Playlist mode, the red ones are effects (Playlist and Visualizer modes), and the yellow ones are image settings for the whole cube, such as power, rotation, zoom and position. The tempo buttons are mapped too.</li>
+    <li>In Playlist mode, the playlist’s items are put on the APC’s grid buttons by themselves. To choose the button and colour for each item, edit the playlist’s .ldpl file (the manual explains the apc_note and apc_color fields).</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/100000000000047F000002CAD2A81B96-1151.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/100000000000047F000002CAD2A81B96-1151.webp" alt="The default APC40 MK2 mapping, from the manual. In blue: the grid of buttons selects cues from the current playlist, the scene buttons select the playlist, Play stops and starts the playlist, and one dial sets the cue speed. In red: the top dials set the speed or colour of the colour cycle, zoom, hue, colorize, flash and strobe effects, and the faders below set each effect’s intensity, plus a master effect intensity. Metronome is Sync Beat, Tap Tempo and the tempo dial set the tempo. In yellow: dials for power, rotation, zoom, X position and Y position." width="1151" height="714" loading="lazy"></a>
+    <figcaption>The default APC40 MK2 mapping on the factory SD card, from the manual. Blue: Playlist mode; red: effects; yellow: image settings.</figcaption>
+  </figure>
+
+  <h3>Map your own controls</h3>
+  <ul class="points">
+    <li><strong>A slider to a knob or fader:</strong> on the cube’s screen, push the knob on the slider to edit it, then long‑press for the menu and choose “Link MIDI Knob”. Then move the control on the APC.</li>
+    <li>If that control is already mapped to something else, its MIDI info shows orange. Accept it, and it moves to this slider.</li>
+    <li>A mapped slider shows yellow on the screen instead of blue. Almost every slider can be mapped.</li>
+    <li>APC40 faders are absolute: moving one always overrides the slider’s value. The dials turn without end stops, and the LED ring around each mapped dial shows the slider’s value.</li>
+    <li><strong>Buttons, switches and drop‑down lists</strong> (such as the playlist or the laser show list): highlight it (in a list, pick the item first), long‑press, choose “Link MIDI Note”, press a button on the APC and pick its light colour, one of 15.</li>
+    <li>To remove a mapping, open the same menu and choose Unlink.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>The cube is in DMX mode. You plug in an APC40 MK2, but nothing reacts. Why?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q1" value="a"><span>The APC needs the cube’s WiFi antenna</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="b"><span>MIDI doesn’t work in DMX mode</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="c"><span>MIDI only works in LaserOS mode</span></label>
+      </div>
+      <p class="why" hidden>MIDI works in Playlist, Visualizer and Laser Show modes, not in LaserOS, Art‑Net, DMX, IDN or Ether Dream mode.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Your own mappings are gone every time you restart the cube. What’s missing?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q2" value="a"><span>A newer version of LaserOS on your PC</span></label>
+        <label class="opt"><input type="radio" name="l8q2" value="b"><span>A powered USB hub between APC and cube</span></label>
+        <label class="opt"><input type="radio" name="l8q2" value="c"><span>An SD card in the cube to save them</span></label>
+      </div>
+      <p class="why" hidden>Mappings are saved to the SD card, in the /Lasercube/settings folder. Without a card they can’t be saved.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 3</span>A slider on the cube’s screen shows yellow. What does that mean?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q3" value="a"><span>It’s mapped to a control on the APC</span></label>
+        <label class="opt"><input type="radio" name="l8q3" value="b"><span>It’s at its highest possible value</span></label>
+        <label class="opt"><input type="radio" name="l8q3" value="c"><span>It’s locked until the next restart</span></label>
+      </div>
+      <p class="why" hidden>Mapped sliders show yellow instead of blue, and they move when you move the APC control.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#usb-midi-settings">USB MIDI settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI mapping</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#default-apc40-mk2-midi-mapping">Default APC40 MK2 mapping</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#manual-customization-of-the-playlist-file">Editing the playlist file</a></p>
+  <p class="lesson-done" hidden><strong>All lessons done.</strong> The final quiz is open.</p>
+  <nav class="pager" aria-label="Lesson 8: back and next"><a data-nav href="#lesson-7"><span>Back</span>The 16 DMX channels</a><a class="next" data-nav href="#final"><span>Next</span>Final quiz</a></nav>
+</section>
+
+<!-- ============ FINAL QUIZ ============ -->
+<section class="view" id="final" aria-labelledby="final-h" data-pick="10" data-pass="8">
+  <p class="label">Final quiz</p>
+  <h2 id="final-h">Final quiz</h2>
+  <p class="intro">10 questions picked at random, one from each of the course’s 10 topics. Get 8 right to pass. You can try as many times as you like.</p>
+
+  <div class="locked-msg" id="final-locked" hidden>
+    <p><strong>Finish all eight lessons first.</strong> Still to do:</p>
+    <ul></ul>
+  </div>
+
+  <form id="quiz-form" class="js-only" novalidate hidden>
+    <div id="quiz-list"></div>
+    <p class="feedback is-wrong" id="quiz-msg" aria-live="polite"></p>
+    <div class="btn-row"><button class="btn solid" type="submit">Check my answers</button></div>
+  </form>
+  <div id="quiz-result" class="result" hidden></div>
+
+  <div class="bank" hidden>
+    <fieldset class="check" data-answer="c" data-group="modes" data-lesson="1"><legend><span class="qn"></span>The venue’s lighting technician wants to run your cube from their desk, over the network. Which mode?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Playlist</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Visualizer</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Art‑Net</span></label></div>
+      <p class="why" hidden>Art‑Net is DMX‑style control over the network. Over a DMX cable, it would be DMX mode.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="modes" data-lesson="1"><legend><span class="qn"></span>Which of these modes needs software streaming to the cube the whole time?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>IDN</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Laser Show</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Visualizer</span></label></div>
+      <p class="why" hidden>IDN streams laser data over the network. Laser Show and Visualizer play on the cube by themselves.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="modes" data-lesson="1"><legend><span class="qn"></span>You plug show software’s own ILDA interface into the cube’s ILDA input. What happens?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Nothing until you choose an ILDA mode</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The cube restarts in DMX mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The cube switches to it by itself</span></label></div>
+      <p class="why" hidden>The cube switches to the ILDA input automatically, and it overrides the current mode. The status bar turns cyan.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="own" data-lesson="1"><legend><span class="qn"></span>You stream from LaserOS. Why are Image Setup and Safety Zone greyed out on the cube?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The interlock is still open</span></label>
+      <label class="opt"><input type="radio" value="b"><span>LaserOS handles them in this mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>They need an SD card in the cube</span></label></div>
+      <p class="why" hidden>In LaserOS mode, LaserOS handles the image setup, colour balance and safety zones. In the cube’s own modes, its own settings apply.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="own" data-lesson="3"><legend><span class="qn"></span>After a power cut, someone resets the key on your cube. It’s in Playlist mode with Power‑On Play on. What happens?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The playlist starts projecting again</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Nothing until you press play</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Nothing until the web app connects</span></label></div>
+      <p class="why" hidden>With Power‑On Play on, the last playlist starts as soon as the interlock is enabled. Set it to Disabled if the cube should wait for you.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="own" data-lesson="1"><legend><span class="qn"></span>You’re in Playlist mode. Where on the cube do you set the image size and power?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In LaserOS’s own projection settings</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The web app’s quick player settings</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Settings → Projection → Image Setup</span></label></div>
+      <p class="why" hidden>In the cube’s own modes, its own Image Setup applies: power, rotation, size, flip and position.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="build" data-lesson="2"><legend><span class="qn"></span>A scrolling text should run once, then the next item should play. What do you set on it?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Assign Duration, time: 1 second</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Assign Effect: scroll once</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Assign Duration, cycles: 1</span></label></div>
+      <p class="why" hidden>One cycle plays the animation once, so the text scrolls all the way through before the next item.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="build" data-lesson="2"><legend><span class="qn"></span>Which file types give the best results when you import your own logo?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>SVG or ILD</span></label>
+      <label class="opt"><input type="radio" value="b"><span>PNG or JPG</span></label>
+      <label class="opt"><input type="radio" value="c"><span>PDF or GIF</span></label></div>
+      <p class="why" hidden>The manual recommends SVG or ILD. A PNG or JPG has to be turned into lines first.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="build" data-lesson="2"><legend><span class="qn"></span>A playlist’s folder is on the SD card, but its .ldpl file was deleted. What does the cube do?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Plays the folder in name order</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Leaves that playlist off its list</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Rebuilds the missing file itself</span></label></div>
+      <p class="why" hidden>The cube only lists a playlist when both the .ldpl file and its folder are on the card.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="play" data-lesson="3"><legend><span class="qn"></span>Each cue should play for 30 seconds, then the next. Where do you set that?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The fade time in Playlist Options</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Settings → Playback Speed</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The cue delay, with Auto‑Play on</span></label></div>
+      <p class="why" hidden>With Auto‑Play on, the cube moves to the next cue every “cue delay” seconds.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="play" data-lesson="3"><legend><span class="qn"></span>In the playlist web app, where do you turn the projection power down?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Quick image settings</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Quick player settings</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The quick effect menu</span></label></div>
+      <p class="why" hidden>Quick image settings has rotation, zoom and power.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="play" data-lesson="3"><legend><span class="qn"></span>Where do you turn Power‑On Play off?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Settings → General</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Playlist Options menu</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The web app’s image settings</span></label></div>
+      <p class="why" hidden>Power‑On Play is in the Playlist Options menu, below the Playlist Player.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="viz" data-lesson="4"><legend><span class="qn"></span>The Visualizer should follow the music from your mixer, through a cable. What do you choose?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Microphone, via the green A‑OUT jack</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Line input, via the pink A‑IN jack</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Line input, via the green A‑OUT jack</span></label></div>
+      <p class="why" hidden>Set Audio Input to the line input and plug the audio into the pink 3.5&nbsp;mm jack marked A‑IN. A‑OUT is the audio output.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="viz" data-lesson="4"><legend><span class="qn"></span>Some visuals follow the tempo. How do you set it to the music?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Raise the mic gain until it matches</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Tap BPM in time, then Sync Beat</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Set the cue delay to the song length</span></label></div>
+      <p class="why" hidden>In Settings → Tempo, tap “Tap BPM” to the beat, then press “Sync Beat” on the first beat of a bar.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="viz" data-lesson="4"><legend><span class="qn"></span>How many effects can be active on the image at the same time?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>As many as you like, up to all 78</span></label>
+      <label class="opt"><input type="radio" value="b"><span>None while the cube is in Visualizer mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>One image effect and one colour effect</span></label></div>
+      <p class="why" hidden>Only one image effect and one colour effect can be active at once. Choose “No Effect” to turn one off.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="shows" data-lesson="5"><legend><span class="qn"></span>The Laser Show list on your cube is empty. What’s the likely cause?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Cube Link isn’t enabled on the cube</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The SD card is missing or incomplete</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The audio output volume is set to 0%</span></label></div>
+      <p class="why" hidden>The laser shows come on the SD card. Put the card in, or copy the factory contents from GitHub.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="shows" data-lesson="5"><legend><span class="qn"></span>Where does the music of a built‑in laser show come out?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The cube’s own built‑in speaker</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The DMX Out jack, to your desk</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The A‑OUT jack, to powered speakers</span></label></div>
+      <p class="why" hidden>Show audio plays from the green 3.5&nbsp;mm A‑OUT jack. Connect powered speakers there.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="link" data-lesson="5"><legend><span class="qn"></span>Can you use Cube Link while the cube’s connection mode is WiFi server?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes, it shares that WiFi</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No, not in a WiFi mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Yes, but only within 5&nbsp;m</span></label></div>
+      <p class="why" hidden>Cube Link isn’t available while the connection mode is set to WiFi. It makes its own wireless link instead.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="link" data-lesson="5"><legend><span class="qn"></span>In Cube Link, what does each cube’s Group decide?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Which part of the show it plays</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Which cube is the master</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Which WiFi channel it uses</span></label></div>
+      <p class="why" hidden>In a show made for two projectors, Group 1 cubes play one part and Group 2 cubes the other.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="link" data-lesson="5"><legend><span class="qn"></span>Does Cube Link need a WiFi network at the venue?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes, every cube must join it</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Only for more than two cubes</span></label>
+      <label class="opt"><input type="radio" value="c"><span>No, it makes its own link</span></label></div>
+      <p class="why" hidden>Cube Link makes its own wireless link between the cubes, over about 20 to 40&nbsp;m with a clear line of sight. Connect every cube’s antenna.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Which cable goes into a Pro’s DMX In jack?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>3.5&nbsp;mm TRS to 3‑pin XLR female</span></label>
+      <label class="opt"><input type="radio" value="b"><span>3.5&nbsp;mm TRS to 3‑pin XLR male</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A standard RJ45 network cable</span></label></div>
+      <p class="why" hidden>DMX In takes a 3.5&nbsp;mm TRS plug to 3‑pin XLR male, wired for DMX. DMX Out takes the female version.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>The DMX desk is running, but the cube shows a red cross next to DMX. What do you check?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The cabling and the termination</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Cube Link channel and PIN</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The line gain and the tempo</span></label></div>
+      <p class="why" hidden>The manual says to check the cabling, and that the DMX line is correctly terminated.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Your lighting desk supports the FB3/FB4 profile. Will it work with the cube?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>No, the cube uses its own protocol</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Only over Art‑Net, never over DMX</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Yes, its 16‑channel profile matches</span></label></div>
+      <p class="why" hidden>The cube’s default profile is compatible with the FB3/FB4 16‑channel profile, over DMX and Art‑Net.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="channels" data-lesson="7"><legend><span class="qn"></span>You want the desk to rotate the image. What must channel 1 be set to, at least?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Basic (33–95)</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Standard (97–159)</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Extended (161–223)</span></label></div>
+      <p class="why" hidden>Rotation is channel 9, so it needs Extended (channels 1–12) or Full.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="channels" data-lesson="7"><legend><span class="qn"></span>Which value plays the first cue on the current page?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Channel 3 at 33–35</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Channel 3 at 0–31</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Channel 1 at 33–35</span></label></div>
+      <p class="why" hidden>Channel 3 picks the cue: 33–35 is cue 1, while 0–31 is blackout. Channel 1 sets the access mode.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="channels" data-lesson="7"><legend><span class="qn"></span>In Standard mode, channel 7 (X size) is at 0. What do you see?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Nothing: the image has zero width</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The image at full width, mirrored</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The image at half its normal width</span></label></div>
+      <p class="why" hidden>0 is full size the other way round, so the image is mirrored. 128 is zero size; 255 is full size.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="midi" data-lesson="8"><legend><span class="qn"></span>Which MIDI controllers does the manual name for the cube?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Any USB MIDI keyboard</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Only DMX‑to‑MIDI converters</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The APC40 MK2 and APC mini MK2</span></label></div>
+      <p class="why" hidden>The cube works directly with an APC40 MK2 or APC mini MK2 on its USB port.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="midi" data-lesson="8"><legend><span class="qn"></span>You link a slider to an APC control that’s already mapped to something else. What does the screen show?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The MIDI info in orange</span></label>
+      <label class="opt"><input type="radio" value="b"><span>An error, and nothing changes</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The slider in red</span></label></div>
+      <p class="why" hidden>Orange means the control is already used. Accept it, and it moves to the new slider.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="midi" data-lesson="8"><legend><span class="qn"></span>Before an APC works with the cube, what do you turn on?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Cube Link</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Settings → USB MIDI</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Visualizer web app</span></label></div>
+      <p class="why" hidden>Turn on Settings → USB MIDI. The status bar then shows a green tick next to MIDI.</p><p class="feedback"></p></fieldset>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATE ============ -->
+<section class="view" id="certificate" aria-labelledby="cert-h">
+  <p class="label">Certificate</p>
+  <h2 id="cert-h">Your certificate</h2>
+  <div id="cert-locked" class="locked-msg">
+    <p><strong>Pass the final quiz to get your certificate.</strong> <a class="link" href="#final">Go to the final quiz</a></p>
+  </div>
+  <div id="cert-ready" hidden>
+    <p class="intro">Well done. Type your name as you want it on the certificate.</p>
+    <p class="small">Your certificate is made right here in your browser. Your name isn’t sent anywhere; it’s only kept in this browser.</p>
+    <form id="cert-form" class="cert-form" novalidate>
+      <label><span>Name on the certificate</span><input id="cert-name" type="text" maxlength="60" autocomplete="name" spellcheck="false"></label>
+      <button class="btn solid" type="submit">Make my certificate</button>
+    </form>
+    <p class="feedback is-wrong" id="cert-msg" aria-live="polite"></p>
+    <div id="cert-out" hidden>
+      <div class="cert-preview"><img id="cert-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your LaserCube Academy certificate" width="3508" height="2480"><canvas id="cert-canvas" width="1123" height="794" hidden></canvas></div>
+      <div class="btn-row">
+        <button class="btn solid" type="button" id="dl-pdf"><svg class="icon"><use href="#i-download"/></svg>Download PDF</button>
+        <button class="btn" type="button" id="dl-png"><svg class="icon"><use href="#i-download"/></svg>Download image</button>
+      </div>
+      <p class="small">Download not starting? Press and hold the certificate (on a computer, right-click it) and save the image.</p>
+    </div>
+    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from <a class="link" href="../start-here/#lesson-10">Start here’s pre‑show checklist</a> applies in every control mode.</p>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+  <p id="announce" class="sr" aria-live="polite"></p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="../../">User Wiki</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="mailto:support@laseros.com">Email support</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© Wicked Lasers</span>
+  </div>
+</footer>
+<script src="../academy.js"></script>
+</body>
+</html>

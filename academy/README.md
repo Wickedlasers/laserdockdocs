@@ -5,7 +5,10 @@ no build step, no server, no database, no accounts, no analytics.
 
 - `index.html`: the course list.
 - `start-here/index.html`: the first course, "Start here: from the box to your first safe show" (Ultra MK2 & Pro, beginner).
-- `academy.css`, `academy.js`: shared by every course. A new course needs no change to these.
+- `control-modes/index.html`: the second course, "Control modes for the Ultra MK2 and Pro" (Playlist, Visualizer, Laser Show,
+  Cube Link, DMX/Art-Net, MIDI; 8 lessons, 29 quiz questions in 10 topics). It builds on start-here and links back to it.
+- `academy.css`, `academy.js`: shared by every course. A new course needs no change to these
+  (control-modes added small table styles, `.table-wrap`, and `.two.shots` for the 240 px screenshots of the cube's screen).
 
 ## How it works
 

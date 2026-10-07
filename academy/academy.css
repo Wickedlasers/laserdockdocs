@@ -168,6 +168,12 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .two.parts{grid-template-columns:5fr 7fr}
 .two figure{margin:0}
+.two.shots{grid-template-columns:repeat(2,minmax(0,240px));gap:20px}
+.table-wrap{margin:16px 0 18px;overflow-x:auto}
+.view table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
+.view th,.view td{padding:9px 12px 9px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;color:var(--muted)}
+.view thead th{padding-top:0;border-bottom-color:var(--line-2);color:var(--subtle);font-size:13px;font-weight:600}
+.view td.n{color:var(--text);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
 .warn{margin:24px 0;padding:20px 22px;border-radius:12px;border:1px solid var(--line-2);background:var(--bg-2)}
 .warn-tag{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#000;font:700 12px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:3px}
 .warn-tag svg{width:16px;height:16px;stroke:#000;stroke-width:2}
