@@ -12,7 +12,7 @@ no build step, no server, no database, no accounts, no analytics.
 - **Progress** is kept in the visitor's browser (`localStorage`, key `academy:<course>`). Nothing is sent anywhere.
   Clearing browser data or switching device starts the course again.
 - **Lessons** are `<section class="view lesson" id="lesson-N">`. A lesson counts as done when every question,
-  put-in-order exercise and scenario in it has been answered correctly (a lesson with none of these: once opened).
+  put-in-order exercise and scenario in it has been answered correctly (a lesson with nothing to answer: once opened).
   Progress from another open tab is merged, not overwritten; malformed stored data is ignored.
 - **The final quiz** unlocks when all lessons are done. It picks `data-pick` questions at random from the hidden
   `.bank` in `#final` and passes at `data-pass` correct (now 10 and 8; never more than the number of questions shown).
@@ -21,7 +21,8 @@ no build step, no server, no database, no accounts, no analytics.
   It has no ID and no verification page, on purpose: it is a certificate of completion, not a credential.
   It shows the name the learner types, the course title and version, the date they passed, and a Wicked Lasers seal.
   It says it is not a licence, an LSO qualification or permission to run public shows. The page shows it as an image
-  (long-press to save on phones) plus PDF and PNG downloads; it waits for the Inter font before drawing.
+  (long-press or right-click to save it, for browsers that block downloads) plus PDF and PNG downloads; it waits for the
+  Inter font before drawing and is only redrawn when the name, date or version changes.
 - **Videos** show a local thumbnail (`images/home/videos/<id>.webp`) until the visitor presses play; only then does
   the page load YouTube's privacy-enhanced player (youtube-nocookie.com).
 

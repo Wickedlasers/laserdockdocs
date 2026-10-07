@@ -99,6 +99,8 @@
     if (e.key !== KEY) return;
     merged();
     refresh();
+    if (current && current.id === "final") renderFinal();
+    if (current && current.id === "certificate") renderCert();
   });
 
   var views = $$(".view", course);
@@ -123,7 +125,10 @@
     // A link to something inside a view (a heading) opens that view; a link to anything else ("Skip to content")
     // keeps the view that is open.
     var v = el && (el.classList.contains("view") ? el : el.closest(".view"));
-    if (!v) { if (el && current) return; v = views[0]; }
+    if (!v) {
+      if (el && current) { history.replaceState(null, "", "#" + current.id); return; } // keep the open lesson in the address
+      v = views[0];
+    }
     current = v;
     views.forEach(function (x) { x.classList.toggle("current", x === v); });
     $$("[data-nav]").forEach(function (a) {
@@ -134,7 +139,7 @@
     if (menu) menu.open = false;
     if (v.id === "final") renderFinal();
     if (v.id === "certificate") renderCert();
-    if (v.classList.contains("lesson") && !$(".check, .order, .scenario", v)) solved(v); // a lesson with nothing to answer is done once read
+    if (v.classList.contains("lesson")) solved(v); // done once read if nothing in it needs an answer
     if (!first) {
       toTop();
       var h = $("h2", v);
@@ -350,13 +355,14 @@
     $("button[type=submit]", quizForm).hidden = false;
   }
 
+  function leftMsg(n) { return "Answer all " + PICK + " questions first (" + n + " left)."; }
   // after a submit with blanks: clear a question's mark once it is answered, and keep the count right
   if (quizList) quizList.addEventListener("change", function (e) {
     var q = e.target.closest(".check");
     if (q && q.classList.contains("missing")) { q.classList.remove("missing"); $(".feedback", q).textContent = ""; }
     if (!quizMsg.textContent) return;
     var left = $$(".check", quizList).filter(function (x) { return !$("input:checked", x); }).length;
-    quizMsg.textContent = left ? "Answer all " + PICK + " questions first (" + left + " left)." : "";
+    quizMsg.textContent = left ? leftMsg(left) : "";
   });
 
   function renderFinal() {
@@ -391,7 +397,7 @@
       $(".feedback", q).innerHTML = miss ? '<span class="verdict">Pick an answer for this question.</span>' : "";
     });
     if (open.length) {
-      quizMsg.textContent = "Answer all " + PICK + " questions first (" + open.length + " left).";
+      quizMsg.textContent = leftMsg(open.length);
       open[0].scrollIntoView({ block: "center" });
       $("input", open[0]).focus({ preventScroll: true });
       return;
@@ -435,8 +441,10 @@
     $("#cert-ready").hidden = !state.passed;
     if (!state.passed) return;
     if (state.name && !certInput.value) certInput.value = state.name;
-    if (state.name) drawWhenReady(state.name);
+    if (state.name && certKey(state.name) !== drawn) drawWhenReady(state.name);
   }
+  var drawn = "", shownUrl = null; // what the certificate on screen shows, and its image URL
+  function certKey(name) { return name + "|" + state.passed.date + "|" + state.passed.version; }
 
   // Draw once Inter (including the subset the name needs) has loaded, or after 2.5 s with whatever font there is.
   function drawWhenReady(name) {
@@ -582,8 +590,15 @@
     c.fillText("A certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows.", PW / 2, 724);
 
     // Shown as an image, so phones (and in-app browsers that block downloads) can long-press to save it.
+    drawn = certKey(name);
     var img = $("#cert-img");
-    if (img) img.src = canvas.toDataURL("image/png");
+    if (img && canvas.toBlob) canvas.toBlob(function (b) {
+      if (!b) return;
+      if (shownUrl) URL.revokeObjectURL(shownUrl);
+      shownUrl = URL.createObjectURL(b);
+      img.src = shownUrl;
+    }, "image/png");
+    else if (img) img.src = canvas.toDataURL("image/png");
     $("#cert-out").hidden = false;
   }
 

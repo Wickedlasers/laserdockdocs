@@ -216,7 +216,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .order li .tag{flex:none;font:600 12px/1 var(--font);font-style:normal;letter-spacing:.02em}
 .order li.right .tag{color:var(--ok)}
 .order li.wrong .tag{color:var(--bad)}
-.order li span{overflow-wrap:anywhere}
+.order li span{overflow-wrap:break-word}
 .order .mv{flex:none;display:flex;gap:4px}
 .order .mv button{display:grid;place-items:center;width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;color:var(--muted)}
 .order .mv button:hover{border-color:var(--line-2);color:var(--text)}
@@ -288,6 +288,10 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .card{grid-template-columns:1fr}
   .card-img{min-height:240px}
 }
+@media (max-width:800px){
+  .two.parts{grid-template-columns:1fr}
+  .two.parts figure{max-width:520px}
+}
 @media (max-width:640px){
   .container{padding-left:16px;padding-right:16px}
   .site-header .container{gap:12px}
@@ -300,7 +304,9 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .steps{grid-template-columns:1fr}
   .steps li,.steps li + li{padding:18px 0 4px;border-left:0}
   .steps li + li{border-top:1px solid var(--line)}
-  .two,.two.parts{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .order li{flex-wrap:wrap}
+  .order li .tag{order:9;flex-basis:100%;padding-left:32px}
   .check,.order,.scenario{padding:16px}
   .order li{padding-left:10px;gap:8px}
   .pager a{font-size:14.5px}
@@ -314,7 +320,8 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   :root:not(#print),.stage:not(#print){--stage:#fff;--bg:#fff;--bg-2:#f5f5f7;--line:rgba(10,10,20,.14);--line-2:rgba(10,10,20,.3);--text:#0a0a0c;--muted:#3f3f46;--subtle:#55555f;--accent:#2b62fd;--ok:#0f7a3d;--bad:#b42318;color-scheme:light}
   .hero{background:#fff;color:#000}
   :focus,:focus-visible{outline:none!important}
-  .print-only{display:block}
+  .print-only{display:block;margin-top:16px}
+  .done-flag,.lesson-done{display:none!important}
   .site-header,.site-footer,.toc,.toc-phone,.pager,.practice,.video,.video-meta,.btn-row,.skip{display:none!important}
   body{background:#fff;color:#000}
   .course-grid{display:block;padding:0}
