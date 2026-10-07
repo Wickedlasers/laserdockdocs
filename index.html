@@ -270,11 +270,13 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .models .label{grid-column:1/-1;max-width:none;padding:18px 0 4px}
   .model:nth-of-type(1){border-left:0;padding-left:0}
 }
+@media (max-width:1060px){
+  .nav{display:none}
+  .menu{display:block}
+}
 @media (max-width:1000px){
   .models{grid-template-columns:1fr}
   .model,.model:nth-of-type(1){border-left:0;padding:14px 0;border-top:1px solid var(--line)}
-  .nav{display:none}
-  .menu{display:block}
 }
 @media (max-width:900px){
   .hero-grid{grid-template-columns:minmax(0,1fr);gap:0;min-height:0}
@@ -775,8 +777,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     ["factory-reset-procedure", "Factory Reset Procedure"],
     ["firmware-update", "Firmware Update"],
     ["wifi-client-mode", "WiFi Client Mode"],
-    ["dmxart-net-channel-layout", "DMX/Art-Net Channel Layout"],
-    ["e-stop-setup-guide", "E-STOP Setup Guide"],
+    ["dmxart-net-channel-layout", "DMX/ArtNet Channel Layout"],
+    ["e-stop-setup-guide", "E-Stop Setup Guide"],
     ["exporting-a-playlist-to-the-micro-sd-card", "Exporting a Playlist to the micro SD card"]
   ];
 
@@ -1011,7 +1013,11 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   // "/?q=dmx+address" (the 404 page's search box) opens search with that text.
   var startQ = "";
   try { startQ = (new URLSearchParams(location.search).get("q") || "").slice(0, 200); } catch (e) {}
-  if (startQ.trim()) { open(); input.value = startQ; render(); }
+  if (startQ.trim()) {
+    open(); input.value = startQ; render();
+    // Drop ?q= so a reload after closing search doesn't open it again.
+    try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+  }
 })();
 </script>
 </body>
