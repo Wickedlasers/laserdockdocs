@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Connect and troubleshoot · LaserCube Academy</title>
+<title>Connect, update and troubleshoot · LaserCube Academy</title>
 <meta name="description" content="A free course for LaserCube Ultra MK2 and Pro owners: WiFi and cable connections, the status bar and Status Info, the web admin page, firmware updates, factory reset, power and heat. Pass the quiz and download a certificate.">
 <meta name="theme-color" content="#0a0a0c">
 <link rel="canonical" href="https://wiki.laseros.com/academy/connect/">
@@ -206,7 +206,7 @@
     <fieldset class="check" data-answer="b">
       <legend><span class="qn">Question 1</span>At a party, the cube plays a playlist from its SD card, with nothing streaming to it. Does it need a network connection?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l1q1" value="a"><span>Yes, every mode needs WiFi server</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="a"><span>Yes, Playlist mode needs WiFi server</span></label>
         <label class="opt"><input type="radio" name="l1q1" value="b"><span>No, it plays from the SD card</span></label>
         <label class="opt"><input type="radio" name="l1q1" value="c"><span>Yes, a LAN client cable to a router</span></label>
       </div>
@@ -254,7 +254,7 @@
     <li>Its settings are under <strong>Settings → Network → WiFi Server</strong>: network name (SSID), password, channel, bandwidth, IP address and net mask.</li>
     <li>Leave the channel on <strong>Auto</strong>: each time the cube is switched on, it then looks for the quietest WiFi channel.</li>
     <li>The <strong>WiFi Scan</strong> button on that page shows how busy each 2.4GHz channel is, and picks the quietest one when the scan ends. It only works in WiFi server mode; in other modes it’s greyed out.</li>
-    <li>A list that’s mostly red means too many other 2.4GHz devices are around, as in many apartment buildings. Then use a cable instead, with the USB‑to‑LAN adapter (lesson 3). Outdoors, WiFi should be fine.</li>
+    <li>A list that’s mostly red means too many other 2.4GHz devices are around, as in some apartment buildings. Then consider a cable instead, with the USB‑to‑LAN adapter (lesson 3). Outdoors, WiFi should be fine.</li>
   </ul>
   <div class="two shots">
     <figure>
@@ -269,8 +269,8 @@
 
   <h3>WiFi client: joining your router</h3>
   <ul class="points">
-    <li>Under <strong>Settings → Network → WiFi Client</strong>, enter your router’s network name (SSID) and password. Then choose WiFi Client under Settings → Connection.</li>
-    <li>IP Mode <strong>Auto</strong> takes an address from the router. <strong>Static</strong> lets you type the IP address, gateway and net mask yourself.</li>
+    <li>Under <strong>Settings → Network → WiFi Client</strong>, enter your router’s network name (SSID) and password. Then choose WiFi Client under Settings → Connection. Your phone or computer must be on the same router’s network.</li>
+    <li>IP Mode <strong>Auto</strong> takes an address from the router. <strong>Static</strong> lets you type the IP address, the gateway (your router’s address) and the net mask (also called the subnet mask) yourself.</li>
     <li>To type a name or an address, highlight the box and short‑press the knob. Select the tick to close the box.</li>
   </ul>
 
@@ -353,15 +353,23 @@
       <figcaption>LAN server settings: the cube’s own address and net mask.</figcaption>
     </figure>
   </div>
-  <p>Both ways work for one computer on a cable. For LaserOS with LAN client, the manual gives these steps:</p>
+  <p>Both ways work for one computer on a cable.</p>
+  <h3>Steps: LaserOS over a direct cable, in LAN client mode</h3>
+  <p>For LAN client, the manual gives these steps:</p>
+  <ol class="points">
+    <li>Turn off the computer’s WiFi for now, and close LaserOS if it’s running.</li>
+    <li>Switch the cube on and connect the cable between the cube and the computer.</li>
+    <li>Wait until the cube shows its 169.254 address.</li>
+    <li>Start LaserOS and check that its Laser ON button isn’t greyed out: then LaserOS has found the cube.</li>
+    <li>Turn the computer’s WiFi back on if you need the internet.</li>
+  </ol>
 
   <div class="practice">
     <h3>Check yourself</h3>
     <div class="order">
       <p class="task">Put the manual’s steps for LaserOS over a direct cable (LAN client) in order.</p>
       <ol>
-        <li>Turn off the computer’s WiFi for now</li>
-        <li>Close LaserOS if it’s running</li>
+        <li>Turn off the computer’s WiFi and close LaserOS</li>
         <li>Switch the cube on and connect the cable to the computer</li>
         <li>Wait until the cube shows its 169.254 address</li>
         <li>Start LaserOS and check that Laser ON isn’t greyed out</li>
@@ -421,7 +429,7 @@
   </div>
   <p class="video-meta"><span>Beginners guide, part 3: CubeOS overview</span><a href="https://www.youtube.com/watch?v=Yr7jZidnk9I" target="_blank" rel="noopener">Watch on YouTube</a></p>
 
-  <figure class="dark">
+  <figure>
     <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000001000002BC0000017337C5089F-700.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000001000002BC0000017337C5089F-700.webp" alt="The cube’s main menu with the status bar, from the manual, with labels: Battery Status on the battery icon; Safety Interlock, status: Disabled on the I-LOCK warning; Control Mode: LaserOS; Connection Mode: LAN Client, connected, on the tick next to LAN-C; IP Address on 169.254.105.174; and APIPA assigned IP Address on the A-IP tag." width="700" height="371" loading="lazy"></a>
     <figcaption>The status bar, labelled in the manual. Select the picture to open it full size in a new tab.</figcaption>
   </figure>
@@ -429,7 +437,7 @@
   <h3>The status bar</h3>
   <ul class="points">
     <li><strong>Battery:</strong> the battery gauge. With Battery Pct turned on (Settings → General), it also shows the percentage from time to time.</li>
-    <li><strong>I‑LOCK:</strong> the safety interlock isn’t ready (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</li>
+    <li><strong>I‑LOCK:</strong> a warning that the safety interlock is open (the manual’s picture says “disabled”), so the laser won’t emit (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</li>
     <li><strong>The control mode</strong>, such as LaserOS or Playlist.</li>
     <li><strong>The connection mode</strong>, such as LAN‑C (LAN client), WiFi‑C (WiFi client) or WiFi‑S (WiFi server). A tick next to it means it’s connected; a red cross means it isn’t.</li>
     <li><strong>The cube’s IP address</strong>, at the bottom right. A‑IP before it means a self‑assigned address (lesson 3). You need this address for the web admin page (lesson 7).</li>
@@ -442,7 +450,7 @@
   <h3>General and language settings</h3>
   <ul class="points">
     <li><strong>Settings → General:</strong> the screen brightness, Battery Pct, the preview style (2D or 3D), and backward compatibility.</li>
-    <li><strong>Backward compatibility</strong> is only needed if you use original LaserCube WiFi cubes and Ultra MK2 or Pro cubes on the same network with LaserOS. You also need LaserOS 0.17.7 or later.</li>
+    <li><strong>Backward compatibility</strong> is only needed if you use older WiFi cubes and Ultra MK2 or Pro cubes on the same network with LaserOS. You also need LaserOS 0.17.7 or later.</li>
     <li><strong>Settings → Language:</strong> 12 menu languages (English by default). Choosing another one restarts the cube. Some labels are shortened to fit the screen.</li>
   </ul>
 
@@ -469,13 +477,13 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
-      <legend><span class="qn">Question 3</span>You stream from LaserOS to an original LaserCube WiFi and an Ultra MK2 on the same network. What do you turn on?</legend>
+      <legend><span class="qn">Question 3</span>The status bar shows A‑IP before the cube’s address. What does it mean?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l4q3" value="a"><span>WiFi client mode, under Settings → Connection</span></label>
-        <label class="opt"><input type="radio" name="l4q3" value="b"><span>Backward compatibility, under Settings → General</span></label>
-        <label class="opt"><input type="radio" name="l4q3" value="c"><span>Cube Link, under Settings → Network, on both cubes</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="a"><span>Art‑Net data is arriving</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="b"><span>The cube gave itself the address</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="c"><span>The WiFi antenna is connected</span></label>
       </div>
-      <p class="why" hidden>Backward compatibility is for old WiFi cubes and Ultra MK2 or Pro cubes on one network with LaserOS (0.17.7 or later).</p>
+      <p class="why" hidden>A‑IP marks a self‑assigned (APIPA) address starting 169.254, for example on a direct cable in LAN client mode.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
   </div>
@@ -504,7 +512,7 @@
     <li><strong>PKT Loss Events:</strong> lost data packets. They’re common over WiFi in congested places, and show as brief drop‑outs in the projection, on and off. Moving away from the congestion helps; a wired connection is better.</li>
     <li><strong>MAC Address:</strong> unique to each cube.</li>
     <li>Select any of the four counters (PKT RX, DAC Empty, DAC Full, PKT Loss) to reset it to zero.</li>
-    <li>The manual’s pictures also show the cube’s temperature and IP address, and the computer streaming to it.</li>
+    <li>The manual’s pictures also show Temperature, Cube IP, the name (Streaming Host) and address (Streaming IP) of the device streaming to it, and the number of Clients.</li>
   </ul>
   <div class="two shots">
     <figure>
@@ -542,8 +550,8 @@
     <fieldset class="check" data-answer="c">
       <legend><span class="qn">Question 3</span>The cube is on its charger. What does the manual say about the battery reading?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l5q3" value="a"><span>It always reads exactly 100%</span></label>
-        <label class="opt"><input type="radio" name="l5q3" value="b"><span>It shows the charger’s wattage</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="a"><span>It reads as usual, from the voltage</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="b"><span>It shows the charge in percent only</span></label>
         <label class="opt"><input type="radio" name="l5q3" value="c"><span>It can’t be measured while charging</span></label>
       </div>
       <p class="why" hidden>While the cube charges, its battery charge can’t be measured.</p>
@@ -568,9 +576,11 @@
   <ul class="points">
     <li><strong>The control mode:</strong> to stream from LaserOS, choose Control Mode → LaserOS.</li>
     <li><strong>The connection:</strong> the status bar shows the connection mode you chose, with a tick, and an IP address (lesson 4). After changing the mode, the cube must restart.</li>
-    <li><strong>WiFi server:</strong> your phone or computer has joined the cube’s network (LaserCube, unless you renamed it), and the WiFi antenna is connected.</li>
-    <li><strong>A direct cable, LAN client:</strong> the cube shows its 169.254 address before you start LaserOS, and the computer’s network adapter is on automatic (lesson 3).</li>
-    <li><strong>Original WiFi cubes on the same network:</strong> backward compatibility is on, with LaserOS 0.17.7 or later (lesson 4).</li>
+    <li><strong>The same network:</strong> LaserOS finds cubes on the network your phone or computer is on. In WiFi client or LAN client mode with a router, both must be on that router’s network.</li>
+    <li><strong>WiFi modes:</strong> the WiFi antenna is connected. In WiFi server mode, your phone or computer has joined the cube’s network (LaserCube, unless you renamed it).</li>
+    <li><strong>A direct cable, LAN client:</strong> follow lesson 3’s steps: the computer’s WiFi off and LaserOS closed, the cube’s 169.254 address showing before you start LaserOS, and the computer’s network adapter on automatic.</li>
+    <li><strong>A direct cable, LAN server:</strong> the cube gives the computer its address, so leave the computer’s network adapter on automatic too.</li>
+    <li><strong>Older WiFi cubes on the same network:</strong> backward compatibility is on, with LaserOS 0.17.7 or later (lesson 4).</li>
     <li><strong>LaserOS itself:</strong> the manual’s set‑up is for LaserOS 0.18.1 or later, from <a class="link" href="https://www.laseros.com/">laseros.com</a>.</li>
   </ul>
 
@@ -581,7 +591,7 @@
     <li>In WiFi server mode, run WiFi Scan (lesson 2). If most channels are red, the area is congested.</li>
     <li>Move away from the congestion, or better, use a cable: the USB‑to‑LAN adapter to one device, or LAN client to a router or switch for several cubes (lesson 3).</li>
     <li>DAC Empty Events also climb when the interlock is disabled or a test pattern is chosen, not only when data is lost.</li>
-    <li>Breaking up in Playlist, Visualizer or Laser Show mode isn’t a WiFi problem: those play from the SD card. The manual warns that cheaper cards can fail to stream the laser shows, and names the Lexar A2 Silver Plus 64GB as the card it tested (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
+    <li>Breaking up in Playlist, Visualizer or Laser Show mode shouldn’t be a WiFi problem: those play from the SD card. The manual warns that cheaper cards can fail to stream the laser shows, and names the Lexar A2 Silver Plus 64GB as the card it tested (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
   </ul>
 
   <div class="practice">
@@ -635,6 +645,7 @@
     <li>Note the IP address at the bottom right of the cube’s screen.</li>
     <li>On a phone or computer connected to the cube, open a web browser and type that address.</li>
     <li>Log in with the user name <strong>LaserCubeUser</strong> and the password <strong>Laser2020</strong>.</li>
+    <li>In Playlist and Visualizer mode, the cube’s address opens that mode’s web app (<a class="link" href="../control-modes/#lesson-3">Control modes, lessons 3</a> and <a class="link" href="../control-modes/#lesson-4">4</a>).</li>
   </ul>
 
   <h3>What’s on it</h3>
@@ -642,15 +653,15 @@
     <div>
       <ul class="points">
         <li><strong>Home:</strong> the model name, the interlock type, the firmware version and the active firmware partition. The cube has two partitions, so it can fall back to a working state if an update fails or is interrupted.</li>
-        <li><strong>Config → WiFi:</strong> the cube’s WiFi channel (change it where there’s interference), WiFi server mode’s address, subnet, network name and password, and the network name and password of your router for WiFi client mode. Typing them here helps when your router doesn’t support WPS.</li>
-        <li><strong>Config → LAN:</strong> the address and subnet for LAN server mode.</li>
+        <li><strong>Config → WiFi:</strong> the cube’s WiFi channel (change it where there’s interference), WiFi server mode’s address, subnet, network name and password, and the network name and password of your router for WiFi client mode.</li>
+        <li><strong>Config → LAN:</strong> the address and subnet (net mask) for LAN server mode.</li>
         <li><strong>Config → General:</strong> the network mode. The cube restarts after you change it.</li>
         <li><strong>Update:</strong> firmware updates (lesson 8).</li>
       </ul>
     </div>
     <figure class="dark">
       <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000003400000035CF6EE9CD3-832.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000003400000035CF6EE9CD3-832.webp" alt="The web admin page’s Config menu, WiFi tab, from the manual. A bar at the top shows Firmware v0.6, Mode WiFi Server, Partition ota_0, Battery 100%, Interlock off and Temp 45°C. Wifi Access Point Config has WiFi Channel, IP Address, Subnet Mask, SSID LaserCube and Password. Wifi Client Config has SSID and Password." width="832" height="860" loading="lazy"></a>
-      <figcaption>Config → WiFi, from the manual (an older firmware). Select it to open it full size.</figcaption>
+      <figcaption>Config → WiFi, from the manual (an older firmware). Select the picture to open it full size in a new tab.</figcaption>
     </figure>
   </div>
 
@@ -667,13 +678,13 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="c">
-      <legend><span class="qn">Question 2</span>Your router doesn’t support WPS. Where can you type its network name and password for WiFi client mode?</legend>
+      <legend><span class="qn">Question 2</span>On the web admin page, where do you type your router’s network name and password for WiFi client mode?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l7q2" value="a"><span>Only in LaserOS on a computer</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="a"><span>On the Home page, under the model name</span></label>
         <label class="opt"><input type="radio" name="l7q2" value="b"><span>On the web admin page’s Update menu</span></label>
         <label class="opt"><input type="radio" name="l7q2" value="c"><span>On the web admin page’s WiFi tab</span></label>
       </div>
-      <p class="why" hidden>Config → WiFi takes the router’s network name and password directly. They’re also under Settings → Network → WiFi Client on the cube.</p>
+      <p class="why" hidden>Config → WiFi takes the router’s network name and password. On the cube itself they’re under Settings → Network → WiFi Client.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
@@ -698,7 +709,7 @@
   <p class="done-flag" hidden><svg class="icon"><use href="#i-check"/></svg>Completed</p>
   <p class="label">Lesson 8 of 9</p>
   <h2 id="l8-h">Firmware updates and factory reset</h2>
-  <p class="intro">Keep the cube on the latest firmware. A factory reset puts the cube back to its factory firmware and settings; the manual says to do it only if it’s really necessary.</p>
+  <p class="intro">There are three ways to update the cube’s firmware. A factory reset puts the cube back to its factory firmware and settings; the manual says to do it only if it’s really necessary.</p>
 
   <div class="video" data-yt="Jtd9Il9sAus" data-title="LaserCube Ultra MK2 Firmware 2.0 upgrade: what's new and how to upgrade">
     <button type="button" aria-label="Play video: firmware 2.0, what’s new and how to upgrade"><span class="play"><svg><use href="#i-play"/></svg></span></button>
@@ -708,9 +719,10 @@
 
   <h3>Three ways to update</h3>
   <ul class="points">
-    <li><strong>From the SD card</strong>, the manual’s preferred way: when the card has newer firmware, the cube asks whether to update. The latest card contents, with the newest firmware, are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a> (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
+    <li><strong>From the SD card</strong>, the manual’s preferred way: when the card has newer firmware, the cube asks whether to update. The latest card contents, with the newest firmware, are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Unzip the download and copy its “Lasercube” folder to the root of the card. If the card already has a Lasercube folder, rename the old one first: deleting it also deletes your own playlists and MIDI mappings. Then put the card back in the cube and switch it on (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
     <li><strong>From LaserOS:</strong> when it finds newer firmware, it asks whether to update.</li>
     <li><strong>By hand:</strong> download the newest update file from the Lasercube/Firmware folder on the same GitHub page. Put the cube in WiFi server mode and join its network. In a browser, open the cube’s address (the manual gives 192.168.4.1; the cube shows its address at the bottom right of its screen) and log in as in lesson 7. On the Update page, click Choose File, pick the update file and click Upload. Wait until the update finishes and the cube restarts.</li>
+    <li>If an update fails or is interrupted, the cube can fall back to a working state: it has two firmware partitions (lesson 7).</li>
   </ul>
 
   <h3>Factory reset</h3>
@@ -732,7 +744,7 @@
   </div>
   <div class="warn">
     <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>After a reset</span>
-    <p>Every setting is back to its default: your connection and network settings, and also the cube’s own projection settings, including the safety zone. Before the next show, set them again and check the beam block, as in <a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>.</p>
+    <p>Every setting is back to its default: your connection and network settings, and also the cube’s own projection settings (Settings → Projection, used in the cube’s own modes), including its safety zone. Before the next show, set them again and check the beam block, as in <a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>. Power‑On Play is back on too (its default): in Playlist mode, the last playlist starts as soon as the interlock is enabled (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</p>
   </div>
 
   <div class="practice">
@@ -774,8 +786,8 @@
       <legend><span class="qn">Question 3</span>After a factory reset, what’s back to its default?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l8q3" value="a"><span>Every setting, with the factory firmware</span></label>
-        <label class="opt"><input type="radio" name="l8q3" value="b"><span>Only the network and WiFi settings</span></label>
-        <label class="opt"><input type="radio" name="l8q3" value="c"><span>Only the firmware; your settings stay</span></label>
+        <label class="opt"><input type="radio" name="l8q3" value="b"><span>Just the network and WiFi settings; the rest stay</span></label>
+        <label class="opt"><input type="radio" name="l8q3" value="c"><span>The firmware; your settings stay</span></label>
       </div>
       <p class="why" hidden>The cube goes back to its factory firmware version, and all settings go back to their defaults, the safety zone included.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -797,9 +809,9 @@
   <h3>Charger and battery</h3>
   <ul class="points">
     <li>Every LaserCube comes with its 19V DC charger, with a plug or cable for your country. The charger plug is 2.5&nbsp;×&nbsp;5.5&nbsp;mm. The Ultra MK2 and Pro 6W use a 120W charger, the Pro 3W a 65W charger. A 19V charger with a higher wattage is fine.</li>
-    <li>Need a new charger? We recommend a generic 19V DC charger with that plug and at least that wattage, bought locally: shipping one from us usually costs more than the charger.</li>
-    <li>The battery charges while the cube plays on its charger. On battery, the Ultra MK2 runs for 3&#8288;–&#8288;4 hours and the Pro for 2&#8288;–&#8288;3 hours; charging takes about 4 and 3 hours.</li>
-    <li>If the battery needs replacing, we recommend a replacement under RMA at our service centre: email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a> with your order number. Never open the cube yourself: the manual doesn’t allow servicing by the user, or opening or modifying the cube.</li>
+    <li>Need a new charger? We recommend a generic 19V DC charger with that plug and at least that wattage, bought locally: shipping one from us usually costs more than the charger. The manual’s guideline 10 also applies: the mains supply must be grounded, so don’t use a 2‑prong mains cord.</li>
+    <li>The battery charges while the cube plays on its charger. On battery, the Ultra MK2 runs for 3&#8288;–&#8288;4 hours and the Pro for 2&#8288;–&#8288;3 hours. Charging takes about 4 hours for the Ultra MK2 and 3 for the Pro.</li>
+    <li>If the battery needs replacing, we recommend a replacement under RMA (a repair return that support arranges) at our service centre: email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a> with your order number. The manual doesn’t allow servicing by the user, or opening or modifying the cube.</li>
   </ul>
 
   <h3>Heat</h3>
@@ -812,44 +824,45 @@
 
   <h3>Stop, and contact us</h3>
   <ul class="points">
-    <li><strong>Any smell or smoke:</strong> a LaserCube should never give off a smell. Unplug it right away, keep it away from anything flammable, don’t charge or use it again, and email support@laseros.com.</li>
+    <li><strong>Any smell or smoke:</strong> a LaserCube should never give off a smell. Unplug it right away, keep it away from anything flammable, don’t charge or use it again, and email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a>.</li>
     <li><strong>A suspected defect</strong> of any kind, from manufacturing, damage or wear, or a broken manufacturer’s seal: don’t use the cube; contact us.</li>
     <li><strong>Still not working</strong> after the checks in this course: email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a>. Don’t try to service, modify or fix the laser yourself. If it needs a repair, support tells you how to send it in.</li>
   </ul>
 
   <div class="practice">
     <h3>Check yourself</h3>
+    <p>Three situations. Is it OK to go ahead? Decide, then read why.</p>
     <div class="scenarios">
       <div class="scenario" data-answer="yes">
-        <p class="s">You’ve lost the charger of your Ultra MK2. A local shop has a 19V DC charger with a 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug, rated 150W.</p>
-        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, use it</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, don’t</button></div>
+        <p class="s">You’ve lost the charger of your Ultra MK2. A local shop has a 19V DC charger with a 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug, rated 150W, with a grounded mains cord.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
         <p class="why" hidden>The right voltage and plug, and a 19V charger with a higher wattage than the 120W original is fine.</p>
         <p class="hint" hidden>Check the voltage, the plug and the wattage against the cube’s own charger.</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="no">
         <p class="s">Halfway through a show you notice a faint burning smell from the cube. The projection still looks fine, so you play to the end.</p>
-        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, use it</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, don’t</button></div>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
         <p class="why" hidden>Any smell or smoke: unplug it right away, keep it away from anything flammable, don’t charge or use it again, and email support.</p>
         <p class="hint" hidden>Should a LaserCube ever give off a smell?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="no">
         <p class="s">The battery doesn’t last as long as it used to. You order a battery online and open the cube to fit it yourself.</p>
-        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, use it</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, don’t</button></div>
-        <p class="why" hidden>Never open the cube. We recommend a battery replacement under RMA at our service centre: email support@laseros.com with your order number.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>We recommend a battery replacement under RMA at our service centre instead: email support@laseros.com with your order number. The manual doesn’t allow opening or modifying the cube.</p>
         <p class="hint" hidden>Who may open or service the cube?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
     </div>
     <fieldset class="check" data-answer="b">
-      <legend><span class="qn">Question 1</span>In strong sun, the cube stops in the middle of a show and doesn’t come back on. What’s going on?</legend>
+      <legend><span class="qn">Question 1</span>In strong sun, the cube runs on its charger, stops in the middle of a show and doesn’t come back on. What’s going on?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l9q1" value="a"><span>It’s cooling down and will restart by itself in a while</span></label>
         <label class="opt"><input type="radio" name="l9q1" value="b"><span>The temperature cut‑off stopped it; restart it yourself</span></label>
-        <label class="opt"><input type="radio" name="l9q1" value="c"><span>The battery ran flat, so it needs its charger plugged in</span></label>
+        <label class="opt"><input type="radio" name="l9q1" value="c"><span>The SD card is full, so it needs a bigger card</span></label>
       </div>
-      <p class="why" hidden>When it gets too hot, the temperature cut‑off stops the cube, and it doesn’t restart by itself.</p>
+      <p class="why" hidden>When it gets too hot, the temperature cut‑off stops the cube, and it doesn’t restart by itself: you restart it. Use it only between 10°C and 40°C.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="a">
@@ -937,10 +950,10 @@
       <p class="why" hidden>In LAN server mode, the cube hands the device on the cable its address.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="a" data-group="screen" data-lesson="4"><legend><span class="qn"></span>What does I‑LOCK in the status bar mean?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>The safety interlock isn’t ready</span></label>
+      <label class="opt"><input type="radio" value="a"><span>The safety interlock is open</span></label>
       <label class="opt"><input type="radio" value="b"><span>The screen’s menus are locked</span></label>
       <label class="opt"><input type="radio" value="c"><span>LaserOS has locked the settings</span></label></div>
-      <p class="why" hidden>I‑LOCK is the interlock warning: the safety interlock isn’t ready.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>I‑LOCK warns that the safety interlock is open, so the laser won’t emit.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="screen" data-lesson="4"><legend><span class="qn"></span>The status bar turns green. What does it mean?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The battery is fully charged and ready</span></label>
       <label class="opt"><input type="radio" value="b"><span>Laser data is arriving over the network</span></label>
@@ -964,7 +977,7 @@
       <p class="why" hidden>The buffer also runs empty when the interlock is disabled or a test pattern is chosen.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="status" data-lesson="5"><legend><span class="qn"></span>How do you set a counter like PKT Loss Events back to zero?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Restart LaserOS on the computer</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Switch the cube off and on again</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Change the WiFi channel to Auto</span></label>
       <label class="opt"><input type="radio" value="c"><span>Select it on Status Info</span></label></div>
       <p class="why" hidden>Selecting the counter on the Status Info page resets it to zero.</p><p class="feedback"></p></fieldset>
 
@@ -974,7 +987,7 @@
       <label class="opt"><input type="radio" value="c"><span>The battery is being charged</span></label></div>
       <p class="why" hidden>A greyed‑out Laser ON button means LaserOS hasn’t found a cube: check the control mode and the connection.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>Streaming over WiFi, the projection breaks up and PKT Loss Events keeps climbing. What helps most, says the manual?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>A brighter screen setting</span></label>
+      <label class="opt"><input type="radio" value="a"><span>A lower screen brightness</span></label>
       <label class="opt"><input type="radio" value="b"><span>A wired connection</span></label>
       <label class="opt"><input type="radio" value="c"><span>A different SD card</span></label></div>
       <p class="why" hidden>Lost packets come from congested WiFi. Moving away helps; a wired connection is better.</p><p class="feedback"></p></fieldset>
@@ -986,14 +999,14 @@
 
     <fieldset class="check" data-answer="a" data-group="admin" data-lesson="7"><legend><span class="qn"></span>What do you log in to the web admin page with?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>LaserCubeUser and Laser2020</span></label>
-      <label class="opt"><input type="radio" value="b"><span>LaserCube and LaserCube2020</span></label>
+      <label class="opt"><input type="radio" value="b"><span>LaserCube and Laser2020</span></label>
       <label class="opt"><input type="radio" value="c"><span>Your laseros.com account</span></label></div>
-      <p class="why" hidden>The user name is LaserCubeUser and the password Laser2020.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="admin" data-lesson="7"><legend><span class="qn"></span>Where on the web admin page do you see the firmware version?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Config → LAN</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Home</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Config → WiFi</span></label></div>
-      <p class="why" hidden>Home shows the model name, interlock type, firmware version and active partition.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>The user name is LaserCubeUser and the password Laser2020. LaserCube is the name of the cube’s own WiFi network.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="admin" data-lesson="7"><legend><span class="qn"></span>On the web admin page, where do you set the address for LAN server mode?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Config → WiFi</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Config → LAN</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Update</span></label></div>
+      <p class="why" hidden>Config → LAN sets the address and subnet for LAN server mode; Config → WiFi is for the WiFi modes.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="admin" data-lesson="7"><legend><span class="qn"></span>Where on the web admin page do you change the network mode?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The Home menu</span></label>
       <label class="opt"><input type="radio" value="b"><span>The Update menu</span></label>
@@ -1021,22 +1034,22 @@
       <label class="opt"><input type="radio" value="b"><span>About 2 seconds</span></label>
       <label class="opt"><input type="radio" value="c"><span>Until the screen goes dark</span></label></div>
       <p class="why" hidden>Hold the knob while you switch on, keep holding for at least 8 seconds, then let go.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="reset" data-lesson="8"><legend><span class="qn"></span>After a factory reset, what about the cube’s safety zone?</legend><div class="opts">
+    <fieldset class="check" data-answer="b" data-group="reset" data-lesson="8"><legend><span class="qn"></span>After a factory reset, what about the safety zone set on the cube itself (Settings → Projection)?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>It stays exactly as you set it before</span></label>
       <label class="opt"><input type="radio" value="b"><span>It’s back to its default: set it again</span></label>
-      <label class="opt"><input type="radio" value="c"><span>LaserOS restores it from its own settings</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>It’s locked until the next firmware update</span></label></div>
       <p class="why" hidden>Every setting goes back to its default, the safety zone included. Set it again and check the beam block before the next show.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="reset" data-lesson="8"><legend><span class="qn"></span>After a reset, the cube offers newer firmware from the SD card. What does the manual say?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Take the card out first</span></label>
       <label class="opt"><input type="radio" value="b"><span>Reset the cube again</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Update, to get the latest</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Accept the update</span></label></div>
       <p class="why" hidden>The manual says to update, so the cube runs the latest firmware.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="a" data-group="power" data-lesson="9"><legend><span class="qn"></span>You’ve lost the charger of your Ultra MK2. Which replacement fits what we recommend?</legend><div class="opts">
+    <fieldset class="check" data-answer="a" data-group="power" data-lesson="9"><legend><span class="qn"></span>You’ve lost the charger of your Pro 6W. Which replacement fits what we recommend?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>19V DC, 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug, 150W</span></label>
       <label class="opt"><input type="radio" value="b"><span>19V DC, 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug, 65W</span></label>
       <label class="opt"><input type="radio" value="c"><span>12V DC, 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug, 150W</span></label></div>
-      <p class="why" hidden>The Ultra MK2 comes with a 19V DC, 120W charger with a 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug. We recommend a replacement with that plug and at least that wattage; a higher wattage is fine.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>The Pro 6W comes with a 19V DC, 120W charger with a 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug. We recommend a replacement with that plug and at least that wattage; a higher wattage is fine.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="power" data-lesson="9"><legend><span class="qn"></span>The cube gives off a burning smell, but it still works. What do you do?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Finish the show, then let it cool</span></label>
       <label class="opt"><input type="radio" value="b"><span>Unplug it, stop using it, email support</span></label>
@@ -1050,8 +1063,8 @@
     <fieldset class="check" data-answer="a" data-group="power" data-lesson="9"><legend><span class="qn"></span>The battery needs replacing. What do we recommend?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>An RMA: email support with your order number</span></label>
       <label class="opt"><input type="radio" value="b"><span>A battery from a local shop, fitted yourself</span></label>
-      <label class="opt"><input type="radio" value="c"><span>A higher‑wattage charger instead</span></label></div>
-      <p class="why" hidden>We recommend a battery replacement under RMA at our service centre: email support@laseros.com with your order number. Never open the cube yourself.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="c"><span>A higher‑wattage charger, so it lasts longer</span></label></div>
+      <p class="why" hidden>We recommend a battery replacement under RMA at our service centre: email support@laseros.com with your order number. The manual doesn’t allow opening or modifying the cube.</p><p class="feedback"></p></fieldset>
   </div>
 </section>
 
