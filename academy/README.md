@@ -12,13 +12,16 @@ no build step, no server, no database, no accounts, no analytics.
 - **Progress** is kept in the visitor's browser (`localStorage`, key `academy:<course>`). Nothing is sent anywhere.
   Clearing browser data or switching device starts the course again.
 - **Lessons** are `<section class="view lesson" id="lesson-N">`. A lesson counts as done when every question,
-  put-in-order exercise and scenario in it has been answered correctly.
+  put-in-order exercise and scenario in it has been answered correctly (a lesson with none of these: once opened).
+  Progress from another open tab is merged, not overwritten; malformed stored data is ignored.
 - **The final quiz** unlocks when all lessons are done. It picks `data-pick` questions at random from the hidden
-  `.bank` in `#final` and passes at `data-pass` correct (now 10 and 8). Unlimited retries.
+  `.bank` in `#final` and passes at `data-pass` correct (now 10 and 8; never more than the number of questions shown).
+  Unlimited retries.
 - **The certificate** is drawn in the browser on a canvas (A4 landscape, 300 dpi) and saved as a PDF or a PNG.
   It has no ID and no verification page, on purpose: it is a certificate of completion, not a credential.
   It shows the name the learner types, the course title and version, the date they passed, and a Wicked Lasers seal.
-  It says it is not a licence, an LSO qualification or permission to run public shows.
+  It says it is not a licence, an LSO qualification or permission to run public shows. The page shows it as an image
+  (long-press to save on phones) plus PDF and PNG downloads; it waits for the Inter font before drawing.
 - **Videos** show a local thumbnail (`images/home/videos/<id>.webp`) until the visitor presses play; only then does
   the page load YouTube's privacy-enhanced player (youtube-nocookie.com).
 
@@ -28,9 +31,11 @@ no build step, no server, no database, no accounts, no analytics.
 2. In the copy, change `<main data-course="..." data-version="1.0" data-title="..." data-subtitle="...">`.
    `data-course` must be new (it is the progress key); `data-title` and `data-subtitle` go on the certificate.
 3. Write the lessons. Building blocks, all plain HTML (copy them from `start-here/index.html`):
-   - question: `<fieldset class="check" data-answer="b">` with radio options `a`, `b`, `c`, a hidden
-     `<p class="why">` (shown when answered right) and an empty `<p class="feedback" aria-live="polite">`;
-   - put-in-order: `<div class="order">` with an `<ol>` of steps **in the right order** (the page shuffles them);
+   - question: `<fieldset class="check" data-answer="b">` with radio options `a`, `b`, `c` (one `name` per question,
+     unique on the page), a hidden `<p class="why">` (shown when answered right) and an empty
+     `<p class="feedback" aria-live="polite">`;
+   - put-in-order: `<div class="order">` with an `<ol>` of at least two steps **in the right order** (the page
+     shuffles them) and the "Check the order" button (`.check-order`); a list with fewer steps counts as solved;
    - scenario: `<div class="scenario" data-answer="yes|no">` with the two buttons, a `why` and a `feedback`;
    - video: `<div class="video" data-yt="<YouTube id>">` plus a thumbnail saved as `images/home/videos/<id>.webp`.
 4. Update the contents list (`.toc`), the lesson count in the page text, and the final quiz bank.

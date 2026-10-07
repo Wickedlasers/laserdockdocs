@@ -9,14 +9,26 @@
 
   function $(s, el) { return (el || document).querySelector(s); }
   function $$(s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); }
-  function load(key) { try { return JSON.parse(localStorage.getItem(key)) || null; } catch (e) { return null; } }
+  function load(key) {
+    try { var v = JSON.parse(localStorage.getItem(key)); return v && typeof v === "object" && !Array.isArray(v) ? v : null; } catch (e) { return null; }
+  }
+  function isObj(v) { return !!v && typeof v === "object" && !Array.isArray(v); }
+  // Progress as stored, cleaned up: anything malformed (old format, another script) is dropped, not trusted.
+  function clean(s) {
+    s = isObj(s) ? s : {};
+    var done = {};
+    if (isObj(s.done)) Object.keys(s.done).forEach(function (k) { if (s.done[k]) done[k] = s.done[k]; });
+    var p = s.passed;
+    var passed = isObj(p) && typeof p.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(p.date) && typeof p.version === "string" ? { date: p.date, version: p.version } : null;
+    return { done: done, passed: passed, name: typeof s.name === "string" ? s.name.slice(0, 60) : "" };
+  }
   function store(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
   function shuffle(a) {
     for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; }
     return a;
   }
   function keyFor(slug) { return "academy:" + slug; }
-  var CHECK = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
+  var CHECK = '<svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>';
 
   // Theme: same switch and storage key as the wiki, so the choice carries over.
   var mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -27,6 +39,16 @@
     root.dataset.theme = next;
     try { localStorage.setItem("wiki-theme", next); } catch (e) {}
   });
+
+  // Header menu (narrow screens): closes on a link, a tap outside, focus leaving it and Esc, like the wiki's.
+  var menu = document.querySelector(".menu");
+  if (menu) {
+    menu.addEventListener("click", function (e) { if (e.target.closest("a")) menu.open = false; });
+    // pointerdown, not click: iOS sends no click for a tap on plain content.
+    document.addEventListener("pointerdown", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+    menu.addEventListener("focusout", function (e) { if (e.relatedTarget && !menu.contains(e.relatedTarget)) menu.open = false; });
+  }
 
   // Videos: a local thumbnail until the visitor presses play, then YouTube's privacy-enhanced player.
   $$(".video[data-yt]").forEach(function (v) {
@@ -46,9 +68,9 @@
 
   // Catalogue cards: show progress for each course.
   $$("[data-progress-for]").forEach(function (el) {
-    var st = load(keyFor(el.dataset.progressFor)) || {};
+    var st = clean(load(keyFor(el.dataset.progressFor)));
     var total = +el.dataset.lessons || 1;
-    var ids = Object.keys(st.done || {});
+    var ids = Object.keys(st.done);
     var n = Math.min(ids.length, total);
     var bar = $(".progress-bar span", el), txt = $(".progress-text", el), btn = $("[data-start]", el.closest(".card") || document);
     if (bar) bar.style.width = Math.round((n / total) * 100) + "%";
@@ -64,9 +86,20 @@
 
   var slug = course.dataset.course, version = course.dataset.version || "1";
   var KEY = keyFor(slug);
-  var state = load(KEY) || {};
-  state.done = state.done || {};
-  function save() { store(KEY, state); }
+  var state = clean(load(KEY));
+  // Another tab may have saved progress since this one loaded: merge instead of overwriting it.
+  function merged() {
+    var disk = clean(load(KEY));
+    Object.keys(disk.done).forEach(function (k) { if (!state.done[k]) state.done[k] = disk.done[k]; });
+    if (!state.passed) state.passed = disk.passed;
+    if (!state.name) state.name = disk.name;
+  }
+  function save() { merged(); store(KEY, state); }
+  window.addEventListener("storage", function (e) {
+    if (e.key !== KEY) return;
+    merged();
+    refresh();
+  });
 
   var views = $$(".view", course);
   var lessons = views.filter(function (v) { return v.classList.contains("lesson"); });
@@ -82,26 +115,42 @@
 
   // ---- views ----
   var first = true;
+  var current = null;
   function route() {
-    var id = decodeURIComponent(location.hash.slice(1));
-    var v = id && document.getElementById(id);
-    if (!v || !v.classList.contains("view")) v = views[0];
+    var id = "";
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) {}
+    var el = id && document.getElementById(id);
+    // A link to something inside a view (a heading) opens that view; a link to anything else ("Skip to content")
+    // keeps the view that is open.
+    var v = el && (el.classList.contains("view") ? el : el.closest(".view"));
+    if (!v) { if (el && current) return; v = views[0]; }
+    current = v;
     views.forEach(function (x) { x.classList.toggle("current", x === v); });
     $$("[data-nav]").forEach(function (a) {
       if (a.getAttribute("href") === "#" + v.id) a.setAttribute("aria-current", "step"); else a.removeAttribute("aria-current");
     });
     var det = $(".toc-phone");
     if (det) det.open = false;
+    if (menu) menu.open = false;
     if (v.id === "final") renderFinal();
     if (v.id === "certificate") renderCert();
+    if (v.classList.contains("lesson") && !$(".check, .order, .scenario", v)) solved(v); // a lesson with nothing to answer is done once read
     if (!first) {
-      var top = $(".course-grid").getBoundingClientRect().top + window.pageYOffset - 80;
-      window.scrollTo(0, Math.max(0, top));
+      toTop();
       var h = $("h2", v);
-      if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
+      if (h) h.focus({ preventScroll: true });
+    } else if (location.hash) {
+      // Firefox has already jumped to the anchor in the page as it was before the other lessons were hidden.
+      toTop();
+      window.addEventListener("load", toTop);
     }
     first = false;
   }
+  function toTop() {
+    var top = $(".course-grid").getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo(0, Math.max(0, top));
+  }
+  views.forEach(function (v) { var h = $("h2", v); if (h) h.setAttribute("tabindex", "-1"); });
   window.addEventListener("hashchange", route);
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("[data-nav]");
@@ -115,7 +164,7 @@
       if (bar) bar.style.width = Math.round((n / total) * 100) + "%";
       if (txt) txt.textContent = state.passed ? "Course completed" : n + " of " + total + " lessons done";
     });
-    $$("[data-nav]").forEach(function (a) {
+    $$(".toc [data-nav], .toc-phone [data-nav]").forEach(function (a) {
       var id = a.getAttribute("href").slice(1), li = a.parentNode, st = $(".st", a);
       var isLesson = lessons.some(function (l) { return l.id === id; });
       var done = isLesson ? !!state.done[id] : id === "final" ? !!state.passed : id === "certificate" ? !!(state.passed && state.name) : false;
@@ -170,8 +219,9 @@
   var ARROW_UP = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>';
   var ARROW_DOWN = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
   function setupOrder(box, onSolved) {
-    var ol = $("ol", box), fb = $(".feedback", box), why = $(".why", box);
+    var ol = $("ol", box), fb = $(".feedback", box), why = $(".why", box), btn = $(".check-order", box);
     var items = $$("li", ol);
+    if (items.length < 2 || !btn) { box.dataset.solved = "1"; return; } // nothing to put in order
     items.forEach(function (li, i) {
       li.dataset.pos = i;
       var span = document.createElement("span");
@@ -203,29 +253,40 @@
       var li = b.closest("li"), dir = +b.dataset.dir;
       if (dir < 0 && li.previousElementSibling) ol.insertBefore(li, li.previousElementSibling);
       if (dir > 0 && li.nextElementSibling) ol.insertBefore(li.nextElementSibling, li);
-      $$("li", ol).forEach(function (x) { x.classList.remove("right", "wrong"); });
+      $$("li", ol).forEach(clearMark);
       fb.innerHTML = "";
       sync();
       (b.disabled ? $$(".mv button", li)[dir < 0 ? 1 : 0] : b).focus();
       var lis = $$("li", ol);
       say("Moved to step " + (lis.indexOf(li) + 1) + " of " + lis.length + ".");
     });
-    $(".check-order", box).addEventListener("click", function () {
+    btn.addEventListener("click", function () {
       var lis = $$("li", ol), right = 0;
       lis.forEach(function (li, i) {
         var ok = +li.dataset.pos === i;
         if (ok) right++;
-        li.classList.toggle("right", ok);
-        li.classList.toggle("wrong", !ok);
+        clearMark(li);
+        li.classList.add(ok ? "right" : "wrong");
+        // the colour isn't the only sign: each step also says whether it is in place
+        var tag = document.createElement("em");
+        tag.className = "tag";
+        tag.textContent = ok ? "In place" : "Move";
+        li.insertBefore(tag, $(".mv", li));
       });
       var all = right === lis.length;
       box.classList.toggle("is-right", all);
       box.classList.toggle("is-wrong", !all);
       fb.innerHTML = all
         ? verdict(true, why ? why.innerHTML : "That’s the order.")
-        : verdict(false, right + " of " + lis.length + " steps are in the right place. Move the ones marked red and check again.");
+        : verdict(false, right + " of " + lis.length + " steps are in the right place. Move the ones marked “Move” and check again.");
       if (all && box.dataset.solved !== "1") { box.dataset.solved = "1"; onSolved(); }
     });
+  }
+
+  function clearMark(li) {
+    li.classList.remove("right", "wrong");
+    var tag = $(".tag", li);
+    if (tag) tag.remove();
   }
 
   function setupScenario(sc, onSolved) {
@@ -237,7 +298,7 @@
         b.classList.add(ok ? "right" : "wrong");
         sc.classList.toggle("is-right", ok);
         sc.classList.toggle("is-wrong", !ok);
-        fb.innerHTML = verdict(ok, ok ? why.innerHTML : "Think again about who or what the beam could reach.");
+        fb.innerHTML = verdict(ok, ok ? (why ? why.innerHTML : "") : "Think again about who or what the beam could reach.");
         if (ok && sc.dataset.solved !== "1") { sc.dataset.solved = "1"; onSolved(); }
       });
     });
@@ -260,7 +321,7 @@
   var final = $("#final");
   var bank = final ? $$(".bank .check", final) : [];
   var PICK = final ? Math.min(+final.dataset.pick || 10, bank.length) : 0;
-  var PASS = final ? +final.dataset.pass || Math.ceil(PICK * 0.8) : 0;
+  var PASS = final ? Math.min(+final.dataset.pass || Math.ceil(PICK * 0.8), PICK) : 0;
   var quizForm = $("#quiz-form"), quizList = $("#quiz-list"), quizMsg = $("#quiz-msg"), quizResult = $("#quiz-result");
 
   function localDate() {
@@ -315,9 +376,15 @@
     e.preventDefault();
     var qs = $$(".check", quizList);
     var open = qs.filter(function (q) { return !$("input:checked", q); });
+    qs.forEach(function (q) {
+      var miss = open.indexOf(q) >= 0;
+      q.classList.toggle("missing", miss);
+      $(".feedback", q).innerHTML = miss ? '<span class="verdict">Pick an answer for this question.</span>' : "";
+    });
     if (open.length) {
       quizMsg.textContent = "Answer all " + PICK + " questions first (" + open.length + " left).";
-      $("input", open[0]).focus();
+      open[0].scrollIntoView({ block: "center" });
+      $("input", open[0]).focus({ preventScroll: true });
       return;
     }
     quizMsg.textContent = "";
@@ -359,7 +426,15 @@
     $("#cert-ready").hidden = !state.passed;
     if (!state.passed) return;
     if (state.name && !certInput.value) certInput.value = state.name;
-    if (state.name) drawCert(state.name);
+    if (state.name) drawWhenReady(state.name);
+  }
+
+  // Draw once Inter (including the subset the name needs) has loaded, or after 2.5 s with whatever font there is.
+  function drawWhenReady(name) {
+    var ready = document.fonts && document.fonts.load
+      ? Promise.all([document.fonts.load("600 58px Inter", name), document.fonts.load("400 17px Inter"), document.fonts.load("600 28px Inter")]).catch(function () {})
+      : Promise.resolve();
+    return Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () { drawCert(name); });
   }
 
   function spaced(c, text, x, y, spacing, align) {
@@ -441,7 +516,7 @@
     c.fillText("Awarded to", PW / 2, 256);
 
     c.fillStyle = ink;
-    fit(c, name, "600", 58, 860, 22);
+    fit(c, name, "600", 58, 860, 12);
     c.fillText(name, PW / 2, 330);
     c.fillStyle = "rgba(10,10,12,.22)";
     c.fillRect(PW / 2 - 280, 356, 560, 1);
@@ -497,6 +572,9 @@
     c.font = "400 11.5px " + FONT;
     c.fillText("A certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows.", PW / 2, 724);
 
+    // Shown as an image, so phones (and in-app browsers that block downloads) can long-press to save it.
+    var img = $("#cert-img");
+    if (img) img.src = canvas.toDataURL("image/png");
     $("#cert-out").hidden = false;
   }
 
@@ -543,21 +621,21 @@
       state.name = name;
       save();
       refresh();
-      var ready = document.fonts && document.fonts.load
-        ? Promise.all([document.fonts.load("600 58px Inter"), document.fonts.load("400 17px Inter")]).catch(function () {})
-        : Promise.resolve();
-      Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () {
-        drawCert(name);
-        say("Certificate ready. Download it as a PDF or an image.");
-      });
+      drawWhenReady(name).then(function () { say("Certificate ready. Download it as a PDF or an image."); });
     });
+    function failed() { $("#cert-msg").textContent = "The download didn’t start in this browser. Press and hold the certificate above to save it, or open this page in Chrome, Safari or Firefox."; }
+    function bytes(blob) {
+      if (blob.arrayBuffer) return blob.arrayBuffer();
+      return new Promise(function (ok, no) { var r = new FileReader(); r.onload = function () { ok(r.result); }; r.onerror = no; r.readAsArrayBuffer(blob); });
+    }
     $("#dl-pdf").addEventListener("click", function () {
       canvas.toBlob(function (b) {
-        b.arrayBuffer().then(function (buf) { download(pdfFromJpeg(new Uint8Array(buf), canvas.width, canvas.height), fileBase() + ".pdf"); });
+        if (!b) return failed();
+        bytes(b).then(function (buf) { download(pdfFromJpeg(new Uint8Array(buf), canvas.width, canvas.height), fileBase() + ".pdf"); }, failed);
       }, "image/jpeg", 0.92);
     });
     $("#dl-png").addEventListener("click", function () {
-      canvas.toBlob(function (b) { download(b, fileBase() + ".png"); }, "image/png");
+      canvas.toBlob(function (b) { if (b) download(b, fileBase() + ".png"); else failed(); }, "image/png");
     });
   }
 
