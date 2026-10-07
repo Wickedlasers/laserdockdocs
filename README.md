@@ -87,3 +87,10 @@ edit it by hand.
 - **The search code is a copy of the homepage's** (it indexes this page's own DOM instead of
   fetching it, and closes the dialog when a result on this page is picked). Function and variable
   names match the homepage's, so a fix can be copied across; see "Shared with the manual" above.
+
+## Academy (`academy/`)
+
+Free courses with a final quiz and a certificate, at /academy/. Plain HTML/CSS/JS, progress kept in the
+visitor's browser, no accounts or server. Its header, colour tokens and footer are copies of the homepage's
+(see "Shared with the manual" above; the academy is a third copy). How it works, how to add a course and
+the content rules: `academy/README.md`.

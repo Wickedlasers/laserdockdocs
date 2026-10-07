@@ -3,4 +3,5 @@
 > Official user documentation for the LaserCube Ultra MK2 and the LaserCube Pro laser projectors. The Pro is the compact version of the Ultra MK2 and runs the same CubeOS firmware.
 
 - [LaserCube Ultra MK2 & Pro Manual](https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/): safety, parts, technical specifications, control modes (LaserOS, playlist, laser show, visualizer, Art-Net, DMX), settings, built-in effects, MIDI mapping, web admin page, firmware updates, factory reset and SD card information.
+- [LaserCube Academy: Start here](https://wiki.laseros.com/academy/start-here/): free beginner course for Ultra MK2 and Pro owners: laser safety, setup, key, E-Stop, safety zones, LaserOS and a pre-show checklist, with a final quiz and a certificate of completion.
 - [laseros.com](https://www.laseros.com/): LaserCube shop, LaserOS downloads and support (support@laseros.com).
