@@ -43,7 +43,8 @@ no build step, no server, no database, no accounts, no analytics.
      `<p class="hint">` (shown after a wrong choice instead of the general "Think again" line) and a `feedback`;
    - video: `<div class="video" data-yt="<YouTube id>">` plus a thumbnail saved as `images/home/videos/<id>.webp`.
 4. Update the contents list (`.toc`), the lesson count in the page text, and the final quiz bank: each question gets
-   `data-group` (its topic; keep at least as many topics as `data-pick` so every quiz covers them all) and
+   `data-group` (its topic; use exactly `data-pick` topics: with more, some are left out of each quiz; with fewer, the
+   rest is filled at random) and
    `data-lesson` (the lesson number it reviews). Keep the options the same length and plausible: in step 2 of
    start-here (7 Oct 2026) the right answer had been the longest option in 17 of 20 questions.
 5. Add a card for it to `academy/index.html` (`data-progress-for` = the course's `data-course`, `data-lessons` = its count).
