@@ -71,7 +71,7 @@ input,textarea{caret-color:var(--accent)}
 .menu-panel{position:absolute;right:0;top:calc(100% + 12px);z-index:50;display:grid;min-width:210px;padding:6px;border-radius:10px;border:1px solid var(--line-2);background:#121216;box-shadow:var(--shadow)}
 .menu-panel a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;font-size:15px;color:var(--muted)}
 .menu-panel a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-.menu-panel a[aria-current]{color:var(--text)}
+.menu-panel a[aria-current]{background:rgba(255,255,255,.06);color:var(--text)}
 .theme-dark-icon{display:none}
 :root[data-theme="dark"] .theme-dark-icon{display:block}
 :root[data-theme="dark"] .theme-light-icon{display:none}
@@ -205,6 +205,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .feedback{margin:12px 0 0;font-size:15px}
 .feedback:empty{display:none}
 .feedback .verdict{font-weight:600}
+.feedback a.link{display:inline-block;padding:6px 0;white-space:nowrap}
 .feedback.is-wrong,#quiz-msg,#cert-msg{color:var(--bad)}
 .check.missing{border-color:var(--bad)}
 .check.missing .verdict{color:var(--bad)}
@@ -272,9 +273,11 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .cert-preview img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 0 0 1px var(--line),var(--shadow);background:#fff}
 .small{font-size:14px;color:var(--subtle)}
 
-@media (max-width:1000px){
+@media (max-width:1060px){
   .nav{display:none}
   .menu{display:block}
+}
+@media (max-width:1000px){
   .course-grid{grid-template-columns:minmax(0,1fr);gap:0;padding-top:28px}
   .toc{display:none}
   .toc-phone{display:block;margin:0 0 28px;border:1px solid var(--line-2);border-radius:12px}
@@ -300,7 +303,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 @media (max-width:640px){
   .container{padding-left:16px;padding-right:16px}
   .site-header .container{gap:12px}
-  .wordmark{width:116px}
+  .wordmark{width:118px}
   .brand{gap:10px}
   .brand-name{font-size:13.5px}
   .hero .container{padding-top:44px;padding-bottom:40px}
