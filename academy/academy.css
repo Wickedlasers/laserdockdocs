@@ -300,7 +300,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .steps{grid-template-columns:1fr}
   .steps li,.steps li + li{padding:18px 0 4px;border-left:0}
   .steps li + li{border-top:1px solid var(--line)}
-  .two{grid-template-columns:1fr}
+  .two,.two.parts{grid-template-columns:1fr}
   .check,.order,.scenario{padding:16px}
   .order li{padding-left:10px;gap:8px}
   .pager a{font-size:14.5px}
