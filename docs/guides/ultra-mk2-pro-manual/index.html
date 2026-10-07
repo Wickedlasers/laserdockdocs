@@ -166,7 +166,7 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .docs-content p{margin:0 0 14px}
 .docs-content p,.docs-content li{max-width:38em}
 .docs-content .warning-panel p{max-width:none}
-.docs-content td,.docs-content th{font-variant-numeric:tabular-nums}
+.docs-content table:not(.media) :is(td,th){font-variant-numeric:tabular-nums}
 .docs-content a:not(.anchor){color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--accent-soft);overflow-wrap:anywhere;transition:color .15s,text-decoration-color .15s}
 .docs-content a:not(.anchor):hover{color:var(--accent-hover);text-decoration-color:currentColor}
 .docs-content strong{font-weight:600}
@@ -461,7 +461,7 @@ hesitate</p><p>to contact LaserDock Ltd. directly.</p></div>
 <ol><li><strong>Laser Aperture:</strong> Laser light is emitted from this opening.</li><li><strong>Beam Block:</strong> Prevents laser emission and also restricts the laser
 scan from going into an audience. Can be locked using the screws
 either side.</li><li><strong>Mounting Bracket:</strong> For secure installation. Tilt may be locked
-using Screws 3a</li><li><strong>WiFi antenna Connector:</strong> to facilitate wireless connection.</li><li><strong>Status LED:</strong> For showing Connection Mode.</li><li><strong>RJ-45 Ethernet Port:</strong> For cable connection to network.</li><li><strong>Safety Key Control:</strong> Prevents accidental operation. Resetting of
+using Screws 3a</li><li><strong>WiFi Antenna Connector:</strong> to facilitate wireless connection.</li><li><strong>Status LED:</strong> For showing Connection Mode.</li><li><strong>RJ-45 Ethernet Port:</strong> For cable connection to network.</li><li><strong>Safety Key Control:</strong> Prevents accidental operation. Resetting of
 the key control will be required if there is a power loss or remote
 interlock cycling.</li><li><strong>RJ45 Remote Interlock Connectors:</strong> In/Through. Provides a safety
 shut-off for terminating the laser emission via a jumper connection.
@@ -867,10 +867,10 @@ Windows</a><em>.</em></li><li>Double click on the downloaded .exe file to instal
 <img src="Pictures/web/10000001000004D8000002367B86816B-1240.webp" width="643" height="293" alt="" loading="lazy" decoding="async">
 <h4 id="macos-platform"><span id="anchor-25"></span>macOS Platform<a href="#macos-platform" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <ul><li>Follow this link to&nbsp;
-<a href="https://www.laseros.com/downloads/LaserOS_0.18.1.pkg" rel="external">download and install for Mac
-OS</a><em>.</em></li><li>Double-click on the .pkg file and run the installer app.</li></ul>
+<a href="https://www.laseros.com/downloads/LaserOS_0.18.1.pkg" rel="external">download and install for
+macOS</a><em>.</em></li><li>Double-click on the .pkg file and run the installer app.</li></ul>
 <p>Follow the instructions for installing LaserOS on your chosen platform,
-then run the software by opening Launchpad on MacOS, or click the icon
+then run the software by opening Launchpad on macOS, or click the icon
 for LaserOS on your desktop if using a Windows platform.</p>
 <h3 id="using-laseros"><span id="anchor-26"></span><span id="anchor-27"></span><span id="anchor-28"></span>Using LaserOS<a href="#using-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>After connecting your LaserCube(s) over LAN or WiFi to your network, the
@@ -2031,7 +2031,7 @@ current menu UI language.</p>
 <p>Note: In order for the UI labels to fit within the screen width without
 horizontal scrolling, some UI labels have had to be shortened, so they
 may not be the most suitable word(s) available in each language.</p>
-<h1 id="built-in-effects"><span id="anchor-108"></span>Built in Effects<a href="#built-in-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<h1 id="built-in-effects"><span id="anchor-108"></span>Built-in Effects<a href="#built-in-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The effects menu will be available on the top level menu of the
 LaserCube when it is in any mode that allows additional audio reactive
 effects to be used.</p>
@@ -2459,7 +2459,7 @@ button MIDI mapped to an APC button. If the APC button selected has an
 RGB LED associated with it then the button will light up on the APC with
 the colour selected from the colour dropdown.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140BD52F4E2_hu_853116c7644868d3-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014047BDCCAD_hu_19af780d69c8ac81-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014029E7DFBB_hu_8399b4380fd2a965-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140E696B544_hu_c9ee3b3da65a199d-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<h2 id="midi-mapping-a-drop-down-control"><span id="anchor-138"></span>MIDI Mapping a Drop Down control<a href="#midi-mapping-a-drop-down-control" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<h2 id="midi-mapping-a-drop-down-control"><span id="anchor-138"></span>MIDI Mapping a Drop-Down Control<a href="#midi-mapping-a-drop-down-control" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>Most of the drop down UI controls within the LCD menu UI can be linked
 to a button on a connected APC MIDI controller. These include the
 currently selected playlist drop down, and also the laser show drop down
@@ -2473,7 +2473,7 @@ the “Link MIDI Note” button. Previously linked items can also be
 un-linked using the same procedure of selecting the drop down item and
 then long pressing to bring up the context menu, followed by selecting
 the “UnLink MIDI Note” option.</p>
-<p>With an APC40 or APC Mini connected, there are a total of 15 different
+<p>With an APC40 or APC mini connected, there are a total of 15 different
 colours selectable during the MIDI mapping process.</p>
 <p>Note: Some APC buttons do not contain an RGB LED, so consult the
 relevant documentation for your APC device to determine which APC
@@ -2486,7 +2486,7 @@ drop down.</p>
 mapping to an APC button, and the APC button (top right) will change to
 the selected colour (Magenta in this example).</p>
 <img src="Pictures/web/1000000000000400000003005306EF8D-656.webp" width="328" height="246" alt="" loading="lazy" decoding="async">
-<h2 id="default-apc40-mk2-midi-mapping"><span id="anchor-139"></span>Default APC40 MK2 MIDI mapping<a href="#default-apc40-mk2-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<h2 id="default-apc40-mk2-midi-mapping"><span id="anchor-139"></span>Default APC40 MK2 MIDI Mapping<a href="#default-apc40-mk2-midi-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The default MIDI mapping for an APC40 MK2 is shown below, and is
 provided with the factory SD card image.</p>
 <p>This mapping can be changed by the user if required using this guide.</p>
