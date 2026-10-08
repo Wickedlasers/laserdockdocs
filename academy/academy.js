@@ -142,6 +142,8 @@
       });
     }
     if (on) {
+      var h = $("h2", v);
+      if (h && h.id) $("a", reviewBack[0]).setAttribute("aria-describedby", h.id); // focused instead of the heading, so it names the lesson
       v.insertBefore(reviewBack[0], v.firstChild);
       v.insertBefore(reviewBack[1], $(".pager", v)); // and at the end, above the lesson's own Back and Next
     }

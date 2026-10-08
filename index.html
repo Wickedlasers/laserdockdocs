@@ -795,7 +795,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   var PAGES = [
     ["Academy", "academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses lesson lessons learn training quiz certificate", "online"],
     ["Academy", "academy/start-here/", "Start here: from the box to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners", "safety safe first show setup mount estop e-stop key zones laseros checklist"],
-    ["Academy", "academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "dmx artnet art-net midi playlist visualizer music cubelink cube link"],
+    ["Academy", "academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "dmx artnet art-net midi playlist sd card visualizer music cubelink cube link"],
     ["Academy", "academy/connect/", "Connect, update and troubleshoot your Ultra MK2 or Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "wifi network router ethernet lan cable status firmware reset factory web admin power heat temperature"],
     ["Tutorials", "#videos", "Tutorials", "Videos on this page", "tutorial tutorials video videos youtube", ""],
     ["Tutorials", "https://www.laseros.com/tutorials/", "All tutorials on laseros.com", "laseros.com", "tutorial tutorials video videos youtube", ""]
@@ -1047,7 +1047,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   dlg.addEventListener("mousedown", function (e) { downOnBackdrop = e.target === dlg; });
   dlg.addEventListener("click", function (e) {
     if (e.target === dlg && downOnBackdrop) dlg.close();
-    else if (e.target.closest(".result:not([target])")) { opener = null; dlg.close(); } // a result on this site
+    else if (e.target.closest(".result:not([target])") && !(e.ctrlKey || e.metaKey || e.shiftKey)) { opener = null; dlg.close(); } // a result on this site, not opened in a new tab
   });
   input.addEventListener("input", render);
   input.addEventListener("keydown", function (e) {
