@@ -629,8 +629,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
           <h3><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus" target="_blank" rel="noopener">Firmware 2.0: what’s new and how to upgrade<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
-          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener"><img src="images/home/videos/8a95SdH_2ek.webp" alt="" loading="lazy" width="640" height="360"></a>
-          <h3><a href="https://www.youtube.com/watch?v=8a95SdH_2ek" target="_blank" rel="noopener">Controlling built-in shows from the web app<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
+          <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=6w5rWiim6mI" target="_blank" rel="noopener"><img src="images/home/videos/6w5rWiim6mI.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <h3><a href="https://www.youtube.com/watch?v=6w5rWiim6mI" target="_blank" rel="noopener">Controlling the cube from the web app<span class="vh"> (YouTube, opens in a new tab)</span></a></h3>
         </article>
         <article>
           <a class="thumb" tabindex="-1" aria-hidden="true" href="https://www.youtube.com/watch?v=56A0RWEOAs8" target="_blank" rel="noopener"><img src="images/home/videos/56A0RWEOAs8.webp" alt="" loading="lazy" width="640" height="360"></a>
@@ -784,8 +784,19 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     ["f1f-hoGJaYE", "Importing a playlist to the SD card", "playlist sd card micro export import"],
     ["A80UjLxKDZs", "Connecting a MIDI controller", "midi apc40 apc mini usb controller mapping"],
     ["Jtd9Il9sAus", "Firmware 2.0: what’s new and how to upgrade", "firmware update upgrade"],
-    ["8a95SdH_2ek", "Controlling built-in shows from the web app", "web app webapp phone browser playlist player"],
+    ["6w5rWiim6mI", "Controlling the cube from the web app", "web app webapp remote phone browser standalone cubeos playlist player"],
     ["56A0RWEOAs8", "Wireless multi-cube shows with CubeLink", "cubelink cube link multi projector wireless sync"]
+  ];
+  // Pages the manual can't point to: the Academy and the tutorials. A page shows only when a search word
+  // starts one of its keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual; every
+  // word must be in its title or keys.
+  var PAGES = [
+    ["academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses class lesson lessons learn training quiz certificate"],
+    ["academy/start-here/", "Start here: from the box to your first safe show", "Academy course · Beginner", "academy course courses class lesson lessons learn training quiz certificate beginner beginners"],
+    ["academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses class lesson lessons learn training quiz certificate"],
+    ["academy/connect/", "Connect, update and troubleshoot your Ultra MK2 or Pro", "Academy course · Intermediate", "academy course courses class lesson lessons learn training quiz certificate"],
+    ["#videos", "Tutorials", "Videos on this page", "tutorial tutorials video videos youtube"],
+    ["https://www.laseros.com/tutorials/", "All tutorials on laseros.com", "laseros.com", "tutorial tutorials video videos youtube"]
   ];
   // Manual section ids; titles and breadcrumbs come from the manual once it has loaded.
   var POPULAR = [
@@ -811,7 +822,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     return (out.length ? out : all.slice(0, 1)).slice(0, 8);
   }
 
-  var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2]); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
+  // Every video also answers to "tutorial" and "video" ("dmx tutorial").
+  var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2] + " tutorial tutorials video videos"); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
+  var pageIndex = PAGES.map(function (p) { var t = norm(p[1] + " " + p[3]); return { href: p[0], title: p[1], sub: p[2], t: t, tc: compact(t), k: norm(p[3]) }; });
 
   function load() {
     if (index || loading) return loading;
@@ -904,6 +917,22 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     return res.slice(0, 3).map(function (r) { return r.v; });
   }
 
+  function searchPages(ts) {
+    var cs = compile(ts), res = [];
+    pageIndex.forEach(function (p) {
+      var score = 0, key = false;
+      for (var i = 0; i < cs.length; i++) {
+        var s = titleScore(p.t, p.tc, cs[i]);
+        if (!s) return;
+        score += s;
+        if (cs[i].term.length > 2 && cs[i].start.test(p.k)) key = true;
+      }
+      if (key) res.push({ p: p, score: score });
+    });
+    res.sort(function (a, b) { return b.score - a.score; });
+    return res.slice(0, 4).map(function (r) { return r.p; });
+  }
+
   function snippet(text, ts) {
     if (!text) return "";
     var low = text.toLowerCase(), at = -1;
@@ -951,7 +980,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       if (!waiting) { waiting = true; load().then(function () { waiting = false; render(); }); }
       return;
     } else {
-      var secs = searchSections(q, ts), vids = searchVideos(ts);
+      var pgs = searchPages(ts), secs = searchSections(q, ts), vids = searchVideos(ts);
+      if (pgs.length) html += '<div class="hint" aria-hidden="true">Pages</div>' + pgs.map(function (p) { return row(p.href, mark(p.title, ts), p.sub, "", "", /^https?:/.test(p.href)); }).join("");
       if (secs.length) html += '<div class="hint" aria-hidden="true">Manual</div>' + secs.map(function (e) { return row(MANUAL + "#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join("");
       if (vids.length) html += '<div class="hint" aria-hidden="true">Tutorials</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "images/home/videos/" + v.id + ".webp", true); }).join("");
       if (!html) html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>Try fewer or different words, or <a href="' + MANUAL + '">browse the full manual</a>.</div>';
@@ -1002,7 +1032,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   // Close on a backdrop click, but not when a text selection started in the input ends there.
   var downOnBackdrop = false;
   dlg.addEventListener("mousedown", function (e) { downOnBackdrop = e.target === dlg; });
-  dlg.addEventListener("click", function (e) { if (e.target === dlg && downOnBackdrop) dlg.close(); });
+  dlg.addEventListener("click", function (e) {
+    if (e.target === dlg && downOnBackdrop) dlg.close();
+    else if (e.target.closest('.result[href^="#"]')) { opener = null; dlg.close(); } // a place on this page (Tutorials)
+  });
   input.addEventListener("input", render);
   input.addEventListener("keydown", function (e) {
     if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(active + 1, items.length - 1), true); }

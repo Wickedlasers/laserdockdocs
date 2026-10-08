@@ -126,6 +126,19 @@
   // ---- views ----
   var first = true;
   var current = null;
+  // "Review lesson N" under a graded quiz question: coming back (browser Back, the quiz link, or the
+  // "Back to your quiz results" link on that lesson) returns to that question, not to the top of the quiz.
+  var reviewFrom = null, reviewLesson = "", reviewBack = null;
+  function showReviewBack(v) {
+    if (!(reviewFrom && reviewFrom.isConnected && v.id === reviewLesson)) { if (reviewBack) reviewBack.hidden = true; return; }
+    if (!reviewBack) {
+      reviewBack = document.createElement("p");
+      reviewBack.className = "review-back";
+      reviewBack.innerHTML = '<a class="link" data-nav href="#final"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Back to your quiz results</a>';
+    }
+    v.insertBefore(reviewBack, v.firstChild);
+    reviewBack.hidden = false;
+  }
   function route() {
     var id = "";
     try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) {}
@@ -148,7 +161,12 @@
     if (v.id === "final") renderFinal();
     if (v.id === "certificate") renderCert();
     if (v.classList.contains("lesson")) solved(v); // done once read if nothing in it needs an answer
-    if (!first) {
+    showReviewBack(v);
+    if (!first && v.id === "final" && reviewFrom && reviewFrom.isConnected) {
+      reviewFrom.scrollIntoView({ block: "center" });
+      var link = $("a[data-nav]", reviewFrom);
+      if (link) link.focus({ preventScroll: true });
+    } else if (!first) {
       toTop();
       var h = $("h2", v);
       if (h) h.focus({ preventScroll: true });
@@ -359,6 +377,8 @@
   }
 
   function newQuiz() {
+    reviewFrom = null;
+    reviewLesson = "";
     quizList.textContent = "";
     quizResult.hidden = true;
     quizResult.textContent = "";
@@ -374,6 +394,11 @@
     });
     $("button[type=submit]", quizForm).hidden = false;
   }
+
+  if (quizList) quizList.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#lesson-"]');
+    if (a) { reviewFrom = a.closest(".check"); reviewLesson = a.getAttribute("href").slice(1); }
+  });
 
   function leftMsg(n) { return "Answer all " + PICK + " questions first (" + n + " left)."; }
   // after a submit with blanks: clear a question's mark once it is answered, and keep the count right
