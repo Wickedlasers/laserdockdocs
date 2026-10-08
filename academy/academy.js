@@ -128,16 +128,25 @@
   var current = null;
   // "Review lesson N" under a graded quiz question: coming back (browser Back, the quiz link, or the
   // "Back to your quiz results" link on that lesson) returns to that question, not to the top of the quiz.
-  var reviewFrom = null, reviewLesson = "", reviewBack = null;
+  // Opening any other part of the course forgets the question.
+  var reviewFrom = null, reviewLesson = "", reviewBack = [];
   function showReviewBack(v) {
-    if (!(reviewFrom && reviewFrom.isConnected && v.id === reviewLesson)) { if (reviewBack) reviewBack.hidden = true; return; }
-    if (!reviewBack) {
-      reviewBack = document.createElement("p");
-      reviewBack.className = "review-back";
-      reviewBack.innerHTML = '<a class="link" data-nav href="#final"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Back to your quiz results</a>';
+    if (v.id !== "final" && v.id !== reviewLesson) { reviewFrom = null; reviewLesson = ""; }
+    var on = !!(reviewFrom && reviewFrom.isConnected && v.id === reviewLesson);
+    if (on && !reviewBack.length) {
+      reviewBack = [0, 1].map(function () {
+        var p = document.createElement("p");
+        p.className = "review-back";
+        p.innerHTML = '<a class="link" data-nav href="#final"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Back to your quiz results</a>';
+        return p;
+      });
     }
-    v.insertBefore(reviewBack, v.firstChild);
-    reviewBack.hidden = false;
+    if (on) {
+      v.insertBefore(reviewBack[0], v.firstChild);
+      v.insertBefore(reviewBack[1], $(".pager", v)); // and at the end, above the lesson's own Back and Next
+    }
+    reviewBack.forEach(function (p) { p.hidden = !on; });
+    return on;
   }
   function route() {
     var id = "";
@@ -161,14 +170,16 @@
     if (v.id === "final") renderFinal();
     if (v.id === "certificate") renderCert();
     if (v.classList.contains("lesson")) solved(v); // done once read if nothing in it needs an answer
-    showReviewBack(v);
+    var reviewing = showReviewBack(v);
     if (!first && v.id === "final" && reviewFrom && reviewFrom.isConnected) {
-      reviewFrom.scrollIntoView({ block: "center" });
+      // the question centred, or its top just below the sticky header when it is taller than the screen
+      var r = reviewFrom.getBoundingClientRect();
+      window.scrollTo(0, Math.max(0, r.top + window.pageYOffset - Math.max(80, (window.innerHeight - r.height) / 2)));
       var link = $("a[data-nav]", reviewFrom);
       if (link) link.focus({ preventScroll: true });
     } else if (!first) {
       toTop();
-      var h = $("h2", v);
+      var h = reviewing ? $("a", reviewBack[0]) : $("h2", v); // the back link comes right before the heading
       if (h) h.focus({ preventScroll: true });
     } else if (location.hash) {
       // Firefox has already jumped to the anchor in the page as it was before the other lessons were hidden.
