@@ -74,12 +74,15 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   inside `.docs-content`. Keep that wrapper and the heading ids if the manual is restyled.
 - **Videos:** the `VIDEOS` list in the script and the two video sections in the HTML use YouTube ids;
   thumbnails are `images/home/videos/<id>.webp` (640x360). Source: laseros.com/tutorials.
+- **Pages in search:** the `PAGES` list (the Academy, each course, Tutorials) shows above the manual when a search
+  word starts one of a page's keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual. A new
+  Academy course goes in this list here and in the manual (its paths start with `../../../`).
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
   If that photo is replaced, re-measure them.
 - **Shared with the manual:** the manual page carries copies of the theme script in `<head>`, the
   `:root` colour tokens, the `@font-face` block, the SVG sprite (wordmark gradients and icons), the
   header (nav and the narrow-screen menu, with its theme/menu/key-hint JS), the footer, and the search
-  dialog's HTML, CSS and JS (including the `VIDEOS` and `STOP` lists). A change to any of these here
+  dialog's HTML, CSS and JS (including the `VIDEOS`, `PAGES` and `STOP` lists). A change to any of these here
   needs the same change there. The two `render()`/`open()` functions differ (the manual indexes its own
   page and its `POPULAR` has another shape), so copy fixes by hand, not by pasting whole functions.
 - **Search links:** `/?q=<words>` opens the search with those words (the 404 page's search box uses it).

@@ -61,6 +61,7 @@ no build step, no server, no database, no accounts, no analytics.
    start-here (7 Oct 2026) the right answer had been the longest option in 17 of 20 questions.
 5. Add a card for it to `academy/index.html` (`data-progress-for` = the course's `data-course`, `data-lessons` = its count).
 6. Add both URLs to `sitemap.xml`.
+7. Add the course to the search's `PAGES` list in `index.html` and in the manual page (see the main README).
 
 When a course changes in a way that matters, raise `data-version`. Certificates already issued keep the version
 they were passed on.
