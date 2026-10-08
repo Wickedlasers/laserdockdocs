@@ -2857,14 +2857,16 @@ the SD card.</p>
   ];
   // Pages the manual can't point to: the Academy and the tutorials. A page shows only when a search word
   // starts one of its keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual; every
-  // word must be in its title or keys.
+  // other word must be in its title, description, keys or topics ("dmx course", "safety course").
+  // Keys stay words the manual doesn't use ("class" would catch laser class searches), and a word of one or two
+  // letters must be a whole word, so "ce certificate" stays with the manual.
   var PAGES = [
-    ["../../../academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses class lesson lessons learn training quiz certificate"],
-    ["../../../academy/start-here/", "Start here: from the box to your first safe show", "Academy course · Beginner", "academy course courses class lesson lessons learn training quiz certificate beginner beginners"],
-    ["../../../academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses class lesson lessons learn training quiz certificate"],
-    ["../../../academy/connect/", "Connect, update and troubleshoot your Ultra MK2 or Pro", "Academy course · Intermediate", "academy course courses class lesson lessons learn training quiz certificate"],
-    ["../../../#videos", "Tutorials", "Videos on the wiki homepage", "tutorial tutorials video videos youtube"],
-    ["https://www.laseros.com/tutorials/", "All tutorials on laseros.com", "laseros.com", "tutorial tutorials video videos youtube"]
+    ["Academy", "../../../academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses lesson lessons learn training quiz certificate", "online"],
+    ["Academy", "../../../academy/start-here/", "Start here: from the box to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners", "safety safe first show setup mount estop e-stop key zones laseros checklist"],
+    ["Academy", "../../../academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "dmx artnet art-net midi playlist visualizer music cubelink cube link"],
+    ["Academy", "../../../academy/connect/", "Connect, update and troubleshoot your Ultra MK2 or Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "wifi network router ethernet lan cable status firmware reset factory web admin power heat temperature"],
+    ["Tutorials", "../../../#videos", "Tutorials", "Videos on the wiki homepage", "tutorial tutorials video videos youtube", ""],
+    ["Tutorials", "https://www.laseros.com/tutorials/", "All tutorials on laseros.com", "laseros.com", "tutorial tutorials video videos youtube", ""]
   ];
   var POPULAR = ["factory-reset-procedure", "firmware-update", "wifi-client-mode", "dmxart-net-channel-layout", "e-stop-setup-guide", "exporting-a-playlist-to-the-micro-sd-card"];
 
@@ -2881,9 +2883,10 @@ the SD card.</p>
     return (out.length ? out : all.slice(0, 1)).slice(0, 8);
   }
 
-  // Every video also answers to "tutorial" and "video" ("dmx tutorial").
-  var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2] + " tutorial tutorials video videos"); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
-  var pageIndex = PAGES.map(function (p) { var t = norm(p[1] + " " + p[3]); return { href: p[0], title: p[1], sub: p[2], t: t, tc: compact(t), k: norm(p[3]) }; });
+  var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2]); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
+  var pageIndex = PAGES.map(function (p) { var t = norm(p.slice(2).join(" ")); return { group: p[0], href: p[1], title: p[2], path: p[3], t: t, tc: compact(t), k: norm(p[4]) }; });
+  var TUTORIAL_KEYS = pageIndex.filter(function (p) { return p.group === "Tutorials"; }).map(function (p) { return p.k; }).join(" ");
+  function isKey(c, keys) { return c.term.length > 2 && c.start.test(keys); }
 
   function build() {
     if (index) return;
@@ -2953,7 +2956,8 @@ the SD card.</p>
   }
 
   function searchVideos(ts) {
-    var cs = compile(ts), res = [];
+    // "tutorial", "video" and "youtube" fit every video, so they don't narrow the list ("dmx tutorial").
+    var cs = compile(ts).filter(function (c) { return !isKey(c, TUTORIAL_KEYS); }), res = [];
     videoIndex.forEach(function (v) {
       var score = 0;
       for (var i = 0; i < cs.length; i++) { var s = titleScore(v.t, v.tc, cs[i]); if (!s) return; score += s; }
@@ -2968,15 +2972,27 @@ the SD card.</p>
     pageIndex.forEach(function (p) {
       var score = 0, key = false;
       for (var i = 0; i < cs.length; i++) {
-        var s = titleScore(p.t, p.tc, cs[i]);
+        var s = cs[i].term.length > 2 ? titleScore(p.t, p.tc, cs[i]) : cs[i].word.test(p.t) ? 12 : 0;
         if (!s) return;
         score += s;
-        if (cs[i].term.length > 2 && cs[i].start.test(p.k)) key = true;
+        if (isKey(cs[i], p.k)) key = true;
       }
       if (key) res.push({ p: p, score: score });
     });
     res.sort(function (a, b) { return b.score - a.score; });
-    return res.slice(0, 4).map(function (r) { return r.p; });
+    return res.map(function (r) { return r.p; });
+  }
+
+  // Academy first, then the manual and the tutorials; tutorials before the manual when the search asks for them ("dmx video").
+  function results(q, ts, secs) {
+    var pgs = searchPages(ts), vids = searchVideos(ts);
+    function pageRow(p) { return row(p.href, mark(p.title, ts), p.path, "", "", /^https?:/.test(p.href)); }
+    function group(name, rows) { return rows ? '<div class="hint" aria-hidden="true">' + name + "</div>" + rows : ""; }
+    var academy = group("Academy", pgs.filter(function (p) { return p.group === "Academy"; }).map(pageRow).join(""));
+    var manual = group("Manual", secs.map(function (e) { return row("#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join(""));
+    var tutorials = group("Tutorials", pgs.filter(function (p) { return p.group === "Tutorials"; }).map(pageRow).join("") +
+      vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "../../../images/home/videos/" + v.id + ".webp", true); }).join(""));
+    return academy + (compile(ts).some(function (c) { return isKey(c, TUTORIAL_KEYS); }) ? tutorials + manual : manual + tutorials);
   }
 
   function snippet(text, ts) {
@@ -3018,10 +3034,7 @@ the SD card.</p>
       // Only punctuation or a non-Latin script: the manual is in English.
       html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>The manual is in English: try words like “DMX” or “reset”.</div>';
     } else {
-      var pgs = searchPages(ts), secs = searchSections(q, ts), vids = searchVideos(ts);
-      if (pgs.length) html += '<div class="hint" aria-hidden="true">Pages</div>' + pgs.map(function (p) { return row(p.href, mark(p.title, ts), p.sub, "", "", /^https?:/.test(p.href)); }).join("");
-      if (secs.length) html += '<div class="hint" aria-hidden="true">Manual</div>' + secs.map(function (e) { return row("#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join("");
-      if (vids.length) html += '<div class="hint" aria-hidden="true">Tutorials</div>' + vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "../../../images/home/videos/" + v.id + ".webp", true); }).join("");
+      html = results(q, ts, searchSections(q, ts));
       if (!html) html = '<div class="msg">Nothing matches “' + esc(q.trim()) + '”.<br>Try fewer or different words.</div>';
     }
     box.innerHTML = html;

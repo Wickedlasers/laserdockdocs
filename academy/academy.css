@@ -164,6 +164,8 @@ input,textarea{caret-color:var(--accent)}
 .review-back{margin:0 0 14px;font-size:15px;font-weight:600}
 .review-back a{display:inline-flex;align-items:center;gap:6px;padding:6px 0}
 .review-back .icon{width:16px;height:16px;transform:scaleX(-1)}
+.view > .review-back:not(:first-child){margin:40px 0 0}
+.review-back + .pager{margin-top:12px}
 figure{margin:24px 0}
 figure img{width:100%;height:auto;border-radius:10px;box-shadow:0 0 0 1px var(--line);background:#fff}
 figure.dark img{background:#000}

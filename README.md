@@ -73,10 +73,16 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
 - **Search** fetches the manual page in the browser and indexes every `h1`-`h4` that has an `id`
   inside `.docs-content`. Keep that wrapper and the heading ids if the manual is restyled.
 - **Videos:** the `VIDEOS` list in the script and the two video sections in the HTML use YouTube ids;
-  thumbnails are `images/home/videos/<id>.webp` (640x360). Source: laseros.com/tutorials.
-- **Pages in search:** the `PAGES` list (the Academy, each course, Tutorials) shows above the manual when a search
-  word starts one of a page's keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual. A new
-  Academy course goes in this list here and in the manual (its paths start with `../../../`).
+  thumbnails are `images/home/videos/<id>.webp` (640x360, from YouTube's `maxresdefault.jpg`). Source:
+  laseros.com/tutorials and the channel's newest uploads (Jarek's beginner's guide and WebApp video aren't on
+  laseros.com/tutorials yet).
+- **Academy and Tutorials in search:** the `PAGES` list (the Academy, each course, Tutorials) shows when a search
+  word starts one of a page's keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual; every
+  other word must be in the page's title, description, keys or topics ("dmx course", "safety course"). Keys must be
+  words the manual doesn't use ("class" would catch laser-class searches), and a word of one or two letters must be
+  a whole word, so "ce certificate" stays with the manual. Academy rows come
+  first; a search with "tutorial" or "video" puts the Tutorials group before the manual. A new Academy course goes in
+  this list here and in the manual (its paths start with `../../../`).
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
   If that photo is replaced, re-measure them.
 - **Shared with the manual:** the manual page carries copies of the theme script in `<head>`, the
