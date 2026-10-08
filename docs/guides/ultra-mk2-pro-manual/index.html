@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LaserCube Ultra MK2 &amp; Pro Manual · LaserCube User Wiki</title>
-<meta name="description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, setup, specifications, control modes, DMX and Art-Net, settings, effects, MIDI and firmware updates.">
+<meta name="description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI and firmware updates.">
 <link rel="canonical" href="https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/">
 <link rel="icon" href="../../../favicon.ico" sizes="any">
 <link rel="icon" href="../../../icon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="LaserCube User Wiki">
 <meta property="og:url" content="https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/">
 <meta property="og:title" content="LaserCube Ultra MK2 &amp; Pro Manual">
-<meta property="og:description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, setup, specifications, control modes, DMX and Art-Net, settings, effects, MIDI and firmware updates.">
+<meta property="og:description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI and firmware updates.">
 <meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -886,6 +886,8 @@ prevents any scanning into audience areas.</p>
 and laser show effects available. Audio, power level, colour/hue and
 other settings can also be adjusted from here.</p>
 <img src="Pictures/web/100000000000022400000141865A7806-548.webp" width="455" height="267" alt="" loading="lazy" decoding="async">
+<p>To make your own content in LaserOS, see
+<a href="#making-content-in-laseros">Making Content in LaserOS</a>.</p>
 <h2 id="playlist-control-mode"><span id="anchor-29"></span>Playlist Control Mode<a href="#playlist-control-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>This control mode is used to play custom playlists exported from our
 LaserOS app to the SD card.</p>
@@ -1666,6 +1668,385 @@ full saturation (S = 1.0, V = 1.0).</p>
 <div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 16</span> Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 255</td><td>NOT IMPLEMENTED</td></tr>
 </tbody></table></div>
+<h1 id="making-content-in-laseros">Making Content in LaserOS<a href="#making-content-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>LaserOS is our app for making your own laser content and playing it on
+the LaserCube, on a computer (Windows or Mac) and on a phone (iOS or
+Android). With the cube in LaserOS control mode, LaserOS streams what it
+shows to the cube. How to install LaserOS and connect it to the cube:
+<a href="#laseros-control-mode">LaserOS Control Mode</a>.</p>
+<p>This chapter covers LaserOS’s own tools: moving and tracing a picture,
+text, your own logo, drawing and simple mapping, Beam Creator, the
+Timeline, shows for several cubes, LaserOS’s safety zones and MIDI
+controllers. The screens are from LaserOS 0.18 on a Mac and an iPhone.
+Menus can differ slightly in other versions.</p>
+<h2 id="the-laseros-screen">The LaserOS Screen<a href="#the-laseros-screen" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>On a computer, the preview and the main controls are on the left. Next
+to them is the list of apps: Abstracts, Visualizers, Dancers, Animations,
+Beam Show, Images, Text, Timeline, Draw, Beam Creator, Import and more,
+with Settings at the top. The open app fills the middle, and the effects
+are on the right.</p>
+<p>In the phone app, the apps are tiles on the main screen and the
+controls are in the bar at the bottom.</p>
+<h3 id="the-laser-button">The Laser Button<a href="#the-laser-button" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>On a computer, the Laser button at the top left shows whether LaserOS
+can send to a cube:</p>
+<ul><li><strong>NO LASER</strong>: LaserOS has not found a cube. Connect the
+cube first, then start LaserOS (see <a href="#using-laseros">Using
+LaserOS</a>).</li><li><strong>LASER OFF</strong>, with a red power symbol: a cube is
+found and the laser is off. Click the button to start.</li><li><strong>LASER ON</strong>: LaserOS is projecting. Click the button, or
+press Esc, to stop.</li></ul>
+<p>The cube projects only when it is armed (interlock closed, key on). If
+it is not, LaserOS shows the message “Interlock is not enabled on cube”:
+see <a href="#enabling-the-laser-e-stop--interlock">Enabling the Laser
+E-Stop / Interlock</a>.</p>
+<p>In the phone app, the power button is in the middle of the bottom bar:
+red when the projection is off, blue when it is on.</p>
+<h3 id="left-panel-and-quick-controls">Left Panel and Quick Controls<a href="#left-panel-and-quick-controls" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Under the preview are the <a href="#autoplay">Autoplay</a> buttons and
+sliders such as Global Power, Power, Speed, Zoom and Rotate. While a tool
+such as Trace or Strobe is on, the preview shows its name in a small
+tag.</p>
+<ul><li>To put a switch or slider from Settings on the left panel, hold
+Shift and drag it there. It stays in step with the one in Settings. To
+remove it, drag it off the panel onto the bin.</li><li>Right-click a switch on the panel to give it a keyboard key or an
+APC controller pad, then press the key or pad. Backspace removes
+it.</li><li>Right-click a slider to type an exact value.</li></ul>
+<h3 id="laseros-effects">LaserOS Effects<a href="#laseros-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The effects panel on the right has four tabs: No Effect, Image Effects,
+Color Effects and Saved Effects. An effect plays on top of whatever is
+showing: an animation, your logo, a drawing or a Beam Creator design. The
+left panel shows the effect in use, with a button to reset it.</p>
+<p>In the phone app, tap the effect name at the top of the screen (No
+Effect) and pick one. The arrows next to the name step through the
+effects.</p>
+<h3 id="laseros-settings">LaserOS Settings<a href="#laseros-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>On a computer, Settings lists Projector Setup, Audio, Speed, Midi,
+Color, Colorize, Tools, Video Input, Apps and General.</p>
+<p>In the phone app, tap the gear at the top right. Tap the page title at
+the top to choose another page: Projector Setup, Audio, Color, Colorize,
+Movement, Strobe, Trace, Video Input, Apps or General.</p>
+<h2 id="projector-setup-in-laseros">Projector Setup in LaserOS<a href="#projector-setup-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>In LaserOS control mode, LaserOS handles the image setup, colour
+balance and safety zone, so the cube greys out its own entries (see
+<a href="#projection-settings">Projection Settings</a>). In LaserOS they
+are under Settings → Projector Setup. A drop-down at the top switches
+between pages such as Info, Image, Color Balance and Safety Zones. Next to
+it, the device list shows the connected cube, with a Use This Device
+switch.</p>
+<h3 id="projector-info">Projector Info<a href="#projector-info" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Info shows the connected cube’s model name and firmware version, its
+temperature and battery level, the connection mode and whether the
+interlock is enabled.</p>
+<h3 id="image-settings-in-laseros">Image Settings in LaserOS<a href="#image-settings-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Image sets the size and place of the whole picture: Zoom X and Y,
+Position X and Y, Rotate, Flip X and Flip Y, and the keystone corners.
+With Lock Zoom X-Y on, both zoom sliders move together; turn it off to
+change the width or the height alone. The Test Pattern list at the top of
+Projector Setup has a Square that shows the whole projection area. In the
+phone app, tap the gear, then Image Setup on the Projector Setup
+page.</p>
+<p>The beam block and the 3&nbsp;m rule in
+<a href="#hardware-installation">Hardware Installation</a> apply whatever
+the picture’s size and place.</p>
+<h3 id="mono-color">Mono Color<a href="#mono-color" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Settings → Color has Single Color, Hue, Mono Color, Shift Color and
+Fader R, G and B (in the phone app, Color is in the settings list). Mono
+Color turns all the content into one colour; once you move it, a
+Saturation slider appears below it. If all your content shows in one
+colour only, check Mono Color.</p>
+<h2 id="movement-strobe-and-trace">Movement, Strobe and Trace<a href="#movement-strobe-and-trace" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Movement, Strobe and Trace work on any content: an animation, a
+built-in image or your own logo. On a computer they are under Settings →
+Tools. In the phone app, tap the gear and pick Movement, Strobe or Trace
+from the list at the top.</p>
+<img src="Pictures/web/laseros-tools-trace-1286.webp" width="643" height="352" alt="LaserOS on a computer: the Tools page in Settings with Movement, Strobe and Trace. Trace is on and the preview shows a logo being drawn." loading="lazy" decoding="async">
+<h3 id="movement">Movement<a href="#movement" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Horizontal and Vertical move the picture sideways and up and down; in
+the middle position it stands still. Rotate X, Y and Z turn it around
+each axis. The page also has Intensity and Mirror, and Reset settings puts
+everything back.</p>
+<h3 id="strobe">Strobe<a href="#strobe" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Strobe switches the picture on and off. Time On and Time Off set how
+long it stays on and off.</p>
+<h3 id="trace">Trace<a href="#trace" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Trace makes a logo, or any other content, draw itself. Switch Trace on
+and it starts at once. Its settings are Audio react, Duration, Fade,
+Clusters and Sparks. Clusters sets how many points the drawing starts
+from. With Sparks at 0, only the logo is drawn, with no sparks.</p>
+<p>In the phone app, the Trace page has Enable to switch it on, and Show
+on panel, which adds a small on/off button next to the name of the
+playing item.</p>
+<img src="Pictures/web/laseros-phone-trace-480.webp" width="240" height="460" alt="The Trace page in the LaserOS phone app: Show on panel, Enable, Audio react, Duration, Fade, Clusters, Sparks and Reset settings. The power button is in the middle of the bottom bar." loading="lazy" decoding="async">
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=155s" rel="external">Trace in the phone app</a></p>
+<h2 id="projecting-text">Projecting Text<a href="#projecting-text" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Text projects your own words. Type in the Add Text box: with the laser
+on, the cube shows each letter as you type.</p>
+<ul><li>Font: the typeface.</li><li>Style: Gradient, Striped, Rainbow, 3D, 3D rotate or No Style.</li><li>Size and Spacing: the size of the letters and the gap between
+them.</li><li>Speed and Direction (Left, Right, Up or Down): make the text
+scroll.</li></ul>
+<p>Save keeps the text under a name in Playlists → Saved Texts. In a
+playlist for the cube, a scrolling text can be set to play once: see the
+note on animation cycles in
+<a href="#adding-a-custom-svg-to-the-playlist">Adding a custom SVG to the
+Playlist</a>.</p>
+<p class="small">These steps are from the phone app. Video:
+<a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=210s" rel="external">the Text app</a></p>
+<h2 id="importing-your-own-logo">Importing Your Own Logo<a href="#importing-your-own-logo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>On a computer, use the Import app as described in
+<a href="#adding-a-custom-svg-to-the-playlist">Adding a custom SVG to the
+Playlist</a>. SVG or ILD files give the best results.</p>
+<p>In the phone app, scroll down the main screen to Import:</p>
+<ol><li>Import location sets the playlist the file goes to (Imported, unless
+you pick another).</li><li>Tap Import… and pick the file in the phone’s file browser. You can
+also paste a file’s web address under Import from URL.</li><li>With Open imported in “Playlists” on, the imported item opens
+straight away. Tap it to play it.</li></ol>
+<p>Movement, Strobe, Trace and the effects all work on your logo. If it
+flickers, see <a href="#flicker-and-render-quality">Flicker and Render
+Quality</a>.</p>
+<h2 id="draw-and-simple-mapping">Draw and Simple Mapping<a href="#draw-and-simple-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Draw lets you draw lines and shapes for the cube to project. With the
+laser on, the cube shows each stroke as you draw it, so you can trace the
+edges of a real object by watching the projection. This is the simplest
+way to map an object.</p>
+<img src="Pictures/web/laseros-draw-mapping-1286.webp" width="643" height="362" alt="LaserOS Draw on a computer: the outline of three boxes drawn on the canvas, 66% points used. The camera view shows the same lines projected onto the real boxes." loading="lazy" decoding="async">
+<ul><li>Tools (the icons left of the canvas): freehand, straight line, a
+path of connected points, rectangle, ellipse, text and move.</li><li>Color: pick a colour above the canvas.</li><li>Points used: how many points the drawing needs, as a percentage.
+Over 100% the drawing is too complex: simplify it.</li><li>Save: Save Drawing asks for a name and keeps the drawing in
+Playlists → Drawings.</li></ul>
+<p>The effects from the right panel work on drawings too.</p>
+<p>For larger mapping projects, the LaserCube also works with MadMapper,
+one of the third-party applications for
+<a href="#laseros-control-mode">LaserOS Control Mode</a>. To map with
+Beam Creator instead, see
+<a href="#example-mapping-box-edges">Example: Mapping Box Edges</a>.</p>
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=8s" rel="external">three ways to map with a LaserCube</a></p>
+<h3 id="drawing-on-the-phone">Drawing on the Phone<a href="#drawing-on-the-phone" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The phone app has Draw too, with the same tools. To see where a line
+will start, hold one of the arrow buttons and slide a finger over the
+canvas: a dot on your object shows the spot. Let go of the arrow, then
+draw.</p>
+<h2 id="beam-creator">Beam Creator<a href="#beam-creator" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Beam Creator builds your own beam patterns and animates them with
+effects. This section shows Beam Creator in LaserOS on a computer. You can
+build a design with no cube connected (the Laser button reads NO LASER)
+and check it in the preview. The cube icon above the preview switches
+between a 3D stage view and a flat 2D view.</p>
+<img src="Pictures/web/laseros-beam-creator-1286.webp" width="643" height="362" alt="Beam Creator in LaserOS: a Horizontal Beams layer with Beam Count, Width, Brightness, Mode and Single Color, and the beams projected in the studio." loading="lazy" decoding="async">
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=642s" rel="external">multi-laser show tutorial, Beam Creator part</a></p>
+<h3 id="patterns-and-layers">Patterns and Layers<a href="#patterns-and-layers" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Pick a pattern under Beam Pattern and click the + next to it:
+Horizontal Beams, Vertical Beams, Horizontal Line, Vertical Line, Simple
+Shapes, Sine Wave, Triangle Wave or Video Spiral Wave. Each pattern you
+add is a layer, and a design can have several. Each layer has buttons to
+delete it, duplicate it and switch it on or off, and + Effect to add
+effects.</p>
+<p>Each pattern has its own settings, for example:</p>
+<ul><li>Horizontal Beams: Beam Count, Width, Brightness, Mode (static, or
+sliding left or right, with Slide Speed) and Single Color, with hue and
+saturation.</li><li>Horizontal Line and Vertical Line: Num Sections, Width, Brightness,
+Line Border (with border width and colour) and the line’s colour.</li><li>Simple Shapes: shapes such as Circle, Square, Triangle, Rectangle,
+Hexagon and Octagon; Size; Style (Solid, Dotted, or Dashed with Dash Size); and
+Colours, with a hue for each colour.</li></ul>
+<p>Brightness draws the pattern several times over. That makes it
+brighter, but harder for the cube to draw, and it may flicker: leave it
+at 1.</p>
+<p>Along the top are Quality (how densely the pattern is drawn), Target
+FPS (see <a href="#timing-in-frames">Timing in Frames</a>), BPM Reactive
+and Actual FPS. The icons above them start a new project, import a
+project into the playlists, save, export, and reload a project from its
+file.</p>
+<h3 id="beam-creator-effects">Beam Creator Effects<a href="#beam-creator-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>+ Effect adds an effect to a layer. The effects on a layer can be
+moved up or down and switched off.</p>
+<img src="Pictures/web/laseros-beam-creator-effects-1198.webp" width="599" height="285" alt="The + Effect list in Beam Creator: Simple Paths, Position, Random Position, Fixed Rotation, Movement, Variable Rotation, Scale, Power Fader, Strobe and Color Sequence." loading="lazy" decoding="async">
+<ul><li>Simple Paths: sends the pattern along a path: Rectangular, Circular,
+Ellipse, Figure 8 (Vertical or Horizontal), Linear Horizontal, Linear
+Vertical or Spiral. Direction sets the way round, Frames how long one
+trip takes, and Start Pos where it starts (0 to 100; 50 is halfway
+round). Always Repeat makes it loop, and Stepped Path splits the movement
+into steps, to hit single notes. Simple Paths has its own position and
+size settings.</li><li>Position: Offset X and Y place the pattern.</li><li>Fixed Rotation: turns the pattern to a fixed angle (X, Y and Z
+angle).</li><li>Movement: slides the pattern from Start Pos to End Pos, for example
+Horizontal (start-&gt;end-&gt;start); Always Repeat makes it loop.
+Positions are measured from the pattern’s centre, so large values push
+part of it out of the projection area.</li><li>Variable Rotation: spins the pattern around its own centre (Rotate
+X, Y or Z).</li><li>Scale: grows or shrinks the pattern, for example from 0.0 to
+1.0.</li><li>Power Fader: fades the power. Fade start-&gt;end from 1.0 to 0.0
+over a few frames makes a single flash.</li><li>Strobe: switches the pattern on and off, set with On Frames and Off
+Frames.</li><li>Color Sequence: steps through a number of colours.</li></ul>
+<h3 id="timing-in-frames">Timing in Frames<a href="#timing-in-frames" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Beam Creator counts time in frames. Target FPS sets how many frames
+make one second: at the default 60, an effect of 60 frames takes one
+second and one of 120 frames takes two. Fewer frames make an effect
+faster, more frames slower.</p>
+<p>To fit a part of a song, multiply its length in seconds by the Target
+FPS: a 7-second build-up at 60 FPS needs 420 frames.</p>
+<h3 id="copies-mirrors-and-exact-values">Copies, Mirrors and Exact Values<a href="#copies-mirrors-and-exact-values" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The duplicate button copies a layer with all its effects. The copy runs
+exactly on top of the original until you change it, for example its Start
+Pos, Direction or Frames. For a mirror image, swap the signs of the copy’s
+values: a Start Pos of −0.9 and an End Pos of 0.8 become 0.9 and
+−0.8.</p>
+<p>Right-click a slider to type an exact value.</p>
+<h3 id="saving-a-custom-beam">Saving a Custom Beam<a href="#saving-a-custom-beam" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Click the save icon. Save Custom Beam asks for a name and saves the
+design in Playlists → Custom Beams. From there you can drag it onto the
+<a href="#the-laseros-timeline">Timeline</a>.</p>
+<h3 id="example-mapping-box-edges">Example: Mapping Box Edges<a href="#example-mapping-box-edges" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Mapping with Beam Creator takes longer than with Draw, but each line
+can have its own effects. To light up the edges of a stack of boxes:</p>
+<ol><li>Add a Vertical Line.</li><li>Place it on an edge with Position, and turn it to the edge’s angle
+with Fixed Rotation.</li><li>Add Scale (Scale start-&gt;end, from 0.0 to 1.0) so the line grows
+along the edge, and Color Sequence to change its colours.</li><li>Duplicate the line for the next edge and adjust it.</li><li>Save it as a custom beam.</li></ol>
+<h2 id="the-laseros-timeline">The LaserOS Timeline<a href="#the-laseros-timeline" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Timeline builds a show to a song: you place content along the
+song, on one layer per cube. This section shows the Timeline in LaserOS
+on a computer. Open Timeline in the list of apps; the timeline appears at
+the bottom of the screen.</p>
+<img src="Pictures/web/laseros-timeline-1240.webp" width="620" height="176" alt="The LaserOS Timeline: beam patterns on the layers of two cubes under the song’s waveform, and an effect lane with Colorize GIF blocks." loading="lazy" decoding="async">
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=968s" rel="external">multi-laser show tutorial, Timeline part</a></p>
+<h3 id="song-and-layers">Song and Layers<a href="#song-and-layers" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<ol><li>Drag your song onto the song lane. It must be a WAV file: 44.1&nbsp;kHz,
+16-bit, stereo (PCM). LaserOS does not read other files there.</li><li>The timeline starts with one layer. Click + to add a layer for each
+cube.</li><li>Click the layers icon in the timeline bar to open Timeline devices,
+and drag each cube’s tile into its row. The dialog also has a Disabled
+row.</li></ol>
+<img src="Pictures/web/laseros-timeline-devices-766.webp" width="383" height="139" alt="Timeline devices: three cube tiles, each in its own layer row, and a Disabled row." loading="lazy" decoding="async">
+<p>To find out which cube is which, put something on one layer and see
+which cube plays it. Swap the cubes between the rows if you need to.</p>
+<h3 id="placing-content">Placing Content<a href="#placing-content" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<ul><li>Drag content onto a layer, under the song’s waveform: animations,
+dancers, images, Beam Show patterns and your custom beams. The waveform
+helps you see where the notes are.</li><li>To change an item’s length, drag its edge. This also changes its
+playback speed, so it fits. For a Beam Creator item you can instead
+change its frames, save it and place it again.</li><li>Right-click an item for Locate item, Copy item, Edit item and
+Remove. Copy an item and paste it on another layer to use it on another
+cube.</li><li>Stop the timeline to see the Beam Creator preview of the pattern
+you are editing.</li><li>Save your timeline often, with the save icon in the timeline
+bar.</li></ul>
+<h3 id="effect-lanes-and-saved-effects">Effect Lanes and Saved Effects<a href="#effect-lanes-and-saved-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The Timeline can also place effects, for variety without new patterns.
+Click + under a cube’s layer to open an effect lane, then drag effects
+from the right panel (Image Effects, Color Effects or Saved Effects) onto
+it.</p>
+<p>Zoom, Position, Strobe and Colorize Mono have settings of their own.
+Pick the effect, set it in the left panel and save it under a name: it
+then appears under Saved Effects. Position and Zoom together put a
+graphic or a text in one part of a wall, for example small in the bottom
+left. A second effect lane lets you combine two saved effects.</p>
+<h3 id="ready-made-content-and-the-3d-preview">Ready-made Content and the 3D Preview<a href="#ready-made-content-and-the-3d-preview" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>LaserOS comes with content you can reuse: the Demo Timeline folders
+under Timeline, and the Demo Beams playlist with the patterns of LaserOS’s
+own timeline shows. Ready-made shows are under Timeline and ILD Laser
+Shows: pick one and press Play.</p>
+<p>The preview’s 3D view shows the show on a virtual stage, with settings
+such as the viewer’s position. It gives an idea of how the show will look
+before you set up the cubes.</p>
+<h2 id="a-show-for-several-cubes">A Show for Several Cubes<a href="#a-show-for-several-cubes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>One computer can run several cubes, each with its own part of the show
+on its own Timeline layer. For several cubes we recommend Ethernet cables
+in LAN client mode (see <a href="#connection-settings">Connection
+Settings</a>):</p>
+<ol><li>On each cube, choose Control Mode → LaserOS and Settings →
+Connection → LAN Client. Under Settings → Network → LAN Client, leave IP
+Mode on Auto IP.</li><li>Connect each cube and the computer to an Ethernet switch. The
+supplied LAN adapter helps if the computer has no network port. One cube
+needs no switch: connect it straight to the computer.</li><li>With no router on the switch, the cubes and the computer give
+themselves 169.254 addresses. Follow the steps in
+<a href="#apipa-mode-explained">APIPA mode explained</a>: WiFi off on the
+computer, and start LaserOS once the cubes have their addresses.</li><li>In the Timeline, give each cube its own layer (see
+<a href="#song-and-layers">Song and Layers</a>).</li></ol>
+<p>To play the built-in laser shows on several cubes without a computer,
+see <a href="#multi-projector-laser-shows">Multi-projector Laser
+Shows</a>.</p>
+<h2 id="where-your-content-is-saved">Where Your Content Is Saved<a href="#where-your-content-is-saved" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>LaserOS keeps what you make in the Playlists app:</p>
+<ul><li>Drawings: from Draw.</li><li>Custom Beams: from Beam Creator.</li><li>Saved Texts: from Text.</li><li>Imported: files imported in the phone app, unless you pick another
+playlist.</li><li>Your own playlists.</li></ul>
+<p>It also holds ready-made playlists such as Demo Beams.</p>
+<h3 id="playlists-on-the-phone">Playlists on the Phone<a href="#playlists-on-the-phone" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>On a computer, right-click an item and use Add to playlist (see
+<a href="#creating-a-custom-playlist">Creating a custom playlist</a>). In
+the phone app, touch and hold an item (or select it and tap the gear at
+the left of the player bar), then open Add to playlist. Pick a playlist,
+or choose Create new playlist and give it a name, then tap Add. To play
+it, open Playlists and tap your playlist.</p>
+<p>A playlist made on the phone plays from the phone. To put a playlist
+on the cube’s SD card you need LaserOS on a computer (see
+<a href="#playing-your-content-on-the-cube">Playing Your Content on the
+Cube</a>).</p>
+<h3 id="autoplay">Autoplay<a href="#autoplay" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Autoplay moves from one item to the next by itself. Its buttons are
+under the preview on a computer and in the bottom bar on the phone:
+shuffle, repeat and the time per item (for example 3s). Click the time to
+set it in seconds or beats.</p>
+<p>To autoplay one playlist only: open View options (the icon at the top
+right of the open app) and choose Toggle All → Disable. Then click and
+hold your playlist for about two seconds to switch it back on, and leave
+only Playlists ticked in the list of apps.</p>
+<h2 id="flicker-and-render-quality">Flicker and Render Quality<a href="#flicker-and-render-quality" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The scanners can draw only so many points per second. Content with too
+much detail flickers, or looks distorted with rounded corners. To check,
+turn on Show FPS in simulator window in Settings → General: 45&nbsp;FPS or
+more will not appear to flicker.</p>
+<ul><li>Lower the item’s render quality. On a computer, right-click it and
+turn on Assign Render Quality (see
+<a href="#adding-a-custom-svg-to-the-playlist">Adding a custom SVG to the
+Playlist</a>). In the phone app, tap the gear in the player bar, turn on
+Assign Quality and move Render Quality.</li><li>Simplify it. In Draw, keep Points used under 100%. In Beam Creator,
+keep Brightness at 1.</li><li>Make the picture smaller, or split it over more than one cube.</li></ul>
+<h2 id="safety-zones-in-laseros">Safety Zones in LaserOS<a href="#safety-zones-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>In LaserOS control mode, LaserOS handles the safety zone (see
+<a href="#projection-settings">Projection Settings</a>). On a computer,
+open Settings → Projector Setup and choose Safety Zones in the drop-down
+at the top. In the phone app, tap the gear, then Safety Zone on the
+Projector Setup page.</p>
+<ul><li>Attenuation Zones: switches the zones on.</li><li>Preview: projects the outline of the zones.</li><li>Shape: Rectangle, Ellipse, Triangle, Corner top left, Corner top
+right, Corner bottom right, Corner bottom left or Diamond.</li><li>Invert Zones: off, the zone is a keep-within zone with a green
+outline, and beams outside it are reduced. On, it is a keep-out zone with
+a red outline, and beams inside it are reduced. Where zones overlap, red
+has priority over green.</li><li>Attenuation: how much the beams are reduced, as in the cube’s own
+<a href="#safety-zone">Safety Zone</a>.</li><li>X and Y: the zone’s position. Width and Height: its size.</li><li>Add makes another zone. Next and Previous choose which zone the
+sliders change (in the preview it has white corners), and Remove current
+deletes it.</li><li>Import and Export load and save the zone settings.</li></ul>
+<p>The phone app’s Safety Zone page has the same switches, sliders and
+buttons.</p>
+<p>Use a keep-out zone to keep beams off a camera, a video projector or an
+object. Use a keep-within zone for a target area, such as a wall or a
+mapped object, where the beams can safely end. A zone works on top of the
+beam block and the 3&nbsp;m rule in
+<a href="#hardware-installation">Hardware Installation</a>, never instead
+of them. The laser must never be aimed at people (guideline 18 in
+<a href="#safety-guidelines-and-proper-usage">Safety Guidelines and Proper
+Usage</a>).</p>
+<h2 id="midi-controllers-in-laseros">MIDI Controllers in LaserOS<a href="#midi-controllers-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>In LaserOS control mode the cube’s own USB MIDI does not operate (see
+<a href="#usb-midi-settings">USB MIDI Settings</a>). Plug the controller
+into the computer that runs LaserOS instead.</p>
+<img src="Pictures/web/laseros-midi-settings-986.webp" width="493" height="200" alt="LaserOS Settings, Midi page: an APC40 mkII set as the input and output port, and APC 40 MK2 as the APC model." loading="lazy" decoding="async">
+<ol><li>Open Settings → Midi. Under Input and Output, set Port to your
+controller. For an APC40 MK2 or APC mini MK2, also pick it under APC
+Model.</li><li>To start an item from a pad: right-click the item, pick a pad colour
+under Assign APC Color if you like, click Assign Hotkey and press the
+pad. The item then shows the pad’s note.</li><li>To move a slider from a fader or knob: right-click the slider, click
+Link to MIDI Knob and move the fader. Backspace removes the link.</li></ol>
+<p>Switches on the left panel can get a pad or a keyboard key too (see
+<a href="#left-panel-and-quick-controls">Left Panel and Quick
+Controls</a>). For a controller on the cube’s own USB port, in the cube’s
+other modes, see
+<a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI Mapping
+using an APC40 MK2 or APC mini MK2</a>.</p>
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=ySrmnchKcf8&amp;t=705s" rel="external">LaserOS with a MIDI controller</a></p>
+<h2 id="playing-your-content-on-the-cube">Playing Your Content on the Cube<a href="#playing-your-content-on-the-cube" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>In LaserOS control mode, LaserOS streams to the cube while it runs. To
+play a playlist on the cube without a computer, export it to the SD card
+with LaserOS on a computer; the phone app cannot export. The steps are in
+<a href="#creating-a-custom-playlist">Creating a custom playlist</a>,
+<a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist
+to the micro SD card</a> and
+<a href="#using-the-new-playlist-on-the-ultra-mk2--evo">Using the new
+playlist on the Ultra MK2 / Pro</a>. The export button’s tooltip reads
+Export to SD Card (Lasercube MKII).</p>
 <h1 id="settings"><span id="anchor-70"></span>Settings<a href="#settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <h2 id="projection-settings"><span id="anchor-71"></span>Projection Settings<a href="#projection-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <blockquote><p>When in LaserOS control mode, the Image Setup, Colour Balance and
