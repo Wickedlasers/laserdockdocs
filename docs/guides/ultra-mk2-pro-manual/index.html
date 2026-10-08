@@ -486,7 +486,7 @@ suggest configuring the scan rate to 30000 points per second.</p></blockquote>
 <blockquote><p><strong>21b. ILDA Output Connector: DB25 Female:</strong> Duplicate of the internal
 LaserOS DAC signals, of those of an external DAC when connected to the
 ILDA input. *The LaserCube Pro has no ILDA output.</p></blockquote>
-<ol start="22"><li><strong>DMX connectors (In/Out):</strong> Connect to a lighting desk / controller</li></ol>
+<ol start="22"><li><strong>DMX connectors (In/Out):</strong> Connect to a lighting desk / controller. Only connect DMX equipment: never a fog machine’s XLR remote socket, even if a DMX cable fits (many cheap fog machines put mains power on that socket, which damages the LaserCube).</li></ol>
 <blockquote><p><strong>22a.</strong> DMX Input. On the LaserCube Pro, DMX In and Out are the two 3.5mm TRS jacks (In on the left, Out on the right), which need adapter cables: see <a href="#connecting-dmx-cables-to-the-lasercube-pro">Connecting DMX cables to the LaserCube Pro</a>.</p></blockquote>
 <blockquote><p><strong>22b.</strong> DMX Output</p></blockquote>
 <ol start="23"><li><strong>Safety Eye Bolt:</strong> When mounted at height, attach safety cable
@@ -757,7 +757,7 @@ This is required for FDA compliance and the laser will not work without it.</em>
 <p>2) Insert the safety key and rotate from the OFF to ON position. The EMISSION LEDs will illuminate to show that the LaserCube is capable of Laser Emission.</p>
 <p>3) To disable laser emission, turn the safety key from ON to OFF and remove the key.</p>
 <h1 id="e-stop-setup-guide"><span id="anchor-14"></span>E-Stop Setup Guide<a href="#e-stop-setup-guide" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
-<p>This part of the guide only applies to LaserCubes sold in the US.</p>
+<p>This part of the guide applies to every LaserCube with an E-Stop connected: all US units, and units outside the US that use the optional E-Stop.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000001000001B1000002B076B4CB4A-433.webp" width="433" height="688" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/1000000100000178000002B3252F4301-376.webp" width="376" height="691" alt="" loading="lazy" decoding="async"></div></div>
 <p>1) Connect the E-Stop pendant to the LaserCube.</p>
 <p>2) On the laser, turn key to the “ON” position.</p>
@@ -2526,8 +2526,7 @@ password can be entered directly. This is useful if the router does not
 support WPS.</p>
 <h3 id="lan-tab"><span id="anchor-146"></span><span id="anchor-147"></span>LAN Tab<a href="#lan-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The IP address and subnet can be set for when the LaserCube is operating
-in LAN Server mode, where it provides a DHCP service. LAN Client (with
-APIPA is preferred though.)</p>
+in LAN Server mode, where it provides a DHCP service.</p>
 <h3 id="general-tab"><span id="anchor-148"></span><span id="anchor-149"></span>General Tab<a href="#general-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The network operating mode can be set from the drop down tab.</p>
 <p>The LaserCube will reboot after changing the mode.</p>
