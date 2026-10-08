@@ -201,6 +201,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .video-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font-size:14px;color:var(--subtle)}
 .video-meta a{display:inline-block;padding:10px 0;margin:-10px 0;color:var(--muted);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
 .video-meta a:hover{color:var(--text)}
+.view .video-note{margin-top:-6px}
 
 /* checks, ordering and scenarios */
 .practice{margin-top:44px;padding-top:8px}
