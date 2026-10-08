@@ -9,7 +9,7 @@ no build step, no server, no database, no accounts, no analytics.
   Cube Link, DMX/Art-Net, MIDI; 8 lessons, 29 quiz questions in 10 topics). It builds on start-here and links back to it.
 - `connect/index.html`: the third course, "Connect, update and troubleshoot your Ultra MK2 or Pro" (the four connection
   modes, APIPA, status bar and Status Info, drop-outs, firmware updates, factory reset, power and heat; 8 lessons, 30 quiz
-  questions in 10 topics). No web admin page: the Ultra MK2 and Pro (firmware 2.x) don't have one (owner).
+  questions in 10 topics). No web admin page in this course (the wiki manual has none for now).
   Its power and heat facts are in the manual's "Power, Battery and Temperature"
   section (owner decisions, added with the course). For one computer on a direct cable it shows both of the manual's ways
   (LAN client with APIPA, LAN server) without picking one, like the manual's LaserOS section.
