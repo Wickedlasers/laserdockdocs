@@ -423,7 +423,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li><a href="#hardware-installation"><span class="ico"><svg class="icon"><use href="#i-cube"/></svg></span><span><strong>Hardware installation</strong><span class="d">Beam block, aiming and warning signs</span></span></a></li>
         <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet, DMX, IDN and Ether Dream</span></span></a></li>
         <li><a href="#dmxart-net-channel-layout"><span class="ico"><svg class="icon"><use href="#i-grid"/></svg></span><span><strong>DMX channels</strong><span class="d">What each of the 16 channels does</span></span></a></li>
-        <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card or LaserOS</span></span></a></li>
+        <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card, LaserOS or the web admin page</span></span></a></li>
         <li><a href="#factory-reset-procedure"><span class="ico"><svg class="icon"><use href="#i-reset"/></svg></span><span><strong>Factory reset</strong><span class="d">Back to factory firmware and default settings</span></span></a></li>
       </ul>
       <p class="start-note">New to LaserCube? Take the free <a href="../../../academy/start-here/">LaserCube Academy course</a> or watch the <a href="../../../#start-h">beginner’s video guide</a>.</p>
@@ -643,8 +643,8 @@ factory trained technicians.</p>
 <p>4. Always treat your laser with great care as some components are very
 fragile and must not be subjected to shock.</p>
 <p>5. Avoid turning the laser on and off frequently as it will reduce the
-diode life. This device does not have a set duty cycle but we do not
-recommend using it for more than four hours continuously.</p>
+diode life. This device does not have a set duty cycle; with the improved
+cooling of the Ultra MK2 and Pro, continuous operation should be fine.</p>
 <p>6. From time to time, clean the laser aperture with a dry tissue that
 does not pill. You may also use an alcohol prep wipe and compressed air
 to blow dust from the vents. BE SURE the alcohol has dried fully before
@@ -843,9 +843,10 @@ and the cube will auto assign an IP address to your MacBook or
 Windows Laptop etc.</li></ol>
 <p>The images below show how to set the connection mode:</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140093C94D8-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014036541C9C-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140B71EF241-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<blockquote><p>If changing the connection method, the LaserCube will ask you to
-reboot the device. Highlight “YES” using the red cursor box then push
-the encoder knob to confirm.</p></blockquote>
+<blockquote><p>On firmware before 2.1, if changing the connection method, the
+LaserCube will ask you to reboot the device. Highlight “YES” using the red
+cursor box then push the encoder knob to confirm. Firmware 2.1 and later
+change the connection method without a reboot.</p></blockquote>
 <img src="Pictures/web/10000000000000F00000014066AA589C_hu_bfa7317f3fba6911-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <h3 id="installing-laseros-0181-or-later"><span id="anchor-23"></span>Installing LaserOS 0.18.1 or later<a href="#installing-laseros-0181-or-later" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Before you can add content to your Ultra MK2 / Pro, or directly stream to it,
@@ -1829,10 +1830,10 @@ reset the values.</p>
 <img src="Pictures/web/10000000000000F000000140F8F9E926_hu_10a6c8d388f50a4c-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <h2 id="connection-settings"><span id="anchor-86"></span>Connection Settings<a href="#connection-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001409D49F71D_hu_29955d4cec78d8e-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001407A909C8A-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014066AA589C_hu_bfa7317f3fba6911-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<p>Note: If the connection mode is changed, the LaserCube will need to
-restart.</p>
-<p>Move the red cursor to highlight “Yes” and push the rotary knob to
-confirm.</p>
+<p>Note: On firmware before 2.1, if the connection mode is changed, the
+LaserCube will need to restart: move the red cursor to highlight “Yes” and
+push the rotary knob to confirm. Firmware 2.1 and later change the
+connection mode, IP settings and WiFi credentials without a restart.</p>
 <p>Select the connection type (required for network control via LaserOS,
 ArtNet or Liberation etc.)</p>
 <p>For multiple LaserCubes, and especially in areas where local WiFi may
@@ -2495,7 +2496,44 @@ red are part of the effects provided when in playlist or visualizer
 control mode, and items in yellow are global device adjustments linked
 to items within Settings→Projection→Image Setup.</p>
 <img src="Pictures/web/100000000000047F000002CAD2A81B96-1151.webp" width="698" height="433" alt="" loading="lazy" decoding="async">
+<h1 id="lasercube-web-admin-page"><span id="anchor-140"></span>LaserCube Web Admin Page<a href="#lasercube-web-admin-page" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>In LaserOS control mode, the LaserCube has a legacy Web Admin Page for
+adjusting some of the devices network based configuration settings, and
+also performing remote firmware updates.</p>
+<p>1. Note the IP address from the bottom right corner of the LCD.</p>
+<img src="Pictures/web/10000001000002BC0000017337C5089F-700.webp" width="489" height="259" alt="" loading="lazy" decoding="async">
+<p>2. Open a web browser and type in that same IP address.</p>
+<p>Log in using the following credentials:</p>
+<p>User Name: <strong>LaserCubeUser</strong></p>
+<p>Password: <strong>Laser2020</strong></p>
+<p>The Web Admin Page has 3 Menu sections:</p>
+<ul><li><a href="#home-menu"><strong>Home Menu</strong></a>, showing general info.</li><li><a href="#config-menu"><strong>Config Menu</strong></a>, for network and mode settings.</li><li><a href="#firmware-update"><strong>Update Menu</strong></a>, for remote firmware updates.</li></ul>
+<h2 id="home-menu"><span id="anchor-141"></span>Home Menu<a href="#home-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Home Menu shows the Model Name, Interlock type, firmware version and
+Firmware Active Partition. There are 2 partitions to allow fall back to
+a good working state should an update fail or be interrupted.</p>
+<h2 id="config-menu"><span id="anchor-142"></span><span id="anchor-143"></span>Config Menu<a href="#config-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Config Menu has 3 tabs, for network set-up and mode selection:</p>
+<ul><li><strong>WiFi Tab</strong>, for Wireless Connection Settings</li><li><strong>LAN Tab</strong>, for Wired Connection Settings</li><li><strong>General Tab</strong>, for Connection Mode Selection</li></ul>
+<h3 id="wifi-tab"><span id="anchor-144"></span><span id="anchor-145"></span>WiFi Tab<a href="#wifi-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Where WiFi interference is present, the LaserCube WiFi channel can be
+changed.</p>
+<p>The IP address and Subnet can be set for when the LaserCube is operating
+in WiFi Server mode, where it provides a DHCP service.</p>
+<p>The WiFi Server mode default SSID and Password can also be changed.</p>
+<p>If connecting to a router in WiFi Client mode, the SSID and WiFi
+password can be entered directly. This is useful if the router does not
+support WPS.</p>
+<h3 id="lan-tab"><span id="anchor-146"></span><span id="anchor-147"></span>LAN Tab<a href="#lan-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The IP address and subnet can be set for when the LaserCube is operating
+in LAN Server mode, where it provides a DHCP service. LAN Client (with
+APIPA is preferred though.)</p>
+<h3 id="general-tab"><span id="anchor-148"></span><span id="anchor-149"></span>General Tab<a href="#general-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The network operating mode can be set from the drop down tab.</p>
+<p>The LaserCube will reboot after changing the mode.</p>
 <h1 id="firmware-update"><span id="anchor-150"></span>Firmware Update<a href="#firmware-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>The boot screen shows the firmware version when the LaserCube starts
+(firmware 2.0 and later).</p>
 <p>1. Via SD Card. This is the preferred update method. If the SD Card has
 a more recent firmware on it, you will be prompted to allow a firmware
 update. The latest SD card contents on our GitHub
@@ -2504,6 +2542,17 @@ include the latest firmware: see <a href="#sd-card-information">SD Card Informat
 for how to copy them to the card.</p>
 <p>2. Via LaserOS. If LaserOS detects a more recent version of firmware is
 available, it will prompt to allow a firmware upgrade.</p>
+<p>3. Manually, through the <a href="#lasercube-web-admin-page">Web Admin Page</a>:</p>
+<p>Visit <strong>https://github.com/Wickedlasers/mk2SDContent</strong>&nbsp;to obtain the
+most recent OTA update binary from the <strong>Lasercube/Firmware</strong> folder.</p>
+<p>Connect to the LaserCube in WiFi Server mode, as described in
+<a href="#wifi-server-mode">WiFi Server Mode</a>, with the LaserCube in LaserOS control mode.</p>
+<p>Browse to 192.168.4.1 and log in using the following credentials:</p>
+<p>User Name: <strong>LaserCubeUser</strong></p>
+<p>Password: <strong>Laser2020</strong></p>
+<p>Go to the Update Tab. Click Choose File and select the update binary.</p>
+<p>Click Upload.</p>
+<p>Wait for the update to complete and the LaserCube reboot.</p>
 <h1 id="factory-reset-procedure"><span id="anchor-151"></span>Factory Reset Procedure<a href="#factory-reset-procedure" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>If you need to reset the LaserCube back to its factory firmware
 defaults, you can perform the factory reset as shown below. This should
