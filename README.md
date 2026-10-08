@@ -81,7 +81,7 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   other word must be in the page's title, description, keys or topics ("dmx course", "safety course"). Keys must be
   words the manual doesn't use ("class" would catch laser-class searches), and a word of one or two letters must be
   a whole word, so "ce certificate" stays with the manual. Academy rows come
-  first; a search with "tutorial" or "video" puts the Tutorials group before the manual. A new Academy course goes in
+  first; a search with "tutorial", "video" or "youtube" puts the Tutorials group before the manual. A new Academy course goes in
   this list here and in the manual (its paths start with `../../../`).
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
   If that photo is replaced, re-measure them.
