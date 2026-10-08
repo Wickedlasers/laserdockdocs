@@ -8,8 +8,11 @@ no build step, no server, no database, no accounts, no analytics.
 - `control-modes/index.html`: the second course, "Control modes for the Ultra MK2 and Pro" (Playlist, Visualizer, Laser Show,
   Cube Link, DMX/Art-Net, MIDI; 8 lessons, 29 quiz questions in 10 topics). It builds on start-here and links back to it.
 - `connect/index.html`: the third course, "Connect, update and troubleshoot your Ultra MK2 or Pro" (the four connection
-  modes, APIPA, status bar and Status Info, drop-outs, firmware updates, factory reset, power and heat; 8 lessons, 30 quiz
-  questions in 10 topics). No web admin page in this course (the wiki manual has none for now).
+  modes, APIPA, status bar and Status Info, drop-outs, the web admin page, firmware updates, factory reset, power and heat;
+  8 lessons, 33 quiz questions in 10 topics; version 1.1). The web admin page is there in LaserOS control mode (Paul, LaserDock,
+  2026-10-07); the manual's old screenshots of it showed a LaserCube WiFi, so they were left out until new ones exist. Firmware
+  2.1 and later change the connection mode without a restart (2.1 release notes in mk2SDContent, LaserDock manual v1.5 p.83);
+  older firmware asks to restart.
   Its power and heat facts are in the manual's "Power, Battery and Temperature"
   section (owner decisions, added with the course). For one computer on a direct cable it shows both of the manual's ways
   (LAN client with APIPA, LAN server) without picking one, like the manual's LaserOS section.
