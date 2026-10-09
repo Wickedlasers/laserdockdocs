@@ -215,11 +215,11 @@
   <ul class="points">
     <li>On the cube’s screen, choose <strong>Control Mode</strong> in the main menu, then the mode. Turn the knob to move, push it to select.</li>
     <li>When you choose DMX or Art‑Net, the cube restarts in that mode, and its DMX or ArtNet menu appears in the main menu.</li>
-    <li>The status bar at the bottom of the screen shows the current mode, the connection and the cube’s IP address, plus an <strong>I‑LOCK</strong> warning while the interlock is open.</li>
+    <li>The status bar at the bottom of the screen shows the current mode, the connection and the cube’s IP address, plus an <strong>I‑LOCK</strong> warning while the laser isn’t armed: it’s armed only with the interlock closed and the key on, and with an E‑Stop, the E‑Stop started (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</li>
     <li>Its background colour tells you more: green while the cube receives laser data over the network, cyan while the ILDA input is in use, and purple on a Cube Link slave that has found its master (lesson 5).</li>
   </ul>
   <figure>
-    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-lcd-status-1286.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-lcd-status-1286.webp" alt="The cube’s screen, from the manual. The main menu has Control Mode, Settings, Preview and Status Info. The Control Mode list shows Playlist ticked, then Laser Show, IDN and Ether-Dream. The status bar at the bottom shows the battery level, WiFi status and channel, the laser data rate (35K), an I-LOCK warning when the interlock is open, the current control mode, the network connection mode and the cube’s IP address." width="1286" height="695" loading="lazy"></a>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-lcd-status-1286.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-lcd-status-1286.webp" alt="The cube’s screen, from the manual. The main menu has Control Mode, Settings, Preview and Status Info. The Control Mode list shows Playlist ticked, then Laser Show, IDN and Ether-Dream. The status bar at the bottom shows the battery level, WiFi status and channel, the laser data rate (35K), the I-LOCK warning, the current control mode, the network connection mode and the cube’s IP address." width="1286" height="695" loading="lazy"></a>
     <figcaption>The main menu, the Control Mode list and the status bar, from the manual. Select the picture to open it full size in a new tab.</figcaption>
   </figure>
 
@@ -568,11 +568,11 @@
     <fieldset class="check" data-answer="c">
       <legend><span class="qn">Question 3</span>You don’t need any effects tonight. What does the manual recommend?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l4q3" value="a"><span>Pick a calm effect, such as a slow zoom</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="a"><span>Restart the cube, which clears all effects</span></label>
         <label class="opt"><input type="radio" name="l4q3" value="b"><span>Leave them enabled, at their default values</span></label>
         <label class="opt"><input type="radio" name="l4q3" value="c"><span>Keep effects disabled in the Effects menu</span></label>
       </div>
-      <p class="why" hidden>Keep effects disabled when you don’t need them, so the projection doesn’t change by accident.</p>
+      <p class="why" hidden>Keep effects disabled when you don’t need them, so the projection doesn’t change by accident. A restart doesn’t clear them: effect settings are kept after a power cycle.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
   </div>
@@ -620,17 +620,18 @@
   <p class="small video-note">Filmed on older firmware. The PIN box opens with a short press, and on firmware 2.1 changing the connection mode doesn’t restart the cube.</p>
   <ul class="points">
     <li>Cube Link makes its own wireless link between the cubes, over about 20 to 40&nbsp;m with a clear line of sight. Connect the WiFi antenna on every cube first.</li>
+    <li>Each cube plays from its own SD card, with its own settings. The master only tells the others what to play and when.</li>
     <li>It works on the Pro too, also together with an Ultra MK2. (The videos above show only Ultra MK2 cubes.)</li>
     <li>It’s under <strong>Settings → Network → Cube Link</strong>, and it’s only available when the connection mode isn’t WiFi. If it is, choose a LAN mode under Settings → Connection first (on firmware older than 2.1, the cube restarts).</li>
     <li>On every cube, choose Laser Show mode, enable Cube Link and set the <strong>same Link Channel and the same PIN</strong>. For the PIN, highlight the PIN box and short‑press to open it; turn the knob to change the highlighted digit, short‑press to move to another digit, and long‑press to close it.</li>
     <li>Make <strong>one</strong> cube the Master and all the others Slaves.</li>
     <li>Set each cube’s <strong>Group</strong>. A show made for two projectors, such as Alive (2CH), has two parts: Group 1 cubes play one, Group 2 cubes the other. With four cubes, put two in each group.</li>
-    <li>Pick the same show category on every cube. Pressing play on the master then starts them all.</li>
     <li>A slave that has found its master shows a purple status bar. Status Info shows how many slaves are connected (“Remote Slaves”).</li>
+    <li>Pick the same show category on every cube. Once every slave’s status bar is purple, press play on the master: that starts them all.</li>
   </ul>
   <div class="warn">
     <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Every cube is its own laser</span>
-    <p>Pressing play on the master starts lasers that may be 20 to 40&nbsp;m away. Each cube has its own key and interlock. On every cube: its beam block set (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>), and every beam and where it lands in view of someone who can get that laser stopped at once (<a class="link" href="../start-here/#lesson-4">lesson 4</a>).</p>
+    <p>Pressing play on the master starts lasers that may be 20 to 40&nbsp;m away. Each cube has its own key and interlock. On every cube: its beam block set (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>), and every beam and where it lands in view of someone who can get that laser stopped at once (<a class="link" href="../start-here/#lesson-4">Start here, lesson 4</a>).</p>
   </div>
   <div class="two shots">
     <figure>
@@ -708,11 +709,11 @@
   <h2 id="l6-h">Connect a DMX or Art‑Net desk</h2>
   <p class="intro">With DMX or Art‑Net, a lighting desk runs the cube alongside your other lights. The cube plays cues from a playlist on its SD card; the desk picks the cue and can change its size, position, colour and more.</p>
 
-  <div class="video" data-yt="aC7mLKLXRWk" data-from="18" data-to="146" data-title="What DMX is and how to use it with LaserCube">
+  <div class="video" data-yt="aC7mLKLXRWk" data-from="18" data-to="134" data-title="What DMX is and how to use it with LaserCube">
     <button type="button" aria-label="Play video: what DMX is and how to use it with LaserCube"><span class="play"><svg><use href="#i-play"/></svg></span></button>
     <img src="../../images/academy/control-modes/l6-clip1.webp" alt="" width="1280" height="720" loading="lazy">
   </div>
-  <p class="video-meta"><span>What DMX is: addresses, values and start addresses (0:18 to 2:26)</span><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk&amp;t=18s" target="_blank" rel="noopener">Watch on YouTube, from 0:18</a></p>
+  <p class="video-meta"><span>What DMX is: addresses, values and start addresses (0:18 to 2:14)</span><a href="https://www.youtube.com/watch?v=aC7mLKLXRWk&amp;t=18s" target="_blank" rel="noopener">Watch on YouTube, from 0:18</a></p>
 
   <h3>DMX or Art‑Net?</h3>
   <ul class="points">
@@ -749,7 +750,7 @@
     <button type="button" aria-label="Play video: beginners guide part 7, control modes, DMX"><span class="play"><svg><use href="#i-play"/></svg></span></button>
     <img src="../../images/home/videos/FUxUS3KwgEs.webp" alt="" width="640" height="360" loading="lazy">
   </div>
-  <p class="video-meta"><span>Beginners guide, part 7: control modes, DMX (0:30 to 1:33)</span></p>
+  <p class="video-meta"><span>Beginners guide, part 7: control modes, DMX (0:30 to 1:33)</span><a href="https://www.youtube.com/watch?v=FUxUS3KwgEs&amp;t=30s" target="_blank" rel="noopener">Watch on YouTube, from 0:30</a></p>
   <p class="small video-note">The start address in the video isn’t the default of 1.</p>
   <div class="two shots">
     <figure>
@@ -783,13 +784,13 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="a">
-      <legend><span class="qn">Question 2</span>On your desk, the cube is set to start at address 101. What do you set on the cube?</legend>
+      <legend><span class="qn">Question 2</span>On your desk, the cube’s 16 channels are 101 to 116. What do you set on the cube?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l6q2" value="a"><span>DMX start address 101</span></label>
         <label class="opt"><input type="radio" name="l6q2" value="b"><span>Art‑Net universe 101</span></label>
-        <label class="opt"><input type="radio" name="l6q2" value="c"><span>Fixture profile 101</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="c"><span>DMX start address 116</span></label>
       </div>
-      <p class="why" hidden>The start address tells the cube where its 16 channels begin. It has to match the desk.</p>
+      <p class="why" hidden>The start address is where the cube’s 16 channels begin, so 101 here. It has to match the desk.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="c">
@@ -1098,10 +1099,10 @@
       <label class="opt"><input type="radio" value="c"><span>Which WiFi channel it uses</span></label></div>
       <p class="why" hidden>In a show made for two projectors, Group 1 cubes play one part and Group 2 cubes the other.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="link" data-lesson="5"><legend><span class="qn"></span>Four linked cubes play from the master. What does each cube need?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Only the master needs its beam block set</span></label>
+      <label class="opt"><input type="radio" value="a"><span>A safety zone sent to it by the master</span></label>
       <label class="opt"><input type="radio" value="b"><span>Its beam block set and its beams watched</span></label>
       <label class="opt"><input type="radio" value="c"><span>Its own WiFi network to reach the master</span></label></div>
-      <p class="why" hidden>Each cube is its own laser with its own key and interlock. Start here’s rules apply to every one: its beam block set, and every beam in view of someone who can get that laser stopped at once.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>Each cube is its own laser with its own key and interlock. Start here’s rules apply to every one: its beam block set, and every beam in view of someone who can get that laser stopped at once. The master only sends timing, so each cube uses its own settings.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Which cable goes into a Pro’s DMX In jack?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>3.5&nbsp;mm TRS to 3‑pin XLR female</span></label>
@@ -1119,10 +1120,10 @@
       <label class="opt"><input type="radio" value="c"><span>The order of the built‑in laser shows</span></label></div>
       <p class="why" hidden>Cues follow the order of the playlist chosen under CUE Selection: cue 1 is its first item.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="dmx" data-lesson="6"><legend><span class="qn"></span>Who may run the lighting desk while it controls the cube?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Anyone the venue sends to run it</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Anyone, once the beam block is set</span></label>
       <label class="opt"><input type="radio" value="b"><span>Someone trained in laser safety</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Any DJ who knows that desk well</span></label></div>
-      <p class="why" hidden>Whoever runs the desk is running a Class 4 laser. The manual says only people trained in laser safety may operate it.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="c"><span>Any desk operator, with a spotter</span></label></div>
+      <p class="why" hidden>Whoever runs the desk is running a Class 4 laser. The manual says only people trained in laser safety may operate it. A beam block or a spotter doesn’t replace that.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="channels" data-lesson="7"><legend><span class="qn"></span>You want the desk to rotate the image. What must channel 1 be set to, at least?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Basic (33&#8288;–&#8288;95)</span></label>
@@ -1134,7 +1135,7 @@
       <label class="opt"><input type="radio" value="b"><span>Channel 3 at 0&#8288;–&#8288;31</span></label>
       <label class="opt"><input type="radio" value="c"><span>Channel 1 at 33&#8288;–&#8288;35</span></label></div>
       <p class="why" hidden>Channel 3 picks the cue: 33&#8288;–&#8288;35 is cue 1, while 0&#8288;–&#8288;31 is blackout. Channel 1 sets the access mode.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="channels" data-lesson="7"><legend><span class="qn"></span>In Standard mode, channel 7 (X size) is at 0. What do you see?</legend><div class="opts">
+    <fieldset class="check" data-answer="b" data-group="channels" data-lesson="7"><legend><span class="qn"></span>In Standard mode, with the fader, scale and Y size at full, channel 7 (X size) is at 0. What do you see?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Nothing: the image has zero width</span></label>
       <label class="opt"><input type="radio" value="b"><span>The image at full width, mirrored</span></label>
       <label class="opt"><input type="radio" value="c"><span>The image at half its normal width</span></label></div>
