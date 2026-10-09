@@ -879,7 +879,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   }
 
   var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2]); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
-  var pageIndex = PAGES.map(function (p) { var t = norm(p.slice(2).join(" ")); return { group: p[0], href: p[1], title: p[2], path: p[3], t: t, tc: compact(t), k: norm(p[4]) }; });
+  var pageIndex = PAGES.map(function (p) { var t = norm(p.slice(2).join(" ")); return { group: p[0], href: p[1], title: p[2], path: p[3], t: t, tc: compact(t), k: norm(p[4]), nt: norm(p[2]) }; });
   var TUTORIAL_KEYS = pageIndex.filter(function (p) { return p.group === "Tutorials"; }).map(function (p) { return p.k; }).join(" ");
   function isKey(c, keys) { return c.term.length > 2 && c.start.test(keys); }
 
@@ -978,14 +978,15 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   function searchPages(ts) {
     var cs = compile(ts), res = [];
     pageIndex.forEach(function (p) {
-      var score = 0, key = false;
+      var score = 0, key = false, named = true; // named: every word is in the page's own title ("laser mapping"; "laser" is a stop word, so one long word is enough)
       for (var i = 0; i < cs.length; i++) {
         var s = cs[i].term.length > 2 ? titleScore(p.t, p.tc, cs[i]) : cs[i].word.test(p.t) ? 12 : 0;
         if (!s) return;
         score += s;
         if (isKey(cs[i], p.k)) key = true;
+        if (!(cs[i].term.length > 2 ? cs[i].start.test(p.nt) : cs[i].word.test(p.nt))) named = false;
       }
-      if (key) res.push({ p: p, score: score });
+      if (key || (named && (cs.length > 1 || cs[0].term.length > 5))) res.push({ p: p, score: score });
     });
     res.sort(function (a, b) { return b.score - a.score; });
     return res.map(function (r) { return r.p; });

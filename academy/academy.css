@@ -219,7 +219,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .opt.right{border-color:var(--ok);background:var(--ok-soft)}
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .feedback{margin:12px 0 0;font-size:15px}
-.feedback:empty{display:none}
+.feedback:empty{margin:0} /* kept in the page (not display:none) so screen readers announce the verdict */
 .feedback .verdict{font-weight:600}
 .feedback a.link{display:inline-block;padding:6px 0;white-space:nowrap}
 .feedback.is-wrong,#quiz-msg,#cert-msg{color:var(--bad)}
@@ -238,6 +238,9 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .order li .tag{flex:none;font:600 12px/1 var(--font);font-style:normal;letter-spacing:.02em}
 .order li.right .tag{color:var(--ok)}
 .order li.wrong .tag{color:var(--bad)}
+.opt .tag{flex:none;margin-left:auto;padding-left:8px;font:600 12px/1.6 var(--font);letter-spacing:.02em}
+.opt.right .tag{color:var(--ok)}
+.opt.wrong .tag{color:var(--bad)}
 .order li span{overflow-wrap:break-word}
 .order .mv{flex:none;display:flex;gap:4px}
 .order .mv button{display:grid;place-items:center;width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;color:var(--muted)}
@@ -334,7 +337,16 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .check,.order,.scenario{padding:16px}
   .order li{padding-left:10px;gap:8px}
   .pager a{font-size:14.5px}
+  .icon-btn{width:44px;height:44px}
+  .manual-links a,.locked-msg a,.feedback a.link{position:relative}
+  .manual-links a::after,.locked-msg a::after,.feedback a.link::after{content:"";position:absolute;inset:-13px -4px} /* 44 px tap area, same look */
+  .site-footer nav{gap:0 22px}
+  .site-footer nav a{display:inline-block;padding:11px 0}
   .site-footer .copy{margin-left:0}
+}
+@media (max-width:380px){
+  .order li span{flex-basis:calc(100% - 40px)} /* the move buttons go under the step, so the text keeps its width */
+  .order .mv{margin-left:auto}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
