@@ -67,7 +67,6 @@
       f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.dataset.yt) + "?autoplay=1&rel=0" + (from > 0 ? "&start=" + from : "") + (to > 0 ? "&end=" + to : "");
       f.title = v.dataset.title || "Video";
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-      f.allowFullscreen = true;
       f.referrerPolicy = "strict-origin-when-cross-origin";
       v.textContent = "";
       v.appendChild(f);
@@ -123,6 +122,10 @@
   // ---- phone contents: a copy of the sidebar list ----
   var toc = $(".toc ol"), phone = $(".toc-phone .inner");
   if (toc && phone) phone.appendChild(toc.cloneNode(true));
+  var sheet = $(".toc-phone");
+  if (sheet) document.addEventListener("keydown", function (e) { // Esc closes it, like the header menu
+    if (e.key === "Escape" && sheet.open) { sheet.open = false; var s = $("summary", sheet); if (s) s.focus(); }
+  });
 
   // ---- views ----
   var first = true;
@@ -335,8 +338,14 @@
     if (tag) tag.remove();
   }
 
+  var scenarioN = 0;
   function setupScenario(sc, onSolved) {
-    var btns = $$(".choices button", sc), fb = $(".feedback", sc), why = $(".why", sc);
+    var btns = $$(".choices button", sc), fb = $(".feedback", sc), why = $(".why", sc), s = $("p.s", sc);
+    if (s) { // screen readers hear the situation with its Yes/No buttons
+      s.id = s.id || "scenario-" + (++scenarioN);
+      sc.setAttribute("role", "group");
+      sc.setAttribute("aria-labelledby", s.id);
+    }
     btns.forEach(function (b) {
       b.addEventListener("click", function () {
         var ok = b.dataset.a === sc.dataset.answer;
@@ -447,6 +456,14 @@
     if (!quizList.children.length) newQuiz();
   }
 
+  // marks a graded option in words too, not only by colour
+  function tag(input, text) {
+    var t = document.createElement("span");
+    t.className = "tag";
+    t.textContent = text;
+    input.closest(".opt").appendChild(t);
+  }
+
   if (quizForm) quizForm.addEventListener("submit", function (e) {
     e.preventDefault();
     var qs = $$(".check", quizList);
@@ -468,7 +485,8 @@
       var c = $("input:checked", q), ok = c.value === q.dataset.answer, why = $(".why", q);
       if (ok) score++;
       c.closest(".opt").classList.add(ok ? "right" : "wrong");
-      if (!ok) { var r = $('input[value="' + q.dataset.answer + '"]', q); if (r) r.closest(".opt").classList.add("right"); }
+      tag(c, ok ? "Your answer: right" : "Your answer");
+      if (!ok) { var r = $('input[value="' + q.dataset.answer + '"]', q); if (r) { r.closest(".opt").classList.add("right"); tag(r, "Right answer"); } }
       q.classList.add(ok ? "is-right" : "is-wrong");
       $(".feedback", q).innerHTML = verdict(ok, why ? why.innerHTML : "");
       // a wrong answer points back to its lesson
