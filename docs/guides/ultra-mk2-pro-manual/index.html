@@ -849,7 +849,8 @@ first.</p>
 <p>This mode is used when you want our LaserOS application to be in
 complete control of the LaserCube, or you wish to use any of the
 supported third party applications like Liberation, LaserShowGen,
-Madmapper, Touch Designer etc.</p>
+Madmapper etc. For TouchDesigner, use
+<a href="#ether-dream-control-mode">Ether Dream Control Mode</a>.</p>
 <p>In this mode all projections are streamed over LAN/WiFi directly to the
 LaserCube, so the Settings→Projection menu items will not be available
 since these are now adjusted via the LaserOS settings menu, or other
@@ -1707,6 +1708,25 @@ full saturation (S = 1.0, V = 1.0).</p>
 <div class="table-wrap"><table class="dmx"><caption><span class="ch">Channel 16</span> Reserved</caption><thead><tr><th scope="col">DMX value</th><th scope="col">Function</th></tr>
 </thead><tbody><tr><td>0 … 255</td><td>NOT IMPLEMENTED</td></tr>
 </tbody></table></div>
+<h2 id="ether-dream-control-mode">Ether Dream Control Mode<a href="#ether-dream-control-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>In this mode the LaserCube works like an Ether Dream DAC (a network
+laser interface), so laser software with an Ether Dream output can send
+its content to the cube over the network. TouchDesigner is one: its Laser
+Device CHOP sends to an Ether Dream device.</p>
+<ol><li>Connect the cube and your computer to the same network (see
+<a href="#connection-settings">Connection Settings</a>).</li><li>Select Control Mode, Ether-Dream. Once selected the device will
+restart into Ether Dream mode, and the status bar shows Ether-Dream.</li><li>Read the cube’s IP address in the bottom right corner of the status
+bar.</li><li>In your software, add an Ether Dream device with that IP address.
+Ether Dream uses network port 7765. In TouchDesigner, that is a Laser
+Device CHOP with Type EtherDream, the cube’s IP address as Network Address
+and Network Port 7765, fed by a Laser CHOP.</li></ol>
+<p>Unlike LaserOS mode, the Settings→Projection menus stay available in
+Ether Dream mode: <a href="#image-setup">Image Setup</a>,
+<a href="#colour-balance">Colour Balance</a> and the
+<a href="#safety-zone">Safety Zone</a> apply to everything the software
+sends.</p>
+<p>Video guide: our four-part TouchDesigner series by Motus Art starts with
+<a href="https://www.youtube.com/watch?v=gWgriN8vNZg" rel="external">First steps with LaserCube and TouchDesigner</a>.</p>
 <h1 id="making-content-in-laseros">Making Content in LaserOS<a href="#making-content-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>LaserOS is our app for making your own laser content and playing it on
 the LaserCube. It runs on a computer (Windows or Mac) and on a phone (iOS or
