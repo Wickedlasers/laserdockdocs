@@ -86,6 +86,21 @@ no build step, no server, no database, no accounts, no analytics.
 When a course changes in a way that matters, raise `data-version`. Certificates already issued keep the version
 they were passed on.
 
+## Videos not public yet
+
+A video that is still private or scheduled on YouTube can go into a lesson now and be shown once it is public
+(`grep -rn data-pending` lists them):
+
+- in a lesson, its `.video`, `.video-meta` and any `.video-note` sit in `<div class="pending-video" data-pending="<id>" hidden>`;
+- on the homepage, its `<li>` or `<article>` has `data-pending="<id>" hidden`;
+- in the search lists (homepage and manual), its row is commented out as `// pending <id>: [...]`;
+- its thumbnail `images/home/videos/<id>.webp` is a frame from our own copy until YouTube has one.
+
+When YouTube's oEmbed answers 200 for it (`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<id>`):
+remove `hidden` and `data-pending` from those elements, un-comment its search rows, replace the thumbnail with YouTube's
+`maxresdefault.jpg` at 640x360, and push. The cut times (`data-from`/`data-to`) were set on the presenter's own copy of the
+video; if the public upload is a different length, check them again before showing it.
+
 ## Content rules (owner decisions, 7 Oct 2026)
 
 - Facts come from the wiki manual (`docs/guides/ultra-mk2-pro-manual/`) and from X-Laser's Laser Operator Basics
