@@ -20,8 +20,10 @@ no build step, no server, no database, no accounts, no analytics.
   effects" (8 lessons), "Laser mapping with LaserOS" (6) and "Build a laser show to your music" (8, Advanced). Their
   facts come from the manual chapter "Making Content in LaserOS" (labels checked against the LaserOS v0.18.1 source) and
   the tutorial videos' checked claims. Several embeds use `data-from`/`data-to` to skip parts of a video (other people's
-  show clips, hidden LaserOS entries, a profane track title): a start needs ~2 s of margin after the part it skips,
-  because YouTube may start at the keyframe before it. Card pictures: `images/home/academy-<course>.webp` (video frames).
+  show clips, hidden LaserOS entries, a profane track title; margins: "Adding a course", step 3). These cuts need
+  `data-to` in academy.js: never revert that part while these courses are live. Pages load `academy.js?v=<date>`: raise
+  the date whenever academy.js changes (pages are cached for 10 minutes). Card pictures: `images/home/academy-<course>*.webp`
+  (video frames).
 - `academy.css`, `academy.js`: shared by every course. A new course needs no change to these
   (control-modes added small table styles, `.table-wrap`, and `.two.shots` for the 240 px screenshots of the cube's screen).
 

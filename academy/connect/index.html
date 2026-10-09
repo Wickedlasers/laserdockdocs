@@ -360,7 +360,7 @@
     <li>Turn off the computer’s WiFi for now, and close LaserOS if it’s running.</li>
     <li>Switch the cube on and connect the cable between the cube and the computer.</li>
     <li>Wait until the cube shows its 169.254 address.</li>
-    <li>Start LaserOS and check that its Laser ON button isn’t greyed out: then LaserOS has found the cube.</li>
+    <li>Start LaserOS and check that its Laser button at the top left no longer reads NO LASER: then LaserOS has found the cube.</li>
     <li>Turn the computer’s WiFi back on if you need the internet.</li>
   </ol>
 
@@ -372,10 +372,10 @@
         <li>Turn off the computer’s WiFi and close LaserOS</li>
         <li>Switch the cube on and connect the cable to the computer</li>
         <li>Wait until the cube shows its 169.254 address</li>
-        <li>Start LaserOS and check that Laser ON isn’t greyed out</li>
+        <li>Start LaserOS and check that the Laser button no longer reads NO LASER</li>
         <li>Turn the computer’s WiFi back on if you need the internet</li>
       </ol>
-      <p class="why" hidden>LaserOS starts last, once the cube has its self‑assigned address. If the Laser ON button isn’t greyed out, LaserOS has found the cube.</p>
+      <p class="why" hidden>LaserOS starts last, once the cube has its self‑assigned address. If the Laser button no longer reads NO LASER, LaserOS has found the cube.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -572,7 +572,7 @@
   <p class="intro">This lesson puts the first five together for two problems: LaserOS doesn’t find the cube, or the projection keeps breaking up.</p>
 
   <h3>LaserOS doesn’t find the cube</h3>
-  <p>LaserOS finds connected cubes by itself. If its Laser ON button stays greyed out, it hasn’t found one. Check:</p>
+  <p>LaserOS finds connected cubes by itself. If its Laser button at the top left still reads NO LASER, it hasn’t found one. Check:</p>
   <ul class="points">
     <li><strong>The control mode:</strong> to stream from LaserOS, choose Control Mode → LaserOS.</li>
     <li><strong>The connection:</strong> the status bar shows the connection mode you chose, with a tick, and an IP address (lesson 4). On firmware older than 2.1, the cube must restart after a mode change.</li>
@@ -605,13 +605,13 @@
   <div class="practice">
     <h3>Check yourself</h3>
     <fieldset class="check" data-answer="c">
-      <legend><span class="qn">Question 1</span>LaserOS is open on your laptop, but the Laser ON button stays greyed out. What does that mean?</legend>
+      <legend><span class="qn">Question 1</span>LaserOS is open on your laptop, but its Laser button still reads NO LASER. What does that mean?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l6q1" value="a"><span>The laser is already on</span></label>
         <label class="opt"><input type="radio" name="l6q1" value="b"><span>The firmware needs an update</span></label>
         <label class="opt"><input type="radio" name="l6q1" value="c"><span>LaserOS hasn’t found the cube</span></label>
       </div>
-      <p class="why" hidden>A greyed‑out Laser ON button means LaserOS hasn’t found a cube. Check the control mode and the connection.</p>
+      <p class="why" hidden>NO LASER on the Laser button means LaserOS hasn’t found a cube. Check the control mode and the connection.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
@@ -938,11 +938,11 @@
       <label class="opt"><input type="radio" value="c"><span>Select it on Status Info</span></label></div>
       <p class="why" hidden>Selecting the counter on the Status Info page resets it to zero.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="a" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>LaserOS is open, but its Laser ON button stays greyed out. What does it mean?</legend><div class="opts">
+    <fieldset class="check" data-answer="a" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>LaserOS is open, but its Laser button still reads NO LASER. What does it mean?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>LaserOS hasn’t found the cube</span></label>
       <label class="opt"><input type="radio" value="b"><span>The laser is already running</span></label>
       <label class="opt"><input type="radio" value="c"><span>The battery is being charged</span></label></div>
-      <p class="why" hidden>A greyed‑out Laser ON button means LaserOS hasn’t found a cube: check the control mode and the connection.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>NO LASER on the Laser button means LaserOS hasn’t found a cube: check the control mode and the connection.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>Streaming over WiFi, the projection breaks up and PKT Loss Events keeps climbing. What helps most, says the manual?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>A lower screen brightness</span></label>
       <label class="opt"><input type="radio" value="b"><span>A wired connection</span></label>
@@ -1083,6 +1083,6 @@
     <span class="copy">© Wicked Lasers</span>
   </div>
 </footer>
-<script src="../academy.js"></script>
+<script src="../academy.js?v=20261009"></script>
 </body>
 </html>
