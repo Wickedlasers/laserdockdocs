@@ -85,7 +85,7 @@
   </div>
 </header>
 
-<main id="main" data-course="laser-mapping" data-version="1.0" data-title="Laser mapping with LaserOS" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
+<main id="main" data-course="laser-mapping" data-version="1.1" data-title="Laser mapping with LaserOS" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
 
   <section class="hero stage">
     <div class="container">
@@ -196,9 +196,9 @@
     <p>Three set‑ups. Is it OK to go ahead? Decide, then read why.</p>
     <div class="scenarios">
       <div class="scenario" data-answer="yes">
-        <p class="s">Three white boxes stand at the back of a stage that’s closed to everyone during the show, more than 3&nbsp;m from the nearest guest. The cube stands on the same stage, the beam block is set, and every beam ends on the boxes or on the brick wall behind them.</p>
+        <p class="s">Three white boxes stand at the back of a stage that’s closed to everyone during the show, more than 3&nbsp;m from the nearest guest. The cube stands on the same stage, the beam block is set, and every beam ends on the boxes or on the brick wall behind them. Every other item on Start here’s pre‑show checklist is ticked.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
-        <p class="why" hidden>The cube and the boxes are in a restricted area with a 3&nbsp;m buffer, so no beam passes where people may be; every beam ends on a solid surface there, and the beam block is set.</p>
+        <p class="why" hidden>The cube and the boxes are in a restricted area with a 3&nbsp;m buffer, so no beam passes where people may be; every beam ends on a solid surface there, the beam block is set, and the rest of the pre‑show checklist is done.</p>
         <p class="hint" hidden>Where do the beams end, and how far is that from people?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
@@ -292,7 +292,7 @@
   <h3>Trace an object, step by step</h3>
   <ol class="points">
     <li>Set up as in lesson 1, then start the laser with the Laser button.</li>
-    <li>Open Draw and pick the straight‑line tool.</li>
+    <li>Open Draw in the list of apps (<a class="link" href="../laseros-basics/#lesson-1">LaserOS basics, lesson 1</a> shows where that is) and pick the straight‑line tool.</li>
     <li>Draw along each edge of the object while you watch the projection: the cube shows each stroke as you draw it.</li>
     <li>Keep Points used under 100%.</li>
     <li>Save the drawing under a name. It goes to Playlists → Drawings.</li>
@@ -598,7 +598,7 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
-      <legend><span class="qn">Question 3</span>With Show FPS on, your mapping runs at 50 FPS. Will it appear to flicker?</legend>
+      <legend><span class="qn">Question 3</span>With Show FPS in simulator window on, your mapping shows 50 FPS. Will it appear to flicker?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l5q3" value="a"><span>Yes: it needs 60 FPS or more</span></label>
         <label class="opt"><input type="radio" name="l5q3" value="b"><span>No: 45 FPS or more won’t appear to flicker</span></label>
@@ -635,15 +635,25 @@
     <li><strong>Attenuation:</strong> how much the beams are reduced. 100% blanks them completely; 90% leaves 10% of their normal power.</li>
     <li><strong>X and Y</strong> place the zone, <strong>Width and Height</strong> size it. Add makes another zone, Next and Previous choose which one the sliders change, and Remove current deletes it. Import and Export load and save the zone settings.</li>
   </ul>
+  <figure class="native">
+    <a href="../../images/academy/laser-mapping/l6-safety-zones-660.webp" target="_blank" rel="noopener"><img src="../../images/academy/laser-mapping/l6-safety-zones-660.webp" alt="From the video, filmed on a laptop screen: the Safety Zones page of LaserOS on a computer. Attenuation Zones is on, Preview is on, Shape is set to Rectangle, and Invert Zones is on, with the note: points inside the red safety box areas are attenuated, red has priority over green. Below them, the Attenuation slider at its far right, then the X, Y, Width and Height sliders, each with a reset button." width="660" height="396" loading="lazy"></a>
+    <figcaption>Safety Zones on a computer, set up as a keep‑out zone (Invert Zones on). The buttons to add, choose, remove, import and export zones are further down the page. From the video.</figcaption>
+  </figure>
+  <figure class="native">
+    <a href="../../images/academy/laser-mapping/l6-phone-safety-zone-440.webp" target="_blank" rel="noopener"><img src="../../images/academy/laser-mapping/l6-phone-safety-zone-440.webp" alt="From the video: the Safety Zone Settings page in the LaserOS phone app, under Projector Setup. Attenuation Zones is on, Preview is on, Shape is Rectangle and Invert Zones is off. Below them, sliders for Attenuation (its label cut off on screen), X, Y, Width and Height. In the middle of the bottom bar, the power button is blue." width="440" height="590" loading="lazy"></a>
+    <figcaption>The same settings in the phone app, here a keep‑within zone (Invert Zones off). From the video.</figcaption>
+  </figure>
   <p>Use a keep‑within zone for the target area, such as the object you’re mapping, where the beams can safely end. Use a keep‑out zone to keep beams off a camera, a video projector or an object.</p>
 
   <h3>Play your mapping</h3>
   <ul class="points">
     <li>Your drawings are in Playlists → Drawings, and your Beam Creator designs in Playlists → Custom Beams.</li>
+    <li><strong>To play one item,</strong> start the laser and click the item there (in the phone app, tap it): the cube projects it.</li>
     <li>To add one to your own playlist on a computer, right‑click it and use Add to playlist. In the phone app, touch and hold it, open Add to playlist, pick a playlist (or Create new playlist), then tap Add.</li>
     <li><strong>Autoplay</strong> moves from one item to the next by itself. Its buttons are under the preview on a computer and in the bottom bar on the phone: shuffle, repeat and the time per item. Click the time to set it in seconds or beats.</li>
-    <li>The <strong>Timeline</strong> builds a show to a song, with one layer per cube. Drag a custom beam from Playlists onto a layer, under the song’s waveform. The song must be a WAV file: 44.1&nbsp;kHz, 16‑bit, stereo.</li>
-    <li><strong>To play it without a computer:</strong> export the playlist to the cube’s SD card with LaserOS on a computer (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>), then play it in Playlist mode. There the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS: set them on the cube before you play.</li>
+    <li><strong>To autoplay only your playlist:</strong> open Playlists, then View options (the icon at its top right), and choose Toggle All → Disable. Click and hold your playlist for about two seconds to switch it back on. Then leave only Playlists ticked in the list of apps (<a class="link" href="../laseros-basics/#lesson-7">LaserOS basics, lesson 7</a>).</li>
+    <li>The <strong>Timeline</strong> builds a show to a song, with one layer per cube. Drag a custom beam from Playlists onto a layer, under the song’s waveform. The song must be a WAV file: 44.1&nbsp;kHz, 16‑bit, stereo. <a class="link" href="../music-show/#lesson-4">Build a laser show to your music, lessons 4 and 5</a>, show every step.</li>
+    <li><strong>To play it without a computer:</strong> export the playlist to the cube’s SD card with LaserOS on a computer (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>), then play it in Playlist mode. Don’t count on the effects from LaserOS’s effects panel (lesson 5) there: they’re LaserOS’s, played while it streams to the cube, and the manual notes that “Assign Effect” on a playlist item isn’t supported on the cube. In Playlist mode the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS: set them on the cube before you play.</li>
   </ul>
   <figure class="native">
     <a href="../../images/academy/laser-mapping/l6-playlists-drawings-990.webp" target="_blank" rel="noopener"><img src="../../images/academy/laser-mapping/l6-playlists-drawings-990.webp" alt="From the video: LaserOS on a computer with Playlists selected in the list of apps. A playlist is open with a Back button at the top; the saved drawing, mapping, is selected, and a label above it reads Playlists/Drawings/mapping." width="990" height="440" loading="lazy"></a>
@@ -662,9 +672,9 @@
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="yes">
-        <p class="s">The beam block is set, and every beam ends on the boxes or the wall behind them, in a closed‑off area more than 3&nbsp;m from where guests stand. The cube is in the same closed‑off area. You add a keep‑within zone around the boxes.</p>
+        <p class="s">The beam block is set, and every beam ends on the boxes or the wall behind them, in a closed‑off area more than 3&nbsp;m from where guests stand. The cube is in the same closed‑off area, and every other item on Start here’s pre‑show checklist is ticked. You add a keep‑within zone around the boxes.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
-        <p class="why" hidden>That’s what a keep‑within zone is for: the target area where the beams end, on top of the beam block and the 3&nbsp;m rule.</p>
+        <p class="why" hidden>That’s what a keep‑within zone is for: the target area where the beams end, on top of the beam block, the 3&nbsp;m rule and the rest of the pre‑show checklist.</p>
         <p class="hint" hidden>Is the zone used on top of the other rules, or instead of them?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
@@ -807,7 +817,7 @@
       <label class="opt"><input type="radio" value="b"><span>Raise it</span></label>
       <label class="opt"><input type="radio" value="c"><span>Match it to the FPS</span></label></div>
       <p class="why" hidden>Lower the render quality if an item flickers. Raise it only if corners look rounded: that can add flicker.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>Show FPS reads 50 for your mapping. Will it appear to flicker?</legend><div class="opts">
+    <fieldset class="check" data-answer="b" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>With Show FPS in simulator window on, your mapping shows 50 FPS. Will it appear to flicker?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Yes: it needs 60 FPS or more</span></label>
       <label class="opt"><input type="radio" value="b"><span>No: 45 FPS or more won’t</span></label>
       <label class="opt"><input type="radio" value="c"><span>Yes: it needs 100 FPS or more</span></label></div>
@@ -896,6 +906,6 @@
     <span class="copy">© Wicked Lasers</span>
   </div>
 </footer>
-<script src="../academy.js?v=20261009"></script>
+<script src="../academy.js?v=20261009b"></script>
 </body>
 </html>
