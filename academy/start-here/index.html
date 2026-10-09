@@ -583,15 +583,15 @@
     <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000001000003F2000001E0A4D9C7FB-1010.webp" alt="Two photos of the back panel: the safety jumper in an E-STOP port and the key being turned from OFF to ON; below, the key at ON and both EMISSION LEDs lit blue" width="1010" height="480" loading="lazy">
     <figcaption>Jumper in, key to ON: the EMISSION LEDs light up.</figcaption>
   </figure>
-  <p>Outside the US the E‑Stop is optional. If you connect one (the STADIUM bundle comes with it), start the laser the same way as in the US, below, green START included.</p>
+  <p>Outside the US the E‑Stop is optional. If you connect one (the STADIUM bundle comes with it), start the laser with it as in the steps below: red button up, then the green START. If your E‑Stop has no key, skip the step with the pendant key.</p>
 
-  <h3>In the US: the E‑Stop</h3>
+  <h3>With an E‑Stop (required in the US)</h3>
   <p>US cubes come without the jumper. They must run with the E‑Stop that comes with them (an FDA requirement), and the laser won’t work without it.</p>
   <ol class="points">
     <li>Connect the E‑Stop pendant to the cube.</li>
     <li>Turn the key on the cube to ON.</li>
     <li>If the red STOP button is pushed in, turn it clockwise until you can pull it up.</li>
-    <li>Turn the key on the pendant clockwise to ON. The EMISSION LEDs flash slowly, once every 3 seconds.</li>
+    <li>Turn the key on the pendant clockwise to ON (if it has one). The EMISSION LEDs flash slowly, once every 3 seconds.</li>
     <li>After the second flash, briefly press the green START button. The LEDs flash once a second; after 10 seconds they stay on and the laser can emit.</li>
   </ol>
   <figure>
@@ -606,7 +606,7 @@
 
   <h3>Always have two ways to stop</h3>
   <p>Set up every show so you have a main and a backup way to stop the laser instantly, and keep both within reach: for example the E‑Stop and the key, or without an E‑Stop the key and the power switch. Before the show, check that they really stop it.</p>
-  <p>When the cube has lost power (switched off, or a flat battery), or after the interlock has been opened and closed again, the laser won’t start by itself. Reset the key first (turn it to OFF, then back to ON), and on US cubes do the E‑Stop start again. That’s on purpose, so a cube never fires the moment power comes back.</p>
+  <p>When the cube has lost power (switched off, or a flat battery), or after the interlock has been opened and closed again, the laser won’t start by itself. Reset the key first (turn it to OFF, then back to ON), and with an E‑Stop connected, do the E‑Stop start again. That’s on purpose, so a cube never fires the moment power comes back.</p>
   <p class="note"><strong>Playlist mode, on any cube:</strong> if the cube is in Playlist control mode, it starts the last playlist as soon as the interlock is enabled (“Power‑On Play” is on by default). If you don’t want that, set Power‑On Play to Disabled in the playlist options menu.</p>
 
   <div class="practice">
@@ -641,7 +641,7 @@
         <label class="opt"><input type="radio" name="l6q2" value="b"><span>The battery must be full before it can emit</span></label>
         <label class="opt"><input type="radio" name="l6q2" value="c"><span>The beam block slipped and blocks the beam</span></label>
       </div>
-      <p class="why" hidden>After losing power the cube waits for a reset: the key (OFF, then ON), and on US cubes the E‑Stop start. So it never fires the moment power comes back.</p>
+      <p class="why" hidden>After losing power the cube waits for a reset: the key (OFF, then ON), and with an E‑Stop the E‑Stop start. So it never fires the moment power comes back.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="c">
@@ -656,7 +656,7 @@
     </fieldset>
   </div>
 
-  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop / interlock</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#e-stop-setup-guide">E‑Stop setup guide (US)</a></p>
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">E‑Stop / interlock</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#e-stop-setup-guide">E‑Stop setup guide</a></p>
   <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 7.</p>
   <nav class="pager" aria-label="Lesson 6: back and next"><a data-nav href="#lesson-5"><span>Back</span>Mount it and put up signs</a><a class="next" data-nav href="#lesson-7"><span>Next</span>Switch on and connect LaserOS</a></nav>
 </section>
@@ -688,7 +688,7 @@
     <li>Choose <strong>Settings → Connection → WiFi server</strong>. On firmware older than 2.1, changing the connection mode restarts the cube: select YES and push the knob. Firmware 2.1 and later switch without a restart.</li>
     <li>On your phone or computer, join the cube’s WiFi. By default it’s called <strong>LaserCube</strong> and the password is <strong>Laser2020</strong>. You can change both under Settings → Network → WiFi Server.</li>
     <li>Open LaserOS. It finds the connected cube.</li>
-    <li>With the interlock closed and the key on (lesson 6: jumper in and key on, or on US cubes the E‑Stop start done), turn the laser on from LaserOS’s power menu. On a computer, the ESC key turns it off again.</li>
+    <li>With the interlock closed and the key on (lesson 6: jumper in and key on, or with an E‑Stop the E‑Stop start done), turn the laser on from LaserOS’s power menu. On a computer, the ESC key turns it off again.</li>
   </ol>
 
   <h3>When WiFi isn’t good enough</h3>
@@ -1114,7 +1114,7 @@
       <label class="opt"><input type="radio" value="a"><span>A fault: send it in for repair</span></label>
       <label class="opt"><input type="radio" value="b"><span>A safety feature: reset the key first</span></label>
       <label class="opt"><input type="radio" value="c"><span>The beam block has closed by itself</span></label></div>
-      <p class="why" hidden>The key (and the E‑Stop start on US cubes) must be reset, so the cube never fires the moment power comes back.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>The key (and the E‑Stop start, with an E‑Stop connected) must be reset, so the cube never fires the moment power comes back.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="zones" data-lesson="8"><legend><span class="qn"></span>A camera is in the area your beams could reach. What do you use?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>A keep‑out zone around the camera</span></label>
       <label class="opt"><input type="radio" value="b"><span>A keep‑within zone around the camera</span></label>
