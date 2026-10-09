@@ -113,6 +113,8 @@ edit it by hand.
   `<img>`, `width` and `height` are the size shown on the page (half the file's pixels), e.g.
   `cwebp -q 82 -resize 1200 0 Pictures/x.png -o Pictures/web/x-1200.webp` and
   `<img src="Pictures/web/x-1200.webp" width="600" height="..." alt="" loading="lazy" decoding="async">`.
+  Exception: crops from 1080p screen recordings (`Pictures/laseros-*`, the LaserOS chapter) are shown at
+  about 0.65-0.75x of the file width, so their small labels stay readable.
   Without `width`/`height`, deep links land in the wrong place while lazy images load. The sources
   stay in `Pictures/` (for the 240x320 CubeOS screenshots the lossless originals are the `.bmp`
   files); the Declaration of Conformity thumbnails link to their full-size scans.
