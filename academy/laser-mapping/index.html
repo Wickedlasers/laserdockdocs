@@ -311,7 +311,7 @@
       <legend><span class="qn">Question 1</span>LaserOS’s Laser button reads NO LASER. What does it mean?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l2q1" value="a"><span>The laser is on, but blanked</span></label>
-        <label class="opt"><input type="radio" name="l2q1" value="b"><span>LaserOS hasn’t found a cube</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="b"><span>LaserOS hasn’t found a cube to send to</span></label>
         <label class="opt"><input type="radio" name="l2q1" value="c"><span>The drawing is too complex</span></label>
       </div>
       <p class="why" hidden>NO LASER means LaserOS hasn’t found a cube. LASER OFF means a cube is found and the laser is off.</p>
@@ -321,7 +321,7 @@
       <legend><span class="qn">Question 2</span>Draw shows 112% points used. What does that tell you?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l2q2" value="a"><span>It’s too complex: simplify it</span></label>
-        <label class="opt"><input type="radio" name="l2q2" value="b"><span>It’s saved and ready to play</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="b"><span>It’s saved and ready to play from a playlist</span></label>
         <label class="opt"><input type="radio" name="l2q2" value="c"><span>It’s brighter than the cube allows</span></label>
       </div>
       <p class="why" hidden>Over 100% points used, the drawing is too complex: simplify it.</p>
@@ -394,7 +394,7 @@
     <fieldset class="check" data-answer="a">
       <legend><span class="qn">Question 2</span>Can the phone app put a playlist on the cube’s SD card?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l3q2" value="a"><span>No: that needs LaserOS on a computer</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>No: for that you need LaserOS on a computer</span></label>
         <label class="opt"><input type="radio" name="l3q2" value="b"><span>Yes: from the Add to playlist menu</span></label>
         <label class="opt"><input type="radio" name="l3q2" value="c"><span>Yes: over the cube’s own WiFi network</span></label>
       </div>
@@ -547,7 +547,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l5q1" value="a"><span>No, only on animations</span></label>
         <label class="opt"><input type="radio" name="l5q1" value="b"><span>No, only on your logo</span></label>
-        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Yes, on whatever shows</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Yes, on whatever is showing</span></label>
       </div>
       <p class="why" hidden>An effect plays on top of whatever is showing: drawings and Beam Creator designs too.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -556,7 +556,7 @@
       <legend><span class="qn">Question 2</span>Your mapped outline flickers. What does the manual say about its render quality?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l5q2" value="a"><span>Lower it</span></label>
-        <label class="opt"><input type="radio" name="l5q2" value="b"><span>Raise it</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="b"><span>Raise it as high as it goes</span></label>
         <label class="opt"><input type="radio" name="l5q2" value="c"><span>Match it to the FPS</span></label>
       </div>
       <p class="why" hidden>Lower the render quality if an item flickers. Raise it only if corners look rounded: that can add flicker.</p>
@@ -566,7 +566,7 @@
       <legend><span class="qn">Question 3</span>With Show FPS on, your mapping runs at 50 FPS. Will it appear to flicker?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l5q3" value="a"><span>Yes: it needs 60 FPS or more</span></label>
-        <label class="opt"><input type="radio" name="l5q3" value="b"><span>No: 45 FPS or more won’t</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="b"><span>No: 45 FPS or more won’t appear to flicker</span></label>
         <label class="opt"><input type="radio" name="l5q3" value="c"><span>Yes: it needs 100 FPS or more</span></label>
       </div>
       <p class="why" hidden>45 FPS or more won’t appear to flicker.</p>
@@ -643,7 +643,7 @@
     <fieldset class="check" data-answer="a">
       <legend><span class="qn">Question 2</span>You play your exported mapping on the cube in Playlist mode. Which safety zone applies?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l6q2" value="a"><span>The one set on the cube itself</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="a"><span>The one set on the cube itself, before you play</span></label>
         <label class="opt"><input type="radio" name="l6q2" value="b"><span>The one you set in LaserOS</span></label>
         <label class="opt"><input type="radio" name="l6q2" value="c"><span>None: zones work only in LaserOS</span></label>
       </div>
@@ -677,7 +677,7 @@
 
   <div class="bank" hidden>
     <fieldset class="check" data-answer="a" data-group="rules" data-lesson="1"><legend><span class="qn"></span>Where must every beam end when you map an object?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>In a restricted area, where nobody may be</span></label>
+      <label class="opt"><input type="radio" value="a"><span>In a restricted area: a place where nobody may be</span></label>
       <label class="opt"><input type="radio" value="b"><span>On any surface more than 2&nbsp;m off the floor</span></label>
       <label class="opt"><input type="radio" value="c"><span>Wherever the LaserOS safety zone allows it</span></label></div>
       <p class="why" hidden>Every beam has to end in a restricted area, with at least 3&nbsp;m between it and any place people may be, on all sides.</p><p class="feedback"></p></fieldset>
@@ -693,18 +693,18 @@
       <p class="why" hidden>Don’t stand in front of the cube while it’s on: work from beside or behind it.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Which of these must never be a mapping target?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>A brick wall</span></label>
+      <label class="opt"><input type="radio" value="a"><span>A solid brick wall</span></label>
       <label class="opt"><input type="radio" value="b"><span>A parked car</span></label>
       <label class="opt"><input type="radio" value="c"><span>A projection screen</span></label></div>
       <p class="why" hidden>Never aim the laser at cars or other vehicles. A brick wall and a projection screen are good places for beams to end.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Why not outline a polished chrome sign?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>It reflects the beams</span></label>
+      <label class="opt"><input type="radio" value="a"><span>It reflects the beams away</span></label>
       <label class="opt"><input type="radio" value="b"><span>It absorbs the colours</span></label>
       <label class="opt"><input type="radio" value="c"><span>It’s too small to see</span></label></div>
       <p class="why" hidden>Shiny surfaces reflect the beams. Every beam has to end, not be reflected away, and reflected light can injure eyes too.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="setup" data-lesson="1"><legend><span class="qn"></span>How should the cube be while you aim it at the object?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>On, with the beams at low power</span></label>
+      <label class="opt"><input type="radio" value="a"><span>On, at low power</span></label>
       <label class="opt"><input type="radio" value="b"><span>On, with a safety zone set</span></label>
       <label class="opt"><input type="radio" value="c"><span>Switched off, with the key out</span></label></div>
       <p class="why" hidden>Aim and lock the cube with it switched off and the key out. Then set the beam block.</p><p class="feedback"></p></fieldset>
@@ -715,19 +715,19 @@
       <p class="why" hidden>The Test Pattern list at the top of Projector Setup has a Square that shows the whole projection area.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Why trace an object in Draw with the laser on?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Draw can only save while it’s on</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Draw can only save a drawing while it’s on</span></label>
       <label class="opt"><input type="radio" value="b"><span>The cube shows each stroke as you draw</span></label>
       <label class="opt"><input type="radio" value="c"><span>Points used is counted only while it’s on</span></label></div>
       <p class="why" hidden>With the laser on, the cube shows each stroke as you draw it, so you trace the edges by watching the projection.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Draw shows 120% points used. What do you do?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Save it: the drawing is complete</span></label>
       <label class="opt"><input type="radio" value="b"><span>Raise its render quality to fit</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Simplify it: it’s too complex</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Simplify it: over 100% it’s too complex</span></label></div>
       <p class="why" hidden>Over 100% points used, the drawing is too complex: simplify it.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="phone" data-lesson="3"><legend><span class="qn"></span>In Draw on the phone, how do you see where a line will start?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Tap the save button twice</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Hold an arrow and slide a finger</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Hold an arrow and slide a finger over the canvas</span></label>
       <label class="opt"><input type="radio" value="c"><span>Tap the power button, then the canvas</span></label></div>
       <p class="why" hidden>Hold one of the arrow buttons and slide a finger over the canvas: a dot on your object shows the spot. Let go of the arrow, then draw.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="phone" data-lesson="3"><legend><span class="qn"></span>You made a playlist in the phone app. Where does it play from?</legend><div class="opts">
@@ -742,7 +742,7 @@
       <label class="opt"><input type="radio" value="c"><span>Simple Shapes</span></label></div>
       <p class="why" hidden>Add a Vertical Line, place it with Position and turn it with Fixed Rotation.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="beam" data-lesson="4"><legend><span class="qn"></span>You duplicate an edge line. What does the copy include?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Only the line, without effects</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Only the line</span></label>
       <label class="opt"><input type="radio" value="b"><span>Only its colour settings</span></label>
       <label class="opt"><input type="radio" value="c"><span>The line with all its effects</span></label></div>
       <p class="why" hidden>The duplicate button copies a layer with all its effects. The copy runs on top of the original until you change it.</p><p class="feedback"></p></fieldset>
@@ -754,7 +754,7 @@
 
     <fieldset class="check" data-answer="b" data-group="effects" data-lesson="5"><legend><span class="qn"></span>On a computer, which tabs does the effects panel have?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Image, Color, Beam and Draw</span></label>
-      <label class="opt"><input type="radio" value="b"><span>No Effect, Image, Color, Saved</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No Effect, Image, Color and Saved</span></label>
       <label class="opt"><input type="radio" value="c"><span>Movement, Strobe, Trace, Color</span></label></div>
       <p class="why" hidden>The effects panel on the right has No Effect, Image Effects, Color Effects and Saved Effects.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="effects" data-lesson="5"><legend><span class="qn"></span>In the phone app, where do you pick an effect?</legend><div class="opts">
@@ -764,7 +764,7 @@
       <p class="why" hidden>Tap the effect name at the top of the screen (No Effect) and pick one. The arrows next to it step through the effects.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="a" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>Your mapping flickers. What does the manual say to do with its render quality?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Lower it</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Lower it for that item</span></label>
       <label class="opt"><input type="radio" value="b"><span>Raise it</span></label>
       <label class="opt"><input type="radio" value="c"><span>Match it to the FPS</span></label></div>
       <p class="why" hidden>Lower the render quality if an item flickers. Raise it only if corners look rounded: that can add flicker.</p><p class="feedback"></p></fieldset>
@@ -781,12 +781,12 @@
 
     <fieldset class="check" data-answer="a" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Which kind of zone do you use for the area you’re mapping?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>A keep‑within zone</span></label>
-      <label class="opt"><input type="radio" value="b"><span>A keep‑out zone</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A keep‑out zone around the object</span></label>
       <label class="opt"><input type="radio" value="c"><span>Either: they work the same</span></label></div>
       <p class="why" hidden>A keep‑within zone is for the target area where the beams can safely end. A keep‑out zone keeps beams off something, such as a camera.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Can a safety zone make it OK for someone to stand in the beams?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Yes, with a keep‑out zone round them</span></label>
-      <label class="opt"><input type="radio" value="b"><span>No: never aim the laser at people</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No: the laser must never be aimed at people</span></label>
       <label class="opt"><input type="radio" value="c"><span>Yes, if attenuation is at 100%</span></label></div>
       <p class="why" hidden>Zones never protect people. A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Where a keep‑within and a keep‑out zone overlap, which wins?</legend><div class="opts">
@@ -801,7 +801,7 @@
       <label class="opt"><input type="radio" value="c"><span>None: they work only in LaserOS</span></label></div>
       <p class="why" hidden>In Playlist mode, the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS. Set them on the cube before you play.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="play" data-lesson="6"><legend><span class="qn"></span>What does Autoplay do?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Repeats one item without end</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Repeats one item over and over, without end</span></label>
       <label class="opt"><input type="radio" value="b"><span>Moves from item to item by itself</span></label>
       <label class="opt"><input type="radio" value="c"><span>Starts the laser once a cube is found</span></label></div>
       <p class="why" hidden>Autoplay moves from one item to the next by itself, with shuffle, repeat and a time per item.</p><p class="feedback"></p></fieldset>
