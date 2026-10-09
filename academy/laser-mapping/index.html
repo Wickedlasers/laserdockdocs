@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laser mapping with LaserOS · LaserCube Academy</title>
+<meta name="description" content="A free course for LaserCube Ultra MK2 and Pro owners: outline a real object with laser lines in LaserOS. Draw on a computer or a phone, lines along the edges in Beam Creator, effects, flicker, a safety zone for the target area and playback. Pass the quiz and download a certificate.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://wiki.laseros.com/academy/laser-mapping/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/academy/laser-mapping/">
+<meta property="og:title" content="Laser mapping with LaserOS">
+<meta property="og:description" content="A free LaserCube Academy course: outline a real object with laser lines from your Ultra MK2 or Pro, with LaserOS on a computer or a phone. Certificate at the end.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/inter/inter-latin.woff2" crossorigin>
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../academy.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="../../" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="true">Academy</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="../../#videos">Tutorials</a>
+      <a href="../../#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="../" aria-current="true">Academy</a>
+          <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="../../#videos">Tutorials</a>
+          <a href="../../#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" data-course="laser-mapping" data-version="1.0" data-title="Laser mapping with LaserOS" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
+
+  <section class="hero stage">
+    <div class="container">
+      <p class="label"><a href="../">LaserCube Academy</a> · Intermediate</p>
+      <h1>Laser mapping with LaserOS</h1>
+      <p class="lead">Six short lessons on outlining a real object with laser lines, such as a stack of boxes, a sign or a feature on a wall: setting up within the manual’s rules, tracing in Draw on a computer or a phone, lines that grow along the edges in Beam Creator, effects and flicker, a safety zone for the target area, and playing your mapping. Pass the final quiz and download your certificate.</p>
+      <ul class="meta">
+        <li><svg class="icon"><use href="#i-book"/></svg>6 lessons + quiz, about 35 minutes plus videos</li>
+        <li><svg class="icon"><use href="#i-cube"/></svg>Ultra MK2 &amp; Pro</li>
+        <li><svg class="icon"><use href="#i-user"/></svg>No account needed</li>
+        <li><svg class="icon"><use href="#i-award"/></svg>Free certificate</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-grid">
+
+      <aside class="toc" aria-label="Course contents">
+        <div class="progress js-progress js-only">
+          <div class="progress-bar"><span></span></div>
+          <p class="progress-text">0 of 6 lessons done</p>
+        </div>
+        <ol>
+          <li><a data-nav href="#overview"><span class="st" data-n="i">i</span>How this course works</a></li>
+          <li><a data-nav href="#lesson-1"><span class="st" data-n="1">1</span>Mapping, and how to set up for it</a></li>
+          <li><a data-nav href="#lesson-2"><span class="st" data-n="2">2</span>Trace an object in Draw</a></li>
+          <li><a data-nav href="#lesson-3"><span class="st" data-n="3">3</span>Draw on the phone</a></li>
+          <li><a data-nav href="#lesson-4"><span class="st" data-n="4">4</span>Lines along the edges in Beam Creator</a></li>
+          <li><a data-nav href="#lesson-5"><span class="st" data-n="5">5</span>Effects, flicker and render quality</a></li>
+          <li><a data-nav href="#lesson-6"><span class="st" data-n="6">6</span>A zone for the target, then play it</a></li>
+          <li><a data-nav href="#final"><span class="st" data-n="Q">Q</span>Final quiz</a></li>
+          <li><a data-nav href="#certificate"><span class="st" data-n="★">★</span>Your certificate</a></li>
+        </ol>
+      </aside>
+
+      <div class="lessons-col">
+        <details class="toc-phone js-only">
+          <summary><span>Course contents</span><span class="small js-progress"><span class="progress-text">0 of 6 lessons done</span></span></summary>
+          <div class="inner">
+            <div class="progress js-progress"><div class="progress-bar"><span></span></div></div>
+          </div>
+        </details>
+        <p class="no-js-only small">The questions, the final quiz and the certificate need JavaScript. Without it you can still read every lesson below.</p>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="view" id="overview" aria-labelledby="overview-h">
+  <p class="label">Before you start</p>
+  <h2 id="overview-h">How this course works</h2>
+  <p class="intro">Laser mapping means lining up laser lines with the edges of a real object, so the object is outlined in light. This course shows how to do it with LaserOS on a computer or a phone, using its Draw and Beam Creator tools.</p>
+  <h3>By the end you can</h3>
+  <ul class="points">
+    <li>set up for mapping within the manual’s rules: the beam block set, every beam ending in a restricted area, and every beam at least 3&nbsp;m above people;</li>
+    <li>trace an object’s edges in Draw, on a computer or a phone, and save the drawing;</li>
+    <li>light up edges one by one with lines in Beam Creator, and save them as a custom beam;</li>
+    <li>add effects, and deal with flicker and rounded corners;</li>
+    <li>put a keep‑within zone around the target area, and play your mapping from a playlist, with Autoplay or on the Timeline.</li>
+  </ul>
+  <h3>How the lessons work</h3>
+  <ul class="points">
+    <li>Each lesson takes about 5 minutes, plus any video. It has the key points and a few questions, and most have a video or pictures. Get a question wrong? Pick another answer.</li>
+    <li>Your progress is saved in this browser. There’s no account and nothing is sent to us. Clearing your browser data, or switching to another device, starts the course again.</li>
+    <li>When all six lessons are done, take the final quiz: 10 questions, 8 right to pass, as many tries as you need.</li>
+    <li>Pass, then download your certificate as a PDF or an image.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
+    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies whenever the laser is on: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+  </div>
+  <p>You need LaserOS on a computer (Windows or Mac) or a phone (iOS or Android), connected to your cube in LaserOS control mode, as in <a class="link" href="../start-here/#lesson-7">Start here, lesson 7</a>. Menus can differ slightly between LaserOS versions; the manual shows LaserOS 0.18.</p>
+  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#making-content-in-laseros">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its chapter “Making Content in LaserOS”, and our video tutorials. If a video and the manual differ, follow the manual.</p>
+  <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
+</section>
+
+<!-- ============ LESSON 1 ============ -->
+<section class="view lesson" id="lesson-1" aria-labelledby="l1-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 1 of 6</p>
+  <h2 id="l1-h">Mapping, and how to set up for it</h2>
+  <p class="intro">Mapping lines up laser lines with the edges of a real object: a stack of boxes, a sign, a feature on a wall. The object is where the beams end, so the set‑up follows the same rules as any show.</p>
+
+  <h3>Ways to map</h3>
+  <ul class="points">
+    <li><strong>Draw</strong> (lessons 2 and 3): with the laser on, the cube shows each stroke as you draw it, so you trace the object’s edges by watching the projection. The manual calls it the simplest way to map an object. It’s in LaserOS on a computer and on the phone.</li>
+    <li><strong>Beam Creator</strong> (lesson 4): each edge gets its own line, and each line can have its own effects, for example growing along the edge. It takes longer than Draw.</li>
+    <li><strong>MadMapper:</strong> for more advanced mapping, the LaserCube also works with MadMapper, one of the third‑party programs that run with the cube in LaserOS control mode. This course doesn’t cover it.</li>
+  </ul>
+
+  <h3>Set up within the manual’s rules</h3>
+  <ul class="points">
+    <li>Aim the cube at the object and lock it in place with the cube switched off and the key out. Then set the beam block as in <a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>, so no beam can reach an audience area.</li>
+    <li>The object stands in a <strong>restricted area</strong>: a place where nobody may be. Every beam has to end there, not be reflected away. Keep at least 3&nbsp;m (10&nbsp;ft) between the restricted area and any place people may be, on all sides.</li>
+    <li>Wherever people may be, every beam stays <strong>at least 3&nbsp;m (10&nbsp;ft) above the floor</strong>, measured from the highest place someone could stand.</li>
+    <li>Beams must end on something solid that doesn’t reflect and doesn’t burn. Never map mirrors, windows or glass, chrome, glossy panels or mirror balls, trees and bushes, or roads, cars and other vehicles, and never aim into the open sky.</li>
+    <li>Don’t stand in front of the cube while it’s on: work from beside or behind it.</li>
+  </ul>
+
+  <h3>The projection area in LaserOS</h3>
+  <p>In LaserOS, Settings → Projector Setup → <strong>Image</strong> sets the size and position of the whole picture: Zoom X and Y, Position X and Y, Rotate, Flip X and Y, and the keystone corners. In the phone app, tap the gear at the top right, then Image Setup on the Projector Setup page. The Test Pattern list at the top of Projector Setup has a <strong>Square</strong> that shows the whole projection area. The beam block and the 3&nbsp;m rule apply whatever the picture’s size and position.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <p>Three set‑ups. Is it OK to go ahead? Decide, then read why.</p>
+    <div class="scenarios">
+      <div class="scenario" data-answer="yes">
+        <p class="s">Three white boxes stand at the back of a stage that’s closed to everyone during the show, more than 3&nbsp;m from the nearest guest. The beam block is set, and every beam ends on the boxes or on the brick wall behind them.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>The boxes are in a restricted area with a 3&nbsp;m buffer, every beam ends on a solid surface there, and the beam block is set.</p>
+        <p class="hint" hidden>Where do the beams end, and how far is that from people?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="scenario" data-answer="no">
+        <p class="s">At a product launch, the client wants the outline of a new car drawn in laser lines.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>Never aim the laser at cars or other vehicles. The cube’s own label says so too.</p>
+        <p class="hint" hidden>Check the list of things a beam must never be aimed at.</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="scenario" data-answer="no">
+        <p class="s">The sign you want to outline is polished chrome, so the lines would look extra bright on it.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>Chrome reflects the beams. Every beam has to end, not be reflected away, and reflected light can injure eyes too.</p>
+        <p class="hint" hidden>What happens to a beam that hits a shiny surface?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </div>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>Which way of mapping does the manual call the simplest?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q1" value="a"><span>Draw, in LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="b"><span>Beam Creator, in LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="c"><span>MadMapper, a separate program</span></label>
+      </div>
+      <p class="why" hidden>With the laser on, Draw shows each stroke on the object as you draw it. Beam Creator takes longer; MadMapper is for more advanced mapping.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>You’re aiming the cube at the boxes. How should the cube be while you do that?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q2" value="a"><span>On, with the beams at low power</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="b"><span>On, with a safety zone set</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="c"><span>Switched off, with the key out</span></label>
+      </div>
+      <p class="why" hidden>Aim and lock the cube with it switched off and the key out. Then set the beam block.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>Which LaserOS test pattern shows the whole projection area?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q3" value="a"><span>Circle</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="b"><span>Square</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="c"><span>Grid</span></label>
+      </div>
+      <p class="why" hidden>The Test Pattern list at the top of Projector Setup has a Square that shows the whole projection area.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#draw-and-simple-mapping">Draw and simple mapping</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#image-settings-in-laseros">Image settings in LaserOS</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 2.</p>
+  <nav class="pager" aria-label="Lesson 1: back and next"><a data-nav href="#overview"><span>Back</span>How this course works</a><a class="next" data-nav href="#lesson-2"><span>Next</span>Trace an object in Draw</a></nav>
+</section>
+
+<!-- ============ LESSON 2 ============ -->
+<section class="view lesson" id="lesson-2" aria-labelledby="l2-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 2 of 6</p>
+  <h2 id="l2-h">Trace an object in Draw</h2>
+  <p class="intro">Draw lets you draw lines and shapes for the cube to project. With the laser on, the cube shows each stroke as you draw it, so you can trace the edges of a real object by watching the projection.</p>
+
+  <div class="video" data-yt="PoBVGtN1-tg" data-from="8" data-title="3 cool ways to do a laser mapping with LaserCube">
+    <button type="button" aria-label="Play video: three ways to map with a LaserCube, from the Draw part"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/PoBVGtN1-tg.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Three ways to map with a LaserCube: the Draw part</span><a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=8s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <p class="small video-note">It goes on to effects, Draw on the phone and Beam Creator (lessons 3 to 5). Its last part shows MadMapper, which this course doesn’t cover.</p>
+
+  <h3>The Laser button</h3>
+  <p>On a computer, the Laser button at the top left shows whether LaserOS can send to a cube:</p>
+  <ul class="points">
+    <li><strong>NO LASER:</strong> LaserOS hasn’t found a cube.</li>
+    <li><strong>LASER OFF</strong>, with a red power symbol: a cube is found and the laser is off. Click the button to start.</li>
+    <li><strong>LASER ON:</strong> LaserOS is projecting. Click the button, or press Esc, to stop.</li>
+    <li>The cube projects only when it’s armed: interlock closed and key on, and with an E‑Stop connected, the E‑Stop started.</li>
+  </ul>
+
+  <h3>Draw’s tools</h3>
+  <ul class="points">
+    <li><strong>Tools</strong>, the icons left of the canvas: freehand, straight line, Bezier curve, rectangle, ellipse, text and move.</li>
+    <li><strong>Color:</strong> pick a colour above the canvas.</li>
+    <li><strong>Points used:</strong> how many points the drawing needs, as a percentage. Over 100% the drawing is too complex: simplify it.</li>
+    <li><strong>Save:</strong> Save Drawing asks for a name and keeps the drawing in Playlists → Drawings.</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/laseros-draw-mapping.jpg" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-draw-mapping-1286.webp" alt="LaserOS Draw on a computer, from the manual: the outline of three stacked boxes drawn on the canvas with the straight-line tool, 66% points used, and a message that the drawing has been saved in Playlists, Drawings. The camera view at the bottom left shows the same coloured lines on the edges of the real boxes." width="1286" height="724" loading="lazy"></a>
+    <figcaption>Draw on a computer: the outline on the canvas, and the same lines on the real boxes. Select the picture to open it full size in a new tab.</figcaption>
+  </figure>
+
+  <h3>Trace an object, step by step</h3>
+  <ol class="points">
+    <li>Set up as in lesson 1, then start the laser with the Laser button.</li>
+    <li>Open Draw and pick the straight‑line tool.</li>
+    <li>Draw along each edge of the object while you watch the projection: the cube shows each stroke as you draw it.</li>
+    <li>Keep Points used under 100%.</li>
+    <li>Save the drawing under a name. It goes to Playlists → Drawings.</li>
+  </ol>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the steps for tracing an object in Draw in order.</p>
+      <ol>
+        <li>Aim the cube with it off and the key out, then set the beam block</li>
+        <li>Start the laser with the Laser button in LaserOS</li>
+        <li>Draw along each edge while you watch the projection</li>
+        <li>Save the drawing under a name</li>
+      </ol>
+      <p class="why" hidden>Set up first, with the cube off. Then start the laser, trace each edge while you watch the object, and save: the drawing goes to Playlists → Drawings.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>LaserOS’s Laser button reads NO LASER. What does it mean?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q1" value="a"><span>The laser is on, but blanked</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="b"><span>LaserOS hasn’t found a cube</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="c"><span>The drawing is too complex</span></label>
+      </div>
+      <p class="why" hidden>NO LASER means LaserOS hasn’t found a cube. LASER OFF means a cube is found and the laser is off.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Draw shows 112% points used. What does that tell you?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q2" value="a"><span>It’s too complex: simplify it</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="b"><span>It’s saved and ready to play</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="c"><span>It’s brighter than the cube allows</span></label>
+      </div>
+      <p class="why" hidden>Over 100% points used, the drawing is too complex: simplify it.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Where does Save Drawing keep your drawing?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q3" value="a"><span>Playlists → Custom Beams</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="b"><span>Playlists → Imported</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="c"><span>Playlists → Drawings</span></label>
+      </div>
+      <p class="why" hidden>Drawings go to Playlists → Drawings. Beam Creator designs go to Custom Beams.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#draw-and-simple-mapping">Draw and simple mapping</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laser-button">The Laser button</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#where-your-content-is-saved">Where your content is saved</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 3.</p>
+  <nav class="pager" aria-label="Lesson 2: back and next"><a data-nav href="#lesson-1"><span>Back</span>Mapping, and how to set up for it</a><a class="next" data-nav href="#lesson-3"><span>Next</span>Draw on the phone</a></nav>
+</section>
+
+<!-- ============ LESSON 3 ============ -->
+<section class="view lesson" id="lesson-3" aria-labelledby="l3-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 3 of 6</p>
+  <h2 id="l3-h">Draw on the phone</h2>
+  <p class="intro">The LaserOS phone app has Draw too, with the same tools, so you can map an object from your phone.</p>
+
+  <div class="video" data-yt="PoBVGtN1-tg" data-from="65" data-title="3 cool ways to do a laser mapping with LaserCube">
+    <button type="button" aria-label="Play video: three ways to map with a LaserCube, from Draw on the phone"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/PoBVGtN1-tg.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Three ways to map with a LaserCube: Draw on the phone</span><a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=65s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>See where a line will start</h3>
+  <p>To see where a line will start, hold one of the arrow buttons (at the bottom of the Draw screen, either side of the power button) and slide a finger over the canvas: a dot on your object shows the spot. Let go of the arrow, then draw.</p>
+
+  <h3>Around the phone app</h3>
+  <ul class="points">
+    <li>The power button is in the middle of the bottom bar: red when the projection is off, blue when it’s on.</li>
+    <li>Draw on the phone has the same tools and colours, a Points used counter and a save button. Your drawings are kept in Playlists → Drawings.</li>
+    <li>A playlist made on the phone plays from the phone. To put a playlist on the cube’s SD card, you need LaserOS on a computer.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the steps for seeing where a line will start in order.</p>
+      <ol>
+        <li>Hold one of the arrow buttons</li>
+        <li>Slide a finger over the canvas</li>
+        <li>Find the dot on your object</li>
+        <li>Let go of the arrow, then draw</li>
+      </ol>
+      <p class="why" hidden>While you hold an arrow, your finger on the canvas moves a dot on the object. Let go of the arrow, then draw from that spot.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>In the phone app, the power button in the bottom bar is red. What does it mean?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q1" value="a"><span>The laser is projecting</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="b"><span>The cube’s battery is low</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="c"><span>The projection is off</span></label>
+      </div>
+      <p class="why" hidden>Red means the projection is off; blue means it’s on.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Can the phone app put a playlist on the cube’s SD card?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>No: that needs LaserOS on a computer</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="b"><span>Yes: from the Add to playlist menu</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="c"><span>Yes: over the cube’s own WiFi network</span></label>
+      </div>
+      <p class="why" hidden>A playlist made on the phone plays from the phone. Putting a playlist on the SD card needs LaserOS on a computer.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#drawing-on-the-phone">Drawing on the phone</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laser-button">The Laser button</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-to-a-playlist">Adding to a playlist</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 4.</p>
+  <nav class="pager" aria-label="Lesson 3: back and next"><a data-nav href="#lesson-2"><span>Back</span>Trace an object in Draw</a><a class="next" data-nav href="#lesson-4"><span>Next</span>Lines along the edges in Beam Creator</a></nav>
+</section>
+
+<!-- ============ LESSON 4 ============ -->
+<section class="view lesson" id="lesson-4" aria-labelledby="l4-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 4 of 6</p>
+  <h2 id="l4-h">Lines along the edges in Beam Creator</h2>
+  <p class="intro">Mapping with Beam Creator takes longer than with Draw, but each line can have its own effects: a line can grow along its edge and change colour. This lesson follows the manual’s example, the edges of a stack of boxes.</p>
+
+  <div class="video" data-yt="PoBVGtN1-tg" data-from="85" data-title="3 cool ways to do a laser mapping with LaserCube">
+    <button type="button" aria-label="Play video: three ways to map with a LaserCube, from the Beam Creator part"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/PoBVGtN1-tg.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Three ways to map with a LaserCube: the Beam Creator part</span><a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=85s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Beam Creator in short</h3>
+  <ul class="points">
+    <li>Open Beam Creator in LaserOS on a computer. Pick a pattern under Beam Pattern and click the + next to it. Each pattern you add is a layer.</li>
+    <li>Each layer has buttons to delete it, duplicate it and switch it on or off, and + Effect to add effects. The effects on a layer can be moved up or down and switched off.</li>
+    <li>A Vertical Line has Num Sections, Width, Brightness, Line Border and the line’s colour. Leave Brightness at 1: it draws the line several times over, which is harder for the cube and may flicker.</li>
+    <li>With the laser on, the cube projects your design as you build it, so you can match each line to its edge.</li>
+    <li>To set a value exactly, right‑click the slider and type it.</li>
+  </ul>
+
+  <div class="two parts">
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-beam-creator-effects-640.webp" alt="The + Effect list in Beam Creator, from the manual: Simple Paths, Position, Random Position, Fixed Rotation, Movement, Variable Rotation, Scale, Power Fader, Strobe and Color Sequence." width="640" height="570" loading="lazy">
+      <figcaption>The + Effect list.</figcaption>
+    </figure>
+    <div>
+      <p><strong>Four effects for an edge</strong></p>
+      <ul class="points">
+        <li><strong>Position:</strong> Offset X and Y place the line.</li>
+        <li><strong>Fixed Rotation:</strong> turns it to a fixed angle (X, Y and Z angle), to match the edge.</li>
+        <li><strong>Scale:</strong> grows or shrinks it, for example from 0.0 to 1.0.</li>
+        <li><strong>Color Sequence:</strong> steps through a number of colours.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The manual’s example: box edges</h3>
+  <ol class="points">
+    <li>Add a Vertical Line.</li>
+    <li>Place it on an edge with Position, and turn it to the edge’s angle with Fixed Rotation.</li>
+    <li>Add Scale (Scale start->end, from 0.0 to 1.0) so the line grows along the edge, and Color Sequence to change its colours.</li>
+    <li>Duplicate the line for the next edge and adjust it. The duplicate button copies a layer with all its effects; the copy runs exactly on top of the original until you change it.</li>
+    <li>Save it as a custom beam: click the save icon, and Save Custom Beam asks for a name and keeps the design in Playlists → Custom Beams.</li>
+  </ol>
+
+  <h3>Timing in frames</h3>
+  <p>Beam Creator counts time in frames. Target FPS, at the top, sets how many frames make one second: at the default 60, an effect of 60 frames takes one second and one of 120 frames takes two. Fewer frames make an effect faster, more frames slower. In the video, Scale grows each line over 60 frames: one second.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the manual’s steps for mapping box edges in order.</p>
+      <ol>
+        <li>Add a Vertical Line</li>
+        <li>Place it with Position and turn it with Fixed Rotation</li>
+        <li>Add Scale and Color Sequence</li>
+        <li>Duplicate it for the next edge and adjust it</li>
+        <li>Save it as a custom beam</li>
+      </ol>
+      <p class="why" hidden>One line per edge: place and turn it, make it grow and change colour, duplicate it for the next edge, then save the design as a custom beam.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Which effect turns a line to the angle of a sloping edge?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q1" value="a"><span>Variable Rotation</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="b"><span>Fixed Rotation</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="c"><span>Position</span></label>
+      </div>
+      <p class="why" hidden>Fixed Rotation turns the pattern to a fixed angle. Variable Rotation spins it; Position moves it.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>An edge line has Scale from 0.0 to 1.0. What do you see?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q2" value="a"><span>The line grows along the edge</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="b"><span>The line spins round its centre</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="c"><span>The line steps through colours</span></label>
+      </div>
+      <p class="why" hidden>Scale grows or shrinks the pattern: from 0.0 to 1.0, the line grows to its full length. Color Sequence changes the colours.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Target FPS is 60. How long does an effect of 120 frames take?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q3" value="a"><span>Half a second</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="b"><span>One second</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="c"><span>Two seconds</span></label>
+      </div>
+      <p class="why" hidden>At 60 FPS, 60 frames take one second, so 120 frames take two.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#beam-creator">Beam Creator</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#beam-creator-effects">Beam Creator effects</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#timing-in-frames">Timing in frames</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#copies-mirrors-and-exact-values">Copies and exact values</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#example-mapping-box-edges">Example: mapping box edges</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 5.</p>
+  <nav class="pager" aria-label="Lesson 4: back and next"><a data-nav href="#lesson-3"><span>Back</span>Draw on the phone</a><a class="next" data-nav href="#lesson-5"><span>Next</span>Effects, flicker and render quality</a></nav>
+</section>
+
+<!-- ============ LESSON 5 ============ -->
+<section class="view lesson" id="lesson-5" aria-labelledby="l5-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 5 of 6</p>
+  <h2 id="l5-h">Effects, flicker and render quality</h2>
+  <p class="intro">LaserOS’s effects play on top of whatever is showing, your mapping included. But the more detail you add, the more points the scanners have to draw, and too many make it flicker.</p>
+
+  <div class="video" data-yt="PoBVGtN1-tg" data-from="40" data-title="3 cool ways to do a laser mapping with LaserCube">
+    <button type="button" aria-label="Play video: three ways to map with a LaserCube, from the effects on a drawing"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/PoBVGtN1-tg.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Three ways to map with a LaserCube: effects on a drawing</span><a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=40s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Effects</h3>
+  <ul class="points">
+    <li>On a computer, the effects panel on the right has four tabs: No Effect, Image Effects, Color Effects and Saved Effects. An effect plays on top of whatever is showing: a drawing, a Beam Creator design, an animation or your logo.</li>
+    <li>The left panel shows the effect in use, with a button to reset it.</li>
+    <li>In the phone app, tap the effect name at the top of the screen (No Effect) and pick one. The arrows next to the name step through the effects.</li>
+  </ul>
+
+  <h3>Why mapping can flicker</h3>
+  <p>The scanners can draw only so many points per second. Content with too much detail flickers, or looks distorted with rounded corners. To check, turn on <strong>Show FPS in simulator window</strong> in Settings → General: 45 FPS or more won’t appear to flicker.</p>
+
+  <h3>What helps</h3>
+  <ul class="points">
+    <li><strong>Render quality:</strong> lower it if the item flickers; raise it if corners look rounded, which can add flicker. On a computer, right‑click the item and turn on Assign Render Quality. In the phone app, tap the gear in the player bar, turn on Assign Quality and move Render Quality.</li>
+    <li><strong>Simplify it:</strong> in Draw, keep Points used under 100%; in Beam Creator, keep Brightness at 1.</li>
+    <li><strong>Make the picture smaller</strong>, or split it over more than one cube.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>Does a LaserOS effect work on your saved drawing?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>No, only on animations</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="b"><span>No, only on your logo</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Yes, on whatever shows</span></label>
+      </div>
+      <p class="why" hidden>An effect plays on top of whatever is showing: drawings and Beam Creator designs too.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Your mapped outline flickers. What does the manual say about its render quality?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q2" value="a"><span>Lower it</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="b"><span>Raise it</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="c"><span>Match it to the FPS</span></label>
+      </div>
+      <p class="why" hidden>Lower the render quality if an item flickers. Raise it only if corners look rounded: that can add flicker.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>With Show FPS on, your mapping runs at 50 FPS. Will it appear to flicker?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q3" value="a"><span>Yes: it needs 60 FPS or more</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="b"><span>No: 45 FPS or more won’t</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="c"><span>Yes: it needs 100 FPS or more</span></label>
+      </div>
+      <p class="why" hidden>45 FPS or more won’t appear to flicker.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#laseros-effects">LaserOS effects</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#flicker-and-render-quality">Flicker and render quality</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-a-custom-svg-to-the-playlist">Render quality on a playlist item</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 6.</p>
+  <nav class="pager" aria-label="Lesson 5: back and next"><a data-nav href="#lesson-4"><span>Back</span>Lines along the edges in Beam Creator</a><a class="next" data-nav href="#lesson-6"><span>Next</span>A zone for the target, then play it</a></nav>
+</section>
+
+<!-- ============ LESSON 6 ============ -->
+<section class="view lesson" id="lesson-6" aria-labelledby="l6-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 6 of 6</p>
+  <h2 id="l6-h">A zone for the target, then play it</h2>
+  <p class="intro">Before the show, put a keep‑within zone around the area you’re mapping. Then play your mapping from a playlist, with Autoplay, or on the Timeline.</p>
+
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Zones never protect people</span>
+    <p>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them. The laser must never be aimed at people, and a zone doesn’t change that.</p>
+  </div>
+
+  <h3>A keep‑within zone in LaserOS</h3>
+  <p>In LaserOS control mode, LaserOS handles the safety zone, and the cube greys out its own entries. On a computer, open Settings → Projector Setup and choose <strong>Safety Zones</strong> in the drop‑down at the top. In the phone app, tap the gear at the top right, then Safety Zone on the Projector Setup page.</p>
+  <ul class="points">
+    <li><strong>Attenuation Zones</strong> switches the zones on. <strong>Preview</strong> projects their outline.</li>
+    <li><strong>Shape:</strong> Rectangle, Ellipse, Triangle, Diamond, or one of four corners.</li>
+    <li><strong>Invert Zones</strong> off: a keep‑within zone with a green outline, and beams outside it are reduced. On: a keep‑out zone with a red outline, and beams inside it are reduced. Where zones overlap, red has priority over green.</li>
+    <li><strong>Attenuation:</strong> how much the beams are reduced. 100% blanks them completely; 90% leaves 10% of their normal power.</li>
+    <li><strong>X and Y</strong> place the zone, <strong>Width and Height</strong> size it. Add makes another zone, Next and Previous choose which one the sliders change, and Remove current deletes it. Import and Export load and save the zone settings.</li>
+  </ul>
+  <p>Use a keep‑within zone for the target area, such as the object you’re mapping, where the beams can safely end. Use a keep‑out zone to keep beams off a camera, a video projector or an object.</p>
+  <figure class="dark">
+    <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/1000000000000526000001B755B18CD7-1148.webp" alt="A theatre seen from the stage, twice. Left: a green keep-within rectangle on the front of the balcony at the back of the hall. Right: the laser show drawn only inside that rectangle." width="1148" height="382" loading="lazy">
+    <figcaption>Keep‑within, from the manual: the show stays inside the green box.</figcaption>
+  </figure>
+
+  <h3>Play your mapping</h3>
+  <ul class="points">
+    <li>Your drawings are in Playlists → Drawings, and your Beam Creator designs in Playlists → Custom Beams.</li>
+    <li>To add one to your own playlist on a computer, right‑click it and use Add to playlist. In the phone app, touch and hold it, open Add to playlist, pick a playlist (or Create new playlist), then tap Add.</li>
+    <li><strong>Autoplay</strong> moves from one item to the next by itself. Its buttons are under the preview on a computer and in the bottom bar on the phone: shuffle, repeat and the time per item. Click the time to set it in seconds or beats.</li>
+    <li>The <strong>Timeline</strong> builds a show to a song, with one layer per cube. Drag a custom beam from Playlists onto a layer, under the song’s waveform. The song must be a WAV file: 44.1&nbsp;kHz, 16‑bit, stereo.</li>
+    <li><strong>To play it without a computer:</strong> export the playlist to the cube’s SD card with LaserOS on a computer (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>), then play it in Playlist mode. There the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS: set them on the cube before you play.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <p>Two situations. Is it OK to go ahead? Decide, then read why.</p>
+    <div class="scenarios">
+      <div class="scenario" data-answer="no">
+        <p class="s">A friend wants to stand in front of the boxes during the show. You add a keep‑out zone around the spot, so the beams skip them.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>Never aim the laser at people. A zone never protects people: it works on top of the beam block and the 3&nbsp;m rule, never instead of them.</p>
+        <p class="hint" hidden>Can a zone make it OK for someone to stand in front of the laser?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="scenario" data-answer="yes">
+        <p class="s">The beam block is set, and every beam ends on the boxes or the wall behind them, in a closed‑off area more than 3&nbsp;m from where guests stand. You add a keep‑within zone around the boxes.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>That’s what a keep‑within zone is for: the target area where the beams end, on top of the beam block and the 3&nbsp;m rule.</p>
+        <p class="hint" hidden>Is the zone used on top of the other rules, or instead of them?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Invert Zones is off. Which zone is it, and what colour is its outline?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q1" value="a"><span>Keep‑out, red</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="b"><span>Keep‑within, green</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="c"><span>Keep‑within, white</span></label>
+      </div>
+      <p class="why" hidden>With Invert Zones off, the zone is a keep‑within zone with a green outline: beams outside it are reduced.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>You play your exported mapping on the cube in Playlist mode. Which safety zone applies?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q2" value="a"><span>The one set on the cube itself</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="b"><span>The one you set in LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="c"><span>None: zones work only in LaserOS</span></label>
+      </div>
+      <p class="why" hidden>In Playlist mode, the cube’s own Image Setup and Safety Zone apply. Set them on the cube before you play.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zones-in-laseros">Safety zones in LaserOS</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zone">Safety zone on the cube</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-to-a-playlist">Adding to a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#autoplay">Autoplay</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laseros-timeline">The Timeline</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#playing-your-content-on-the-cube">Playing your content on the cube</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> Next: the final quiz.</p>
+  <nav class="pager" aria-label="Lesson 6: back and next"><a data-nav href="#lesson-5"><span>Back</span>Effects, flicker and render quality</a><a class="next" data-nav href="#final"><span>Next</span>Final quiz</a></nav>
+</section>
+
+<!-- ============ FINAL QUIZ ============ -->
+<section class="view" id="final" aria-labelledby="final-h" data-pick="10" data-pass="8">
+  <p class="label">Final quiz</p>
+  <h2 id="final-h">Final quiz</h2>
+  <p class="intro">10 questions picked at random, one from each of the course’s 10 topics. Get 8 right to pass. You can try as many times as you like.</p>
+
+  <div class="locked-msg" id="final-locked" hidden>
+    <p><strong>Finish all six lessons first.</strong> Still to do:</p>
+    <ul></ul>
+  </div>
+
+  <form id="quiz-form" class="js-only" novalidate hidden>
+    <div id="quiz-list"></div>
+    <p class="feedback is-wrong" id="quiz-msg" aria-live="polite"></p>
+    <div class="btn-row"><button class="btn solid" type="submit">Check my answers</button></div>
+  </form>
+  <div id="quiz-result" class="result" hidden></div>
+
+  <div class="bank" hidden>
+    <fieldset class="check" data-answer="a" data-group="rules" data-lesson="1"><legend><span class="qn"></span>Where must every beam end when you map an object?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In a restricted area, where nobody may be</span></label>
+      <label class="opt"><input type="radio" value="b"><span>On any surface more than 2&nbsp;m off the floor</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Wherever the LaserOS safety zone allows it</span></label></div>
+      <p class="why" hidden>Every beam has to end in a restricted area, with at least 3&nbsp;m between it and any place people may be, on all sides.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="rules" data-lesson="1"><legend><span class="qn"></span>Where people may be, how high must every beam stay?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>At least 2&nbsp;m (6.5&nbsp;ft) above the floor</span></label>
+      <label class="opt"><input type="radio" value="b"><span>At least 3&nbsp;m (10&nbsp;ft) above the floor</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Just above the tallest person’s head</span></label></div>
+      <p class="why" hidden>At least 3&nbsp;m (10&nbsp;ft), measured from the highest place someone could stand.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="rules" data-lesson="1"><legend><span class="qn"></span>You trace edges with the laser on. Where do you stand?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In front of the cube, facing the object</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Next to the object, to see it better</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Beside or behind the cube</span></label></div>
+      <p class="why" hidden>Don’t stand in front of the cube while it’s on: work from beside or behind it.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Which of these must never be a mapping target?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A brick wall</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A parked car</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A projection screen</span></label></div>
+      <p class="why" hidden>Never aim the laser at cars or other vehicles. A brick wall and a projection screen are good places for beams to end.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Why not outline a polished chrome sign?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>It reflects the beams</span></label>
+      <label class="opt"><input type="radio" value="b"><span>It absorbs the colours</span></label>
+      <label class="opt"><input type="radio" value="c"><span>It’s too small to see</span></label></div>
+      <p class="why" hidden>Shiny surfaces reflect the beams. Every beam has to end, not be reflected away, and reflected light can injure eyes too.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="setup" data-lesson="1"><legend><span class="qn"></span>How should the cube be while you aim it at the object?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>On, with the beams at low power</span></label>
+      <label class="opt"><input type="radio" value="b"><span>On, with a safety zone set</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Switched off, with the key out</span></label></div>
+      <p class="why" hidden>Aim and lock the cube with it switched off and the key out. Then set the beam block.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="setup" data-lesson="1"><legend><span class="qn"></span>In LaserOS, which test pattern shows the whole projection area?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Square</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Circle</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Grid</span></label></div>
+      <p class="why" hidden>The Test Pattern list at the top of Projector Setup has a Square that shows the whole projection area.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Why trace an object in Draw with the laser on?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Draw can only save while it’s on</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The cube shows each stroke as you draw</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Points used is counted only while it’s on</span></label></div>
+      <p class="why" hidden>With the laser on, the cube shows each stroke as you draw it, so you trace the edges by watching the projection.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Draw shows 120% points used. What do you do?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Save it: the drawing is complete</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Raise its render quality to fit</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Simplify it: it’s too complex</span></label></div>
+      <p class="why" hidden>Over 100% points used, the drawing is too complex: simplify it.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="phone" data-lesson="3"><legend><span class="qn"></span>In Draw on the phone, how do you see where a line will start?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Tap the save button twice</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Hold an arrow and slide a finger</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Tap the power button, then the canvas</span></label></div>
+      <p class="why" hidden>Hold one of the arrow buttons and slide a finger over the canvas: a dot on your object shows the spot. Let go of the arrow, then draw.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="phone" data-lesson="3"><legend><span class="qn"></span>You made a playlist in the phone app. Where does it play from?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>From the cube’s SD card</span></label>
+      <label class="opt"><input type="radio" value="b"><span>From the cube’s web app</span></label>
+      <label class="opt"><input type="radio" value="c"><span>From the phone</span></label></div>
+      <p class="why" hidden>A playlist made on the phone plays from the phone. Putting a playlist on the SD card needs LaserOS on a computer.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="beam" data-lesson="4"><legend><span class="qn"></span>Which pattern does the manual’s box‑edge example start with?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Vertical Line</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Horizontal Beams</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Simple Shapes</span></label></div>
+      <p class="why" hidden>Add a Vertical Line, place it with Position and turn it with Fixed Rotation.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="beam" data-lesson="4"><legend><span class="qn"></span>You duplicate an edge line. What does the copy include?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Only the line, without effects</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Only its colour settings</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The line with all its effects</span></label></div>
+      <p class="why" hidden>The duplicate button copies a layer with all its effects. The copy runs on top of the original until you change it.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="beam" data-lesson="4"><legend><span class="qn"></span>Where does Save Custom Beam keep your design?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Playlists → Drawings</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Playlists → Custom Beams</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Timeline → Demo Timelines</span></label></div>
+      <p class="why" hidden>Custom beams go to Playlists → Custom Beams. From there you can drag them onto the Timeline.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="effects" data-lesson="5"><legend><span class="qn"></span>On a computer, which tabs does the effects panel have?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Image, Color, Beam and Draw</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No Effect, Image, Color, Saved</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Movement, Strobe, Trace, Color</span></label></div>
+      <p class="why" hidden>The effects panel on the right has No Effect, Image Effects, Color Effects and Saved Effects.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="effects" data-lesson="5"><legend><span class="qn"></span>In the phone app, where do you pick an effect?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>On the Draw screen’s tool row</span></label>
+      <label class="opt"><input type="radio" value="b"><span>On the power button, held down</span></label>
+      <label class="opt"><input type="radio" value="c"><span>On the effect name at the top</span></label></div>
+      <p class="why" hidden>Tap the effect name at the top of the screen (No Effect) and pick one. The arrows next to it step through the effects.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>Your mapping flickers. What does the manual say to do with its render quality?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Lower it</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Raise it</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Match it to the FPS</span></label></div>
+      <p class="why" hidden>Lower the render quality if an item flickers. Raise it only if corners look rounded: that can add flicker.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>Show FPS reads 50 for your mapping. Will it appear to flicker?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes: it needs 60 FPS or more</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No: 45 FPS or more won’t</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Yes: it needs 100 FPS or more</span></label></div>
+      <p class="why" hidden>45 FPS or more won’t appear to flicker.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>The corners of your drawing look rounded. What can help?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Lowering its render quality</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Adding a colour effect</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Raising its render quality</span></label></div>
+      <p class="why" hidden>Raise the render quality if corners look rounded; that can add flicker.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Which kind of zone do you use for the area you’re mapping?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A keep‑within zone</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A keep‑out zone</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Either: they work the same</span></label></div>
+      <p class="why" hidden>A keep‑within zone is for the target area where the beams can safely end. A keep‑out zone keeps beams off something, such as a camera.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Can a safety zone make it OK for someone to stand in the beams?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes, with a keep‑out zone round them</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No: never aim the laser at people</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Yes, if attenuation is at 100%</span></label></div>
+      <p class="why" hidden>Zones never protect people. A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Where a keep‑within and a keep‑out zone overlap, which wins?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The green keep‑within</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The one added first</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The red keep‑out</span></label></div>
+      <p class="why" hidden>Where zones overlap, red (keep‑out) has priority over green (keep‑within).</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="play" data-lesson="6"><legend><span class="qn"></span>You play your exported mapping in Playlist mode. Which Image Setup and Safety Zone apply?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The cube’s own, set on the cube</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The ones you set in LaserOS</span></label>
+      <label class="opt"><input type="radio" value="c"><span>None: they work only in LaserOS</span></label></div>
+      <p class="why" hidden>In Playlist mode, the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS. Set them on the cube before you play.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="play" data-lesson="6"><legend><span class="qn"></span>What does Autoplay do?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Repeats one item without end</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Moves from item to item by itself</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Starts the laser once a cube is found</span></label></div>
+      <p class="why" hidden>Autoplay moves from one item to the next by itself, with shuffle, repeat and a time per item.</p><p class="feedback"></p></fieldset>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATE ============ -->
+<section class="view" id="certificate" aria-labelledby="cert-h">
+  <p class="label">Certificate</p>
+  <h2 id="cert-h">Your certificate</h2>
+  <div id="cert-locked" class="locked-msg">
+    <p><strong>Pass the final quiz to get your certificate.</strong> <a class="link" href="#final">Go to the final quiz</a></p>
+  </div>
+  <div id="cert-ready" hidden>
+    <p class="intro">Well done. Type your name as you want it on the certificate.</p>
+    <p class="small">Your certificate is made right here in your browser. Your name isn’t sent anywhere; it’s only kept in this browser.</p>
+    <form id="cert-form" class="cert-form" novalidate>
+      <label><span>Name on the certificate</span><input id="cert-name" type="text" maxlength="60" autocomplete="name" spellcheck="false"></label>
+      <button class="btn solid" type="submit">Make my certificate</button>
+    </form>
+    <p class="feedback is-wrong" id="cert-msg" aria-live="polite"></p>
+    <div id="cert-out" hidden>
+      <div class="cert-preview"><img id="cert-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your LaserCube Academy certificate" width="3508" height="2480"><canvas id="cert-canvas" width="1123" height="794" hidden></canvas></div>
+      <div class="btn-row">
+        <button class="btn solid" type="button" id="dl-pdf"><svg class="icon"><use href="#i-download"/></svg>Download PDF</button>
+        <button class="btn" type="button" id="dl-png"><svg class="icon"><use href="#i-download"/></svg>Download image</button>
+      </div>
+      <p class="small">Download not starting? Press and hold the certificate (on a computer, right-click it) and save the image.</p>
+    </div>
+    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from <a class="link" href="../start-here/#lesson-10">Start here’s pre‑show checklist</a> applies whenever the laser is on.</p>
+    <p class="small">More courses: <a class="link" href="../">LaserCube Academy</a>.</p>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+  <p id="announce" class="sr" aria-live="polite"></p>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="../../">User Wiki</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="mailto:support@laseros.com">Email support</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© Wicked Lasers</span>
+  </div>
+</footer>
+<script src="../academy.js"></script>
+</body>
+</html>
