@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LaserCube with TouchDesigner · LaserCube Academy</title>
+<meta name="description" content="A free course for LaserCube Ultra MK2 and Pro owners: send your own TouchDesigner content to the cube in Ether Dream mode with the Laser CHOP and Laser Device CHOP. Shapes and point counts, colour, the mouse and music, the cube’s safety zone, and what to check when nothing shows. Pass the quiz and download a certificate.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://wiki.laseros.com/academy/touchdesigner/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/academy/touchdesigner/">
+<meta property="og:title" content="LaserCube with TouchDesigner">
+<meta property="og:description" content="A free LaserCube Academy course: send TouchDesigner content to your Ultra MK2 or Pro over the network, in Ether Dream mode. Certificate at the end.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/inter/inter-latin.woff2" crossorigin>
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../academy.css?v=20261009d">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="../../" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="true">Academy</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="../../#videos">Tutorials</a>
+      <a href="../../#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="../" aria-current="true">Academy</a>
+          <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="../../#videos">Tutorials</a>
+          <a href="../../#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" data-course="touchdesigner" data-version="1.0" data-title="LaserCube with TouchDesigner" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Advanced">
+
+  <section class="hero stage">
+    <div class="container">
+      <p class="label"><a href="../">LaserCube Academy</a> · Advanced</p>
+      <h1>LaserCube with TouchDesigner</h1>
+      <p class="lead">Six lessons on sending your own TouchDesigner content to the cube over the network: how a laser draws, Ether Dream mode and the laser CHOPs, shapes and point counts, colour, the mouse and music, and what to check when nothing shows. Pass the final quiz and download your certificate.</p>
+      <ul class="meta">
+        <li><svg class="icon"><use href="#i-book"/></svg>6 lessons + quiz, about 40 minutes plus videos</li>
+        <li><svg class="icon"><use href="#i-cube"/></svg>Ultra MK2 &amp; Pro</li>
+        <li><svg class="icon"><use href="#i-user"/></svg>No account needed</li>
+        <li><svg class="icon"><use href="#i-award"/></svg>Free certificate</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-grid">
+
+      <aside class="toc" aria-label="Course contents">
+        <div class="progress js-progress js-only">
+          <div class="progress-bar"><span></span></div>
+          <p class="progress-text">0 of 6 lessons done</p>
+        </div>
+        <ol>
+          <li><a data-nav href="#overview"><span class="st" data-n="i">i</span>How this course works</a></li>
+          <li><a data-nav href="#lesson-1"><span class="st" data-n="1">1</span>How a laser draws, and a first shape</a></li>
+          <li><a data-nav href="#lesson-2"><span class="st" data-n="2">2</span>Connect: Ether Dream and the laser CHOPs</a></li>
+          <li><a data-nav href="#lesson-3"><span class="st" data-n="3">3</span>Shapes, the drawing area and points</a></li>
+          <li><a data-nav href="#lesson-4"><span class="st" data-n="4">4</span>Colour</a></li>
+          <li><a data-nav href="#lesson-5"><span class="st" data-n="5">5</span>Mouse and music, within the rules</a></li>
+          <li><a data-nav href="#lesson-6"><span class="st" data-n="6">6</span>When nothing shows</a></li>
+          <li><a data-nav href="#final"><span class="st" data-n="Q">Q</span>Final quiz</a></li>
+          <li><a data-nav href="#certificate"><span class="st" data-n="★">★</span>Your certificate</a></li>
+        </ol>
+      </aside>
+
+      <div class="lessons-col">
+        <details class="toc-phone js-only">
+          <summary><span>Course contents</span><span class="small js-progress"><span class="progress-text">0 of 6 lessons done</span></span></summary>
+          <div class="inner">
+            <div class="progress js-progress"><div class="progress-bar"><span></span></div></div>
+          </div>
+        </details>
+        <p class="no-js-only small">The questions, the final quiz and the certificate need JavaScript. Without it you can still read every lesson below.</p>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="view" id="overview" aria-labelledby="overview-h">
+  <p class="label">Before you start</p>
+  <h2 id="overview-h">How this course works</h2>
+  <p class="intro">TouchDesigner can send what you build in it straight to an Ultra MK2 or Pro over the network. The cube runs in its Ether Dream control mode, and TouchDesigner’s Laser CHOP and Laser Device CHOP do the sending. This course follows our four‑part TouchDesigner video series, made for Wicked Lasers by the TouchDesigner artist Owen McAteer of Motus Art.</p>
+  <h3>By the end you can</h3>
+  <ul class="points">
+    <li>explain why a laser draws lines rather than pixels, and build a test shape from SOPs;</li>
+    <li>put your cube in Ether Dream mode, read its IP address, and send to it with a Laser CHOP and a Laser Device CHOP;</li>
+    <li>keep shapes inside the drawing area and simple enough to draw, trace pictures into outlines, and show 3D shapes with a camera;</li>
+    <li>colour a shape with one colour, or point by point from an image;</li>
+    <li>drive the picture with the mouse or with music, within the safety rules;</li>
+    <li>work through a checklist when the cube shows nothing.</li>
+  </ul>
+  <h3>What you need</h3>
+  <ul class="points">
+    <li>An Ultra MK2 or a Pro. The LaserCube WiFi has no Ether Dream mode, so it can’t take TouchDesigner’s output this way.</li>
+    <li>A computer with TouchDesigner. The series was filmed with TouchDesigner 2025.32820 on Windows and an Ultra MK2 on firmware 2.0. Other versions may look a little different.</li>
+    <li>A network that the cube and the computer are both on (lesson 2). You can start without a cube: lesson 1 shows a preview inside TouchDesigner.</li>
+  </ul>
+  <h3>How the lessons work</h3>
+  <ul class="points">
+    <li>Each lesson takes about 5 to 7 minutes, plus the videos. Each video plays only the part its lesson covers; its “Watch on YouTube” link plays the whole video. Get a question wrong? Pick another answer.</li>
+    <li>Your progress is saved in this browser. There’s no account and nothing is sent to us. Clearing your browser data, or switching to another device, starts the course again.</li>
+    <li>When all six lessons are done, take the final quiz: 10 questions, 8 right to pass, as many tries as you need.</li>
+    <li>Pass, then download your certificate as a PDF or an image.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
+    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies whenever the laser is on, whatever drives it: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+  </div>
+  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its section “Ether Dream Control Mode”, and the four videos: <a class="link" href="https://www.youtube.com/watch?v=gWgriN8vNZg" target="_blank" rel="noopener">first steps</a>, <a class="link" href="https://www.youtube.com/watch?v=8uTfJfFeGs4" target="_blank" rel="noopener">easy content creation</a>, <a class="link" href="https://www.youtube.com/watch?v=2joWmQ8NXcU" target="_blank" rel="noopener">colouring methods</a> and <a class="link" href="https://www.youtube.com/watch?v=AmTNx1gKu_E" target="_blank" rel="noopener">interactive laser art</a>. If a video and the manual differ, follow the manual.</p>
+  <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
+</section>
+
+<!-- ============ LESSON 1 ============ -->
+<section class="view lesson" id="lesson-1" aria-labelledby="l1-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 1 of 6</p>
+  <h2 id="l1-h">How a laser draws, and a first shape</h2>
+  <p class="intro">A laser projector is not a pixel projector. It draws with a single point of light that moves very fast, and your eye blends its path into a shape. So laser content in TouchDesigner is made of lines and points: SOPs, not images.</p>
+
+  <div class="video" data-yt="gWgriN8vNZg" data-from="35" data-to="107" data-title="First steps with LaserCube and TouchDesigner - Motus Art walkthrough">
+    <button type="button" aria-label="Play video: first steps with LaserCube and TouchDesigner, a first test shape"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l1-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: a first test shape (0:35 to 1:47)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=35s" target="_blank" rel="noopener">Watch on YouTube, from 0:35</a></p>
+
+  <h3>One point at a time</h3>
+  <ul class="points">
+    <li>There is only ever one point of light. A circle is that point travelling round the circle, fast enough that you see a solid shape. <a class="link" href="../start-here/#lesson-2">Start here, lesson 2</a> explains how the cube’s scanners do it.</li>
+    <li>That is why laser content suits vector graphics: shapes described by points and lines. In TouchDesigner those are <strong>SOPs</strong>, its geometry operators.</li>
+    <li>Pictures and video (TOPs) can’t go to the laser as they are. Lesson 3 shows how to trace them into outlines.</li>
+  </ul>
+
+  <h3>A first test shape, as in the video</h3>
+  <ol class="points">
+    <li>Start from an empty project: the presenter deletes the default network and closes the Palette.</li>
+    <li>Add a <strong>Circle</strong> SOP. Set <strong>Arc Type</strong> to Open Arc and <strong>Divisions</strong> to 3, which makes a triangle. Open Arc isn’t needed, but it makes TouchDesigner’s view closer to what the laser draws.</li>
+    <li>Add a <strong>Transform</strong> SOP and give its Z rotation an expression that grows with time, so the triangle spins.</li>
+    <li>End the chain with a <strong>Null</strong> SOP. The laser part in lesson 2 reads from this Null.</li>
+  </ol>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l1-circle-sop-492.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l1-circle-sop-492.webp" alt="From the video: the Circle SOP’s parameters in TouchDesigner. Primitive Type Polygon, Orientation XY Plane, Radius 1 and 1, Center 0 0 0, Divisions 3 and Arc Type Open Arc, with Arc Angles 0 to 360." width="492" height="536" loading="lazy"></a>
+    <figcaption>The Circle SOP for the test shape: Divisions 3 and Arc Type Open Arc. From the video.</figcaption>
+  </figure>
+
+  <h3>Preview without a cube</h3>
+  <p>You can see your content in TouchDesigner with no cube connected. The video builds a laser‑style preview from the same SOP:</p>
+  <div class="video" data-yt="gWgriN8vNZg" data-from="427" data-to="506" data-title="First steps with LaserCube and TouchDesigner - Motus Art walkthrough">
+    <button type="button" aria-label="Play video: first steps with LaserCube and TouchDesigner, a preview without a laser"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l1-clip2.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: a preview without a laser (7:07 to 8:26)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=427s" target="_blank" rel="noopener">Watch on YouTube, from 7:07</a></p>
+  <ol class="points">
+    <li>Connect the SOP to a <strong>Geometry</strong> COMP, and add a <strong>Camera</strong> COMP.</li>
+    <li>Add a <strong>Line</strong> MAT and drag it onto the Geometry COMP as its material.</li>
+    <li>Add a <strong>Render</strong> TOP and send it to a Null TOP.</li>
+    <li>For a glow like a beam’s, the presenter adds a <strong>Bloom</strong> TOP after the Render TOP, then an <strong>RGB Key</strong> TOP to remove the alpha. The look is his choice.</li>
+  </ol>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l1-preview-chain-884.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l1-preview-chain-884.webp" alt="From the video: part of the preview network in TouchDesigner. A Line MAT called line1, then render1, bloom1 and rgbkey1 in a row, wired on to null2. Behind the nodes, the rendered triangle glows across the network background." width="884" height="470" loading="lazy"></a>
+    <figcaption>The preview chain: render1, bloom1, rgbkey1 and null2, with the Line MAT line1 above. The Geometry COMP and the camera are out of the picture. From the video.</figcaption>
+  </figure>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the video’s test shape chain in order.</p>
+      <ol>
+        <li>A Circle SOP with Divisions 3</li>
+        <li>A Transform SOP that rotates it</li>
+        <li>A Null SOP at the end</li>
+        <li>The laser part reads from the Null</li>
+      </ol>
+      <p class="why" hidden>The shape first, then the Transform that spins it, then a Null at the end. The Laser CHOP in lesson 2 reads from that Null.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Why is laser content in TouchDesigner built from SOPs?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q1" value="a"><span>SOPs reach the cube faster than any picture can</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="b"><span>One moving point draws it, so it needs lines</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="c"><span>The cube can only store files made from SOPs</span></label>
+      </div>
+      <p class="why" hidden>A laser draws with a single point of light that moves very fast. Vector shapes, made of points and lines, suit it, and in TouchDesigner those are SOPs.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>In the test shape, what turns the Circle SOP into a triangle?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q2" value="a"><span>Arc Type set to Open Arc</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="b"><span>Orientation set to XY Plane</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="c"><span>Divisions set to 3</span></label>
+      </div>
+      <p class="why" hidden>Divisions 3 gives three sides: a triangle. Open Arc only makes TouchDesigner’s view closer to what the laser draws.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 3</span>No cube is connected. How can you still see your content?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q3" value="a"><span>Render it: Geometry COMP, camera, Line MAT</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="b"><span>Open the Laser Device CHOP’s own Scan page</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="c"><span>You can’t: it needs a cube to show anything</span></label>
+      </div>
+      <p class="why" hidden>The video’s preview: the SOP in a Geometry COMP with a camera and a Line MAT, rendered by a Render TOP. It works with or without a cube.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">Ether Dream Control Mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#flicker-and-render-quality">Flicker and render quality</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 2.</p>
+  <nav class="pager" aria-label="Lesson 1: back and next"><a data-nav href="#overview"><span>Back</span>How this course works</a><a class="next" data-nav href="#lesson-2"><span>Next</span>Connect: Ether Dream and the laser CHOPs</a></nav>
+</section>
+
+<!-- ============ LESSON 2 ============ -->
+<section class="view lesson" id="lesson-2" aria-labelledby="l2-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 2 of 6</p>
+  <h2 id="l2-h">Connect: Ether Dream and the laser CHOPs</h2>
+  <p class="intro">In Ether Dream mode the cube works like an Ether Dream DAC, a network laser interface, so software with an Ether Dream output can send to it. In TouchDesigner, a Laser CHOP turns your SOP into laser data and a Laser Device CHOP sends it to the cube’s IP address.</p>
+
+  <h3>Get the cube ready</h3>
+  <div class="video" data-yt="gWgriN8vNZg" data-from="113" data-to="130" data-title="First steps with LaserCube and TouchDesigner - Motus Art walkthrough">
+    <button type="button" aria-label="Play video: first steps with LaserCube and TouchDesigner, setting up the cube"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l2-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: network cable, key and power (1:53 to 2:10)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=113s" target="_blank" rel="noopener">Watch on YouTube, from 1:53</a></p>
+  <ol class="points">
+    <li><strong>Network:</strong> connect the cube and the computer to the same network (manual: Connection Settings). In the video the Ultra MK2 has a cable to the home router in LAN client mode, and the router gives it its IP address. The cube can also make its own network, as a LAN server or a WiFi server (<a class="link" href="../connect/#lesson-1">Connect, lesson 1</a>); for one computer on a direct cable, use LAN server (<a class="link" href="../connect/#lesson-3">Connect, lesson 3</a>). Where local WiFi may be congested, the manual recommends an Ethernet cable in LAN client mode.</li>
+    <li><strong>Interlock and power:</strong> the safety jumper, or an E‑Stop (required in the US), in one of the E‑STOP ports, the safety key in at OFF, then switch on.</li>
+  </ol>
+  <div class="video" data-yt="gWgriN8vNZg" data-from="140" data-to="158" data-title="First steps with LaserCube and TouchDesigner - Motus Art walkthrough">
+    <button type="button" aria-label="Play video: first steps with LaserCube and TouchDesigner, the IP address and Ether Dream mode"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l2-clip2.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: the IP address and Ether Dream mode (2:20 to 2:38)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=140s" target="_blank" rel="noopener">Watch on YouTube, from 2:20</a></p>
+  <ol class="points" start="3">
+    <li><strong>Ether Dream mode:</strong> in the cube’s main menu choose Control Mode, turn the knob to <strong>Ether‑Dream</strong> and push it. The cube restarts into Ether Dream mode. On firmware 2.0, in the video, it asks first: “Control mode has changed. Restart Now?” Choose Yes. Afterwards the status bar reads Ether‑Dream.</li>
+    <li><strong>IP address:</strong> read it at the bottom right of the status bar. You type it into TouchDesigner.</li>
+    <li><strong>Arm it</strong> when you’re ready to project: turn the key to ON. The EMISSION LEDs light and the I‑LOCK warning goes. With an E‑Stop connected, start it with the green START button (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>). A tick by LAN‑C means the cube is connected in LAN client mode.</li>
+  </ol>
+  <div class="two shots">
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l2-control-mode-list-310.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l2-control-mode-list-310.webp" alt="From the video: the Control Mode list on the cube’s screen, with Playlist ticked, then Laser Show, IDN and Ether-Dream. Ether-Dream is highlighted. The status bar shows Playlist, an I-LOCK warning and the IP address 192.168.1.129 at the bottom right." width="240" height="310" loading="lazy"></a>
+      <figcaption>Choosing Ether‑Dream. The IP address is at the bottom right of the status bar.</figcaption>
+    </figure>
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l2-restart-prompt-310.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l2-restart-prompt-310.webp" alt="From the video: a Restart Device box on the cube’s screen reading: Control mode has changed. Restart Now? Yes is highlighted in red, next to No." width="240" height="310" loading="lazy"></a>
+      <figcaption>Firmware 2.0 asks before it restarts. From the video.</figcaption>
+    </figure>
+  </div>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l2-armed-970.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l2-armed-970.webp" alt="From the video: the back of the Ultra MK2, armed. A network cable is in the LAN port, a clear safety jumper is in one of the E-STOP ports, the safety key is turned to ON and both EMISSION LEDs are lit. The screen shows the main menu, and the status bar reads Ether-Dream with a tick by LAN-C and the IP address 192.168.1.129." width="970" height="750" loading="lazy"></a>
+    <figcaption>Armed and connected: key at ON, EMISSION LEDs lit, Ether‑Dream with a tick by LAN‑C. From the video.</figcaption>
+  </figure>
+  <p class="note"><strong>The cube’s own settings still apply.</strong> Unlike LaserOS mode, Ether Dream mode keeps the cube’s Image Setup, Colour Balance and Safety Zone (Settings → Projection) available, and they apply to everything TouchDesigner sends. Lesson 5 uses the Safety Zone.</p>
+
+  <h3>Send from TouchDesigner</h3>
+  <div class="video" data-yt="gWgriN8vNZg" data-from="165" data-to="286" data-title="First steps with LaserCube and TouchDesigner - Motus Art walkthrough">
+    <button type="button" aria-label="Play video: first steps with LaserCube and TouchDesigner, the Laser CHOP and Laser Device CHOP"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l2-clip3.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: the Laser CHOP and Laser Device CHOP (2:45 to 4:46)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=165s" target="_blank" rel="noopener">Watch on YouTube, from 2:45</a></p>
+  <ol class="points">
+    <li>Add a <strong>Laser</strong> CHOP (in the OP Create Dialog, CHOP tab). Set Source OP to SOP and <strong>SOP</strong> to your Null (null1). Until a SOP is set it shows an error.</li>
+    <li><strong>Output Sample Rate:</strong> TouchDesigner’s default is 48000. The videos set 30000, which the presenter chose to match his cube. The manual gives the Ultra MK2 and Pro a scan speed of more than 35,000 points per second at 7°.</li>
+    <li>The Laser CHOP’s output holds, for every point, an <strong>x</strong> and <strong>y</strong> position and a <strong>r</strong>ed, <strong>g</strong>reen and <strong>b</strong>lue value.</li>
+    <li>Add a <strong>Laser Device</strong> CHOP after it. Set <strong>Type</strong> to EtherDream, type the cube’s IP address as <strong>Network Address</strong>, and leave <strong>Network Port</strong> at 7765, the port Ether Dream uses. Device and Scan are greyed out for EtherDream: you type the address yourself. The video leaves Queue Time (0.1&nbsp;s) and the scales as they are.</li>
+    <li>With the cube armed, it projects. The manual: a green status bar background means samples are arriving over the network.</li>
+  </ol>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l2-laser-chop-1040.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l2-laser-chop-1040.webp" alt="From the video: the laser1 node, whose graph shows the channels x, y, r, g and b, and the Laser CHOP’s Laser page: Active On, Source OP SOP, SOP null1, Output Sample Rate 30000, Swap Output Off, X Scale 1, Y Scale 1, Rotate 0 and an empty Camera field." width="1040" height="574" loading="lazy"></a>
+    <figcaption>The Laser CHOP: SOP null1 and Output Sample Rate 30000. Its node shows the x, y, r, g and b channels. From the video.</figcaption>
+  </figure>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l2-laser-device-494.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l2-laser-device-494.webp" alt="From the video: the Laser Device CHOP’s parameters. Active On, Type EtherDream, Device and Scan greyed out, Network Address 192.168.1.129, Network Port 7765, an empty Local Address, Queue Time 0.1 S, and X, Y, Red, Green, Blue and Intensity Scale all at 1." width="494" height="482" loading="lazy"></a>
+    <figcaption>The Laser Device CHOP: Type EtherDream, the cube’s IP address and port 7765. From the video.</figcaption>
+  </figure>
+
+  <h3>Size and brightness</h3>
+  <ul class="points">
+    <li>To make the whole picture smaller, use the Laser CHOP’s <strong>X Scale</strong> and <strong>Y Scale</strong> on its Laser page (0.5 in the video). A Transform SOP changes only the artwork itself.</li>
+    <li>To make it dimmer, use <strong>Red Scale</strong>, <strong>Green Scale</strong> and <strong>Blue Scale</strong> on the Laser CHOP’s Color page. The presenter sets them to 0.5 because the beam was too bright for his camera.</li>
+    <li>Some of the flicker and jumping in the webcam view comes from the camera, the presenter says; in the room it looks cleaner.</li>
+  </ul>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l2-laser-chop-colour-1240.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l2-laser-chop-colour-1240.webp" alt="From the video: the laser1 node with its five channels drawn as graphs, labelled x, y, r, g and b, and the Laser CHOP’s Color page: Red Scale, Green Scale and Blue Scale at 0.5, then the blanking delays, Color Delay 0 and Interpolate Colors On." width="1240" height="594" loading="lazy"></a>
+    <figcaption>The Color page with Red, Green and Blue Scale at 0.5. From the colouring video.</figcaption>
+  </figure>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the manual’s steps for Ether Dream mode in order.</p>
+      <ol>
+        <li>Connect the cube and the computer to the same network</li>
+        <li>Choose Control Mode, Ether‑Dream: the cube restarts</li>
+        <li>Read the IP address at the bottom right of the status bar</li>
+        <li>Type it into the Laser Device CHOP, Type EtherDream</li>
+      </ol>
+      <p class="why" hidden>Network first, then Ether Dream mode, then the IP address from the status bar, then the software: in TouchDesigner, a Laser Device CHOP with Type EtherDream and port 7765.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>Which network port does the Laser Device CHOP use for the cube?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q1" value="a"><span>7765</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="b"><span>6454</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="c"><span>8080</span></label>
+      </div>
+      <p class="why" hidden>Ether Dream uses network port 7765, the Laser Device CHOP’s default.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Your picture is too big. Which setting resizes the whole output?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q2" value="a"><span>The Laser Device CHOP’s Queue Time</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="b"><span>The Laser CHOP’s Output Sample Rate</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="c"><span>The Laser CHOP’s X Scale and Y Scale</span></label>
+      </div>
+      <p class="why" hidden>X Scale and Y Scale on the Laser CHOP resize the whole output. A Transform SOP changes only the artwork.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>In Ether Dream mode, does the cube’s own Safety Zone apply?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q3" value="a"><span>No: TouchDesigner overrides it</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="b"><span>Yes, to everything that is sent</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="c"><span>Only while LaserOS is open too</span></label>
+      </div>
+      <p class="why" hidden>Unlike LaserOS mode, Ether Dream mode keeps the cube’s Image Setup, Colour Balance and Safety Zone, and they apply to everything the software sends.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">Ether Dream Control Mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#connection-settings">Connection Settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">The status bar</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">Key, E‑Stop and interlock</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#technical-specifications">Technical specifications</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 3.</p>
+  <nav class="pager" aria-label="Lesson 2: back and next"><a data-nav href="#lesson-1"><span>Back</span>How a laser draws, and a first shape</a><a class="next" data-nav href="#lesson-3"><span>Next</span>Shapes, the drawing area and points</a></nav>
+</section>
+
+<!-- ============ LESSON 3 ============ -->
+<section class="view lesson" id="lesson-3" aria-labelledby="l3-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 3 of 6</p>
+  <h2 id="l3-h">Shapes, the drawing area and points</h2>
+  <p class="intro">Almost any SOP can become laser content, but the laser has limits: a fixed drawing area, polygons only, and only so many points per second. This lesson covers those, then pictures and 3D shapes.</p>
+
+  <div class="video" data-yt="8uTfJfFeGs4" data-from="167" data-to="209" data-title="LaserCube and TouchDesigner - easy content creation with Motus Art">
+    <button type="button" aria-label="Play video: easy content creation, shapes and a spinning line"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l3-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Easy content creation: shapes and a spinning line (2:47 to 3:29)</span><a href="https://www.youtube.com/watch?v=8uTfJfFeGs4&amp;t=167s" target="_blank" rel="noopener">Watch on YouTube, from 2:47</a></p>
+
+  <h3>The drawing area</h3>
+  <ul class="points">
+    <li>SOPs offer all the basic shapes: lines, rectangles, circles, triangles and more.</li>
+    <li>The laser’s drawing area runs from <strong>‑1 to +1</strong>. A Line SOP from 0 to 1 (Point A 0 0 0, Point B 1 0 0) spins around its end at the centre; from ‑1 to 1 it spans the full width.</li>
+    <li>A Rectangle SOP needs <strong>Size 2 by 2</strong> to fill the area. Anything beyond it is cut off at the edges. (In the video it isn’t, because the whole output is scaled to 0.5.)</li>
+    <li>A <strong>Merge</strong> SOP combines several shapes into one output.</li>
+  </ul>
+  <div class="video" data-yt="8uTfJfFeGs4" data-from="216" data-to="416" data-title="LaserCube and TouchDesigner - easy content creation with Motus Art">
+    <button type="button" aria-label="Play video: easy content creation, the drawing area, polygons and the point count"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l3-clip2.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Easy content creation: the drawing area, polygons and the point count (3:36 to 6:56)</span><a href="https://www.youtube.com/watch?v=8uTfJfFeGs4&amp;t=216s" target="_blank" rel="noopener">Watch on YouTube, from 3:36</a></p>
+
+  <h3>Polygons only</h3>
+  <p>The Laser CHOP takes polygons only. A Torus SOP starts as a mesh, so the Laser CHOP shows “Input geometry contains non‑polygon primitives”, and the laser shows nothing while the error is there. The fix: set the SOP’s <strong>Primitive Type</strong> to Polygon.</p>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l3-non-polygon-error-736.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l3-non-polygon-error-736.webp" alt="From the video: the info box of the Laser CHOP laser1, Type Laser CHOP, with the line: Error: Input geometry contains non-polygon primitives. Below it, Channels 0 and Sample Rate 30000 samples/sec." width="736" height="350" loading="lazy"></a>
+    <figcaption>The error a mesh gives: “Input geometry contains non‑polygon primitives”. From the video.</figcaption>
+  </figure>
+
+  <h3>Keep the point count low</h3>
+  <ul class="points">
+    <li>The scanners can draw only so many points per second (manual). With too much detail the picture flickers or draws too slowly.</li>
+    <li>In the video, a torus with 20 rows and 40 columns is far too much. At 10 by 20 it has 200 points and still draws too slowly; the three simple shapes together had 47. Halving again to 5 rows and 10 columns helps, but it still isn’t clean.</li>
+    <li>To see the count, middle‑click a node for its info, or add an <strong>Info</strong> CHOP on the Null with <strong>Scope</strong> set to num_points and keep it in view.</li>
+    <li>A 3D wireframe draws both its front and its back.</li>
+  </ul>
+  <div class="two">
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l3-point-count-624.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l3-point-count-624.webp" alt="From the video: the null1 node showing a torus, with its info box open: 200 Points, 200 Primitives, 800 Vertices, 200 Polygons." width="624" height="436" loading="lazy"></a>
+      <figcaption>Middle‑click: the torus has 200 points, still too many. From the video.</figcaption>
+    </figure>
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l3-torus-rows-columns-500.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l3-torus-rows-columns-500.webp" alt="From the video: the Torus SOP’s parameters. Primitive Type Polygon, Connectivity Quadrilaterals, Orientation Y Axis, Radius 1 and 0.5, Center 0 0 0, Anchor U, V and W at 0.5, Rows 5 and Columns 10." width="500" height="454" loading="lazy"></a>
+      <figcaption>Primitive Type Polygon, with 5 rows and 10 columns. From the video.</figcaption>
+    </figure>
+  </div>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l3-info-chop-984.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l3-info-chop-984.webp" alt="From the video: an Info CHOP called info1 under the null1 node, reading 200 num_points, and its parameters: Operator null1, Info Type General, Scope num_points, Values All." width="984" height="582" loading="lazy"></a>
+    <figcaption>An Info CHOP on null1 with Scope num_points keeps the count in view. From the video.</figcaption>
+  </figure>
+
+  <h3>Pictures and video</h3>
+  <p>Pictures and video (TOPs) can’t go to the laser directly. A <strong>Trace</strong> SOP turns a TOP into outlines: set its TOP Name to your TOP, for example a Movie File In TOP, and scale the result with a Transform SOP on the traced shape. The video uses black‑and‑white footage, where the Threshold setting matters little. The Filters page sets Resample Shapes, Step Size and smoothing; the presenter keeps the defaults. A webcam or depth camera can be traced too.</p>
+  <p class="small">The clip above stops as the video begins its own trace demo.</p>
+
+  <h3>3D shapes need a camera</h3>
+  <ul class="points">
+    <li>The laser uses only X and Y. In the video, a Noise SOP on a flat circle wobbles in TouchDesigner but not on the wall: a SOP to CHOP shows that only tz, the depth, changed.</li>
+    <li>The fix: add a <strong>Camera</strong> COMP and enter it in the Laser CHOP’s <strong>Camera</strong> field (Laser page). Depth then shows as perspective.</li>
+    <li>On the camera’s View page, Perspective gives depth; orthographic looks flat again.</li>
+    <li>The presenter’s tip: add a camera even for flat shapes, and switch it to orthographic when you want them flat.</li>
+  </ul>
+  <div class="video" data-yt="8uTfJfFeGs4" data-from="574" data-to="699" data-title="LaserCube and TouchDesigner - easy content creation with Motus Art">
+    <button type="button" aria-label="Play video: easy content creation, a camera for 3D shapes"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l3-clip3.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Easy content creation: a camera for 3D shapes (9:34 to 11:39)</span><a href="https://www.youtube.com/watch?v=8uTfJfFeGs4&amp;t=574s" target="_blank" rel="noopener">Watch on YouTube, from 9:34</a></p>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l3-camera-940.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l3-camera-940.webp" alt="From the video: the laser1 node, laserdevice1 and a Camera COMP called cam1, with the Laser CHOP’s Laser page: SOP null1, Output Sample Rate 30000, X Scale 0.5, Y Scale 0.5, Rotate 0 and Camera cam1." width="940" height="660" loading="lazy"></a>
+    <figcaption>The Laser CHOP’s Camera field set to cam1. From the video.</figcaption>
+  </figure>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>The Laser CHOP says “Input geometry contains non‑polygon primitives”. What fixes it?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q1" value="a"><span>Raise the Laser CHOP’s Output Sample Rate</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="b"><span>Set the SOP’s Primitive Type to Polygon</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="c"><span>Add a camera to the Laser CHOP’s Camera field</span></label>
+      </div>
+      <p class="why" hidden>The Laser CHOP takes polygons only. A torus starts as a mesh: set its Primitive Type to Polygon.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Which Rectangle SOP size fills the whole drawing area?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>2 by 2</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="b"><span>1 by 1</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="c"><span>4 by 4</span></label>
+      </div>
+      <p class="why" hidden>The drawing area runs from ‑1 to +1, so a rectangle of size 2 by 2 fills it.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Noise on a flat circle doesn’t change the laser picture. Why?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q3" value="a"><span>The Noise SOP works only on 3D shapes</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="b"><span>The Laser Device CHOP filters noise out</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="c"><span>It moved Z; the laser uses only X and Y</span></label>
+      </div>
+      <p class="why" hidden>The noise changed only the depth (tz), and the laser uses only X and Y. A camera in the Laser CHOP’s Camera field turns depth into perspective.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#flicker-and-render-quality">Flicker and render quality</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">Ether Dream Control Mode</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 4.</p>
+  <nav class="pager" aria-label="Lesson 3: back and next"><a data-nav href="#lesson-2"><span>Back</span>Connect: Ether Dream and the laser CHOPs</a><a class="next" data-nav href="#lesson-4"><span>Next</span>Colour</a></nav>
+</section>
+
+<!-- ============ LESSON 4 ============ -->
+<section class="view lesson" id="lesson-4" aria-labelledby="l4-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 4 of 6</p>
+  <h2 id="l4-h">Colour</h2>
+  <p class="intro">Every point the Laser CHOP sends carries a red, a green and a blue value from 0 to 1, as well as its position. You can give a whole shape one colour, or colour it point by point from an image.</p>
+
+  <div class="video" data-yt="2joWmQ8NXcU" data-from="91" data-to="149" data-title="LaserCube and TouchDesigner - coloring methods with Motus Art">
+    <button type="button" aria-label="Play video: colouring methods, one colour with a Constant CHOP"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l4-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Colouring methods: one colour with a Constant CHOP (1:31 to 2:29)</span><a href="https://www.youtube.com/watch?v=2joWmQ8NXcU&amp;t=91s" target="_blank" rel="noopener">Watch on YouTube, from 1:31</a></p>
+
+  <h3>One colour</h3>
+  <ol class="points">
+    <li>Add a <strong>Constant</strong> CHOP with three channels named r, g and b. The video uses r 0, g 0.57 and b 0.8, a blue‑green.</li>
+    <li>Add a <strong>Merge</strong> CHOP with the Constant CHOP as its first input and the Laser CHOP as its second. Set <strong>Duplicate Names</strong> to Keep First.</li>
+    <li>Send the Merge CHOP to the Laser Device CHOP. The whole shape takes that one colour.</li>
+  </ol>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l4-constant-merge-1220.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-constant-merge-1220.webp" alt="From the video: laser1 and a Constant CHOP called constant1, showing 0 r, 0.57 g and 0.8 b, both wired into merge1, which feeds the Laser Device CHOP. The Merge CHOP’s parameters: Align Automatic, Duplicate Names Keep First, and Connected Input OPs 0 constant1 and 1 laser1." width="1220" height="720" loading="lazy"></a>
+    <figcaption>One colour: constant1 merged with laser1, Duplicate Names Keep First. From the video.</figcaption>
+  </figure>
+
+  <h3>Colour from an image</h3>
+  <p>The presenter’s recommended way: look up an image (a TOP) at each point’s position and write the colour back to the point. Any TOP can be the source, such as a video, a webcam or an animation. His demo uses a black‑to‑white ramp, so it changes brightness rather than hue.</p>
+  <div class="video" data-yt="2joWmQ8NXcU" data-from="178" data-to="341" data-title="LaserCube and TouchDesigner - coloring methods with Motus Art">
+    <button type="button" aria-label="Play video: colouring methods, colour from an image"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l4-clip2.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Colouring methods: colour from an image (2:58 to 5:41)</span><a href="https://www.youtube.com/watch?v=2joWmQ8NXcU&amp;t=178s" target="_blank" rel="noopener">Watch on YouTube, from 2:58</a></p>
+  <ol class="points">
+    <li>After the shape (circle1), add a Null SOP (null2) and a <strong>Texture</strong> SOP (texture1), as on screen.</li>
+    <li>Add a <strong>SOP to CHOP</strong> on texture1 with Position XYZ on: it gives each point’s position as tx, ty and tz.</li>
+    <li>The colour source: a <strong>Ramp</strong> TOP into a Null TOP. The video animates the ramp’s Phase with absTime.seconds * 0.5, so you can see it working.</li>
+    <li>Add a <strong>TOP to CHOP</strong>, set its TOP to that Null TOP, and wire the SOP to CHOP into it. It looks up the image’s colour at each point’s position and outputs r, g, b and a. The laser doesn’t use a, the alpha.</li>
+    <li>Add a <strong>CHOP to SOP</strong>: CHOP set to the TOP to CHOP, texture1 wired in for the shape, <strong>Channel Scope</strong> r g b a, <strong>Attribute Scope</strong> Cd (the point colour) and Mapping One Sample to Each Point. Feed it into the Null SOP that the Laser CHOP reads: the position comes from the shape, the colour from the image.</li>
+  </ol>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l4-chop-to-sop-1162.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-chop-to-sop-1162.webp" alt="From the video: sopto1 showing tx, ty and tz, topto1 showing r, g, b and a, and the chopto1 node, with the CHOP to SOP’s parameters: CHOP topto1, Channel Scope r g b a, Attribute Scope Cd, Mapping One Sample to Each Point." width="1162" height="530" loading="lazy"></a>
+    <figcaption>CHOP to SOP writes r, g, b and a to Cd, the point colour. From the video.</figcaption>
+  </figure>
+  <div class="video" data-yt="2joWmQ8NXcU" data-from="355" data-to="603" data-title="LaserCube and TouchDesigner - coloring methods with Motus Art">
+    <button type="button" aria-label="Play video: colouring methods, matching the image and smoother colour"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l4-clip3.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Colouring methods: matching the image, and smoother colour (5:55 to 10:03)</span><a href="https://www.youtube.com/watch?v=2joWmQ8NXcU&amp;t=355s" target="_blank" rel="noopener">Watch on YouTube, from 5:55</a></p>
+  <ol class="points" start="6">
+    <li>The shape’s positions run from ‑1 to 1, the image’s from 0 to 1. Put a <strong>Math</strong> CHOP between the SOP to CHOP and the TOP to CHOP: on its Range page, From Range ‑1 1 and To Range 0 1. It only changes where the colour is looked up, not the shape. Without it the image repeats in four quadrants.</li>
+  </ol>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l4-math-remap-1282.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-math-remap-1282.webp" alt="From the video: sopto1, math1 and topto1 in a row, with null1, laser1 and chopto1 above them, and the Math CHOP’s Range page: From Range -1 1 and To Range 0 1, with sopto1 as its connected input." width="1282" height="550" loading="lazy"></a>
+    <figcaption>The Math CHOP maps ‑1 to 1 onto the image’s 0 to 1. From the video.</figcaption>
+  </figure>
+
+  <h3>Smoother colour</h3>
+  <ul class="points">
+    <li>A shape with few points colours badly: a triangle has only four points to blend between.</li>
+    <li>On the TOP to CHOP’s Crop page, set <strong>Interpolate</strong> to Linear instead of Nearest Sample.</li>
+    <li>Add points: more Divisions on a circle (64 in the video), or a <strong>Refine</strong> SOP after the shape, whose U Divisions adds points along its lines without changing it. To see the points, right‑click the viewer and open Display Options, SOP Markers.</li>
+    <li>Don’t overdo it: the laser can draw only so many points. In the video 64 points are fine; with 514 the laser struggles to keep up.</li>
+  </ul>
+  <div class="two parts">
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l4-interpolate-linear-572.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-interpolate-linear-572.webp" alt="From the video: the TOP to CHOP’s Crop page, with UV Units 0 to 1 and Interpolate set to Linear." width="572" height="322" loading="lazy"></a>
+      <figcaption>Interpolate set to Linear. From the video.</figcaption>
+    </figure>
+    <div>
+      <p><strong>The finished network</strong> (below): circle1, then refine1, null2 and texture1; sopto1, math1 and topto1 look up the ramp; chopto1 joins position and colour and feeds null1, laser1 and laserdevice1.</p>
+    </div>
+  </div>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l4-network-1286.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-network-1286.webp" alt="From the video: the finished colouring network. circle1 into refine1, null2 and texture1; texture1 into sopto1, math1 and topto1; chopto1 wired to null1, laser1 and laserdevice1. The Refine SOP’s parameters show U Divisions 64 and Method Refine. A webcam view shows the triangle on the wall." width="1286" height="870" loading="lazy"></a>
+    <figcaption>The finished network, with a Refine SOP at U Divisions 64. From the video.</figcaption>
+  </figure>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the CHOPs of the image method in order, from the shape’s positions to the colour.</p>
+      <ol>
+        <li>SOP to CHOP: each point’s position</li>
+        <li>Math CHOP: ‑1 to 1 becomes 0 to 1</li>
+        <li>TOP to CHOP: the image’s colour at each point</li>
+        <li>CHOP to SOP: the colour written to Cd</li>
+      </ol>
+      <p class="why" hidden>Positions out of the shape, remapped to the image’s range, used to look up the colour, then written back to the points as Cd.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>What does a Constant CHOP merged into the laser data give you?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q1" value="a"><span>One colour for the whole shape</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="b"><span>A different colour on every point</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="c"><span>A colour that follows the music</span></label>
+      </div>
+      <p class="why" hidden>The Constant CHOP’s r, g and b replace the laser data’s colour (Keep First): one colour for the whole shape.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Your triangle’s colours look jumpy. What helps?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q2" value="a"><span>Removing the Math CHOP from the chain</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="b"><span>Duplicate Names set to Make Unique</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="c"><span>Linear interpolation and more points</span></label>
+      </div>
+      <p class="why" hidden>Set Interpolate to Linear on the TOP to CHOP, and add points with a Refine SOP. Not too many, though: the laser can draw only so many.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#colour-balance">Colour Balance on the cube</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#flicker-and-render-quality">Flicker and render quality</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 5.</p>
+  <nav class="pager" aria-label="Lesson 4: back and next"><a data-nav href="#lesson-3"><span>Back</span>Shapes, the drawing area and points</a><a class="next" data-nav href="#lesson-5"><span>Next</span>Mouse and music, within the rules</a></nav>
+</section>
+
+<!-- ============ LESSON 5 ============ -->
+<section class="view lesson" id="lesson-5" aria-labelledby="l5-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 5 of 6</p>
+  <h2 id="l5-h">Mouse and music, within the rules</h2>
+  <p class="intro">Anything TouchDesigner has as CHOP data, such as the mouse, audio, or a device or sensor, can drive the shape you send to the laser. The safety rules stay the same whatever drives the picture.</p>
+
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Never at people</span>
+    <p>Never aim the laser at people, and never scan the audience: the LaserCube is not made for audience scanning, whatever the setup. Wherever people may be, every beam stays at least 3&nbsp;m (10&nbsp;ft) above the floor, with the beam block set. A safety zone never makes it safe to aim at people.</p>
+  </div>
+
+  <h3>The mouse</h3>
+  <div class="video" data-yt="AmTNx1gKu_E" data-from="77" data-to="107" data-title="LaserCube and TouchDesigner - creating interactive laser art with Motus Art">
+    <button type="button" aria-label="Play video: interactive laser art, the mouse position"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l5-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Interactive laser art: the mouse position (1:17 to 1:47)</span><a href="https://www.youtube.com/watch?v=AmTNx1gKu_E&amp;t=77s" target="_blank" rel="noopener">Watch on YouTube, from 1:17</a></p>
+  <ol class="points">
+    <li>Add a <strong>Mouse In</strong> CHOP: Output Coordinates Normalized Aspect, Position X tx, Position Y ty, and type click into <strong>Left Button</strong>. Connect it to a Null CHOP.</li>
+    <li>Drag tx and ty from the Null onto the Circle SOP’s <strong>Center</strong>. The circle now follows the mouse.</li>
+  </ol>
+  <div class="video" data-yt="AmTNx1gKu_E" data-from="115" data-to="201" data-title="LaserCube and TouchDesigner - creating interactive laser art with Motus Art">
+    <button type="button" aria-label="Play video: interactive laser art, a click that grows the circle"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l5-clip2.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Interactive laser art: a click that grows the circle (1:55 to 3:21)</span><a href="https://www.youtube.com/watch?v=AmTNx1gKu_E&amp;t=115s" target="_blank" rel="noopener">Watch on YouTube, from 1:55</a></p>
+  <ol class="points" start="3">
+    <li>From the Mouse In, add a <strong>Select</strong> CHOP with Channel Names click, then a <strong>Math</strong> CHOP: on its Range page, From Range 0 1 and To Range 0.2 1. Drag its click channel onto the circle’s <strong>Radius</strong>. A click now makes the circle bigger.</li>
+    <li>Put a <strong>Lag</strong> CHOP between the Select and the Math (Lag 0.2 and 0.2 seconds in the video). The jump becomes a smooth grow.</li>
+  </ol>
+  <div class="two parts">
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l5-mouse-in-500.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l5-mouse-in-500.webp" alt="From the video: the Mouse In CHOP’s Control page. Active On, Output Coordinates Normalized Aspect, Position X tx, Position Y ty, Left Button click, the other buttons and Wheel empty, Wheel Increment 0.1." width="500" height="406" loading="lazy"></a>
+      <figcaption>Mouse In: tx, ty and click. From the video.</figcaption>
+    </figure>
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l5-lag-980.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l5-lag-980.webp" alt="From the video: mousein1 with tx, ty and click, then select1, lag1 and math1 in a row carrying the click channel, and null2 with tx, ty and click." width="980" height="320" loading="lazy"></a>
+      <figcaption>select1, lag1 and math1 carry the click to the circle’s Radius. From the video.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Music</h3>
+  <div class="video" data-yt="AmTNx1gKu_E" data-from="201" data-to="472" data-title="LaserCube and TouchDesigner - creating interactive laser art with Motus Art">
+    <button type="button" aria-label="Play video: interactive laser art, an audio equaliser"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/touchdesigner/l5-clip3.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Interactive laser art: an audio equaliser (3:21 to 7:52)</span><a href="https://www.youtube.com/watch?v=AmTNx1gKu_E&amp;t=201s" target="_blank" rel="noopener">Watch on YouTube, from 3:21</a></p>
+  <ol class="points">
+    <li>Bring in audio with an <strong>Audio File In</strong> CHOP (the video uses TouchDesigner’s own sample track), and add an Audio Device Out CHOP to hear it.</li>
+    <li>Add a <strong>Line</strong> SOP from Point A ‑1 0 0 to Point B 1 0 0: it fills the width of the drawing area.</li>
+    <li>Add an <strong>Audio Spectrum</strong> CHOP. By default it gives about 22,050 samples, far too many for the laser. Setting FFT Size to 128 loses too much detail, so keep FFT Size at 8192 and set <strong>Output Length</strong> to Set Length Manually, with Set Output Length 128. Give the Line SOP 128 points (Number of Points) to match.</li>
+    <li>Add a <strong>Select</strong> CHOP with Channel Names chan1, the left channel. Then a <strong>CHOP to SOP</strong> with the Line SOP wired in: CHOP select1, Channel Scope chan1, Attribute Scope P(1), the Y position, and Mapping One Sample to Each Point. Each spectrum value now lifts one point of the line, like a graphic equaliser.</li>
+    <li>For a mirror image: a second Select with chan2, the right channel, a Math CHOP with Multiply ‑1 to flip it, a second CHOP to SOP on the same line, and a <strong>Merge</strong> SOP for both lines. A Math CHOP with Multiply 2 right after the spectrum makes it bigger.</li>
+  </ol>
+  <div class="two parts">
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l5-chop-to-sop-500.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l5-chop-to-sop-500.webp" alt="From the video: the CHOP to SOP’s parameters. CHOP select1, Channel Scope chan1, Attribute Scope P(1), Mapping One Sample to Each Point, Compute Normals and Compute Tangents Off." width="500" height="352" loading="lazy"></a>
+      <figcaption>chan1 onto P(1), the Y position of each point. From the video.</figcaption>
+    </figure>
+    <div>
+      <p><strong>Any data, same chain.</strong> Whether it comes from the mouse, audio or a sensor, the data changes a SOP, and the SOP goes through the Laser CHOP and the Laser Device CHOP as before.</p>
+    </div>
+  </div>
+  <figure class="native">
+    <a href="../../images/academy/touchdesigner/l5-equaliser-network-1232.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l5-equaliser-network-1232.webp" alt="From the video: the equaliser network. audiofilein1 into audiodevout1 and audiospect1; audiospect1, math2 and select1 in a row; select2 and math1 below; line1 wired into chopto1 and chopto2; both into merge1 and null2. The Line SOP’s parameters: Point A -1 0 0, Point B 1 0 0, Number of Points 128." width="1232" height="760" loading="lazy"></a>
+    <figcaption>The finished equaliser, with the Line SOP at 128 points. From the video.</figcaption>
+  </figure>
+
+  <h3>The cube’s Safety Zone in Ether Dream mode</h3>
+  <ul class="points">
+    <li>In Ether Dream mode the cube’s own Safety Zone applies to everything TouchDesigner sends. Set it on the cube under Settings → Projection → Safety Zone.</li>
+    <li>By default it is a <strong>keep‑within</strong> zone, previewed in green: beams outside it are reduced by the attenuation setting, and 100% blanks them completely. Use it for the target area where the beams may safely end.</li>
+    <li>With the invert toggle it becomes a <strong>keep‑out</strong> zone, previewed in red: for example to keep beams away from a camera or a video projector.</li>
+    <li>The preview toggle projects the zone’s outline, with the laser interlock enabled.</li>
+    <li>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>).</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <p>Two set‑ups. Is it OK to go ahead? Decide, then read why.</p>
+    <div class="scenarios">
+      <div class="scenario" data-answer="no">
+        <p class="s">You want the laser circle to follow a dancer around the stage, steered with the mouse. You add a keep‑out zone around the dancer so the beam skips them.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>Never aim the laser at people. A safety zone never makes it safe to aim at people.</p>
+        <p class="hint" hidden>Can a zone make it OK to aim the laser at a person?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="scenario" data-answer="yes">
+        <p class="s">The equaliser is drawn on a wall in an area closed to everyone, more than 3&nbsp;m from where guests stand. The cube is in the same closed‑off area, the beam block is set, and every other item on Start here’s pre‑show checklist is ticked. You add a keep‑within zone on the cube around the part of the wall where the beams end.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>The beams end in a restricted area away from people, the beam block is set, the rest of the pre‑show checklist is done, and the keep‑within zone marks the target area on top of those rules.</p>
+        <p class="hint" hidden>Where do the beams end, and is the zone used on top of the rules or instead of them?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Why set the Audio Spectrum CHOP’s output length to 128?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>So the music plays back at the right speed</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="b"><span>Its 22,050 samples are far too many points</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>So the Lag CHOP can keep up with the sound</span></label>
+      </div>
+      <p class="why" hidden>By default the spectrum has about 22,050 samples, far too many for the laser to draw. 128 samples, on a 128‑point line, is plenty.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>What does the Lag CHOP add in the video?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q2" value="a"><span>A smooth change instead of a jump</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="b"><span>A delay so the laser matches the sound</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="c"><span>A blanked beam while you click</span></label>
+      </div>
+      <p class="why" hidden>Between the Select and the Math, the Lag CHOP turns the circle’s jump into a smooth grow.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zone">Safety zone on the cube</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">Safety guidelines</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">Ether Dream Control Mode</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 6.</p>
+  <nav class="pager" aria-label="Lesson 5: back and next"><a data-nav href="#lesson-4"><span>Back</span>Colour</a><a class="next" data-nav href="#lesson-6"><span>Next</span>When nothing shows</a></nav>
+</section>
+
+<!-- ============ LESSON 6 ============ -->
+<section class="view lesson" id="lesson-6" aria-labelledby="l6-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 6 of 6</p>
+  <h2 id="l6-h">When nothing shows</h2>
+  <p class="intro">TouchDesigner looks right, but the cube shows nothing? Work along the chain, from the cube to your shape. The cube’s status bar answers most of it.</p>
+
+  <div class="two shots">
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l6-not-armed-lcd-312.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l6-not-armed-lcd-312.webp" alt="From the video: the cube’s main menu in Ether Dream mode, with Control Mode, Settings, Preview, Others and Status Info. The status bar reads Ether-Dream with a red cross by LAN-C, and an I-LOCK warning." width="240" height="311" loading="lazy"></a>
+      <figcaption>Just after the restart: a red cross by LAN‑C and the I‑LOCK warning.</figcaption>
+    </figure>
+    <figure class="native">
+      <a href="../../images/academy/touchdesigner/l6-armed-lcd-312.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l6-armed-lcd-312.webp" alt="From the video: the same menu a few seconds later. The status bar reads Ether-Dream with a tick by LAN-C and the IP address 192.168.1.129, and the I-LOCK warning is gone." width="240" height="311" loading="lazy"></a>
+      <figcaption>Ready: a tick by LAN‑C, the IP address, no I‑LOCK.</figcaption>
+    </figure>
+  </div>
+
+  <h3>On the cube</h3>
+  <ul class="points">
+    <li><strong>Armed?</strong> Key at ON, EMISSION LEDs lit, no I‑LOCK warning on the status bar. With an E‑Stop connected, it has to be started with the green START button.</li>
+    <li><strong>Ether‑Dream on the status bar?</strong> If it shows another mode, choose Control Mode, Ether‑Dream.</li>
+    <li><strong>Connected?</strong> A tick by LAN‑C means connected in LAN client mode. In the video a red cross shows there until the connection is up. The cube and the computer must be on the same network.</li>
+    <li><strong>Anything arriving?</strong> The manual: a green status bar background means samples are arriving over the network, and the cube’s Preview shows the points it receives.</li>
+    <li><strong>The cube’s Safety Zone:</strong> with a keep‑within zone at 100% attenuation, anything outside the zone is fully blanked.</li>
+  </ul>
+
+  <h3>In TouchDesigner</h3>
+  <ul class="points">
+    <li><strong>Laser Device CHOP:</strong> Active On, Type EtherDream, Network Address the same as the IP on the cube’s status bar, Network Port 7765.</li>
+    <li><strong>Laser CHOP:</strong> its SOP is set, and it shows no error. “Input geometry contains non‑polygon primitives” means a SOP isn’t polygons: set its Primitive Type to Polygon (lesson 3).</li>
+    <li><strong>Inside the drawing area?</strong> Shapes beyond ‑1 to +1 are cut off; make them smaller, or scale the output with X Scale and Y Scale.</li>
+    <li><strong>A 3D change that doesn’t show:</strong> put a camera in the Laser CHOP’s Camera field (lesson 3).</li>
+    <li><strong>Flickers or draws slowly:</strong> too many points. Check num_points and simplify.</li>
+    <li><strong>No colour from your image:</strong> check that the CHOP to SOP writes to Cd, and the Math CHOP’s ranges (lesson 4).</li>
+  </ul>
+  <p>Still nothing? Email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a>.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>The status bar reads Ether‑Dream, with an I‑LOCK warning. What is missing?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q1" value="a"><span>TouchDesigner hasn’t sent anything yet</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="b"><span>The Network Port isn’t set to 7765</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="c"><span>The cube isn’t armed: key to ON</span></label>
+      </div>
+      <p class="why" hidden>The I‑LOCK warning shows while the laser isn’t armed. Turn the key to ON (and start the E‑Stop, if one is connected).</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>There’s a red cross by LAN‑C. What does it tell you?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q2" value="a"><span>The cube isn’t connected to the network yet</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="b"><span>Ether Dream mode has been switched off</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="c"><span>The Safety Zone is blanking all the beams</span></label>
+      </div>
+      <p class="why" hidden>A tick by LAN‑C means the cube is connected in LAN client mode; the cross means the connection isn’t up.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>The Laser CHOP has a red error badge. What do you check first?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q3" value="a"><span>The cube’s Colour Balance settings</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="b"><span>Its SOP is set, and made of polygons</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="c"><span>The Laser Device CHOP’s Queue Time</span></label>
+      </div>
+      <p class="why" hidden>The Laser CHOP shows an error until a SOP is set, and when the geometry isn’t polygons. The laser stays dark while the error is there.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#cubeos-lcd-settings-and-status">The status bar</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">Ether Dream Control Mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#connection-settings">Connection Settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zone">Safety zone on the cube</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> Next: the final quiz.</p>
+  <nav class="pager" aria-label="Lesson 6: back and next"><a data-nav href="#lesson-5"><span>Back</span>Mouse and music, within the rules</a><a class="next" data-nav href="#final"><span>Next</span>Final quiz</a></nav>
+</section>
+
+<!-- ============ FINAL QUIZ ============ -->
+<section class="view" id="final" aria-labelledby="final-h" data-pick="10" data-pass="8">
+  <p class="label">Final quiz</p>
+  <h2 id="final-h">Final quiz</h2>
+  <p class="intro">10 questions picked at random, one from each of the course’s 10 topics. Get 8 right to pass. You can try as many times as you like.</p>
+
+  <div class="locked-msg" id="final-locked" hidden>
+    <p><strong>Finish all six lessons first.</strong> Still to do:</p>
+    <ul></ul>
+  </div>
+
+  <form id="quiz-form" class="js-only" novalidate hidden>
+    <div id="quiz-list"></div>
+    <p class="feedback is-wrong" id="quiz-msg" aria-live="polite"></p>
+    <div class="btn-row"><button class="btn solid" type="submit">Check my answers</button></div>
+  </form>
+  <div id="quiz-result" class="result" hidden></div>
+
+  <div class="bank" hidden>
+    <fieldset class="check" data-answer="b" data-group="draw" data-lesson="1"><legend><span class="qn"></span>Why is laser content in TouchDesigner built from SOPs?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>SOPs reach the cube faster than any picture can</span></label>
+      <label class="opt"><input type="radio" value="b"><span>One moving point draws it, so it needs lines</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Laser Device CHOP accepts only SOP files</span></label></div>
+      <p class="why" hidden>A laser draws with a single point of light that moves very fast. Vector shapes, made of points and lines, suit it, and in TouchDesigner those are SOPs.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="draw" data-lesson="1"><legend><span class="qn"></span>Which Circle SOP setting turned the test shape into a triangle?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Arc Type set to Open Arc</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Orientation set to XY Plane</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Divisions set to 3</span></label></div>
+      <p class="why" hidden>Divisions 3 gives three sides. Open Arc only makes TouchDesigner’s view closer to what the laser draws.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="draw" data-lesson="1"><legend><span class="qn"></span>No cube is connected. How can you see your content?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Render it: Geometry COMP, camera, Line MAT</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Open the Laser Device CHOP’s own Scan page</span></label>
+      <label class="opt"><input type="radio" value="c"><span>You can’t: it needs a cube to show anything</span></label></div>
+      <p class="why" hidden>The video’s preview puts the SOP in a Geometry COMP with a camera and a Line MAT, rendered by a Render TOP. It works with or without a cube.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="mode" data-lesson="2"><legend><span class="qn"></span>Which control mode does the cube need for TouchDesigner?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Ether‑Dream</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Laser Show</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Visualizer</span></label></div>
+      <p class="why" hidden>TouchDesigner’s Laser Device CHOP sends to an Ether Dream device, so the cube goes in Ether Dream mode: Control Mode, Ether‑Dream.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="mode" data-lesson="2"><legend><span class="qn"></span>Where do you read the address to type into Network Address?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>On the label on the underside of the cube</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Bottom right of the cube’s status bar</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In the Laser Device CHOP’s scan list</span></label></div>
+      <p class="why" hidden>The cube shows its IP address at the bottom right of its status bar.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="mode" data-lesson="2"><legend><span class="qn"></span>Can a LaserCube WiFi take TouchDesigner’s output this way?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes, in its LaserOS mode</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Yes, over its own WiFi network</span></label>
+      <label class="opt"><input type="radio" value="c"><span>No: it has no Ether Dream mode</span></label></div>
+      <p class="why" hidden>The LaserCube WiFi has no Ether Dream mode. This course is for the Ultra MK2 and the Pro.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="send" data-lesson="2"><legend><span class="qn"></span>What does the Laser CHOP do?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>It sends the data to the cube over the network</span></label>
+      <label class="opt"><input type="radio" value="b"><span>It finds LaserCubes on the network for you</span></label>
+      <label class="opt"><input type="radio" value="c"><span>It turns your SOP into laser data</span></label></div>
+      <p class="why" hidden>The Laser CHOP turns the SOP into laser data: an x and y position and red, green and blue for every point. The Laser Device CHOP sends it.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="send" data-lesson="2"><legend><span class="qn"></span>Which network port does Ether Dream use?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>7765</span></label>
+      <label class="opt"><input type="radio" value="b"><span>6454</span></label>
+      <label class="opt"><input type="radio" value="c"><span>8080</span></label></div>
+      <p class="why" hidden>Ether Dream uses network port 7765, the Laser Device CHOP’s default.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="send" data-lesson="2"><legend><span class="qn"></span>Your picture is too big on the wall. What resizes the whole output?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The Transform SOP’s Scale</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Laser CHOP’s X and Y Scale</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Laser Device CHOP’s Queue Time</span></label></div>
+      <p class="why" hidden>X Scale and Y Scale on the Laser CHOP resize the whole output. A Transform SOP changes only the artwork.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="send" data-lesson="2"><legend><span class="qn"></span>What did the videos set the Laser CHOP’s Output Sample Rate to?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>30000</span></label>
+      <label class="opt"><input type="radio" value="b"><span>48000</span></label>
+      <label class="opt"><input type="radio" value="c"><span>60000</span></label></div>
+      <p class="why" hidden>30000. TouchDesigner’s default is 48000; the presenter set 30000 to match his cube. The manual gives a scan speed of more than 35,000 points per second at 7°.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="area" data-lesson="3"><legend><span class="qn"></span>What range does the laser’s drawing area cover?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>From 0 to 1</span></label>
+      <label class="opt"><input type="radio" value="b"><span>From ‑1 to +1</span></label>
+      <label class="opt"><input type="radio" value="c"><span>From 0 to 100</span></label></div>
+      <p class="why" hidden>From ‑1 to +1: a line from ‑1 to 1 spans the full width.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="area" data-lesson="3"><legend><span class="qn"></span>Which Rectangle SOP size fills the whole drawing area?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>1 by 1</span></label>
+      <label class="opt"><input type="radio" value="b"><span>4 by 4</span></label>
+      <label class="opt"><input type="radio" value="c"><span>2 by 2</span></label></div>
+      <p class="why" hidden>The area runs from ‑1 to +1, so a rectangle of size 2 by 2 fills it. Anything beyond is cut off.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="points" data-lesson="3"><legend><span class="qn"></span>The Laser CHOP says “Input geometry contains non‑polygon primitives”. What fixes it?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Set the SOP’s Primitive Type to Polygon</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Raise the Laser CHOP’s Output Sample Rate</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Lower the Laser Device CHOP’s Queue Time</span></label></div>
+      <p class="why" hidden>The Laser CHOP takes polygons only. A torus starts as a mesh: set its Primitive Type to Polygon.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="points" data-lesson="3"><legend><span class="qn"></span>Your torus draws too slowly. What helps?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Switching its Primitive Type back to Mesh</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Adding a second Laser Device CHOP to it</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Fewer rows and columns: fewer points</span></label></div>
+      <p class="why" hidden>Too many points: the scanners can draw only so many per second. Fewer rows and columns means fewer points.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="points" data-lesson="3"><legend><span class="qn"></span>How can you keep an eye on how many points you send?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The Laser Device CHOP’s Queue Time reading</span></label>
+      <label class="opt"><input type="radio" value="b"><span>An Info CHOP on the Null, Scope num_points</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Intensity Scale on the Laser Device CHOP</span></label></div>
+      <p class="why" hidden>An Info CHOP on the Null with Scope num_points shows the count. Middle‑clicking a node shows it too.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="depth" data-lesson="3"><legend><span class="qn"></span>Noise on a flat circle doesn’t change the laser picture. Why?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>It moved Z; the laser uses only X and Y</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Noise SOP works only on 3D shapes</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Laser Device CHOP filters noise out</span></label></div>
+      <p class="why" hidden>On a flat circle the noise changed only the depth (tz), and the laser uses only X and Y.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="depth" data-lesson="3"><legend><span class="qn"></span>What makes a 3D shape show its depth on the laser?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A higher Output Sample Rate on the Laser CHOP</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A camera in the Laser CHOP’s Camera field</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A Transform SOP that turns it by 90 degrees</span></label></div>
+      <p class="why" hidden>Put a Camera COMP in the Laser CHOP’s Camera field. With a perspective camera, depth shows as perspective.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="depth" data-lesson="3"><legend><span class="qn"></span>How does a picture or a video become laser content?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Feed the TOP straight into the Laser CHOP</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Merge the TOP into the Laser Device CHOP</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Trace it into outlines with a Trace SOP</span></label></div>
+      <p class="why" hidden>TOPs can’t go to the laser directly. A Trace SOP turns them into outlines the laser can draw.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="colour" data-lesson="4"><legend><span class="qn"></span>What does a Constant CHOP merged into the laser data give?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A different colour on every point</span></label>
+      <label class="opt"><input type="radio" value="b"><span>One colour for the whole shape</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A colour that follows the music</span></label></div>
+      <p class="why" hidden>Its r, g and b replace the laser data’s colour (Duplicate Names Keep First): one colour for the whole shape.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="colour" data-lesson="4"><legend><span class="qn"></span>In the image method, CHOP to SOP writes the colour to which attribute?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Cd, the point colour</span></label>
+      <label class="opt"><input type="radio" value="b"><span>P, the point position</span></label>
+      <label class="opt"><input type="radio" value="c"><span>N, the point normal</span></label></div>
+      <p class="why" hidden>Attribute Scope Cd, the point colour. The position still comes from the shape.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="colour" data-lesson="4"><legend><span class="qn"></span>Why is there a Math CHOP before the TOP to CHOP?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>To make the colours brighter on the wall</span></label>
+      <label class="opt"><input type="radio" value="b"><span>To shrink the shape to half its size</span></label>
+      <label class="opt"><input type="radio" value="c"><span>To map ‑1 to 1 onto the image’s 0 to 1</span></label></div>
+      <p class="why" hidden>Point positions run from ‑1 to 1 and the image from 0 to 1. The Math CHOP changes only where the colour is looked up, not the shape.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="interactive" data-lesson="5"><legend><span class="qn"></span>How does the circle follow the mouse in the video?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The Laser CHOP reads the mouse by itself</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Mouse In’s tx and ty drive its Center</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Laser Device CHOP tracks the pointer</span></label></div>
+      <p class="why" hidden>A Mouse In CHOP gives tx and ty; dragged onto the Circle SOP’s Center, they move the circle.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="interactive" data-lesson="5"><legend><span class="qn"></span>What does the Lag CHOP add?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A delay so the laser matches the sound</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A blanked beam while you click</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A smooth change instead of a jump</span></label></div>
+      <p class="why" hidden>Between the Select and the Math, the Lag CHOP turns the circle’s jump into a smooth grow.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="interactive" data-lesson="5"><legend><span class="qn"></span>Why set the Audio Spectrum CHOP’s output length to 128?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>22,050 samples are far too many points</span></label>
+      <label class="opt"><input type="radio" value="b"><span>So the music plays back at the right speed</span></label>
+      <label class="opt"><input type="radio" value="c"><span>So the Lag CHOP can keep up with the sound</span></label></div>
+      <p class="why" hidden>By default the spectrum has about 22,050 samples, far too many for the laser to draw. 128 matches a 128‑point line.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="safety" data-lesson="5"><legend><span class="qn"></span>In Ether Dream mode, does the cube’s own Safety Zone apply?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>No: TouchDesigner overrides it</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Yes, to everything that is sent</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Only while LaserOS is open too</span></label></div>
+      <p class="why" hidden>Unlike LaserOS mode, Ether Dream mode keeps the cube’s Image Setup, Colour Balance and Safety Zone, and they apply to everything the software sends.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="safety" data-lesson="5"><legend><span class="qn"></span>Can a keep‑out zone make it OK for the laser to follow a person?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes, with the attenuation at 100%</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Yes, if a Lag CHOP smooths the motion</span></label>
+      <label class="opt"><input type="radio" value="c"><span>No: never aim the laser at people</span></label></div>
+      <p class="why" hidden>Never aim the laser at people. A safety zone never makes it safe to aim at people.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="safety" data-lesson="5"><legend><span class="qn"></span>Where people may be, how high must every beam stay?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>At least 3&nbsp;m (10&nbsp;ft) above the floor</span></label>
+      <label class="opt"><input type="radio" value="b"><span>At least 2&nbsp;m (6.5&nbsp;ft) above the floor</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Just above the tallest person’s head</span></label></div>
+      <p class="why" hidden>At least 3&nbsp;m (10&nbsp;ft) above the floor wherever people may be, with the beam block set.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="checks" data-lesson="6"><legend><span class="qn"></span>The status bar shows an I‑LOCK warning. What is missing?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>TouchDesigner hasn’t sent anything yet</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Network Port isn’t set to 7765</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The cube isn’t armed: key to ON</span></label></div>
+      <p class="why" hidden>The I‑LOCK warning shows while the laser isn’t armed. Turn the key to ON, and start the E‑Stop if one is connected.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="checks" data-lesson="6"><legend><span class="qn"></span>There’s a red cross by LAN‑C. What does it tell you?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Ether Dream mode has been switched off</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The cube isn’t connected to the network</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Safety Zone is blanking all the beams</span></label></div>
+      <p class="why" hidden>A tick by LAN‑C means connected in LAN client mode; the cross means the connection isn’t up.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="checks" data-lesson="6"><legend><span class="qn"></span>Nothing shows, and the cube has a keep‑within zone at 100% attenuation. What could it be?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Content outside the zone is fully blanked</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The zone lowers TouchDesigner’s sample rate</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Ether Dream mode ignores the cube’s zones</span></label></div>
+      <p class="why" hidden>In Ether Dream mode the cube’s zone applies. At 100% attenuation, beams outside a keep‑within zone are fully blanked.</p><p class="feedback"></p></fieldset>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATE ============ -->
+<section class="view" id="certificate" aria-labelledby="cert-h">
+  <p class="label">Certificate</p>
+  <h2 id="cert-h">Your certificate</h2>
+  <div id="cert-locked" class="locked-msg">
+    <p><strong>Pass the final quiz to get your certificate.</strong> <a class="link" href="#final">Go to the final quiz</a></p>
+  </div>
+  <div id="cert-ready" hidden>
+    <p class="intro">Well done. Type your name as you want it on the certificate.</p>
+    <p class="small">Your certificate is made right here in your browser. Your name isn’t sent anywhere; it’s only kept in this browser.</p>
+    <form id="cert-form" class="cert-form" novalidate>
+      <label><span>Name on the certificate</span><input id="cert-name" type="text" maxlength="60" autocomplete="name" spellcheck="false"></label>
+      <button class="btn solid" type="submit">Make my certificate</button>
+    </form>
+    <p class="feedback is-wrong" id="cert-msg" aria-live="polite"></p>
+    <div id="cert-out" hidden>
+      <div class="cert-preview"><img id="cert-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your LaserCube Academy certificate" width="3508" height="2480"><canvas id="cert-canvas" width="1123" height="794" hidden></canvas></div>
+      <div class="btn-row">
+        <button class="btn solid" type="button" id="dl-pdf"><svg class="icon"><use href="#i-download"/></svg>Download PDF</button>
+        <button class="btn" type="button" id="dl-png"><svg class="icon"><use href="#i-download"/></svg>Download image</button>
+      </div>
+      <p class="small">Download not starting? Press and hold the certificate (on a computer, right-click it) and save the image.</p>
+    </div>
+    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from <a class="link" href="../start-here/#lesson-10">Start here’s pre‑show checklist</a> applies whenever the laser is on.</p>
+    <p class="small">More courses: <a class="link" href="../">LaserCube Academy</a>.</p>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+  <p id="announce" class="sr" aria-live="polite"></p>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="../../">User Wiki</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="mailto:support@laseros.com">Email support</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© Wicked Lasers</span>
+  </div>
+</footer>
+<script src="../academy.js?v=20261009d"></script>
+</body>
+</html>

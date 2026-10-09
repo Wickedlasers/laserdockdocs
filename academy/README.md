@@ -17,8 +17,8 @@ no build step, no server, no database, no accounts, no analytics.
   section (owner decisions, added with the course). For one computer on a direct cable it leads with LAN server (owner
   decision 2026-10-08: one device on a cable = LAN Server) and keeps LAN client with APIPA as the second way.
 - Course order (catalogue and each course's "Next course" link, audit 2026-10-09): Start here → LaserOS basics →
-  Connect → Control modes → Laser mapping → Music show (beginner courses first; mapping and music use SD export and LAN
-  client from Control modes and Connect).
+  Connect → Control modes → Laser mapping → Music show → TouchDesigner (beginner courses first; mapping and music use SD
+  export and LAN client from Control modes and Connect; TouchDesigner, added after the audit, comes last).
 - `laseros-basics/`, `laser-mapping/`, `music-show/`: built as courses 4-6 (2026-10-09), "LaserOS basics: your logo, text and
   effects" (8 lessons), "Laser mapping with LaserOS" (6) and "Build a laser show to your music" (8, Advanced). Their
   facts come from the manual chapter "Making Content in LaserOS" (labels checked against the LaserOS v0.18.1 source) and
@@ -27,6 +27,17 @@ no build step, no server, no database, no accounts, no analytics.
   `data-to` in academy.js: never revert that part while these courses are live. Pages load `academy.js?v=<date>` and
   `academy.css?v=<date>`: raise the date whenever that file changes (pages are cached for 10 minutes). Card pictures:
   `images/home/academy-<course>*.webp` (video frames).
+- `touchdesigner/`: course 7 (2026-10-09), "LaserCube with TouchDesigner" (6 lessons, Advanced, 30 quiz questions in
+  10 topics). Facts come from the manual section "Ether Dream Control Mode" and Motus Art's four TouchDesigner videos
+  (made for Wicked Lasers by Owen McAteer; filmed with TouchDesigner 2025.32820 and an Ultra MK2 on firmware 2.0; their
+  checked analyses are kept outside this repo, in the academy sources folder `motus-art/`). The LaserCube WiFi has no
+  Ether Dream mode, so the course is for the Ultra MK2 and Pro only; the community script part 1 shows for the WiFi is
+  never mentioned or linked (owner decision). The cuts skip: part 1's old models page (around 0:14), its WiFi script
+  (4:51 to 6:28) and "open the front panel" with the key on (2:40); the third-party fan video traced in part 2 (7:01
+  to 9:31); and spoken slips (part 1 "both work just the same" 2:13; part 2 "negative 1 on the top left" 3:30; part 3
+  the UV aside 2:48 and "0, 0 on top left" 5:42; part 4 "negative one, negative one, top left" 1:47). Slips the
+  presenter corrects at once (part 3 "circular" to Radial, part 4 "20% to 80" then 1) are left in. The script's nodes
+  sit in the background of part 1's preview (7:07 to 8:26); that cut's picture is cropped so they don't show.
 - `academy.css`, `academy.js`: shared by every course. A new course needs no change to these
   (control-modes added small table styles, `.table-wrap`, and `.two.shots` for the 240 px screenshots of the cube's screen).
 
