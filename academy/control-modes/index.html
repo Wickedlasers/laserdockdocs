@@ -292,6 +292,7 @@
     <li>The microSD card in the cube holds the content for the stand‑alone modes, DMX, Art‑Net and MIDI: the built‑in laser shows, demo playlists and MIDI mappings come on it.</li>
     <li>Missing files? The latest card contents, including the newest firmware, are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Unzip them and copy the “Lasercube” folder to the root of the card. Deleting the old folder also deletes your own playlists and MIDI mappings.</li>
     <li>Need a new card? The one the manual names as tested is the Lexar A2 Silver Plus 64GB. Cheaper cards may fail to stream the laser shows. If you format it, use exFAT, and name the card “WL”.</li>
+    <li><strong>Always switch the cube off before you take the card out or put it in.</strong> Never remove or insert it while the cube is on.</li>
   </ul>
 
   <h3>Make the playlist</h3>
@@ -313,11 +314,11 @@
 
   <h3>Copy it to the SD card</h3>
   <ul class="points">
-    <li>Put the cube’s microSD card in a USB 3.x card reader and connect it to the computer. It shows up as a drive called <strong>WL</strong>, with a folder called “Lasercube”.</li>
+    <li>Switch the cube off and take out its microSD card. Put the card in a USB 3.x card reader and connect it to the computer. It shows up as a drive called <strong>WL</strong>, with a folder called “Lasercube”.</li>
     <li>In the Playlists app, select the playlist and click the SD card export button. If the computer asks for access to the card, allow it. If the playlist is already on the card, you can replace it.</li>
     <li>“SD card not found”? Check that the card is properly in the reader, that it’s named WL (rename it if not) and that it has the Lasercube folder (if not, get the card contents from GitHub, above).</li>
     <li>On the card, each playlist is a “.ldpl” file plus a folder with the same name. The cube only lists the playlist if both are there. The .ldpl file is plain text, and its order is the play order (with shuffle off).</li>
-    <li>Eject the card safely before you take it out. Put it back in the cube, then switch the cube on.</li>
+    <li>Eject the card safely before you take it out of the reader. With the cube still off, put the card back in, then switch the cube on.</li>
   </ul>
 
   <div class="practice">
@@ -327,11 +328,11 @@
       <ol>
         <li>Make and save a playlist in LaserOS on a computer</li>
         <li>Add cues and import your logo</li>
-        <li>Export it to the SD card, in a USB 3.x reader</li>
+        <li>Switch the cube off, take out the card and export the playlist to it in a USB 3.x reader</li>
         <li>Eject the card safely</li>
-        <li>Put the card back in the cube and switch it on</li>
+        <li>Put the card back in the switched‑off cube, then switch it on</li>
       </ol>
-      <p class="why" hidden>Build the playlist first, export it to the card on the computer, and eject the card safely before it goes back in the cube.</p>
+      <p class="why" hidden>Build the playlist first. Switch the cube off before the card comes out, export to it on the computer, and eject it safely before it goes back in the switched‑off cube.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -1002,7 +1003,7 @@
       <label class="opt"><input type="radio" value="a"><span>Cube Link isn’t enabled on the cube</span></label>
       <label class="opt"><input type="radio" value="b"><span>The SD card is missing or incomplete</span></label>
       <label class="opt"><input type="radio" value="c"><span>The audio output volume is set to 0%</span></label></div>
-      <p class="why" hidden>The laser shows come on the SD card. Put the card in, or copy the factory contents from GitHub.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>The laser shows come on the SD card. Switch the cube off and put the card in, or copy the factory contents from GitHub.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="shows" data-lesson="5"><legend><span class="qn"></span>Where does the music of a built‑in laser show come out?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The pink A‑IN jack, to your speakers</span></label>
       <label class="opt"><input type="radio" value="b"><span>A USB speaker in the USB port</span></label>
