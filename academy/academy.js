@@ -257,6 +257,7 @@
     var fb = $(".feedback", fs), why = $(".why", fs), opts = $(".opts", fs);
     if (opts) shuffle($$(".opt", opts)).forEach(function (o) { opts.appendChild(o); }); // else the right answer's place is guessable
     $$("input", fs).forEach(function (inp) {
+      inp.checked = false; // Firefox refills a reloaded form: a ticked option would show no verdict and give none when clicked
       inp.addEventListener("change", function () {
         var ok = inp.value === fs.dataset.answer;
         $$(".opt", fs).forEach(function (o) { o.classList.remove("right", "wrong"); });
