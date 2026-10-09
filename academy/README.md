@@ -54,6 +54,9 @@ no build step, no server, no database, no accounts, no analytics.
    - scenario: `<div class="scenario" data-answer="yes|no">` with the two buttons, a `why`, an optional hidden
      `<p class="hint">` (shown after a wrong choice instead of the general "Think again" line) and a `feedback`;
    - video: `<div class="video" data-yt="<YouTube id>">` plus a thumbnail saved as `images/home/videos/<id>.webp`.
+     To play only part of it, add `data-from="<second>"` and/or `data-to="<second>"` (YouTube `start`/`end`). YouTube
+     starts at the nearest keyframe, up to about 2 s early, so leave that margin after a line you want skipped. Viewers
+     can still scrub, and the "Watch on YouTube" link plays the whole video.
 4. Update the contents list (`.toc`), the lesson count in the page text, and the final quiz bank: each question gets
    `data-group` (its topic; use exactly `data-pick` topics: with more, some are left out of each quiz; with fewer, the
    rest is filled at random) and
