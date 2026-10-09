@@ -394,14 +394,19 @@
   }
 
   // One question per topic (data-group) first, so every quiz covers every part of the course; then fill up at random.
+  var asked = []; // bank questions already shown this visit: a new set takes unseen ones first
   function pick() {
     var seen = {}, firsts = [], rest = [];
-    shuffle(bank.slice()).forEach(function (q) {
+    var order = shuffle(bank.slice());
+    order = order.filter(function (q) { return asked.indexOf(q) < 0; }).concat(order.filter(function (q) { return asked.indexOf(q) >= 0; }));
+    order.forEach(function (q) {
       var g = q.dataset.group;
       if (g && !seen[g]) { seen[g] = true; firsts.push(q); } else rest.push(q);
     });
     var chosen = shuffle(firsts).slice(0, PICK);
-    return shuffle(chosen.concat(rest.slice(0, PICK - chosen.length)));
+    chosen = shuffle(chosen.concat(rest.slice(0, PICK - chosen.length)));
+    chosen.forEach(function (q) { if (asked.indexOf(q) < 0) asked.push(q); });
+    return chosen;
   }
 
   function newQuiz() {
@@ -484,22 +489,22 @@
       return;
     }
     quizMsg.textContent = "";
-    var score = 0;
+    var score = qs.filter(function (q) { return $("input:checked", q).value === q.dataset.answer; }).length;
+    var pass = score >= PASS;
     qs.forEach(function (q) {
       var c = $("input:checked", q), ok = c.value === q.dataset.answer, why = $(".why", q);
-      if (ok) score++;
       c.closest(".opt").classList.add(ok ? "right" : "wrong");
       tag(c, ok ? "Your answer: right" : "Your answer");
-      if (!ok) { var r = $('input[value="' + q.dataset.answer + '"]', q); if (r) { r.closest(".opt").classList.add("right"); tag(r, "Right answer"); } }
+      // the right answer and its explanation only after a pass: otherwise a retry could be passed from memory
+      if (!ok && pass) { var r = $('input[value="' + q.dataset.answer + '"]', q); if (r) { r.closest(".opt").classList.add("right"); tag(r, "Right answer"); } }
       q.classList.add(ok ? "is-right" : "is-wrong");
-      $(".feedback", q).innerHTML = verdict(ok, why ? why.innerHTML : "");
+      $(".feedback", q).innerHTML = verdict(ok, why && (ok || pass) ? why.innerHTML : "");
       // a wrong answer points back to its lesson
       var n = q.dataset.lesson;
       if (!ok && /^\d+$/.test(n || "") && document.getElementById("lesson-" + n)) $(".feedback", q).insertAdjacentHTML("beforeend", ' <a class="link" data-nav href="#lesson-' + n + '">Review lesson ' + n + "</a>");
       $$("input", q).forEach(function (i) { i.disabled = true; });
     });
     $("button[type=submit]", quizForm).hidden = true;
-    var pass = score >= PASS;
     quizResult.className = "result " + (pass ? "pass" : "fail");
     quizResult.hidden = false;
     if (pass) {
@@ -507,7 +512,7 @@
       save();
       quizResult.innerHTML = '<h3 tabindex="-1">You passed: ' + score + " of " + PICK + '.</h3><p>Well done. Your certificate is ready.</p><div class="btn-row"><a class="btn solid" href="#certificate">Get your certificate</a></div>';
     } else {
-      quizResult.innerHTML = '<h3 tabindex="-1">' + score + " of " + PICK + " right. You need " + PASS + ' to pass.</h3><p>Read the explanations under each question, then try again with a new set of questions.</p><div class="btn-row"><button class="btn solid" type="button" id="retry">Try again</button></div>';
+      quizResult.innerHTML = '<h3 tabindex="-1">' + score + " of " + PICK + " right. You need " + PASS + ' to pass.</h3><p>Under each question you missed is the lesson that explains it. Review those lessons, then try again with a new set of questions.</p><div class="btn-row"><button class="btn solid" type="button" id="retry">Try again</button></div>';
       $("#retry").addEventListener("click", function () { newQuiz(); $("h2", final).focus(); final.scrollIntoView(); });
     }
     refresh();
