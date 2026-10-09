@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LaserCube Ultra MK2 &amp; Pro Manual · LaserCube User Wiki</title>
-<meta name="description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI and firmware updates.">
+<meta name="description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, what's in the box, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI, firmware updates and accessories.">
 <link rel="canonical" href="https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/">
 <link rel="icon" href="../../../favicon.ico" sizes="any">
 <link rel="icon" href="../../../icon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="LaserCube User Wiki">
 <meta property="og:url" content="https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/">
 <meta property="og:title" content="LaserCube Ultra MK2 &amp; Pro Manual">
-<meta property="og:description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI and firmware updates.">
+<meta property="og:description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, what's in the box, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI, firmware updates and accessories.">
 <meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -184,6 +184,8 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin:20px 0 24px}
 .row>.col{flex:1 1 0;min-width:0}
 .row img{display:block}
+.row figure{margin:0}
+.row figcaption{margin:6px 0 0;font:400 14px/1.4 var(--font);color:var(--subtle)}
 figure{margin:24px 0}
 figure img{display:block}
 figcaption{margin:0 0 10px;font:600 14px/1.4 var(--font);color:var(--muted)}
@@ -342,7 +344,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .layout{display:block}
   .docs-content{max-width:none;padding:0}
   .docs-content a:not(.anchor){color:inherit;text-decoration:none}
-  img,table,figure,.spec,.doc-pages{break-inside:avoid}
+  img,table,figure,.row>.col,.spec,.doc-pages{break-inside:avoid}
   h1,h2,h3,h4{break-after:avoid}
 }
 </style>
@@ -458,6 +460,22 @@ locations require operation only under the supervision of a trained
 Laser Safety Officer (LSO).</strong></p><p><strong>FOR PROFESSIONAL USE ONLY.</strong></p></div>
 <div class="maker"><img src="Pictures/1000D8E4000028C20000061D5E5100AB.svg" width="396" height="59" alt="LaserDock Ltd." loading="lazy" decoding="async" class="ink"><p>12/F, San Toi Building, 137-139</p><p>Connaught Road Central, Hong Kong</p><p>Email: support@laseros.com</p><p>If you have any questions about any of the content of this manual</p><p>or the safe operation of your new laser projector, please do not
 hesitate</p><p>to contact LaserDock Ltd. directly.</p></div>
+<h1 id="whats-in-the-box">What’s in the Box<a href="#whats-in-the-box" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>Every Ultra MK2 and Pro comes in its protective case, with:</p>
+<ul><li>its 19V charger, with a plug or cable for your country (see
+<a href="#charger">Charger</a>)</li><li>an Ethernet cable, and a USB-C to Ethernet adapter for a cable to a
+phone or laptop</li><li>spare safety keys</li><li>interlock jumpers: small plugs for the RJ45 interlock connectors on the back
+(see <a href="#enabling-the-laser-e-stop--interlock">Enabling the Laser
+E-Stop / Interlock</a>). US units come with an E-Stop instead.</li><li>WiFi antennas (the Ultra MK2 box in our unboxing video has a short one,
+and a longer one for when something blocks the signal or when the cube
+hangs upside down)</li><li>a clamp adapter, for fitting your own clamp</li><li>a steel safety loop with a carabiner, for the safety cable through the
+eye bolt when the cube is mounted at height</li><li>a pre-loaded micro SD card (see <a href="#sd-card-information">SD Card
+Information</a>)</li></ul>
+<p>Outside the USA, a STADIUM bundle also has an E-Stop, with a second
+Ethernet cable for it. The DJX, STAGE and STADIUM bundles add accessories
+(see <a href="#accessories">Accessories</a>); the product page lists what
+each bundle has.</p>
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ&amp;t=39s" rel="external">unboxing an Ultra MK2 STADIUM bundle</a></p>
 <h1 id="lasercube-parts-diagram"><span id="anchor-3"></span>LaserCube Parts Diagram<a href="#lasercube-parts-diagram" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <ol><li><strong>Laser Aperture:</strong> Laser light is emitted from this opening.</li><li><strong>Beam Block:</strong> Prevents laser emission and also restricts the laser
 scan from going into an audience. Can be locked using the screws
@@ -552,7 +570,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Port (In)</p><p>DMX Ports (In/Out), 3.5mm TRS jacks</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>13 x 13 x 13.5 cm</td></tr>
 <tr><td>Weight:</td><td>2.5 kg</td></tr>
-<tr><td>IP rating:</td><td>IP51 (IP63 with the rain cover fitted)</td></tr>
+<tr><td>IP rating:</td><td>IP51 (IP63 with the rain cover fitted: see <a href="#rain-cover">Rain Cover</a>)</td></tr>
 <tr><td>Voltage:</td><td>19V DC, 120W adapter</td></tr>
 <tr><td>Warranty:</td><td>1 year</td></tr>
 <tr><td>Software:</td><td>Internal CubeOS + <a href="https://www.laseros.com/"><em>LaserOS&nbsp;Included</em></a></td></tr>
@@ -573,7 +591,7 @@ latest safety standard IEC 60825-1</td></tr>
 <tr><td>Connectivity:</td><td><p>WiFi RP-SMA Female, 2.4GHz<br>Ethernet RJ45 connector, 100Mbps</p><p>ILDA Port (In)</p><p>DMX Ports (In/Out), 3.5mm TRS jacks</p><p>USB-A Port (for APC USB MIDI device)</p><p>3.5mm Stereo Line Audio Ports (In/Out)</p><p>MicroSD card socket</p><p>Interlock RJ45 connectors (In/Through)</p></td></tr>
 <tr><td>Size:</td><td>13 x 13 x 13.5 cm</td></tr>
 <tr><td>Weight:</td><td>2.5 kg</td></tr>
-<tr><td>IP rating:</td><td>IP51 (IP63 with the rain cover fitted)</td></tr>
+<tr><td>IP rating:</td><td>IP51 (IP63 with the rain cover fitted: see <a href="#rain-cover">Rain Cover</a>)</td></tr>
 <tr><td>Voltage:</td><td>19V DC, 65W adapter</td></tr>
 <tr><td>Warranty:</td><td>1 year</td></tr>
 <tr><td>Software:</td><td>Internal CubeOS + <a href="https://www.laseros.com/"><em>LaserOS&nbsp;Included</em></a></td></tr>
@@ -800,9 +818,29 @@ to indicate certain connection states. e.g. a green background indicates
 active samples being received over the network, and a cyan background
 indicates the ILDA analog input is being used (overriding the current
 DAC data for the currently selected ctrl mode).</p>
+<p>The status bar shows the battery level, the control mode, the connection
+mode, the cube’s IP address and, while the laser is not armed, an I-LOCK
+warning. In WiFi connection modes, a WiFi symbol at the bottom left is
+green when the connection is good and turns yellow or red with
+interference.</p>
 <p><span id="anchor-20"></span>*Note: The live preview only works for DAC
 samples received over the network, or internally generated projections,
 NOT data from the analog ILDA port on the back of the device.</p>
+<h2 id="main-menu-and-preview">Main Menu and Preview<a href="#main-menu-and-preview" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Turn the knob to move through a menu and push it to open an item. To go
+back, turn the knob to the back arrow at the top left of the page and push
+it. The
+main menu changes with the control mode: in Visualizer mode, for example,
+it starts with Control Mode, Settings, Preview, Audio Visualizer and Viz
+Options.</p>
+<p>Preview (firmware 2.0 and later) shows on the screen what the cube is
+playing, even while the laser is not armed (not the ILDA input: see the note above). A line under
+the preview says
+what the knob does: in Visualizer mode, turn it to skip to the next visual,
+press it to leave the preview and hold it to switch between the 2D and 3D
+view. In the 3D view, turning the knob changes the point of view.
+<a href="#general-settings">General Settings</a> sets which view opens
+first.</p>
 <h1 id="control-modes"><span id="anchor-21"></span>Control Modes<a href="#control-modes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The Ultra MK2 / Pro currently has 8 selectable control modes:</p>
 <ul><li>LaserOS control mode</li><li>ArtNet control mode</li><li>DMX control mode</li><li>Visualizer control mode</li><li>Playlist control mode</li><li>Laser show control mode</li><li>IDN (ILDA digital network protocol, streaming up to 35K pps)</li><li>Ether Dream (DAC network protocol)</li></ul>
@@ -1751,6 +1789,14 @@ page.</p>
 <p>The beam block and the 3&nbsp;m rule in
 <a href="#hardware-installation">Hardware Installation</a> apply whatever
 the picture’s size and position.</p>
+<h3 id="color-balance-and-ttl-mode">Color Balance and TTL Mode<a href="#color-balance-and-ttl-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>On a computer, the Color Balance page has a TTL Mode switch, set for each cube (pick
+the cube in the device list first). It is for compatibility with TTL
+projectors, which can only switch each colour fully on or off. With TTL
+Mode on, the cube does the same: its colours jump in hard steps between
+8 combinations (black, red, green, blue, yellow, magenta, cyan and white)
+instead of fading. With it off, every LaserCube fades its colours smoothly.
+If colours jump instead of fading, check that TTL Mode is off.</p>
 <h2 id="mono-color">Mono Color<a href="#mono-color" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>On a computer, Settings → Color has Single Color (Off, White, Red,
 Green or Blue), Hue, Mono Color, Shift Color and Fader R, G and B. Single
@@ -2345,6 +2391,15 @@ show, the first projector content will be shown on all cubes set to Group 1 and 
 and pin configuration will be indicated by the status bar background on
 each slave turning from black to purple.</p>
 <img src="Pictures/web/10000000000000F0000001406EE4C13E-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
+<p>Each cube plays the content from its own SD card. The master only sends
+short timing messages over the 2.4&nbsp;GHz band, telling the other cubes
+what to play and when: press play or pause on the master and the others
+follow. The PIN and Link Channel keep your cubes apart from other Cube Link
+setups nearby. Keep metal objects out of the way between the cubes’
+antennas.</p>
+<p>The Ultra MK2 and the Pro can be linked, and so can cubes of different
+power: for example, a brighter cube in the middle and lower-power cubes at
+the sides.</p>
 <h4 id="cube-link-mode-customisations"><span id="anchor-102"></span>Cube Link Mode Customisations<a href="#cube-link-mode-customisations" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>Enable, Master/Slave, Link Channel, PIN, Group</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001408A34D6F2-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014069617B4B-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140D1E60984-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001409B4CCD0F-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
@@ -2419,7 +2474,8 @@ restored. This allows errors from external DACs to be tuned out.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140599B8C82-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140696B6717-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <h2 id="menu-language-settings"><span id="anchor-107"></span>Menu Language Settings<a href="#menu-language-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The LCD menu can be set into any one of 12 available languages (default
-is English).</p>
+is English): English, Deutsch, Français, Español, Italiano, Português,
+Nederlands, Polski, Čeština, Magyar, Română and Türkçe.</p>
 <p>The device needs to restart when the language chosen differs from the
 current menu UI language.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001402CF7BC97_hu_659c393e78a7dddd-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001401F2D5CD1_hu_d971c7a02ad29b33-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014079B6AEBC_hu_aa6313e84cf1c50-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140E9766761_hu_daf06bfc90a3cfae-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
@@ -2933,6 +2989,12 @@ update. The latest SD card contents on our GitHub
 (<a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">https://github.com/Wickedlasers/mk2SDContent</a>)
 include the latest firmware: see <a href="#sd-card-information">SD Card Information</a>
 for how to copy them to the card.</p>
+<p>Copying the new contents can delete your own playlists and MIDI
+mappings, so rename the old Lasercube folder first (see SD Card
+Information) and copy your own files from it into the new one. Switch the cube off before you take the card out or put it
+in. When the update starts, don’t switch the cube off: it takes one to two
+minutes and shows its progress in percent. When the screen says F/W
+Updated, press OK.</p>
 <p>2. Via LaserOS. If LaserOS detects a more recent version of firmware is
 available, it will prompt to allow a firmware upgrade.</p>
 <p>3. Manually, through the <a href="#lasercube-web-admin-page">Web Admin Page</a>:</p>
@@ -2992,6 +3054,84 @@ around all sides for airflow (guidelines 8 and 9 in
 smoke, unplug it right away, keep it away from anything flammable, do not
 charge or use it again, and email
 <a href="mailto:support@laseros.com">support@laseros.com</a>.</p>
+<h1 id="accessories">Accessories<a href="#accessories" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>These extras for the Ultra MK2 and Pro are sold on
+<a href="https://www.laseros.com/laser/gear/" rel="external">laseros.com</a>,
+on their own or in the DJX, STAGE and STADIUM bundles. None of the lenses
+is needed for a regular laser show: they add effects.</p>
+<h2 id="fitting-a-lens">Fitting a Lens<a href="#fitting-a-lens" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Switch the laser off before you fit or remove a lens (the Expander, a
+lens from the Optics Kit or the Diffract Lens): turn the safety key to
+OFF; it can stay in. The beam block can’t be used with a lens fitted. So
+after fitting a lens, check again where every beam ends, including the
+copies a diffraction lens spreads over the wall: all beams must stay at
+least 3&nbsp;m above the floor where people may be (see
+<a href="#hardware-installation">Hardware Installation</a>).</p>
+<h2 id="expander">Expander<a href="#expander" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Expander is a wide-angle lens unit, three lenses in one, that makes
+the picture about 3 times wider and higher: 9 times the area. It makes the
+picture bigger without moving the cube further away: useful in a small
+venue, or to cover a wider area with one cube. It sits on a mounting
+plate in front of the laser aperture, held by a thumb screw. In a bundle,
+the plate is packed in the cube’s case with the other accessories.</p>
+<img src="Pictures/web/expander-fitted-760.webp" width="380" height="285" alt="The Expander on its mounting plate in front of the laser aperture of an Ultra MK2, held by a thumb screw." loading="lazy" decoding="async">
+<ul><li>It also makes every line thicker (about three times as wide) and a
+little dimmer, so it suits beams and large, simple shapes
+better than detailed graphics.</li><li>Like a fisheye lens, it bends the edges of the picture inwards when the
+content fills the whole projection area. If the edges bend, make the
+picture smaller.</li><li>Fitting it moves the whole picture as well as enlarging it, and
+removing it moves the picture again. So set the picture’s size and
+position, and any safety zone, after fitting or removing the lens, then
+check again where all the beams end.</li></ul>
+<h2 id="optics-kit">Optics Kit<a href="#optics-kit" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Optics Kit has seven lenses, each in its own holder: three Lumia
+lenses, three diffraction lenses and a focal lens.</p>
+<ul><li><strong>Lumia</strong> lenses are textured glass. As the beam moves
+across the glass, it is bent into soft, flowing shapes of colour, and each
+of the three gives a different look. With haze or fog in the air, they
+give an aurora-like effect.</li><li><strong>Diffraction</strong> lenses look like flat, clear glass. They
+split the beam into many copies of the picture: Diffraction 1 makes a row
+of copies, Diffraction 2 a wide grid and Diffraction 3 a dense
+grid.</li><li>The <strong>focal</strong> lens, or blur lens, defocuses the beams:
+sharp lines become wide, soft bars.</li></ul>
+<div class="row"><div class="col"><figure><img class="app-shot" src="Pictures/web/lens-lumia-740.webp" width="370" height="278" alt="Soft, flowing blue, green and red shapes on a wall from a Lumia lens." loading="lazy" decoding="async"><figcaption>Lumia 1</figcaption></figure></div><div class="col"><figure><img class="app-shot" src="Pictures/web/lens-diffraction-740.webp" width="370" height="278" alt="Many small copies of a ring pattern spread over a wall." loading="lazy" decoding="async"><figcaption>Diffraction 2</figcaption></figure></div><div class="col"><figure><img class="app-shot" src="Pictures/web/lens-focal-740.webp" width="370" height="278" alt="Laser lines through the focal lens: a wide yellow bar and short green bars." loading="lazy" decoding="async"><figcaption>Focal lens</figcaption></figure></div></div>
+<h2 id="diffract-lens">Diffract Lens<a href="#diffract-lens" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Diffract Lens set has three more diffraction lenses. Burst scatters
+copies of the picture over the whole wall, Line spreads them out in long
+rows, and Radial arranges them in rings. It comes in the STADIUM bundle,
+or on its own.</p>
+<div class="row"><div class="col"><figure><img class="app-shot" src="Pictures/web/lens-burst-740.webp" width="370" height="278" alt="Short coloured dashes scattered over a whole wall." loading="lazy" decoding="async"><figcaption>Burst</figcaption></figure></div><div class="col"><figure><img class="app-shot" src="Pictures/web/lens-line-740.webp" width="370" height="278" alt="Rows of green and blue lines covering a curved wall." loading="lazy" decoding="async"><figcaption>Line</figcaption></figure></div><div class="col"><figure><img class="app-shot" src="Pictures/web/lens-radial-740.webp" width="370" height="278" alt="Copies of a small pattern arranged in rings on a wall." loading="lazy" decoding="async"><figcaption>Radial</figcaption></figure></div></div>
+<h2 id="hologram-net">Hologram Net<a href="#hologram-net" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Hologram Net is a light, semi-transparent net, 3&nbsp;m ×
+6&nbsp;m. On a dark stage the net is almost invisible, so outline
+drawings projected onto it seem to float in the air. It is a
+hologram-like effect: a LaserCube can’t make real holograms in
+mid-air.</p>
+<ul><li>Part of the light passes through the net. Place it so those beams end
+on a solid surface behind it, and keep to the 3&nbsp;m rule in
+<a href="#hardware-installation">Hardware Installation</a>.</li><li>Hang it from a truss, tripods or lighting stands. If the net has no
+eyelets, add some along its edge and fix each one to the stand with a zip
+tie, which keeps the net straight and tight.</li><li>The net is delicate. Remove creases with steam only, and if it gets
+dusty, wash it by hand with a mild soap.</li></ul>
+<h2 id="rain-cover">Rain Cover<a href="#rain-cover" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>With its rain cover fitted, the Ultra MK2 is rated IP63 (IP51 without
+it): fine in light rain, not in heavy rain. The cover does not dim the
+beam. The Ultra MK2 rain cover is sold on its own and comes in the Ultra
+MK2 STAGE and STADIUM bundles.</p>
+<p>The Pro is rated IP51, and IP63 with its own rain cover, which is not
+available yet. Until it is, don’t use a Pro in the rain, not even with
+another model’s cover.</p>
+<h2 id="nano-fogger-haze-and-fog">Nano Fogger, Haze and Fog<a href="#nano-fogger-haze-and-fog" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Beams in the air show best with haze or fog. Thin haze gives
+the clearest beams, with sharp edges and every colour. Too much turns the
+beams into a bright glow and washes out the colours and edges.</p>
+<p>Any fog or haze machine can be used to make the beams visible. The Nano
+Fogger is our small 10-watt fogger, for small spaces such as a studio
+(liquid not included). Big venues use a full-size fog or haze
+machine.</p>
+<p>Never connect a fog machine to the LaserCube’s DMX ports unless you are
+sure it is true DMX: see item 22 in the
+<a href="#lasercube-parts-diagram">LaserCube Parts Diagram</a>.</p>
 <h1 id="sd-card-information"><span id="anchor-152"></span>SD Card Information<a href="#sd-card-information" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The LaserCube Ultra MK2 / Pro is supplied with a pre-loaded micro SD
 card containing all demo laser shows, Playlists, and MIDI mappings for
