@@ -25,6 +25,12 @@ free course), "Manual", "Tutorials" (not "Videos" or "Video guides"; the wiki is
 New material goes in one place and links to the others, never copied into all three: a lesson links the manual
 section it is based on; a video gets a line in the matching manual section if it helps.
 
+AI guides (`ai/`): plain Markdown files written for AI chat assistants, served as they are (GitHub Pages sends `.md` as
+`text/markdown`). `ai/laseros-beam-creator-guide.md` lets an AI write a Beam Creator project file (`.ldbc`); the manual's
+"Making a Beam with AI" section links it and `llms.txt` lists it. Every id, range and default in it was checked against
+LaserOS 0.18.1's Beam Creator code and its examples were loaded and played with that code; when a LaserOS release changes
+Beam Creator, re-check the guide the same way before changing it (the test tools are kept outside this public repo).
+
 The header is a hand copy in each page. Before pushing a menu change, check that every copy matches:
 `grep -n -A7 'class="nav"\|class="menu-panel"' index.html docs/guides/ultra-mk2-pro-manual/index.html 404.html academy/index.html academy/*/index.html`
 
