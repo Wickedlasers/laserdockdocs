@@ -343,7 +343,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   :focus,:focus-visible{outline:none!important}
   .print-only{display:block;margin-top:16px}
   .done-flag,.lesson-done,.review-back{display:none!important}
-  .site-header,.site-footer,.toc,.toc-phone,.pager,.practice,.video,.video-meta,.btn-row,.skip{display:none!important}
+  .site-header,.site-footer,.toc,.toc-phone,.pager,.practice,.video,.video-meta,.video-note,.btn-row,.skip{display:none!important}
   body{background:#fff;color:#000}
   .course-grid{display:block;padding:0}
   .view p,.view li{color:#000}
