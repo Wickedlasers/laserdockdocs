@@ -339,6 +339,7 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .pager a{font-size:14.5px}
   .opt{flex-wrap:wrap}
   .opt .tag{order:9;flex-basis:100%;margin-left:30px;padding-left:0} /* on phones the tag gets its own line, so the answer keeps its width */
+  .opt > span:not(.tag){flex:1 1 0;min-width:0} /* the answer text stays beside its radio button */
   .site-footer .copy{margin-left:0}
 }
 /* 44 px tap targets on phones and touch screens: taller rows, so no tap area overlaps another */
