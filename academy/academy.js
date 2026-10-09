@@ -247,7 +247,8 @@
   }
 
   function setupCheck(fs, onSolved) {
-    var fb = $(".feedback", fs), why = $(".why", fs);
+    var fb = $(".feedback", fs), why = $(".why", fs), opts = $(".opts", fs);
+    if (opts) shuffle($$(".opt", opts)).forEach(function (o) { opts.appendChild(o); }); // else the right answer's place is guessable
     $$("input", fs).forEach(function (inp) {
       inp.addEventListener("change", function () {
         var ok = inp.value === fs.dataset.answer;

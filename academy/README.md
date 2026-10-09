@@ -5,18 +5,21 @@ no build step, no server, no database, no accounts, no analytics.
 
 - `index.html`: the course list.
 - `start-here/index.html`: the first course, "Start here: from the box to your first safe show" (Ultra MK2 & Pro, beginner).
-- `control-modes/index.html`: the second course, "Control modes for the Ultra MK2 and Pro" (Playlist, Visualizer, Laser Show,
+- `control-modes/index.html`: built as the second course, "Control modes for the Ultra MK2 and Pro" (Playlist, Visualizer, Laser Show,
   Cube Link, DMX/Art-Net, MIDI; 8 lessons, 29 quiz questions in 10 topics). It builds on start-here and links back to it.
-- `connect/index.html`: the third course, "Connect, update and troubleshoot your Ultra MK2 or Pro" (the four connection
+- `connect/index.html`: built as the third course, "Connect, update and troubleshoot your Ultra MK2 or Pro" (the four connection
   modes, APIPA, status bar and Status Info, drop-outs, the web admin page, firmware updates, factory reset, power and heat;
-  8 lessons, 33 quiz questions in 10 topics; version 1.1). The web admin page is there in LaserOS control mode (Paul, LaserDock,
+  8 lessons, 34 quiz questions in 10 topics; version 1.2). The web admin page is there in LaserOS control mode (Paul, LaserDock,
   2026-10-07); the manual's old screenshots of it showed a LaserCube WiFi, so they were left out until new ones exist. Firmware
   2.1 and later change the connection mode without a restart (2.1 release notes in mk2SDContent, LaserDock manual v1.5 p.83);
   older firmware asks to restart.
   Its power and heat facts are in the manual's "Power, Battery and Temperature"
-  section (owner decisions, added with the course). For one computer on a direct cable it shows both of the manual's ways
-  (LAN client with APIPA, LAN server) without picking one, like the manual's LaserOS section.
-- `laseros-basics/`, `laser-mapping/`, `music-show/`: courses 4-6 (2026-10-09), "LaserOS basics: your logo, text and
+  section (owner decisions, added with the course). For one computer on a direct cable it leads with LAN server (owner
+  decision 2026-10-08: one device on a cable = LAN Server) and keeps LAN client with APIPA as the second way.
+- Course order (catalogue and each course's "Next course" link, audit 2026-10-09): Start here → LaserOS basics →
+  Connect → Control modes → Laser mapping → Music show (beginner courses first; mapping and music use SD export and LAN
+  client from Control modes and Connect).
+- `laseros-basics/`, `laser-mapping/`, `music-show/`: built as courses 4-6 (2026-10-09), "LaserOS basics: your logo, text and
   effects" (8 lessons), "Laser mapping with LaserOS" (6) and "Build a laser show to your music" (8, Advanced). Their
   facts come from the manual chapter "Making Content in LaserOS" (labels checked against the LaserOS v0.18.1 source) and
   the tutorial videos' checked claims. Several embeds use `data-from`/`data-to` to skip parts of a video (other people's
@@ -56,7 +59,8 @@ no build step, no server, no database, no accounts, no analytics.
 3. Write the lessons. Building blocks, all plain HTML (copy them from `start-here/index.html`):
    - question: `<fieldset class="check" data-answer="b">` with radio options `a`, `b`, `c` (one `name` per question,
      unique on the page), a hidden `<p class="why">` (shown when answered right) and an empty
-     `<p class="feedback" aria-live="polite">`;
+     `<p class="feedback" aria-live="polite">`. The page shuffles the options, so the right answer's place gives
+     nothing away (write them in any order; don't refer to "the first option" in a `why`);
    - put-in-order: `<div class="order">` with an `<ol>` of at least two steps **in the right order** (the page
      shuffles them) and the "Check the order" button (`.check-order`); a list with fewer steps counts as solved;
    - scenario: `<div class="scenario" data-answer="yes|no">` with the two buttons, a `why`, an optional hidden

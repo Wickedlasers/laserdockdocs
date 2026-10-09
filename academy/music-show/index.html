@@ -85,7 +85,7 @@
   </div>
 </header>
 
-<main id="main" data-course="music-show" data-version="1.0" data-title="Build a laser show to your music" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Advanced">
+<main id="main" data-course="music-show" data-version="1.1" data-title="Build a laser show to your music" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Advanced">
 
   <section class="hero stage">
     <div class="container">
@@ -181,7 +181,7 @@
     <img src="../../images/academy/music-show/l1-clip1.webp" alt="" width="1280" height="720" loading="lazy">
   </div>
   <p class="video-meta"><span>Multi‑laser show tutorial: Beam Creator (10:42 to 16:08)</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=642s" target="_blank" rel="noopener">Watch on YouTube, from 10:42</a></p>
-  <p class="small video-note">This walkthrough is long: each lesson starts it at the part the lesson covers.</p>
+  <p class="small video-note">This walkthrough is long: each lesson starts it at the part the lesson covers. In this part, the Slide Speed is called “frames per second” (“8&nbsp;FPS, 10&nbsp;FPS”): it’s a number of frames. At the default Target FPS of 60, a Slide Speed of 60 takes one second (lesson 3).</p>
 
   <h3>Open Beam Creator</h3>
   <ul class="points">
@@ -229,7 +229,8 @@
     <li><strong>Brightness</strong> draws the pattern several times over. That makes it brighter, but harder for the cube to draw, and it may flicker: leave it at 1.</li>
     <li>Along the top are <strong>Quality</strong> (how densely the pattern is drawn), <strong>Target FPS</strong> (how many frames make one second, lesson 3), BPM Reactive and Actual FPS.</li>
     <li>The icons above them start a new project, import a project into the playlists, save, export and reload a project from its file.</li>
-    <li>Content with too much detail flickers: the scanners can draw only so many points per second. To check, turn on <strong>Show FPS in simulator window</strong> in LaserOS’s Settings → General: when it shows 45&nbsp;FPS or more, the content won’t appear to flicker. Keep Brightness at 1, and make the picture smaller or split it over more than one cube.</li>
+    <li>Content with too much detail flickers: the scanners can draw only so many points per second. To check, turn on <strong>Show FPS in simulator window</strong> in LaserOS’s Settings → General: when the FPS shown on the preview is 45 or more, the content won’t appear to flicker. Keep Brightness at 1, and make the picture smaller or split it over more than one cube.</li>
+    <li>That FPS on the preview is the flicker check. Target FPS, at the top of Beam Creator, only sets the timing of your effects (lesson 3).</li>
   </ul>
 
   <div class="practice">
@@ -502,13 +503,12 @@
     <div class="order">
       <p class="task">Put the steps for a new Timeline show in order.</p>
       <ol>
-        <li>Open Timeline in the list of apps</li>
-        <li>Drag your WAV song onto the song lane</li>
+        <li>Open Timeline and drag your WAV song onto the song lane</li>
         <li>Click + to add a layer for each cube</li>
         <li>Open Timeline devices and drag each cube into its row</li>
         <li>Put something on one layer to see which cube plays it</li>
       </ol>
-      <p class="why" hidden>In the manual’s order: the song, then one layer per cube, then each cube in its row. A quick test on one layer shows which cube is which.</p>
+      <p class="why" hidden>The Timeline first, with your song. Then one layer per cube, because each layer is a row in Timeline devices, where each cube goes into its row. A quick test on one layer then shows which cube is which.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -556,9 +556,13 @@
   <ul class="points">
     <li>Drag content onto a layer, under the song’s waveform: animations, dancers, images, Beam Show patterns and your custom beams (from Playlists → Custom Beams). The waveform helps you see where the notes are.</li>
     <li>To change an item’s length, drag its edge. This also changes its playback speed, so it fits.</li>
-    <li>For a Beam Creator item you can instead change its frames, save it and place it again.</li>
+    <li>For a Beam Creator item you can instead change its frames, save it and place it again. To open it in Beam Creator, select it in Playlists → Custom Beams and click the pencil, <strong>Edit current item</strong>. Then change its frames, save it, remove the old item from the timeline and place the new one.</li>
     <li>Stop the timeline to see the Beam Creator preview of the pattern you’re editing.</li>
   </ul>
+  <figure class="native">
+    <a href="../../images/academy/music-show/l5-edit-current-item-460.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l5-edit-current-item-460.webp" alt="A playlist in LaserOS, from the video, with the custom beam riser left selected. In the bar above it: Back, a magnifier, a pencil and a bin. The pointer is on the pencil, and its label reads Edit current item." width="460" height="194" loading="lazy"></a>
+    <figcaption>The pencil, Edit current item, opens the selected custom beam in Beam Creator. From the video.</figcaption>
+  </figure>
   <figure class="native">
     <a href="../../images/academy/music-show/l5-resize-item-1060.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l5-resize-item-1060.webp" alt="The Timeline, from the video: two lines items on layers 2 and 3 under the song’s waveform, around 03:00. The pointer drags the right edge of the second item on layer 3; labels show 03:00.50 at its start and 03:00.92 at its end." width="1060" height="310" loading="lazy"></a>
     <figcaption>Dragging the end of an item: the times show where it starts and ends. From the video.</figcaption>
@@ -571,12 +575,16 @@
   <h3>The item menu</h3>
   <ul class="points">
     <li>Right‑click an item for <strong>Locate item</strong>, <strong>Copy item</strong>, <strong>Edit item</strong> and <strong>Remove</strong>.</li>
-    <li>Copy an item and paste it on another layer to use it on another cube.</li>
-    <li>Save your timeline often, with the save icon in the timeline bar.</li>
+    <li>To use an item on another cube, copy it: right‑click it and choose <strong>Copy item</strong>. Then right‑click the other cube’s layer at the spot where the copy should start, and choose <strong>Paste item</strong>.</li>
+    <li>Save your timeline often, with the save icon at the right of the timeline bar. It asks for a name (lesson 8 shows where your timeline is kept).</li>
   </ul>
   <figure class="native">
     <a href="../../images/academy/music-show/l5-item-menu-1060.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l5-item-menu-1060.webp" alt="The Timeline, from the video: the right‑click menu of a two lines item on layer 1, with Locate item, Copy item, Edit item and Remove." width="1060" height="310" loading="lazy"></a>
     <figcaption>Right‑click an item for its menu. From the video.</figcaption>
+  </figure>
+  <figure class="native">
+    <a href="../../images/academy/music-show/l5-paste-item-880.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l5-paste-item-880.webp" alt="The Timeline, from the video: the timeline bar at the top, the song’s waveform around 03:00, and below it the empty layer 3. A right‑click on layer 3 has opened a menu with one entry, Paste item." width="880" height="292" loading="lazy"></a>
+    <figcaption>Right‑click an empty spot on another layer to paste the copied item there. From the video.</figcaption>
   </figure>
 
   <div class="practice">
@@ -598,7 +606,7 @@
         <label class="opt"><input type="radio" name="l5q2" value="b"><span>Swap the cubes in Timeline devices</span></label>
         <label class="opt"><input type="radio" name="l5q2" value="c"><span>Copy item, then paste it on its layer</span></label>
       </div>
-      <p class="why" hidden>Right‑click the item, choose Copy item, and paste it on the middle cube’s layer.</p>
+      <p class="why" hidden>Right‑click the item and choose Copy item. Then right‑click the middle cube’s layer where it should start, and choose Paste item.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
@@ -625,11 +633,11 @@
   <h2 id="l6-h">Effect lanes and ready‑made content</h2>
   <p class="intro">The Timeline can also place effects, for variety without making new patterns. And LaserOS comes with content you can reuse.</p>
 
-  <div class="video" data-yt="3ZT6c3soLOY" data-from="2733" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="2733" data-to="2909" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
     <button type="button" aria-label="Play video: multi‑laser show tutorial, effects on the timeline"><span class="play"><svg><use href="#i-play"/></svg></span></button>
     <img src="../../images/academy/music-show/l6-clip1.webp" alt="" width="1280" height="720" loading="lazy">
   </div>
-  <p class="video-meta"><span>Multi‑laser show tutorial: effects on the timeline (from 45:33)</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=2733s" target="_blank" rel="noopener">Watch on YouTube, from 45:33</a></p>
+  <p class="video-meta"><span>Multi‑laser show tutorial: effects on the timeline (45:33 to 48:29)</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=2733s" target="_blank" rel="noopener">Watch on YouTube, from 45:33</a></p>
 
   <h3>Effect lanes</h3>
   <ul class="points">
@@ -703,11 +711,11 @@
   <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
   <p class="label">Lesson 7 of 8</p>
   <h2 id="l7-h">A show for several cubes</h2>
-  <p class="intro">One computer can run several cubes, each with its own part of the show on its own Timeline layer. For several cubes we recommend Ethernet cables in LAN client mode.</p>
+  <p class="intro">One computer can run several cubes, each with its own part of the show on its own Timeline layer. For several cubes we recommend Ethernet cables in LAN Client mode.</p>
 
   <div class="warn">
     <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Every cube, before anything else</span>
-    <p>Each cube has its own key and interlock. On every cube: its beam block set as in the manual’s <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware Installation</a>, every beam at least 3&nbsp;m (10&nbsp;ft) above the floor where people may be (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>), and every beam and where it lands in view of someone who can get that laser stopped at once (<a class="link" href="../start-here/#lesson-4">lesson 4</a>). A safety zone in LaserOS works on top of the beam block and the 3&nbsp;m rule, never instead of them. A zone never protects people: keep‑out zones are for cameras, projectors and objects. The laser must never be aimed at people.</p>
+    <p>Each cube has its own key and interlock. On every cube: its beam block set as in the manual’s <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware Installation</a>, every beam at least 3&nbsp;m (10&nbsp;ft) above the floor, measured from the highest place someone could stand (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>), and every beam and where it lands in view of someone who can get that laser stopped at once (<a class="link" href="../start-here/#lesson-4">lesson 4</a>). A safety zone in LaserOS works on top of the beam block and the 3&nbsp;m rule, never instead of them. A zone never protects people: keep‑out zones are for cameras, projectors and objects. The laser must never be aimed at people.</p>
   </div>
 
   <h3>Set up the cubes and the computer</h3>
@@ -725,16 +733,16 @@
   <div class="two shots">
     <figure>
       <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F0000001407A909C8A-240.webp" alt="The Connection menu, from the manual: LAN Server, WiFi Server, LAN Client (ticked and highlighted) and WiFi Client. The status bar shows LaserOS and a red cross next to LAN-C." width="240" height="320" loading="lazy">
-      <figcaption>Settings → Connection, with LAN client chosen.</figcaption>
+      <figcaption>Settings → Connection, with LAN Client chosen.</figcaption>
     </figure>
     <figure>
       <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F00000014022BCAF89_hu_12334b661bc804e-240.webp" alt="The Network menu, from the manual: LAN Client is highlighted, then LAN Server, WiFi Server, WiFi Client and Cube Link, which is greyed out. The status bar shows a tick next to LAN-C, and A-IP before the address 169.254.129.54." width="240" height="320" loading="lazy">
-      <figcaption>Connected as a LAN client, with a self‑assigned (A‑IP) address.</figcaption>
+      <figcaption>Connected in LAN Client mode, with a self‑assigned (A‑IP) address.</figcaption>
     </figure>
   </div>
 
   <h3>Just one cube?</h3>
-  <p>A single cube needs no switch: connect it straight to the computer and use LAN server mode. The <a class="link" href="../connect/#lesson-3">Connect course, lesson 3</a> covers direct cables, in LAN server and in LAN client mode.</p>
+  <p>A single cube needs no switch: connect it straight to the computer and use LAN Server mode. The <a class="link" href="../connect/#lesson-3">Connect course, lesson 3</a> covers direct cables, in LAN Server and in LAN Client mode.</p>
 
   <div class="practice">
     <h3>Check yourself</h3>
@@ -742,13 +750,12 @@
       <p class="task">Put the steps for a three‑cube show in order.</p>
       <ol>
         <li>Set each cube’s beam block: beams 3&nbsp;m above people</li>
-        <li>On each cube: LaserOS mode, LAN Client, Auto IP</li>
-        <li>Computer WiFi off and LaserOS closed</li>
+        <li>Each cube: LaserOS mode, LAN Client, Auto IP. The computer: WiFi off, LaserOS closed</li>
         <li>Connect the cubes and the computer to the switch</li>
         <li>Wait for every cube’s 169.254 address, then start LaserOS</li>
         <li>Give each cube its own layer in the Timeline</li>
       </ol>
-      <p class="why" hidden>The beam blocks come first. WiFi off and LaserOS closed before you connect, as in the manual’s APIPA steps; start LaserOS once the cubes have their 169.254 addresses. When its Laser button no longer reads NO LASER, it has found them.</p>
+      <p class="why" hidden>The beam blocks come first. Then the settings on the cubes and the computer: WiFi off and LaserOS closed before you connect, as in the manual’s APIPA steps. Start LaserOS once the cubes have their 169.254 addresses; when its Laser button no longer reads NO LASER, it has found them. Only then can each cube get its layer.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -775,16 +782,16 @@
     <fieldset class="check" data-answer="c">
       <legend><span class="qn">Question 3</span>Your show is for one cube, on a cable straight to the computer. Which mode does the manual suggest?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l7q3" value="a"><span>WiFi client</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="a"><span>WiFi Client</span></label>
         <label class="opt"><input type="radio" name="l7q3" value="b"><span>Cube Link</span></label>
-        <label class="opt"><input type="radio" name="l7q3" value="c"><span>LAN server</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="c"><span>LAN Server</span></label>
       </div>
-      <p class="why" hidden>A single cube needs no switch: connect it straight to the computer and use LAN server mode.</p>
+      <p class="why" hidden>A single cube needs no switch: connect it straight to the computer and use LAN Server mode.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
   </div>
 
-  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#a-show-for-several-cubes">A show for several cubes</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#apipa-mode-explained">APIPA mode explained</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#lan-server-mode">LAN server mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></p>
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#a-show-for-several-cubes">A show for several cubes</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#apipa-mode-explained">APIPA mode explained</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#lan-server-mode">LAN Server mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></p>
   <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 8.</p>
   <nav class="pager" aria-label="Lesson 7: back and next"><a data-nav href="#lesson-6"><span>Back</span>Effect lanes and ready‑made content</a><a class="next" data-nav href="#lesson-8"><span>Next</span>Play your show</a></nav>
 </section>
@@ -806,6 +813,21 @@
   <figure class="native">
     <a href="../../images/academy/music-show/l8-laser-button-560.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l8-laser-button-560.webp" alt="Three states of the Laser button in LaserOS, from the video, one above the other: NO LASER, LASER OFF with a red power symbol, and LASER ON." width="560" height="194" loading="lazy"></a>
     <figcaption>The Laser button: NO LASER, LASER OFF and LASER ON. From the video.</figcaption>
+  </figure>
+
+  <h3>Play, save and open your timeline</h3>
+  <ul class="points">
+    <li>Play and stop are at the left of the timeline bar, next to the layers icon (see the picture in lesson 4). With the laser on, click play to run your show on the cubes, and stop to end it.</li>
+    <li>Save your timeline with the save icon at the right of the timeline bar. <strong>Save Timeline</strong> asks for a name. The timeline is then kept in the Timeline app, in its <strong>Timeline</strong> folder, next to the Demo Timeline folders.</li>
+    <li>To play it again later, open Timeline in the list of apps, then the Timeline folder: pick your timeline and press Play, as with the ready‑made shows (lesson 6).</li>
+  </ul>
+  <figure class="native">
+    <a href="../../images/academy/music-show/l8-save-timeline-520.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l8-save-timeline-520.webp" alt="The Save Timeline box, from the video: Name: with tutorial typed in, a question‑mark button, and the OK and Cancel buttons." width="520" height="272" loading="lazy"></a>
+    <figcaption>Save Timeline asks for a name: here, tutorial. From the video.</figcaption>
+  </figure>
+  <figure class="native">
+    <a href="../../images/academy/music-show/l8-timeline-folder-536.webp" target="_blank" rel="noopener"><img src="../../images/academy/music-show/l8-timeline-folder-536.webp" alt="The Timeline app in LaserOS, from the video, with four folders: Timeline, then Demo Timeline - Jarek Kral, Demo Timeline - Andrea Chan and Demo Timeline - Contest." width="536" height="136" loading="lazy"></a>
+    <figcaption>The Timeline app’s folders. After saving, LaserOS says “tutorial” has been saved in “Timeline” &gt; “Timeline”: your timelines go into the first folder. From the video.</figcaption>
   </figure>
 
   <h3>Where your content is saved</h3>
@@ -853,12 +875,12 @@
       <div class="scenario" data-answer="no">
         <p class="s">To bring the beams closer to the dance floor, you lower the beam block and set a keep‑out zone in LaserOS around the people at the front.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
-        <p class="why" hidden>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them, and never protects people. Every beam stays at least 3&nbsp;m above the floor where people may be, and the laser must never be aimed at people.</p>
+        <p class="why" hidden>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them, and never protects people. Every beam stays at least 3&nbsp;m above the highest place someone could stand, and the laser must never be aimed at people.</p>
         <p class="hint" hidden>Can a safety zone replace the beam block and the 3&nbsp;m rule?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="yes">
-        <p class="s">Your three‑cube show is finished. Each cube’s beam block keeps every beam at least 3&nbsp;m above the floor where people may be, and every item on Start here’s pre‑show checklist is ticked. You click the Laser button in LaserOS to start, and play the timeline.</p>
+        <p class="s">Your three‑cube show is finished. Each cube’s beam block keeps every beam at least 3&nbsp;m above the highest place anyone can stand, and every item on Start here’s pre‑show checklist is ticked. You click the Laser button in LaserOS to start, and play the timeline.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
         <p class="why" hidden>Beam blocks set, beams 3&nbsp;m above people, and the whole pre‑show checklist done: that’s a safe start.</p>
         <p class="hint" hidden>Look at what’s been checked: the beam blocks and the whole pre‑show checklist.</p>
@@ -873,6 +895,16 @@
         <label class="opt"><input type="radio" name="l8q1" value="c"><span>The cube’s own web app</span></label>
       </div>
       <p class="why" hidden>To play a playlist on the cube without a computer, export it to the SD card with LaserOS on a computer. The phone app can’t export.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>You saved your timeline as “finale” last week. Where do you find it to play it again?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q2" value="a"><span>In the Timeline app’s Timeline folder</span></label>
+        <label class="opt"><input type="radio" name="l8q2" value="b"><span>In the Playlists app, under Custom Beams</span></label>
+        <label class="opt"><input type="radio" name="l8q2" value="c"><span>On the cube’s SD card, in “Lasercube”</span></label>
+      </div>
+      <p class="why" hidden>Save Timeline keeps your timeline in the Timeline app, in its Timeline folder. Pick it there and press Play.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
   </div>
@@ -980,7 +1012,7 @@
       <label class="opt"><input type="radio" value="a"><span>Drag it into its Timeline devices row</span></label>
       <label class="opt"><input type="radio" value="b"><span>Save it under the cube’s name</span></label>
       <label class="opt"><input type="radio" value="c"><span>Copy it, then paste it on that cube’s layer</span></label></div>
-      <p class="why" hidden>Right‑click the item, choose Copy item, and paste it on the other cube’s layer.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>Right‑click the item and choose Copy item. Then right‑click the other cube’s layer where it should start, and choose Paste item.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="placing" data-lesson="5"><legend><span class="qn"></span>How often should you save your timeline?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Often, as you work</span></label>
       <label class="opt"><input type="radio" value="b"><span>Once, when it’s done</span></label>
@@ -999,10 +1031,10 @@
       <p class="why" hidden>Position and Zoom together put a graphic or a text in one part of a wall.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="a" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>For a show on several cubes, which connection do we recommend?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Ethernet cables in LAN client mode</span></label>
-      <label class="opt"><input type="radio" value="b"><span>WiFi server mode on each of the cubes</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Ethernet cables in LAN Client mode</span></label>
+      <label class="opt"><input type="radio" value="b"><span>WiFi Server mode on each of the cubes</span></label>
       <label class="opt"><input type="radio" value="c"><span>Cube Link, with the computer as master</span></label></div>
-      <p class="why" hidden>For several cubes we recommend Ethernet cables in LAN client mode, with every cube and the computer on a switch.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>For several cubes we recommend Ethernet cables in LAN Client mode, with every cube and the computer on a switch.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>The cubes are on a switch with no router. Which IP Mode do you leave them on?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Static IP</span></label>
       <label class="opt"><input type="radio" value="b"><span>Auto IP</span></label>
@@ -1018,7 +1050,7 @@
       <label class="opt"><input type="radio" value="a"><span>Each cube’s beam block: beams at least 3&nbsp;m above people</span></label>
       <label class="opt"><input type="radio" value="b"><span>A keep‑out zone in LaserOS around the audience</span></label>
       <label class="opt"><input type="radio" value="c"><span>A check of the show in the preview’s 3D view</span></label></div>
-      <p class="why" hidden>Set each cube’s beam block first: every beam at least 3&nbsp;m above the floor where people may be. A zone works on top of that, never instead of it.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>Set each cube’s beam block first: every beam at least 3&nbsp;m above the highest place someone could stand. A zone works on top of that, never instead of it.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="safety" data-lesson="8"><legend><span class="qn"></span>A playlist plays from the SD card in Playlist mode. Which safety zone applies?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The one you set in LaserOS</span></label>
       <label class="opt"><input type="radio" value="b"><span>The one set on the cube, under Settings → Projection</span></label>
@@ -1035,6 +1067,11 @@
       <label class="opt"><input type="radio" value="b"><span>While a playlist is playing on it</span></label>
       <label class="opt"><input type="radio" value="c"><span>Whenever the Laser button reads LASER ON</span></label></div>
       <p class="why" hidden>Always switch the cube off before you take the card out or put it back in.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="play" data-lesson="8"><legend><span class="qn"></span>Where does Save Timeline keep your timeline?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In the Playlists app, under Custom Beams</span></label>
+      <label class="opt"><input type="radio" value="b"><span>On the SD card, in the Lasercube folder</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In the Timeline app’s Timeline folder</span></label></div>
+      <p class="why" hidden>Save Timeline asks for a name and keeps the timeline in the Timeline app, in its Timeline folder.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="play" data-lesson="8"><legend><span class="qn"></span>To play the built‑in laser shows on several cubes without a computer, what do you use?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The Timeline in LaserOS</span></label>
       <label class="opt"><input type="radio" value="b"><span>Cube Link, with the cubes in Laser Show mode</span></label>
@@ -1092,6 +1129,6 @@
     <span class="copy">© Wicked Lasers</span>
   </div>
 </footer>
-<script src="../academy.js?v=20261009"></script>
+<script src="../academy.js?v=20261009b"></script>
 </body>
 </html>
