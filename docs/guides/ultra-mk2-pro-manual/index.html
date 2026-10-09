@@ -171,6 +171,7 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .docs-content a:not(.anchor):hover{color:var(--accent-hover);text-decoration-color:currentColor}
 .docs-content strong{font-weight:600}
 .docs-content ul,.docs-content ol{margin:0 0 16px;padding-left:1.4em}
+.docs-content li>ul,.docs-content li>ol{margin-bottom:0}
 .docs-content li{margin:6px 0;padding-left:.2em}
 .docs-content li::marker{color:var(--subtle)}
 .docs-content blockquote{margin:0 0 16px;padding:0 0 0 20px;border-left:2px solid var(--line-2)}
@@ -1970,19 +1971,22 @@ can have its own effects. To light up the edges of a stack of boxes:</p>
 with Fixed Rotation.</li><li>Add Scale (Scale start-&gt;end, from 0.0 to 1.0) so the line grows
 along the edge, and Color Sequence to change its colours.</li><li>Duplicate the line for the next edge and adjust it.</li><li>Save it as a custom beam.</li></ol>
 <h3 id="making-a-beam-with-ai">Making a Beam with AI<a href="#making-a-beam-with-ai" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>Beam Creator saves each design as a small text file ending in .ldbc.
-An AI chat assistant, such as ChatGPT, Claude or Gemini, can write that
-file from a description in your own words. Our guide tells the AI how the
-file works.</p>
+<p>Beam Creator designs are small text files ending in .ldbc. An AI chat
+assistant can write one from a description in your own words (a prompt).
+Our guide tells the AI how the file works.</p>
 <ol><li>Download the guide: <a href="../../../ai/laseros-beam-creator-guide.md" download>LaserOS Beam Creator guide for AI (.md)</a>.</li><li>Start a new chat, attach the guide (or paste its text) and describe
 the beam you want: what it shows, how it moves, how fast and in which
 colours. For example:<ul><li>“Eight beams in a fan that spin slowly around the middle. Change
 their colour every second: red, blue, green, white.”</li><li>“Police lights: red flashing on the left and blue flashing on the
-right, alternating fast.”</li><li>“A rainbow wave for a 128 BPM track that flashes on every beat.”</li><li>“A heart shape that beats like a heartbeat, in pink.”</li></ul></li><li>Save the AI’s file with a name ending in .ldbc, for example
-blue fan.ldbc. If the AI shows the file as text, copy all of it into a
-plain-text editor and save it under that name.</li><li>In Beam Creator, click the import icon (import a project into the
-playlists) and choose the file; in the phone app, tap Import “Custom
-Beam”. LaserOS adds it to Playlists → Custom Beams.</li><li>On a computer, select it in Playlists → Custom Beams and click the
+right, alternating fast.”</li><li>“A rainbow wave for a 128 BPM track that flashes on every beat.”</li><li>“A purple triangle spinning one way inside a cyan hexagon spinning
+the other way.”</li></ul></li><li>Save the AI’s file with a name ending in .ldbc, for example
+“fan.ldbc”. If the AI shows the file as text, copy all of it into a
+plain-text editor and save it under that name. In Windows Notepad, set
+Save as type to All files first, or it saves fan.ldbc.txt; in TextEdit
+on a Mac, choose Format → Make Plain Text first. On a phone, save the
+file to your files or downloads.</li><li>In Beam Creator, click the import icon (the open folder, second from
+the left above the controls) and choose the file; in the phone app, tap
+Import “Custom Beam”. LaserOS adds it to Playlists → Custom Beams.</li><li>On a computer, select it in Playlists → Custom Beams and click the
 pencil (Edit current item) to open it in Beam Creator. Check it in the
 preview with the laser off, change anything you like with the sliders,
 and save it.</li></ol>

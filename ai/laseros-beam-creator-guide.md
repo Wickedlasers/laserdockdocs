@@ -2,7 +2,7 @@
 
 This file tells an AI assistant (ChatGPT, Claude, Gemini or similar) how to write a **Beam Creator project file (`.ldbc`)** for LaserOS, the app that drives LaserCube laser projectors. The person who gave you this file will describe a beam pattern or animation. Your job is to write the file. They import it into LaserOS and play it on their LaserCube.
 
-Written for LaserOS 0.18 (Beam Creator file version 1). Every name, range and default below was checked against LaserOS's Beam Creator code, and the examples were loaded and played with it.
+Written for LaserOS 0.18 (Beam Creator file version 1). Every name, range and default below was checked against LaserOS's Beam Creator code, and the examples were loaded and run with that code. Where LaserOS accepts a value that breaks the effect (for example 0 frames), the tables give the range that works.
 
 ## 1. How to answer
 
@@ -10,7 +10,7 @@ Written for LaserOS 0.18 (Beam Creator file version 1). Every name, range and de
 2. Plan the layers: which patterns, where they sit, what moves, which colours, how fast (in frames, see section 3).
 3. Write one complete `.ldbc` file that follows section 2 and the rules in section 8 (one file per design; only when the request needs several designs, such as the parts of a longer piece, give each its own clearly named file). Show only final files: no drafts, no partial files, no placeholders. Use only the pattern and effect types in this guide. If nothing does exactly what was asked (for example a random angle, or speeding up over time), build it from what is here (section 7 has ideas) and say so in one line.
 4. If you can create files for download, give a file named after the design, for example `cyan beam sweep.ldbc`. If you can't, put the whole file in a single code block and tell the person to save it as plain text with a name ending in `.ldbc`.
-5. After the file, add at most three short lines: what it shows, and how to bring it in: in LaserOS open **Beam Creator**, click the **import** icon ("import custom beam project into playlists"; on a phone: **Import "Custom Beam"**) and pick the file. It appears in **Playlists → Custom Beams**. On a computer, select it there and click the pencil (**Edit current item**) to open it in Beam Creator, check it in the preview with the Laser button on NO LASER, change anything with the sliders, then save.
+5. After the file, add at most three short lines: what it shows, and how to bring it in: in LaserOS open **Beam Creator**, click the **import** icon ("import custom beam project into playlists"; on a phone: **Import "Custom Beam"**) and pick the file. It appears in **Playlists → Custom Beams**. On a computer, select it there and click the pencil (**Edit current item**) to open it in Beam Creator, check it in the preview with the laser off (Laser button on LASER OFF, or NO LASER when no cube is connected), change anything with the sliders, then save.
 
 Beam Creator can't write text, show a logo or picture, or draw free shapes. LaserOS has its own tools for those (Text, logo import and Draw: see "Making Content in LaserOS" in the LaserCube manual, https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/#making-content-in-laseros). Say so, and offer the closest Beam Creator design if it helps.
 
@@ -37,7 +37,7 @@ A `.ldbc` file is JSON. The top level is always:
 - `targetFPS`: frames per second, one of 60, 55, 50, 45, 40, 35, 30, 24, 48, 90, 120. Use 60 unless asked. Always include it.
 - `renderQuality`: 0 = High, 1 = Normal, 2 = Low. Use 0.
 - `isBpmReactive` / `defaultBpm` (whole number 0 to 300): see section 3. Leave out or set false unless the person wants the timing to follow the music's tempo.
-- `beamPatterns`: the layers, at most 10. Later layers are drawn after earlier ones; there is no stacking order to worry about.
+- `beamPatterns`: the layers. Use at most 10: that is as many as Beam Creator lets you edit. Later layers are drawn after earlier ones; there is no stacking order to worry about.
 
 Each layer:
 
@@ -119,7 +119,7 @@ Any whole number from -1 to 1530 works: the scale runs red → yellow → green 
 
 ## 4. Effects work in order
 
-Effects that move a layer (Position, Random Position, Movement, Simple Paths, Fixed Rotation, Rotation, Scale) are applied from the **bottom of the list up**: the last effect moves the pattern first, then the one above it moves that result, and so on. Rotation and Scale always work around the centre of the projection area (0, 0), not around the pattern.
+Effects that move a layer (Position, Random Position, Movement, Simple Paths, Fixed Rotation, Rotation, Scale) are applied from the **bottom of the list up**: the last effect moves the pattern first, then the one above it moves that result, and so on. Rotation and Scale turn or grow what is below them in the list around the point (0, 0). A pattern is drawn around (0, 0), so with no move below them it spins or grows in place; a pattern that an effect below them has moved swings or grows around the centre of the projection area.
 
 - Spin a shape in place somewhere else: `Position` first, then `Rotation` (Rotation turns the shape around its own centre, then Position moves it).
 - Make a shape orbit the centre: `Rotation` first, then `Position` (Position moves it out, then Rotation swings it around the centre).
@@ -155,8 +155,8 @@ One straight line through the centre, horizontal (or vertical), split into secti
 | numLines | int | 1 to 10 | 1 | number of sections (Num Sections) |
 | width | float | 0 to 1 | 1.0 | the line runs from -width to +width |
 | bright | int | 1 to 8 | 1 | Brightness: keep 1 |
-| lineborder | switch | | false | dark-free coloured gaps (borders) between sections |
-| borderwidth | int | 1 to 10 | 1 | border size in hundredths of the area |
+| lineborder | switch | | false | adds short segments in bordercolor at both ends of the line and between the sections |
+| borderwidth | int | 1 to 10 | 1 | length of each border segment, in hundredths of a unit (the area is 2 units wide) |
 | bordercolor | colour | | white | border colour |
 | singlecolor | switch | | true | true: the whole line uses "Line 1 Color" |
 | "Line 1 Color" … "Line 10 Color" | colour | | white | colour of each section, left to right (bottom to top) |
@@ -172,11 +172,11 @@ An outline shape centred on (0, 0). **Always include `{"globalId": "version", "v
 | shapestyle | list | 0 Solid, 1 Dotted, 2 Dashed | 0 | Style |
 | size | float | 0.01 to 1 | 0.5 | radius (half the width; Rectangle: half its width) |
 | height | float | 0.01 to 1 | 0.5 | Rectangle only: half its height |
-| numdots | int | 1 to 50 | 22 | Dotted: how many dots. Dashed, or Solid with several colours: how many dashes or colour stripes (more = shorter) |
+| numdots | int | 1 to 50 | 22 | Dotted: how many dots (Circle: in total; Square, Rectangle, Triangle: per side). Dashed, or Solid with several colours: more = more, shorter dashes or colour stripes |
 | numcolors | int | 1 to 8 | 1 | Colours: how many of "Color 1" … "Color 8" are used around the outline |
 | "Color 1" … "Color 8" | colour | | white | the colours |
 | dotmode | list | 0 Static Beams, 1 clockwise Beams, 2 anti-clockwise Beams | 0 | turns the dots, dashes or colour stripes around the outline (only with Dotted, Dashed or numcolors above 1) |
-| speed | int (B) | 0 to 240 | 60 | speed of that turning: smaller = faster, 0 = still |
+| speed | int (B) | 1 to 240 | 60 | speed of that turning: smaller = faster. To keep them still, use dotmode 0 |
 | bright | int | 1 to 10 | 1 | Brightness: keep 1 |
 
 A tiny solid circle (size 0.02 to 0.06) makes a good small "dot" that you can move with effects.
@@ -189,7 +189,7 @@ A wave across the whole width (x from -1 to 1), centred on y = 0.
 |---|---|---|---|---|
 | height | float | 0 to 1 | 0.5 | wave height (amplitude): peaks reach +height and -height |
 | cycles | float | 0.01 to 4 | 0.5 | how many waves fit across the width |
-| wavespeed | float (B) | -10 to 10 | 0 | the wave travels: positive = to the left, negative = to the right, 0 = still. 1 to 3 is calm, 8 is fast |
+| wavespeed | float (B) | -10 to 10 | 0 | the wave travels: positive = to the left, negative = to the right, 0 = still. About 1 is slow, 3 lively, 10 very fast |
 | linestyle | list | 0 Solid Line, 1 Dashed Line, 2 Dotted Line | 0 | Style |
 | numdots | int | 15 to 50 | 20 | Dotted only: number of dots |
 | bright | int | 1 to 8 | 1 | Dotted only: keep 1 |
@@ -205,7 +205,7 @@ Draws one of LaserOS's built-in animations as a spiral. Use it when the person a
 
 | globalId | kind | value |
 |---|---|---|
-| spiralanim | list by name | `{"globalId": "spiralanim", "index": N, "textAtIndex": "NAME"}`: Orb1 … Orb25 (index 1 to 25), "Rick Roll" (26), "Skull" (27), "Muppet" (28), "Fire" (29), "Earth" (30) |
+| spiralanim | list by name | `{"globalId": "spiralanim", "index": N, "textAtIndex": "NAME"}`: Orb1 … Orb25 (index 1 to 25), "Skull" (27), "Fire" (29), "Earth" (30). The name decides; give the matching index too |
 | applydefault | switch | true (use the animation's own settings; default) |
 
 ## 6. Effects
@@ -258,7 +258,7 @@ Slides the layer in a straight line.
 | startpos | float | -2 to 2 | 0 | where it starts (x for Horizontal, y for Vertical) |
 | endpos | float | -2 to 2 | 0 | where it ends. Set both: with both at 0 nothing moves |
 | speed | int (B) | 5 to 1200 | 120 | Frames for one trip from start to end |
-| dirdelay | int (B) | 0 to 600 | 0 | Direction Dwell: frames to pause at each end |
+| dirdelay | int (B) | 0 to 600 | 0 | Direction Dwell: frames to pause at the end ("start->end->start": at both ends) before moving again |
 | delay | int (B) | 0 to 600 | 0 | Start Delay |
 | repeating | switch | | **false** | Always Repeat. Default false: it moves once and stops. Set true for a loop |
 | repeats | int | 0 to 100 | 0 | extra trips when repeating is false |
@@ -311,12 +311,12 @@ Grows or shrinks the layer (around the centre, see section 4).
 | startscale | float | 0 to 10 | 0 | Start Size (1 = the layer's own size, 0 = a point) |
 | endscale | float | 0 to 10 | 1 | End Size |
 | scalespeed | int (B) | 1 to 1200 | 60 | Frames for one grow (or shrink) |
-| dirdelay | int (B) | 0 to 600 | 0 | Dwell: frames to hold at each end |
+| dirdelay | int (B) | 0 to 600 | 0 | Dwell: frames to hold at the end size (mode 1: at both ends) before starting again |
 | delay | int (B) | 0 to 600 | 0 | Start Delay |
 | scalex / scaley | switch | | true / true | scale only horizontally or only vertically by switching the other off |
 | repeating | switch | | true | Always Repeat |
 | repeats | int | 0 to 100 | 0 | |
-| triggeronbeat | switch | | false | Trig on Beat: restart on the music's beats |
+| triggeronbeat | switch | | false | Trig on Beat: restart on the music's beats. Set repeating false too, or it also keeps running at its own speed between beats |
 | beatratio | list | 0 "1:1" … 7 "1:8" | 0 | with triggeronbeat: every beat, every 2nd beat … |
 
 At size 0 the whole layer sits on one spot, so a start or end size of 0 draws a single bright point for a moment. For a shape that appears from nothing, use a small size like 0.05 instead, or fade it in with Power Fader.
@@ -331,7 +331,7 @@ Fades the layer's brightness.
 | startpower | float | 0 to 1 | 0 | Start Power (0 = off, 1 = full) |
 | endpower | float | 0 to 1 | 1 | End Power |
 | speed | int (B) | 1 to 1200 | 60 | Frames for one fade |
-| dirdelay | int (B) | 0 to 600 | 0 | Dwell |
+| dirdelay | int (B) | 0 to 600 | 0 | Dwell: frames to hold at End Power (mode 1: at both ends) before fading again |
 | delay | int (B) | 0 to 600 | 0 | Start Delay: the layer stays at startpower until then (so startpower 0 + delay = appear later) |
 | repeating | switch | | **false** | Always Repeat (default false: fades once) |
 | repeats | int | 0 to 100 | 0 | |
@@ -344,7 +344,7 @@ A single flash: startpower 1.0, endpower 0.0, speed 10 to 20 frames.
 
 Switches the layer on and off. It starts with its Off Frames, then its On Frames, and repeats. During Start Delay the layer stays on.
 
-Two layers flashing in turn (police lights, left/right): give both the same Strobe, and give the second Strobe a `delay` equal to the On Frames (for example on 4, off 4, delay 4).
+Two layers flashing in turn (police lights, left/right): give both the same Strobe with On Frames equal to Off Frames, and give the second Strobe a `delay` of that many frames (for example on 4, off 4, delay 4).
 
 | globalId | kind | range | default | meaning |
 |---|---|---|---|---|
@@ -389,14 +389,13 @@ LaserOS loads what it understands and silently ignores the rest, so check these 
 
 1. `"enabled": true` on every layer AND every effect. A missing `enabled` switches it **off**.
 2. `targetFPS` must be there (one of the listed values).
-3. int controls need whole numbers. A value like 60.5, or a number in quotes like "60", is ignored (the default is used).
-4. Every value must be inside its range. A value outside it is ignored. Range limits are in the tables; the ones most often missed: Start Delay and Dwell at most 600, Strobe On and Off Frames 1 to 20, Frames at most 1200, Beam Count at most 18.
-5. `globalId`, `beamPatternType` and `beamEffectType` must be spelled exactly as in the tables. Unknown names are ignored. Note: `"simplepaths"`, `"RandomPosition"`, `"Rotation"` and `"Horizontal Beam Dots"` are file names that differ from what Beam Creator shows.
+3. Numbers are plain JSON numbers, never in quotes, and int controls need whole numbers. LaserOS reads 60.5, "60" or "0.5" as 0: that 0 is used wherever the range allows it (a width of 0 makes a line vanish, a speed of 0 can break the movement), and ignored otherwise.
+4. Every value must be inside its range. A value outside it is ignored. Range limits are in the tables; the ones most often missed: Start Delay and Dwell at most 600, Strobe On and Off Frames 1 to 20, Frames at most 1200, Beam Count at most 18. List controls take one of the listed positions only: another index is kept and draws nothing or misbehaves.
+5. `globalId`, `beamPatternType` and `beamEffectType` must be spelled exactly as in the tables. Unknown names are ignored. Note: these file names differ from what Beam Creator shows: `"Horizontal Beam Dots"`, `"Vertical Beam Dots"`, `"Horizontal Lines"`, `"Vertical Lines"`, `"VideoSpiral"`, `"simplepaths"`, `"RandomPosition"` and `"Rotation"`.
 6. Simple Shapes layers need `{"globalId": "version", "version": 2}`.
 7. Plain JSON only: no comments, no trailing commas, double quotes.
-8. At most 10 layers.
 
-## 9. Examples (each one loads and plays in LaserOS)
+## 9. Examples (each one loads cleanly with LaserOS's Beam Creator code)
 
 ### Six cyan beams sweeping left and right, 2 seconds each way
 
