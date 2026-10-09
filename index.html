@@ -171,10 +171,10 @@ html:not(.js) [data-open-search],html:not(.js) #theme-toggle{display:none!import
 .also a{color:var(--text);border-bottom:1px solid var(--line-2)}
 .also a:hover{color:var(--accent);border-color:var(--accent)}
 
-.chapters{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.chapters{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .chapter{padding:26px 24px 30px 0;border-bottom:1px solid var(--line)}
 .chapter + .chapter{padding-left:24px;border-left:1px solid var(--line)}
-.chapter:nth-child(4n+1){padding-left:0;border-left:0}
+.chapter:nth-child(3n+1){padding-left:0;border-left:0}
 .chapter h3{margin:0 0 12px;font-size:17px;letter-spacing:-.01em;font-weight:600}
 .chapter h3 a:hover{color:var(--accent)}
 .chapter ul{list-style:none;margin:0;padding:0}
@@ -260,8 +260,9 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:32px;min-height:560px}
   .course,.vids{grid-template-columns:repeat(2,1fr)}
   .chapters{grid-template-columns:repeat(2,1fr)}
-  .chapter:nth-child(4n+1){padding-left:24px;border-left:1px solid var(--line)}
+  .chapter:nth-child(3n+1){padding-left:24px;border-left:1px solid var(--line)}
   .chapter:nth-child(2n+1){padding-left:0;border-left:0}
+  .chapter:last-child:nth-child(odd){grid-column:1/-1}
   .help{grid-template-columns:repeat(3,1fr)}
   .help>div:first-child{grid-column:1/-1}
 }
@@ -309,7 +310,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .course h3,.vids h3{font-size:15px}
   .also{font-size:13px}
   .chapter,.chapter + .chapter{padding:20px 12px 22px 14px}
-  .chapter:nth-child(2n+1),.chapter:nth-child(4n+1){padding-left:0}
+  .chapter:nth-child(2n+1){padding-left:0}
   .chapter h3{font-size:15.5px}
   .chapter li a{font-size:14px}
   .downloads{grid-template-columns:1fr}
@@ -531,8 +532,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
             <li><a href="docs/guides/ultra-mk2-pro-manual/#draw-and-simple-mapping">Draw and mapping</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#beam-creator">Beam Creator</a></li>
             <li><a href="docs/guides/ultra-mk2-pro-manual/#the-laseros-timeline">Timeline</a></li>
-            <li><a href="docs/guides/ultra-mk2-pro-manual/#safety-zones-in-laseros">Safety zones in LaserOS</a></li>
-            <li><a href="docs/guides/ultra-mk2-pro-manual/#midi-controllers-in-laseros">MIDI controllers in LaserOS</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#safety-zones-in-laseros">Safety zones</a></li>
+            <li><a href="docs/guides/ultra-mk2-pro-manual/#midi-controllers-in-laseros">MIDI controllers</a></li>
           </ul>
         </div>
         <div class="chapter">
