@@ -16,6 +16,12 @@ no build step, no server, no database, no accounts, no analytics.
   Its power and heat facts are in the manual's "Power, Battery and Temperature"
   section (owner decisions, added with the course). For one computer on a direct cable it shows both of the manual's ways
   (LAN client with APIPA, LAN server) without picking one, like the manual's LaserOS section.
+- `laseros-basics/`, `laser-mapping/`, `music-show/`: courses 4-6 (2026-10-09), "LaserOS basics: your logo, text and
+  effects" (8 lessons), "Laser mapping with LaserOS" (6) and "Build a laser show to your music" (8, Advanced). Their
+  facts come from the manual chapter "Making Content in LaserOS" (labels checked against the LaserOS v0.18.1 source) and
+  the tutorial videos' checked claims. Several embeds use `data-from`/`data-to` to skip parts of a video (other people's
+  show clips, hidden LaserOS entries, a profane track title): a start needs ~2 s of margin after the part it skips,
+  because YouTube may start at the keyframe before it. Card pictures: `images/home/academy-<course>.webp` (video frames).
 - `academy.css`, `academy.js`: shared by every course. A new course needs no change to these
   (control-modes added small table styles, `.table-wrap`, and `.two.shots` for the 240 px screenshots of the cube's screen).
 
