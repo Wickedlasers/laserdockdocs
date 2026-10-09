@@ -59,12 +59,12 @@
   });
 
   // Videos: a local thumbnail until the visitor presses play, then YouTube's privacy-enhanced player.
-  // data-from = the second to start at, to skip a part of the video the course doesn't use.
+  // data-from / data-to = the seconds to start and stop at, to skip parts of the video the course doesn't use.
   $$(".video[data-yt]").forEach(function (v) {
     var b = $("button", v);
     b.addEventListener("click", function () {
-      var f = document.createElement("iframe"), from = parseInt(v.dataset.from, 10);
-      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.dataset.yt) + "?autoplay=1&rel=0" + (from > 0 ? "&start=" + from : "");
+      var f = document.createElement("iframe"), from = parseInt(v.dataset.from, 10), to = parseInt(v.dataset.to, 10);
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.dataset.yt) + "?autoplay=1&rel=0" + (from > 0 ? "&start=" + from : "") + (to > 0 ? "&end=" + to : "");
       f.title = v.dataset.title || "Video";
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
       f.allowFullscreen = true;
