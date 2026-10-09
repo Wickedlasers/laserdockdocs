@@ -226,7 +226,7 @@
       <legend><span class="qn">Question 1</span>Your Horizontal Beams look a little dim. What does the manual say about Brightness?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l1q1" value="a"><span>Raise it until the beams look bright</span></label>
-        <label class="opt"><input type="radio" name="l1q1" value="b"><span>Leave it at 1, or it may flicker</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="b"><span>Leave it at 1, as more can make it flicker</span></label>
         <label class="opt"><input type="radio" name="l1q1" value="c"><span>Set it to the same as Target FPS</span></label>
       </div>
       <p class="why" hidden>Brightness draws the pattern several times over: brighter, but harder for the cube to draw, and it may flicker. The manual says to leave it at 1.</p>
@@ -235,7 +235,7 @@
     <fieldset class="check" data-answer="a">
       <legend><span class="qn">Question 2</span>Your cube is at home, and you’re on the train with your laptop. Can you work on a Beam Creator design?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l1q2" value="a"><span>Yes, and check it in the preview</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="a"><span>Yes, and check your design in the preview</span></label>
         <label class="opt"><input type="radio" name="l1q2" value="b"><span>No, LaserOS needs a cube first</span></label>
         <label class="opt"><input type="radio" name="l1q2" value="c"><span>Only once the Laser button is on</span></label>
       </div>
@@ -307,7 +307,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l2q1" value="a"><span>Simple Paths, Linear Vertical</span></label>
         <label class="opt"><input type="radio" name="l2q1" value="b"><span>Variable Rotation, Rotate Z on</span></label>
-        <label class="opt"><input type="radio" name="l2q1" value="c"><span>Color Sequence, two colours</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="c"><span>Color Sequence, with two colours</span></label>
       </div>
       <p class="why" hidden>Simple Paths with a Linear Vertical path; Direction sets which way it goes. Leave Always Repeat off so it doesn’t loop, and set Frames to the length of the build‑up.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -327,7 +327,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l2q3" value="a"><span>Its Always Repeat switch is on</span></label>
         <label class="opt"><input type="radio" name="l2q3" value="b"><span>Movement only works on line patterns</span></label>
-        <label class="opt"><input type="radio" name="l2q3" value="c"><span>Positions count from its centre</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="c"><span>Its positions are measured from its centre</span></label>
       </div>
       <p class="why" hidden>Movement positions are measured from the pattern’s centre, so large values push part of it out of the projection area. Use smaller values.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -403,7 +403,7 @@
     <fieldset class="check" data-answer="a">
       <legend><span class="qn">Question 2</span>You duplicate a line, but you still see only one. Why?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l3q2" value="a"><span>The copy runs exactly on top of it</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>The copy runs exactly on top of the original</span></label>
         <label class="opt"><input type="radio" name="l3q2" value="b"><span>The copy stays off until you save</span></label>
         <label class="opt"><input type="radio" name="l3q2" value="c"><span>Duplicate leaves out all the effects</span></label>
       </div>
@@ -475,7 +475,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l4q1" value="a"><span>MP3, 320&nbsp;kbps, 44.1&nbsp;kHz, stereo</span></label>
         <label class="opt"><input type="radio" name="l4q1" value="b"><span>WAV, 48&nbsp;kHz, 24‑bit, mono</span></label>
-        <label class="opt"><input type="radio" name="l4q1" value="c"><span>WAV, 44.1&nbsp;kHz, 16‑bit, stereo</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="c"><span>WAV, 44.1&nbsp;kHz, 16‑bit, stereo (PCM)</span></label>
       </div>
       <p class="why" hidden>The song must be a WAV file: 44.1&nbsp;kHz, 16‑bit, stereo (PCM). LaserOS doesn’t read other files there.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -534,7 +534,7 @@
     <fieldset class="check" data-answer="a">
       <legend><span class="qn">Question 1</span>You drag the edge of an item to make it shorter. What else changes?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Its playback speed, so it fits</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Its playback speed, so it still fits</span></label>
         <label class="opt"><input type="radio" name="l5q1" value="b"><span>Its colours, to match the song</span></label>
         <label class="opt"><input type="radio" name="l5q1" value="c"><span>Nothing: its end is cut off</span></label>
       </div>
@@ -607,7 +607,7 @@
       <legend><span class="qn">Question 1</span>Where do you drop effects for one cube on the Timeline?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l6q1" value="a"><span>On the song lane, over the waveform</span></label>
-        <label class="opt"><input type="radio" name="l6q1" value="b"><span>On an effect lane under its layer</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="b"><span>On an effect lane, under that cube’s layer</span></label>
         <label class="opt"><input type="radio" name="l6q1" value="c"><span>In its row in Timeline devices</span></label>
       </div>
       <p class="why" hidden>Click + under the cube’s layer to open an effect lane, then drag effects from the effects panel onto it.</p>
@@ -804,7 +804,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l8q1" value="a"><span>LaserOS on a phone or tablet</span></label>
         <label class="opt"><input type="radio" name="l8q1" value="b"><span>LaserOS on a computer</span></label>
-        <label class="opt"><input type="radio" name="l8q1" value="c"><span>The cube’s web app</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="c"><span>The cube’s own web app</span></label>
       </div>
       <p class="why" hidden>To play a playlist on the cube without a computer, export it to the SD card with LaserOS on a computer. The phone app can’t export.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -836,7 +836,7 @@
 
   <div class="bank" hidden>
     <fieldset class="check" data-answer="a" data-group="patterns" data-lesson="1"><legend><span class="qn"></span>How do you add a pattern in Beam Creator?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Pick it under Beam Pattern and click +</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Pick it under Beam Pattern, click the + next to it</span></label>
       <label class="opt"><input type="radio" value="b"><span>Drag it from the effects panel on the right</span></label>
       <label class="opt"><input type="radio" value="c"><span>Right‑click the preview and choose Add</span></label></div>
       <p class="why" hidden>Pick a pattern under Beam Pattern and click the + next to it. Each pattern you add is a layer.</p><p class="feedback"></p></fieldset>
@@ -857,7 +857,7 @@
       <label class="opt"><input type="radio" value="c"><span>Color Sequence</span></label></div>
       <p class="why" hidden>Power Fader fades the power. Fade start-&gt;end from 1.0 to 0.0 over a few frames makes a single flash.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="effects" data-lesson="2"><legend><span class="qn"></span>In Simple Paths, what does Stepped Path do?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Splits the movement into steps</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Splits the movement into steps, to hit single notes</span></label>
       <label class="opt"><input type="radio" value="b"><span>Adds a pause before the path starts</span></label>
       <label class="opt"><input type="radio" value="c"><span>Moves the path down each loop</span></label></div>
       <p class="why" hidden>Stepped Path splits the movement into steps, to hit single notes.</p><p class="feedback"></p></fieldset>
@@ -889,9 +889,9 @@
       <label class="opt"><input type="radio" value="c"><span>Only the effects, to paste them</span></label></div>
       <p class="why" hidden>Duplicate copies the layer with all its effects. The copy runs on top of the original until you change it.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="copies" data-lesson="3"><legend><span class="qn"></span>Where does Save Custom Beam put your design?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Timeline → Demo Timeline</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Playlists → Drawings</span></label>
       <label class="opt"><input type="radio" value="b"><span>Playlists → Custom Beams</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Effects → Saved Effects</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Playlists → Imported</span></label></div>
       <p class="why" hidden>Save Custom Beam saves the design in Playlists → Custom Beams. From there you can drag it onto the Timeline.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="song" data-lesson="4"><legend><span class="qn"></span>Which song file does the Timeline read?</legend><div class="opts">
@@ -913,7 +913,7 @@
     <fieldset class="check" data-answer="c" data-group="placing" data-lesson="5"><legend><span class="qn"></span>How do you use a Timeline item on another cube too?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Drag it into its Timeline devices row</span></label>
       <label class="opt"><input type="radio" value="b"><span>Save it under the cube’s name</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Copy it, paste it on that layer</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Copy it, then paste it on that cube’s layer</span></label></div>
       <p class="why" hidden>Right‑click the item, choose Copy item, and paste it on the other cube’s layer.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="placing" data-lesson="5"><legend><span class="qn"></span>How often should you save your timeline?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Often, as you work</span></label>
@@ -929,7 +929,7 @@
     <fieldset class="check" data-answer="c" data-group="lanes" data-lesson="6"><legend><span class="qn"></span>Which two saved effects together put a graphic in one part of a wall?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Strobe and Colorize Mono</span></label>
       <label class="opt"><input type="radio" value="b"><span>Scale and Fixed Rotation</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Position and Zoom</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Position and Zoom, on two effect lanes</span></label></div>
       <p class="why" hidden>Position and Zoom together put a graphic or a text in one part of a wall.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="a" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>For a show on several cubes, which connection do we recommend?</legend><div class="opts">
@@ -944,18 +944,18 @@
       <p class="why" hidden>Leave IP Mode on Auto IP: with no router, the cubes and the computer give themselves 169.254 addresses.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>When do you start LaserOS for a show on several cubes?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Before the cubes are switched on</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Before you connect the cubes to the switch</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Once the cubes show their addresses</span></label></div>
+      <label class="opt"><input type="radio" value="b"><span>Before you connect them to the switch</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Once the cubes show their 169.254 addresses</span></label></div>
       <p class="why" hidden>Start LaserOS once the cubes show their 169.254 addresses. Its Laser button then no longer reads NO LASER.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="a" data-group="safety" data-lesson="7"><legend><span class="qn"></span>What comes first, before any show on several cubes?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Each cube’s beam block, beams 3&nbsp;m above people</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Each cube’s beam block: beams at least 3&nbsp;m above people</span></label>
       <label class="opt"><input type="radio" value="b"><span>A keep‑out zone in LaserOS around the audience</span></label>
       <label class="opt"><input type="radio" value="c"><span>A check of the show in the preview’s 3D view</span></label></div>
       <p class="why" hidden>Set each cube’s beam block first: every beam at least 3&nbsp;m above the floor where people may be. A zone works on top of that, never instead of it.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="safety" data-lesson="8"><legend><span class="qn"></span>A playlist plays from the SD card in Playlist mode. Which safety zone applies?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The one you set in LaserOS</span></label>
-      <label class="opt"><input type="radio" value="b"><span>The one set on the cube itself</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The one set on the cube, under Settings → Projection</span></label>
       <label class="opt"><input type="radio" value="c"><span>None: Playlist mode has no zone</span></label></div>
       <p class="why" hidden>In Playlist mode the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS. Set them under Settings → Projection.</p><p class="feedback"></p></fieldset>
 
@@ -967,11 +967,11 @@
     <fieldset class="check" data-answer="a" data-group="play" data-lesson="8"><legend><span class="qn"></span>When do you take the SD card out of the cube, or put it back?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Only with the cube switched off</span></label>
       <label class="opt"><input type="radio" value="b"><span>While a playlist is playing on it</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Whenever LaserOS shows LASER ON</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Whenever the Laser button reads LASER ON</span></label></div>
       <p class="why" hidden>Always switch the cube off before you take the card out or put it back in.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="play" data-lesson="8"><legend><span class="qn"></span>To play the built‑in laser shows on several cubes without a computer, what do you use?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The Timeline in LaserOS</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Cube Link in Laser Show mode</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Cube Link, with the cubes in Laser Show mode</span></label>
       <label class="opt"><input type="radio" value="c"><span>Art‑Net from a lighting desk</span></label></div>
       <p class="why" hidden>Cube Link synchronises the built‑in multi‑projector laser shows: one master, the same Link Channel and PIN, a Group for each part.</p><p class="feedback"></p></fieldset>
   </div>
