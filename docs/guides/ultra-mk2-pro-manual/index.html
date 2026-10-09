@@ -3187,35 +3187,35 @@ has its usual cause and the fix, with a link to the section that explains
 more. For connection problems step by step, see
 <a href="../../../academy/connect/#lesson-6">lesson 6 of the Academy’s
 Connect course</a>.</p>
-<ul data-no-search><li><a href="#no-beams">No beams</a>:
+<ul data-no-search><li><strong><a href="#no-beams">No beams</a></strong>:
 <a href="#the-laser-doesnt-emit">the laser doesn’t emit</a>,
 <a href="#laseros-shows-no-laser-or-an-interlock-message">NO LASER or an
 interlock message</a>, <a href="#is-it-the-cube-or-the-app">cube or
-app?</a></li><li><a href="#connection-problems">Connection problems</a>:
+app?</a></li><li><strong><a href="#connection-problems">Connection problems</a></strong>:
 <a href="#laseros-doesnt-find-the-cube">LaserOS doesn’t find the cube</a>,
 <a href="#laseros-finds-only-some-of-the-cubes">only some of the
 cubes</a>, <a href="#drop-outs-or-a-yellow-or-red-wifi-symbol">drop-outs or a
 yellow or red WiFi symbol</a>, <a href="#a-cube-doesnt-follow-cube-link">Cube
-Link</a>, <a href="#no-response-to-dmx-or-artnet">DMX or ArtNet</a></li><li><a href="#picture-problems">Picture problems</a>:
+Link</a>, <a href="#no-response-to-dmx-or-artnet">DMX or ArtNet</a></li><li><strong><a href="#picture-problems">Picture problems</a></strong>:
 <a href="#everything-is-in-one-colour">one colour</a>,
 <a href="#colours-jump-instead-of-fading">colours jump</a>,
 <a href="#flicker-rounded-corners-or-a-wobbly-logo">flicker or a wobbly
 logo</a>, <a href="#the-picture-is-in-the-wrong-place">wrong place</a>,
 <a href="#the-picture-moved-after-fitting-the-expander">moved after fitting
 the Expander</a>, <a href="#beams-are-hard-to-see-or-washed-out">beams hard
-to see</a></li><li><a href="#sound-midi-and-effects">Sound, MIDI and effects</a>:
+to see</a></li><li><strong><a href="#sound-midi-and-effects">Sound, MIDI and effects</a></strong>:
 <a href="#no-sound-or-sound-out-of-step">no sound</a>,
 <a href="#the-visualizer-doesnt-react-to-music">visualizer and music</a>,
 <a href="#the-midi-controller-does-nothing">MIDI controller</a>,
-<a href="#effects-dont-work-or-change-the-picture">effects</a></li><li><a href="#power-and-heat">Power and heat</a>:
+<a href="#effects-dont-work-or-change-the-picture">effects</a></li><li><strong><a href="#power-and-heat">Power and heat</a></strong>:
 <a href="#the-cube-switched-itself-off">switched itself off</a>,
 <a href="#the-battery-gauge-looks-wrong">battery gauge</a>,
-<a href="#the-cube-smells-or-smokes">smell or smoke</a></li><li><a href="#sd-card-and-firmware">SD card and firmware</a>:
+<a href="#the-cube-smells-or-smokes">smell or smoke</a></li><li><strong><a href="#sd-card-and-firmware">SD card and firmware</a></strong>:
 <a href="#shows-or-playlists-are-missing">shows or playlists missing</a>,
 <a href="#laseros-cant-export-to-the-sd-card">can’t export</a>,
 <a href="#checking-and-updating-the-firmware">firmware</a>,
 <a href="#web-app-images-missing-after-an-update">web app images
-missing</a></li><li><a href="#nothing-else-helps">Nothing else helps</a></li></ul>
+missing</a></li><li><strong><a href="#nothing-else-helps">Nothing else helps</a></strong></li></ul>
 <p>If you’re still stuck, email
 <a href="mailto:support@laseros.com">support@laseros.com</a> with your
 order number, the model and a short video of the problem.</p>
@@ -3231,8 +3231,9 @@ LEDs are off (with an E-Stop, they may flash).</p>
 one of the E-STOP ports. US units (and any cube with the optional E-Stop)
 use the E-Stop there instead.</li><li>Put the key in and switch the cube on.</li><li>Once the cube has started, turn the key from OFF to ON. With the
 jumper, the EMISSION LEDs light up and I-LOCK goes from the status
-bar.</li><li>With an E-Stop, then do the E-Stop start: red STOP button up, the
-pendant’s key to ON if it has one, then briefly press the green START. The
+bar.</li><li>With an E-Stop, then do the E-Stop start: red STOP button up and the
+pendant’s key to ON if it has one. The EMISSION LEDs flash slowly, once
+every 3 seconds. After the second flash, briefly press the green START: the
 LEDs flash faster, and after 10 seconds they stay on. See the
 <a href="#e-stop-setup-guide">E-Stop Setup Guide</a>.</li></ol>
 <p>After the cube has lost power (switched off, or a flat battery), or after
@@ -3267,13 +3268,16 @@ be armed. If the pattern shows, the lasers and scanners work, and the
 problem is in the app, the content or the connection. Turn Enable off again
 to go back to your content. See <a href="#test-patterns">Test
 Patterns</a>.</p>
-<p>If the pattern doesn’t show although the cube is armed, email
+<p>If the pattern doesn’t show although the cube is armed and the beam
+block doesn’t cover the aperture, email
 <a href="mailto:support@laseros.com">support@laseros.com</a> with a short
 video.</p>
 <h2 id="connection-problems">Connection Problems<a href="#connection-problems" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>LaserOS, a lighting desk or the other cubes can’t reach the cube, or
 the projection drops out.</p>
 <h3 id="laseros-doesnt-find-the-cube">LaserOS Doesn’t Find the Cube<a href="#laseros-doesnt-find-the-cube" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The Laser button reads NO LASER: LaserOS hasn’t found a cube, so it
+can’t connect to one.</p>
 <p><strong>Cause:</strong> LaserOS finds a cube only when the cube is in
 LaserOS control mode, on the same network as your phone or computer, and
 connected before LaserOS starts.</p>
@@ -3354,7 +3358,8 @@ to the LaserCube Pro</a>).</li><li>ArtNet: check that the status bar shows an IP
 for a network problem first) and that the cube is set to the universe your
 controller sends (see <a href="#artnet-status">ArtNet Status</a>).</li><li>On your desk, patch the cube at its start address (default 1).
 Channel 1 (access mode) and channel 3 (cue select) black the cube out at
-0–31, and channel 5 (fader) at 0 is black (see
+0–31, and in Standard access mode or above, channel 5 (fader) at 0 is black
+(see
 <a href="#dmxart-net-channel-layout">DMX/ArtNet Channel Layout</a>).</li></ul>
 <h2 id="picture-problems">Picture Problems<a href="#picture-problems" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The cube projects, but what you see isn’t what you expect.</p>
@@ -3385,8 +3390,9 @@ used under 100%. The steps are in
 <a href="#flicker-and-render-quality">Flicker and Render Quality</a>.</p>
 <h3 id="the-picture-is-in-the-wrong-place">The Picture Is in the Wrong Place<a href="#the-picture-is-in-the-wrong-place" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> the size and position are set in another place
-than the one you changed: LaserOS control mode uses LaserOS’s settings, and
-the cube’s other modes use the cube’s own.</p>
+than the one you changed: in LaserOS control mode, the settings of the
+software that streams to the cube (LaserOS’s, or another program’s) apply,
+and the cube’s other modes use the cube’s own.</p>
 <p><strong>Fix:</strong></p>
 <ul><li>LaserOS control mode: in LaserOS, open Settings → Projector Setup →
 Image. The Square test pattern there shows the whole projection area (see
@@ -3395,8 +3401,8 @@ cube’s own Image Setup, Colour Balance and Safety Zone are greyed out in
 this mode: that is normal.</li><li>The cube’s other modes: on the cube, open Settings → Projection →
 Image Setup. At 100% X and Y size, the position sliders have no effect:
 make the picture smaller first (see <a href="#image-setup">Image
-Setup</a>).</li><li>DMX or ArtNet mode: the desk’s channels 6 to 11 also set the size,
-rotation and position (see <a href="#dmxart-net-channel-layout">DMX/ArtNet
+Setup</a>).</li><li>DMX or ArtNet mode: depending on the access mode, the desk’s channels
+6 to 11 also set the size, mirroring, rotation and position (see <a href="#dmxart-net-channel-layout">DMX/ArtNet
 Channel Layout</a>).</li><li>Upside down or mirrored: use Flip X and Flip Y.</li></ul>
 <p>The beam block and the 3&nbsp;m rule in
 <a href="#hardware-installation">Hardware Installation</a> apply whatever
@@ -3418,8 +3424,7 @@ much more visible; thin haze gives the clearest beams. If the beams turn
 into a glow, use less haze. See
 <a href="#nano-fogger-haze-and-fog">Nano Fogger, Haze and Fog</a>.</p>
 <h2 id="sound-midi-and-effects">Sound, MIDI and Effects<a href="#sound-midi-and-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>For the cube’s own modes: its audio output and input, a controller on
-its USB port and its built-in effects.</p>
+<p>Sound, a MIDI controller and the cube’s built-in effects.</p>
 <h3 id="no-sound-or-sound-out-of-step">No Sound, or Sound Out of Step<a href="#no-sound-or-sound-out-of-step" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> the cube has no speaker. In Laser Show mode, the
 show’s sound comes out of the green A-OUT jack, for powered speakers.</p>
@@ -3448,7 +3453,8 @@ doesn’t use it.</p>
 a green tick next to the MIDI label when a controller is connected, and a
 cross when none is (see <a href="#enabling-usb-midi">Enabling USB
 MIDI</a>).</li><li>The cube’s USB MIDI doesn’t operate in LaserOS, ArtNet, DMX, IDN or
-Ether Dream control mode. In LaserOS control mode, plug the controller into
+Ether Dream control mode (see <a href="#usb-midi-settings">USB MIDI
+Settings</a>). In LaserOS control mode, plug the controller into
 the computer that runs LaserOS instead (see
 <a href="#midi-controllers-in-laseros">MIDI Controllers in
 LaserOS</a>).</li><li>The cube works with the APC40 MK2 and the APC mini MK2. MIDI mappings
@@ -3469,7 +3475,8 @@ Slider</a>.</p>
 <p>The cube switches itself off, or the battery reading looks
 odd.</p>
 <h3 id="the-cube-switched-itself-off">The Cube Switched Itself Off<a href="#the-cube-switched-itself-off" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the temperature cut-off, or a flat battery.</p>
+<p><strong>Cause:</strong> the temperature cut-off, or a flat battery,
+shut it down.</p>
 <p><strong>Fix:</strong></p>
 <ul><li>Too hot (overheating), for example in strong sun: the
 <a href="#temperature-cut-off">temperature cut-off</a> turns the cube off, and
