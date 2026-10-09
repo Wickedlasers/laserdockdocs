@@ -366,7 +366,7 @@
   </ul>
   <figure>
     <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000009B00000036D8CE24CA2-1284.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000009B00000036D8CE24CA2-1284.webp" alt="A diagram from the manual: Direct LAN connection, no router needed, with LAN Client mode and APIPA self-assigned addressing. The LaserCube (169.254.a.b) and your Mac or PC (169.254.c.d) are joined by any standard Ethernet cable. Step 1, plug in direct: run a cable from the cube to the computer and set the cube to LAN Client mode. Step 2, no router, no DHCP: both ends ask for an address and get no answer. Step 3, APIPA takes over: within about a minute each end assigns itself an address from 169.254.x.x. Step 4, they find each other, and your laser software discovers the cube. Notes: leave the computer’s Ethernet adapter on automatic (DHCP), never a manual IP; give it 60 seconds; no internet on this link is expected, so leave WiFi on if you need the web." width="1284" height="454" loading="lazy"></a>
-    <figcaption>A direct cable in LAN Client mode, from the manual. Select the picture to open it full size in a new tab.</figcaption>
+    <figcaption>A direct cable in LAN Client mode, from the manual. Its notes say to leave WiFi on if you need the web; the manual’s steps below turn the computer’s WiFi off for now, and back on once LaserOS has found the cube. Select the picture to open it full size in a new tab.</figcaption>
   </figure>
   <h3>Steps: LaserOS over a direct cable, in LAN Client mode</h3>
   <p>For LAN Client, the manual gives these steps:</p>
@@ -404,13 +404,12 @@
     <div class="order">
       <p class="task">Put the manual’s steps for LaserOS over a direct cable in LAN Client mode in order.</p>
       <ol>
-        <li>Turn off the computer’s WiFi and close LaserOS</li>
-        <li>Switch the cube on and connect the cable to the computer</li>
+        <li>With the computer’s WiFi off and LaserOS closed, switch the cube on and connect the cable</li>
         <li>Wait until the cube shows its 169.254 address</li>
         <li>Start LaserOS and check that the Laser button no longer reads NO LASER</li>
         <li>Turn the computer’s WiFi back on if you need the internet</li>
       </ol>
-      <p class="why" hidden>LaserOS starts last, once the cube has its self‑assigned address. If the Laser button no longer reads NO LASER, LaserOS has found the cube.</p>
+      <p class="why" hidden>LaserOS starts only once the cube has its self‑assigned address, and the WiFi goes back on at the end. If the Laser button no longer reads NO LASER, LaserOS has found the cube.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -483,7 +482,7 @@
   <h3>The status bar</h3>
   <ul class="points">
     <li><strong>Battery:</strong> the battery gauge. With Battery Pct turned on (Settings → General), it also shows the percentage from time to time.</li>
-    <li><strong>I‑LOCK:</strong> a warning that the safety interlock is open (the manual’s picture says “disabled”), so the laser won’t emit (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</li>
+    <li><strong>I‑LOCK:</strong> a warning that the laser isn’t armed yet, so it won’t emit. Armed means the interlock closed and the key on, and with an E‑Stop connected, the E‑Stop started. After the cube has been off, reset the key: I‑LOCK shows until you do (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>). The manual’s picture labels it “Safety Interlock, status: Disabled”.</li>
     <li><strong>The control mode</strong>, such as LaserOS or Playlist.</li>
     <li><strong>The connection mode</strong>, such as LAN‑C (LAN Client), WiFi‑C (WiFi Client) or WiFi‑S (WiFi Server). A tick next to it means it’s connected; a red cross means it isn’t.</li>
     <li><strong>MIDI:</strong> the right side of the status bar can also show the MIDI label, with a green tick or a cross. That’s about a MIDI controller on the cube’s USB port (Settings → USB MIDI): a tick when one is connected, a cross when none is. It says nothing about the network. The manual’s pictures show it in Visualizer mode, as in lesson 2’s WiFi Server pictures.</li>
@@ -538,7 +537,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l4q4" value="a"><span>No MIDI controller is on the USB port</span></label>
         <label class="opt"><input type="radio" name="l4q4" value="b"><span>The cube has lost its network connection</span></label>
-        <label class="opt"><input type="radio" name="l4q4" value="c"><span>The safety interlock is open, so no laser</span></label>
+        <label class="opt"><input type="radio" name="l4q4" value="c"><span>The laser isn’t armed, so it won’t emit</span></label>
       </div>
       <p class="why" hidden>The tick or cross next to MIDI shows whether a MIDI controller is connected to the cube’s USB port. It says nothing about the network.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -642,12 +641,14 @@
     <li><strong>The order:</strong> connect your phone or computer to the cube first, then open LaserOS. If LaserOS was already open, quit it completely and open it again.</li>
   </ul>
 
-  <div class="video" data-yt="oGT2Pm7dwJY" data-from="4" data-to="275" data-title="5 common mistakes Laserists may face with - part I">
-    <button type="button" aria-label="Play video: five common mistakes, part 1"><span class="play"><svg><use href="#i-play"/></svg></span></button>
-    <img src="../../images/home/videos/oGT2Pm7dwJY.webp" alt="" width="640" height="360" loading="lazy">
+  <p><strong>Found, but no beam?</strong> The cube projects only when it’s armed: the interlock closed and the key on, and with an E‑Stop connected, the E‑Stop started. Until then the status bar shows I‑LOCK (lesson 4), and LaserOS shows the message “Interlock is not enabled on cube”. After the cube has been off, reset the key (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</p>
+
+  <div class="video" data-yt="oGT2Pm7dwJY" data-from="4" data-to="55" data-title="5 common mistakes Laserists may face with - part I">
+    <button type="button" aria-label="Play video: five common mistakes, mistake 1, the start order"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/connect/l6-clip1.webp" alt="" width="1280" height="720" loading="lazy">
   </div>
-  <p class="video-meta"><span>Five common mistakes, part 1: start order, busy WiFi, LaserOS opened too early</span><a href="https://www.youtube.com/watch?v=oGT2Pm7dwJY&amp;t=4s" target="_blank" rel="noopener">Watch on YouTube</a></p>
-  <p class="small video-note">Plays mistakes 1 to 3. Mistake 1 shows the safety jumper; a US cube starts with the E‑Stop instead (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</p>
+  <p class="video-meta"><span>Five common mistakes, part 1: mistake 1, the start order: jumper and key in, switch on, then the key to ON (0:04 to 0:55)</span><a href="https://www.youtube.com/watch?v=oGT2Pm7dwJY&amp;t=4s" target="_blank" rel="noopener">Watch on YouTube, from 0:04</a></p>
+  <p class="small video-note">The clip shows the safety jumper; a US cube starts with the E‑Stop instead (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>).</p>
 
   <h3>The projection keeps breaking up</h3>
   <ul class="points">
@@ -658,6 +659,13 @@
     <li>DAC Empty Events also climb when the interlock is disabled or a test pattern is chosen, not only when data is lost.</li>
     <li>Breaking up in Playlist, Visualizer or Laser Show mode shouldn’t be a WiFi problem: those play from the SD card. The manual warns that cheaper cards can fail to stream the laser shows, and names the Lexar A2 Silver Plus 64GB as the card it tested (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
   </ul>
+
+  <div class="video" data-yt="oGT2Pm7dwJY" data-from="89" data-to="160" data-title="5 common mistakes Laserists may face with - part I">
+    <button type="button" aria-label="Play video: five common mistakes, mistake 2, WiFi in busy places"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/connect/l6-clip2.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Five common mistakes, part 1: mistake 2, WiFi in busy places, and why a cable is more reliable for shows (1:29 to 2:40)</span><a href="https://www.youtube.com/watch?v=oGT2Pm7dwJY&amp;t=89s" target="_blank" rel="noopener">Watch on YouTube, from 1:29</a></p>
+  <p class="small video-note">Art‑Net, which the video also names, uses the same network connection as LaserOS, so it only avoids WiFi trouble over a cable. A DMX desk has its own cable.</p>
 
   <div class="practice">
     <h3>Check yourself</h3>
@@ -733,11 +741,11 @@
     <li>When it asks whether to update, choose <strong>Ok</strong>. Don’t switch the cube off while it updates: in our video it takes one to two minutes, until it shows that the firmware has been updated.</li>
   </ol>
 
-  <div class="video" data-yt="Jtd9Il9sAus" data-from="141" data-to="215" data-title="LaserCube Ultra MK2 Firmware 2.0 upgrade: what's new and how to upgrade">
+  <div class="video" data-yt="Jtd9Il9sAus" data-from="141" data-to="214" data-title="LaserCube Ultra MK2 Firmware 2.0 upgrade: what's new and how to upgrade">
     <button type="button" aria-label="Play video: updating the firmware from the SD card"><span class="play"><svg><use href="#i-play"/></svg></span></button>
     <img src="../../images/academy/connect/l7-clip1.webp" alt="" width="1280" height="720" loading="lazy">
   </div>
-  <p class="video-meta"><span>Firmware 2.0 upgrade: keep a copy of your own files, then update from the SD card (2:21 to 3:35)</span><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus&amp;t=141s" target="_blank" rel="noopener">Watch on YouTube, from 2:21</a></p>
+  <p class="video-meta"><span>Firmware 2.0 upgrade: keep a copy of your own files, then update from the SD card (2:21 to 3:34)</span><a href="https://www.youtube.com/watch?v=Jtd9Il9sAus&amp;t=141s" target="_blank" rel="noopener">Watch on YouTube, from 2:21</a></p>
   <p class="small video-note">Filmed while updating to firmware 2.0. The video suggests copying your own files to the computer as a backup instead of renaming the folder on the card; either way, copy them into the new Lasercube folder afterwards.</p>
 
   <h3>Factory reset</h3>
@@ -980,10 +988,10 @@
       <p class="why" hidden>For a direct cable to one device, the manual recommends LAN Server. LAN Client works on a direct cable too, with self‑assigned addresses.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="a" data-group="screen" data-lesson="4"><legend><span class="qn"></span>What does I‑LOCK in the status bar mean?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>The safety interlock is open</span></label>
+      <label class="opt"><input type="radio" value="a"><span>The laser isn’t armed yet</span></label>
       <label class="opt"><input type="radio" value="b"><span>The screen’s menus are locked</span></label>
       <label class="opt"><input type="radio" value="c"><span>LaserOS has locked the settings</span></label></div>
-      <p class="why" hidden>I‑LOCK warns that the safety interlock is open, so the laser won’t emit.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>I‑LOCK shows while the laser isn’t armed: the interlock closed and the key on, and with an E‑Stop connected, the E‑Stop started. Until then the laser won’t emit. After the cube has been off, reset the key.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="screen" data-lesson="4"><legend><span class="qn"></span>The status bar turns green. What does it mean?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The battery is fully charged and ready</span></label>
       <label class="opt"><input type="radio" value="b"><span>Laser data is arriving over the network</span></label>
@@ -995,11 +1003,11 @@
       <label class="opt"><input type="radio" value="c"><span>The address is self‑assigned</span></label></div>
       <p class="why" hidden>A‑IP marks an APIPA address that the cube gave itself, starting 169.254.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="a" data-group="status" data-lesson="5"><legend><span class="qn"></span>Which line on Status Info counts lost data packets?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>PKT Loss Events</span></label>
-      <label class="opt"><input type="radio" value="b"><span>PKT RX Events</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Buffer Free</span></label></div>
-      <p class="why" hidden>PKT Loss Events counts lost packets; they show as brief drop‑outs.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="status" data-lesson="5"><legend><span class="qn"></span>While you stream, PKT Loss Events on Status Info keeps climbing. What do you see in the projection?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Brief drop‑outs, on and off</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The picture slowly gets dimmer</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The picture freezes on one frame</span></label></div>
+      <p class="why" hidden>PKT Loss Events counts lost data packets, and lost packets show as brief drop‑outs of the projection, on and off.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="status" data-lesson="5"><legend><span class="qn"></span>Besides lost packets, what can make DAC Empty Events climb?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>A nearly full SD card in the cube</span></label>
       <label class="opt"><input type="radio" value="b"><span>Disabling the interlock, or a test pattern</span></label>
@@ -1016,11 +1024,11 @@
       <label class="opt"><input type="radio" value="b"><span>The laser is already running</span></label>
       <label class="opt"><input type="radio" value="c"><span>The battery is being charged</span></label></div>
       <p class="why" hidden>NO LASER on the Laser button means LaserOS hasn’t found a cube: check the control mode and the connection.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>Streaming over WiFi, the projection breaks up and PKT Loss Events keeps climbing. What helps most, says the manual?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>A lower screen brightness</span></label>
-      <label class="opt"><input type="radio" value="b"><span>A wired connection</span></label>
-      <label class="opt"><input type="radio" value="c"><span>A different SD card</span></label></div>
-      <p class="why" hidden>Lost packets come from congested WiFi. Moving away helps; a wired connection is better.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>Streaming over WiFi in a busy place, PKT Loss Events on Status Info keeps climbing. What helps most, says the manual?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Joining the venue’s router over WiFi</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Switching to a wired connection</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Turning on backward compatibility</span></label></div>
+      <p class="why" hidden>Lost packets come from congested WiFi, and the venue’s WiFi uses the same busy 2.4GHz band. Moving away helps; a wired connection is better. Backward compatibility is only for older WiFi cubes on the same network.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="trouble" data-lesson="6"><legend><span class="qn"></span>A built‑in laser show breaks up, played from the SD card. What does the manual warn about?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Busy WiFi in the area</span></label>
       <label class="opt"><input type="radio" value="b"><span>A missing WiFi antenna</span></label>
@@ -1080,9 +1088,9 @@
       <label class="opt"><input type="radio" value="c"><span>12V DC, 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug, 150W</span></label></div>
       <p class="why" hidden>The Pro 6W comes with a 19V DC, 120W charger with a 2.5&nbsp;×&nbsp;5.5&nbsp;mm plug. We recommend a replacement with that plug and at least that wattage; a higher wattage is fine.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="power" data-lesson="8"><legend><span class="qn"></span>The cube gives off a burning smell, but it still works. What do you do?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Finish the show, then let it cool</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Unplug it, let it cool, then try again</span></label>
       <label class="opt"><input type="radio" value="b"><span>Unplug it, stop using it, email support</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Lower the power and keep watching it</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Keep it on the charger and email support</span></label></div>
       <p class="why" hidden>Any smell or smoke: unplug it right away, keep it away from anything flammable, don’t charge or use it again, and email support@laseros.com.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="heat" data-lesson="8"><legend><span class="qn"></span>The temperature cut‑off has stopped the cube. What happens next?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>It restarts by itself once it cools</span></label>
@@ -1101,8 +1109,8 @@
       <p class="why" hidden>The manual’s range is 10°C (50°F) to 40°C (104°F). Extreme cold or heat will damage the laser diodes.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="heat" data-lesson="8"><legend><span class="qn"></span>What does the cube need around it while it runs?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Open space on all sides, for airflow</span></label>
-      <label class="opt"><input type="radio" value="b"><span>A cloth over the vents, against dust</span></label>
-      <label class="opt"><input type="radio" value="c"><span>A wall close behind it, to aim it</span></label></div>
+      <label class="opt"><input type="radio" value="b"><span>Open space at the front, for the beam</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Open space at the back, for the cables</span></label></div>
       <p class="why" hidden>Leave open space around all sides, so air can flow through the heat sink underneath.</p><p class="feedback"></p></fieldset>
   </div>
 </section>

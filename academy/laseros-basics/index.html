@@ -235,7 +235,7 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l1q2" value="a"><span>LaserOS needs a restart with the cube connected</span></label>
         <label class="opt"><input type="radio" name="l1q2" value="b"><span>The cube needs a firmware update first</span></label>
-        <label class="opt"><input type="radio" name="l1q2" value="c"><span>The cube isn’t armed: interlock, key, E‑Stop</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="c"><span>The cube isn’t armed, so it won’t project</span></label>
       </div>
       <p class="why" hidden>The cube only projects when it’s armed: the interlock closed and the key on, and with an E‑Stop, the E‑Stop started.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -394,7 +394,7 @@
   <ul class="points">
     <li><strong>Single Color:</strong> Off, White, Red, Green or Blue.</li>
     <li><strong>Hue</strong>, <strong>Mono Color</strong> and <strong>Shift Color</strong>, and <strong>Fader R, G and B</strong>.</li>
-    <li>Single Color and Mono Color each turn all the content into one colour. Hue, Mono Color and Shift Color only work while Single Color is Off.</li>
+    <li>Single Color and Mono Color each turn all the content into one colour. Hue, Mono Color and Shift Color only work while Single Color is Off: with Single Color set to a colour, they’re greyed out.</li>
     <li>Once you move Mono Color, a Saturation slider appears below it.</li>
   </ul>
   <figure class="native">
@@ -417,13 +417,13 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="a">
-      <legend><span class="qn">Question 2</span>You move the Hue slider, but nothing changes. Why?</legend>
+      <legend><span class="qn">Question 2</span>The Hue slider is greyed out and won’t move. Why?</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="l3q2" value="a"><span>Single Color is set to a colour</span></label>
         <label class="opt"><input type="radio" name="l3q2" value="b"><span>Hue only works in the phone app</span></label>
         <label class="opt"><input type="radio" name="l3q2" value="c"><span>Hue needs a Color Effect first</span></label>
       </div>
-      <p class="why" hidden>Hue, Mono Color and Shift Color only work while Single Color is Off.</p>
+      <p class="why" hidden>Hue, Mono Color and Shift Color only work while Single Color is Off. With Single Color set to a colour, they’re greyed out.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
@@ -458,7 +458,7 @@
   <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
   <p class="label">Lesson 4 of 8</p>
   <h2 id="l4-h">Movement, Strobe and Trace</h2>
-  <p class="intro">Three tools work on any content, from a built‑in animation to your own logo. Movement makes it travel and turn, Strobe flashes it, and Trace makes it draw itself.</p>
+  <p class="intro">Three tools change how content plays. Movement makes it travel and turn, and Strobe flashes it: both work on any content. Trace makes it draw itself: it works on images, animations and your own logo (SVG or ILD). With other content, such as a visualizer or text, its switch is greyed out.</p>
 
   <div class="video" data-yt="UeHlOF4GFac" data-from="8" data-to="89" data-title="LaserOS and the Tools tab: movement, strobe and trace">
     <button type="button" aria-label="Play video: Movement and Strobe in LaserOS on a computer"><span class="play"><svg><use href="#i-play"/></svg></span></button>
@@ -574,17 +574,17 @@
   <h3>Keep it</h3>
   <ul class="points">
     <li><strong>Save</strong> keeps the text under a name, in Playlists → Saved Texts.</li>
-    <li>In a playlist for the cube’s SD card, a scrolling text can play once and then move on. On a computer, right‑click it in the playlist, turn on Assign Duration and choose 1 cycle (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>; the right‑click menu is pictured in lesson 6).</li>
+    <li>In a playlist for the cube’s SD card, a scrolling text can play once and then move on. On a computer, right‑click it in the playlist, turn on Assign Duration and choose 1 cycle (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>; the right‑click menu is pictured in <a class="link" href="#lesson-6">lesson 6 of this course</a>).</li>
   </ul>
 
   <div class="practice">
     <h3>Check yourself</h3>
     <fieldset class="check" data-answer="a">
-      <legend><span class="qn">Question 1</span>You want a message to scroll up the wall. Which settings do you use?</legend>
+      <legend><span class="qn">Question 1</span>In the Text app, which two settings make your message scroll across the wall?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Speed, and Direction set to Up</span></label>
-        <label class="opt"><input type="radio" name="l5q1" value="b"><span>Size, and Spacing set to the top</span></label>
-        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Style, set to 3D rotate</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Speed and Direction</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="b"><span>Size and Spacing</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Font and Style</span></label>
       </div>
       <p class="why" hidden>Speed and Direction (Left, Right, Up or Down) make the text scroll.</p>
       <p class="feedback" aria-live="polite"></p>
@@ -623,11 +623,11 @@
   <h2 id="l6-h">Import your logo and stop the flicker</h2>
   <p class="intro">Bring your own logo into LaserOS, from a computer or a phone. Then make sure it plays smoothly.</p>
 
-  <div class="video" data-yt="9P_NbtqZBCE" data-from="141" data-to="169" data-title="5 cool LaserOS features you can use under 60 seconds, part II">
+  <div class="video" data-yt="9P_NbtqZBCE" data-from="140" data-to="169" data-title="5 cool LaserOS features you can use under 60 seconds, part II">
     <button type="button" aria-label="Play video: importing a logo in the LaserOS phone app"><span class="play"><svg><use href="#i-play"/></svg></span></button>
     <img src="../../images/academy/laseros-basics/l6-clip1.webp" alt="" width="1280" height="720" loading="lazy">
   </div>
-  <p class="video-meta"><span>Importing a logo in the phone app, then effects and Trace on it (2:21 to 2:49; the phone’s file picker is in Polish)</span><a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=141s" target="_blank" rel="noopener">Watch on YouTube, from 2:21</a></p>
+  <p class="video-meta"><span>Importing a logo in the phone app, then effects and Trace on it (2:20 to 2:49; the phone’s file picker is in Polish)</span><a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=140s" target="_blank" rel="noopener">Watch on YouTube, from 2:20</a></p>
 
   <h3>On a computer</h3>
   <ul class="points">
@@ -703,13 +703,13 @@
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="b">
-      <legend><span class="qn">Question 3</span>In the phone app, which playlist does an imported file go to, unless you pick another?</legend>
+      <legend><span class="qn">Question 3</span>In the phone app, which setting picks the playlist an imported file goes to?</legend>
       <div class="opts">
-        <label class="opt"><input type="radio" name="l6q3" value="a"><span>Saved Texts</span></label>
-        <label class="opt"><input type="radio" name="l6q3" value="b"><span>Imported</span></label>
-        <label class="opt"><input type="radio" name="l6q3" value="c"><span>Drawings</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="a"><span>Open imported in “Playlists”</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="b"><span>Import location</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="c"><span>Import from URL</span></label>
       </div>
-      <p class="why" hidden>Import location sets the playlist the file goes to: Imported, unless you pick another.</p>
+      <p class="why" hidden>Import location sets the playlist the file goes to: Imported, unless you pick another. With Open imported in “Playlists” on, the logo opens straight away.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
   </div>
@@ -952,15 +952,15 @@
       <p class="why" hidden>The left panel shows the effect in use, with a button to reset it.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="colour" data-lesson="3"><legend><span class="qn"></span>All your content shows in green only. What’s a quick fix?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Turn off Lock Zoom X‑Y on the Image page</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Turn Fader G down, on the Color page</span></label>
       <label class="opt"><input type="radio" value="b"><span>Click Reset settings on the Color page</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Switch off Strobe and Trace on the Tools page</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>Turn TTL Mode on, in Color Balance</span></label></div>
       <p class="why" hidden>Click Reset settings at the bottom of the Color page. Or check that Single Color is Off, Mono Color and Shift Color are all the way left, and Fader R, G and B are up.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="a" data-group="colour" data-lesson="3"><legend><span class="qn"></span>Which two Color settings each turn all the content into one colour?</legend><div class="opts">
+    <fieldset class="check" data-answer="a" data-group="colour" data-lesson="3"><legend><span class="qn"></span>Which two settings each turn all the content into one colour?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Single Color and Mono Color</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Lock Zoom X‑Y and Flip X</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Audio react and Sparks</span></label></div>
-      <p class="why" hidden>Single Color and Mono Color each turn all the content into one colour.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="b"><span>Single Color and TTL Mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Mono Color and TTL Mode</span></label></div>
+      <p class="why" hidden>Single Color and Mono Color each turn all the content into one colour. TTL Mode, in Color Balance, makes the colours jump in hard steps instead of fading.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="colour" data-lesson="3"><legend><span class="qn"></span>When does a Saturation slider appear on the Color page?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Once Single Color is Red</span></label>
       <label class="opt"><input type="radio" value="b"><span>Once you open Colorize</span></label>
@@ -972,22 +972,22 @@
       <label class="opt"><input type="radio" value="c"><span>Everything turns into a single colour</span></label></div>
       <p class="why" hidden>With TTL Mode on, each colour is only switched fully on or off: 8 combinations and no smooth fades. It’s for compatibility with TTL projectors.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="b" data-group="tools" data-lesson="4"><legend><span class="qn"></span>Which setting turns the picture around one axis?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Clusters, in the Trace section</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Rotate X, Y or Z, in Movement</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Time On, in the Strobe section</span></label></div>
-      <p class="why" hidden>Movement’s Rotate X, Y and Z turn the picture around each axis.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="a" data-group="tools" data-lesson="4"><legend><span class="qn"></span>What do Time On and Time Off set?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>How long Strobe keeps the picture on and off</span></label>
-      <label class="opt"><input type="radio" value="b"><span>How long each item plays when on Autoplay</span></label>
-      <label class="opt"><input type="radio" value="c"><span>How long Trace takes to draw the whole logo once</span></label></div>
-      <p class="why" hidden>Strobe switches the picture on and off; Time On and Time Off set how long it stays on and off.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="tools" data-lesson="4"><legend><span class="qn"></span>In the phone app, how do you open the Strobe page?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Tap the gear at the left of the player bar</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Tap the top‑right gear, then the page title</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Tap the effect name at the top of the screen</span></label></div>
+      <p class="why" hidden>Tap the gear at the top right, then tap the page title at the top and pick Movement, Strobe or Trace. The gear in the player bar opens the playing item’s own options, and the effect name opens the effects.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="tools" data-lesson="4"><legend><span class="qn"></span>Time On and Time Off are sliders of which tool?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Strobe</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Trace</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Movement</span></label></div>
+      <p class="why" hidden>Strobe switches the picture on and off; Time On and Time Off set how long it stays on and off. Trace has Duration, Fade, Clusters and Sparks; Movement has Horizontal, Vertical and Rotate X, Y and Z.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="trace" data-lesson="4"><legend><span class="qn"></span>Which content can Trace make draw itself?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Only logos imported as SVG files</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Only text you made in the Text app</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Any content, your own logo too</span></label></div>
-      <p class="why" hidden>Trace, like Movement and Strobe, works on any content: an animation, a built‑in image or your own logo.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="a"><span>Text, visualizers and your own logo</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Any content, from text to visualizers</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Images, animations and your own logo</span></label></div>
+      <p class="why" hidden>Trace works on images, animations and your own logo (SVG or ILD). With other content, such as a visualizer or text, its switch is greyed out. Movement and Strobe work on any content.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="trace" data-lesson="4"><legend><span class="qn"></span>In the phone app’s Trace page, what does Show on panel add?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>A small on/off button by the item’s name</span></label>
       <label class="opt"><input type="radio" value="b"><span>Trace on the computer’s left panel</span></label>

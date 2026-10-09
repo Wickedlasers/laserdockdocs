@@ -489,12 +489,11 @@
       <p class="task">Put the manual’s steps for mapping box edges in order.</p>
       <ol>
         <li>Add a Vertical Line</li>
-        <li>Place it with Position and turn it with Fixed Rotation</li>
-        <li>Add Scale and Color Sequence</li>
+        <li>Give it Position, Fixed Rotation, Scale and Color Sequence</li>
         <li>Duplicate it for the next edge and adjust it</li>
         <li>Save it as a custom beam</li>
       </ol>
-      <p class="why" hidden>One line per edge: place and turn it, make it grow and change colour, duplicate it for the next edge, then save the design as a custom beam.</p>
+      <p class="why" hidden>One line per edge: place and turn it, make it grow and change colour, then duplicate it for the next edge (the copy keeps all its effects) and adjust it. Save the design as a custom beam at the end.</p>
       <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
       <p class="feedback" aria-live="polite"></p>
     </div>
@@ -731,9 +730,9 @@
       <label class="opt"><input type="radio" value="c"><span>Wherever the LaserOS safety zone allows it</span></label></div>
       <p class="why" hidden>Every beam has to end in a restricted area, with at least 3&nbsp;m between it and any place people may be, on all sides.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="rules" data-lesson="1"><legend><span class="qn"></span>Where people may be, how high must every beam stay?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>At least 2&nbsp;m (6.5&nbsp;ft) above the floor</span></label>
-      <label class="opt"><input type="radio" value="b"><span>At least 3&nbsp;m (10&nbsp;ft) above the floor</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Just above the tallest person’s head</span></label></div>
+      <label class="opt"><input type="radio" value="a"><span>At least 3&nbsp;m (10&nbsp;ft) above the floor, measured from the main floor</span></label>
+      <label class="opt"><input type="radio" value="b"><span>At least 3&nbsp;m (10&nbsp;ft) above the floor, measured from the highest place someone could stand</span></label>
+      <label class="opt"><input type="radio" value="c"><span>At least 2&nbsp;m (6.5&nbsp;ft) above the floor, measured from the highest place someone could stand</span></label></div>
       <p class="why" hidden>At least 3&nbsp;m (10&nbsp;ft), measured from the highest place someone could stand.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="rules" data-lesson="1"><legend><span class="qn"></span>You trace edges with the laser on. Where do you stand?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>In front of the cube, facing the object</span></label>
@@ -741,26 +740,26 @@
       <label class="opt"><input type="radio" value="c"><span>Beside or behind the cube</span></label></div>
       <p class="why" hidden>Don’t stand in front of the cube while it’s on: work from beside or behind it.</p><p class="feedback"></p></fieldset>
 
-    <fieldset class="check" data-answer="b" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Which of these must never be a mapping target?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>A solid brick wall</span></label>
-      <label class="opt"><input type="radio" value="b"><span>A parked car</span></label>
-      <label class="opt"><input type="radio" value="c"><span>A projection screen</span></label></div>
-      <p class="why" hidden>Never aim the laser at cars or other vehicles. A brick wall and a projection screen are good places for beams to end.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="a" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Why not outline a polished chrome sign?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>It reflects the beams away</span></label>
-      <label class="opt"><input type="radio" value="b"><span>It absorbs the colours</span></label>
-      <label class="opt"><input type="radio" value="c"><span>It’s too small to see</span></label></div>
-      <p class="why" hidden>Shiny surfaces reflect the beams. Every beam has to end, not be reflected away, and reflected light can injure eyes too.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Which of these can your mapping beams end on?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A glossy painted panel</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A brick wall</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A row of bushes</span></label></div>
+      <p class="why" hidden>Beams must end on something solid that doesn’t reflect and doesn’t burn, such as a brick wall. Never map glossy panels, or trees and bushes.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="targets" data-lesson="1"><legend><span class="qn"></span>Your beams would hit a polished chrome sign. Why is that a problem?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The beams don’t end there, and reflected light can injure eyes</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Shiny surfaces make the lines flicker, so simplify the drawing</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Reflections are fine as long as they stay 3&nbsp;m above people</span></label></div>
+      <p class="why" hidden>Shiny surfaces reflect the beams. Every beam has to end in the restricted area, not be reflected away, and reflected light can injure eyes too. Flicker comes from too much detail, not from the surface.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="setup" data-lesson="1"><legend><span class="qn"></span>How should the cube be while you aim it at the object?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>On, at low power</span></label>
       <label class="opt"><input type="radio" value="b"><span>On, with a safety zone set</span></label>
       <label class="opt"><input type="radio" value="c"><span>Switched off, with the key out</span></label></div>
       <p class="why" hidden>Aim and lock the cube with it switched off and the key out. Then set the beam block.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="a" data-group="setup" data-lesson="1"><legend><span class="qn"></span>In LaserOS, which test pattern shows the whole projection area?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Square</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Circle</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Grid</span></label></div>
+    <fieldset class="check" data-answer="a" data-group="setup" data-lesson="1"><legend><span class="qn"></span>Before you map, you want to see the whole projection area on the wall. What do you use?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The Square test pattern, in Projector Setup</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Preview, in the Safety Zones settings</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Circle test pattern, in Projector Setup</span></label></div>
       <p class="why" hidden>The Test Pattern list at the top of Projector Setup has a Square that shows the whole projection area.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Why trace an object in Draw with the laser on?</legend><div class="opts">
@@ -768,14 +767,14 @@
       <label class="opt"><input type="radio" value="b"><span>The cube shows each stroke as you draw</span></label>
       <label class="opt"><input type="radio" value="c"><span>Points used is counted only while it’s on</span></label></div>
       <p class="why" hidden>With the laser on, the cube shows each stroke as you draw it, so you trace the edges by watching the projection.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="c" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Draw shows 120% points used. What do you do?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Save it: the drawing is complete</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Raise its render quality to fit</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Simplify it: over 100% it’s too complex</span></label></div>
+    <fieldset class="check" data-answer="c" data-group="draw" data-lesson="2"><legend><span class="qn"></span>Above which Points used figure is a drawing too complex?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>45%</span></label>
+      <label class="opt"><input type="radio" value="b"><span>150%</span></label>
+      <label class="opt"><input type="radio" value="c"><span>100%</span></label></div>
       <p class="why" hidden>Over 100% points used, the drawing is too complex: simplify it.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="phone" data-lesson="3"><legend><span class="qn"></span>In Draw on the phone, how do you see where a line will start?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Tap the save button twice</span></label>
+      <label class="opt"><input type="radio" value="a"><span>Touch and hold the canvas until a dot shows</span></label>
       <label class="opt"><input type="radio" value="b"><span>Hold an arrow and slide a finger over the canvas</span></label>
       <label class="opt"><input type="radio" value="c"><span>Tap the power button, then the canvas</span></label></div>
       <p class="why" hidden>Hold one of the arrow buttons and slide a finger over the canvas: a dot on your object shows the spot. Let go of the arrow, then draw.</p><p class="feedback"></p></fieldset>
@@ -817,10 +816,10 @@
       <label class="opt"><input type="radio" value="b"><span>Raise it</span></label>
       <label class="opt"><input type="radio" value="c"><span>Match it to the FPS</span></label></div>
       <p class="why" hidden>Lower the render quality if an item flickers. Raise it only if corners look rounded: that can add flicker.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>With Show FPS in simulator window on, your mapping shows 50 FPS. Will it appear to flicker?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Yes: it needs 60 FPS or more</span></label>
-      <label class="opt"><input type="radio" value="b"><span>No: 45 FPS or more won’t</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Yes: it needs 100 FPS or more</span></label></div>
+    <fieldset class="check" data-answer="b" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>Show FPS in simulator window is on. From what FPS does your mapping not appear to flicker?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>30 FPS or more</span></label>
+      <label class="opt"><input type="radio" value="b"><span>45 FPS or more</span></label>
+      <label class="opt"><input type="radio" value="c"><span>60 FPS or more</span></label></div>
       <p class="why" hidden>45 FPS or more won’t appear to flicker.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="flicker" data-lesson="5"><legend><span class="qn"></span>The corners of your drawing look rounded. What can help?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Lowering its render quality</span></label>
@@ -833,11 +832,11 @@
       <label class="opt"><input type="radio" value="b"><span>A keep‑out zone around the object</span></label>
       <label class="opt"><input type="radio" value="c"><span>Either: they work the same</span></label></div>
       <p class="why" hidden>A keep‑within zone is for the target area where the beams can safely end. A keep‑out zone keeps beams off something, such as a camera.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Can a safety zone make it OK for someone to stand in the beams?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Yes, with a keep‑out zone round them</span></label>
-      <label class="opt"><input type="radio" value="b"><span>No: the laser must never be aimed at people</span></label>
-      <label class="opt"><input type="radio" value="c"><span>Yes, if attenuation is at 100%</span></label></div>
-      <p class="why" hidden>Zones never protect people. A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="zone" data-lesson="6"><legend><span class="qn"></span>What is a keep‑out zone for?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Marking the target area where the beams may end</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Keeping beams off a camera, a video projector or an object</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Keeping beams off a person who stands in the show area</span></label></div>
+      <p class="why" hidden>A keep‑out zone keeps beams off a camera, a video projector or an object; the target area gets a keep‑within zone. Zones never protect people: the laser must never be aimed at people, and a zone works on top of the beam block and the 3&nbsp;m rule, never instead of them.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="zone" data-lesson="6"><legend><span class="qn"></span>Where a keep‑within and a keep‑out zone overlap, which wins?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The green keep‑within</span></label>
       <label class="opt"><input type="radio" value="b"><span>The one added first</span></label>
