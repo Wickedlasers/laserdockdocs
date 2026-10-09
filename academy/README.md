@@ -93,7 +93,7 @@ they were passed on.
 ## Videos not public yet
 
 A video that is still private or scheduled on YouTube can go into a lesson now and be shown once it is public
-(`grep -rn pending` lists them):
+(`grep -rnw pending` lists them):
 
 - in a lesson, its `.video`, `.video-meta` and any `.video-note` sit in `<div class="pending-video" data-pending="<id>" hidden>`;
 - on the homepage, its `<li>` or `<article>` has `data-pending="<id>" hidden`;
@@ -103,13 +103,13 @@ A video that is still private or scheduled on YouTube can go into a lesson now a
 
 When YouTube's oEmbed answers 200 for it (`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<id>`):
 remove `hidden` and `data-pending` from those elements, un-comment its search rows, set the beginner's-guide part number
-from the YouTube title ("pt. N"), replace the thumbnail with YouTube's `maxresdefault.jpg` at 640x360, and push. The cut
+from "pt. N" in a "Beginners guide" YouTube title (without one, drop the part label), replace the thumbnail with YouTube's `maxresdefault.jpg` at 640x360, and push. The cut
 times (`data-from`/`data-to`) were set on the presenter's own copy of the video; if the public upload is a different
 length, check them again before showing it.
 
 Jarek's four scheduled control-mode videos (Visualizers, Playlist, Laser shows, IDN & Ether Dream; 9-12 Oct 2026) are
-to be shown by an hourly job on the server that updates the wiki (academy-reveal.timer) once the owner OKs it;
-otherwise by hand as above.
+shown by an hourly job on our server (academy-reveal.timer, running since 9 Oct 2026; it switches itself off once all
+four are up). Don't show them by hand while it runs; the steps above are for other videos.
 
 ## Content rules (owner decisions, 7 Oct 2026)
 
