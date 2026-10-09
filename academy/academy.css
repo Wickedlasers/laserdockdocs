@@ -167,8 +167,11 @@ input,textarea{caret-color:var(--accent)}
 .view > .review-back:not(:first-child){margin:40px 0 0}
 .review-back:not([hidden]) + .pager{margin-top:12px}
 figure{margin:24px 0}
-figure img{width:100%;height:auto;border-radius:10px;box-shadow:0 0 0 1px var(--line);background:#fff}
+figure img{height:auto;border-radius:10px;box-shadow:0 0 0 1px var(--line);background:#fff}
+figure:not(.native) img{width:100%}
 figure.dark img{background:#000}
+figure.native img{max-width:100%} /* screenshots cropped from a video: shown at their width/height attributes, never stretched */
+figure.native a{display:block;width:fit-content;max-width:100%} /* only the picture opens it, and the focus ring hugs it */
 figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .two.parts{grid-template-columns:5fr 7fr}
