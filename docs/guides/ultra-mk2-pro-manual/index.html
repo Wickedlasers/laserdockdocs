@@ -3181,6 +3181,376 @@ machine.</p>
 <p>Never connect a fog machine to the LaserCube’s DMX ports unless you are
 sure it is true DMX: see item 22 in the
 <a href="#lasercube-parts-diagram">LaserCube Parts Diagram</a>.</p>
+<h1 id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>Something not working? Find what you see in the list below. Each problem
+has its usual cause and the fix, with a link to the section that explains
+more. For connection problems step by step, see
+<a href="../../../academy/connect/#lesson-6">lesson 6 of the Academy’s
+Connect course</a>.</p>
+<ul data-no-search><li><a href="#no-beams">No beams</a>:
+<a href="#the-laser-doesnt-emit">the laser doesn’t emit</a>,
+<a href="#laseros-shows-no-laser-or-an-interlock-message">NO LASER or an
+interlock message</a>, <a href="#is-it-the-cube-or-the-app">cube or
+app?</a></li><li><a href="#connection-problems">Connection problems</a>:
+<a href="#laseros-doesnt-find-the-cube">LaserOS doesn’t find the cube</a>,
+<a href="#laseros-finds-only-some-of-the-cubes">only some of the
+cubes</a>, <a href="#drop-outs-or-a-yellow-or-red-wifi-symbol">drop-outs or a
+yellow or red WiFi symbol</a>, <a href="#a-cube-doesnt-follow-cube-link">Cube
+Link</a>, <a href="#no-response-to-dmx-or-artnet">DMX or ArtNet</a></li><li><a href="#picture-problems">Picture problems</a>:
+<a href="#everything-is-in-one-colour">one colour</a>,
+<a href="#colours-jump-instead-of-fading">colours jump</a>,
+<a href="#flicker-rounded-corners-or-a-wobbly-logo">flicker or a wobbly
+logo</a>, <a href="#the-picture-is-in-the-wrong-place">wrong place</a>,
+<a href="#the-picture-moved-after-fitting-the-expander">moved after fitting
+the Expander</a>, <a href="#beams-are-hard-to-see-or-washed-out">beams hard
+to see</a></li><li><a href="#sound-midi-and-effects">Sound, MIDI and effects</a>:
+<a href="#no-sound-or-sound-out-of-step">no sound</a>,
+<a href="#the-visualizer-doesnt-react-to-music">visualizer and music</a>,
+<a href="#the-midi-controller-does-nothing">MIDI controller</a>,
+<a href="#effects-dont-work-or-change-the-picture">effects</a></li><li><a href="#power-and-heat">Power and heat</a>:
+<a href="#the-cube-switched-itself-off">switched itself off</a>,
+<a href="#the-battery-gauge-looks-wrong">battery gauge</a>,
+<a href="#the-cube-smells-or-smokes">smell or smoke</a></li><li><a href="#sd-card-and-firmware">SD card and firmware</a>:
+<a href="#shows-or-playlists-are-missing">shows or playlists missing</a>,
+<a href="#laseros-cant-export-to-the-sd-card">can’t export</a>,
+<a href="#checking-and-updating-the-firmware">firmware</a>,
+<a href="#web-app-images-missing-after-an-update">web app images
+missing</a></li><li><a href="#nothing-else-helps">Nothing else helps</a></li></ul>
+<p>If you’re still stuck, email
+<a href="mailto:support@laseros.com">support@laseros.com</a> with your
+order number, the model and a short video of the problem.</p>
+<h2 id="no-beams">No Beams<a href="#no-beams" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The cube is switched on, but no laser light comes out.</p>
+<h3 id="the-laser-doesnt-emit">The Laser Doesn’t Emit<a href="#the-laser-doesnt-emit" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the cube isn’t armed. It emits only when the
+interlock is closed and the key is on, and with an E-Stop connected, after
+the E-Stop start. Until then, the status bar shows I-LOCK, and the EMISSION
+LEDs are off (with an E-Stop, they may flash).</p>
+<p><strong>Fix:</strong> switch on in this order:</p>
+<ol><li>Close the interlock. Outside the US, plug the safety jumper into
+one of the E-STOP ports. US units (and any cube with the optional E-Stop)
+use the E-Stop there instead.</li><li>Put the key in and switch the cube on.</li><li>Once the cube has started, turn the key from OFF to ON. With the
+jumper, the EMISSION LEDs light up and I-LOCK goes from the status
+bar.</li><li>With an E-Stop, then do the E-Stop start: red STOP button up, the
+pendant’s key to ON if it has one, then briefly press the green START. The
+LEDs flash faster, and after 10 seconds they stay on. See the
+<a href="#e-stop-setup-guide">E-Stop Setup Guide</a>.</li></ol>
+<p>After the cube has lost power (switched off, or a flat battery), or after
+the interlock has been opened, it won’t emit by itself: turn the key to OFF
+and back to ON, and with an E-Stop do the E-Stop start again. See
+<a href="#enabling-the-laser-e-stop--interlock">Enabling the Laser E-Stop /
+Interlock</a>.</p>
+<p>If the cube still says the interlock is not enabled although everything
+is fitted, turn the key off and on again with the cube switched on. If that
+doesn’t help, email <a href="mailto:support@laseros.com">support@laseros.com</a>
+with a short video.</p>
+<h3 id="laseros-shows-no-laser-or-an-interlock-message">LaserOS Shows NO LASER or an Interlock Message<a href="#laseros-shows-no-laser-or-an-interlock-message" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The Laser button at the top left of LaserOS on a computer shows where
+the problem is (see <a href="#the-laser-button">The Laser Button</a>):</p>
+<ul><li><strong>NO LASER</strong>: LaserOS hasn’t found a cube. See
+<a href="#laseros-doesnt-find-the-cube">LaserOS Doesn’t Find the
+Cube</a>.</li><li><strong>LASER OFF</strong>, with a red power symbol: LaserOS has found
+the cube and its output is off. Click the button to start.</li><li><strong>LASER ON</strong>, but no beams, and the message “Interlock is not
+enabled on cube” with the cube’s serial number: the cube isn’t armed. See
+<a href="#the-laser-doesnt-emit">The Laser Doesn’t Emit</a>.</li><li><strong>LASER ON</strong>, the cube armed, and still no beams: check
+that no power slider is at 0, such as Global Power and Power on LaserOS’s
+left panel (see <a href="#left-panel-and-quick-controls">Left Panel and
+Quick Controls</a>).</li></ul>
+<p>In the phone app, the power button is in the middle of the bottom bar:
+red when the projection is off, blue when it is on. It turns blue even
+when the cube isn’t armed, and then shows the same interlock message.</p>
+<h3 id="is-it-the-cube-or-the-app">Is It the Cube or the App?<a href="#is-it-the-cube-or-the-app" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Project one of the cube’s own test patterns. On the cube, open
+Settings → Projection → Test Patterns, turn Enable on and pick a pattern
+such as Square. This works in LaserOS control mode too, and the cube must
+be armed. If the pattern shows, the lasers and scanners work, and the
+problem is in the app, the content or the connection. Turn Enable off again
+to go back to your content. See <a href="#test-patterns">Test
+Patterns</a>.</p>
+<p>If the pattern doesn’t show although the cube is armed, email
+<a href="mailto:support@laseros.com">support@laseros.com</a> with a short
+video.</p>
+<h2 id="connection-problems">Connection Problems<a href="#connection-problems" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>LaserOS, a lighting desk or the other cubes can’t reach the cube, or
+the projection drops out.</p>
+<h3 id="laseros-doesnt-find-the-cube">LaserOS Doesn’t Find the Cube<a href="#laseros-doesnt-find-the-cube" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> LaserOS finds a cube only when the cube is in
+LaserOS control mode, on the same network as your phone or computer, and
+connected before LaserOS starts.</p>
+<p><strong>Fix:</strong> check these:</p>
+<ul><li>On the cube, choose Control Mode → LaserOS (see
+<a href="#laseros-control-mode">LaserOS Control Mode</a>).</li><li>The status bar shows the connection mode you chose and an IP address.
+On firmware before 2.1, the cube asks to restart after a connection change:
+confirm with YES (see <a href="#connection-settings">Connection
+Settings</a>).</li><li>In WiFi Server mode, your phone or computer has joined the cube’s own
+WiFi network (LaserCube, with the password Laser2020, unless you changed
+them). In WiFi Client or LAN Client mode with a router, both are on that
+router’s network.</li><li>For any WiFi mode, the WiFi antenna is connected.</li><li>Connect first, then start LaserOS. If LaserOS was already open, or the
+cube was switched off and on or changed its mode, quit LaserOS completely
+and start it again.</li><li>A cable straight from the cube to one computer: use
+<a href="#lan-server-mode">LAN Server Mode</a>, with the computer’s network
+adapter left on automatic, or LAN Client with the steps in
+<a href="#apipa-mode-explained">APIPA mode explained</a> (the computer’s
+WiFi off while you connect).</li><li>On a Mac, use the desktop version of LaserOS and allow it access to
+the local network.</li><li>Older WiFi cubes on the same network: turn on backward compatibility
+in <a href="#general-settings">General Settings</a> (LaserOS 0.17.7 or
+later).</li><li>Use LaserOS 0.18.1 or later (see
+<a href="#installing-laseros-0181-or-later">Installing LaserOS</a>).</li></ul>
+<h3 id="laseros-finds-only-some-of-the-cubes">LaserOS Finds Only Some of the Cubes<a href="#laseros-finds-only-some-of-the-cubes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> usually the missing cube’s network
+settings.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>For several cubes, use Ethernet cables in LAN Client mode, through a
+switch or a router. Set every cube to Control Mode → LaserOS and Settings →
+Connection → LAN Client (see <a href="#a-show-for-several-cubes">A Show for
+Several Cubes</a>).</li><li>Leave IP Mode on Auto IP (Settings → Network → LAN Client). With a
+router, each cube gets its address from the router. With no router, the
+cubes and the computer give themselves 169.254 addresses: follow
+<a href="#apipa-mode-explained">APIPA mode explained</a>.</li><li>If you use Static IP, give every cube its own address, on the same
+network as the computer. No two cubes may have the same address.</li><li>Then quit LaserOS and start it again.</li></ul>
+<h3 id="drop-outs-or-a-yellow-or-red-wifi-symbol">Drop-outs, or a Yellow or Red WiFi Symbol<a href="#drop-outs-or-a-yellow-or-red-wifi-symbol" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> in LaserOS control mode, the laser data streams
+over the network at a high rate. On busy 2.4&nbsp;GHz WiFi, data gets lost,
+and the projection breaks up in brief drop-outs. In WiFi modes, the WiFi
+symbol at the bottom left of the status bar turns yellow or red when there
+is interference.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>In <a href="#status-info-page">Status Info</a>, PKT Loss Events counts
+the lost data. Select it to reset it to zero, then see whether it climbs
+while you stream.</li><li>In WiFi Server mode, run WiFi Scan (Settings → Network → WiFi
+Server). It shows how busy the channels are and picks the quietest one.
+Leave Channel on Auto (see <a href="#wifi-server-mode">WiFi Server
+Mode</a>).</li><li>Move away from the busy area, or better, use a cable: the USB-C to
+Ethernet adapter from the box for one phone or computer, or LAN Client
+through a switch or router for several cubes.</li><li>In Playlist, Visualizer and Laser Show mode, the cube plays its own
+content, so WiFi shouldn’t affect the projection. If a laser show stutters
+there, check the SD card: cheaper cards can fail to stream the shows (see
+<a href="#sd-card-information">SD Card Information</a> for the card we
+tested).</li></ul>
+<h3 id="a-cube-doesnt-follow-cube-link">A Cube Doesn’t Follow Cube Link<a href="#a-cube-doesnt-follow-cube-link" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the cube isn’t on the master’s Cube Link
+network, or is out of range.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>Cube Link makes its own wireless network, but only while the cube’s
+connection mode is LAN Client or LAN Server, not a WiFi mode.</li><li>Enable it on every cube. Set one cube to Master and the others to
+Slave, all with the same Link Channel and PIN. A slave in range of its
+master shows a purple status bar.</li><li>Connect the WiFi antenna on every cube: Cube Link needs it. The range
+is about 20–40&nbsp;m in line of sight; keep metal objects out of the way
+between the antennas.</li><li>For a show made for several projectors, set each cube’s Group, and
+choose the same show category on every cube before you press play.</li><li>The details are in <a href="#cube-link-mode">Cube Link
+Mode</a>.</li></ul>
+<h3 id="no-response-to-dmx-or-artnet">No Response to DMX or ArtNet<a href="#no-response-to-dmx-or-artnet" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> no data reaches the cube, or the desk sends
+values that black it out. A red cross next to the DMX label in the status
+bar means no DMX or ArtNet data is being received; a green tick means it
+is.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>Set Control Mode to DMX-512 or ArtNet. The cube restarts into that
+mode.</li><li>DMX: check the cables and that the DMX line is correctly terminated.
+On the Pro, use adapter cables wired for DMX: standard 3.5&nbsp;mm-to-XLR
+audio cables are wired the other way round and won’t work (see
+<a href="#connecting-dmx-cables-to-the-lasercube-pro">Connecting DMX cables
+to the LaserCube Pro</a>).</li><li>ArtNet: check that the status bar shows an IP address (if not, look
+for a network problem first) and that the cube is set to the universe your
+controller sends (see <a href="#artnet-status">ArtNet Status</a>).</li><li>On your desk, patch the cube at its start address (default 1).
+Channel 1 (access mode) and channel 3 (cue select) black the cube out at
+0–31, and channel 5 (fader) at 0 is black (see
+<a href="#dmxart-net-channel-layout">DMX/ArtNet Channel Layout</a>).</li></ul>
+<h2 id="picture-problems">Picture Problems<a href="#picture-problems" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The cube projects, but what you see isn’t what you expect.</p>
+<h3 id="everything-is-in-one-colour">Everything Is in One Colour<a href="#everything-is-in-one-colour" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> in LaserOS, Single Color or Mono Color turns
+all content into one colour.</p>
+<p><strong>Fix:</strong> in LaserOS on a computer, open Settings → Color.
+Set Single Color to Off, move Mono Color and Shift Color all the way to the
+left and turn Fader R, G and B up, or click Reset settings at the bottom of
+the page (see <a href="#mono-color">Mono Color</a>). In the phone app, tap
+the gear at the top right, then tap the page title and pick Color.</p>
+<p>In the cube’s own modes, a built-in effect can re-colour the picture:
+see <a href="#effects-dont-work-or-change-the-picture">Effects Don’t Work,
+or Change the Picture</a>.</p>
+<h3 id="colours-jump-instead-of-fading">Colours Jump Instead of Fading<a href="#colours-jump-instead-of-fading" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> TTL Mode is on in LaserOS. It makes the cube
+switch each colour fully on or off, like a TTL projector.</p>
+<p><strong>Fix:</strong> in LaserOS on a computer, open Settings →
+Projector Setup → Color Balance, pick the cube in the device list and turn
+TTL Mode off (see <a href="#color-balance-and-ttl-mode">Color Balance and
+TTL Mode</a>).</p>
+<h3 id="flicker-rounded-corners-or-a-wobbly-logo">Flicker, Rounded Corners or a Wobbly Logo<a href="#flicker-rounded-corners-or-a-wobbly-logo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the content has more detail than the scanners
+can draw smoothly. They draw only so many points per second.</p>
+<p><strong>Fix:</strong> simplify the content, change its render quality,
+make the picture smaller or split it over more cubes. In Draw, keep Points
+used under 100%. The steps are in
+<a href="#flicker-and-render-quality">Flicker and Render Quality</a>.</p>
+<h3 id="the-picture-is-in-the-wrong-place">The Picture Is in the Wrong Place<a href="#the-picture-is-in-the-wrong-place" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the size and position are set in another place
+than the one you changed: LaserOS control mode uses LaserOS’s settings, and
+the cube’s other modes use the cube’s own.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>LaserOS control mode: in LaserOS, open Settings → Projector Setup →
+Image. The Square test pattern there shows the whole projection area (see
+<a href="#image-settings-in-laseros">Image Settings in LaserOS</a>). The
+cube’s own Image Setup, Colour Balance and Safety Zone are greyed out in
+this mode: that is normal.</li><li>The cube’s other modes: on the cube, open Settings → Projection →
+Image Setup. At 100% X and Y size, the position sliders have no effect:
+make the picture smaller first (see <a href="#image-setup">Image
+Setup</a>).</li><li>DMX or ArtNet mode: the desk’s channels 6 to 11 also set the size,
+rotation and position (see <a href="#dmxart-net-channel-layout">DMX/ArtNet
+Channel Layout</a>).</li><li>Upside down or mirrored: use Flip X and Flip Y.</li></ul>
+<p>The beam block and the 3&nbsp;m rule in
+<a href="#hardware-installation">Hardware Installation</a> apply whatever
+the picture’s size and position.</p>
+<h3 id="the-picture-moved-after-fitting-the-expander">The Picture Moved After Fitting the Expander<a href="#the-picture-moved-after-fitting-the-expander" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the Expander moves the whole picture as well as
+enlarging it, and removing it moves the picture again.</p>
+<p><strong>Fix:</strong> switch the laser off before you fit or remove the
+lens. Afterwards, set the picture’s size and position, and any safety zone,
+again, then check where all the beams end. If the edges of the picture
+bend, make it smaller. See <a href="#expander">Expander</a> and
+<a href="#fitting-a-lens">Fitting a Lens</a>.</p>
+<h3 id="beams-are-hard-to-see-or-washed-out">Beams Are Hard to See, or Washed Out<a href="#beams-are-hard-to-see-or-washed-out" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> beams in the air show best with haze or fog,
+and light in the room makes them harder to see. Too much haze turns the
+beams into a bright glow and washes out the colours and edges.</p>
+<p><strong>Fix:</strong> darkness and a little haze or fog make the beams
+much more visible; thin haze gives the clearest beams. If the beams turn
+into a glow, use less haze. See
+<a href="#nano-fogger-haze-and-fog">Nano Fogger, Haze and Fog</a>.</p>
+<h2 id="sound-midi-and-effects">Sound, MIDI and Effects<a href="#sound-midi-and-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>For the cube’s own modes: its audio output and input, a controller on
+its USB port and its built-in effects.</p>
+<h3 id="no-sound-or-sound-out-of-step">No Sound, or Sound Out of Step<a href="#no-sound-or-sound-out-of-step" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the cube has no speaker. In Laser Show mode, the
+show’s sound comes out of the green A-OUT jack, for powered speakers.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>Connect powered speakers to A-OUT and turn up Audio Output Volume
+under Settings → Audio (see <a href="#audio-settings">Audio
+Settings</a>).</li><li>Sound out of step with the show: some speakers delay the sound. Set
+<a href="#audio-output-delay">Audio Output Delay</a>, then stop and start
+the show again: the new delay applies from the next start.</li><li>In LaserOS control mode, LaserOS handles all the audio, so the cube’s
+audio settings have no effect.</li></ul>
+<h3 id="the-visualizer-doesnt-react-to-music">The Visualizer Doesn’t React to Music<a href="#the-visualizer-doesnt-react-to-music" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the cube listens to the wrong input, or the
+input gain is too low.</p>
+<p><strong>Fix:</strong> under Settings → Audio, check
+<a href="#audio-input-selection">Audio Input Selection</a>: the built-in
+microphone, or the line input (the pink A-IN jack) with music from a
+computer or other audio device. Then set
+<a href="#max-line-gain--max-mic-gain">Max Line Gain / Max Mic Gain</a>: too
+low and the visualizers hardly change, too high and they are
+overdriven.</p>
+<h3 id="the-midi-controller-does-nothing">The MIDI Controller Does Nothing<a href="#the-midi-controller-does-nothing" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> USB MIDI is off, or the cube is in a mode that
+doesn’t use it.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>Turn on USB MIDI under Settings → USB MIDI. The status bar then shows
+a green tick next to the MIDI label when a controller is connected, and a
+cross when none is (see <a href="#enabling-usb-midi">Enabling USB
+MIDI</a>).</li><li>The cube’s USB MIDI doesn’t operate in LaserOS, ArtNet, DMX, IDN or
+Ether Dream control mode. In LaserOS control mode, plug the controller into
+the computer that runs LaserOS instead (see
+<a href="#midi-controllers-in-laseros">MIDI Controllers in
+LaserOS</a>).</li><li>The cube works with the APC40 MK2 and the APC mini MK2. MIDI mappings
+are saved only when an SD card with the Lasercube/settings folder is in the
+cube.</li></ul>
+<h3 id="effects-dont-work-or-change-the-picture">Effects Don’t Work, or Change the Picture<a href="#effects-dont-work-or-change-the-picture" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the built-in effects work only when they are
+enabled and the Master effect slider is above 0%. Effect settings are kept
+when the cube is switched off and on.</p>
+<p><strong>Fix:</strong> open the Effects menu (in Playlist and Visualizer
+mode), turn Enable on and check that Master is above 0%. With the factory
+APC40 MK2 mapping, the controller’s Master fader sets it, so move that fader
+up. When you don’t need effects, keep them disabled, so they can’t change
+the picture by accident. See <a href="#built-in-effects">Built-in
+Effects</a> and <a href="#master-effect-slider">Master Effect
+Slider</a>.</p>
+<h2 id="power-and-heat">Power and Heat<a href="#power-and-heat" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The cube switches itself off, or the battery reading looks
+odd.</p>
+<h3 id="the-cube-switched-itself-off">The Cube Switched Itself Off<a href="#the-cube-switched-itself-off" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the temperature cut-off, or a flat battery.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>Too hot (overheating), for example in strong sun: the
+<a href="#temperature-cut-off">temperature cut-off</a> turns the cube off, and
+it doesn’t restart by itself. Let it cool down, then switch it on again. Use it
+only between 10°C (50°F) and 40°C (104°F), with open space around all sides
+for airflow. LaserOS shows the cube’s temperature under Settings →
+Projector Setup → Info.</li><li>Flat battery: plug in the charger. The battery charges while the cube
+plays on its charger (see <a href="#battery">Battery</a>).</li><li>Either way, reset the key before the laser can emit again (see
+<a href="#the-laser-doesnt-emit">The Laser Doesn’t Emit</a>).</li></ul>
+<h3 id="the-battery-gauge-looks-wrong">The Battery Gauge Looks Wrong<a href="#the-battery-gauge-looks-wrong" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the gauge estimates the charge from the
+battery’s voltage. While the cube charges, it can’t measure the charge, and
+while it projects, the reading moves around and shows a little lower (see
+<a href="#status-info-page">Status Info</a>).</p>
+<p><strong>Fix:</strong> while charging, look at the charging LED instead:
+red while the battery charges, green when it is full (item 13 in the
+<a href="#lasercube-parts-diagram">LaserCube Parts Diagram</a>). For the
+charger the cube needs, see <a href="#charger">Charger</a>.</p>
+<h3 id="the-cube-smells-or-smokes">The Cube Smells or Smokes<a href="#the-cube-smells-or-smokes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>A LaserCube should never give off a smell. Unplug it right away, keep it
+away from anything flammable, do not charge or use it again, and email
+<a href="mailto:support@laseros.com">support@laseros.com</a> (see
+<a href="#smoke-or-a-smell">Smoke or a Smell</a>).</p>
+<h2 id="sd-card-and-firmware">SD Card and Firmware<a href="#sd-card-and-firmware" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Always switch the cube off before you take the micro SD card out or put
+it in.</p>
+<h3 id="shows-or-playlists-are-missing">Shows or Playlists Are Missing<a href="#shows-or-playlists-are-missing" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the SD card is missing, or doesn’t have the
+files.</p>
+<p><strong>Fix:</strong></p>
+<ul><li>Laser Show mode lists no shows: the SD card isn’t in, or it doesn’t
+have the factory contents. Download the latest contents from
+<a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">https://github.com/Wickedlasers/mk2SDContent</a>
+and copy them as <a href="#sd-card-information">SD Card Information</a>
+describes. Rename the old Lasercube folder first, so you keep your own
+playlists and MIDI mappings.</li><li>Your own playlist is missing from the playlist drop-down: both its
+.ldpl file and its folder must be on the card (see
+<a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist to
+the micro SD card</a>).</li></ul>
+<h3 id="laseros-cant-export-to-the-sd-card">LaserOS Can’t Export to the SD Card<a href="#laseros-cant-export-to-the-sd-card" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the phone app can’t export, or LaserOS doesn’t
+recognise the card.</p>
+<p><strong>Fix:</strong> export with LaserOS on a computer. If it says “SD
+card not Found”, check that the card is in the card reader, that its volume
+name is WL and that it has a Lasercube folder. If your computer asks for
+permission to access the card, allow it. See
+<a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist to
+the micro SD card</a>.</p>
+<h3 id="checking-and-updating-the-firmware">Checking and Updating the Firmware<a href="#checking-and-updating-the-firmware" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Some steps in this manual depend on the firmware version. The cube shows
+it on its boot screen (firmware 2.0 and later), and LaserOS on a computer
+shows it under Settings → Projector Setup → Info.</p>
+<p>To update from the SD card (the preferred way):</p>
+<ol><li>Rename the card’s old Lasercube folder. Download the latest SD card
+contents from
+<a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">https://github.com/Wickedlasers/mk2SDContent</a>,
+unzip them and copy the new Lasercube folder into the root of the card (see
+<a href="#sd-card-information">SD Card Information</a>). Copy your own
+playlists and MIDI mappings from the old folder into the new one.</li><li>With the cube off, put the card in, then switch the cube on. When it
+asks to update the firmware, accept.</li><li>Don’t switch the cube off during the update. It takes one to two
+minutes and shows its progress in percent. When the screen says F/W
+Updated, press OK.</li></ol>
+<p>The other ways are in <a href="#firmware-update">Firmware Update</a>.</p>
+<h3 id="web-app-images-missing-after-an-update">Web App Images Missing After an Update<a href="#web-app-images-missing-after-an-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p><strong>Cause:</strong> the SD card doesn’t have all of the latest SD
+card contents, for example when only the firmware file was copied to
+it.</p>
+<p><strong>Fix:</strong> copy all the folders of the latest SD card
+contents, not just the firmware file (see
+<a href="#sd-card-information">SD Card Information</a>). Without them, the
+web app shows the visualizer and effect previews as blank items (see
+<a href="#visualizer-web-app">Visualizer Web App</a>).</p>
+<h2 id="nothing-else-helps">Nothing Else Helps<a href="#nothing-else-helps" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>A factory reset puts the cube back to its factory firmware and every
+setting back to its default, including the cube’s own image setup and
+safety zone, so set them again before the next show. If the SD card has
+newer firmware, accept the update the cube then offers. See
+<a href="#factory-reset-procedure">Factory Reset Procedure</a>.</p>
+<p>If the problem stays, email
+<a href="mailto:support@laseros.com">support@laseros.com</a> with your order
+number, the model and a short video.</p>
 <h1 id="sd-card-information"><span id="anchor-152"></span>SD Card Information<a href="#sd-card-information" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The LaserCube Ultra MK2 / Pro is supplied with a pre-loaded micro SD
 card containing all demo laser shows, Playlists, and MIDI mappings for
@@ -3216,313 +3586,6 @@ new folder you just downloaded. If you delete the folder then you will
 <p>Note: Please also rename the SD card volume name to “WL” without the
 quotes in order for LaserOS to see it when exporting custom playlists to
 the SD card.</p>
-<h1 id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
-<p>Find what you see in the headings below. Each problem has its usual
-cause and the fix, with a link to the section that explains more. For
-connection problems step by step, see
-<a href="../../../academy/connect/#lesson-6">lesson 6 of the Academy’s
-Connect course</a>.</p>
-<p>Still stuck? Email
-<a href="mailto:support@laseros.com">support@laseros.com</a> with your
-order number, the model and a short video of the problem.</p>
-<h2 id="no-beams">No Beams<a href="#no-beams" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<h3 id="the-laser-doesnt-emit">The Laser Doesn’t Emit<a href="#the-laser-doesnt-emit" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the cube isn’t armed. It emits only when the
-interlock is closed and the key is on, and with an E-Stop connected, after
-the E-Stop start. Until then, the status bar shows I-LOCK and the EMISSION
-LEDs stay off.</p>
-<p><strong>Fix:</strong> switch on in this order:</p>
-<ol><li>Close the interlock. Outside the US, plug the safety jumper into
-one of the E-STOP ports. US units (and any cube with the optional E-Stop)
-use the E-Stop there instead.</li><li>Put the key in and switch the cube on.</li><li>Once the cube has started, turn the key from OFF to ON. The EMISSION
-LEDs light up and I-LOCK goes from the status bar. With an E-Stop, then do
-the E-Stop start: see the <a href="#e-stop-setup-guide">E-Stop Setup
-Guide</a>.</li></ol>
-<p>After the cube has lost power (switched off, or a flat battery), or after
-the interlock has been opened, it won’t emit by itself: turn the key to OFF
-and back to ON, and with an E-Stop do the E-Stop start again. See
-<a href="#enabling-the-laser-e-stop--interlock">Enabling the Laser E-Stop /
-Interlock</a>.</p>
-<p>If the cube still says the interlock is not enabled although everything
-is fitted, turn the key off and on again with the cube switched on. If that
-doesn’t help, email <a href="mailto:support@laseros.com">support@laseros.com</a>
-with a short video.</p>
-<h3 id="laseros-shows-no-laser-or-an-interlock-message">LaserOS Shows NO LASER or an Interlock Message<a href="#laseros-shows-no-laser-or-an-interlock-message" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>The Laser button at the top left of LaserOS on a computer shows where
-the problem is (see <a href="#the-laser-button">The Laser Button</a>):</p>
-<ul><li><strong>NO LASER:</strong> LaserOS hasn’t found a cube. See
-<a href="#laseros-doesnt-find-the-cube">LaserOS Doesn’t Find the
-Cube</a>.</li><li><strong>LASER OFF</strong>, with a red power symbol: LaserOS has found
-the cube and its output is off. Click the button to start.</li><li><strong>LASER ON</strong>, but no beams, and the message “Interlock is not
-enabled on cube” with the cube’s serial number: the cube isn’t armed. See
-<a href="#the-laser-doesnt-emit">The Laser Doesn’t Emit</a>.</li></ul>
-<p>In the phone app, the power button is in the middle of the bottom bar:
-red when the projection is off, blue when it is on.</p>
-<h3 id="is-it-the-cube-or-the-app">Is It the Cube or the App?<a href="#is-it-the-cube-or-the-app" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>Project one of the cube’s own test patterns. On the cube, open
-Settings → Projection → Test Patterns, turn Enable on and pick a pattern
-such as Square. This works in LaserOS control mode too, and the cube must
-be armed. If the pattern shows, the lasers and scanners work, and the
-problem is in the app, the content or the connection. Turn Enable off again
-to go back to your content. See <a href="#test-patterns">Test
-Patterns</a>.</p>
-<h2 id="connection-problems">Connection Problems<a href="#connection-problems" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<h3 id="laseros-doesnt-find-the-cube">LaserOS Doesn’t Find the Cube<a href="#laseros-doesnt-find-the-cube" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> LaserOS finds a cube only when the cube is in
-LaserOS control mode, on the same network as your phone or computer, and
-connected before LaserOS starts.</p>
-<p><strong>Fix:</strong> check these:</p>
-<ul><li>On the cube, choose Control Mode → LaserOS (see
-<a href="#laseros-control-mode">LaserOS Control Mode</a>).</li><li>The status bar shows the connection mode you chose and an IP address.
-On firmware before 2.1, the cube restarts after a connection change (see
-<a href="#connection-settings">Connection Settings</a>).</li><li>In WiFi Server mode, your phone or computer has joined the cube’s own
-WiFi network (LaserCube, with the password Laser2020, unless you changed
-them). In WiFi Client or LAN Client mode with a router, both are on that
-router’s network.</li><li>For any WiFi mode, the WiFi antenna is connected.</li><li>Connect first, then start LaserOS. If LaserOS was already open, or the
-cube was switched off and on or changed its mode, quit LaserOS completely
-and start it again.</li><li>A cable straight from the cube to one computer: use
-<a href="#lan-server-mode">LAN Server Mode</a>, or LAN Client with the steps
-in <a href="#apipa-mode-explained">APIPA mode explained</a> (the computer’s
-WiFi off while you connect).</li><li>On a Mac, use the desktop version of LaserOS and allow it access to
-the local network.</li><li>Older WiFi cubes on the same network: turn on backward compatibility
-in <a href="#general-settings">General Settings</a> (LaserOS 0.17.7 or
-later).</li><li>Use LaserOS 0.18.1 or later (see
-<a href="#installing-laseros-0181-or-later">Installing LaserOS</a>).</li></ul>
-<h3 id="one-of-several-cubes-is-missing">One of Several Cubes Is Missing<a href="#one-of-several-cubes-is-missing" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> usually that cube’s network settings.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>For several cubes, use Ethernet cables in LAN Client mode, through a
-switch or a router. Set every cube to Control Mode → LaserOS and Settings →
-Connection → LAN Client (see <a href="#a-show-for-several-cubes">A Show for
-Several Cubes</a>).</li><li>Leave IP Mode on Auto IP (Settings → Network → LAN Client). With a
-router, each cube gets its address from the router. With no router, the
-cubes and the computer give themselves 169.254 addresses: follow
-<a href="#apipa-mode-explained">APIPA mode explained</a>.</li><li>If you use Static IP, give every cube its own address, on the same
-network as the computer. No two cubes may have the same address.</li><li>Then quit LaserOS and start it again.</li></ul>
-<h3 id="the-projection-breaks-up">The Projection Breaks Up<a href="#the-projection-breaks-up" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> in LaserOS control mode, the laser data streams
-over the network at a high rate. On busy 2.4&nbsp;GHz WiFi, data gets lost,
-which shows as brief drop-outs. In WiFi modes, the WiFi symbol at the bottom
-left of the status bar turns yellow or red when there is interference.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>In <a href="#status-info-page">Status Info</a>, PKT Loss Events counts
-the lost data. Select it to reset it to zero, then see whether it climbs
-while you stream.</li><li>In WiFi Server mode, run WiFi Scan (Settings → Network → WiFi
-Server). It shows how busy the channels are and picks the quietest one.
-Leave Channel on Auto (see <a href="#wifi-server-mode">WiFi Server
-Mode</a>).</li><li>Move away from the busy area, or better, use a cable: the USB-C to
-Ethernet adapter from the box for one phone or computer, or LAN Client
-through a switch or router for several cubes.</li><li>In Playlist, Visualizer and Laser Show mode, the cube plays its own
-content, so WiFi shouldn’t affect the projection. If a laser show stutters
-there, check the SD card: cheaper cards can fail to stream the shows (see
-<a href="#sd-card-information">SD Card Information</a> for the card we
-tested).</li></ul>
-<h3 id="a-cube-doesnt-follow-cube-link">A Cube Doesn’t Follow Cube Link<a href="#a-cube-doesnt-follow-cube-link" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the cube isn’t on the master’s Cube Link
-network, or is out of range.</p>
-<p><strong>Fix:</strong> see <a href="#cube-link-mode">Cube Link Mode</a>:</p>
-<ul><li>Cube Link works only when the connection mode is not a WiFi
-mode.</li><li>Enable it on every cube. Set one cube to Master and the others to
-Slave, all with the same Link Channel and PIN. A slave in range of its
-master shows a purple status bar.</li><li>Connect the WiFi antenna on every cube. The range is about 20–40&nbsp;m
-in line of sight; keep metal objects out of the way between the
-antennas.</li><li>For a show made for several projectors, set each cube’s Group, and
-choose the same show category on every cube before you press play.</li></ul>
-<h3 id="no-response-to-dmx-or-artnet">No Response to DMX or ArtNet<a href="#no-response-to-dmx-or-artnet" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> no data reaches the cube, or the desk sends to
-other channels. A red cross next to the DMX label in the status bar means
-no DMX or ArtNet data is being received; a green tick means it is.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>Set Control Mode to DMX-512 or ArtNet. The cube restarts into that
-mode.</li><li>DMX: check the cables and that the DMX line is correctly terminated.
-On the Pro, use adapter cables wired for DMX: standard 3.5&nbsp;mm-to-XLR
-audio cables are wired the other way round and won’t work (see
-<a href="#connecting-dmx-cables-to-the-lasercube-pro">Connecting DMX cables
-to the LaserCube Pro</a>).</li><li>ArtNet: check that the status bar shows an IP address (if not, look
-for a network problem first) and that the cube is set to the universe your
-controller sends (see <a href="#artnet-status">ArtNet Status</a>).</li><li>On your desk, patch the cube at its start address (default 1).
-Channel 1 sets the access mode: at 0–31 the cube blacks out (see
-<a href="#dmxart-net-channel-layout">DMX/ArtNet Channel Layout</a>).</li></ul>
-<h2 id="picture-problems">Picture Problems<a href="#picture-problems" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<h3 id="everything-is-in-one-colour">Everything Is in One Colour<a href="#everything-is-in-one-colour" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> in LaserOS, Single Color or Mono Color turns
-all content into one colour.</p>
-<p><strong>Fix:</strong> in LaserOS on a computer, open Settings → Color.
-Set Single Color to Off and move Mono Color and Shift Color all the way to
-the left, or click Reset settings at the bottom of the page (see
-<a href="#mono-color">Mono Color</a>). In the phone app, tap the gear at the
-top right, then tap the page title and pick Color.</p>
-<p>In the cube’s own modes, a built-in effect can re-colour the picture:
-see <a href="#effects-dont-work-or-change-the-picture">Effects Don’t Work,
-or Change the Picture</a>.</p>
-<h3 id="colours-jump-instead-of-fading">Colours Jump Instead of Fading<a href="#colours-jump-instead-of-fading" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> TTL Mode is on in LaserOS. It makes the cube
-switch each colour fully on or off, like a TTL projector.</p>
-<p><strong>Fix:</strong> in LaserOS on a computer, open Settings →
-Projector Setup → Color Balance, pick the cube in the device list and turn
-TTL Mode off (see <a href="#color-balance-and-ttl-mode">Color Balance and
-TTL Mode</a>).</p>
-<h3 id="flicker-rounded-corners-or-a-wobbly-logo">Flicker, Rounded Corners or a Wobbly Logo<a href="#flicker-rounded-corners-or-a-wobbly-logo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the content has more detail than the scanners
-can draw smoothly. They draw only so many points per second.</p>
-<p><strong>Fix:</strong> simplify the content, change its render quality,
-make the picture smaller or split it over more cubes. In Draw, keep Points
-used under 100%. The steps are in
-<a href="#flicker-and-render-quality">Flicker and Render Quality</a>.</p>
-<h3 id="the-picture-is-in-the-wrong-place">The Picture Is in the Wrong Place<a href="#the-picture-is-in-the-wrong-place" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the picture’s size and position are set in two
-places: in LaserOS for LaserOS control mode, and on the cube for its other
-modes.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>LaserOS control mode: in LaserOS, open Settings → Projector Setup →
-Image. The Square test pattern there shows the whole projection area (see
-<a href="#image-settings-in-laseros">Image Settings in LaserOS</a>). The
-cube’s own Image Setup, Colour Balance and Safety Zone are greyed out in
-this mode: that is normal.</li><li>The cube’s other modes: on the cube, open Settings → Projection →
-Image Setup. At 100% X and Y size, the position sliders have no effect:
-make the picture smaller first (see <a href="#image-setup">Image
-Setup</a>).</li><li>Upside down or mirrored: use Flip X and Flip Y.</li></ul>
-<p>The beam block and the 3&nbsp;m rule in
-<a href="#hardware-installation">Hardware Installation</a> apply whatever
-the picture’s size and position.</p>
-<h3 id="the-picture-moved-after-fitting-a-lens">The Picture Moved After Fitting a Lens<a href="#the-picture-moved-after-fitting-a-lens" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the Expander moves the whole picture as well as
-enlarging it, and removing it moves the picture again.</p>
-<p><strong>Fix:</strong> after fitting or removing the lens, set the
-picture’s size and position, and any safety zone, again, then check where
-all the beams end. If the edges of the picture bend, make it smaller. Switch
-the laser off before you fit or remove a lens. See
-<a href="#expander">Expander</a> and <a href="#fitting-a-lens">Fitting a
-Lens</a>.</p>
-<h3 id="beams-are-hard-to-see-or-washed-out">Beams Are Hard to See, or Washed Out<a href="#beams-are-hard-to-see-or-washed-out" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> beams in the air show best with haze or fog,
-and light in the room makes them harder to see. Too much haze turns the
-beams into a bright glow and washes out the colours and edges.</p>
-<p><strong>Fix:</strong> darkness and a little haze or fog make the beams
-much more visible; thin haze gives the clearest beams. If the beams turn
-into a glow, use less haze. See
-<a href="#nano-fogger-haze-and-fog">Nano Fogger, Haze and Fog</a>.</p>
-<h2 id="sound-midi-and-effects">Sound, MIDI and Effects<a href="#sound-midi-and-effects" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<h3 id="no-sound-or-sound-out-of-step">No Sound, or Sound Out of Step<a href="#no-sound-or-sound-out-of-step" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the cube has no speaker. In Laser Show mode, the
-show’s sound comes out of the green A-OUT jack, for powered speakers.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>Connect powered speakers to A-OUT and turn up Audio Output Volume
-under Settings → Audio (see <a href="#audio-settings">Audio
-Settings</a>).</li><li>Sound out of step with the show: some speakers delay the sound. Set
-<a href="#audio-output-delay">Audio Output Delay</a>, then stop and start
-the show again: the new delay applies from the next start.</li><li>In LaserOS control mode, LaserOS handles all the audio, so the cube’s
-audio settings have no effect.</li></ul>
-<h3 id="the-visualizer-doesnt-react-to-music">The Visualizer Doesn’t React to Music<a href="#the-visualizer-doesnt-react-to-music" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the cube listens to the wrong input, or the
-input gain is too low.</p>
-<p><strong>Fix:</strong> under Settings → Audio, check
-<a href="#audio-input-selection">Audio Input Selection</a>: the built-in
-microphone, or the line input (the pink A-IN jack) with music from a
-computer or other audio device. Then set
-<a href="#max-line-gain--max-mic-gain">Max Line Gain / Max Mic Gain</a>: too
-low and the visualizers hardly change, too high and they are
-overdriven.</p>
-<h3 id="the-midi-controller-does-nothing">The MIDI Controller Does Nothing<a href="#the-midi-controller-does-nothing" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> USB MIDI is off, or the cube is in a mode that
-doesn’t use it.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>Turn on USB MIDI under Settings → USB MIDI. The status bar then shows
-a green tick next to the MIDI label when a controller is connected, and a
-cross when none is (see <a href="#enabling-usb-midi">Enabling USB
-MIDI</a>).</li><li>The cube’s USB MIDI doesn’t operate in LaserOS, ArtNet or DMX control
-mode. In LaserOS control mode, plug the controller into the computer that
-runs LaserOS instead (see <a href="#midi-controllers-in-laseros">MIDI
-Controllers in LaserOS</a>).</li><li>The cube works with the APC40 MK2 and the APC mini MK2. MIDI mappings
-are saved only when an SD card with the Lasercube/settings folder is in the
-cube.</li></ul>
-<h3 id="effects-dont-work-or-change-the-picture">Effects Don’t Work, or Change the Picture<a href="#effects-dont-work-or-change-the-picture" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the cube’s built-in effects work only when they
-are enabled, and effect settings are kept when the cube is switched off and
-on.</p>
-<p><strong>Fix:</strong> open the Effects menu (in Playlist and Visualizer
-mode) and enable the effect you want. When you don’t need effects, keep
-them disabled, so they can’t change the picture by accident. See
-<a href="#built-in-effects">Built-in Effects</a>.</p>
-<h2 id="power-and-heat">Power and Heat<a href="#power-and-heat" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<h3 id="the-cube-switched-itself-off">The Cube Switched Itself Off<a href="#the-cube-switched-itself-off" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the temperature cut-off, or a flat battery.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>Too hot, for example in strong sun: the
-<a href="#temperature-cut-off">temperature cut-off</a> stops the cube, and it
-doesn’t restart by itself. Let it cool down, then switch it on again. Use it
-only between 10°C (50°F) and 40°C (104°F), with open space around all sides
-for airflow. LaserOS shows the cube’s temperature under Settings →
-Projector Setup → Info.</li><li>Flat battery: plug in the charger. The battery charges while the cube
-plays on its charger (see <a href="#battery">Battery</a>).</li><li>Either way, reset the key before the laser can emit again (see
-<a href="#the-laser-doesnt-emit">The Laser Doesn’t Emit</a>).</li></ul>
-<h3 id="the-battery-gauge-looks-wrong">The Battery Gauge Looks Wrong<a href="#the-battery-gauge-looks-wrong" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the gauge estimates the charge from the
-battery’s voltage. While the cube charges, it can’t measure the charge, and
-while it projects, the reading moves around and shows a little lower (see
-<a href="#status-info-page">Status Info</a>).</p>
-<p><strong>Fix:</strong> while charging, look at the charging LED instead:
-red while the battery charges, green when it is full (item 13 in the
-<a href="#lasercube-parts-diagram">LaserCube Parts Diagram</a>). For the
-charger the cube needs, see <a href="#charger">Charger</a>.</p>
-<h3 id="the-cube-smells-or-smokes">The Cube Smells or Smokes<a href="#the-cube-smells-or-smokes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>A LaserCube should never give off a smell. Unplug it right away, keep it
-away from anything flammable, do not charge or use it again, and email
-<a href="mailto:support@laseros.com">support@laseros.com</a> (see
-<a href="#smoke-or-a-smell">Smoke or a Smell</a>).</p>
-<h2 id="sd-card-and-firmware">SD Card and Firmware<a href="#sd-card-and-firmware" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>Always switch the cube off before you take the micro SD card out or put
-it in.</p>
-<h3 id="shows-or-playlists-are-missing">Shows or Playlists Are Missing<a href="#shows-or-playlists-are-missing" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the SD card is missing, or doesn’t have the
-files.</p>
-<p><strong>Fix:</strong></p>
-<ul><li>Laser Show mode lists no shows: the SD card isn’t in, or it doesn’t
-have the factory contents. Download the latest contents from our
-<a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">GitHub</a>
-and copy them as <a href="#sd-card-information">SD Card Information</a>
-describes. Rename the old Lasercube folder first, so you keep your own
-playlists and MIDI mappings.</li><li>Your own playlist is missing from the playlist drop-down: both its
-.ldpl file and its folder must be on the card (see
-<a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist to
-the micro SD card</a>).</li></ul>
-<h3 id="laseros-cant-export-to-the-sd-card">LaserOS Can’t Export to the SD Card<a href="#laseros-cant-export-to-the-sd-card" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> the phone app can’t export, or LaserOS doesn’t
-recognise the card.</p>
-<p><strong>Fix:</strong> export with LaserOS on a computer. If it says “SD
-card not Found”, check that the card is in the card reader, that its volume
-name is WL and that it has a Lasercube folder. If your computer asks for
-permission to access the card, allow it. See
-<a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist to
-the micro SD card</a>.</p>
-<h3 id="which-firmware-and-how-to-update">Which Firmware, and How to Update<a href="#which-firmware-and-how-to-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>Some steps in this manual depend on the firmware version. The cube shows
-it on its boot screen (firmware 2.0 and later), and LaserOS on a computer
-shows it under Settings → Projector Setup → Info.</p>
-<p>To update from the SD card (the preferred way):</p>
-<ol><li>Rename the card’s old Lasercube folder, then copy the latest SD card
-contents from our <a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">GitHub</a>
-onto it. Copy your own playlists and MIDI mappings from the old folder into
-the new one.</li><li>With the cube off, put the card in, then switch the cube on. When it
-asks to update the firmware, accept.</li><li>Don’t switch the cube off during the update. It takes one to two
-minutes and shows its progress in percent. When the screen says F/W
-Updated, press OK.</li></ol>
-<p>The other ways are in <a href="#firmware-update">Firmware Update</a>.</p>
-<h3 id="web-app-images-missing-after-an-update">Web App Images Missing After an Update<a href="#web-app-images-missing-after-an-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p><strong>Cause:</strong> only the firmware file was copied to the card,
-without the rest of the SD card contents.</p>
-<p><strong>Fix:</strong> copy all the folders of the SD card contents, not
-just the firmware file (see <a href="#playlist-player-web-app">Playlist
-Player Web App</a>).</p>
-<h2 id="nothing-else-helps">Nothing Else Helps<a href="#nothing-else-helps" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>A factory reset puts the cube back to its factory firmware and every
-setting back to its default, including the cube’s own image setup and
-safety zone, so set them again before the next show. If the SD card has
-newer firmware, accept the update the cube then offers. See
-<a href="#factory-reset-procedure">Factory Reset Procedure</a>.</p>
-<p>If the problem stays, email
-<a href="mailto:support@laseros.com">support@laseros.com</a> with your order
-number, the model and a short video.</p>
   </main>
 </div>
 
@@ -3802,7 +3865,7 @@ number, the model and a short video.</p>
           stack.push(cur);
           out.push(cur);
         }
-      } else if (cur && !(n.parentElement && n.parentElement.closest("h1,h2,h3,h4"))) {
+      } else if (cur && !(n.parentElement && n.parentElement.closest("h1,h2,h3,h4,[data-no-search]"))) {
         cur.text += " " + n.nodeValue;
       }
     }

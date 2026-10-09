@@ -78,7 +78,9 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   EOF
   ```
 - **Search** fetches the manual page in the browser and indexes every `h1`-`h4` that has an `id`
-  inside `.docs-content`. Keep that wrapper and the heading ids if the manual is restyled.
+  inside `.docs-content`. Keep that wrapper and the heading ids if the manual is restyled. Text inside an
+  element with `data-no-search` is left out (the Troubleshooting chapter's list of links to its own
+  sections, which would otherwise match every symptom search).
 - **Videos:** the `VIDEOS` list in the script and the two video sections in the HTML use YouTube ids;
   thumbnails are `images/home/videos/<id>.webp` (640x360, from YouTube's `maxresdefault.jpg`). Source:
   laseros.com/tutorials and the channel's newest uploads (Jarek's beginner's guide and WebApp video aren't on

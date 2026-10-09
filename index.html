@@ -912,7 +912,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
             stack.push(cur);
             out.push(cur);
           }
-        } else if (cur && !(n.parentElement && n.parentElement.closest("h1,h2,h3,h4"))) {
+        } else if (cur && !(n.parentElement && n.parentElement.closest("h1,h2,h3,h4,[data-no-search]"))) {
           cur.text += " " + n.nodeValue;
         }
       }
