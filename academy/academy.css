@@ -339,12 +339,14 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .pager a{font-size:14.5px}
   .icon-btn{width:44px;height:44px}
   .manual-links a,.locked-msg a,.feedback a.link{position:relative}
-  .manual-links a::after,.locked-msg a::after,.feedback a.link::after{content:"";position:absolute;inset:-13px -4px} /* 44 px tap area, same look */
+  .manual-links a::after,.locked-msg a::after,.feedback a.link::after{content:"";position:absolute;inset:-13px 0} /* 44 px tap area, same look */
   .site-footer nav{gap:0 22px}
   .site-footer nav a{display:inline-block;padding:11px 0}
   .site-footer .copy{margin-left:0}
 }
 @media (max-width:380px){
+  .site-header .container{gap:8px}
+  .header-actions{gap:0} /* room for the 44 px buttons at 320 px */
   .order li span{flex-basis:calc(100% - 40px)} /* the move buttons go under the step, so the text keeps its width */
   .order .mv{margin-left:auto}
 }
