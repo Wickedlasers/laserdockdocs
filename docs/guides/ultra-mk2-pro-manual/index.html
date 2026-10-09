@@ -3970,7 +3970,7 @@ the SD card.</p>
     var academy = group("Academy", rows("Academy", false));
     var titled = group("Academy courses", rows("Academy", true)); // a course whose title matches, without "course" or "academy" in the search
     var manual = group("Manual", secs.map(function (e) { return row("#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join(""));
-    var tutorials = group("Tutorials", rows("Tutorials") +
+    var tutorials = group("Tutorials", rows("Tutorials", false) +
       vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "../../../images/home/videos/" + v.id + ".webp", true); }).join(""));
     return academy + (compile(ts).some(function (c) { return isKey(c, TUTORIAL_KEYS); }) ? tutorials + manual : manual + tutorials) + titled;
   }
