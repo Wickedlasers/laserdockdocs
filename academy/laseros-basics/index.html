@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LaserOS basics · LaserCube Academy</title>
+<meta name="description" content="A free course for LaserCube Ultra MK2 and Pro owners: find your way around LaserOS, fit the picture to your wall, effects and colours, Movement, Strobe and Trace, your own text and logo, flicker, playlists, Autoplay and MIDI controllers. Pass the quiz and download a certificate.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://wiki.laseros.com/academy/laseros-basics/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/academy/laseros-basics/">
+<meta property="og:title" content="LaserOS basics: your logo, text and effects">
+<meta property="og:description" content="A free LaserCube Academy course: stream from LaserOS to your Ultra MK2 or Pro, and make your own logo, text and effects look good. Certificate at the end.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/inter/inter-latin.woff2" crossorigin>
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../academy.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="../../" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="true">Academy</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="../../#videos">Tutorials</a>
+      <a href="../../#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="../" aria-current="true">Academy</a>
+          <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="../../#videos">Tutorials</a>
+          <a href="../../#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" data-course="laseros-basics" data-version="1.0" data-title="LaserOS basics: your logo, text and effects" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Beginner">
+
+  <section class="hero stage">
+    <div class="container">
+      <p class="label"><a href="../">LaserCube Academy</a> · Beginner</p>
+      <h1>LaserOS basics: your logo, text and effects</h1>
+      <p class="lead">Eight short lessons on making your own content look good in LaserOS: the Laser button, fitting the picture to your wall, effects and colours, a logo that draws itself, your own text and logo, smooth pictures without flicker, playlists and Autoplay, and a MIDI controller. Pass the final quiz and download your certificate.</p>
+      <ul class="meta">
+        <li><svg class="icon"><use href="#i-book"/></svg>8 lessons + quiz, about 45 minutes plus videos</li>
+        <li><svg class="icon"><use href="#i-cube"/></svg>Ultra MK2 &amp; Pro</li>
+        <li><svg class="icon"><use href="#i-user"/></svg>No account needed</li>
+        <li><svg class="icon"><use href="#i-award"/></svg>Free certificate</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-grid">
+
+      <aside class="toc" aria-label="Course contents">
+        <div class="progress js-progress js-only">
+          <div class="progress-bar"><span></span></div>
+          <p class="progress-text">0 of 8 lessons done</p>
+        </div>
+        <ol>
+          <li><a data-nav href="#overview"><span class="st" data-n="i">i</span>How this course works</a></li>
+          <li><a data-nav href="#lesson-1"><span class="st" data-n="1">1</span>Find your way around LaserOS</a></li>
+          <li><a data-nav href="#lesson-2"><span class="st" data-n="2">2</span>Fit the picture to your wall</a></li>
+          <li><a data-nav href="#lesson-3"><span class="st" data-n="3">3</span>Effects and colours</a></li>
+          <li><a data-nav href="#lesson-4"><span class="st" data-n="4">4</span>Movement, Strobe and Trace</a></li>
+          <li><a data-nav href="#lesson-5"><span class="st" data-n="5">5</span>Project your own text</a></li>
+          <li><a data-nav href="#lesson-6"><span class="st" data-n="6">6</span>Import your logo and stop the flicker</a></li>
+          <li><a data-nav href="#lesson-7"><span class="st" data-n="7">7</span>Playlists and Autoplay</a></li>
+          <li><a data-nav href="#lesson-8"><span class="st" data-n="8">8</span>A MIDI controller with LaserOS</a></li>
+          <li><a data-nav href="#final"><span class="st" data-n="Q">Q</span>Final quiz</a></li>
+          <li><a data-nav href="#certificate"><span class="st" data-n="★">★</span>Your certificate</a></li>
+        </ol>
+      </aside>
+
+      <div class="lessons-col">
+        <details class="toc-phone js-only">
+          <summary><span>Course contents</span><span class="small js-progress"><span class="progress-text">0 of 8 lessons done</span></span></summary>
+          <div class="inner">
+            <div class="progress js-progress"><div class="progress-bar"><span></span></div></div>
+          </div>
+        </details>
+        <p class="no-js-only small">The questions, the final quiz and the certificate need JavaScript. Without it you can still read every lesson below.</p>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="view" id="overview" aria-labelledby="overview-h">
+  <p class="label">Before you start</p>
+  <h2 id="overview-h">How this course works</h2>
+  <p class="intro">LaserOS is our app for making your own laser content and playing it on your LaserCube. This course shows you its basic tools, so your logo, your text and the built‑in content look their best on your Ultra MK2 or Pro.</p>
+  <h3>By the end you can</h3>
+  <ul class="points">
+    <li>find the apps, effects and settings in LaserOS, on a computer and in the phone app, and start and stop the laser from it;</li>
+    <li>fit the picture to your wall, and read the cube’s model, firmware and battery level in LaserOS;</li>
+    <li>know how the cube makes its colours, add effects, choose colours, and fix content that shows in one colour only;</li>
+    <li>make content move, flash or draw itself with Movement, Strobe and Trace;</li>
+    <li>project your own text, and import your own logo on a computer or a phone;</li>
+    <li>stop a picture from flickering, collect your content in playlists and play it with Autoplay;</li>
+    <li>run LaserOS from a MIDI controller.</li>
+  </ul>
+  <h3>What you need</h3>
+  <ul class="points">
+    <li>Your cube in LaserOS control mode, connected to LaserOS, as in <a class="link" href="../start-here/#lesson-7">Start here, lesson 7</a>.</li>
+    <li>LaserOS on a Windows or Mac computer, or on an iOS or Android phone. Get it from <a class="link" href="https://www.laseros.com/" target="_blank" rel="noopener">laseros.com</a>.</li>
+    <li>Use LaserOS 0.18.1 or later. The screens in this course are from LaserOS 0.18; menus can differ slightly in other versions.</li>
+  </ul>
+  <h3>How the lessons work</h3>
+  <ul class="points">
+    <li>Each lesson takes about 5 minutes, plus any video. It has the key points and a few questions, and most have a video or pictures. Get a question wrong? Pick another answer.</li>
+    <li>Your progress is saved in this browser. There’s no account and nothing is sent to us. Clearing your browser data, or switching to another device, starts the course again.</li>
+    <li>When all eight lessons are done, take the final quiz: 10 questions, 8 right to pass, as many tries as you need.</li>
+    <li>Pass, then download your certificate as a PDF or an image.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
+    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies whenever the laser is on: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+  </div>
+  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its chapter <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#making-content-in-laseros">Making Content in LaserOS</a>, and our video tutorials. If a video and the manual differ, follow the manual.</p>
+  <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
+</section>
+
+<!-- ============ LESSON 1 ============ -->
+<section class="view lesson" id="lesson-1" aria-labelledby="l1-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 1 of 8</p>
+  <h2 id="l1-h">Find your way around LaserOS</h2>
+  <p class="intro">With the cube in LaserOS control mode, LaserOS streams what it shows to the cube. Here’s where everything is, and how to start and stop the laser.</p>
+
+  <h3>The screen</h3>
+  <ul class="points">
+    <li><strong>On a computer:</strong> the preview and the main controls are on the left. Next to them is the list of apps, such as Abstracts, Visualizers, Dancers, Animations, Beam Show, Images, Text, Timeline, Draw, Beam Creator and Import, with <strong>Settings</strong> at the top. The open app fills the middle, and the effects are on the right.</li>
+    <li><strong>In the phone app:</strong> the apps are tiles on the main screen, and the controls are in the bar at the bottom.</li>
+  </ul>
+  <div class="two">
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/100000000000017F000000EE3A344951-383.webp" alt="Two views of the Laser button in LaserOS, from the manual: on the left it reads LASER OFF with a red power symbol, on the right LASER ON with a blue one. Below each is the preview of a cube animation." width="383" height="238" loading="lazy">
+      <figcaption>The Laser button, from LASER OFF to LASER ON.</figcaption>
+    </figure>
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/100000000000022400000141865A7806-548.webp" alt="An older version of LaserOS on a computer, from the manual: the LASER ON button and the preview on the left, the list of apps with Settings at the top in the middle, and the Visualizers app open with its items in a grid." width="548" height="321" loading="lazy">
+      <figcaption>The layout: the Laser button and preview, the list of apps, and an open app. From an older LaserOS, so its list of apps differs.</figcaption>
+    </figure>
+  </div>
+
+  <h3>The Laser button</h3>
+  <p>On a computer, the Laser button at the top left shows whether LaserOS can send to a cube:</p>
+  <ul class="points">
+    <li><strong>NO LASER:</strong> LaserOS hasn’t found a cube. Close LaserOS, connect the cube, then start LaserOS again.</li>
+    <li><strong>LASER OFF</strong>, with a red power symbol: a cube is found and the laser is off. Click the button to start.</li>
+    <li><strong>LASER ON:</strong> LaserOS is projecting. Click the button, or press Esc, to stop.</li>
+    <li>In the phone app, the power button is in the middle of the bottom bar: red when the projection is off, blue when it’s on.</li>
+    <li>The cube only projects when it’s armed: the interlock closed and the key on, and with an E‑Stop connected, the E‑Stop started (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>). If it isn’t, LaserOS shows the message “Interlock is not enabled on cube”.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Before you start the laser</span>
+    <p>Set the beam block first, so every beam stays at least 3&nbsp;m (10&nbsp;ft) above people (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>). To stop the laser, click the Laser button or press Esc in LaserOS. On the cube, turn the key to OFF. On the E‑Stop, press the big red button.</p>
+  </div>
+
+  <h3>The left panel on a computer</h3>
+  <ul class="points">
+    <li>Under the preview are the Autoplay buttons (lesson 7) and sliders such as Global Power, Power, Speed, Zoom and Rotate.</li>
+    <li>While a tool such as Trace or Strobe is on, the preview shows its name in a small tag (lesson 4).</li>
+    <li>To put a switch or slider from Settings on the left panel, hold <strong>Shift</strong> and drag it there. It stays in step with the one in Settings. To remove it, drag it off the panel onto the bin.</li>
+    <li>Right‑click a switch on the panel to give it a keyboard key or an APC controller pad, then press the key or pad. Backspace removes it.</li>
+    <li>Right‑click a slider to type an exact value.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>The Laser button at the top left reads NO LASER. What does that mean?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q1" value="a"><span>LaserOS hasn’t found a cube</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="b"><span>The cube’s key is turned to OFF</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="c"><span>A cube is found and is waiting</span></label>
+      </div>
+      <p class="why" hidden>NO LASER means LaserOS hasn’t found a cube: close LaserOS, connect the cube, then start LaserOS again. LASER OFF means a cube is found and the laser is off.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>You click LASER OFF and LaserOS shows “Interlock is not enabled on cube”. What’s missing?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q2" value="a"><span>A newer version of LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="b"><span>A faster WiFi connection</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="c"><span>The cube isn’t armed yet</span></label>
+      </div>
+      <p class="why" hidden>The cube only projects when it’s armed: the interlock closed and the key on, and with an E‑Stop, the E‑Stop started.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>You want the Trace switch from Settings on the left panel, ready during a show. How?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q3" value="a"><span>Double‑click it in Settings</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="b"><span>Hold Shift and drag it there</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="c"><span>Press Backspace while it’s on</span></label>
+      </div>
+      <p class="why" hidden>Hold Shift and drag a switch or slider from Settings onto the left panel. It stays in step with the one in Settings.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#the-laseros-screen">The LaserOS screen</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laser-button">The Laser button</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#left-panel-and-quick-controls">Left panel and quick controls</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">Enabling the E‑Stop / interlock</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 2.</p>
+  <nav class="pager" aria-label="Lesson 1: back and next"><a data-nav href="#overview"><span>Back</span>How this course works</a><a class="next" data-nav href="#lesson-2"><span>Next</span>Fit the picture to your wall</a></nav>
+</section>
+
+<!-- ============ LESSON 2 ============ -->
+<section class="view lesson" id="lesson-2" aria-labelledby="l2-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 2 of 8</p>
+  <h2 id="l2-h">Fit the picture to your wall</h2>
+  <p class="intro">In LaserOS control mode, LaserOS handles the image setup, the colour balance and the safety zone. The cube greys out its own entries for them, so you set them in LaserOS.</p>
+
+  <h3>Projector Setup</h3>
+  <ul class="points">
+    <li><strong>On a computer:</strong> open <strong>Settings → Projector Setup</strong>. A drop‑down at the top switches between pages such as Info, Image, Color Balance and Safety Zones.</li>
+    <li>Next to it, the device list shows the connected cube, with a <strong>Use This Device</strong> switch.</li>
+    <li><strong>In the phone app:</strong> tap the gear at the top right. Image Setup and Safety Zone are buttons on the Projector Setup page.</li>
+  </ul>
+
+  <h3>Info</h3>
+  <p>Info shows the connected cube’s model name and firmware version, its temperature and battery level, the connection mode, and whether the interlock is enabled.</p>
+
+  <h3>Image: size and position</h3>
+  <ul class="points">
+    <li>Image sets the size and position of the whole picture: <strong>Zoom X and Y</strong>, <strong>Position X and Y</strong>, Rotate, Flip X and Flip Y, and the keystone corners.</li>
+    <li>With <strong>Lock Zoom X‑Y</strong> on, both zoom sliders move together. Turn it off to change only the width or only the height.</li>
+    <li>The Test Pattern list at the top of Projector Setup has a <strong>Square</strong> that shows the whole projection area.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>The beam block still decides</span>
+    <p>The beam block and the 3&nbsp;m rule apply whatever the picture’s size and position (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>).</p>
+  </div>
+
+  <h3>Safety zones are here too</h3>
+  <ul class="points">
+    <li>Safety Zones is another Projector Setup page. In the phone app, it’s Safety Zone on the Projector Setup page.</li>
+    <li><strong>Attenuation Zones</strong> switches the zones on. With <strong>Invert Zones</strong> off, a zone is keep‑within, with a green outline; with it on, keep‑out, with a red outline. You can add several zones; where they overlap, red has priority.</li>
+    <li>What each kind of zone is for is in <a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>. A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them, and the laser must never be aimed at people.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Where in LaserOS do you see the cube’s firmware version and battery level?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q1" value="a"><span>Projector Setup → Image</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="b"><span>Projector Setup → Info</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="c"><span>Settings → Tools → Trace</span></label>
+      </div>
+      <p class="why" hidden>Info shows the cube’s model and firmware version, its temperature and battery level, the connection mode and whether the interlock is enabled.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>You want the picture wider, but not taller. What do you do first?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q2" value="a"><span>Turn off Lock Zoom X‑Y</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="b"><span>Turn on Flip X and Flip Y</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="c"><span>Raise Position X a little</span></label>
+      </div>
+      <p class="why" hidden>With Lock Zoom X‑Y on, both zoom sliders move together. Turn it off, then change Zoom X alone.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>You’ve made the picture much smaller with Zoom. What about the beam block?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q3" value="a"><span>It can now be opened all the way</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="b"><span>It only matters in Playlist mode</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="c"><span>It stays set, exactly as before</span></label>
+      </div>
+      <p class="why" hidden>The beam block and the 3&nbsp;m rule apply whatever the picture’s size and position.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#projector-setup-in-laseros">Projector Setup in LaserOS</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#projector-info">Projector Info</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#image-settings-in-laseros">Image settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zones-in-laseros">Safety zones in LaserOS</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 3.</p>
+  <nav class="pager" aria-label="Lesson 2: back and next"><a data-nav href="#lesson-1"><span>Back</span>Find your way around LaserOS</a><a class="next" data-nav href="#lesson-3"><span>Next</span>Effects and colours</a></nav>
+</section>
+
+<!-- ============ LESSON 3 ============ -->
+<section class="view lesson" id="lesson-3" aria-labelledby="l3-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 3 of 8</p>
+  <h2 id="l3-h">Effects and colours</h2>
+  <p class="intro">Effects change how anything looks while it plays. The Color settings decide its colours, and they’re the first place to look when everything shows in one colour. First, how the cube makes its colours.</p>
+
+  <div class="video" data-yt="T_Vfa9ocfxU" data-to="208" data-title="Inside a LaserCube: the RGB module explained">
+    <button type="button" aria-label="Play video: how a LaserCube makes its colours, and TTL Mode in LaserOS"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/T_Vfa9ocfxU.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>How the cube makes its colours, and TTL Mode (0:00 to 3:28)</span><a href="https://www.youtube.com/watch?v=T_Vfa9ocfxU" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <p class="small video-note">Later in the full video, our team opened a cube to show what’s inside. Never open yours: the manual doesn’t allow it (<a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">guideline 1</a>; <a class="link" href="../connect/#lesson-8">Connect, lesson 8</a>).</p>
+
+  <h3>How the cube makes its colours</h3>
+  <ul class="points">
+    <li>The cube has laser diodes in three colours: red, green and blue. It mixes them into one beam before the beam leaves the cube.</li>
+    <li>Every LaserCube uses <strong>analog modulation</strong>: the brightness of each colour can change smoothly, so you get smooth gradients and colour fades.</li>
+    <li>A <strong>TTL</strong> projector can only switch each colour fully on or off. That gives 8 combinations (black, red, green, blue, yellow, magenta, cyan and white) and no smooth fades.</li>
+    <li>LaserOS has a <strong>TTL Mode</strong> switch on the Color Balance page of Projector Setup (lesson 2), for compatibility with TTL projectors. It’s set for each cube: pick the cube in the device list first. With it on, the cube’s colours jump in hard steps; with it off, they fade smoothly.</li>
+  </ul>
+
+  <h3>Add an effect</h3>
+  <ul class="points">
+    <li><strong>On a computer:</strong> the effects panel on the right has four tabs: No Effect, Image Effects, Color Effects and Saved Effects.</li>
+    <li>An effect plays on top of whatever is showing: an animation, your logo, a drawing or a Beam Creator design.</li>
+    <li>The left panel shows the effect in use, with a button to reset it.</li>
+    <li><strong>In the phone app:</strong> tap the effect name at the top of the screen (it reads No Effect) and pick one. The arrows next to the name step through the effects.</li>
+  </ul>
+
+  <h3>Where the settings are</h3>
+  <ul class="points">
+    <li><strong>On a computer,</strong> Settings at the top of the list of apps has Projector Setup, Audio, Speed, Midi, Color, Colorize, Tools, Video Input, Apps and General.</li>
+    <li><strong>In the phone app,</strong> tap the gear at the top right. Tap the page title at the top to choose another page: Projector Setup, Audio, Color, Colorize, Movement, Strobe, Trace, Video Input, Apps or General.</li>
+  </ul>
+
+  <h3>Colours</h3>
+  <p>On a computer, <strong>Settings → Color</strong> has these settings:</p>
+  <ul class="points">
+    <li><strong>Single Color:</strong> Off, White, Red, Green or Blue.</li>
+    <li><strong>Hue</strong>, <strong>Mono Color</strong> and <strong>Shift Color</strong>, and <strong>Fader R, G and B</strong>.</li>
+    <li>Single Color and Mono Color each turn all the content into one colour. Hue, Mono Color and Shift Color only work while Single Color is Off.</li>
+    <li>Once you move Mono Color, a Saturation slider appears below it.</li>
+  </ul>
+  <p class="note"><strong>Everything in one colour?</strong> Check that Single Color is Off, that Mono Color and Shift Color are all the way to the left, and that Fader R, G and B are turned up. Or click Reset settings at the bottom of the Color page.</p>
+  <p class="note"><strong>Colours jump in hard steps instead of fading?</strong> Check that TTL Mode is off, on the Color Balance page of Projector Setup.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>Your logo shows in red only, whatever you play. What do you check first?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q1" value="a"><span>That Lock Zoom X‑Y is off</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="b"><span>That Trace is switched on</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="c"><span>That Single Color is Off</span></label>
+      </div>
+      <p class="why" hidden>Single Color and Mono Color each turn everything into one colour. Check Single Color is Off, Mono Color and Shift Color are all the way left and Fader R, G and B are up, or click Reset settings.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>You move the Hue slider, but nothing changes. Why?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>Single Color is set to a colour</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="b"><span>Hue only works in the phone app</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="c"><span>Hue needs a Color Effect first</span></label>
+      </div>
+      <p class="why" hidden>Hue, Mono Color and Shift Color only work while Single Color is Off.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>Will an effect work on your own imported logo?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q3" value="a"><span>No, only on built‑in animations</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="b"><span>Yes, on whatever is showing</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="c"><span>Only once it’s in a playlist</span></label>
+      </div>
+      <p class="why" hidden>An effect plays on top of whatever is showing: an animation, your logo, a drawing or a Beam Creator design.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 4</span>Your rainbow animation jumps between a few hard colours instead of fading. What do you check?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q4" value="a"><span>That TTL Mode is off, in Color Balance</span></label>
+        <label class="opt"><input type="radio" name="l3q4" value="b"><span>That Strobe is on, in Settings → Tools</span></label>
+        <label class="opt"><input type="radio" name="l3q4" value="c"><span>That Lock Zoom X‑Y is on, on the Image page</span></label>
+      </div>
+      <p class="why" hidden>With TTL Mode on, each colour is only switched fully on or off, so colours jump in hard steps. Every LaserCube can fade them smoothly with TTL Mode off.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#laseros-effects">LaserOS effects</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#laseros-settings">LaserOS settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#mono-color">Mono Color</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#projector-setup-in-laseros">Projector Setup in LaserOS</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#technical-specifications">Technical specifications</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 4.</p>
+  <nav class="pager" aria-label="Lesson 3: back and next"><a data-nav href="#lesson-2"><span>Back</span>Fit the picture to your wall</a><a class="next" data-nav href="#lesson-4"><span>Next</span>Movement, Strobe and Trace</a></nav>
+</section>
+
+<!-- ============ LESSON 4 ============ -->
+<section class="view lesson" id="lesson-4" aria-labelledby="l4-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 4 of 8</p>
+  <h2 id="l4-h">Movement, Strobe and Trace</h2>
+  <p class="intro">Three tools work on any content, from a built‑in animation to your own logo. Movement makes it travel and turn, Strobe flashes it, and Trace makes it draw itself.</p>
+
+  <div class="video" data-yt="UeHlOF4GFac" data-from="8" data-to="92" data-title="LaserOS and the Tools tab: movement, strobe and trace">
+    <button type="button" aria-label="Play video: Movement and Strobe in LaserOS on a computer"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/UeHlOF4GFac.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Movement and Strobe on a computer (0:08 to 1:32)</span></p>
+
+  <h3>Where they are</h3>
+  <ul class="points">
+    <li><strong>On a computer:</strong> Settings → Tools.</li>
+    <li><strong>In the phone app:</strong> tap the gear at the top right, then tap the page title at the top and pick Movement, Strobe or Trace.</li>
+  </ul>
+
+  <h3>Movement</h3>
+  <ul class="points">
+    <li><strong>Horizontal</strong> and <strong>Vertical</strong> move the picture sideways and up and down. In the middle position, it stands still.</li>
+    <li><strong>Rotate X, Y and Z</strong> turn it around each axis.</li>
+    <li>The page also has Intensity and Mirror. Reset settings puts everything back.</li>
+  </ul>
+  <p class="note"><strong>Wherever it moves:</strong> the beam block and the 3&nbsp;m rule apply whatever the picture’s size and position (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>).</p>
+
+  <h3>Strobe</h3>
+  <p>Strobe switches the picture on and off. <strong>Time On</strong> and <strong>Time Off</strong> set how long it stays on and how long it stays off.</p>
+
+  <h3>Trace: a logo that draws itself</h3>
+  <div class="video" data-yt="9P_NbtqZBCE" data-from="155" data-to="169" data-title="5 cool LaserOS features you can use under 60 seconds, part II">
+    <button type="button" aria-label="Play video: Trace on an imported logo, in the LaserOS phone app"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/9P_NbtqZBCE.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Trace on an imported logo, in the phone app (2:35 to 2:49)</span><a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=155s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <ul class="points">
+    <li>Switch <strong>Trace</strong> on and it starts at once. On a computer, the preview shows a small Trace tag while it’s on.</li>
+    <li>Its settings are Audio react, Duration, Fade, Clusters and Sparks.</li>
+    <li><strong>Clusters</strong> sets how many points the drawing starts from.</li>
+    <li>With <strong>Sparks</strong> at 0, only the logo is drawn, with no sparks.</li>
+    <li>In the phone app, the Trace page has <strong>Enable</strong> to switch it on, and <strong>Show on panel</strong>, which adds a small on/off button next to the name of the playing item.</li>
+    <li>On a computer, put the Trace switch on the left panel or give it a key, for quick on and off during a show (lesson 1).</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-tools-trace-1160.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-tools-trace-1160.webp" alt="LaserOS on a computer, Settings → Tools, from the manual: Strobe off with its Time On and Time Off sliders, and Trace switched on, with Audio react off and sliders for Duration (10), Fade, Clusters (3) and Sparks (12)." width="1160" height="612" loading="lazy"></a>
+    <figcaption>Settings → Tools on a computer: Strobe, and Trace switched on. Select the picture to open it full size in a new tab.</figcaption>
+  </figure>
+  <div class="two shots">
+    <figure>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-phone-trace-480.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-phone-trace-480.webp" alt="The Trace page in the LaserOS phone app, from the manual: Show on panel and Enable switched on, Audio react off, sliders for Duration, Fade, Clusters and Sparks, and Reset settings. The power button is in the middle of the bottom bar." width="480" height="920" loading="lazy"></a>
+      <figcaption>The Trace page in the phone app. Select it to open it full size.</figcaption>
+    </figure>
+  </div>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>You want your logo to draw itself, with no sparks at all. What do you set?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q1" value="a"><span>Trace on, Clusters at 0</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="b"><span>Trace on, Sparks at 0</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="c"><span>Strobe on, Time Off at 0</span></label>
+      </div>
+      <p class="why" hidden>With Sparks at 0, Trace draws only the logo, with no sparks.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>What does Clusters change in Trace?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q2" value="a"><span>How many points the drawing starts from</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="b"><span>How fast the logo moves across the wall</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="c"><span>How many colours the drawn lines take on</span></label>
+      </div>
+      <p class="why" hidden>Clusters sets how many points the drawing starts from.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Movement’s Horizontal slider is in its middle position. What does the picture do sideways?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q3" value="a"><span>It drifts to the left</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="b"><span>It sways side to side</span></label>
+        <label class="opt"><input type="radio" name="l4q3" value="c"><span>It stays where it is</span></label>
+      </div>
+      <p class="why" hidden>Horizontal and Vertical move the picture; in the middle position, it stands still.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#movement-strobe-and-trace">Movement, Strobe and Trace</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#movement">Movement</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#strobe">Strobe</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#trace">Trace</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 5.</p>
+  <nav class="pager" aria-label="Lesson 4: back and next"><a data-nav href="#lesson-3"><span>Back</span>Effects and colours</a><a class="next" data-nav href="#lesson-5"><span>Next</span>Project your own text</a></nav>
+</section>
+
+<!-- ============ LESSON 5 ============ -->
+<section class="view lesson" id="lesson-5" aria-labelledby="l5-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 5 of 8</p>
+  <h2 id="l5-h">Project your own text</h2>
+  <p class="intro">The Text app projects your own words: a name, a greeting, or a message that scrolls across the wall.</p>
+
+  <div class="video" data-yt="9P_NbtqZBCE" data-from="212" data-title="5 cool LaserOS features you can use under 60 seconds, part II">
+    <button type="button" aria-label="Play video: the Text app in the LaserOS phone app"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/9P_NbtqZBCE.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>The Text app, in the phone app</span><a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=212s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Write it</h3>
+  <ul class="points">
+    <li>Open <strong>Text</strong>. In the phone app, type in the Add Text box. With the laser on, the cube shows each letter as you type.</li>
+    <li><strong>Font:</strong> the typeface.</li>
+    <li><strong>Style:</strong> Gradient, Striped, Rainbow, 3D, 3D rotate or No Style.</li>
+    <li><strong>Size</strong> and <strong>Spacing:</strong> the size of the letters, and the gap between them.</li>
+    <li><strong>Speed</strong> and <strong>Direction</strong> (Left, Right, Up or Down) make the text scroll.</li>
+  </ul>
+
+  <h3>Keep it</h3>
+  <ul class="points">
+    <li><strong>Save</strong> keeps the text under a name, in Playlists → Saved Texts.</li>
+    <li>In a playlist on the cube’s SD card, a scrolling text can play once and then move on: right‑click it in the playlist, turn on Assign Duration and choose 1 cycle (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>You want a message to scroll up the wall. Which settings do you use?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Speed, and Direction set to Up</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="b"><span>Size, and Spacing set to the top</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Style, set to 3D rotate</span></label>
+      </div>
+      <p class="why" hidden>Speed and Direction (Left, Right, Up or Down) make the text scroll.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Where does your text go when you tap Save?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q2" value="a"><span>Onto the cube’s SD card</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="b"><span>Playlists → Imported</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="c"><span>Playlists → Saved Texts</span></label>
+      </div>
+      <p class="why" hidden>Save keeps the text under a name in Playlists → Saved Texts.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>The laser is on and you start typing in the phone app. When does the cube show your text?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q3" value="a"><span>Only after you tap the Save button</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="b"><span>Letter by letter, while you type</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="c"><span>Only once it’s in a playlist</span></label>
+      </div>
+      <p class="why" hidden>With the laser on, the cube shows each letter as you type.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#projecting-text">Projecting text</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#where-your-content-is-saved">Where your content is saved</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-a-custom-svg-to-the-playlist">Duration and cycles in a playlist</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 6.</p>
+  <nav class="pager" aria-label="Lesson 5: back and next"><a data-nav href="#lesson-4"><span>Back</span>Movement, Strobe and Trace</a><a class="next" data-nav href="#lesson-6"><span>Next</span>Import your logo and stop the flicker</a></nav>
+</section>
+
+<!-- ============ LESSON 6 ============ -->
+<section class="view lesson" id="lesson-6" aria-labelledby="l6-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 6 of 8</p>
+  <h2 id="l6-h">Import your logo and stop the flicker</h2>
+  <p class="intro">Bring your own logo into LaserOS, from a computer or a phone. Then make sure it plays smoothly.</p>
+
+  <div class="video" data-yt="9P_NbtqZBCE" data-from="141" data-to="169" data-title="5 cool LaserOS features you can use under 60 seconds, part II">
+    <button type="button" aria-label="Play video: importing a logo in the LaserOS phone app"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/9P_NbtqZBCE.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Importing a logo in the phone app, then effects and Trace on it (2:21 to 2:49)</span><a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=141s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>On a computer</h3>
+  <ul class="points">
+    <li>Open the <strong>Import</strong> app, pick the playlist the logo should go into, then click the import files button and choose the file.</li>
+    <li><strong>SVG or ILD files give the best results.</strong></li>
+    <li>A PNG or JPG is first turned into lines, in a window where you adjust the sensitivity, the line length and more, with a live preview.</li>
+    <li>For an animated SVG, use the button to import a folder with an SVG animation instead.</li>
+  </ul>
+
+  <h3>In the phone app</h3>
+  <ul class="points">
+    <li>Scroll down the main screen to <strong>Import</strong>.</li>
+    <li><strong>Import location</strong> sets the playlist the file goes to: Imported, unless you pick another.</li>
+    <li>Tap <strong>Import…</strong> and pick the file in the phone’s file browser. You can also paste a file’s web address under <strong>Import from URL</strong>.</li>
+    <li>With <strong>Open imported in “Playlists”</strong> on, the logo opens straight away. Tap it to play it.</li>
+  </ul>
+  <p>Movement, Strobe, Trace and the effects all work on your logo (lessons 3 and 4).</p>
+
+  <h3>Flicker and render quality</h3>
+  <div class="video" data-yt="oGT2Pm7dwJY" data-from="346" data-title="5 common mistakes laserists may face, part I">
+    <button type="button" aria-label="Play video: logos that are too complex, and render quality"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/oGT2Pm7dwJY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Logos that are too complex, and render quality (from 5:46)</span><a href="https://www.youtube.com/watch?v=oGT2Pm7dwJY&amp;t=346s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <ul class="points">
+    <li>The cube draws the picture with two fast‑moving mirrors, the scanners. They can draw only so many points per second: more than 35,000 at a 7° scan angle, by the manual’s specifications. Content with too much detail flickers, or looks distorted, with rounded corners.</li>
+    <li>To check, turn on <strong>Show FPS in simulator window</strong> in Settings → General. At 45 frames per second (FPS) or more, it won’t appear to flicker.</li>
+    <li><strong>Render quality:</strong> lower it if the item flickers. Raise it if corners look rounded, but that can add flicker.</li>
+    <li>On a computer, right‑click the item and turn on <strong>Assign Render Quality</strong>. In the phone app, tap the gear in the player bar, turn on <strong>Assign Quality</strong> and move Render Quality.</li>
+    <li>Still flickering? Simplify the logo, make the picture smaller, or split it over more than one cube.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>Which file types give the best results when you import a logo?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q1" value="a"><span>PNG or JPG</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="b"><span>PDF or GIF</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="c"><span>SVG or ILD</span></label>
+      </div>
+      <p class="why" hidden>SVG and ILD files give the best results. A PNG or JPG has to be turned into lines first.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Your logo flickers, and Show FPS reads 30. What do you try first?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q2" value="a"><span>Lower its render quality</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="b"><span>Raise its render quality</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="c"><span>Switch Trace on for it</span></label>
+      </div>
+      <p class="why" hidden>Below 45 FPS a picture can flicker. Lower its render quality, simplify it or make it smaller.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>In the phone app, which playlist does an imported file go to, unless you pick another?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q3" value="a"><span>Saved Texts</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="b"><span>Imported</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="c"><span>Drawings</span></label>
+      </div>
+      <p class="why" hidden>Import location sets the playlist the file goes to: Imported, unless you pick another.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#importing-your-own-logo">Importing your own logo</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-a-custom-svg-to-the-playlist">Adding your own SVG</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#flicker-and-render-quality">Flicker and render quality</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#technical-specifications">Technical specifications</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 7.</p>
+  <nav class="pager" aria-label="Lesson 6: back and next"><a data-nav href="#lesson-5"><span>Back</span>Project your own text</a><a class="next" data-nav href="#lesson-7"><span>Next</span>Playlists and Autoplay</a></nav>
+</section>
+
+<!-- ============ LESSON 7 ============ -->
+<section class="view lesson" id="lesson-7" aria-labelledby="l7-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 7 of 8</p>
+  <h2 id="l7-h">Playlists and Autoplay</h2>
+  <p class="intro">Collect your favourite content in a playlist, then let Autoplay move through it for you.</p>
+
+  <div class="video" data-yt="ySrmnchKcf8" data-from="344" data-to="542" data-title="5 Cool LaserOS Features you can use under 60 seconds">
+    <button type="button" aria-label="Play video: a playlist played with Autoplay, on a computer and a phone"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/ySrmnchKcf8.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>A playlist played with Autoplay, on a computer and a phone (5:44 to 9:02)</span><a href="https://www.youtube.com/watch?v=ySrmnchKcf8&amp;t=344s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Where your content is saved</h3>
+  <p>LaserOS keeps what you make in the <strong>Playlists</strong> app: Drawings (from Draw), Custom Beams (from Beam Creator), Saved Texts (from Text), Imported (files imported in the phone app, unless you pick another playlist) and your own playlists. It also holds ready‑made playlists, such as Demo Beams.</p>
+
+  <h3>Add to a playlist</h3>
+  <ul class="points">
+    <li><strong>On a computer:</strong> right‑click an item, pick your playlist under Add to playlist and click Add. To make a new playlist, click the small <strong>+</strong> in the Playlists app and save it.</li>
+    <li><strong>In the phone app:</strong> touch and hold an item (or select it and tap the gear at the left of the player bar), then open Add to playlist. Pick a playlist, or choose Create new playlist and give it a name, then tap Add.</li>
+  </ul>
+  <div class="video" data-yt="sF_UTzoiaK8" data-from="117" data-to="145" data-title="5 cool LaserOS features you can use under 60 seconds, part III">
+    <button type="button" aria-label="Play video: making a playlist in the LaserOS phone app"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/sF_UTzoiaK8.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Making a playlist in the phone app (1:57 to 2:25)</span></p>
+  <ul class="points">
+    <li>To play it, open Playlists and tap your playlist.</li>
+    <li>A playlist made on the phone plays from the phone. To put a playlist on the cube’s SD card, you need LaserOS on a computer (<a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a>).</li>
+    <li>In Playlist mode on the cube, the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS. Set them on the cube before you play (<a class="link" href="../control-modes/#lesson-1">Control modes, lesson 1</a>).</li>
+  </ul>
+
+  <h3>Autoplay</h3>
+  <ul class="points">
+    <li>Autoplay moves from one item to the next by itself.</li>
+    <li>Its buttons are under the preview on a computer, and in the bottom bar on the phone: <strong>shuffle</strong>, <strong>repeat</strong> and the <strong>time per item</strong> (for example 3s). Click the time to set it in seconds or beats.</li>
+    <li><strong>To autoplay one playlist only:</strong> open Playlists, then View options (the icon at its top right), and choose Toggle All → Disable. Click and hold your playlist for about two seconds to switch it back on. Then leave only Playlists ticked in the list of apps.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Hands‑free, never unattended</span>
+    <p>Autoplay changes the content for you, but a running laser is never left unattended, even with other crew around (<a class="link" href="../start-here/#lesson-3">Start here, lesson 3</a>).</p>
+  </div>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>You made a playlist in the phone app. Can you put it on the cube’s SD card from the phone?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q1" value="a"><span>Yes, from the Playlists app</span></label>
+        <label class="opt"><input type="radio" name="l7q1" value="b"><span>No, that needs a computer</span></label>
+        <label class="opt"><input type="radio" name="l7q1" value="c"><span>Yes, once the cube is on WiFi</span></label>
+      </div>
+      <p class="why" hidden>A playlist made on the phone plays from the phone. Putting a playlist on the SD card needs LaserOS on a computer.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>Autoplay keeps playing other content, not only your playlist. What do you do?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q2" value="a"><span>Set the time per item to zero seconds in the left panel</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="b"><span>Turn on shuffle and repeat together under the preview</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="c"><span>Disable all, hold your playlist, tick only Playlists</span></label>
+      </div>
+      <p class="why" hidden>In Playlists, View options → Toggle All → Disable, then click and hold your playlist for about two seconds, and leave only Playlists ticked in the list of apps.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 3</span>Autoplay runs your playlist. Can you leave the room for a while?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q3" value="a"><span>No, never leave it unattended</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="b"><span>Yes, Autoplay runs on its own</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="c"><span>Yes, if repeat is switched off</span></label>
+      </div>
+      <p class="why" hidden>A running laser is never left unattended, with or without Autoplay.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#where-your-content-is-saved">Where your content is saved</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#adding-to-a-playlist">Adding to a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#autoplay">Autoplay</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#creating-a-custom-playlist">Creating a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#playing-your-content-on-the-cube">Playing your content on the cube</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 8.</p>
+  <nav class="pager" aria-label="Lesson 7: back and next"><a data-nav href="#lesson-6"><span>Back</span>Import your logo and stop the flicker</a><a class="next" data-nav href="#lesson-8"><span>Next</span>A MIDI controller with LaserOS</a></nav>
+</section>
+
+<!-- ============ LESSON 8 ============ -->
+<section class="view lesson" id="lesson-8" aria-labelledby="l8-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 8 of 8</p>
+  <h2 id="l8-h">A MIDI controller with LaserOS</h2>
+  <p class="intro">Pads, faders and knobs let you play LaserOS live. In LaserOS control mode, the controller plugs into the computer that runs LaserOS, not into the cube.</p>
+
+  <div class="video" data-yt="ySrmnchKcf8" data-from="705" data-title="5 Cool LaserOS Features you can use under 60 seconds">
+    <button type="button" aria-label="Play video: LaserOS with a MIDI controller"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/ySrmnchKcf8.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>LaserOS with a MIDI controller</span><a href="https://www.youtube.com/watch?v=ySrmnchKcf8&amp;t=705s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Connect it</h3>
+  <ul class="points">
+    <li>In LaserOS control mode, the cube’s own USB MIDI doesn’t work. Plug the controller into the computer that runs LaserOS instead.</li>
+    <li>Open <strong>Settings → Midi</strong>. Under Input and Output, set <strong>Port</strong> to your controller. For an APC40 MK2 or APC mini MK2, also pick it under <strong>APC Model</strong>.</li>
+  </ul>
+  <figure>
+    <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-midi-settings-666.webp" alt="LaserOS Settings on a computer, Midi page, from the manual: an APC40 mkII set as the input port and the output port, and APC 40 MK2 picked as the APC model." width="666" height="338" loading="lazy">
+    <figcaption>Settings → Midi with an APC40 MK2 as input, output and APC model.</figcaption>
+  </figure>
+
+  <h3>Map pads and faders</h3>
+  <ul class="points">
+    <li><strong>Start an item from a pad:</strong> right‑click the item. Pick a pad colour under Assign APC Color if you like, click <strong>Assign Hotkey</strong> and press the pad. The item then shows the pad’s note.</li>
+    <li><strong>Move a slider from a fader or knob:</strong> right‑click the slider, click <strong>Link to MIDI Knob</strong> and move the fader. Backspace removes the link.</li>
+    <li>Switches on the left panel can get a pad or a keyboard key too (lesson 1).</li>
+    <li>In Playlist, Visualizer or Laser Show mode, a controller plugs into the cube’s own USB port instead (<a class="link" href="../control-modes/#lesson-8">Control modes, lesson 8</a>).</li>
+  </ul>
+  <p class="note"><strong>Safety:</strong> a pad can start other content, and a fader linked to a slider such as Zoom changes the picture while it plays. Whatever the controller sends, the beam block is your hard stop (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>).</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>The cube is in LaserOS control mode. Where do you plug in your APC40 MK2?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q1" value="a"><span>Into the cube’s own USB port</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="b"><span>Into the cube’s DMX In connector</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="c"><span>Into the computer with LaserOS</span></label>
+      </div>
+      <p class="why" hidden>In LaserOS control mode the cube’s USB MIDI doesn’t work. Plug the controller into the computer that runs LaserOS.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>How do you start an animation from a pad?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q2" value="a"><span>Right‑click, Assign Hotkey, press the pad</span></label>
+        <label class="opt"><input type="radio" name="l8q2" value="b"><span>Hold Shift and drag it onto the left panel</span></label>
+        <label class="opt"><input type="radio" name="l8q2" value="c"><span>Type its name under Settings → Midi → Port</span></label>
+      </div>
+      <p class="why" hidden>Right‑click the item, pick a pad colour if you like, click Assign Hotkey and press the pad.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>You want a fader to set LaserOS’s Zoom slider. What do you do?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q3" value="a"><span>Pick a colour under Assign APC Color</span></label>
+        <label class="opt"><input type="radio" name="l8q3" value="b"><span>Right‑click it, Link to MIDI Knob</span></label>
+        <label class="opt"><input type="radio" name="l8q3" value="c"><span>Turn on USB MIDI on the cube</span></label>
+      </div>
+      <p class="why" hidden>Right‑click the slider, click Link to MIDI Knob and move the fader. Backspace removes the link.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#midi-controllers-in-laseros">MIDI controllers in LaserOS</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#left-panel-and-quick-controls">Left panel and quick controls</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#usb-midi-settings">USB MIDI settings</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> Next: the final quiz.</p>
+  <nav class="pager" aria-label="Lesson 8: back and next"><a data-nav href="#lesson-7"><span>Back</span>Playlists and Autoplay</a><a class="next" data-nav href="#final"><span>Next</span>Final quiz</a></nav>
+</section>
+
+<!-- ============ FINAL QUIZ ============ -->
+<section class="view" id="final" aria-labelledby="final-h" data-pick="10" data-pass="8">
+  <p class="label">Final quiz</p>
+  <h2 id="final-h">Final quiz</h2>
+  <p class="intro">10 questions picked at random, one from each of the course’s 10 topics. Get 8 right to pass. You can try as many times as you like.</p>
+
+  <div class="locked-msg" id="final-locked" hidden>
+    <p><strong>Finish all eight lessons first.</strong> Still to do:</p>
+    <ul></ul>
+  </div>
+
+  <form id="quiz-form" class="js-only" novalidate hidden>
+    <div id="quiz-list"></div>
+    <p class="feedback is-wrong" id="quiz-msg" aria-live="polite"></p>
+    <div class="btn-row"><button class="btn solid" type="submit">Check my answers</button></div>
+  </form>
+  <div id="quiz-result" class="result" hidden></div>
+
+  <div class="bank" hidden>
+    <fieldset class="check" data-answer="b" data-group="screen" data-lesson="1"><legend><span class="qn"></span>The Laser button reads LASER OFF, with a red power symbol. What does that mean?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>No cube is found on the network</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A cube is found; the laser is off</span></label>
+      <label class="opt"><input type="radio" value="c"><span>LaserOS is projecting to the cube now</span></label></div>
+      <p class="why" hidden>LASER OFF means a cube is found and the laser is off: click the button to start. NO LASER means no cube is found.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="screen" data-lesson="1"><legend><span class="qn"></span>In the phone app, the power button in the bottom bar is blue. What does that mean?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The projection is on</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The projection is off</span></label>
+      <label class="opt"><input type="radio" value="c"><span>No cube has been found</span></label></div>
+      <p class="why" hidden>The phone app’s power button is red when the projection is off and blue when it’s on.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="screen" data-lesson="1"><legend><span class="qn"></span>On a computer, how do you type an exact value for a slider on the left panel?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Hold Shift and drag the slider</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Double‑click its name in Settings</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Right‑click the slider, then type</span></label></div>
+      <p class="why" hidden>Right‑click a slider to type an exact value. Shift and drag puts a switch or slider from Settings on the left panel.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="setup" data-lesson="2"><legend><span class="qn"></span>Where in LaserOS do you see whether the cube’s interlock is enabled?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Projector Setup → Info</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Projector Setup → Image</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Settings → Color page</span></label></div>
+      <p class="why" hidden>Info shows the cube’s model, firmware version, temperature, battery level, connection mode and whether the interlock is enabled.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="setup" data-lesson="2"><legend><span class="qn"></span>In LaserOS, what shows you the whole projection area?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The Info page of Projector Setup</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The Mirror switch on the Movement page</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Square in the Test Pattern list</span></label></div>
+      <p class="why" hidden>The Test Pattern list at the top of Projector Setup has a Square that shows the whole projection area.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="setup" data-lesson="2"><legend><span class="qn"></span>You stream from LaserOS, and the cube’s own Image Setup is greyed out. Why?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The cube needs a firmware update</span></label>
+      <label class="opt"><input type="radio" value="b"><span>LaserOS handles it in this mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The key is still turned to OFF</span></label></div>
+      <p class="why" hidden>In LaserOS control mode, LaserOS handles the image setup, colour balance and safety zone, so the cube greys out its own entries.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="effects" data-lesson="3"><legend><span class="qn"></span>On a computer, which tabs does the effects panel have?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>No Effect, Image Effects, Color Effects, Saved Effects</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Projector Setup’s Info, Image, Color Balance and Safety Zones</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Movement, Strobe, Trace and Mirror</span></label></div>
+      <p class="why" hidden>The effects panel on the right has four tabs: No Effect, Image Effects, Color Effects and Saved Effects.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="effects" data-lesson="3"><legend><span class="qn"></span>On a computer, where do you see the effect in use, with a button to reset it?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In Projector Setup</span></label>
+      <label class="opt"><input type="radio" value="b"><span>In the Playlists app</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In the left panel</span></label></div>
+      <p class="why" hidden>The left panel shows the effect in use, with a button to reset it.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="colour" data-lesson="3"><legend><span class="qn"></span>All your content shows in green only. What’s a quick fix?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Turn off Lock Zoom X‑Y on the Image page</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Click Reset settings on the Color page</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Switch Trace off on the Tools page</span></label></div>
+      <p class="why" hidden>Click Reset settings at the bottom of the Color page. Or check that Single Color is Off, Mono Color and Shift Color are all the way left, and Fader R, G and B are up.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="colour" data-lesson="3"><legend><span class="qn"></span>Which two Color settings each turn all the content into one colour?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Single Color and Mono Color</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Lock Zoom X‑Y and Flip X</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Audio react and Trace Clusters</span></label></div>
+      <p class="why" hidden>Single Color and Mono Color each turn all the content into one colour.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="colour" data-lesson="3"><legend><span class="qn"></span>When does a Saturation slider appear on the Color page?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Once Single Color is Red</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Once you open Colorize</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Once you move Mono Color</span></label></div>
+      <p class="why" hidden>Once you move Mono Color, a Saturation slider appears below it.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="colour" data-lesson="3"><legend><span class="qn"></span>What happens to the colours when you turn on TTL Mode in Color Balance?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>They fade more smoothly than before</span></label>
+      <label class="opt"><input type="radio" value="b"><span>They jump in hard steps, no fades</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Everything turns into a single colour</span></label></div>
+      <p class="why" hidden>With TTL Mode on, each colour is only switched fully on or off: 8 combinations and no smooth fades. It’s for compatibility with TTL projectors.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="tools" data-lesson="4"><legend><span class="qn"></span>Which setting turns the picture around one axis?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Clusters, in the Trace section</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Rotate X, Y or Z, in Movement</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Time On, in the Strobe section</span></label></div>
+      <p class="why" hidden>Movement’s Rotate X, Y and Z turn the picture around each axis.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="tools" data-lesson="4"><legend><span class="qn"></span>What do Time On and Time Off set?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>How long Strobe keeps the picture on and off</span></label>
+      <label class="opt"><input type="radio" value="b"><span>How long each item plays when on Autoplay</span></label>
+      <label class="opt"><input type="radio" value="c"><span>How long Trace takes to draw the whole logo once</span></label></div>
+      <p class="why" hidden>Strobe switches the picture on and off; Time On and Time Off set how long it stays on and off.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="trace" data-lesson="4"><legend><span class="qn"></span>Which content can Trace make draw itself?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Only logos imported as SVG files</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Only text made in the Text app</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Any content, your own logo too</span></label></div>
+      <p class="why" hidden>Trace, like Movement and Strobe, works on any content: an animation, a built‑in image or your own logo.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="trace" data-lesson="4"><legend><span class="qn"></span>In the phone app’s Trace page, what does Show on panel add?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>An on/off button by the item’s name</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Trace on the computer’s left panel</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A bigger preview of the whole drawing</span></label></div>
+      <p class="why" hidden>Show on panel adds a small on/off button next to the name of the playing item. Enable switches Trace on.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="trace" data-lesson="4"><legend><span class="qn"></span>You switch Trace on in Settings → Tools. When does it start?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Once the next item in the list starts</span></label>
+      <label class="opt"><input type="radio" value="b"><span>At once, on what’s playing</span></label>
+      <label class="opt"><input type="radio" value="c"><span>After you restart LaserOS</span></label></div>
+      <p class="why" hidden>Switch Trace on and it starts at once.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="text" data-lesson="5"><legend><span class="qn"></span>Which of these is one of the Text app’s styles?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Mirror</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Striped</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Clusters</span></label></div>
+      <p class="why" hidden>The styles are Gradient, Striped, Rainbow, 3D, 3D rotate and No Style.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="text" data-lesson="5"><legend><span class="qn"></span>A scrolling text in a playlist on the cube should run once, then move on. What do you set on it?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Strobe, with Time Off at 0</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Assign Duration, 1 second</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Assign Duration, 1 cycle</span></label></div>
+      <p class="why" hidden>Turn on Assign Duration and choose 1 cycle: the text scrolls once, then the next item plays.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="logo" data-lesson="6"><legend><span class="qn"></span>You import a JPG logo on a computer. What happens first?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>A window turns it into lines</span></label>
+      <label class="opt"><input type="radio" value="b"><span>It plays at once, like the photo</span></label>
+      <label class="opt"><input type="radio" value="c"><span>LaserOS refuses it as a JPG</span></label></div>
+      <p class="why" hidden>A PNG or JPG is first turned into lines, in a window where you adjust the sensitivity, the line length and more, with a live preview. SVG or ILD files give the best results.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="logo" data-lesson="6"><legend><span class="qn"></span>Show FPS reads 52 for your logo. Will it appear to flicker?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes: it needs 60 FPS or more</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No: 45 FPS or more is enough</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Yes: it needs exactly 30 FPS</span></label></div>
+      <p class="why" hidden>At 45 FPS or more, content won’t appear to flicker.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="logo" data-lesson="6"><legend><span class="qn"></span>Your logo’s corners look rounded, and it doesn’t flicker. What can help?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Lower its render quality more</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Import it once more as a PNG file</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Raise its render quality a bit</span></label></div>
+      <p class="why" hidden>Raise the render quality if corners look rounded. Keep an eye on Show FPS: more detail can add flicker.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="playlists" data-lesson="7"><legend><span class="qn"></span>On a computer, how do you add an animation to your own playlist?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Right‑click it, pick the playlist, Add</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Hold Shift and drag it to the left panel</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Open Projector Setup and pick it there</span></label></div>
+      <p class="why" hidden>Right‑click an item, pick your playlist under Add to playlist and click Add.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="playlists" data-lesson="7"><legend><span class="qn"></span>In the phone app, how do you start adding an item to a playlist?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Double‑tap the power button</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Swipe the item to the left</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Touch and hold the item</span></label></div>
+      <p class="why" hidden>Touch and hold an item (or select it and tap the gear at the left of the player bar), then open Add to playlist.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="playlists" data-lesson="7"><legend><span class="qn"></span>Where do you set how long each item plays in Autoplay?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>On the Projector Setup Info page</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The time next to shuffle and repeat</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In the Text app, under its Speed setting</span></label></div>
+      <p class="why" hidden>Click the time next to the shuffle and repeat buttons to set it in seconds or beats.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="midi" data-lesson="8"><legend><span class="qn"></span>The cube is in LaserOS control mode, and you plug an APC mini MK2 into the cube’s USB port. What happens?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>It doesn’t work: use the computer</span></label>
+      <label class="opt"><input type="radio" value="b"><span>It controls LaserOS straight away</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The cube switches to Playlist mode</span></label></div>
+      <p class="why" hidden>In LaserOS control mode the cube’s own USB MIDI doesn’t work. Plug the controller into the computer that runs LaserOS.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="midi" data-lesson="8"><legend><span class="qn"></span>In LaserOS’s Settings → Midi, what do you set for an APC40 MK2?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Its Art‑Net universe and start address</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Input and Output Port, APC Model</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Its Link Channel and its PIN</span></label></div>
+      <p class="why" hidden>Set Port to your controller under Input and Output, and pick it under APC Model.</p><p class="feedback"></p></fieldset>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATE ============ -->
+<section class="view" id="certificate" aria-labelledby="cert-h">
+  <p class="label">Certificate</p>
+  <h2 id="cert-h">Your certificate</h2>
+  <div id="cert-locked" class="locked-msg">
+    <p><strong>Pass the final quiz to get your certificate.</strong> <a class="link" href="#final">Go to the final quiz</a></p>
+  </div>
+  <div id="cert-ready" hidden>
+    <p class="intro">Well done. Type your name as you want it on the certificate.</p>
+    <p class="small">Your certificate is made right here in your browser. Your name isn’t sent anywhere; it’s only kept in this browser.</p>
+    <form id="cert-form" class="cert-form" novalidate>
+      <label><span>Name on the certificate</span><input id="cert-name" type="text" maxlength="60" autocomplete="name" spellcheck="false"></label>
+      <button class="btn solid" type="submit">Make my certificate</button>
+    </form>
+    <p class="feedback is-wrong" id="cert-msg" aria-live="polite"></p>
+    <div id="cert-out" hidden>
+      <div class="cert-preview"><img id="cert-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your LaserCube Academy certificate" width="3508" height="2480"><canvas id="cert-canvas" width="1123" height="794" hidden></canvas></div>
+      <div class="btn-row">
+        <button class="btn solid" type="button" id="dl-pdf"><svg class="icon"><use href="#i-download"/></svg>Download PDF</button>
+        <button class="btn" type="button" id="dl-png"><svg class="icon"><use href="#i-download"/></svg>Download image</button>
+      </div>
+      <p class="small">Download not starting? Press and hold the certificate (on a computer, right-click it) and save the image.</p>
+    </div>
+    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from <a class="link" href="../start-here/#lesson-10">Start here’s pre‑show checklist</a> applies whenever the laser is on.</p>
+    <p class="small">More courses: <a class="link" href="../">LaserCube Academy</a>.</p>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+  <p id="announce" class="sr" aria-live="polite"></p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="../../">User Wiki</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="mailto:support@laseros.com">Email support</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© Wicked Lasers</span>
+  </div>
+</footer>
+<script src="../academy.js"></script>
+</body>
+</html>
