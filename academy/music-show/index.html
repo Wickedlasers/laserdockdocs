@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build a laser show to your music · LaserCube Academy</title>
+<meta name="description" content="A free course for LaserCube Ultra MK2 and Pro owners: build your own laser show to a song in LaserOS, with Beam Creator, timing in frames, the Timeline, effect lanes and several cubes. Pass the quiz and download a certificate.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://wiki.laseros.com/academy/music-show/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/academy/music-show/">
+<meta property="og:title" content="Build a laser show to your music">
+<meta property="og:description" content="A free LaserCube Academy course: make your own laser show to a song in LaserOS, for one Ultra MK2 or Pro or several. Certificate at the end.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/inter/inter-latin.woff2" crossorigin>
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../academy.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="../../" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="true">Academy</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="../../#videos">Tutorials</a>
+      <a href="../../#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="../" aria-current="true">Academy</a>
+          <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="../../#videos">Tutorials</a>
+          <a href="../../#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" data-course="music-show" data-version="1.0" data-title="Build a laser show to your music" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Advanced">
+
+  <section class="hero stage">
+    <div class="container">
+      <p class="label"><a href="../">LaserCube Academy</a> · Advanced</p>
+      <h1>Build a laser show to your music</h1>
+      <p class="lead">Eight lessons on making your own show to a song in LaserOS on a computer: beam patterns and effects in Beam Creator, timing in frames, the Timeline with one layer per cube, effect lanes, a show for several cubes, and playing it. Pass the final quiz and download your certificate.</p>
+      <ul class="meta">
+        <li><svg class="icon"><use href="#i-book"/></svg>8 lessons + quiz, about 50 minutes plus videos</li>
+        <li><svg class="icon"><use href="#i-cube"/></svg>Ultra MK2 &amp; Pro</li>
+        <li><svg class="icon"><use href="#i-user"/></svg>No account needed</li>
+        <li><svg class="icon"><use href="#i-award"/></svg>Free certificate</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-grid">
+
+      <aside class="toc" aria-label="Course contents">
+        <div class="progress js-progress js-only">
+          <div class="progress-bar"><span></span></div>
+          <p class="progress-text">0 of 8 lessons done</p>
+        </div>
+        <ol>
+          <li><a data-nav href="#overview"><span class="st" data-n="i">i</span>How this course works</a></li>
+          <li><a data-nav href="#lesson-1"><span class="st" data-n="1">1</span>Beam Creator: patterns and layers</a></li>
+          <li><a data-nav href="#lesson-2"><span class="st" data-n="2">2</span>Beam Creator effects</a></li>
+          <li><a data-nav href="#lesson-3"><span class="st" data-n="3">3</span>Timing, copies and saving</a></li>
+          <li><a data-nav href="#lesson-4"><span class="st" data-n="4">4</span>The Timeline: song, layers and cubes</a></li>
+          <li><a data-nav href="#lesson-5"><span class="st" data-n="5">5</span>Placing content on the Timeline</a></li>
+          <li><a data-nav href="#lesson-6"><span class="st" data-n="6">6</span>Effect lanes and ready‑made content</a></li>
+          <li><a data-nav href="#lesson-7"><span class="st" data-n="7">7</span>A show for several cubes</a></li>
+          <li><a data-nav href="#lesson-8"><span class="st" data-n="8">8</span>Play your show</a></li>
+          <li><a data-nav href="#final"><span class="st" data-n="Q">Q</span>Final quiz</a></li>
+          <li><a data-nav href="#certificate"><span class="st" data-n="★">★</span>Your certificate</a></li>
+        </ol>
+      </aside>
+
+      <div class="lessons-col">
+        <details class="toc-phone js-only">
+          <summary><span>Course contents</span><span class="small js-progress"><span class="progress-text">0 of 8 lessons done</span></span></summary>
+          <div class="inner">
+            <div class="progress js-progress"><div class="progress-bar"><span></span></div></div>
+          </div>
+        </details>
+        <p class="no-js-only small">The questions, the final quiz and the certificate need JavaScript. Without it you can still read every lesson below.</p>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="view" id="overview" aria-labelledby="overview-h">
+  <p class="label">Before you start</p>
+  <h2 id="overview-h">How this course works</h2>
+  <p class="intro">This course takes you from an empty screen to your own laser show, timed to a song. You build beam patterns in Beam Creator, place them along the song in the Timeline, and play the show on one cube or several.</p>
+  <h3>By the end you can</h3>
+  <ul class="points">
+    <li>build your own beam patterns in Beam Creator and bring them to life with effects;</li>
+    <li>time an effect to a part of a song in frames, and copy, mirror and save your designs;</li>
+    <li>load a song into the Timeline and give each cube its own layer;</li>
+    <li>place, resize and copy content along the song, and add effects on effect lanes;</li>
+    <li>connect several cubes to one computer for a show;</li>
+    <li>play your show, and put your own beams on the cube’s SD card.</li>
+  </ul>
+  <h3>What you need</h3>
+  <ul class="points">
+    <li>LaserOS on a computer (Windows or Mac). This course shows Beam Creator and the Timeline there, as the manual does.</li>
+    <li>Your song as a WAV file (lesson 4).</li>
+    <li>An Ultra MK2 or Pro in LaserOS control mode, connected to LaserOS (<a class="link" href="../start-here/#lesson-7">Start here, lesson 7</a>). Beam Creator designs can be built without a cube and checked in LaserOS’s preview.</li>
+    <li>For several cubes: an Ethernet switch, and a network cable for each cube and for the computer (lesson 7).</li>
+  </ul>
+  <h3>How the lessons work</h3>
+  <ul class="points">
+    <li>Each lesson takes about 5 to 7 minutes, plus any video. It has the key points and a few questions, and most have a video or pictures. Get a question wrong? Pick another answer.</li>
+    <li>Your progress is saved in this browser. There’s no account and nothing is sent to us. Clearing your browser data, or switching to another device, starts the course again.</li>
+    <li>When all eight lessons are done, take the final quiz: 10 questions, 8 right to pass, as many tries as you need.</li>
+    <li>Pass, then download your certificate as a PDF or an image.</li>
+  </ul>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
+    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies whenever the laser is on, on every cube: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+  </div>
+  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its chapter <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#making-content-in-laseros">Making Content in LaserOS</a>, and our video tutorials. If a video and the manual differ, follow the manual.</p>
+  <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
+</section>
+
+<!-- ============ LESSON 1 ============ -->
+<section class="view lesson" id="lesson-1" aria-labelledby="l1-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 1 of 8</p>
+  <h2 id="l1-h">Beam Creator: patterns and layers</h2>
+  <p class="intro">Beam Creator builds your own beam patterns and animates them with effects. You make the patterns here, then place them along your song in the Timeline (lesson 4).</p>
+
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="642" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+    <button type="button" aria-label="Play video: multi‑laser show tutorial, from the Beam Creator part"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/3ZT6c3soLOY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Multi‑laser show tutorial: Beam Creator</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=642s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <p class="small video-note">This walkthrough is long: each lesson starts it at the part the lesson covers.</p>
+
+  <h3>Open Beam Creator</h3>
+  <ul class="points">
+    <li>In LaserOS on a computer, the preview and the main controls are on the left, with the list of apps next to them. Choose <strong>Beam Creator</strong> there: it fills the middle of the screen, and the effects panel is on the right.</li>
+    <li>You can build a design with no cube connected: the Laser button at the top left then reads <strong>NO LASER</strong>, and you check your design in the preview.</li>
+    <li>The cube icon above the preview switches between a 3D stage view and a flat 2D view.</li>
+  </ul>
+
+  <h3>Patterns and layers</h3>
+  <ul class="points">
+    <li>Pick a pattern under <strong>Beam Pattern</strong> and click the <strong>+</strong> next to it: Horizontal Beams, Vertical Beams, Horizontal Line, Vertical Line, Simple Shapes, Sine Wave, Triangle Wave or Video Spiral Wave.</li>
+    <li>Each pattern you add is a <strong>layer</strong>, and a design can have several. Each layer has buttons to delete it, duplicate it and switch it on or off, and <strong>+ Effect</strong> to add effects (lesson 2).</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-beam-creator-1120.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-beam-creator-1120.webp" alt="Beam Creator in LaserOS, from the manual. Along the top: five icons, then Beam Pattern set to Horizontal Beams with a plus button, Quality High, Target FPS 60, BPM Reactive No and Actual FPS 60. Below it, a Horizontal Beams layer with delete, duplicate and on‑off buttons and a + Effect button, and its settings: Beam Count 6, Width 1.0, Brightness 1, Mode Static Beams, Single Color on and a colour slider." width="1120" height="490" loading="lazy"></a>
+    <figcaption>A Horizontal Beams layer and its settings, from the manual. Select the picture to open it full size in a new tab.</figcaption>
+  </figure>
+
+  <h3>Each pattern’s settings</h3>
+  <ul class="points">
+    <li><strong>Horizontal Beams:</strong> Beam Count, Width, Brightness, Mode (static, or sliding left or right, with Slide Speed) and Single Color, with hue and saturation.</li>
+    <li><strong>Horizontal Line and Vertical Line:</strong> Num Sections, Width, Brightness, Line Border (with border width and colour) and the line’s colour.</li>
+    <li><strong>Simple Shapes:</strong> a shape such as Circle, Square, Triangle, Rectangle, Hexagon or Octagon; Size; Style (Solid, Dotted or Dashed, with Dash Size); and Colours, with a hue for each colour.</li>
+  </ul>
+
+  <h3>Brightness, Quality and Target FPS</h3>
+  <ul class="points">
+    <li><strong>Brightness</strong> draws the pattern several times over. That makes it brighter, but harder for the cube to draw, and it may flicker: leave it at 1.</li>
+    <li>Along the top are <strong>Quality</strong> (how densely the pattern is drawn), <strong>Target FPS</strong> (how many frames make one second, lesson 3), BPM Reactive and Actual FPS.</li>
+    <li>The icons above them start a new project, import a project into the playlists, save, export and reload a project from its file.</li>
+    <li>Content with too much detail flickers: the scanners can draw only so many points per second. To check, turn on <strong>Show FPS in simulator window</strong> in LaserOS’s Settings → General: 45&nbsp;FPS or more won’t appear to flicker. Keep Brightness at 1, and make the picture smaller or split it over more than one cube.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Your Horizontal Beams look a little dim. What does the manual say about Brightness?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q1" value="a"><span>Raise it until the beams look bright</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="b"><span>Leave it at 1, or it may flicker</span></label>
+        <label class="opt"><input type="radio" name="l1q1" value="c"><span>Set it to the same as Target FPS</span></label>
+      </div>
+      <p class="why" hidden>Brightness draws the pattern several times over: brighter, but harder for the cube to draw, and it may flicker. The manual says to leave it at 1.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Your cube is at home, and you’re on the train with your laptop. Can you work on a Beam Creator design?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q2" value="a"><span>Yes, and check it in the preview</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="b"><span>No, LaserOS needs a cube first</span></label>
+        <label class="opt"><input type="radio" name="l1q2" value="c"><span>Only once the Laser button is on</span></label>
+      </div>
+      <p class="why" hidden>You can build a design with no cube connected. The Laser button reads NO LASER, and you check the design in the preview.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>You add a Sine Wave, then a Vertical Line, to the same design. What do you have now?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l1q3" value="a"><span>One pattern that mixes the two</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="b"><span>Two projects, saved separately</span></label>
+        <label class="opt"><input type="radio" name="l1q3" value="c"><span>Two layers in one design</span></label>
+      </div>
+      <p class="why" hidden>Each pattern you add is a layer, and a design can have several. Each layer has its own settings and effects.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#beam-creator">Beam Creator</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#patterns-and-layers">Patterns and layers</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laseros-screen">The LaserOS screen</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#flicker-and-render-quality">Flicker and render quality</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 2.</p>
+  <nav class="pager" aria-label="Lesson 1: back and next"><a data-nav href="#overview"><span>Back</span>How this course works</a><a class="next" data-nav href="#lesson-2"><span>Next</span>Beam Creator effects</a></nav>
+</section>
+
+<!-- ============ LESSON 2 ============ -->
+<section class="view lesson" id="lesson-2" aria-labelledby="l2-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 2 of 8</p>
+  <h2 id="l2-h">Beam Creator effects</h2>
+  <p class="intro">Effects make a pattern travel, slide, turn, grow, flash or change colour. You add them to a layer with the <strong>+ Effect</strong> button.</p>
+
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="1505" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+    <button type="button" aria-label="Play video: multi‑laser show tutorial, adding an effect"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/3ZT6c3soLOY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Multi‑laser show tutorial: adding an effect</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=1505s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Add an effect</h3>
+  <ul class="points">
+    <li>Click <strong>+ Effect</strong> on a layer and pick an effect from the list. A layer can have several effects.</li>
+    <li>The effects on a layer can be moved up or down and switched off.</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-beam-creator-effects-640.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-beam-creator-effects-640.webp" alt="The + Effect list in Beam Creator, from the manual: Simple Paths, Position, Random Position, Fixed Rotation, Movement, Variable Rotation, Scale, Power Fader, Strobe and Color Sequence." width="640" height="570" loading="lazy"></a>
+    <figcaption>The + Effect list, from the manual.</figcaption>
+  </figure>
+
+  <h3>What each effect does</h3>
+  <ul class="points">
+    <li><strong>Simple Paths:</strong> sends the pattern along a path: Rectangular, Circular, Ellipse, Figure 8 (Vertical or Horizontal), Linear Horizontal, Linear Vertical or Spiral. <strong>Direction</strong> sets the way round, <strong>Frames</strong> how long one trip takes, and <strong>Start Pos</strong> where it starts (0 to 100; 50 is halfway round). <strong>Always Repeat</strong> makes it loop, and <strong>Stepped Path</strong> splits the movement into steps, to hit single notes. Simple Paths has its own position and size settings.</li>
+    <li><strong>Position:</strong> Offset X and Y place the pattern.</li>
+    <li><strong>Fixed Rotation:</strong> turns the pattern to a fixed angle (X, Y and Z angle).</li>
+    <li><strong>Movement:</strong> slides the pattern from Start Pos to End Pos, for example Horizontal (start-&gt;end-&gt;start); Always Repeat makes it loop. Positions are measured from the pattern’s centre, so large values push part of it out of the projection area.</li>
+    <li><strong>Variable Rotation:</strong> spins the pattern around its own centre (Rotate X, Y or Z).</li>
+    <li><strong>Scale:</strong> grows or shrinks the pattern, for example from 0.0 to 1.0.</li>
+    <li><strong>Power Fader:</strong> fades the power. Fade start-&gt;end from 1.0 to 0.0 over a few frames makes a single flash.</li>
+    <li><strong>Strobe:</strong> switches the pattern on and off, set with On Frames and Off Frames.</li>
+    <li><strong>Color Sequence:</strong> steps through a number of colours.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>A line should rise from the bottom to the top once, during a build‑up. Which effect fits?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q1" value="a"><span>Simple Paths, Linear Vertical</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="b"><span>Variable Rotation, Rotate Z on</span></label>
+        <label class="opt"><input type="radio" name="l2q1" value="c"><span>Color Sequence, two colours</span></label>
+      </div>
+      <p class="why" hidden>Simple Paths sends the pattern along a path, and Linear Vertical runs up and down. Leave Always Repeat off so it doesn’t loop, and set Frames to the length of the build‑up.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 2</span>A shape should flash once on a beat. Which effect and setting?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q2" value="a"><span>Scale, from 0.0 to 1.0</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="b"><span>Power Fader, 1.0 to 0.0</span></label>
+        <label class="opt"><input type="radio" name="l2q2" value="c"><span>Position, Offset Y at 0.8</span></label>
+      </div>
+      <p class="why" hidden>Power Fader, Fade start-&gt;end from 1.0 to 0.0 over a few frames, makes a single flash.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>A circle’s Movement runs from −0.9 to 0.9, and part of it leaves the projection area. Why?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l2q3" value="a"><span>Its Always Repeat switch is on</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="b"><span>Movement only works on line patterns</span></label>
+        <label class="opt"><input type="radio" name="l2q3" value="c"><span>Positions count from its centre</span></label>
+      </div>
+      <p class="why" hidden>Movement positions are measured from the pattern’s centre, so large values push part of it out of the projection area. Use smaller values.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#beam-creator-effects">Beam Creator effects</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#example-mapping-box-edges">Example: mapping box edges</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 3.</p>
+  <nav class="pager" aria-label="Lesson 2: back and next"><a data-nav href="#lesson-1"><span>Back</span>Beam Creator: patterns and layers</a><a class="next" data-nav href="#lesson-3"><span>Next</span>Timing, copies and saving</a></nav>
+</section>
+
+<!-- ============ LESSON 3 ============ -->
+<section class="view lesson" id="lesson-3" aria-labelledby="l3-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 3 of 8</p>
+  <h2 id="l3-h">Timing, copies and saving</h2>
+  <p class="intro">Beam Creator counts time in frames. Get the frames right and an effect fits its part of the song. Then copy, mirror and save your design, ready for the Timeline.</p>
+
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="3099" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+    <button type="button" aria-label="Play video: multi‑laser show tutorial, duplicating and mirroring a pattern"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/3ZT6c3soLOY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Multi‑laser show tutorial: duplicating and mirroring</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=3099s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Timing in frames</h3>
+  <ul class="points">
+    <li><strong>Target FPS</strong> sets how many frames make one second. At the default 60, an effect of 60 frames takes one second, and one of 120 frames takes two.</li>
+    <li>Fewer frames make an effect faster, more frames slower.</li>
+    <li>To fit a part of a song, multiply its length in seconds by the Target FPS. A 7‑second build‑up at 60&nbsp;FPS needs 420 frames.</li>
+  </ul>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">Part of the song</th><th scope="col">Frames at 60 FPS</th></tr></thead>
+      <tbody>
+        <tr><td class="n">½ second</td><td>30</td></tr>
+        <tr><td class="n">1 second</td><td>60</td></tr>
+        <tr><td class="n">2 seconds</td><td>120</td></tr>
+        <tr><td class="n">7 seconds</td><td>420</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Copies and mirrors</h3>
+  <ul class="points">
+    <li>The duplicate button copies a layer with all its effects. The copy runs exactly on top of the original until you change it, for example its Start Pos, Direction or Frames.</li>
+    <li>For a mirror image of a Movement effect, swap the signs of the copy’s Start Pos and End Pos: −0.9 and 0.8 become 0.9 and −0.8.</li>
+    <li>To set Start Pos or End Pos exactly, right‑click the slider and type the value.</li>
+  </ul>
+
+  <h3>Save a custom beam</h3>
+  <ul class="points">
+    <li>Click the save icon. <strong>Save Custom Beam</strong> asks for a name and saves the design in <strong>Playlists → Custom Beams</strong>.</li>
+    <li>From there you can drag it onto the Timeline (lesson 5).</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>A build‑up lasts 5 seconds, and Target FPS is 60. How many frames should its Simple Paths effect take?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q1" value="a"><span>65 frames</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="b"><span>120 frames</span></label>
+        <label class="opt"><input type="radio" name="l3q1" value="c"><span>300 frames</span></label>
+      </div>
+      <p class="why" hidden>Seconds × Target FPS: 5 × 60 = 300 frames.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>You duplicate a line, but you still see only one. Why?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q2" value="a"><span>The copy runs exactly on top of it</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="b"><span>The copy stays off until you save</span></label>
+        <label class="opt"><input type="radio" name="l3q2" value="c"><span>Duplicate leaves out all the effects</span></label>
+      </div>
+      <p class="why" hidden>The duplicate button copies the layer with all its effects, so the copy runs on top of the original. Change its Start Pos, Direction or Frames to set it apart.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>A line’s Movement runs from Start Pos −0.6 to End Pos 0.9. What do you set on its copy, for a mirror image?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l3q3" value="a"><span>Start Pos 0.9, End Pos −0.6</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="b"><span>Start Pos 0.6, End Pos −0.9</span></label>
+        <label class="opt"><input type="radio" name="l3q3" value="c"><span>Start Pos −0.9, End Pos 0.6</span></label>
+      </div>
+      <p class="why" hidden>Swap the signs of both values: −0.6 becomes 0.6, and 0.9 becomes −0.9.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#timing-in-frames">Timing in frames</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#copies-mirrors-and-exact-values">Copies, mirrors and exact values</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#saving-a-custom-beam">Saving a custom beam</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 4.</p>
+  <nav class="pager" aria-label="Lesson 3: back and next"><a data-nav href="#lesson-2"><span>Back</span>Beam Creator effects</a><a class="next" data-nav href="#lesson-4"><span>Next</span>The Timeline: song, layers and cubes</a></nav>
+</section>
+
+<!-- ============ LESSON 4 ============ -->
+<section class="view lesson" id="lesson-4" aria-labelledby="l4-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 4 of 8</p>
+  <h2 id="l4-h">The Timeline: song, layers and cubes</h2>
+  <p class="intro">The Timeline builds a show to a song: you place content along the song, on one layer per cube. First, the song and the layers.</p>
+
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="970" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+    <button type="button" aria-label="Play video: multi‑laser show tutorial, from the Timeline part"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/3ZT6c3soLOY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Multi‑laser show tutorial: the Timeline</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=970s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Set up the Timeline</h3>
+  <ol class="points">
+    <li>Open <strong>Timeline</strong> in the list of apps. The timeline appears at the bottom of the screen.</li>
+    <li>Drag your song onto the song lane. It must be a <strong>WAV file: 44.1&nbsp;kHz, 16‑bit, stereo (PCM)</strong>. LaserOS doesn’t read other files there, so save your song in that format first.</li>
+    <li>The timeline starts with one layer. Click <strong>+</strong> to add a layer for each cube.</li>
+    <li>Click the layers icon in the timeline bar to open <strong>Timeline devices</strong>, and drag each cube’s tile into its row.</li>
+  </ol>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-timeline-devices-766.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-timeline-devices-766.webp" alt="The Timeline devices box, from the manual: layer rows 1, 2 and 3 hold the cube tiles 1, 3 and 2, and a Disabled row below them is empty." width="766" height="278" loading="lazy"></a>
+    <figcaption>Timeline devices: each cube’s tile in its own layer row, from the manual.</figcaption>
+  </figure>
+
+  <h3>Which cube is which?</h3>
+  <p>Put something on one layer and see which cube plays it. Swap the cubes between the rows if you need to.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the steps for a new Timeline show in order.</p>
+      <ol>
+        <li>Open Timeline in the list of apps</li>
+        <li>Drag your WAV song onto the song lane</li>
+        <li>Click + to add a layer for each cube</li>
+        <li>Open Timeline devices and drag each cube into its row</li>
+        <li>Put something on one layer to see which cube plays it</li>
+      </ol>
+      <p class="why" hidden>The song comes first, then one layer per cube, then each cube in its row. A quick test on one layer shows which cube is which.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 1</span>Which song file does the Timeline read?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q1" value="a"><span>MP3, 320&nbsp;kbps, 44.1&nbsp;kHz, stereo</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="b"><span>WAV, 48&nbsp;kHz, 24‑bit, mono</span></label>
+        <label class="opt"><input type="radio" name="l4q1" value="c"><span>WAV, 44.1&nbsp;kHz, 16‑bit, stereo</span></label>
+      </div>
+      <p class="why" hidden>The song must be a WAV file: 44.1&nbsp;kHz, 16‑bit, stereo (PCM). LaserOS doesn’t read other files there.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 2</span>Your show uses three cubes. How many layers does the Timeline need?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l4q2" value="a"><span>One: it plays on every cube</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="b"><span>Three: one for each cube</span></label>
+        <label class="opt"><input type="radio" name="l4q2" value="c"><span>Four: one more for the song</span></label>
+      </div>
+      <p class="why" hidden>The Timeline has one layer per cube. Click + to add them, then put each cube in its row in Timeline devices.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#the-laseros-timeline">The LaserOS Timeline</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#song-and-layers">Song and layers</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 5.</p>
+  <nav class="pager" aria-label="Lesson 4: back and next"><a data-nav href="#lesson-3"><span>Back</span>Timing, copies and saving</a><a class="next" data-nav href="#lesson-5"><span>Next</span>Placing content on the Timeline</a></nav>
+</section>
+
+<!-- ============ LESSON 5 ============ -->
+<section class="view lesson" id="lesson-5" aria-labelledby="l5-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 5 of 8</p>
+  <h2 id="l5-h">Placing content on the Timeline</h2>
+  <p class="intro">With the song loaded and each cube on its layer, you build the show by placing content along the song.</p>
+
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="3168" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+    <button type="button" aria-label="Play video: multi‑laser show tutorial, copying and resizing items"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/3ZT6c3soLOY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Multi‑laser show tutorial: copying and resizing items</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=3168s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Place and fit</h3>
+  <ul class="points">
+    <li>Drag content onto a layer, under the song’s waveform: animations, dancers, images, Beam Show patterns and your custom beams (from Playlists → Custom Beams). The waveform helps you see where the notes are.</li>
+    <li>To change an item’s length, drag its edge. This also changes its playback speed, so it fits.</li>
+    <li>For a Beam Creator item you can instead change its frames, save it and place it again.</li>
+    <li>Stop the timeline to see the Beam Creator preview of the pattern you’re editing.</li>
+  </ul>
+  <figure>
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-timeline-1240.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/laseros-timeline-1240.webp" alt="The LaserOS Timeline, from the manual: the song’s waveform along the top, with seconds 52 to 58 above it. Below it, blue custom‑beam items on the layers of two cubes, short ones named riser middle and one long one named riser right, and under the second cube an effect lane with green Colorize GIF blocks." width="1240" height="352" loading="lazy"></a>
+    <figcaption>Items under the song’s waveform on two cubes’ layers, and an effect lane (lesson 6), from the manual.</figcaption>
+  </figure>
+
+  <h3>The item menu</h3>
+  <ul class="points">
+    <li>Right‑click an item for <strong>Locate item</strong>, <strong>Copy item</strong>, <strong>Edit item</strong> and <strong>Remove</strong>.</li>
+    <li>Copy an item and paste it on another layer to use it on another cube.</li>
+    <li>Save your timeline often, with the save icon in the timeline bar.</li>
+  </ul>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 1</span>You drag the edge of an item to make it shorter. What else changes?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q1" value="a"><span>Its playback speed, so it fits</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="b"><span>Its colours, to match the song</span></label>
+        <label class="opt"><input type="radio" name="l5q1" value="c"><span>Nothing: its end is cut off</span></label>
+      </div>
+      <p class="why" hidden>Dragging an item’s edge changes its length and its playback speed, so it fits. For a Beam Creator item you can also change its frames instead.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 2</span>The middle cube should play the same item as the left cube. What’s the quickest way?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q2" value="a"><span>Save it again in Beam Creator under a new name</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="b"><span>Swap the cubes in Timeline devices</span></label>
+        <label class="opt"><input type="radio" name="l5q2" value="c"><span>Copy item, then paste it on its layer</span></label>
+      </div>
+      <p class="why" hidden>Right‑click the item, choose Copy item, and paste it on the middle cube’s layer.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 3</span>You edit a pattern in Beam Creator while the timeline plays, but the preview doesn’t show it. What do you do?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l5q3" value="a"><span>Close and restart LaserOS</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="b"><span>Stop the timeline</span></label>
+        <label class="opt"><input type="radio" name="l5q3" value="c"><span>Remove the item</span></label>
+      </div>
+      <p class="why" hidden>Stop the timeline to see the Beam Creator preview of the pattern you’re editing.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#placing-content">Placing content</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#saving-a-custom-beam">Saving a custom beam</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 6.</p>
+  <nav class="pager" aria-label="Lesson 5: back and next"><a data-nav href="#lesson-4"><span>Back</span>The Timeline: song, layers and cubes</a><a class="next" data-nav href="#lesson-6"><span>Next</span>Effect lanes and ready‑made content</a></nav>
+</section>
+
+<!-- ============ LESSON 6 ============ -->
+<section class="view lesson" id="lesson-6" aria-labelledby="l6-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 6 of 8</p>
+  <h2 id="l6-h">Effect lanes and ready‑made content</h2>
+  <p class="intro">The Timeline can also place effects, for variety without making new patterns. And LaserOS comes with content you can reuse.</p>
+
+  <div class="video" data-yt="3ZT6c3soLOY" data-from="2733" data-title="Multi Laser Show Tutorial with LaserCube and LaserOS - full walkthrough">
+    <button type="button" aria-label="Play video: multi‑laser show tutorial, effects on the timeline"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/3ZT6c3soLOY.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Multi‑laser show tutorial: effects on the timeline</span><a href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=2733s" target="_blank" rel="noopener">Watch on YouTube</a></p>
+
+  <h3>Effect lanes</h3>
+  <ul class="points">
+    <li>Click <strong>+</strong> under a cube’s layer to open an effect lane. Then drag effects from the effects panel (Image Effects, Color Effects or Saved Effects) onto it.</li>
+    <li>A second effect lane lets you combine two saved effects.</li>
+  </ul>
+
+  <h3>Saved effects</h3>
+  <ul class="points">
+    <li>Zoom, Position, Strobe and Colorize Mono have settings of their own. Pick the effect, set it in the left panel and save it under a name: it then appears under <strong>Saved Effects</strong>.</li>
+    <li>Position and Zoom together put a graphic or a text in one part of a wall.</li>
+  </ul>
+
+  <h3>Ready‑made content and the 3D preview</h3>
+  <ul class="points">
+    <li>LaserOS comes with content you can reuse: the Demo Timeline folders under Timeline, and the <strong>Demo Beams</strong> playlist with the patterns of LaserOS’s own timeline shows.</li>
+    <li>Ready‑made shows are under Timeline and ILD Laser Shows: pick one and press Play.</li>
+    <li>The preview’s <strong>3D view</strong> shows the show on a virtual stage, with settings such as the viewer’s position. It gives an idea of how the show will look before you set up the cubes.</li>
+  </ul>
+  <p class="small">Video: <a class="link" href="https://www.youtube.com/watch?v=3ZT6c3soLOY&amp;t=3307s" target="_blank" rel="noopener">the multi‑laser show tutorial’s part on ready‑made content and the 3D preview</a> (on YouTube).</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Where do you drop effects for one cube on the Timeline?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q1" value="a"><span>On the song lane, over the waveform</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="b"><span>On an effect lane under its layer</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="c"><span>In its row in Timeline devices</span></label>
+      </div>
+      <p class="why" hidden>Click + under the cube’s layer to open an effect lane, then drag effects from the effects panel onto it.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>Your logo should show in the bottom left of a wall. Which two effects do you save and combine?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q2" value="a"><span>Position and Zoom</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="b"><span>Strobe and Colorize Mono</span></label>
+        <label class="opt"><input type="radio" name="l6q2" value="c"><span>Scale and Fixed Rotation</span></label>
+      </div>
+      <p class="why" hidden>Position and Zoom together put a graphic or a text in one part of a wall. Save each under a name, and combine them on two effect lanes.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Before you set up the cubes, how can you get an idea of how the show will look?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l6q3" value="a"><span>The Saved Effects page</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="b"><span>The Timeline devices box</span></label>
+        <label class="opt"><input type="radio" name="l6q3" value="c"><span>The preview’s 3D view</span></label>
+      </div>
+      <p class="why" hidden>The preview’s 3D view shows the show on a virtual stage, with settings such as the viewer’s position.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#effect-lanes-and-saved-effects">Effect lanes and saved effects</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#ready-made-content-and-the-3d-preview">Ready‑made content and the 3D preview</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#laseros-effects">LaserOS effects</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 7.</p>
+  <nav class="pager" aria-label="Lesson 6: back and next"><a data-nav href="#lesson-5"><span>Back</span>Placing content on the Timeline</a><a class="next" data-nav href="#lesson-7"><span>Next</span>A show for several cubes</a></nav>
+</section>
+
+<!-- ============ LESSON 7 ============ -->
+<section class="view lesson" id="lesson-7" aria-labelledby="l7-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 7 of 8</p>
+  <h2 id="l7-h">A show for several cubes</h2>
+  <p class="intro">One computer can run several cubes, each with its own part of the show on its own Timeline layer. For several cubes we recommend Ethernet cables in LAN client mode.</p>
+
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Every cube, before anything else</span>
+    <p>Set each cube’s beam block as in the manual’s <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware Installation</a>: every beam at least 3&nbsp;m (10&nbsp;ft) above the floor where people may be (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>). A safety zone in LaserOS works on top of the beam block and the 3&nbsp;m rule, never instead of them. The laser must never be aimed at people.</p>
+  </div>
+
+  <h3>Set up the cubes and the computer</h3>
+  <ol class="points">
+    <li>Set each cube’s beam block (above).</li>
+    <li>On each cube, choose <strong>Control Mode → LaserOS</strong> and <strong>Settings → Connection → LAN Client</strong>. Under Settings → Network → LAN Client, leave IP Mode on <strong>Auto IP</strong>.</li>
+    <li>Connect each cube and the computer to an Ethernet switch. If the computer has no network port, use the USB‑C to Ethernet adapter from the box.</li>
+    <li>With no router on the switch, the cubes and the computer give themselves addresses starting 169.254. Follow the manual’s steps: the computer’s WiFi off, and LaserOS started only once the cubes show their addresses. The Laser button at the top left then no longer reads NO LASER.</li>
+    <li>In the Timeline, give each cube its own layer (lesson 4).</li>
+  </ol>
+  <div class="two shots">
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F0000001407A909C8A-240.webp" alt="The Connection menu, from the manual: LAN Server, WiFi Server, LAN Client (ticked and highlighted) and WiFi Client. The status bar shows LaserOS and a red cross next to LAN-C." width="240" height="320" loading="lazy">
+      <figcaption>Settings → Connection, with LAN client chosen.</figcaption>
+    </figure>
+    <figure>
+      <img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/10000000000000F00000014022BCAF89_hu_12334b661bc804e-240.webp" alt="The Network menu, from the manual: LAN Client is highlighted, then LAN Server, WiFi Server, WiFi Client and Cube Link, which is greyed out. The status bar shows a tick next to LAN-C, and A-IP before the address 169.254.129.54." width="240" height="320" loading="lazy">
+      <figcaption>Connected as a LAN client, with a self‑assigned (A‑IP) address.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Just one cube?</h3>
+  <p>A single cube needs no switch: connect it straight to the computer and use LAN server mode. The <a class="link" href="../connect/#lesson-3">Connect course, lesson 3</a> shows direct cables step by step.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the manual’s steps for a three‑cube show in order.</p>
+      <ol>
+        <li>Set each cube’s beam block: beams 3&nbsp;m above people</li>
+        <li>On each cube: LaserOS mode, LAN Client, Auto IP</li>
+        <li>Connect the cubes and the computer to the switch</li>
+        <li>Wait until every cube shows a 169.254 address</li>
+        <li>Start LaserOS and check the Laser button</li>
+        <li>Give each cube its own layer in the Timeline</li>
+      </ol>
+      <p class="why" hidden>The beam blocks come first. LaserOS starts once the cubes have their 169.254 addresses; when its Laser button no longer reads NO LASER, it has found them.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Three cubes and a laptop are on a switch with no router. Which addresses do they get?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q1" value="a"><span>Ones starting 192.168, handed out by the switch</span></label>
+        <label class="opt"><input type="radio" name="l7q1" value="b"><span>Ones starting 169.254, given to themselves</span></label>
+        <label class="opt"><input type="radio" name="l7q1" value="c"><span>None, until you type static addresses</span></label>
+      </div>
+      <p class="why" hidden>With no router on the switch, the cubes and the computer give themselves 169.254 addresses (APIPA), and then find each other.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="a">
+      <legend><span class="qn">Question 2</span>You start LaserOS, and its Laser button reads NO LASER. What does it mean?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q2" value="a"><span>LaserOS hasn’t found a cube</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="b"><span>The cubes are projecting now</span></label>
+        <label class="opt"><input type="radio" name="l7q2" value="c"><span>The song file isn’t loaded yet</span></label>
+      </div>
+      <p class="why" hidden>NO LASER means LaserOS hasn’t found a cube. Close LaserOS, connect the cubes, then start LaserOS again.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="check" data-answer="c">
+      <legend><span class="qn">Question 3</span>Your show is for one cube, on a cable straight to the computer. Which mode does the manual suggest?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l7q3" value="a"><span>WiFi client</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="b"><span>Cube Link</span></label>
+        <label class="opt"><input type="radio" name="l7q3" value="c"><span>LAN server</span></label>
+      </div>
+      <p class="why" hidden>A single cube needs no switch: connect it straight to the computer and use LAN server mode.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#a-show-for-several-cubes">A show for several cubes</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#apipa-mode-explained">APIPA mode explained</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#lan-server-mode">LAN server mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Hardware installation</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> On to lesson 8.</p>
+  <nav class="pager" aria-label="Lesson 7: back and next"><a data-nav href="#lesson-6"><span>Back</span>Effect lanes and ready‑made content</a><a class="next" data-nav href="#lesson-8"><span>Next</span>Play your show</a></nav>
+</section>
+
+<!-- ============ LESSON 8 ============ -->
+<section class="view lesson" id="lesson-8" aria-labelledby="l8-h">
+  <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
+  <p class="label">Lesson 8 of 8</p>
+  <h2 id="l8-h">Play your show</h2>
+  <p class="intro">In LaserOS control mode, LaserOS streams to the cubes while it runs: that’s how your Timeline show plays. Your own beams can also go onto the cube’s SD card, in a playlist.</p>
+
+  <h3>Start and stop the laser</h3>
+  <ul class="points">
+    <li>The Laser button at the top left: <strong>LASER OFF</strong>, with a red power symbol, means a cube is found and the laser is off; click it to start. <strong>LASER ON</strong> means LaserOS is projecting; click the button, or press <strong>Esc</strong>, to stop.</li>
+    <li>A cube projects only when it is armed: interlock closed and key on, and with an E‑Stop connected, the E‑Stop started. If it isn’t, LaserOS shows “Interlock is not enabled on cube”.</li>
+    <li>In LaserOS control mode, LaserOS handles the safety zone: on a computer, Settings → Projector Setup, then Safety Zones in the drop‑down at the top.</li>
+    <li>Before anyone watches, go through the <a class="link" href="../start-here/#lesson-10">pre‑show checklist in Start here</a>.</li>
+  </ul>
+
+  <h3>Where your content is saved</h3>
+  <ul class="points">
+    <li>LaserOS keeps what you make in the Playlists app: Custom Beams from Beam Creator, Drawings from Draw, Saved Texts from Text, Imported (files imported in the phone app), and your own playlists. It also holds ready‑made playlists such as Demo Beams.</li>
+    <li>On a computer, right‑click an item and use <strong>Add to playlist</strong> to put it in a playlist of your own.</li>
+  </ul>
+
+  <h3>Your beams on the SD card</h3>
+  <ul class="points">
+    <li>To play a playlist on the cube without a computer, export it to the SD card with LaserOS on a computer. The phone app can’t export.</li>
+    <li><strong>Switch the cube off</strong> and take out the SD card. Put it in a USB 3.x card reader on the computer: it shows up as a drive called WL, with a folder called “Lasercube”.</li>
+    <li>In the Playlists app, select the playlist and click the SD card export button (its tooltip reads Export to SD Card (Lasercube MKII)).</li>
+    <li>Eject the card safely, put it back with the cube still off, then switch on, choose Playlist control mode and pick your playlist. <a class="link" href="../control-modes/#lesson-2">Control modes, lesson 2</a> has every step.</li>
+    <li>In Playlist mode the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS: set them on the cube before you play (Settings → Projection).</li>
+  </ul>
+
+  <h3>Built‑in shows on several cubes</h3>
+  <p>To play the built‑in laser shows on several cubes without a computer, use Cube Link in Laser Show mode: one cube is the master, all have the same Link Channel and PIN, each has a Group for its part of the show, and all have the same show category selected. Connect the WiFi antennas on all units first. <a class="link" href="../control-modes/#lesson-5">Control modes, lesson 5</a> shows how.</p>
+
+  <div class="practice">
+    <h3>Check yourself</h3>
+    <div class="order">
+      <p class="task">Put the steps for playing your beams from the SD card in order.</p>
+      <ol>
+        <li>Switch the cube off and take out the SD card</li>
+        <li>Put the card in a USB 3.x card reader on the computer</li>
+        <li>In Playlists, select the playlist and click the export button</li>
+        <li>Eject the card and put it back, with the cube still off</li>
+        <li>Switch on and choose Playlist mode and your playlist</li>
+      </ol>
+      <p class="why" hidden>The card only comes out and goes back in with the cube switched off. LaserOS on a computer exports the playlist; in Playlist mode the cube plays it.</p>
+      <div class="btn-row js-only"><button type="button" class="btn check-order">Check the order</button></div>
+      <p class="feedback" aria-live="polite"></p>
+    </div>
+    <p>Three situations. Is it OK to go ahead? Decide, then read why.</p>
+    <div class="scenarios">
+      <div class="scenario" data-answer="no">
+        <p class="s">You exported your beams to the SD card and play them in Playlist mode. The safety zone you set in LaserOS is the only one you check.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>In Playlist mode the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS. Set them on the cube, under Settings → Projection, before you play.</p>
+        <p class="hint" hidden>Which settings does the cube use when LaserOS isn’t streaming to it?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="scenario" data-answer="no">
+        <p class="s">To bring the beams closer to the dance floor, you lower the beam block and set a keep‑out zone in LaserOS around the people at the front.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them. Every beam stays at least 3&nbsp;m above the floor where people may be, and the laser must never be aimed at people.</p>
+        <p class="hint" hidden>Can a safety zone replace the beam block and the 3&nbsp;m rule?</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="scenario" data-answer="yes">
+        <p class="s">Your three‑cube show is finished. Each cube’s beam block keeps every beam at least 3&nbsp;m above the floor where people may be, and every item on Start here’s pre‑show checklist is ticked. You click the Laser button in LaserOS to start, and play the timeline.</p>
+        <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
+        <p class="why" hidden>Beam blocks set, beams 3&nbsp;m above people, and the whole pre‑show checklist done: that’s a safe start.</p>
+        <p class="hint" hidden>Look at what’s been checked: the beam blocks and the whole pre‑show checklist.</p>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </div>
+    <fieldset class="check" data-answer="b">
+      <legend><span class="qn">Question 1</span>Which app can put a playlist on the cube’s SD card?</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="l8q1" value="a"><span>LaserOS on a phone or tablet</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="b"><span>LaserOS on a computer</span></label>
+        <label class="opt"><input type="radio" name="l8q1" value="c"><span>The cube’s web app</span></label>
+      </div>
+      <p class="why" hidden>To play a playlist on the cube without a computer, export it to the SD card with LaserOS on a computer. The phone app can’t export.</p>
+      <p class="feedback" aria-live="polite"></p>
+    </fieldset>
+  </div>
+
+  <p class="manual-links">In the manual: <a href="../../docs/guides/ultra-mk2-pro-manual/#playing-your-content-on-the-cube">Playing your content on the cube</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#where-your-content-is-saved">Where your content is saved</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#exporting-a-playlist-to-the-micro-sd-card">Exporting a playlist</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laser-button">The Laser button</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zones-in-laseros">Safety zones in LaserOS</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#multi-projector-laser-shows">Multi‑projector laser shows</a></p>
+  <p class="lesson-done" hidden><strong>Lesson complete.</strong> Next: the final quiz.</p>
+  <nav class="pager" aria-label="Lesson 8: back and next"><a data-nav href="#lesson-7"><span>Back</span>A show for several cubes</a><a class="next" data-nav href="#final"><span>Next</span>Final quiz</a></nav>
+</section>
+
+<!-- ============ FINAL QUIZ ============ -->
+<section class="view" id="final" aria-labelledby="final-h" data-pick="10" data-pass="8">
+  <p class="label">Final quiz</p>
+  <h2 id="final-h">Final quiz</h2>
+  <p class="intro">10 questions picked at random, one from each of the course’s 10 topics. Get 8 right to pass. You can try as many times as you like.</p>
+
+  <div class="locked-msg" id="final-locked" hidden>
+    <p><strong>Finish all eight lessons first.</strong> Still to do:</p>
+    <ul></ul>
+  </div>
+
+  <form id="quiz-form" class="js-only" novalidate hidden>
+    <div id="quiz-list"></div>
+    <p class="feedback is-wrong" id="quiz-msg" aria-live="polite"></p>
+    <div class="btn-row"><button class="btn solid" type="submit">Check my answers</button></div>
+  </form>
+  <div id="quiz-result" class="result" hidden></div>
+
+  <div class="bank" hidden>
+    <fieldset class="check" data-answer="a" data-group="patterns" data-lesson="1"><legend><span class="qn"></span>How do you add a pattern in Beam Creator?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Pick it under Beam Pattern and click +</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Drag it from the effects panel on the right</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Right‑click the preview and choose Add</span></label></div>
+      <p class="why" hidden>Pick a pattern under Beam Pattern and click the + next to it. Each pattern you add is a layer.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="patterns" data-lesson="1"><legend><span class="qn"></span>What does the manual advise for a pattern’s Brightness?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Raise it in large rooms</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Leave it at 1</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Match it to the frames</span></label></div>
+      <p class="why" hidden>Brightness draws the pattern several times over. It gets brighter but harder for the cube to draw, and it may flicker: leave it at 1.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="patterns" data-lesson="1"><legend><span class="qn"></span>What does Quality set in Beam Creator?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>How many frames make one second</span></label>
+      <label class="opt"><input type="radio" value="b"><span>How bright the beams look to the eye</span></label>
+      <label class="opt"><input type="radio" value="c"><span>How densely the pattern is drawn</span></label></div>
+      <p class="why" hidden>Quality sets how densely the pattern is drawn. Target FPS sets how many frames make one second.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="effects" data-lesson="2"><legend><span class="qn"></span>Which effect makes a single flash, from 1.0 to 0.0 over a few frames?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Variable Rotation</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Power Fader</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Color Sequence</span></label></div>
+      <p class="why" hidden>Power Fader fades the power. Fade start-&gt;end from 1.0 to 0.0 over a few frames makes a single flash.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="effects" data-lesson="2"><legend><span class="qn"></span>In Simple Paths, what does Stepped Path do?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Splits the movement into steps</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Adds a pause before the path starts</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Moves the path down each loop</span></label></div>
+      <p class="why" hidden>Stepped Path splits the movement into steps, to hit single notes.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="effects" data-lesson="2"><legend><span class="qn"></span>Which effect spins a pattern around its own centre?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Fixed Rotation</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Simple Paths, Circular</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Variable Rotation</span></label></div>
+      <p class="why" hidden>Variable Rotation spins the pattern around its own centre. Fixed Rotation turns it to a fixed angle.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="frames" data-lesson="3"><legend><span class="qn"></span>Target FPS is 60. How long does an effect of 120 frames take?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Two seconds</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Half a second</span></label>
+      <label class="opt"><input type="radio" value="c"><span>120 seconds</span></label></div>
+      <p class="why" hidden>At 60 FPS, 60 frames take one second, so 120 frames take two.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="frames" data-lesson="3"><legend><span class="qn"></span>A part of the song lasts 4 seconds, and Target FPS is 60. How many frames should its effect take?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>64 frames</span></label>
+      <label class="opt"><input type="radio" value="b"><span>240 frames</span></label>
+      <label class="opt"><input type="radio" value="c"><span>120 frames</span></label></div>
+      <p class="why" hidden>Seconds × Target FPS: 4 × 60 = 240 frames.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="frames" data-lesson="3"><legend><span class="qn"></span>A Simple Paths effect is too slow for the music. What do you change?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Give it more frames</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Raise its Brightness</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Give it fewer frames</span></label></div>
+      <p class="why" hidden>Fewer frames make an effect faster, more frames slower.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="copies" data-lesson="3"><legend><span class="qn"></span>What does the duplicate button on a layer copy?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The layer with all its effects</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The pattern, without its effects</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Only the effects, to paste them</span></label></div>
+      <p class="why" hidden>Duplicate copies the layer with all its effects. The copy runs on top of the original until you change it.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="copies" data-lesson="3"><legend><span class="qn"></span>Where does Save Custom Beam put your design?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Timeline → Demo Timeline</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Playlists → Custom Beams</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Effects → Saved Effects</span></label></div>
+      <p class="why" hidden>Save Custom Beam saves the design in Playlists → Custom Beams. From there you can drag it onto the Timeline.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="song" data-lesson="4"><legend><span class="qn"></span>Which song file does the Timeline read?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>MP3, 320&nbsp;kbps, 44.1&nbsp;kHz, stereo</span></label>
+      <label class="opt"><input type="radio" value="b"><span>WAV, 48&nbsp;kHz, 24‑bit, mono</span></label>
+      <label class="opt"><input type="radio" value="c"><span>WAV, 44.1&nbsp;kHz, 16‑bit, stereo</span></label></div>
+      <p class="why" hidden>A WAV file: 44.1&nbsp;kHz, 16‑bit, stereo (PCM). LaserOS doesn’t read other files there.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="song" data-lesson="4"><legend><span class="qn"></span>Where do you tell LaserOS which cube plays which layer?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>In Timeline devices</span></label>
+      <label class="opt"><input type="radio" value="b"><span>In the cube’s Network menu</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In Projector Setup → Image</span></label></div>
+      <p class="why" hidden>Click the layers icon in the timeline bar to open Timeline devices, and drag each cube’s tile into its row.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="placing" data-lesson="5"><legend><span class="qn"></span>You drag an item’s edge on the Timeline to make it longer. What else changes?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Its colours, to match the song</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Its playback speed</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Nothing else: only its length</span></label></div>
+      <p class="why" hidden>Changing an item’s length also changes its playback speed, so it fits.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="placing" data-lesson="5"><legend><span class="qn"></span>How do you use a Timeline item on another cube too?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Drag it into its Timeline devices row</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Save it under the cube’s name</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Copy it, paste it on that layer</span></label></div>
+      <p class="why" hidden>Right‑click the item, choose Copy item, and paste it on the other cube’s layer.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="placing" data-lesson="5"><legend><span class="qn"></span>How often should you save your timeline?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Often, as you work</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Once, when it’s done</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Never: it saves itself</span></label></div>
+      <p class="why" hidden>Save your timeline often, with the save icon in the timeline bar.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="b" data-group="lanes" data-lesson="6"><legend><span class="qn"></span>Where do you place effects for one cube on the Timeline?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>On the song lane</span></label>
+      <label class="opt"><input type="radio" value="b"><span>On an effect lane</span></label>
+      <label class="opt"><input type="radio" value="c"><span>In Timeline devices</span></label></div>
+      <p class="why" hidden>Click + under the cube’s layer to open an effect lane, then drag effects onto it from the effects panel.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="lanes" data-lesson="6"><legend><span class="qn"></span>Which two saved effects together put a graphic in one part of a wall?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Strobe and Colorize Mono</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Scale and Fixed Rotation</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Position and Zoom</span></label></div>
+      <p class="why" hidden>Position and Zoom together put a graphic or a text in one part of a wall.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>For a show on several cubes, which connection do we recommend?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Ethernet cables in LAN client mode</span></label>
+      <label class="opt"><input type="radio" value="b"><span>WiFi server mode on each of the cubes</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Cube Link, with the computer as master</span></label></div>
+      <p class="why" hidden>For several cubes we recommend Ethernet cables in LAN client mode, with every cube and the computer on a switch.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>The cubes are on a switch with no router. Which IP Mode do you leave them on?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Static IP</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Auto IP</span></label>
+      <label class="opt"><input type="radio" value="c"><span>LAN Server</span></label></div>
+      <p class="why" hidden>Leave IP Mode on Auto IP: with no router, the cubes and the computer give themselves 169.254 addresses.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="c" data-group="cubes" data-lesson="7"><legend><span class="qn"></span>When do you start LaserOS for a show on several cubes?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Before the cubes are switched on</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Before you connect the cubes to the switch</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Once the cubes show their addresses</span></label></div>
+      <p class="why" hidden>Start LaserOS once the cubes show their 169.254 addresses. Its Laser button then no longer reads NO LASER.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="a" data-group="safety" data-lesson="7"><legend><span class="qn"></span>What comes first, before any show on several cubes?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Each cube’s beam block, beams 3&nbsp;m above people</span></label>
+      <label class="opt"><input type="radio" value="b"><span>A keep‑out zone in LaserOS around the audience</span></label>
+      <label class="opt"><input type="radio" value="c"><span>A check of the show in the preview’s 3D view</span></label></div>
+      <p class="why" hidden>Set each cube’s beam block first: every beam at least 3&nbsp;m above the floor where people may be. A zone works on top of that, never instead of it.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="safety" data-lesson="8"><legend><span class="qn"></span>Your beams play from the SD card in Playlist mode. Which safety zone applies?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The one you set in LaserOS</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The one set on the cube itself</span></label>
+      <label class="opt"><input type="radio" value="c"><span>None: Playlist mode has no zone</span></label></div>
+      <p class="why" hidden>In Playlist mode the cube’s own Image Setup and Safety Zone apply, not the ones in LaserOS. Set them under Settings → Projection.</p><p class="feedback"></p></fieldset>
+
+    <fieldset class="check" data-answer="c" data-group="play" data-lesson="8"><legend><span class="qn"></span>Which app can export a playlist to the cube’s SD card?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>LaserOS on a phone or tablet</span></label>
+      <label class="opt"><input type="radio" value="b"><span>The cube’s web app</span></label>
+      <label class="opt"><input type="radio" value="c"><span>LaserOS on a computer</span></label></div>
+      <p class="why" hidden>Export to the SD card with LaserOS on a computer. The phone app can’t export.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="a" data-group="play" data-lesson="8"><legend><span class="qn"></span>When do you take the SD card out of the cube, or put it back?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Only with the cube switched off</span></label>
+      <label class="opt"><input type="radio" value="b"><span>While a playlist is playing on it</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Whenever LaserOS shows LASER ON</span></label></div>
+      <p class="why" hidden>Always switch the cube off before you take the card out or put it back in.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="play" data-lesson="8"><legend><span class="qn"></span>To play the built‑in laser shows on several cubes without a computer, what do you use?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>The Timeline in LaserOS</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Cube Link in Laser Show mode</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Art‑Net from a lighting desk</span></label></div>
+      <p class="why" hidden>Cube Link synchronises the built‑in multi‑projector laser shows: one master, the same Link Channel and PIN, a Group for each part.</p><p class="feedback"></p></fieldset>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATE ============ -->
+<section class="view" id="certificate" aria-labelledby="cert-h">
+  <p class="label">Certificate</p>
+  <h2 id="cert-h">Your certificate</h2>
+  <div id="cert-locked" class="locked-msg">
+    <p><strong>Pass the final quiz to get your certificate.</strong> <a class="link" href="#final">Go to the final quiz</a></p>
+  </div>
+  <div id="cert-ready" hidden>
+    <p class="intro">Well done. Type your name as you want it on the certificate.</p>
+    <p class="small">Your certificate is made right here in your browser. Your name isn’t sent anywhere; it’s only kept in this browser.</p>
+    <form id="cert-form" class="cert-form" novalidate>
+      <label><span>Name on the certificate</span><input id="cert-name" type="text" maxlength="60" autocomplete="name" spellcheck="false"></label>
+      <button class="btn solid" type="submit">Make my certificate</button>
+    </form>
+    <p class="feedback is-wrong" id="cert-msg" aria-live="polite"></p>
+    <div id="cert-out" hidden>
+      <div class="cert-preview"><img id="cert-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your LaserCube Academy certificate" width="3508" height="2480"><canvas id="cert-canvas" width="1123" height="794" hidden></canvas></div>
+      <div class="btn-row">
+        <button class="btn solid" type="button" id="dl-pdf"><svg class="icon"><use href="#i-download"/></svg>Download PDF</button>
+        <button class="btn" type="button" id="dl-png"><svg class="icon"><use href="#i-download"/></svg>Download image</button>
+      </div>
+      <p class="small">Download not starting? Press and hold the certificate (on a computer, right-click it) and save the image.</p>
+    </div>
+    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from <a class="link" href="../start-here/#lesson-10">Start here’s pre‑show checklist</a> applies whenever the laser is on.</p>
+    <p class="small">More courses: <a class="link" href="../">LaserCube Academy</a>.</p>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+  <p id="announce" class="sr" aria-live="polite"></p>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="../../">User Wiki</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="mailto:support@laseros.com">Email support</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© Wicked Lasers</span>
+  </div>
+</footer>
+<script src="../academy.js"></script>
+</body>
+</html>
