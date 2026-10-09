@@ -67,6 +67,7 @@
       f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.dataset.yt) + "?autoplay=1&rel=0" + (from > 0 ? "&start=" + from : "") + (to > 0 ? "&end=" + to : "");
       f.title = v.dataset.title || "Video";
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true; // older Safari reads only this attribute
       f.referrerPolicy = "strict-origin-when-cross-origin";
       v.textContent = "";
       v.appendChild(f);
@@ -124,7 +125,10 @@
   if (toc && phone) phone.appendChild(toc.cloneNode(true));
   var sheet = $(".toc-phone");
   if (sheet) document.addEventListener("keydown", function (e) { // Esc closes it, like the header menu
-    if (e.key === "Escape" && sheet.open) { sheet.open = false; var s = $("summary", sheet); if (s) s.focus(); }
+    if (e.key !== "Escape" || !sheet.open) return;
+    var inside = sheet.contains(document.activeElement);
+    sheet.open = false;
+    if (inside) { var s = $("summary", sheet); if (s) s.focus(); } // else leave focus (and the scroll position) where it is
   });
 
   // ---- views ----

@@ -337,12 +337,17 @@ figcaption{margin-top:10px;font-size:14px;color:var(--subtle)}
   .check,.order,.scenario{padding:16px}
   .order li{padding-left:10px;gap:8px}
   .pager a{font-size:14.5px}
+  .opt{flex-wrap:wrap}
+  .opt .tag{order:9;flex-basis:100%;margin-left:30px;padding-left:0} /* on phones the tag gets its own line, so the answer keeps its width */
+  .site-footer .copy{margin-left:0}
+}
+/* 44 px tap targets on phones and touch screens: taller rows, so no tap area overlaps another */
+@media (max-width:640px),(pointer:coarse){
   .icon-btn{width:44px;height:44px}
-  .manual-links a,.locked-msg a,.feedback a.link{position:relative}
-  .manual-links a::after,.locked-msg a::after,.feedback a.link::after{content:"";position:absolute;inset:-13px 0} /* 44 px tap area, same look */
+  .manual-links a{display:inline-block;padding:12px 0;border-bottom:0;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+  .locked-msg li a,.feedback a.link{display:inline-block;padding:12px 0}
   .site-footer nav{gap:0 22px}
   .site-footer nav a{display:inline-block;padding:11px 0}
-  .site-footer .copy{margin-left:0}
 }
 @media (max-width:380px){
   .site-header .container{gap:8px}
