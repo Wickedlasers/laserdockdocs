@@ -534,7 +534,7 @@
     if (state.name && !certInput.value) certInput.value = state.name;
     if (state.name && certKey(state.name) !== drawn) drawWhenReady(state.name);
   }
-  var drawn = "", shownUrl = null; // what the certificate on screen shows, and its image URL
+  var drawn = "", shownUrl = null, drawSeq = 0; // what the certificate on screen shows, its image URL, the newest draw
   function certKey(name) { return name + "|" + state.passed.date + "|" + state.passed.version; }
 
   // Draw once Inter (including the subset the name needs) has loaded, or after 2.5 s with whatever font there is.
@@ -545,8 +545,10 @@
       ? Promise.all([document.fonts.load("600 58px Inter", name), document.fonts.load("400 17px Inter"), document.fonts.load("600 28px Inter")]).catch(function () {})
       : Promise.resolve()).then(function () { loaded = true; });
     return Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () {
+      if (state.name !== name) return false; // the name was changed while this one waited: its own call draws it
       drawCert(name);
       if (!loaded) { drawn = ""; ready.then(function () { if (state.name === name) drawCert(name); }); }
+      return true;
     });
   }
 
@@ -687,8 +689,9 @@
 
     // Shown as an image, so phones (and in-app browsers that block downloads) can long-press to save it.
     drawn = certKey(name);
-    var img = $("#cert-img");
+    var img = $("#cert-img"), seq = ++drawSeq;
     if (img && canvas.toBlob) canvas.toBlob(function (b) {
+      if (seq !== drawSeq) return; // a newer draw has its own image on the way
       if (!b) { img.src = canvas.toDataURL("image/png"); return; }
       if (shownUrl) URL.revokeObjectURL(shownUrl);
       shownUrl = URL.createObjectURL(b);
@@ -741,7 +744,7 @@
       state.name = name;
       save();
       refresh();
-      drawWhenReady(name).then(function () { say("Certificate ready. Download it as a PDF or an image."); });
+      drawWhenReady(name).then(function (drew) { if (drew) say("Certificate ready. Download it as a PDF or an image."); });
     });
     function failed() { $("#cert-msg").textContent = "The download didn’t start in this browser. Press and hold the certificate above to save it, or open this page in Chrome, Safari or Firefox."; }
     function bytes(blob) {
