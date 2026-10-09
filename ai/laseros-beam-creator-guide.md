@@ -36,8 +36,8 @@ A `.ldbc` file is JSON. The top level is always:
 
 - `targetFPS`: frames per second, one of 60, 55, 50, 45, 40, 35, 30, 24, 48, 90, 120. Use 60 unless asked. Always include it.
 - `renderQuality`: 0 = High, 1 = Normal, 2 = Low. Use 0.
-- `isBpmReactive` / `defaultBpm` (whole number 0 to 300): see section 3. Leave out or set false unless the person wants the timing to follow the music's tempo.
-- `beamPatterns`: the layers. Use at most 10: that is as many as Beam Creator lets you edit. Later layers are drawn after earlier ones; there is no stacking order to worry about.
+- `isBpmReactive` / `defaultBpm` (whole number 1 to 300, the song's tempo; 0 would drop every timing marked (B) to its minimum): see section 3. Leave out or set false unless the person wants the timing to follow the music's tempo.
+- `beamPatterns`: the layers. Use at most 10: Beam Creator's add and duplicate buttons stop at 10. Later layers are drawn after earlier ones; there is no stacking order to worry about.
 
 Each layer:
 
@@ -119,7 +119,7 @@ Any whole number from -1 to 1530 works: the scale runs red → yellow → green 
 
 ## 4. Effects work in order
 
-Effects that move a layer (Position, Random Position, Movement, Simple Paths, Fixed Rotation, Rotation, Scale) are applied from the **bottom of the list up**: the last effect moves the pattern first, then the one above it moves that result, and so on. Rotation and Scale turn or grow what is below them in the list around the point (0, 0). A pattern is drawn around (0, 0), so with no move below them it spins or grows in place; a pattern that an effect below them has moved swings or grows around the centre of the projection area.
+Effects that move a layer (Position, Random Position, Movement, Simple Paths, Fixed Rotation, Rotation, Scale) are applied from the **bottom of the list up**: the last effect moves the pattern first, then the one above it moves that result, and so on. Rotation and Scale turn or grow what is below them in the list around one point: the centre of the projection area, or wherever the move effects above them have put it. A pattern is drawn around its own centre, so with no move below them it spins or grows in place; a pattern that an effect below them has moved swings or grows around that point.
 
 - Spin a shape in place somewhere else: `Position` first, then `Rotation` (Rotation turns the shape around its own centre, then Position moves it).
 - Make a shape orbit the centre: `Rotation` first, then `Position` (Position moves it out, then Rotation swings it around the centre).
@@ -172,7 +172,7 @@ An outline shape centred on (0, 0). **Always include `{"globalId": "version", "v
 | shapestyle | list | 0 Solid, 1 Dotted, 2 Dashed | 0 | Style |
 | size | float | 0.01 to 1 | 0.5 | radius (half the width; Rectangle: half its width) |
 | height | float | 0.01 to 1 | 0.5 | Rectangle only: half its height |
-| numdots | int | 1 to 50 | 22 | Dotted: how many dots (Circle: in total; Square, Rectangle, Triangle: per side). Dashed, or Solid with several colours: more = more, shorter dashes or colour stripes |
+| numdots | int | 1 to 50 | 22 | Dotted: how many dots (Circle, Hexagon, Octagon: in total, at least 2 per side; Square, Rectangle, Triangle: per side). Dashed, or Solid with several colours: more = more, shorter dashes or colour stripes |
 | numcolors | int | 1 to 8 | 1 | Colours: how many of "Color 1" … "Color 8" are used around the outline |
 | "Color 1" … "Color 8" | colour | | white | the colours |
 | dotmode | list | 0 Static Beams, 1 clockwise Beams, 2 anti-clockwise Beams | 0 | turns the dots, dashes or colour stripes around the outline (only with Dotted, Dashed or numcolors above 1) |
@@ -389,7 +389,7 @@ LaserOS loads what it understands and silently ignores the rest, so check these 
 
 1. `"enabled": true` on every layer AND every effect. A missing `enabled` switches it **off**.
 2. `targetFPS` must be there (one of the listed values).
-3. Numbers are plain JSON numbers, never in quotes, and int controls need whole numbers. LaserOS reads 60.5, "60" or "0.5" as 0: that 0 is used wherever the range allows it (a width of 0 makes a line vanish, a speed of 0 can break the movement), and ignored otherwise.
+3. Numbers are plain JSON numbers, never in quotes, and int controls need whole numbers. LaserOS reads 60.5, "60" or "0.5" as 0: that 0 is used wherever LaserOS's own range allows it, even where the tables start at 1 (a speed of 0 breaks the movement, a width of 0 shrinks a line or a row of dots to one bright point), and ignored otherwise.
 4. Every value must be inside its range. A value outside it is ignored. Range limits are in the tables; the ones most often missed: Start Delay and Dwell at most 600, Strobe On and Off Frames 1 to 20, Frames at most 1200, Beam Count at most 18. List controls take one of the listed positions only: another index is kept and draws nothing or misbehaves.
 5. `globalId`, `beamPatternType` and `beamEffectType` must be spelled exactly as in the tables. Unknown names are ignored. Note: these file names differ from what Beam Creator shows: `"Horizontal Beam Dots"`, `"Vertical Beam Dots"`, `"Horizontal Lines"`, `"Vertical Lines"`, `"VideoSpiral"`, `"simplepaths"`, `"RandomPosition"` and `"Rotation"`.
 6. Simple Shapes layers need `{"globalId": "version", "version": 2}`.
