@@ -21,9 +21,9 @@ no build step, no server, no database, no accounts, no analytics.
   facts come from the manual chapter "Making Content in LaserOS" (labels checked against the LaserOS v0.18.1 source) and
   the tutorial videos' checked claims. Several embeds use `data-from`/`data-to` to skip parts of a video (other people's
   show clips, hidden LaserOS entries, a profane track title; margins: "Adding a course", step 3). These cuts need
-  `data-to` in academy.js: never revert that part while these courses are live. Pages load `academy.js?v=<date>`: raise
-  the date whenever academy.js changes (pages are cached for 10 minutes). Card pictures: `images/home/academy-<course>*.webp`
-  (video frames).
+  `data-to` in academy.js: never revert that part while these courses are live. Pages load `academy.js?v=<date>` and
+  `academy.css?v=<date>`: raise the date whenever that file changes (pages are cached for 10 minutes). Card pictures:
+  `images/home/academy-<course>*.webp` (video frames).
 - `academy.css`, `academy.js`: shared by every course. A new course needs no change to these
   (control-modes added small table styles, `.table-wrap`, and `.two.shots` for the 240 px screenshots of the cube's screen).
 
@@ -64,7 +64,15 @@ no build step, no server, no database, no accounts, no analytics.
    - video: `<div class="video" data-yt="<YouTube id>">` plus a thumbnail saved as `images/home/videos/<id>.webp`.
      To play only part of it, add `data-from="<second>"` and/or `data-to="<second>"` (YouTube `start`/`end`). YouTube
      starts at the nearest keyframe, up to about 2 s early, so leave that margin after a line you want skipped. Viewers
-     can still scrub, and the "Watch on YouTube" link plays the whole video.
+     can still scrub, and the "Watch on YouTube" link plays the whole video. When a page uses the same video more
+     than once, give each cut its own thumbnail: a 1280x720 frame from inside that cut showing what it teaches, saved
+     as `images/academy/<course>/l<lesson>-clip<n>.webp` (otherwise every lesson opens with the same picture), and
+     put the cut's times in its caption, e.g. "(10:42 to 16:08)";
+   - screenshot from a video: `<figure class="native">` (shown at its `width`/`height` attributes, never stretched;
+     give a tall phone screen smaller attributes than the file, e.g. 288x600 for 492x1024) with the image linked to
+     itself, saved as `images/academy/<course>/l<lesson>-<what>-<width>.webp`, cropped from the 1080p recording at
+     full resolution (no upscaling); every label named in its caption or alt text must be readable in it and match
+     the lesson's wording.
 4. Update the contents list (`.toc`), the lesson count in the page text, and the final quiz bank: each question gets
    `data-group` (its topic; use exactly `data-pick` topics: with more, some are left out of each quiz; with fewer, the
    rest is filled at random) and
