@@ -34,7 +34,8 @@ no build step, no server, no database, no accounts, no analytics.
   Ether Dream mode, so the course is for the Ultra MK2 and Pro only; the community script part 1 shows for the WiFi is
   never mentioned or linked (owner decision). The cuts skip: part 1's old models page (around 0:14), its WiFi script
   (4:51 to 6:28) and "open the front panel" with the key on (2:40); the third-party fan video traced in part 2 (7:01
-  to 9:31); and spoken slips (part 1 "both work just the same" 2:13; part 2 "negative 1 on the top left" 3:30; part 3
+  to 9:31); TouchDesigner's sample music under part 4's equaliser demo (from 3:33; that part is text and screenshots
+  only); and spoken slips (part 1 "both work just the same" 2:13; part 2 "negative 1 on the top left" 3:30; part 3
   the UV aside 2:48 and "0, 0 on top left" 5:42; part 4 "negative one, negative one, top left" 1:47). Slips the
   presenter corrects at once (part 3 "circular" to Radial, part 4 "20% to 80" then 1) are left in. The script's nodes
   sit in the background of part 1's preview (7:07 to 8:26); that cut's picture is cropped so they don't show.
