@@ -3946,7 +3946,7 @@ the SD card.</p>
   function searchPages(ts) {
     var cs = compile(ts), res = [];
     pageIndex.forEach(function (p) {
-      var score = 0, key = false, named = true; // named: every word is in the page's own title ("laser mapping", "music"; "laser" is a stop word)
+      var score = 0, key = false, named = true; // named: every word is in the page's own title ("laser mapping", "music"; "laser" alone is a stop word, so no)
       for (var i = 0; i < cs.length; i++) {
         var s = cs[i].term.length > 2 ? titleScore(p.t, p.tc, cs[i]) : cs[i].word.test(p.t) ? 12 : 0;
         if (!s) return;
@@ -3954,7 +3954,7 @@ the SD card.</p>
         if (isKey(cs[i], p.k)) key = true;
         if (!(cs[i].term.length > 2 ? cs[i].start.test(p.nt) : cs[i].word.test(p.nt))) named = false;
       }
-      if (key || (named && (cs.length > 1 || cs[0].term.length > 4))) res.push({ p: p, score: score, named: !key });
+      if (key || (named && (cs.length > 1 || (cs[0].term.length > 4 && !STOP[cs[0].term])))) res.push({ p: p, score: score, named: !key });
     });
     res.sort(function (a, b) { return b.score - a.score; });
     return res; // { p, score, named }: named = found by its title only, shown after the manual
