@@ -517,7 +517,8 @@
       $("#retry").addEventListener("click", function () { newQuiz(); $("h2", final).focus(); final.scrollIntoView(); });
     }
     refresh();
-    $("h3", quizResult).focus();
+    $("h3", quizResult).focus({ preventScroll: true });
+    quizResult.scrollIntoView({ block: "center" }); // the whole result, its button too (focus alone leaves the button below the fold)
     say(pass ? "You passed." : "Not passed yet.");
   });
 
