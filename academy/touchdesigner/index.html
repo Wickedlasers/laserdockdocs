@@ -153,7 +153,7 @@
   </ul>
   <h3>How the lessons work</h3>
   <ul class="points">
-    <li>Each lesson takes about 5 to 7 minutes, plus the videos. Each video plays only the part its lesson covers; its “Watch on YouTube” link plays the whole video. Get a question wrong? Pick another answer.</li>
+    <li>Each lesson takes about 5 to 7 minutes, plus the videos. Each video plays only the part its lesson covers; its “Watch on YouTube” link opens the full video at that point. Get a question wrong? Pick another answer.</li>
     <li>Your progress is saved in this browser. There’s no account and nothing is sent to us. Clearing your browser data, or switching to another device, starts the course again.</li>
     <li>When all six lessons are done, take the final quiz: 10 questions, 8 right to pass, as many tries as you need.</li>
     <li>Pass, then download your certificate as a PDF or an image.</li>
@@ -162,7 +162,7 @@
     <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
     <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies whenever the laser is on, whatever drives it: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
   </div>
-  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its section “Ether Dream Control Mode”, and the four videos: <a class="link" href="https://www.youtube.com/watch?v=gWgriN8vNZg" target="_blank" rel="noopener">first steps</a>, <a class="link" href="https://www.youtube.com/watch?v=8uTfJfFeGs4" target="_blank" rel="noopener">easy content creation</a>, <a class="link" href="https://www.youtube.com/watch?v=2joWmQ8NXcU" target="_blank" rel="noopener">colouring methods</a> and <a class="link" href="https://www.youtube.com/watch?v=AmTNx1gKu_E" target="_blank" rel="noopener">interactive laser art</a>. If a video and the manual differ, follow the manual.</p>
+  <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its section “Ether Dream Control Mode”, and the four videos: <a class="link" href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=35s" target="_blank" rel="noopener">first steps</a>, <a class="link" href="https://www.youtube.com/watch?v=8uTfJfFeGs4" target="_blank" rel="noopener">easy content creation</a>, <a class="link" href="https://www.youtube.com/watch?v=2joWmQ8NXcU" target="_blank" rel="noopener">colouring methods</a> and <a class="link" href="https://www.youtube.com/watch?v=AmTNx1gKu_E" target="_blank" rel="noopener">interactive laser art</a>. If a video and the manual differ, follow the manual.</p>
   <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
 </section>
 
@@ -290,9 +290,9 @@
   </div>
   <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: the IP address and Ether Dream mode (2:20 to 2:38)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=140s" target="_blank" rel="noopener">Watch on YouTube, from 2:20</a></p>
   <ol class="points" start="3">
-    <li><strong>Ether Dream mode:</strong> in the cube’s main menu choose Control Mode, turn the knob to <strong>Ether‑Dream</strong> and push it. The cube restarts into Ether Dream mode. On firmware 2.0, in the video, it asks first: “Control mode has changed. Restart Now?” Choose Yes. Afterwards the status bar reads Ether‑Dream.</li>
+    <li><strong>Ether Dream mode:</strong> in the cube’s main menu choose Control Mode, turn the knob to <strong>Ether‑Dream</strong> and push it. The cube asks “Control mode has changed. Restart Now?”: choose Yes, and it restarts into Ether Dream mode. Afterwards the status bar reads Ether‑Dream. The LaserCube WiFi has no Ether Dream mode, so this works only with the Ultra MK2 and Pro.</li>
     <li><strong>IP address:</strong> read it at the bottom right of the status bar. You type it into TouchDesigner.</li>
-    <li><strong>Arm it</strong> when you’re ready to project: turn the key to ON. The EMISSION LEDs light and the I‑LOCK warning goes. With an E‑Stop connected, start it with the green START button (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>). A tick by LAN‑C means the cube is connected in LAN client mode.</li>
+    <li><strong>Arm it</strong> when you’re ready to project, with the beam block set first (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>): turn the key to ON. The EMISSION LEDs light and the I‑LOCK warning goes. With an E‑Stop connected, start it with the green START button (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>). A tick by LAN‑C means the cube is connected in LAN client mode.</li>
   </ol>
   <div class="two shots">
     <figure class="native">
@@ -318,7 +318,7 @@
   <p class="video-meta"><span>First steps with LaserCube and TouchDesigner: the Laser CHOP and Laser Device CHOP (2:45 to 4:46)</span><a href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=165s" target="_blank" rel="noopener">Watch on YouTube, from 2:45</a></p>
   <ol class="points">
     <li>Add a <strong>Laser</strong> CHOP (in the OP Create Dialog, CHOP tab). Set Source OP to SOP and <strong>SOP</strong> to your Null (null1). Until a SOP is set it shows an error.</li>
-    <li><strong>Output Sample Rate:</strong> TouchDesigner’s default is 48000. The videos set 30000, which the presenter chose to match his cube. The manual gives the Ultra MK2 and Pro a scan speed of more than 35,000 points per second at 7°.</li>
+    <li><strong>Output Sample Rate:</strong> TouchDesigner’s default is 48000; set it to 30000, as the videos do (the presenter chose it to match his cube). The manual gives the Ultra MK2 and Pro a scan speed of more than 35,000 points per second at 7°.</li>
     <li>The Laser CHOP’s output holds, for every point, an <strong>x</strong> and <strong>y</strong> position and a <strong>r</strong>ed, <strong>g</strong>reen and <strong>b</strong>lue value.</li>
     <li>Add a <strong>Laser Device</strong> CHOP after it. Set <strong>Type</strong> to EtherDream, type the cube’s IP address as <strong>Network Address</strong>, and leave <strong>Network Port</strong> at 7765, the port Ether Dream uses. Device and Scan are greyed out for EtherDream: you type the address yourself. The video leaves Queue Time (0.1&nbsp;s) and the scales as they are.</li>
     <li>With the cube armed, it projects. The manual: a green status bar background means samples are arriving over the network.</li>
@@ -451,7 +451,7 @@
 
   <h3>Pictures and video</h3>
   <p>Pictures and video (TOPs) can’t go to the laser directly. A <strong>Trace</strong> SOP turns a TOP into outlines: set its TOP Name to your TOP, for example a Movie File In TOP, and scale the result with a Transform SOP on the traced shape. The video uses black‑and‑white footage, where the Threshold setting matters little. The Filters page sets Resample Shapes, Step Size and smoothing; the presenter keeps the defaults. A webcam or depth camera can be traced too.</p>
-  <p class="small">The clip above stops as the video begins its own trace demo.</p>
+  <p class="small">The video’s own trace demo comes after the clip above and isn’t shown in this course.</p>
 
   <h3>3D shapes need a camera</h3>
   <ul class="points">
@@ -569,7 +569,7 @@
     <li>A shape with few points colours badly: a triangle has only four points to blend between.</li>
     <li>On the TOP to CHOP’s Crop page, set <strong>Interpolate</strong> to Linear instead of Nearest Sample.</li>
     <li>Add points: more Divisions on a circle (64 in the video), or a <strong>Refine</strong> SOP after the shape, whose U Divisions adds points along its lines without changing it. To see the points, right‑click the viewer and open Display Options, SOP Markers.</li>
-    <li>Don’t overdo it: the laser can draw only so many points. In the video 64 points are fine; with 514 the laser struggles to keep up.</li>
+    <li>Don’t overdo it: the laser can draw only so many points. In the video 64 points draw cleanly; at 514 the laser struggles to keep up on camera, though the presenter says it looks better in real life.</li>
   </ul>
   <div class="two parts">
     <figure class="native">
@@ -581,7 +581,7 @@
     </div>
   </div>
   <figure class="native">
-    <a href="../../images/academy/touchdesigner/l4-network-1286.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-network-1286.webp" alt="From the video: the finished colouring network. circle1 into refine1, null2 and texture1; texture1 into sopto1, math1 and topto1; chopto1 wired to null1, laser1 and laserdevice1. The Refine SOP’s parameters show U Divisions 64 and Method Refine. A webcam view shows the triangle on the wall." width="1286" height="870" loading="lazy"></a>
+    <a href="../../images/academy/touchdesigner/l4-network-1286.webp" target="_blank" rel="noopener"><img src="../../images/academy/touchdesigner/l4-network-1286.webp" alt="From the video: the finished colouring network. circle1 into refine1, null2 and texture1; texture1 into sopto1, math1 and topto1; chopto1 wired to null1, laser1 and laserdevice1. The Refine SOP’s parameters show U Divisions 64 and Method Refine." width="1286" height="870" loading="lazy"></a>
     <figcaption>The finished network, with a Refine SOP at U Divisions 64. From the video.</figcaption>
   </figure>
 
@@ -669,13 +669,9 @@
   </div>
 
   <h3>Music</h3>
-  <div class="video" data-yt="AmTNx1gKu_E" data-from="201" data-to="472" data-title="LaserCube and TouchDesigner - creating interactive laser art with Motus Art">
-    <button type="button" aria-label="Play video: interactive laser art, an audio equaliser"><span class="play"><svg><use href="#i-play"/></svg></span></button>
-    <img src="../../images/academy/touchdesigner/l5-clip3.webp" alt="" width="1280" height="720" loading="lazy">
-  </div>
-  <p class="video-meta"><span>Interactive laser art: an audio equaliser (3:21 to 7:52)</span><a href="https://www.youtube.com/watch?v=AmTNx1gKu_E&amp;t=201s" target="_blank" rel="noopener">Watch on YouTube, from 3:21</a></p>
+  <p class="small">This part of the video isn’t embedded here; the steps and screenshots below follow it.</p>
   <ol class="points">
-    <li>Bring in audio with an <strong>Audio File In</strong> CHOP (the video uses TouchDesigner’s own sample track), and add an Audio Device Out CHOP to hear it.</li>
+    <li>Bring in audio with an <strong>Audio File In</strong> CHOP and add an Audio Device Out CHOP to hear it.</li>
     <li>Add a <strong>Line</strong> SOP from Point A ‑1 0 0 to Point B 1 0 0: it fills the width of the drawing area.</li>
     <li>Add an <strong>Audio Spectrum</strong> CHOP. By default it gives about 22,050 samples, far too many for the laser. Setting FFT Size to 128 loses too much detail, so keep FFT Size at 8192 and set <strong>Output Length</strong> to Set Length Manually, with Set Output Length 128. Give the Line SOP 128 points (Number of Points) to match.</li>
     <li>Add a <strong>Select</strong> CHOP with Channel Names chan1, the left channel. Then a <strong>CHOP to SOP</strong> with the Line SOP wired in: CHOP select1, Channel Scope chan1, Attribute Scope P(1), the Y position, and Mapping One Sample to Each Point. Each spectrum value now lifts one point of the line, like a graphic equaliser.</li>
@@ -795,9 +791,9 @@
       <div class="opts">
         <label class="opt"><input type="radio" name="l6q1" value="a"><span>TouchDesigner hasn’t sent anything yet</span></label>
         <label class="opt"><input type="radio" name="l6q1" value="b"><span>The Network Port isn’t set to 7765</span></label>
-        <label class="opt"><input type="radio" name="l6q1" value="c"><span>The cube isn’t armed: key to ON</span></label>
+        <label class="opt"><input type="radio" name="l6q1" value="c"><span>The cube isn’t armed (interlock, key)</span></label>
       </div>
-      <p class="why" hidden>The I‑LOCK warning shows while the laser isn’t armed. Turn the key to ON (and start the E‑Stop, if one is connected).</p>
+      <p class="why" hidden>The I‑LOCK warning shows while the laser isn’t armed: the safety jumper or an E‑Stop in place (with an E‑Stop, started) and the key turned to ON.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="a">
@@ -888,11 +884,11 @@
       <label class="opt"><input type="radio" value="b"><span>6454</span></label>
       <label class="opt"><input type="radio" value="c"><span>8080</span></label></div>
       <p class="why" hidden>Ether Dream uses network port 7765, the Laser Device CHOP’s default.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="send" data-lesson="2"><legend><span class="qn"></span>Your picture is too big on the wall. What resizes the whole output?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>The Transform SOP’s Scale</span></label>
-      <label class="opt"><input type="radio" value="b"><span>The Laser CHOP’s X and Y Scale</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The Laser Device CHOP’s Queue Time</span></label></div>
-      <p class="why" hidden>X Scale and Y Scale on the Laser CHOP resize the whole output. A Transform SOP changes only the artwork.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="send" data-lesson="2"><legend><span class="qn"></span>Your picture is too big on the wall. Which Laser CHOP setting resizes the whole output?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Output Sample Rate</span></label>
+      <label class="opt"><input type="radio" value="b"><span>X Scale and Y Scale</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Red, Green and Blue Scale</span></label></div>
+      <p class="why" hidden>X Scale and Y Scale on the Laser CHOP’s Laser page resize the whole output. Output Sample Rate is points per second, and the colour scales only dim the picture.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="send" data-lesson="2"><legend><span class="qn"></span>What did the videos set the Laser CHOP’s Output Sample Rate to?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>30000</span></label>
       <label class="opt"><input type="radio" value="b"><span>48000</span></label>
@@ -993,8 +989,8 @@
     <fieldset class="check" data-answer="c" data-group="checks" data-lesson="6"><legend><span class="qn"></span>The status bar shows an I‑LOCK warning. What is missing?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>TouchDesigner hasn’t sent anything yet</span></label>
       <label class="opt"><input type="radio" value="b"><span>The Network Port isn’t set to 7765</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The cube isn’t armed: key to ON</span></label></div>
-      <p class="why" hidden>The I‑LOCK warning shows while the laser isn’t armed. Turn the key to ON, and start the E‑Stop if one is connected.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="c"><span>The cube isn’t armed (interlock, key)</span></label></div>
+      <p class="why" hidden>The I‑LOCK warning shows while the laser isn’t armed: the safety jumper or an E‑Stop in place (with an E‑Stop, started) and the key turned to ON.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="checks" data-lesson="6"><legend><span class="qn"></span>There’s a red cross by LAN‑C. What does it tell you?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Ether Dream mode has been switched off</span></label>
       <label class="opt"><input type="radio" value="b"><span>The cube isn’t connected to the network</span></label>
