@@ -486,7 +486,8 @@ the key control will be required if there is a power loss or remote
 interlock cycling.</li><li><strong>RJ45 Remote Interlock Connectors:</strong> In/Through. Provides a safety
 shut-off for terminating the laser emission via a jumper connection.
 <em>A jumper is included with the product</em>.* Do not attach Ethernet
-devices to these connectors.</li></ol>
+devices to these connectors. One E-Stop can stop several Ultra MK2s: chain them through these
+In/Through ports, and one press of the red button stops them all (<a href="https://www.youtube.com/watch?v=KiuFqWiXBPA&amp;t=131s" rel="external">our E-Stop video, from 2:11</a>).</li></ol>
 <blockquote><p>**For the <strong>US LaserCube</strong> model, the jumper is not included. It is
 required to be operated with an E-Stop for FDA compliance and will not
 work with only the safety jumper installed.&nbsp;*</p></blockquote>
@@ -823,7 +824,8 @@ DAC data for the currently selected ctrl mode).</p>
 mode, the cube’s IP address and, while the laser is not armed, an I-LOCK
 warning. In WiFi connection modes, a WiFi symbol at the bottom left is
 green when the connection is good and turns yellow or red with
-interference.</p>
+interference. At the bottom left, “35K” is the scan rate (35,000 points per
+second), and a red SD card symbol means no micro SD card is in.</p>
 <p><span id="anchor-20"></span>*Note: The live preview only works for DAC
 samples received over the network, or internally generated projections,
 NOT data from the analog ILDA port on the back of the device.</p>
@@ -1134,6 +1136,9 @@ exported to the LaserCube as “Content 1” playlist.</p>
 <h3 id="playlist-player-ui"><span id="anchor-35"></span>Playlist Player UI<a href="#playlist-player-ui" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The playlist that the device will use is selected from the Playlist
 selection menu drop down.</p>
+<p>The factory supplied SD card comes with ready-made playlists, such as
+Beams 1, Birthday 1, Christmas 1, Dancers 1 and Halloween 1 (the list
+depends on the card’s version). A playlist you export yourself is listed last.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140D1F3FD65_hu_eb5b5562d79e2593-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140F26F2383_hu_4788b07586d5e36e-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001402C799E3B_hu_d6b2615a03641bdf-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The chosen playlist selection will be saved and used again even through
 a power cycle of the device.</p>
@@ -2387,7 +2392,7 @@ wireless modes.</p>
 the device scan for the quietest WiFi channel to use at each power on of
 the device.</p>
 <h4 id="wifi-server-mode-customisations"><span id="anchor-98"></span>WiFi Server Mode Customisations<a href="#wifi-server-mode-customisations" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
-<p>SSID, Password, Channel (including Auto), Bandwidth, IP Address, Net
+<p>SSID, Password, Channel (including Auto), Bandwidth (20 MHz or 40 MHz), IP Address, Net
 Mask</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001400A98068C-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140C81B5C7A-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014057171006-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>The example images below show the manual WiFi server IP address and net
