@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LaserCube Ultra MK2 &amp; Pro Manual · LaserCube User Wiki</title>
-<meta name="description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, what's in the box, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI, firmware updates, accessories and troubleshooting.">
+<meta name="description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, what's in the box, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, lighting desks, laser show software, filming lasers, settings, effects, MIDI, firmware updates, accessories and troubleshooting.">
 <link rel="canonical" href="https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/">
 <link rel="icon" href="../../../favicon.ico" sizes="any">
 <link rel="icon" href="../../../icon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="LaserCube User Wiki">
 <meta property="og:url" content="https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/">
 <meta property="og:title" content="LaserCube Ultra MK2 &amp; Pro Manual">
-<meta property="og:description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, what's in the box, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, settings, effects, MIDI, firmware updates, accessories and troubleshooting.">
+<meta property="og:description" content="User manual for the LaserCube Ultra MK2 and LaserCube Pro: safety, what's in the box, setup, specifications, control modes, making content in LaserOS, DMX and Art-Net, lighting desks, laser show software, filming lasers, settings, effects, MIDI, firmware updates, accessories and troubleshooting.">
 <meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -2160,6 +2160,115 @@ Export to SD Card (Lasercube MKII).</p>
 <p>In Playlist mode the cube’s own Image Setup and Safety Zone apply, not
 the ones in LaserOS: set them on the cube before you play (see
 <a href="#projection-settings">Projection Settings</a>).</p>
+<h1 id="using-other-gear-and-software">Using Other Gear and Software<a href="#using-other-gear-and-software" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
+<p>The LaserCube can be run from a lighting desk, a DMX app or other laser
+show software. This chapter covers planning DMX addresses, ready-made
+fixtures, laser software and filming. The control modes themselves are in
+<a href="#control-modes">Control Modes</a>.</p>
+<h2 id="lighting-desks-and-dmx-apps">Lighting Desks and DMX Apps<a href="#lighting-desks-and-dmx-apps" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>A lighting desk or app sends DMX to the cube’s DMX In (DMX control mode)
+or over the network (<a href="#artnet-control-mode">ArtNet control mode</a>).
+The cube plays the items of the playlist chosen under CUE Selection, so the
+desk picks content from the SD card. A playlist you export from LaserOS can
+be played this way too (see <a href="#dmx-settings-menu">DMX Settings
+Menu</a>).</p>
+<h3 id="planning-dmx-addresses">Planning DMX Addresses<a href="#planning-dmx-addresses" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<ul><li>One DMX line (a universe) has 512 channels. Each device listens from
+its own start address. A LaserCube’s profile takes 16 channels: with
+start address 33, channels 33 to 48.</li><li>Know how many channels each device uses, and don’t let their ranges
+overlap. For example: a 32-channel LED bar at address 1 (channels 1 to 32)
+and a LaserCube at 33.</li><li>Cubes set to the same start address (and, for ArtNet, the same universe)
+get the same commands, and the desk treats them as one fixture; with the same playlist under CUE Selection they
+play the same thing. Give each cube its own start address to control it on
+its own.</li><li>Run the cable from the desk to the cube’s DMX In, and on from its DMX
+Out to the next device. Plan the whole chain so no device is left out.
+Only connect real DMX equipment: never connect a fog machine unless you are
+sure it is true DMX, because many put mains power on their XLR socket, which
+damages the cube (item 22 in the
+<a href="#lasercube-parts-diagram">LaserCube Parts Diagram</a>). On the Pro,
+use the adapter cables in <a href="#connecting-dmx-cables-to-the-lasercube-pro">Connecting
+DMX cables to the LaserCube Pro</a>.</li><li>Set the control mode and start address before you mount the cube.</li><li>Need more than 512 channels? Use another DMX line if your desk has one,
+or ArtNet.</li></ul>
+<h3 id="ready-made-fixtures">Ready-made Fixtures<a href="#ready-made-fixtures" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Some desks and apps have a LaserCube fixture in their library. These are
+named after the Ultra MK2; the Pro has the same 16-channel layout (see
+<a href="#dmxart-net-channel-layout">DMX/ArtNet Channel Layout</a>).</p>
+<ul><li><strong>Wolfmix W1:</strong> in the Fixture Library, under Cloud, load
+“Lasercube Ultra MK2”. Pick the cube’s animations in the GOBO section; the
+W1’s colour pads and its own effects work with it too.</li><li><strong>SoundSwitch:</strong> in the Fixture Library, search for LaserCube
+and add “Ultra MK2 (Chn = 16)”. In performance mode you can add patterns or
+animations for the cube.</li></ul>
+<p>ChamSys and grandMA desks also work; if your desk has no LaserCube
+fixture, build one (below). Desks with FB3/FB4 support should work too: the default
+profile is compatible with the FB3/FB4 16-channel profile (see
+<a href="#dmx-settings-menu">DMX Settings Menu</a>).</p>
+<h3 id="building-your-own-fixture">Building Your Own Fixture<a href="#building-your-own-fixture" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>If your desk or app has no LaserCube fixture, build one from the channel
+list in <a href="#dmxart-net-channel-layout">DMX/ArtNet Channel Layout</a>.
+Give every channel a plain value control (0 to 255), because each channel
+needs its own value ranges: for example, Access Mode on channel 1 needs 225
+to 255 for all 16 channels, and pick a cue on channel 3 (33 or more: 0 to
+31 is blackout). From Standard (8 channels) up, raise Fader
+(channel 5) and Scale (channel 6), or nothing can be seen, and set X Size
+and Y Size (channels 7 and 8) to 255: at 0 the picture is mirrored and
+flipped, at 128 it has no size. From Extended up, set X and Y Position
+(channels 10 and 11) to 128 to centre it. In the Photon 2
+iPad app, the fixture creator is under Devices → + → Create myself. If the
+cube doesn’t respond, see <a href="#no-response-to-dmx-or-artnet">No
+Response to DMX or ArtNet</a>.</p>
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=aC7mLKLXRWk" rel="external">what DMX is and how to use it with LaserCube</a></p>
+<h2 id="laser-show-software">Laser Show Software<a href="#laser-show-software" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Laser software on a computer can drive the cube over the network (a
+cable is best), with no extra interface (DAC): the cube has one built in. Which control
+mode to use depends on the program:</p>
+<ul><li><strong>LaserOS control mode:</strong> LaserOS, and programs that support
+the LaserCube directly, such as Liberation, LaserShowGen, MadMapper and
+Millumin (see <a href="#laseros-control-mode">LaserOS Control
+Mode</a>).</li><li><strong>IDN</strong> (ILDA Digital Network) and <strong>Ether
+Dream:</strong> two network protocols that some laser programs use. Neither
+is better: use the one your program supports. TouchDesigner uses Ether
+Dream (see <a href="#ether-dream-control-mode">Ether Dream Control
+Mode</a>).</li></ul>
+<p>For a network cable: through a router or switch, use
+<a href="#lan-client-mode">LAN Client</a>; with one computer on the cable,
+<a href="#lan-server-mode">LAN Server</a> (LAN Client also works: see
+<a href="#apipa-mode-explained">APIPA mode explained</a>).</p>
+<p>With an external ILDA DAC instead, for example Pangolin’s FB3 or FB4,
+plug it into ILDA In: the cube switches to it by itself, whatever the
+control mode. In that DAC’s software we suggest 30,000 points per second
+(item 21 in the <a href="#lasercube-parts-diagram">LaserCube Parts
+Diagram</a>). If a faint beam stays on, raise In Mute (see
+<a href="#ilda-input-config-settings">ILDA Input Config Settings</a>). The
+Pro has ILDA In only.</p>
+<h3 id="madmapper">MadMapper<a href="#madmapper" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>MadMapper drives the cube with its laser add-on, MadLaser. With the cube
+in LaserOS control mode and connected, it shows up as a LaserCube output
+with its IP address (192.168.4.1 by default in WiFi Server mode).
+MadMapper projects nothing until you add a laser surface. We use an output
+of 30,000 points per second.</p>
+<ul><li>To map an object, put a Laser Grid on Laser Quad surfaces, one quad
+per face, and drag each quad’s corners onto the real face. Laser Lines
+traced on the edges, with MadMapper’s materials, light parts of the edges in
+moving patterns.</li><li>More detail means more points and a lower frame rate: in our video,
+500 points ran at 60 frames per second and about 4,000 points at about 7.
+So keep mappings simple (see <a href="#flicker-and-render-quality">Flicker
+and Render Quality</a>).</li></ul>
+<p class="small">Video: <a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=219s" rel="external">laser mapping in MadMapper</a></p>
+<h2 id="filming-lasers">Filming Lasers<a href="#filming-lasers" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<ul><li>Keep the camera out of the projection area: a beam straight into the
+lens can damage its sensor. A keep-out zone can keep the beams away from a
+camera: in LaserOS control mode the cube’s own zone is greyed out, so use
+the program’s zones, if it has them (LaserOS: see
+<a href="#safety-zones-in-laseros">Safety Zones in LaserOS</a>); in the
+cube’s other modes, on the cube (see <a href="#safety-zone">Safety
+Zone</a>).</li><li>The shutter speed changes how beams look on camera. At 25 frames per
+second, a 1/500 shutter shows short dashes, 1/50 longer pieces and 1/25
+whole beams.</li><li>Laser banding, the ribbon look from music videos, comes from matching
+the laser’s scanning speed to the camera: in MadMapper, adjust the Scan
+Speed for each pattern, with a 1/50 shutter at 25 frames per second. With
+banding set up, a faster shutter (such as 1/100) makes the beams thinner
+and sharper.</li><li>Haze or fog makes the beams visible on camera (see
+<a href="#nano-fogger-haze-and-fog">Nano Fogger, Haze and Fog</a>).</li></ul>
 <h1 id="settings"><span id="anchor-70"></span>Settings<a href="#settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <h2 id="projection-settings"><span id="anchor-71"></span>Projection Settings<a href="#projection-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <blockquote><p>When in LaserOS control mode, the Image Setup, Colour Balance and
