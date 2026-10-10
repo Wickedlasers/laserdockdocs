@@ -535,6 +535,7 @@
     if (state.name && certKey(state.name) !== drawn) drawWhenReady(state.name);
   }
   var drawn = "", shownUrl = null, drawSeq = 0; // what the certificate on screen shows, its image URL, the newest draw
+  var pending = Promise.resolve(); // the newest drawWhenReady: a download waits for it, so it never saves a name just corrected
   function certKey(name) { return name + "|" + state.passed.date + "|" + state.passed.version; }
 
   // Draw once Inter (including the subset the name needs) has loaded, or after 2.5 s with whatever font there is.
@@ -544,12 +545,12 @@
     var ready = (document.fonts && document.fonts.load
       ? Promise.all([document.fonts.load("600 58px Inter", name), document.fonts.load("400 17px Inter"), document.fonts.load("600 28px Inter")]).catch(function () {})
       : Promise.resolve()).then(function () { loaded = true; });
-    return Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () {
+    return (pending = Promise.race([ready, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () {
       if (state.name !== name) return false; // the name was changed while this one waited: its own call draws it
       drawCert(name);
       if (!loaded) { drawn = ""; ready.then(function () { if (state.name === name) drawCert(name); }); }
       return true;
-    });
+    }));
   }
 
   function spaced(c, text, x, y, spacing, align) {
@@ -752,13 +753,15 @@
       return new Promise(function (ok, no) { var r = new FileReader(); r.onload = function () { ok(r.result); }; r.onerror = no; r.readAsArrayBuffer(blob); });
     }
     $("#dl-pdf").addEventListener("click", function () {
-      canvas.toBlob(function (b) {
-        if (!b) return failed();
-        bytes(b).then(function (buf) { download(pdfFromJpeg(new Uint8Array(buf), canvas.width, canvas.height), fileBase() + ".pdf"); }, failed);
-      }, "image/jpeg", 0.92);
+      pending.then(function () {
+        canvas.toBlob(function (b) {
+          if (!b) return failed();
+          bytes(b).then(function (buf) { download(pdfFromJpeg(new Uint8Array(buf), canvas.width, canvas.height), fileBase() + ".pdf"); }, failed);
+        }, "image/jpeg", 0.92);
+      });
     });
     $("#dl-png").addEventListener("click", function () {
-      canvas.toBlob(function (b) { if (b) download(b, fileBase() + ".png"); else failed(); }, "image/png");
+      pending.then(function () { canvas.toBlob(function (b) { if (b) download(b, fileBase() + ".png"); else failed(); }, "image/png"); });
     });
   }
 
