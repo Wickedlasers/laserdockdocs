@@ -711,7 +711,7 @@
   <p class="done-flag" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed</p>
   <p class="label">Lesson 7 of 8</p>
   <h2 id="l7-h">Web admin page, updates and factory reset</h2>
-  <p class="intro">In LaserOS mode the cube has a web admin page for some network settings and for firmware updates. There are three ways to update the firmware. A factory reset puts the cube back to its factory firmware and settings; the manual says to do it only if it’s really necessary.</p>
+  <p class="intro">In LaserOS mode the cube has a web admin page for some network settings and for firmware updates. There are two ways to update the firmware. A factory reset puts the cube back to its factory firmware and settings; the manual says to do it only if it’s really necessary.</p>
 
   <h3>The web admin page (LaserOS mode)</h3>
   <ul class="points">
@@ -723,11 +723,10 @@
     <li><strong>Update:</strong> firmware updates by hand (below).</li>
   </ul>
 
-  <h3>Three ways to update</h3>
+  <h3>Two ways to update</h3>
   <p>The boot screen shows the firmware version when the cube starts (firmware 2.0 and later).</p>
   <ul class="points">
     <li><strong>From the SD card</strong>, the manual’s preferred way: when the card has newer firmware, the cube asks whether to update. The latest card contents, with the newest firmware, are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Step by step below.</li>
-    <li><strong>From LaserOS:</strong> when it finds newer firmware, it asks whether to update.</li>
     <li><strong>By hand, through the web admin page:</strong> download the newest update file from the Lasercube/Firmware folder on the same GitHub page. Put the cube in LaserOS control mode and WiFi Server mode, and join its network. In a browser, open 192.168.4.1 (the address the manual gives) and log in. On the Update page, click Choose File, pick the update file and click Upload. Wait until the update finishes and the cube restarts.</li>
   </ul>
 
@@ -1040,11 +1039,11 @@
       <label class="opt"><input type="radio" value="b"><span>The Status Info page</span></label>
       <label class="opt"><input type="radio" value="c"><span>A factory reset</span></label></div>
       <p class="why" hidden>The SD card: when it has newer firmware, the cube asks whether to update.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="update" data-lesson="7"><legend><span class="qn"></span>Besides the SD card, what can also offer you a firmware update?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Cube Link</span></label>
-      <label class="opt"><input type="radio" value="b"><span>LaserOS</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The Visualizer</span></label></div>
-      <p class="why" hidden>When LaserOS finds newer firmware, it asks whether to update. The SD card is the manual’s preferred way.</p><p class="feedback"></p></fieldset>
+    <fieldset class="check" data-answer="b" data-group="update" data-lesson="7"><legend><span class="qn"></span>Besides the SD card, how else can you update the firmware?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Through Cube Link</span></label>
+      <label class="opt"><input type="radio" value="b"><span>By hand, on the web admin page</span></label>
+      <label class="opt"><input type="radio" value="c"><span>Through the Visualizer</span></label></div>
+      <p class="why" hidden>By hand on the web admin page, with the cube in LaserOS control mode. The SD card is the manual’s preferred way. LaserOS itself doesn’t update the Ultra MK2 or Pro.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="c" data-group="update" data-lesson="7"><legend><span class="qn"></span>Updating the SD card, you delete the old Lasercube folder before copying the new one. What do you lose?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>The cube’s own network and WiFi settings</span></label>
       <label class="opt"><input type="radio" value="b"><span>The built‑in laser shows and demo playlists</span></label>
