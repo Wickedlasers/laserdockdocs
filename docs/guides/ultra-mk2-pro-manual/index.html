@@ -2254,6 +2254,13 @@ moving patterns.</li><li>More detail means more points and a lower frame rate: i
 So keep mappings simple (see <a href="#flicker-and-render-quality">Flicker
 and Render Quality</a>).</li></ul>
 <p class="small">Video: <a href="https://www.youtube.com/watch?v=PoBVGtN1-tg&amp;t=219s" rel="external">laser mapping in MadMapper</a></p>
+<h3 id="writing-your-own-software">Writing Your Own Software<a href="#writing-your-own-software" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Developers can stream laser data from their own program to the Ultra
+MK2 and Pro over the network, with the cube in LaserOS control mode. Our
+protocol specification describes the commands and data packets and
+includes a complete example sender in Python:
+<a href="/developers/udp-streaming-protocol.pdf">UDP DAC
+Streaming Protocol Specification (PDF, 200 KB)</a>.</p>
 <h2 id="filming-lasers">Filming Lasers<a href="#filming-lasers" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <ul><li>Keep the camera out of the projection area: a beam straight into the
 lens can damage its sensor. A keep-out zone can keep the beams away from a
