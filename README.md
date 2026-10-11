@@ -32,6 +32,11 @@ LaserOS 0.18.1's Beam Creator code (where LaserOS accepts a value that breaks an
 works) and its examples were loaded and run with that code; when a LaserOS release changes Beam Creator, re-check the
 guide the same way before changing it (the test tools and the guide's source are kept outside this public repo).
 
+Developer files (`developers/`): `developers/udp-streaming-protocol.pdf` is LaserDock's UDP DAC Streaming Protocol
+Specification for the Ultra MK2 and Pro (document v1.1, 10 October 2026), linked from the manual's "Writing Your Own
+Software" section. Keep the file name when a newer version comes out: replace the file in place, so every link to it
+gets the new version (the version and date are on its cover).
+
 The header is a hand copy in each page. Before pushing a menu change, check that every copy matches:
 `grep -n -A7 'class="nav"\|class="menu-panel"' index.html docs/guides/ultra-mk2-pro-manual/index.html 404.html academy/index.html academy/*/index.html`
 
