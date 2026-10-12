@@ -144,6 +144,28 @@ root-relative (`/fonts/...`). Old `/docs/...` links (the Doks site had `/docs/re
 whose search box sends `/?q=` to the homepage search. Its colour tokens, wordmark and header are copies
 of the homepage's (a fourth copy, see "Shared with the manual").
 
+## Quick start (`start/`)
+
+The online side of the printed Quick Start Guide: `start/` (pick your model) and one page per model
+(`start/ultra-mk2/`, `start/pro/`, `start/wifi/`), each with the same five steps as the printed guide. The step ids
+are the printed guide's section names (`#getting-to-know-your-lasercube`, `#turning-on-your-device`,
+`#connecting-your-lasercube`, `#getting-started-with-laseros`, `#using-your-lasercube`): printed QR codes and
+redirects point at them, so never rename them.
+
+- **No material of its own.** Every sentence comes from the manual, an Academy lesson, the LaserCube WiFi manual (PDF)
+  or the owner, and every video cut (start, end, caption, note, and whether it has a YouTube link) is copied from the
+  Academy lesson that uses it. The one video that is in no lesson is the WiFi page's first, the channel's own LaserCube
+  WiFi quick start guide. Change the lesson or the manual first, then the start page.
+- **The four pages and `start/start.css` are written by a builder** that is kept outside this public repo (like the
+  Beam Creator guide's source). Don't edit them by hand: the next build overwrites them. The builder copies the header,
+  footer and icon sprite from `academy/index.html`, checks every link, manual anchor and lesson id, and the pages load
+  `academy/academy.css` and `academy/academy.js` (theme switch, menu, click-to-play videos), so a change to those
+  shows here too.
+- **The WiFi page stands alone.** It is the only WiFi page on the wiki and shares no text with the other two, so it
+  can be listed or unlisted on its own (the picker in `start/`, the other pages' model switch, the homepage's "Which
+  LaserCube do you have?"). The page itself always stays: owners and printed codes need it.
+- Not in the header menu and not in the search's `PAGES` lists yet.
+
 ## Academy (`academy/`)
 
 Free courses with a final quiz and a certificate, at /academy/. Plain HTML/CSS/JS, progress kept in the

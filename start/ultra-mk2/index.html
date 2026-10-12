@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick start: LaserCube Ultra MK2</title>
+<meta name="description" content="Your LaserCube Ultra MK2 in five steps: what’s in the box, switching on, connecting, LaserOS and your first projection. A video for each step.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://wiki.laseros.com/start/ultra-mk2/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LaserCube User Wiki">
+<meta property="og:url" content="https://wiki.laseros.com/start/ultra-mk2/">
+<meta property="og:title" content="Quick start: LaserCube Ultra MK2">
+<meta property="og:description" content="Your LaserCube Ultra MK2 in five steps: what’s in the box, switching on, connecting, LaserOS and your first projection. A video for each step.">
+<meta property="og:image" content="https://wiki.laseros.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/inter/inter-latin.woff2" crossorigin>
+<script>try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../../academy/academy.css?v=20261009e">
+<link rel="stylesheet" href="../../start/start.css?v=20261012c">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="wm-white" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset=".404" stop-color="#F98DFF"/><stop offset=".51" stop-color="#fff"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <linearGradient id="wm-ink" x1="27" y1="5.3" x2="217" y2="69.7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0c"/><stop offset=".404" stop-color="#c13ad1"/><stop offset=".51" stop-color="#0a0a0c"/><stop offset="1" stop-color="#2B62FD"/>
+    </linearGradient>
+    <symbol id="wordmark" viewBox="0 0 234 20"><path fill-rule="evenodd" clip-rule="evenodd" style="fill:var(--wm)" d="M0 0.00666445H2.88251V17.101H19.8794V20H0V0.00666445ZM233.086 0.00666445H234V2.75242H214.121V0.00666445H233.086ZM234 8.63046V11.3762H214.121V8.63046H234ZM234 17.101V20H214.121V17.101H234ZM206.58 11.9027C206.71 12.168 206.817 12.4446 206.898 12.7291C207.239 13.8747 207.239 15.0957 206.898 16.2413C206.665 17.0336 206.249 17.7596 205.685 18.3605C205.43 18.6157 205.145 18.8395 204.837 19.027L204.771 19.0736C204.48 19.2504 204.174 19.3998 203.856 19.5202C203.558 19.6279 203.253 19.7125 202.942 19.7734C202.64 19.8373 202.335 19.884 202.027 19.9134L201.444 20H201.1H187.264V17.101H200.179C200.483 17.101 200.788 17.101 201.093 17.101H201.232C201.493 17.0823 201.752 17.0466 202.007 16.9943C202.176 16.957 202.342 16.9103 202.504 16.8544C202.648 16.8031 202.788 16.7407 202.922 16.6678C203.133 16.5612 203.329 16.4267 203.505 16.2679C203.626 16.1579 203.737 16.0375 203.836 15.908C204.179 15.4472 204.364 14.8873 204.364 14.3119C204.364 13.7365 204.179 13.1766 203.836 12.7158C203.738 12.5827 203.627 12.4599 203.505 12.3492C203.329 12.1904 203.133 12.0559 202.922 11.9494C202.788 11.8764 202.648 11.814 202.504 11.7627L202.007 11.6228C201.752 11.5705 201.493 11.5349 201.232 11.5162H201.093C200.841 11.5162 200.589 11.5162 200.331 11.5162H187.264V8.55048H200.179C200.483 8.55048 200.788 8.55048 201.093 8.55048H201.232C201.493 8.53284 201.752 8.49496 202.007 8.43719C202.176 8.40295 202.342 8.35617 202.504 8.29723C202.649 8.25106 202.789 8.19079 202.922 8.11729C203.133 8.01074 203.329 7.87626 203.505 7.71743C203.627 7.60671 203.738 7.48391 203.836 7.35088C204.182 6.89288 204.368 6.33315 204.366 5.75808C204.366 5.18129 204.18 4.62005 203.836 4.15861C203.738 4.0277 203.627 3.90713 203.505 3.79873C203.328 3.64016 203.132 3.50367 202.922 3.3922C202.786 3.32427 202.647 3.26419 202.504 3.21226C202.342 3.15332 202.176 3.10654 202.007 3.07231C201.752 3.01999 201.493 2.98438 201.232 2.96568H201.093C200.788 2.96568 200.483 2.96568 200.179 2.96568H187.264V0.00666445H201.093H201.444L202.014 0.0466511C202.319 0.0799733 202.624 0.11996 202.929 0.17994L203.26 0.259913C203.459 0.313229 203.651 0.373209 203.843 0.439853C204.161 0.558888 204.468 0.708415 204.757 0.886371L204.83 0.933022C205.135 1.12232 205.417 1.34591 205.672 1.59947C206.047 1.99074 206.356 2.44096 206.586 2.93236C206.706 3.18158 206.806 3.44011 206.885 3.70543C207.226 4.85329 207.226 6.0764 206.885 7.22426C206.803 7.50875 206.697 7.78533 206.566 8.05065C206.345 8.53024 206.04 8.96592 205.665 9.33689C205.394 9.59968 205.089 9.82392 204.757 10.0033C205.084 10.1838 205.385 10.408 205.652 10.6698C206.029 11.0317 206.338 11.4582 206.566 11.9294L206.58 11.9027ZM179.159 0.00666445H180.054V13.5022C180.052 14.6621 179.743 15.8007 179.159 16.8011C178.901 17.2326 178.596 17.6348 178.252 18.0007L178.165 18.0806C177.656 18.5939 177.065 19.0174 176.416 19.3336C176.122 19.4786 175.816 19.599 175.502 19.6934C175.203 19.788 174.897 19.8593 174.587 19.9067C174.284 19.9535 173.979 19.9802 173.673 19.9867H166.384C165.763 19.9567 165.15 19.84 164.561 19.6401C164.245 19.5344 163.939 19.4006 163.647 19.2403C163.325 19.0731 163.019 18.8768 162.732 18.6538C162.499 18.4803 162.278 18.291 162.07 18.0873C161.977 17.994 161.884 17.894 161.798 17.7941C161.438 17.3907 161.131 16.9427 160.884 16.4612C160.422 15.5486 160.182 14.5393 160.181 13.5155V0.00666445H163.064V13.5022C163.07 14.4554 163.446 15.3686 164.111 16.048C164.245 16.1808 164.389 16.3033 164.541 16.4145C164.821 16.6186 165.129 16.7803 165.456 16.8944C165.748 17.0019 166.054 17.067 166.364 17.0876H166.642H173.679C173.989 17.078 174.296 17.031 174.594 16.9477C174.915 16.8513 175.223 16.7123 175.508 16.5345C175.732 16.3886 175.94 16.2212 176.131 16.0347C176.231 15.928 176.33 15.8147 176.423 15.7014C176.91 15.0679 177.176 14.29 177.178 13.4888V0.00666445H179.166H179.159ZM152.654 0.00666445H153.071V2.9057H139.361L139.03 2.95235H138.937C138.738 2.99379 138.543 3.05175 138.354 3.12562C138.24 3.1699 138.13 3.22109 138.022 3.27891C137.692 3.45331 137.39 3.67812 137.128 3.94535C136.743 4.34484 136.455 4.82837 136.286 5.35821C136.286 5.44485 136.233 5.52483 136.213 5.61146C136.174 5.78277 136.145 5.95638 136.127 6.13129C136.121 6.25783 136.121 6.38463 136.127 6.51116V13.5022C136.126 13.7873 136.16 14.0715 136.227 14.3486C136.346 14.841 136.567 15.3023 136.877 15.7022C137.186 16.102 137.577 16.4311 138.022 16.6678C138.274 16.801 138.541 16.9017 138.818 16.9677H138.937C139.048 16.9952 139.161 17.013 139.275 17.021C139.35 17.0279 139.425 17.0279 139.5 17.021H153.071V20H139.553L138.89 19.96C138.582 19.9222 138.277 19.8644 137.976 19.7867C137.665 19.7001 137.359 19.5933 137.062 19.4668C136.843 19.3669 136.624 19.2602 136.399 19.1403L136.134 18.9803C135.809 18.7694 135.503 18.5308 135.219 18.2672C134.878 17.9474 134.572 17.5922 134.305 17.2076C134.186 17.0343 134.073 16.8544 133.967 16.6678C133.721 16.2239 133.53 15.7517 133.397 15.2616C133.313 14.9759 133.251 14.684 133.212 14.3885C133.212 14.2019 133.172 14.0153 133.159 13.8221C133.159 13.7354 133.159 13.6421 133.159 13.5488V6.46451C133.159 6.37121 133.159 6.27791 133.159 6.18461C133.159 6.0913 133.159 5.8114 133.212 5.62479C133.25 5.32494 133.313 5.02859 133.397 4.73842C133.55 4.24792 133.761 3.77794 134.027 3.33889C134.133 3.14562 134.245 2.96568 134.365 2.78574C134.633 2.4047 134.94 2.05192 135.279 1.73276C135.563 1.46915 135.869 1.23058 136.194 1.01966L136.452 0.866378C136.666 0.741867 136.887 0.630586 137.115 0.533156C137.412 0.406726 137.718 0.29987 138.029 0.213262C138.33 0.13565 138.635 0.0777695 138.943 0.0399867C139.156 0.0399867 139.361 0.0399867 139.606 0H152.687L152.654 0.00666445ZM126.148 19.9067L126.26 20H122.086L121.576 19.5735L120.661 18.8204L119.747 18.0606L118.826 17.3342L117.951 16.5478L117.036 15.7947L116.122 15.035L115.208 14.2752L114.293 13.5222L113.379 12.7624L112.431 12.0027L111.768 11.4495H106.381V8.55048H119.74C120.046 8.54262 120.351 8.51814 120.654 8.47717H120.701C120.997 8.43463 121.288 8.36092 121.569 8.25725C121.737 8.19828 121.899 8.12236 122.053 8.03066C122.498 7.76861 122.861 7.38507 123.1 6.92436C123.32 6.46934 123.409 5.96157 123.358 5.45818C123.3 4.97148 123.11 4.51028 122.808 4.12529C122.712 4.00092 122.603 3.88701 122.483 3.78541C122.214 3.55125 121.904 3.36834 121.569 3.24558C121.279 3.14188 120.979 3.06819 120.674 3.02566C120.495 3.02566 120.31 2.98567 120.124 2.97234H119.76H106.374V0.00666445H119.74H120.191C120.35 0.00666445 120.502 0.00666445 120.654 0.00666445C120.959 0.00666445 121.271 0.0533156 121.569 0.0999667C121.878 0.1483 122.183 0.217319 122.483 0.306564H122.55C122.841 0.392682 123.125 0.504176 123.398 0.639787C123.723 0.801959 124.029 0.998566 124.312 1.22626L124.471 1.36621C124.764 1.63514 125.022 1.9396 125.24 2.27258C125.697 2.94181 126.008 3.70022 126.154 4.4985C126.222 4.84562 126.259 5.1979 126.267 5.55148C126.279 6.0229 126.241 6.49428 126.154 6.95768C126.01 7.7584 125.698 8.51924 125.24 9.19027C125.087 9.40281 124.921 9.60537 124.743 9.79673C124.61 9.93002 124.471 10.0566 124.326 10.1766C124.044 10.4066 123.737 10.6033 123.411 10.7631C123.241 10.8493 123.067 10.925 122.888 10.9897L122.497 11.123C122.197 11.21 121.891 11.2768 121.582 11.3229C121.279 11.3711 120.974 11.4023 120.668 11.4162H120.555C120.29 11.4162 120.025 11.4162 119.753 11.4162H115.963L116.115 11.5428L117.03 12.3026L117.951 13.089L118.859 13.8487L119.773 14.6018L120.654 15.3349L121.569 16.0946L122.483 16.8477L123.398 17.6075L124.312 18.3605L125.24 19.147L126.154 19.9067H126.148ZM98.7342 0.00666445H99.2577V2.9057H79.3783V0.00666445H98.7342ZM98.7342 17.101H99.2577V20H79.3783V17.101H98.7342ZM98.7342 8.55048H99.2577V11.4495H79.3783V8.55048H98.7342ZM72.2284 0.00666445H72.4073V2.9057H59.4128C59.108 2.9057 58.8032 2.9057 58.4983 2.93902C58.2756 2.95127 58.0541 2.98023 57.8357 3.02566L57.5706 3.08564C57.249 3.16343 56.9408 3.28923 56.6562 3.45885C56.5593 3.51714 56.4664 3.5817 56.3779 3.65212C56.1126 3.84644 55.8875 4.09092 55.7152 4.37188C55.5353 4.6703 55.4163 5.0018 55.3652 5.347C55.3142 5.6922 55.332 6.04419 55.4178 6.38236C55.5036 6.72054 55.6555 7.03814 55.8647 7.31657C56.0739 7.59501 56.3362 7.82871 56.6363 8.004C56.9223 8.17075 57.2301 8.29638 57.5508 8.37721H57.6899C57.9457 8.43125 58.2047 8.46908 58.4652 8.4905H58.9754H65.8139C66.1188 8.4905 66.4236 8.4905 66.7284 8.4905H67.1194L67.6428 8.55715C67.952 8.59848 68.2577 8.66308 68.5573 8.75042C68.871 8.8379 69.1769 8.95159 69.4717 9.0903C69.7025 9.20623 69.9241 9.33992 70.1344 9.49017L70.3729 9.66345C70.7166 9.93884 71.0219 10.2594 71.2808 10.6165C71.577 11.0258 71.8156 11.4743 71.9898 11.9494C72.0722 12.1782 72.1408 12.4119 72.1952 12.6491C72.4305 13.637 72.4305 14.6669 72.1952 15.6548C72.027 16.3762 71.716 17.0562 71.2808 17.6541C71.2088 17.7581 71.1314 17.8582 71.0489 17.954C70.8502 18.1974 70.6282 18.4207 70.3862 18.6205C70.1043 18.8462 69.7975 19.0386 69.4717 19.1936C69.1767 19.3338 68.8709 19.4497 68.5573 19.5402C67.9685 19.6987 67.364 19.7904 66.7549 19.8134C66.4501 19.8134 66.1453 19.8134 65.8405 19.8467H52.508V17.101H65.8139C66.0459 17.101 66.2712 17.101 66.4766 17.0676H66.7019C67.0135 17.0299 67.32 16.9584 67.6163 16.8544C67.8491 16.7745 68.0715 16.6672 68.279 16.5345C68.3715 16.4761 68.4601 16.4115 68.5441 16.3412C68.9511 16.0057 69.2451 15.5518 69.3856 15.0417C69.4162 14.9366 69.4405 14.8297 69.4585 14.7218C69.4983 14.4478 69.4983 14.1694 69.4585 13.8954C69.4182 13.6654 69.3492 13.4415 69.2531 13.2289C69.0897 12.87 68.8473 12.5532 68.5441 12.3026C68.3419 12.1401 68.1191 12.0056 67.8814 11.9027L67.6097 11.7894C67.3123 11.6907 67.0061 11.6215 66.6953 11.5828C66.3922 11.541 66.0867 11.5187 65.7808 11.5162H59.4128C59.108 11.5162 58.8032 11.5162 58.4983 11.5162C58.1935 11.5162 58.0146 11.5162 57.7694 11.4762H57.5839C57.2766 11.4413 56.9714 11.3902 56.6694 11.3229C56.3649 11.2542 56.0659 11.1629 55.7749 11.0497C55.4586 10.9201 55.1547 10.7617 54.867 10.5765C54.6293 10.4135 54.4075 10.2283 54.2044 10.0233C54.1249 9.95002 54.052 9.87004 53.9791 9.79007C53.5693 9.3405 53.2417 8.82157 53.0116 8.25725C52.7526 7.65814 52.5893 7.0216 52.5279 6.37121C52.4223 5.29189 52.5887 4.20321 53.0116 3.2056C53.1222 2.9468 53.2529 2.69721 53.4026 2.45918C53.5588 2.22308 53.7339 2.00019 53.9261 1.79274C54.1675 1.54346 54.434 1.32011 54.7213 1.12629L54.8405 1.04632C55.1249 0.837031 55.4316 0.660433 55.755 0.519827C56.001 0.420692 56.2534 0.338311 56.5104 0.273242L56.6694 0.233256C56.9715 0.168166 57.2767 0.119225 57.5839 0.0866378C57.8887 0.0866378 58.1935 0.0333222 58.4983 0.0199933L59.2405 0.00666445H72.2284ZM45.7225 18.7604L46.2063 20H43.072L42.9394 19.6734L42.025 17.4342L41.1105 15.1949L40.1961 12.949L39.2882 10.7098L38.3738 8.46385L37.4792 6.22459L36.5648 4.00533L36.2666 3.28557L35.6503 4.77841L34.7359 7.02432L33.7949 9.26358L32.8805 11.5095L31.966 13.7488L31.0781 16.0013L30.1636 18.2406L29.4413 20H26.3269L26.5058 19.5601L27.4203 17.3342L28.3347 15.0883L29.2492 12.8491L30.1636 10.6031L31.0781 8.36388L31.9925 6.11796L32.907 3.87871L33.7949 1.61946L34.4576 0.00666445H38.0359L38.3738 0.826391L39.2882 3.06564L40.216 5.33822L41.1304 7.58414L42.0449 9.82339L42.9593 12.0693L43.8738 14.3086L44.7882 16.5545L45.7225 18.7604Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14 -1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header stage">
+  <div class="container">
+    <a class="brand" href="../../" aria-label="LaserCube User Wiki home">
+      <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+      <span class="brand-sep"></span>
+      <span class="brand-name">User Wiki</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../academy/">Academy</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="../../#videos">Tutorials</a>
+      <a href="../../#downloads">Downloads</a>
+      <a href="https://www.laseros.com/">laseros.com</a>
+    </nav>
+    <div class="header-actions">
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="../../academy/">Academy</a>
+          <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+          <a href="../../#videos">Tutorials</a>
+          <a href="../../#downloads">Downloads</a>
+          <a href="https://www.laseros.com/">laseros.com</a>
+        </nav>
+      </details>
+      <button class="icon-btn" type="button" id="theme-toggle" aria-label="Switch between light and dark theme">
+        <svg class="icon theme-light-icon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-dark-icon"><use href="#i-sun"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero stage start-hero">
+    <div class="container">
+      <p class="label">Quick start</p>
+      <h1>LaserCube Ultra MK2</h1>
+      <p class="lead">From the box to your first projection in five short steps. Each has a video, the key points, and where to read more.</p>
+      <ul class="switch" aria-label="Choose your model"><li><span aria-current="page">Ultra MK2</span></li><li><a href="../pro/">Pro</a></li><li><a href="../wifi/">WiFi</a></li></ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="course-grid start-grid">
+      <nav class="toc" aria-label="Steps">
+        <ol>
+        <li><a href="#getting-to-know-your-lasercube"><span class="st">1</span>Getting to know your LaserCube</a></li>
+        <li><a href="#turning-on-your-device"><span class="st">2</span>Turning on your device</a></li>
+        <li><a href="#connecting-your-lasercube"><span class="st">3</span>Connecting your LaserCube</a></li>
+        <li><a href="#getting-started-with-laseros"><span class="st">4</span>Getting started with LaserOS</a></li>
+        <li><a href="#using-your-lasercube"><span class="st">5</span>Using your LaserCube</a></li>
+        </ol>
+        <p class="other">Another model?<a href="../pro/">LaserCube Pro</a><a href="../wifi/">LaserCube WiFi</a><a href="../">All models</a></p>
+      </nav>
+      <div class="steps-col">
+        <div class="safety">
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon" aria-hidden="true"><use href="#i-warn"/></svg>Class 4 laser product</span>
+    <p>Laser radiation: avoid eye or skin exposure to direct or scattered radiation. Before using this product, read and follow all notices and safety information. Our free course <a class="link" href="../../academy/start-here/">Start here: from the box to your first safe show</a> takes you through the safety rules step by step; the full text is in the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#safety-guidelines-and-proper-usage">manual</a>.</p>
+  </div>
+</div>
+
+        <nav class="start-nav" aria-label="Steps">
+          <ol>
+        <li><a href="#getting-to-know-your-lasercube"><span class="st">1</span>Getting to know your LaserCube</a></li>
+        <li><a href="#turning-on-your-device"><span class="st">2</span>Turning on your device</a></li>
+        <li><a href="#connecting-your-lasercube"><span class="st">3</span>Connecting your LaserCube</a></li>
+        <li><a href="#getting-started-with-laseros"><span class="st">4</span>Getting started with LaserOS</a></li>
+        <li><a href="#using-your-lasercube"><span class="st">5</span>Using your LaserCube</a></li>
+        </ol>
+        </nav>
+<section class="step" id="getting-to-know-your-lasercube" aria-labelledby="getting-to-know-your-lasercube-h">
+  <p class="label">Step 1 of 5</p>
+  <h2 id="getting-to-know-your-lasercube-h">Getting to know your LaserCube</h2>
+  <p class="intro">Before you switch anything on, see what came in the box and learn what the parts of your cube do. Most of them are there for safety.</p>
+  <div class="video" data-yt="xgV1FQHKFsQ" data-title="LaserCube Beginners guide: unboxing of the LaserCube">
+    <button type="button" aria-label="Play video: LaserCube Beginners guide, unboxing"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/xgV1FQHKFsQ.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Beginners guide, part 1: unboxing</span><a href="https://www.youtube.com/watch?v=xgV1FQHKFsQ" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <p class="small video-note">The video says the rain cover helps if you perform outdoors in the rain: light rain is OK only with the cube’s own rain cover on; never run the cube in heavy rain. It also says never to point at moving cars: never aim at any vehicle, parked or moving, as the label on the cube says.</p>
+  <h3>In the box</h3>
+  <ul class="points">
+    <li>The cube in its protective case, with its 19V charger (with a plug or cable for your country).</li>
+    <li>An Ethernet cable, and a USB‑C to Ethernet adapter for a cable to a phone or laptop.</li>
+    <li>Spare safety keys, and interlock jumpers: small plugs for the RJ45 interlock connectors on the back. US units come with an E‑Stop instead.</li>
+    <li>WiFi antennas, a clamp adapter for fitting your own clamp, and a steel safety loop with a carabiner, for the safety cable through the eye bolt when the cube is mounted at height.</li>
+    <li>A pre‑loaded micro SD card.</li>
+    <li>The DJX, STAGE and STADIUM bundles add accessories, and outside the USA a STADIUM bundle also has an E‑Stop. The product page lists what each bundle has.</li>
+  </ul>
+  <h3>The parts to know first</h3>
+  <ul class="points">
+    <li><strong>Laser aperture:</strong> the window the laser light comes out of.</li>
+    <li><strong>Beam block:</strong> blocks the beam and stops it from scanning into the audience. The screws on either side lock it.</li>
+    <li><strong>Safety key:</strong> stops the laser from being switched on by accident. After a power loss, or when the interlock is opened and closed again, the key has to be reset.</li>
+    <li><strong>E‑STOP (interlock) ports:</strong> two network‑style (RJ45) sockets for the safety shut‑off. The safety jumper or an E‑Stop plugs in here. Never plug network (Ethernet) devices into them.</li>
+    <li><strong>EMISSION LEDs:</strong> when they’re lit, the laser can emit. Never cover them.</li>
+  </ul>
+  <p>On the back, the Ultra MK2 also has ILDA In and Out, full‑size XLR DMX In and Out, an Ethernet port, audio line in and out, a USB port, the micro SD card slot, and the CubeOS screen with its knob. The manual’s parts diagram names every one.</p>
+  <p class="manual-links">Go deeper: <a href="../../academy/start-here/#lesson-1">Academy: Know your LaserCube</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#whats-in-the-box">Manual: What’s in the Box</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#lasercube-parts-diagram">Parts diagram</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#accessories">Accessories</a></p>
+</section>
+
+<section class="step" id="turning-on-your-device" aria-labelledby="turning-on-your-device-h">
+  <p class="label">Step 2 of 5</p>
+  <h2 id="turning-on-your-device-h">Turning on your device</h2>
+  <p class="intro">The laser only emits when the interlock is closed and the key is on. Learn how to stop it before you ever start it.</p>
+  <div class="note"><p><strong>How to stop the laser.</strong> Turn the key to OFF, or press the big red button on the E‑Stop. Pulling out the charger is not a way to stop: the Ultra MK2 and Pro keep running on their battery.</p></div>
+  <h3>Power</h3>
+  <ul class="points">
+    <li>Charge through the 19V DC input. The charging LED is red while charging and green when full.</li>
+    <li>Turn the cube on with the power switch. The LCD shows CubeOS: turn and push the rotary knob to move through the menus.</li>
+    <li>The status bar at the bottom of the screen shows important messages and warnings.</li>
+  </ul>
+  <div class="note"><p><strong>Before the key goes to ON, set the beam block</strong>, with the cube switched off and the key out, so no beam can scan into an audience area (<a class="link" href="#using-your-lasercube">step 5</a>). If the cube is in Playlist control mode, it starts the last playlist as soon as the interlock is enabled (“Power‑On Play” is on by default).</p></div>
+  <h3>Outside the US: the safety jumper</h3>
+  <ol class="points">
+    <li>Plug the safety jumper into one of the two E‑STOP ports.</li>
+    <li>Insert the safety key and turn it from OFF to ON. The EMISSION LEDs light up: the cube can now emit laser light.</li>
+    <li>To stop emission, turn the key from ON to OFF and take it out.</li>
+  </ol>
+  <div class="video" data-yt="oGT2Pm7dwJY" data-from="4" data-to="55" data-title="5 common mistakes Laserists may face with - part I">
+    <button type="button" aria-label="Play video: five common mistakes, mistake 1, the start order"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/connect/l6-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Five common mistakes, part 1: the start order: jumper and key in, switch on, then the key to ON (0:04 to 0:55)</span><a href="https://www.youtube.com/watch?v=oGT2Pm7dwJY&amp;t=4s" target="_blank" rel="noopener">Watch on YouTube, from 0:04</a></p>
+  <p class="small video-note">The clip shows the safety jumper; a US cube starts with the E‑Stop instead (below).</p>
+  <h3>With an E‑Stop (required in the US)</h3>
+  <p>US cubes come without the jumper. They must run with the E‑Stop that comes with them (an FDA requirement), and the laser won’t work without it. Outside the US the E‑Stop is optional (the STADIUM bundle comes with one); if your E‑Stop has no key, skip the step with the pendant key.</p>
+  <ol class="points">
+    <li>Connect the E‑Stop pendant to the cube.</li>
+    <li>Turn the key on the cube to ON.</li>
+    <li>If the red STOP button is pushed in, turn it clockwise until you can pull it up.</li>
+    <li>Turn the key on the pendant clockwise to ON (if it has one). The EMISSION LEDs flash slowly, once every 3 seconds.</li>
+    <li>After the second flash, briefly press the green START button. The LEDs flash once a second; after 10 seconds they stay on and the laser can emit.</li>
+  </ol>
+  <div class="video" data-yt="UYQt4zhQks8" data-from="116" data-to="136" data-title="LaserCube Beginners guide: first start">
+    <button type="button" aria-label="Play video: LaserCube Beginners guide, first start"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/UYQt4zhQks8.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Beginners guide, part 2: the E‑Stop start on a US cube, from the slow flashes to armed (1:56 to 2:16)</span><a href="https://www.youtube.com/watch?v=UYQt4zhQks8&amp;t=116s" target="_blank" rel="noopener">Watch on YouTube, from 1:56</a></p>
+  <p>When the cube has lost power, or after the interlock has been opened and closed again, the laser won’t start by itself. Reset the key first (turn it to OFF, then back to ON), and with an E‑Stop connected, do the E‑Stop start again.</p>
+  <p class="manual-links">Go deeper: <a href="../../academy/start-here/#lesson-6">Academy: Key, interlock and E‑Stop</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#enabling-the-laser-e-stop--interlock">Manual: E‑Stop / interlock</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#e-stop-setup-guide">E‑Stop setup guide</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#power-battery-and-temperature">Power, battery and temperature</a></p>
+</section>
+
+<section class="step" id="connecting-your-lasercube" aria-labelledby="connecting-your-lasercube-h">
+  <p class="label">Step 3 of 5</p>
+  <h2 id="connecting-your-lasercube-h">Connecting your LaserCube</h2>
+  <p class="intro">The cube needs a network connection when something streams to it or controls it over the network: LaserOS and other show software, an Art‑Net desk, or the web apps in your browser.</p>
+  <div class="video" data-yt="hFmpDOsEG_k" data-to="147" data-title="LaserCube Beginners guide pt. 4: Connection modes">
+    <button type="button" aria-label="Play video: connection modes, the cube’s own WiFi with a phone"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/connect/l1-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Beginners guide, part 4: the four modes, then a phone on the cube’s own WiFi (0:00 to 2:27)</span><a href="https://www.youtube.com/watch?v=hFmpDOsEG_k" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <h3>Connect over the cube’s own WiFi</h3>
+  <ol class="points">
+    <li>Connect the WiFi antenna that comes with the cube: the manual says to do this before using any wireless mode.</li>
+    <li>On the cube, choose Settings → Connection → WiFi Server. On firmware older than 2.1, changing the connection mode restarts the cube: select YES and push the knob. Firmware 2.1 and later switch without a restart.</li>
+    <li>On your phone or computer, join the cube’s WiFi. By default it’s called <strong>LaserCube</strong> and the password is <strong>Laser2020</strong>. You can change both under Settings → Network → WiFi Server.</li>
+  </ol>
+  <h3>The four connection modes</h3>
+  <ul class="points">
+    <li><strong>WiFi Server:</strong> the cube makes its own WiFi network, and your phone or computer joins it. The manual suggests it for one cube without cables, where WiFi isn’t congested.</li>
+    <li><strong>WiFi Client:</strong> the cube joins your WiFi router. How well it works depends on the router, how congested the WiFi is and how much other traffic is on the network.</li>
+    <li><strong>LAN Client:</strong> the cube joins your network through a network cable, to a router or a switch. The manual recommends it for several cubes, and where WiFi may be congested.</li>
+    <li><strong>LAN Server:</strong> a cable straight to one device, such as a laptop, or a phone with the USB‑C to Ethernet adapter that comes with the cube. The cube gives that device its network address.</li>
+  </ul>
+  <p>Settings → Connection chooses the mode, and Settings → Network holds each mode’s own settings, such as network names, passwords and addresses. The status bar shows the connection mode, with a tick once it’s connected.</p>
+  <p class="manual-links">Go deeper: <a href="../../academy/connect/">Academy: Connect, update and troubleshoot</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#connection-settings">Manual: Connection settings</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#network-settings">Network settings</a></p>
+</section>
+
+<section class="step" id="getting-started-with-laseros" aria-labelledby="getting-started-with-laseros-h">
+  <p class="label">Step 4 of 5</p>
+  <h2 id="getting-started-with-laseros-h">Getting started with LaserOS</h2>
+  <p class="intro">Get LaserOS for your Windows or Mac computer, or your iOS or Android phone. The phone apps stream to the cube; putting content on its SD card needs the computer version.</p>
+  <div class="btn-row">
+    <a class="btn" href="https://www.laseros.com/tutorials/">LaserOS for Windows and Mac</a>
+    <a class="btn" href="https://apps.apple.com/app/laseros/id1559204525">iPhone and iPad</a>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.wickedlasers.laserOS">Android</a>
+  </div>
+  <div class="video" data-yt="6arsXfVjRHg" data-to="279" data-title="LaserCube Beginners guide pt. 5: Control modes - LaserOS">
+    <button type="button" aria-label="Play video: beginners guide part 5, control modes, LaserOS"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/home/videos/6arsXfVjRHg.webp" alt="" width="640" height="360" loading="lazy">
+  </div>
+  <p class="video-meta"><span>Beginners guide, part 5: control modes, LaserOS (0:00 to 4:39)</span><a href="https://www.youtube.com/watch?v=6arsXfVjRHg" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <p class="small video-note">The video arms a cube with the safety jumper. In the US the cube runs with an E‑Stop instead (step 2).</p>
+  <h3>Your first connection to LaserOS</h3>
+  <ol class="points">
+    <li>On the cube, choose Control Mode → LaserOS.</li>
+    <li>Connect your phone or computer to the cube (<a class="link" href="#connecting-your-lasercube">step 3</a>).</li>
+    <li>Open LaserOS. It finds the connected cube: on a computer, the Laser button at the top left then reads LASER OFF, with a red power symbol. If it reads NO LASER, LaserOS hasn’t found the cube: close LaserOS, connect the cube, then start LaserOS again.</li>
+    <li>Don’t start the laser yet: first set the beam block, so no beam can scan into an audience area (<a class="link" href="#using-your-lasercube">step 5</a>).</li>
+    <li>Once the beam block is set, with the interlock closed and the key on (step 2), click the Laser button: it reads LASER ON. Click it again, or press Esc, to stop. In the phone app, use the power button in the middle of the bottom bar: red when the projection is off, blue when it’s on. If the cube isn’t armed, LaserOS shows the message “Interlock is not enabled on cube”.</li>
+  </ol>
+  <p class="manual-links">Go deeper: <a href="../../academy/start-here/#lesson-7">Academy: Switch on and connect LaserOS</a><span class="sep">·</span><a href="../../academy/laseros-basics/">Academy: LaserOS basics</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#laseros-control-mode">Manual: LaserOS control mode</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#the-laser-button">The Laser button</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#making-content-in-laseros">Making Content in LaserOS</a></p>
+</section>
+
+<section class="step" id="using-your-lasercube" aria-labelledby="using-your-lasercube-h">
+  <p class="label">Step 5 of 5</p>
+  <h2 id="using-your-lasercube-h">Using your LaserCube</h2>
+  <p class="intro">Before any show where people may be present, set the beam block, then add a safety zone. A zone works on top of the beam block and the 3 m rule, never instead of them.</p>
+  <h3>Set the beam block</h3>
+  <p>The beam block is your hard stop: whatever the software does, the beam can’t get past it.</p>
+  <ol class="points">
+    <li>Switch the cube off and take the key out.</li>
+    <li>Aim the cube and lock it in place.</li>
+    <li>Adjust the beam block, then lock it with the screws on either side.</li>
+    <li>Switch on and project a full‑size test image at low brightness: the RGB‑THold test pattern (Settings → Projection → Test Patterns) draws a border round the projection area. Stand beside or behind the cube, never in front of it, and look where the beams go.</li>
+    <li>Repeat until no beam can scan into any audience area, and every beam stays at least 3 m (10 ft) above people.</li>
+  </ol>
+  <h3>Add a safety zone</h3>
+  <div class="warn">
+    <span class="warn-tag"><svg class="icon" aria-hidden="true"><use href="#i-warn"/></svg>A zone doesn’t protect people</span>
+    <p>In the clip below, the video cuts a zone around a face drawn on a box and calls it “absolutely safe”. That is wrong: no zone, inverted or not, makes it safe to aim at people. Never aim a LaserCube at people, zone or not.</p>
+  </div>
+  <div class="video" data-yt="0CMHLSTWcWY" data-from="52" data-to="208" data-title="LaserCube and LaserOS Safety Zones - How to set them up?">
+    <button type="button" aria-label="Play video: LaserCube and LaserOS safety zones, part 1: one zone in LaserOS on a computer"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+    <img src="../../images/academy/start-here/l8-clip1.webp" alt="" width="1280" height="720" loading="lazy">
+  </div>
+  <p class="video-meta"><span>LaserCube and LaserOS safety zones: one zone in LaserOS on a computer (0:52 to 3:28)</span><a href="https://www.youtube.com/watch?v=0CMHLSTWcWY&amp;t=52s" target="_blank" rel="noopener">Watch on YouTube, from 0:52</a></p>
+  <ul class="points">
+    <li>A keep‑within zone (the default) marks where beams may go; beams outside it are reduced. Use it for the target area where beams can safely end.</li>
+    <li>Invert it and it becomes a keep‑out zone: beams inside it are reduced. Use it to keep beams off something, such as a camera or a video projector.</li>
+    <li>In LaserOS control mode, LaserOS handles the safety zone, so the cube greys out its own Safety Zone entry. In the cube’s own modes, such as Visualizer or Playlist, the zone set on the cube applies.</li>
+  </ul>
+  <h3>Then make it yours</h3>
+  <ul class="next">
+    <li><a href="../../academy/start-here/"><strong>Start here: from the box to your first safe show</strong><span>The full beginner course: the safety rules, planning and mounting, a checklist for every show, and a certificate.</span></a></li>
+    <li><a href="../../academy/laseros-basics/"><strong>LaserOS basics: your logo, text and effects</strong><span>Find your way around LaserOS, project your own text and logo, and play it all with playlists.</span></a></li>
+    <li><a href="../../academy/control-modes/"><strong>Control modes for the Ultra MK2 and Pro</strong><span>Playlists, visualizers and laser shows from the cube itself, and DMX, Art‑Net and MIDI.</span></a></li>
+    <li><a href="../../#videos"><strong>Tutorials</strong><span>Short videos, one task each.</span></a></li>
+    <li><a href="../../docs/guides/ultra-mk2-pro-manual/"><strong>The manual</strong><span>Every setting, port, spec and DMX channel.</span></a></li>
+    <li><a href="../../docs/guides/ultra-mk2-pro-manual/#troubleshooting"><strong>Troubleshooting</strong><span>Something not working? Symptom, cause and fix.</span></a></li>
+  </ul>
+  <p style="margin-top:22px">Stuck? Email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a>.</p>
+  <p class="manual-links">Go deeper: <a href="../../academy/start-here/#lesson-8">Academy: Beam block and safety zones</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zone">Manual: Safety zone on the cube</a><span class="sep">·</span><a href="../../academy/start-here/#lesson-10">Before every show</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#hardware-installation">Manual: Hardware installation</a><span class="sep">·</span><a href="../../docs/guides/ultra-mk2-pro-manual/#safety-zones-in-laseros">Safety zones in LaserOS</a></p>
+</section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="wordmark" viewBox="0 0 234 20" role="img" aria-label="LaserCube"><use href="#wordmark"/></svg>
+    <nav aria-label="Footer">
+      <a href="https://www.laseros.com/">laseros.com</a>
+      <a href="../../">User Wiki</a>
+      <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
+      <a href="https://www.laseros.com/faq/">FAQ</a>
+      <a href="mailto:support@laseros.com">Email support</a>
+      <a href="https://www.laseros.com/privacy-policy/">Privacy</a>
+    </nav>
+    <span class="copy">© Wicked Lasers</span>
+  </div>
+</footer>
+<script src="../../academy/academy.js?v=20261010b"></script>
+</body>
+</html>
