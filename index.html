@@ -849,6 +849,10 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   // Keys stay words the manual doesn't use ("class" would catch laser class searches), and a word of one or two
   // letters must be a whole word, so "ce certificate" stays with the manual.
   var PAGES = [
+    ["Quick start", "start/", "Quick start: pick your model", "Five steps from the box, for each model", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
+    ["Quick start", "start/ultra-mk2/", "Quick start: LaserCube Ultra MK2", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
+    ["Quick start", "start/pro/", "Quick start: LaserCube Pro", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
+    ["Quick start", "start/wifi/", "Quick start: LaserCube WiFi", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Academy", "academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses lesson lessons learn training quiz certificate", "online"],
     ["Academy", "academy/start-here/", "Start here: from the box to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners", "safety safe first show setup mount estop e-stop key zones laseros checklist"],
     ["Academy", "academy/laseros-basics/", "LaserOS basics: your logo, text and effects", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate", "laseros logo text effects trace movement strobe import svg flicker render quality playlist autoplay midi apc colour color mono ttl"],
@@ -1006,12 +1010,14 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     function pageRow(p) { return row(p.href, mark(p.title, ts), p.path, "", "", /^https?:/.test(p.href)); }
     function group(name, rows) { return rows ? '<div class="hint" aria-hidden="true">' + name + "</div>" + rows : ""; }
     function rows(grp, named) { return pgs.filter(function (r) { return r.p.group === grp && (named === undefined || r.named === named); }).map(function (r) { return pageRow(r.p); }).join(""); }
+    var quick = group("Quick start", rows("Quick start", false)); // "quick start", "unboxing": the start pages first
+    var quickTitled = group("Quick start", rows("Quick start", true)); // found by a model name in the title: after everything else
     var academy = group("Academy", rows("Academy", false));
     var titled = group("Academy courses", rows("Academy", true)); // a course whose title matches, without "course" or "academy" in the search
     var manual = group("Manual", secs.map(function (e) { return row(MANUAL + "#" + e.id, mark(e.title, ts), e.path, snippet(e.text, ts)); }).join(""));
     var tutorials = group("Tutorials", rows("Tutorials", false) +
       vids.map(function (v) { return row("https://www.youtube.com/watch?v=" + v.id, mark(v.title, ts), "Video · YouTube", "", "images/home/videos/" + v.id + ".webp", true); }).join(""));
-    return academy + (compile(ts).some(function (c) { return isKey(c, TUTORIAL_KEYS); }) ? tutorials + manual : manual + tutorials) + titled;
+    return quick + academy + (compile(ts).some(function (c) { return isKey(c, TUTORIAL_KEYS); }) ? tutorials + manual : manual + tutorials) + titled + quickTitled;
   }
 
   function snippet(text, ts) {

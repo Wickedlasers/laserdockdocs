@@ -164,7 +164,9 @@ redirects point at them, so never rename them.
 - **The WiFi page stands alone.** It is the only WiFi page on the wiki and shares no text with the other two, so it
   can be listed or unlisted on its own (the picker in `start/`, the other pages' model switch, the homepage's "Which
   LaserCube do you have?"). The page itself always stays: owners and printed codes need it.
-- Not in the header menu and not in the search's `PAGES` lists yet.
+- **Search:** the `PAGES` lists on the homepage and in the manual have a "Quick start" group (keys `quickstart quick unbox
+  unboxing`): a search with one of those words shows the start pages first; a model name alone ("ultra") finds them
+  only after everything else. Not in the header menu (the homepage's "Which LaserCube do you have?" row links them).
 
 ## Academy (`academy/`)
 
