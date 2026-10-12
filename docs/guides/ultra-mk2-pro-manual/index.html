@@ -427,7 +427,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li><a href="#hardware-installation"><span class="ico"><svg class="icon"><use href="#i-cube"/></svg></span><span><strong>Hardware installation</strong><span class="d">Beam block, aiming and warning signs</span></span></a></li>
         <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet, DMX, IDN and Ether Dream</span></span></a></li>
         <li><a href="#dmxart-net-channel-layout"><span class="ico"><svg class="icon"><use href="#i-grid"/></svg></span><span><strong>DMX channels</strong><span class="d">What each of the 16 channels does</span></span></a></li>
-        <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card, LaserOS or the web admin page</span></span></a></li>
+        <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card or the web admin page</span></span></a></li>
         <li><a href="#factory-reset-procedure"><span class="ico"><svg class="icon"><use href="#i-reset"/></svg></span><span><strong>Factory reset</strong><span class="d">Back to factory firmware and default settings</span></span></a></li>
       </ul>
       <p class="start-note">New to LaserCube? Take the free <a href="../../../academy/start-here/">LaserCube Academy course</a> or watch the <a href="../../../#start-h">beginner’s video guide</a>. Something not working? See <a href="#troubleshooting">Troubleshooting</a>.</p>
@@ -3155,6 +3155,8 @@ in LAN Server mode, where it provides a DHCP service.</p>
 <h1 id="firmware-update"><span id="anchor-150"></span>Firmware Update<a href="#firmware-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The boot screen shows the firmware version when the LaserCube starts
 (firmware 2.0 and later).</p>
+<p>There are two ways to update. The LaserOS app doesn’t update the Ultra MK2 or Pro: its own firmware update is for
+the LaserCube WiFi and the first-generation Ultra.</p>
 <p>1. Via SD Card. This is the preferred update method. If the SD Card has
 a more recent firmware on it, you will be prompted to allow a firmware
 update. The latest SD card contents on our GitHub
@@ -3178,7 +3180,6 @@ most recent OTA update binary from the <strong>Lasercube/Firmware</strong> folde
 <p>Go to the Update Tab. Click Choose File and select the update binary.</p>
 <p>Click Upload.</p>
 <p>Wait for the update to complete and the LaserCube reboot.</p>
-<p>LaserOS doesn’t update the Ultra MK2 or Pro firmware: its own firmware update is for the LaserCube WiFi.</p>
 <h1 id="factory-reset-procedure"><span id="anchor-151"></span>Factory Reset Procedure<a href="#factory-reset-procedure" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>If you need to reset the LaserCube back to its factory firmware
 defaults, you can perform the factory reset as shown below. This should
@@ -3661,7 +3662,7 @@ playlists and MIDI mappings from the old folder into the new one.</li><li>With t
 asks to update the firmware, accept.</li><li>Don’t switch the cube off during the update. It takes one to two
 minutes and shows its progress in percent. When the screen says F/W
 Updated, press OK.</li></ol>
-<p>The other ways are in <a href="#firmware-update">Firmware Update</a>.</p>
+<p>The other way, by hand through the web admin page, is in <a href="#firmware-update">Firmware Update</a>.</p>
 <h3 id="web-app-images-missing-after-an-update">Web App Images Missing After an Update<a href="#web-app-images-missing-after-an-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> the SD card doesn’t have all of the latest SD
 card contents, for example when only the firmware file was copied to
