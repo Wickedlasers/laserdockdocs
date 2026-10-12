@@ -982,8 +982,8 @@ using the import app within LaserOS.</p>
 <p>Select the import app, then select the playlist you wish to import
 content into, then click the import files button.</p>
 <p>Note: If you have an animated SVG then you would click the “import
-folder with SVG animation instead”. See the LaserOS video tutorials on
-laserOS.com for more info on this feature.</p>
+folder with SVG animation instead”. See <a href="#svg-animations">SVG
+Animations</a> for how to name and import the frames.</p>
 <p>Select the SVG file you wish to add using the file browser window which
 appears after clicking the “import File button”</p>
 <img src="Pictures/web/100000010000045D00000280FB86CC44-1080.webp" width="540" height="309" alt="" loading="lazy" decoding="async">
@@ -1747,9 +1747,10 @@ shows to the cube. To install LaserOS and connect it to the cube, see
 <p>This chapter covers LaserOS’s own tools: moving and tracing a picture,
 sound settings, text, the clock and timers, your own logo, video from a
 camera or another app, drawing and simple mapping, Beam Creator, the
-Timeline, shows for several cubes, LaserOS’s safety zones and MIDI
-controllers. The screens are from LaserOS 0.18 on a Mac and an iPhone.
-Menus can differ slightly in other versions.</p>
+Timeline, shows for several cubes, LaserOS’s safety zones, MIDI
+controllers, and the games, Laser Harp and Light Painting apps. The
+screens are from LaserOS 0.18 on a Mac and an iPhone. Menus can differ
+slightly in other versions.</p>
 <h2 id="the-laseros-screen">The LaserOS Screen<a href="#the-laseros-screen" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>On a computer, the preview and the main controls are on the left. Next
 to them is the list of apps: Abstracts, Visualizers, Dancers, Animations,
@@ -1809,7 +1810,9 @@ switch.</p>
 <h3 id="projector-info">Projector Info<a href="#projector-info" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Info shows the connected cube’s model name and firmware version, its
 temperature and battery level, the connection mode and whether the
-interlock is enabled.</p>
+interlock is enabled. It also shows the DAC Rate, the points per second
+LaserOS is sending, and the cube’s MAX DAC Rate (see
+<a href="#scan-rate">Scan Rate</a>).</p>
 <h3 id="image-settings-in-laseros">Image Settings in LaserOS<a href="#image-settings-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Image sets the size and position of the whole picture: Zoom X and Y,
 Position X and Y, Rotate, Flip X and Flip Y, and the keystone corners.
@@ -1878,7 +1881,8 @@ dark in quiet parts. While Blackout is on, the preview shows a Blackout tag.</li
 at the top and choose Audio: it has the same Sound gate and Blackout.</p>
 <h2 id="projecting-text">Projecting Text<a href="#projecting-text" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>Text projects your own words. In the phone app, type in the Add Text box: with the laser
-on, the cube shows each letter as you type.</p>
+on, the cube shows each letter as you type. On a computer and on the
+phone, the Add Text box takes up to 200 characters.</p>
 <ul><li>Font: the typeface.</li><li>Style: Gradient, Striped, Rainbow, 3D, 3D rotate or No Style.</li><li>Size and Spacing: the size of the letters and the gap between
 them.</li><li>Speed and Direction (Left, Right, Up or Down): make the text
 scroll.</li></ul>
@@ -1908,10 +1912,26 @@ Playlist</a>.</p>
 you pick another).</li><li>Tap Import… and pick the file in the phone’s file browser. You can
 also paste a file’s web address under Import from URL.</li><li>With Open imported in “Playlists” on, the imported item opens
 straight away. Tap it to play it.</li></ol>
+<p>Text in a logo: LaserOS reads the shapes in an SVG file but skips live
+text, so text that is still a text object doesn’t show. In your design
+program, convert the text to outlines (paths), then save the SVG.</p>
 <p>Movement, Strobe and the effects work on any logo. Trace works on an SVG
 or ILD logo; on a PNG, JPG or BMP logo its switch is greyed out. If it
 flickers, see <a href="#flicker-and-render-quality">Flicker and Render
 Quality</a>.</p>
+<h3 id="svg-animations">SVG Animations<a href="#svg-animations" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>An animated logo is a folder of SVG files, one per frame. Give them one
+base name and a running number with the same number of digits, for
+example seq-001.svg, seq-002.svg, seq-003.svg. Each frame is drawn on its
+own, so keep every frame simple. On a computer:</p>
+<ol><li>In the Import app, choose the Import location (the playlist it goes
+to) and click Import folder with SVG animation.</li><li>Under Select Folder, click Browse… and pick the folder.</li><li>Enter the File prefix (seq- in the example) and the Mask Size, the
+number of digits (3 in the example). FPS and BPM set its speed. Click
+Ok.</li></ol>
+<p>The phone app can’t import a folder. Import the animation into one of
+your playlists on a computer, then move that playlist to the phone (see
+<a href="#moving-a-playlist-to-the-phone">Moving a Playlist to the
+Phone</a>).</p>
 <h2 id="cast-and-video-input">Cast and Video Input<a href="#cast-and-video-input" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The Cast app draws a live picture as laser outlines. On a computer, it takes the picture from Settings → Video
 Input: Webcam (a camera), Desktop (the computer’s screen) or, on a Mac,
@@ -2123,6 +2143,16 @@ Cube</a>).</p>
 <p>To change the order of a playlist you made, on a computer: open it in
 the Playlists app and drag an item to its new place, or select the item and
 press Shift+Up or Shift+Down.</p>
+<h3 id="moving-a-playlist-to-the-phone">Moving a Playlist to the Phone<a href="#moving-a-playlist-to-the-phone" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>A playlist made in LaserOS on a computer can go to the phone app with
+your own content in it (LaserOS 0.17 or later on both):</p>
+<ol><li>On the computer, open Playlists, open your playlist and click Export
+(the share icon). LaserOS saves a .ldplz file with your own items in it,
+such as drawings and imported SVG and ILD files.</li><li>Copy the file to your phone or tablet.</li><li>In the phone app, open Playlists, tap the gear at the top right, then
+Import Playlist, and pick the file.</li></ol>
+<p>The phone app can’t export, so this works from the computer to the
+phone only. To move a playlist to another computer, use the Import button
+in that computer’s Playlists app.</p>
 <h3 id="autoplay">Autoplay<a href="#autoplay" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Autoplay moves from one item to the next by itself. Its buttons are
 under the preview on a computer and in the bottom bar on the phone:
@@ -2144,6 +2174,14 @@ right-click the item and turn on Assign Render Quality (see
 Playlist</a>). In the phone app, tap the gear in the player bar, turn on
 Assign Quality and move Render Quality.</li><li>Simplify it. In Draw, keep Points used under 100%. In Beam Creator,
 keep Brightness at 1.</li><li>Make the picture smaller, or split it over more than one cube.</li></ul>
+<h3 id="scan-rate">Scan Rate<a href="#scan-rate" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The scan rate is how many points per second LaserOS sends to the cube.
+LaserOS sets it by itself, so there is nothing to set by hand:</p>
+<ul><li>Each cube runs at the highest rate it supports.</li><li>With several cubes in use, all of them run at the lowest of their
+rates, so a mix of models runs at the slower model’s rate.</li><li>While a Timeline show plays, every cube runs at 30,000 points per
+second.</li></ul>
+<p>The DAC Rate on the Info page shows the rate in use (see
+<a href="#projector-info">Projector Info</a>).</p>
 <h2 id="safety-zones-in-laseros">Safety Zones in LaserOS<a href="#safety-zones-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>In LaserOS control mode, LaserOS handles the safety zone (see
 <a href="#projection-settings">Projection Settings</a>). On a computer,
@@ -2190,6 +2228,44 @@ Playlist, Visualizer or Laser Show mode, see
 <a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI Mapping
 using an APC40 MK2 or APC mini MK2</a>.</p>
 <p class="small">Video: <a href="https://www.youtube.com/watch?v=ySrmnchKcf8&amp;t=705s" rel="external">LaserOS with a MIDI controller</a></p>
+<h2 id="games-laser-harp-and-light-painting">Games, Laser Harp and Light Painting<a href="#games-laser-harp-and-light-painting" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>Three more of LaserOS’s apps.</p>
+<h3 id="games-and-game-controllers">Games and Game Controllers<a href="#games-and-game-controllers" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Open Games and pick a game. On a computer, double-click it, then click
+Start Game: each game lists its keys (such as the arrow keys and Space),
+so you can play with the keyboard. In the phone app, double-tap the game:
+on-screen controls appear.</p>
+<p>A game controller works too, on a computer and in the phone app
+(Android, iPhone and iPad): connect it and LaserOS picks it up. On
+Windows, use a controller that works as an Xbox (XInput)
+controller.</p>
+<h3 id="laser-harp">Laser Harp<a href="#laser-harp" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The Laser Harp is in LaserOS on a computer (Windows or Mac), not in the
+phone app. It turns beams into notes: a camera watches the beams (the
+computer’s webcam or another camera, chosen under Video Input Settings),
+and a note plays when a beam is interrupted. Note count sets the number of
+beams (one note each), and Enable LaserHarp starts it.</p>
+<ul><li>With Auto create on, First/Main note, Musical Scale and Styles set
+the notes of all the beams.</li><li>To set the notes one beam at a time (LaserOS 0.18 or later), turn off
+Auto create. Pick a beam under Edit Harp Note and its note under Select
+Note, or click Assign midi and press a key on a MIDI keyboard. Color Off
+and Color On set that beam’s colours.</li></ul>
+<p>The beam block and the 3&nbsp;m rule in
+<a href="#hardware-installation">Hardware Installation</a> apply to the
+harp’s beams too.</p>
+<h3 id="light-painting">Light Painting<a href="#light-painting" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Light Painting is for long-exposure photos. The laser draws a JPG or
+PNG picture one line at a time, from top to bottom, in the picture’s own
+colours, and a camera on a long exposure records the whole picture. It is
+in LaserOS on a computer and in the phone app.</p>
+<ol><li>Click or tap Import any JPG or PNG file and pick the picture. The
+cube projects the outline of the picture’s area: frame the camera on
+it.</li><li>Set Blank Before Start, the seconds before the drawing starts (time
+to get to your camera), and Exposure time, the seconds the whole picture
+takes. The app suggests at least 15 seconds.</li><li>Click or tap Start, then start the camera’s long exposure before the
+drawing begins, set to the Exposure time.</li></ol>
+<p>For the camera’s position, see <a href="#filming-lasers">Filming
+Lasers</a>.</p>
 <h2 id="playing-your-content-on-the-cube">Playing Your Content on the Cube<a href="#playing-your-content-on-the-cube" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>In LaserOS control mode, LaserOS streams to the cube while it runs. To
 play a playlist on the cube without a computer, export it to the SD card
@@ -3469,6 +3545,11 @@ the local network.</li><li>Older WiFi cubes on the same network: turn on backwar
 in <a href="#general-settings">General Settings</a> (LaserOS 0.17.7 or
 later).</li><li>Use LaserOS 0.18.1 or later (see
 <a href="#installing-laseros-0181-or-later">Installing LaserOS</a>).</li></ul>
+<p><strong>Original USB LaserCube on Windows:</strong> this older cube
+connects by USB. The LaserOS installer adds its USB driver (libusbK), and
+Device Manager then lists the cube under libusbK USB Devices as
+LaserdockInterface0, 1 and 2. If they are missing, try another USB cable
+and port, then install LaserOS again.</p>
 <h3 id="laseros-finds-only-some-of-the-cubes">LaserOS Finds Only Some of the Cubes<a href="#laseros-finds-only-some-of-the-cubes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> usually the missing cube’s network
 settings.</p>
