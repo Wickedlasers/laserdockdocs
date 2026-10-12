@@ -910,7 +910,8 @@ Windows</a><em>.</em></li><li>Double click on the downloaded .exe file to instal
 “more info” to enable the “run anyway option”.&nbsp; Click on “run anyway”.</li></ul>
 <img src="Pictures/web/10000001000004D8000002367B86816B-1240.webp" width="643" height="293" alt="" loading="lazy" decoding="async">
 <h4 id="macos-platform"><span id="anchor-25"></span>macOS Platform<a href="#macos-platform" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
-<ul><li>Follow this link to&nbsp;
+<ul><li>LaserOS 0.18.1 needs macOS 11 (Big Sur) or later: the installer
+doesn’t install on an older macOS.</li><li>Follow this link to&nbsp;
 <a href="https://www.laseros.com/downloads/LaserOS_0.18.1.pkg" rel="external">download and install for
 macOS</a><em>.</em></li><li>Double-click on the .pkg file and run the installer app.</li></ul>
 <p>Follow the instructions for installing LaserOS on your chosen platform,
@@ -988,8 +989,9 @@ appears after clicking the “import File button”</p>
 <img src="Pictures/web/100000010000045D00000280FB86CC44-1080.webp" width="540" height="309" alt="" loading="lazy" decoding="async">
 <p>In our example we are importing the Wicked Lasers Logo as an SVG file.</p>
 <p>The import app will also allow other image file formats (.png, .jpg,
-.ild), but for the best results we recommend using SVG or ILD formats.</p>
-<p>If you select a non vector image format like .jpg or .png then this type
+.bmp, .ild), but for the best results we recommend using SVG or ILD formats.
+GIF files don’t import.</p>
+<p>If you select a non vector image format like .jpg, .png or .bmp then this type
 of image will need to be converted to vector format. A separate popup
 window will be displayed to allow user adjustments of sensitivity, line
 length and other parameters with a live preview of the result, as shown
@@ -1321,13 +1323,14 @@ already selected on all devices.</p></blockquote>
 <img src="Pictures/web/10000000000000F000000140B9E9F4BA-240.webp" width="124" height="165" alt="" loading="lazy" decoding="async">
 <img src="Pictures/web/10000000000000F000000140E48D960F-240.webp" width="124" height="165" alt="" loading="lazy" decoding="async"></p></blockquote>
 <h2 id="visualizer-control-mode"><span id="anchor-46"></span>Visualizer Control Mode<a href="#visualizer-control-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>There are currently 91 audio reactive visuals in the current (v2.0)
-release of the Ultra MK2 / Pro firmware. More visualizers will be added
-in future firmware updates.</p>
+<p>Since firmware 2.1, the Ultra MK2 / Pro has 174 built-in audio reactive
+visualizers. Firmware 2.0 has 91, so a cube still on 2.0 shows 91 until
+it is updated (see <a href="#firmware-update">Firmware Update</a>). More
+visualizers will be added in future firmware updates.</p>
 <p>The factory supplied SD card also includes example MIDI mapping of some
 of these visualizers to the APC40 MK2 / APC mini MK2 grid buttons.</p>
 <img src="Pictures/web/composite-visualizer-1286.webp" width="643" height="268" alt="" loading="lazy" decoding="async">
-<p>CubeOS has 91 built-in audio reactive visualizers, and these can be
+<p>The built-in audio reactive visualizers can be
 manually selected via the drop-down list once an active playlist has
 been selected (or “All” playlist selected)</p>
 <img src="Pictures/web/10000000000000F000000140DDC28B22_hu_de600fe0d1d5bb98-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
@@ -1340,7 +1343,9 @@ which can be set in Settings→Tempo menu on the LCD. The transition time
 when moving between visualizer CUE’s can also be adjusted through the
 Viz Options menu. Auto play at power-on can also be adjusted.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140F448796E_hu_733dacbc21bf3f89-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140C817037D_hu_fe27ee537fc3347b-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<p>Below is the current list of visualizers present in the v2.0 Ultra MK2 / Pro firmware in visualizer ctrl mode:</p>
+<p>Below are the 91 visualizers of the v2.0 Ultra MK2 / Pro firmware in visualizer ctrl mode.
+Firmware 2.1 adds more: classic visuals ported from LaserOS, and new ones
+such as Tesseract, Galaxy Arms, Spiral Stair and Ocean Swell.</p>
 <p>Spectrum, Waveform &amp; Audio Meters (16)</p>
 <div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078FC9B38E8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 1</th><td>FFT spectrum analyser - a row of vertical frequency bars rising from the baseline, coloured across the spectrum.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078BEE9FFB2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 2</th><td>Spectrum-analyser variant drawn in a second bar style.</td></tr>
@@ -1740,7 +1745,8 @@ Android). With the cube in LaserOS control mode, LaserOS streams what it
 shows to the cube. To install LaserOS and connect it to the cube, see
 <a href="#laseros-control-mode">LaserOS Control Mode</a>.</p>
 <p>This chapter covers LaserOS’s own tools: moving and tracing a picture,
-text, your own logo, drawing and simple mapping, Beam Creator, the
+sound settings, text, the clock and timers, your own logo, video from a
+camera or another app, drawing and simple mapping, Beam Creator, the
 Timeline, shows for several cubes, LaserOS’s safety zones and MIDI
 controllers. The screens are from LaserOS 0.18 on a Mac and an iPhone.
 Menus can differ slightly in other versions.</p>
@@ -1857,6 +1863,19 @@ on panel, which adds a small on/off button next to the name of the
 playing item.</p>
 <a href="Pictures/laseros-phone-trace.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/laseros-phone-trace-480.webp" width="240" height="460" alt="The Trace page in the LaserOS phone app: Show on panel, Enable, Audio react, Duration, Fade, Clusters, Sparks and Reset settings. The power button is in the middle of the bottom bar." loading="lazy" decoding="async"></a>
 <p class="small">Video: <a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=155s" rel="external">Trace in the phone app</a></p>
+<h2 id="sound-in-laseros">Sound in LaserOS<a href="#sound-in-laseros" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>In LaserOS control mode, LaserOS handles the audio, so the cube’s own
+<a href="#audio-settings">Audio Settings</a> have no effect. On a computer,
+LaserOS’s sound settings are under Settings → Audio:</p>
+<ul><li>Audio Input: the input LaserOS listens to, from the inputs the
+computer lists. Stub, in the same list, sends silence.</li><li>Volume, and a
+meter that shows the sound level.</li><li>Sound gate: sound quieter than
+the gate counts as silence, so the content doesn’t react to it.</li><li>Blackout:
+switches the laser off whenever the sound is at or below its level. Keep it
+all the way to the left, where its value reads Disabled, or the laser goes
+dark in quiet parts. While Blackout is on, the preview shows a Blackout tag.</li></ul>
+<p>In the phone app, tap the gear at the top right, then tap the page title
+at the top and choose Audio: it has the same Sound gate and Blackout.</p>
 <h2 id="projecting-text">Projecting Text<a href="#projecting-text" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>Text projects your own words. In the phone app, type in the Add Text box: with the laser
 on, the cube shows each letter as you type.</p>
@@ -1870,19 +1889,37 @@ note on animation cycles in
 Playlist</a>.</p>
 <p class="small">Video:
 <a href="https://www.youtube.com/watch?v=9P_NbtqZBCE&amp;t=210s" rel="external">the Text app</a></p>
+<h2 id="clock-timer-and-countdown">Clock, Timer and Countdown<a href="#clock-timer-and-countdown" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Clock app projects the time. On a computer, its drop-down switches
+between Time and Chronograph. Chronograph has two modes:</p>
+<ul><li>Timer counts up: Start, Pause, Resume and Reset.</li><li>Countdown
+counts down from the time you type (hours, minutes and seconds, as
+00:00:00): click Start.</li></ul>
+<p>In the phone app, Chronograph is an app of its own, with the same Timer
+and Countdown.</p>
 <h2 id="importing-your-own-logo">Importing Your Own Logo<a href="#importing-your-own-logo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>On a computer, use the Import app as described in
+<p>LaserOS imports SVG, ILD, PNG, JPG and BMP files; SVG or ILD files give
+the best results. GIF files don’t import. On a computer, use the Import app
+as described in
 <a href="#adding-a-custom-svg-to-the-playlist">Adding a custom SVG to the
-Playlist</a>. SVG or ILD files give the best results.</p>
+Playlist</a>.</p>
 <p>In the phone app, scroll down the main screen to Import:</p>
 <ol><li>Import location sets the playlist the file goes to (Imported, unless
 you pick another).</li><li>Tap Import… and pick the file in the phone’s file browser. You can
 also paste a file’s web address under Import from URL.</li><li>With Open imported in “Playlists” on, the imported item opens
 straight away. Tap it to play it.</li></ol>
 <p>Movement, Strobe and the effects work on any logo. Trace works on an SVG
-or ILD logo; on a PNG or JPG logo its switch is greyed out. If it
+or ILD logo; on a PNG, JPG or BMP logo its switch is greyed out. If it
 flickers, see <a href="#flicker-and-render-quality">Flicker and Render
 Quality</a>.</p>
+<h2 id="cast-and-video-input">Cast and Video Input<a href="#cast-and-video-input" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
+<p>The Cast app draws a live picture as laser outlines, in the picture’s
+own colours. On a computer, it takes the picture from Settings → Video
+Input: Webcam (a camera), Desktop (the computer’s screen) or, on a Mac,
+Syphon.</p>
+<p>Syphon takes the picture from another Mac app that sends it, for example
+Resolume: choose Syphon under Video Input, then pick the app under Server.
+Then open Cast and click Start Cast.</p>
 <h2 id="draw-and-simple-mapping">Draw and Simple Mapping<a href="#draw-and-simple-mapping" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>Draw lets you draw lines and shapes for the cube to project. With the
 laser on, the cube shows each stroke as you draw it, so you can trace the
@@ -2083,6 +2120,10 @@ it, open Playlists and tap your playlist.</p>
 on the cube’s SD card you need LaserOS on a computer (see
 <a href="#playing-your-content-on-the-cube">Playing Your Content on the
 Cube</a>).</p>
+<h4 id="changing-the-playlist-order">Changing the Playlist Order<a href="#changing-the-playlist-order" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
+<p>To change the order of a playlist you made, on a computer: open it in
+the Playlists app and drag an item to its new place, or select the item and
+press Shift+Up or Shift+Down.</p>
 <h3 id="autoplay">Autoplay<a href="#autoplay" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Autoplay moves from one item to the next by itself. Its buttons are
 under the preview on a computer and in the bottom bar on the phone:
@@ -2136,7 +2177,10 @@ into the computer that runs LaserOS instead.</p>
 <a href="Pictures/laseros-midi-settings.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/laseros-midi-settings-666.webp" width="500" height="254" alt="LaserOS Settings, Midi page: an APC40 mkII set as the input and output port, and APC 40 MK2 as the APC model." loading="lazy" decoding="async"></a>
 <ol><li>Open Settings → Midi. Under Input and Output, set Port to your
 controller. For an APC40 MK2 or APC mini MK2, also pick it under APC
-Model.</li><li>To start an item from a pad: right-click the item, pick a pad colour
+Model. The Input port list has every MIDI input the computer lists,
+virtual MIDI ports included, so another program that sends MIDI, such as
+Stream Deck or OBS, can start items and move sliders the same way as a
+controller.</li><li>To start an item from a pad: right-click the item, pick a pad colour
 under Assign APC Color if you like, click Assign Hotkey and press the
 pad. The item then shows the pad’s note.</li><li>To move a slider from a fader or knob: right-click the slider, click
 Link to MIDI Knob and move the fader. Backspace removes the link.</li></ol>
@@ -2448,6 +2492,8 @@ push the rotary knob to confirm. Firmware 2.1 and later change the
 connection mode, IP settings and WiFi credentials without a restart.</p>
 <p>Select the connection type (required for network control via LaserOS,
 ArtNet or Liberation etc.)</p>
+<p>The LaserCube has no Bluetooth: LaserOS reaches it over WiFi or an
+Ethernet cable.</p>
 <p>For multiple LaserCubes, and especially in areas where local WiFi may
 be congested, we recommend using an Ethernet cable in LAN client mode.
 When set to LAN client mode on a network without a DHCP server, the
@@ -3568,7 +3614,9 @@ microphone, or the line input (the pink A-IN jack) with music from a
 computer or other audio device. Then set
 <a href="#max-line-gain--max-mic-gain">Max Line Gain / Max Mic Gain</a>: too
 low and the visualizers hardly change, too high and they are
-overdriven.</p>
+overdriven. In LaserOS control mode, the cube’s audio settings have no
+effect: check LaserOS’s own (see <a href="#sound-in-laseros">Sound in
+LaserOS</a>).</p>
 <h3 id="the-midi-controller-does-nothing">The MIDI Controller Does Nothing<a href="#the-midi-controller-does-nothing" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> USB MIDI is off, or the cube is in a mode that
 doesn’t use it.</p>
