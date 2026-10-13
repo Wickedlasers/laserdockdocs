@@ -41,8 +41,10 @@ Compliance files (`compliance/`): `compliance/eu-declaration-of-conformity.pdf` 
 Declaration of Conformity for the LaserCube (declaration 20261013-000, 13 October 2026; it replaces 20250410-000 of
 10 April 2025 and adds the Pro 3W/6W and Ultra MK2 6W/10W), byte for byte as signed. The manual's "Declaration of
 Conformity" section shows its first page (`Pictures/web/eu-declaration-of-conformity-<date>-440.webp`, made from the PDF
-at 150 dpi) linked to it, and www.laseros.com's Certification rows link the same document. A newer declaration:
-replace the PDF in place (same name, so links keep working), make a new thumbnail and update the caption's model list.
+at 150 dpi) linked to it. www.laseros.com serves its own copies of the same file (/wp-content/uploads/2021/12/EU_DoC.pdf
+and /live-assets/wp-content/uploads/2020/10/EU_DoC.pdf) and page 4 of /manual-mk2.pdf shows it. A newer declaration:
+replace the PDF here in place (same name, so links keep working), make a new thumbnail, update the caption's model list,
+and replace the www copies by hand. Not on 20261013-000: the Ultra MK2 5W and the original USB LaserCube.
 
 The header is a hand copy in each page. Before pushing a menu change, check that every copy matches:
 `grep -n -A7 'class="nav"\|class="menu-panel"' index.html docs/guides/ultra-mk2-pro-manual/index.html 404.html academy/index.html academy/*/index.html`
