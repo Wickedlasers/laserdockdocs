@@ -794,7 +794,8 @@ flashing more quickly, once every second. After 10 seconds the LEDS will
 remain solidly on and the laser will be capable of emission.</p>
 <img src="Pictures/web/10000001000004F3000001A243958368-1102.webp" width="551" height="182" alt="" loading="lazy" decoding="async">
 <p>NOTE: In case of an emergency and you need to stop the laser, press the
-big red button.</p>
+big red button. It switches the laser, the scanners’ power and the fan off;
+the cube itself stays on, and its screen and network keep working.</p>
 <h1 id="hardware-installation"><span id="anchor-15"></span>Hardware Installation<a href="#hardware-installation" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>1. Adjust the beam block with the unit powered off, make sure the key
 is not connected, secure projector aiming, then make adjustments to the
@@ -1041,6 +1042,9 @@ currently supported on the LaserCube.</p>
 <h3 id="exporting-a-playlist-to-the-micro-sd-card"><span id="anchor-32"></span>Exporting a Playlist to the micro SD card<a href="#exporting-a-playlist-to-the-micro-sd-card" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Once you have finished adding CUE’s to your new playlist, you can then
 export the entire playlist to the micro SD card.</p>
+<p>Only playlists go on the card: LaserOS leaves Timeline shows out of an
+SD card export, so a Timeline show plays only from LaserOS on a computer.
+For a show without a computer, build it as a playlist.</p>
 <p>Switch the LaserCube off before you take the micro SD card out. You
 will need to insert the micro SD card provided with the LaserCube
 into a USB 3.x reader and then connect the reader to your PC/Mac.</p>
@@ -2008,7 +2012,9 @@ Positions are measured from the pattern’s centre, so large values push
 part of it out of the projection area.</li><li>Variable Rotation: spins the pattern around its own centre (Rotate
 X, Y or Z).</li><li>Scale: grows or shrinks the pattern, for example from 0.0 to
 1.0.</li><li>Power Fader: fades the power. Fade start-&gt;end from 1.0 to 0.0
-over a few frames makes a single flash.</li><li>Strobe: switches the pattern on and off, set with On Frames and Off
+over a few frames makes a single flash. With Frames above 0 it also shows
+Always Repeat and Repeats: Always Repeat makes it loop, and Dwell adds a
+pause between repeats.</li><li>Strobe: switches the pattern on and off, set with On Frames and Off
 Frames.</li><li>Color Sequence: steps through a number of colours.</li></ul>
 <h3 id="timing-in-frames">Timing in Frames<a href="#timing-in-frames" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Beam Creator counts time in frames. Target FPS sets how many frames
@@ -3777,7 +3783,8 @@ describes. Rename the old Lasercube folder first, so you keep your own
 playlists and MIDI mappings.</li><li>Your own playlist is missing from the playlist drop-down: both its
 .ldpl file and its folder must be on the card (see
 <a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist to
-the micro SD card</a>).</li></ul>
+the micro SD card</a>).</li><li>A Timeline show isn’t on the card: SD card export takes playlists
+only, so build the show as a playlist to play it without a computer.</li></ul>
 <h3 id="laseros-cant-export-to-the-sd-card">LaserOS Can’t Export to the SD Card<a href="#laseros-cant-export-to-the-sd-card" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> the phone app can’t export, or LaserOS doesn’t
 recognise the card.</p>
@@ -3820,6 +3827,10 @@ newer firmware, accept the update the cube then offers. See
 <p>If the problem stays, email
 <a href="mailto:support@laseros.com">support@laseros.com</a> with your order
 number, the model and a short video.</p>
+<p>A problem in LaserOS: Settings &gt; General &gt; Report a bug opens an
+email to <a href="mailto:support@laseros.com">support@laseros.com</a>. On a
+computer, also attach laseros.log and config.ini from Settings &gt; General
+&gt; Open Config Folder; the phone apps can’t attach their log.</p>
 <h1 id="sd-card-information"><span id="anchor-152"></span>SD Card Information<a href="#sd-card-information" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The LaserCube Ultra MK2 / Pro is supplied with a pre-loaded micro SD
 card containing all demo laser shows, Playlists, and MIDI mappings for
