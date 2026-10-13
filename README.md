@@ -37,6 +37,13 @@ Specification for the Ultra MK2 and Pro (document v1.1, 10 October 2026), linked
 Software" section. Keep the file name when a newer version comes out: replace the file in place, so every link to it
 gets the new version (the version and date are on its cover).
 
+Compliance files (`compliance/`): `compliance/eu-declaration-of-conformity.pdf` is Laserdock Limited's signed EU
+Declaration of Conformity for the LaserCube (declaration 20261013-000, 13 October 2026; it replaces 20250410-000 of
+10 April 2025 and adds the Pro 3W/6W and Ultra MK2 6W/10W), byte for byte as signed. The manual's "Declaration of
+Conformity" section shows its first page (`Pictures/web/eu-declaration-of-conformity-<date>-440.webp`, made from the PDF
+at 150 dpi) linked to it, and www.laseros.com's Certification rows link the same document. A newer declaration:
+replace the PDF in place (same name, so links keep working), make a new thumbnail and update the caption's model list.
+
 The header is a hand copy in each page. Before pushing a menu change, check that every copy matches:
 `grep -n -A7 'class="nav"\|class="menu-panel"' index.html docs/guides/ultra-mk2-pro-manual/index.html 404.html academy/index.html academy/*/index.html`
 
@@ -131,7 +138,7 @@ edit it by hand.
   about 0.65-0.75x of the file width, so their small labels stay readable.
   Without `width`/`height`, deep links land in the wrong place while lazy images load. The sources
   stay in `Pictures/` (for the 240x320 CubeOS screenshots the lossless originals are the `.bmp`
-  files); the Declaration of Conformity thumbnails link to their full-size scans.
+  files); the Declaration of Conformity thumbnails link to the signed PDF (the LaserCube's) and the adapters' full-size scans.
 - **The search code is a copy of the homepage's** (it indexes this page's own DOM instead of
   fetching it, and closes the dialog when a result on this page is picked). Function and variable
   names match the homepage's, so a fix can be copied across; see "Shared with the manual" above.
