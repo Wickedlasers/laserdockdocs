@@ -1043,8 +1043,9 @@ currently supported on the LaserCube.</p>
 <p>Once you have finished adding CUE’s to your new playlist, you can then
 export the entire playlist to the micro SD card.</p>
 <p>Only playlists go on the card: LaserOS leaves Timeline shows out of an
-SD card export, so a Timeline show plays only from LaserOS on a computer.
-For a show without a computer, build it as a playlist.</p>
+SD card export, so a Timeline show plays only while LaserOS (on a computer,
+phone or tablet) is connected. For a show without LaserOS running, build it
+as a playlist.</p>
 <p>Switch the LaserCube off before you take the micro SD card out. You
 will need to insert the micro SD card provided with the LaserCube
 into a USB 3.x reader and then connect the reader to your PC/Mac.</p>
@@ -2007,14 +2008,15 @@ round). Always Repeat makes it loop, and Stepped Path splits the movement
 into steps, to hit single notes. Simple Paths has its own position and
 size settings.</li><li>Position: Offset X and Y place the pattern.</li><li>Fixed Rotation: turns the pattern to a fixed angle (X, Y and Z
 angle).</li><li>Movement: slides the pattern from Start Pos to End Pos, for example
-Horizontal (start-&gt;end-&gt;start); Always Repeat makes it loop.
+Horizontal (<span style="white-space:nowrap">start-&gt;end-&gt;start</span>); Always Repeat makes it loop.
 Positions are measured from the pattern’s centre, so large values push
 part of it out of the projection area.</li><li>Variable Rotation: spins the pattern around its own centre (Rotate
 X, Y or Z).</li><li>Scale: grows or shrinks the pattern, for example from 0.0 to
-1.0.</li><li>Power Fader: fades the power. Fade start-&gt;end from 1.0 to 0.0
+1.0.</li><li>Power Fader: fades the power. Fade <span style="white-space:nowrap">start-&gt;end</span> from 1.0 to 0.0
 over a few frames makes a single flash. With Frames above 0 it also shows
-Always Repeat and Repeats: Always Repeat makes it loop, and Dwell adds a
-pause between repeats.</li><li>Strobe: switches the pattern on and off, set with On Frames and Off
+Always Repeat and, while that is off, Repeats: Always Repeat makes it loop,
+Repeats sets how many times it plays, and Dwell adds a pause between
+repeats.</li><li>Strobe: switches the pattern on and off, set with On Frames and Off
 Frames.</li><li>Color Sequence: steps through a number of colours.</li></ul>
 <h3 id="timing-in-frames">Timing in Frames<a href="#timing-in-frames" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Beam Creator counts time in frames. Target FPS sets how many frames
@@ -2038,7 +2040,7 @@ design in Playlists → Custom Beams. From there you can drag it onto the
 <p>Mapping with Beam Creator takes longer than with Draw, but each line
 can have its own effects. To light up the edges of a stack of boxes:</p>
 <ol><li>Add a Vertical Line.</li><li>Place it on an edge with Position, and turn it to the edge’s angle
-with Fixed Rotation.</li><li>Add Scale (Scale start-&gt;end, from 0.0 to 1.0) so the line grows
+with Fixed Rotation.</li><li>Add Scale (Scale <span style="white-space:nowrap">start-&gt;end</span>, from 0.0 to 1.0) so the line grows
 along the edge, and Color Sequence to change its colours.</li><li>Duplicate the line for the next edge and adjust it.</li><li>Save it as a custom beam.</li></ol>
 <h3 id="making-a-beam-with-ai">Making a Beam with AI<a href="#making-a-beam-with-ai" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Beam Creator designs are small text files ending in .ldbc. An AI chat
@@ -3784,7 +3786,7 @@ playlists and MIDI mappings.</li><li>Your own playlist is missing from the playl
 .ldpl file and its folder must be on the card (see
 <a href="#exporting-a-playlist-to-the-micro-sd-card">Exporting a Playlist to
 the micro SD card</a>).</li><li>A Timeline show isn’t on the card: SD card export takes playlists
-only, so build the show as a playlist to play it without a computer.</li></ul>
+only, so build the show as a playlist to play it without LaserOS running.</li></ul>
 <h3 id="laseros-cant-export-to-the-sd-card">LaserOS Can’t Export to the SD Card<a href="#laseros-cant-export-to-the-sd-card" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> the phone app can’t export, or LaserOS doesn’t
 recognise the card.</p>
