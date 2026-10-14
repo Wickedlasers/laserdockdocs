@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Addresses only, no <lastmod>: dates typed by hand went stale (pages also change through automatic commits). -->
   <url><loc>https://wiki.laseros.com/</loc></url>
-  <url><loc>https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://wiki.laseros.com/start/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://wiki.laseros.com/start/ultra-mk2/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://wiki.laseros.com/start/pro/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://wiki.laseros.com/start/wifi/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/start-here/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/control-modes/</loc><lastmod>2026-10-13</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/connect/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/laseros-basics/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/laser-mapping/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/music-show/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://wiki.laseros.com/academy/touchdesigner/</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://wiki.laseros.com/docs/guides/ultra-mk2-pro-manual/</loc></url>
+  <url><loc>https://wiki.laseros.com/start/</loc></url>
+  <url><loc>https://wiki.laseros.com/start/ultra-mk2/</loc></url>
+  <url><loc>https://wiki.laseros.com/start/pro/</loc></url>
+  <url><loc>https://wiki.laseros.com/start/wifi/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/start-here/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/control-modes/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/connect/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/laseros-basics/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/laser-mapping/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/music-show/</loc></url>
+  <url><loc>https://wiki.laseros.com/academy/touchdesigner/</loc></url>
 </urlset>
