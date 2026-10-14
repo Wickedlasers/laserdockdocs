@@ -179,6 +179,8 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .docs-content blockquote+blockquote{margin-top:-4px}
 .docs-content img{display:inline-block;vertical-align:top;max-width:100%;height:auto;border-radius:4px}
 .docs-content img.app-shot{outline:1px solid var(--line);outline-offset:-1px} /* dark app screenshots: keep their edge visible on a dark page */
+.docs-content a:has(>img:only-child):focus-visible{outline:none}
+.docs-content a:focus-visible>img:only-child{outline:2px solid var(--accent);outline-offset:3px} /* image links: Chromium draws no ring on a link around an image, so the image gets it */
 .docs-content>img,.docs-content>a>img,.docs-content>p>img:only-child{display:block;margin:20px 0 24px}
 .docs-content p>img+img{margin-left:8px}
 .docs-content .ink{filter:var(--ink)}
@@ -187,6 +189,7 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .row img{display:block}
 .row figure{margin:0}
 .row figcaption{margin:6px 0 0;font:400 14px/1.4 var(--font);color:var(--subtle)}
+.row.labels>.col{flex:1 1 340px} /* product labels: side by side only when each gets 340 px, else one per row, so their small print stays readable */
 figure{margin:24px 0}
 figure img{display:block}
 figcaption{margin:0 0 10px;font:600 14px/1.4 var(--font);color:var(--muted)}
@@ -324,7 +327,6 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   .doc-pages{grid-template-columns:repeat(2,minmax(0,1fr))}
   .row>.col{flex:0 1 calc(50% - 6px)}
   .row>.col:only-child{flex-basis:100%}
-  .row.labels>.col{flex-basis:100%} /* product labels: one per row, so their small print stays readable */
   .warning-panel{padding:20px 18px 16px;border-left-width:5px}
   .spec{padding:2px 14px 4px}
   table.specs td:first-child{width:40%}
@@ -645,7 +647,7 @@ latest safety standard IEC 60825-1</td></tr>
 <div class="table-wrap"><table class="layout"><tbody><tr><td><img src="Pictures/web/10000001000003EC000003D08E2217CA-698.webp" width="349" height="339" alt="" loading="lazy" decoding="async"><br><img src="Pictures/web/10000001000002EA0000039A472BE24B-650.webp" width="325" height="402" alt="" loading="lazy" decoding="async"></td><td>1. Explanatory<br>2. Hazard Warning Symbol<br>3. Manufacturer’s Identification<br>4. Laser Aperture<br><br><strong>Protective Housing Label</strong><br>(Appears on underside of housing)<br><img src="Pictures/web/10000000000000C80000005A255D295D-200.webp" width="200" height="90" alt="" loading="lazy" decoding="async"><br><br><strong>Aperture Label</strong><br>(Appears in front above aperture)<br><img src="Pictures/web/100000010000016200000104B6A30C86-354.webp" width="215" height="158" alt="" loading="lazy" decoding="async"></td></tr>
 </tbody></table></div>
 <p>The label shown is from an Ultra MK2 7.5W. The label on your LaserCube shows its own model and laser power.</p>
-<p>On the LaserCube Pro the main label is also on top, and the aperture label sits on the front, above the aperture. The Pro’s main label:</p>
+<p>On the LaserCube Pro, as on the Ultra MK2 in the photo above, the main label is on top, and the aperture label sits on the front, above the aperture. The Pro’s main label:</p>
 <div class="row labels"><div class="col"><figure><a href="Pictures/pro-label-6-0-pro.png" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/pro-label-6-0-pro-720.webp" width="360" height="360" alt="Main label of the LaserCube Pro 6W: model 6.0 PRO, year 2026, wavelengths 455, 525 and 638 nm, output 6,000 mW, 19V DC, 120W max, Class 4 laser warnings and the LaserDock Limited address." loading="lazy" decoding="async"></a><figcaption>LaserCube Pro 6W (model 6.0 PRO)</figcaption></figure></div><div class="col"><figure><a href="Pictures/pro-label-3-0-pro.png" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/pro-label-3-0-pro-720.webp" width="360" height="360" alt="Main label of the LaserCube Pro 3W: model 3.0 PRO, year 2026, wavelengths 455, 525 and 638 nm, output 3,000 mW, 19V DC, 65W max, Class 4 laser warnings and the LaserDock Limited address." loading="lazy" decoding="async"></a><figcaption>LaserCube Pro 3W (model 3.0 PRO)</figcaption></figure></div></div>
 <h1 id="safety-guidelines-and-proper-usage"><span id="anchor-8"></span>Safety Guidelines and Proper Usage<a href="#safety-guidelines-and-proper-usage" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>1. No scheduled maintenance necessary to keep the product in
