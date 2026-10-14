@@ -46,6 +46,13 @@ and /live-assets/wp-content/uploads/2020/10/EU_DoC.pdf) and page 4 of /manual-mk
 replace the PDF here in place (same name, so links keep working), make a new thumbnail, update the caption's model list,
 and replace the www copies by hand. Not on 20261013-000: the Ultra MK2 5W and the original USB LaserCube.
 
+Product labels: the manual's "Product Labelling and Placement" shows LaserDock's 7.5 ULTRA MK2 label artwork
+(2025 print file) and, below it, the Pro's main label (`Pictures/pro-label-6-0-pro.png`,
+`Pictures/pro-label-3-0-pro.png`, October 2026). The Pro labels are that same print file with only the model, year,
+output and input values changed (model names as on declaration 20261013-000; values from the manual's Technical
+Specifications); every other line and symbol is the original artwork. When LaserDock's own Pro label file or a clear
+photo of a production label turns up, compare it with these and replace them if anything differs (keep the file names).
+
 The header is a hand copy in each page. Before pushing a menu change, check that every copy matches:
 `grep -n -A7 'class="nav"\|class="menu-panel"' index.html docs/guides/ultra-mk2-pro-manual/index.html 404.html academy/index.html academy/*/index.html`
 
