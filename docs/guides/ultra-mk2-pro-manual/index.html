@@ -179,8 +179,8 @@ dialog.sheet::backdrop{background:rgba(5,5,10,.6)}
 .docs-content blockquote+blockquote{margin-top:-4px}
 .docs-content img{display:inline-block;vertical-align:top;max-width:100%;height:auto;border-radius:4px}
 .docs-content img.app-shot{outline:1px solid var(--line);outline-offset:-1px} /* dark app screenshots: keep their edge visible on a dark page */
-.docs-content a:has(>img:only-child):focus-visible{outline:none}
-.docs-content a:focus-visible>img:only-child{outline:2px solid var(--accent);outline-offset:3px} /* image links: Chromium draws no ring on a link around an image, so the image gets it */
+.docs-content a:not(.doc-pages>a):has(>img:only-child):focus-visible{outline:none}
+.docs-content a:not(.doc-pages>a):focus-visible>img:only-child{outline:2px solid var(--accent);outline-offset:3px} /* image links: Chromium draws no ring on an inline link around a block image, so the image gets it; not the Declaration of Conformity cards (block links that clip their image: they keep the link's own ring) */
 .docs-content>img,.docs-content>a>img,.docs-content>p>img:only-child{display:block;margin:20px 0 24px}
 .docs-content p>img+img{margin-left:8px}
 .docs-content .ink{filter:var(--ink)}
