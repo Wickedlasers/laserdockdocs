@@ -284,6 +284,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 @media (max-width:1100px){
   :root{--bar:48px}
   .search-pill{width:200px}
+  .nav{gap:18px}
   .layout{grid-template-columns:minmax(0,1fr);gap:0}
   .toc-side{display:none}
   .docs-content{margin:0 auto;width:100%}
@@ -388,6 +389,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <span class="brand-name">User Wiki</span>
     </a>
     <nav class="nav" aria-label="Main">
+      <a href="../../../start/">Quick start</a>
       <a href="../../../academy/">Academy</a>
       <a href="./" aria-current="page">Manual</a>
       <a href="../../../#videos">Tutorials</a>
@@ -402,6 +404,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       <details class="menu">
         <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
         <nav class="menu-panel" aria-label="Menu">
+          <a href="../../../start/">Quick start</a>
           <a href="../../../academy/">Academy</a>
           <a href="./" aria-current="page">Manual</a>
           <a href="../../../#videos">Tutorials</a>
@@ -424,7 +427,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
     <h1 id="manual-title">LaserCube Ultra MK2 &amp; Pro Manual</h1>
     <p class="lead">Version 1.5, October 2026. For the LaserCube Ultra MK2 and the LaserCube Pro, the compact version of the Ultra MK2. Both run the same CubeOS firmware, so everything in this manual applies to both unless it says otherwise.</p>
     <div class="start">
-      <ul class="start-grid" aria-label="Start here">
+      <ul class="start-grid" aria-label="Key sections">
         <li><a href="#safety-guidelines-and-proper-usage"><span class="ico"><svg class="icon"><use href="#i-warn"/></svg></span><span><strong>Safety guidelines</strong><span class="d">Class 4 laser: read these before your first show</span></span></a></li>
         <li><a href="#hardware-installation"><span class="ico"><svg class="icon"><use href="#i-cube"/></svg></span><span><strong>Hardware installation</strong><span class="d">Beam block, aiming and warning signs</span></span></a></li>
         <li><a href="#control-modes"><span class="ico"><svg class="icon"><use href="#i-sliders"/></svg></span><span><strong>Control modes</strong><span class="d">LaserOS, playlists, shows, visualizer, ArtNet, DMX, IDN and Ether Dream</span></span></a></li>
@@ -432,7 +435,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
         <li><a href="#firmware-update"><span class="ico"><svg class="icon"><use href="#i-upload"/></svg></span><span><strong>Firmware update</strong><span class="d">By SD card or the web admin page</span></span></a></li>
         <li><a href="#factory-reset-procedure"><span class="ico"><svg class="icon"><use href="#i-reset"/></svg></span><span><strong>Factory reset</strong><span class="d">Back to factory firmware and default settings</span></span></a></li>
       </ul>
-      <p class="start-note">New to LaserCube? Take the free <a href="../../../academy/start-here/">LaserCube Academy course</a> or watch the <a href="../../../#start-h">beginner’s video guide</a>. Something not working? See <a href="#troubleshooting">Troubleshooting</a>.</p>
+      <p class="start-note">New LaserCube? The <a href="../../../start/">Quick start</a> gets it projecting in five steps, and the free <a href="../../../academy/">LaserCube Academy</a> teaches you to run it safely. This manual is for looking things up. Something not working? See <a href="#troubleshooting">Troubleshooting</a>.</p>
     </div>
   </div>
 </section>
@@ -4107,12 +4110,12 @@ the SD card.</p>
   // Keys stay words the manual doesn't use ("class" would catch laser class searches), and a word of one or two
   // letters must be a whole word, so "ce certificate" stays with the manual.
   var PAGES = [
-    ["Quick start", "../../../start/", "Quick start: pick your model", "Five steps from the box, for each model", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
+    ["Quick start", "../../../start/", "Quick start: pick your model", "Five steps from the box, for each model", "quickstart quick unbox unboxing here start getting new first", "start new owner owners first steps getting started setup box"],
     ["Quick start", "../../../start/ultra-mk2/", "Quick start: LaserCube Ultra MK2", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Quick start", "../../../start/pro/", "Quick start: LaserCube Pro", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Quick start", "../../../start/wifi/", "Quick start: LaserCube WiFi", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Academy", "../../../academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses lesson lessons learn training quiz certificate", "online"],
-    ["Academy", "../../../academy/start-here/", "Start here: from the box to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners", "safety safe first show setup mount estop e-stop key zones laseros checklist"],
+    ["Academy", "../../../academy/start-here/", "Laser safety: from setup to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners first", "safety safe first show setup mount estop e-stop key zones laseros checklist"],
     ["Academy", "../../../academy/laseros-basics/", "LaserOS basics: your logo, text and effects", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate", "laseros logo text effects trace movement strobe import svg flicker render quality playlist autoplay midi apc colour color mono ttl"],
     ["Academy", "../../../academy/connect/", "Connect, update and troubleshoot your Ultra MK2 or Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "wifi network router ethernet lan cable status firmware reset factory web admin power heat temperature"],
     ["Academy", "../../../academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "dmx artnet art-net midi playlist sd card visualizer music cubelink cube link"],

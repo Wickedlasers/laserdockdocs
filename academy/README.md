@@ -4,7 +4,7 @@ Free courses at https://wiki.laseros.com/academy/. Plain HTML, CSS and JavaScrip
 no build step, no server, no database, no accounts, no analytics.
 
 - `index.html`: the course list.
-- `start-here/index.html`: the first course, "Start here: from the box to your first safe show" (Ultra MK2 & Pro, beginner).
+- `start-here/index.html`: the first course, "Laser safety: from setup to your first safe show" (Ultra MK2 & Pro, beginner).
 - `control-modes/index.html`: built as the second course, "Control modes for the Ultra MK2 and Pro" (Playlist, Visualizer, Laser Show,
   Cube Link, DMX/Art-Net, MIDI; 8 lessons, 29 quiz questions in 10 topics). It builds on start-here and links back to it.
 - `connect/index.html`: built as the third course, "Connect, update and troubleshoot your Ultra MK2 or Pro" (the four connection
@@ -19,7 +19,7 @@ no build step, no server, no database, no accounts, no analytics.
   Its power and heat facts are in the manual's "Power, Battery and Temperature"
   section (owner decisions, added with the course). For one computer on a direct cable it leads with LAN server (owner
   decision 2026-10-08: one device on a cable = LAN Server) and keeps LAN client with APIPA as the second way.
-- Course order (catalogue and each course's "Next course" link, audit 2026-10-09): Start here → LaserOS basics →
+- Course order (catalogue and each course's "Next course" link, audit 2026-10-09): Laser safety (start-here/) → LaserOS basics →
   Connect → Control modes → Laser mapping → Music show → TouchDesigner (beginner courses first; mapping and music use SD
   export and LAN client from Control modes and Connect; TouchDesigner, added after the audit, comes last).
 - `laseros-basics/`, `laser-mapping/`, `music-show/`: built as courses 4-6 (2026-10-09), "LaserOS basics: your logo, text and
