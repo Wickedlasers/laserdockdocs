@@ -11,19 +11,25 @@ is a redirect that keeps the `#anchor`, because laseros.com FAQ answers link to 
 
 ## What goes where
 
-Three places, each with one job. The header menus (homepage, manual, and the 404 page on wider screens) use these
-names in this order; the Academy's own header should match. This README is public too (the whole repo is published).
+Three parts, each with one job, named this way and in this order in every header menu (homepage, manual, Academy,
+Quick start pages, 404): Quick start · Academy · Manual · Tutorials · Downloads. This README is public too (the whole
+repo is published).
 
-| | What it's for | Who it's for | Add something here when |
+| | Its one job | Who it's for | Add something here when |
 |---|---|---|---|
-| **Academy** (`academy/`) | Learn: a course, start to finish, with a quiz and a certificate | New owners, once | A beginner must know it before their first show (facts only from the manual, X-Laser's course or the owner) |
-| **Manual** (`docs/guides/ultra-mk2-pro-manual/`) | Look it up: every setting, port, spec and DMX channel | Owners with a question | It's a fact, setting or spec (the manual is the source of truth) |
-| **Tutorials** (homepage `#videos`, all of them on laseros.com/tutorials) | Watch how: short videos, one task each | Owners who'd rather see it done | There's a new how-to video |
+| **Quick start** (`start/`) | Get going: five steps from the box to the first projection, one page per model; the printed booklet's QR codes land here; the homepage's "Which LaserCube do you have?" row opens it | New owners, on day one | Never by hand: the pages are built by `academy/tools/start-pages/build.py` (workspace repo); a step changes only when the box or the first-day steps change |
+| **Academy** (`academy/`) | Learn: courses, start to finish, with quick checks, a quiz and a certificate; laser safety first | Owners who want to run it well | A course needs it (facts only from the manual, X-Laser's course or the owner) |
+| **Manual** (`docs/guides/ultra-mk2-pro-manual/`) | Look it up: every setting, port, spec, DMX channel and fix | Owners with a question | It's a fact, setting or spec (the manual is the source of truth) |
+| **Tutorials** (homepage `#videos` and the beginner's guide above it; all of them on laseros.com/tutorials) | Watch how: short videos | Owners who'd rather see it done | There's a new video |
 
-Name them this way in menus, headings and link text: "Academy" or "LaserCube Academy" (it may be described as a
-free course), "Manual", "Tutorials" (not "Videos" or "Video guides"; the wiki is the whole site, not the manual).
-New material goes in one place and links to the others, never copied into all three: a lesson links the manual
-section it is based on; a video gets a line in the matching manual section if it helps.
+Names: "Quick start" (the only thing on the wiki that says "Start here"), "Academy" or "LaserCube Academy", "Manual",
+"Tutorials" (not "Videos" or "Video guides"). The first Academy course is "Laser safety: from setup to your first safe
+show" (other courses cite it as "Laser safety, lesson N"); it was called "Start here" until 15 Oct 2026, so its folder is
+still `academy/start-here/` (saved progress and links keep working: never rename the folder). The Academy landing, the
+Quick start landing and the manual's opening note each say in one line what the part is for and where the other two
+are. The homepage layout is the owner's pick (15 Oct 2026: he preferred the old design to a "What do you need?" card
+row and one merged video section): keep it. New material goes in one place and links to the others, never copied into
+all three.
 
 AI guides (`ai/`): plain Markdown files written for AI chat assistants, served as they are (GitHub Pages sends `.md` as
 `text/markdown`). `ai/laseros-beam-creator-guide.md` lets an AI write a Beam Creator project file (`.ldbc`); the manual's
@@ -107,11 +113,14 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   thumbnails are `images/home/videos/<id>.webp` (640x360, from YouTube's `maxresdefault.jpg`). Source:
   laseros.com/tutorials and the channel's newest uploads (Jarek's beginner's guide and WebApp video aren't on
   laseros.com/tutorials yet).
-- **Academy and Tutorials in search:** the `PAGES` list (the Academy, each course, Tutorials) shows when a search
+- **Quick start, Academy and Tutorials in search:** the `PAGES` list (the Quick start pages, the Academy, each course, Tutorials) shows when a search
   word starts one of a page's keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual; every
   other word must be in the page's title, description, keys or topics ("dmx course", "safety course"). Keys must be
   words the manual doesn't use ("class" would catch laser-class searches), and a word of one or two letters must be
-  a whole word, so "ce certificate" stays with the manual. Academy rows come
+  a whole word, so "ce certificate" stays with the manual. Exception on purpose (15 Oct 2026): the Quick start landing's keys
+  "start getting new first here" and course 1's "first", so a beginner's "getting started", "new cube", "how to start",
+  "start here", "first steps" or "first show" lands there; every other word of the search must still be in the page's own
+  text, so "start address", "start button" or "new firmware" stay with the manual (checked). Academy rows come
   first; a search with "tutorial", "video" or "youtube" puts the Tutorials group before the manual. A new Academy course goes in
   this list here and in the manual (its paths start with `../../../`).
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.

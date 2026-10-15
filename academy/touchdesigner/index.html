@@ -60,6 +60,7 @@
       <span class="brand-name">User Wiki</span>
     </a>
     <nav class="nav" aria-label="Main">
+      <a href="../../start/">Quick start</a>
       <a href="../" aria-current="true">Academy</a>
       <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
       <a href="../../#videos">Tutorials</a>
@@ -70,6 +71,7 @@
       <details class="menu">
         <summary class="icon-btn" aria-label="Menu"><svg class="icon"><use href="#i-menu"/></svg></summary>
         <nav class="menu-panel" aria-label="Menu">
+          <a href="../../start/">Quick start</a>
           <a href="../" aria-current="true">Academy</a>
           <a href="../../docs/guides/ultra-mk2-pro-manual/">Manual</a>
           <a href="../../#videos">Tutorials</a>
@@ -159,8 +161,8 @@
     <li>Pass, then download your certificate as a PDF or an image.</li>
   </ul>
   <div class="warn">
-    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Start here” first</span>
-    <p>Every rule from the <a class="link" href="../start-here/">Start here</a> course applies whenever the laser is on, whatever drives it: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
+    <span class="warn-tag"><svg class="icon"><use href="#i-warn"/></svg>Do “Laser safety” first</span>
+    <p>Every rule from the <a class="link" href="../start-here/">Laser safety</a> course applies whenever the laser is on, whatever drives it: the beam block set before the show, every beam at least 3&nbsp;m (10&nbsp;ft) above people, every beam and where it lands in view of someone who can stop the laser, a main and a backup way to stop it, only people trained in laser safety at the controls, and never leaving a running laser unattended. If you haven’t done that course yet, start there.</p>
   </div>
   <p>Sources: the <a class="link" href="../../docs/guides/ultra-mk2-pro-manual/#ether-dream-control-mode">LaserCube Ultra MK2 &amp; Pro manual</a>, above all its section “Ether Dream Control Mode”, and the four videos: <a class="link" href="https://www.youtube.com/watch?v=gWgriN8vNZg&amp;t=35s" target="_blank" rel="noopener">first steps</a>, <a class="link" href="https://www.youtube.com/watch?v=8uTfJfFeGs4" target="_blank" rel="noopener">easy content creation</a>, <a class="link" href="https://www.youtube.com/watch?v=2joWmQ8NXcU" target="_blank" rel="noopener">colouring methods</a> and <a class="link" href="https://www.youtube.com/watch?v=AmTNx1gKu_E" target="_blank" rel="noopener">interactive laser art</a>. If a video and the manual differ, follow the manual.</p>
   <div class="btn-row js-only"><a class="btn solid" id="start-btn" href="#lesson-1">Start the course</a></div>
@@ -181,7 +183,7 @@
 
   <h3>One point at a time</h3>
   <ul class="points">
-    <li>There is only ever one point of light. A circle is that point travelling round the circle, fast enough that you see a solid shape. <a class="link" href="../start-here/#lesson-2">Start here, lesson 2</a> explains how the cube’s scanners do it.</li>
+    <li>There is only ever one point of light. A circle is that point travelling round the circle, fast enough that you see a solid shape. <a class="link" href="../start-here/#lesson-2">Laser safety, lesson 2</a> explains how the cube’s scanners do it.</li>
     <li>That is why laser content suits vector graphics: shapes described by points and lines. In TouchDesigner those are <strong>SOPs</strong>, its geometry operators.</li>
     <li>Pictures and video (TOPs) can’t go to the laser as they are. Lesson 3 shows how to trace them into outlines.</li>
   </ul>
@@ -292,7 +294,7 @@
   <ol class="points" start="3">
     <li><strong>Ether Dream mode:</strong> in the cube’s main menu choose Control Mode, turn the knob to <strong>Ether‑Dream</strong> and push it. The cube asks “Control mode has changed. Restart Now?”: choose Yes, and it restarts into Ether Dream mode. Afterwards the status bar reads Ether‑Dream. The LaserCube WiFi has no Ether Dream mode, so this works only with the Ultra MK2 and Pro.</li>
     <li><strong>IP address:</strong> read it at the bottom right of the status bar. You type it into TouchDesigner.</li>
-    <li><strong>Arm it</strong> when you’re ready to project, with the beam block set first (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>): turn the key to ON. The EMISSION LEDs light and the I‑LOCK warning goes. With an E‑Stop connected, start it with the green START button (<a class="link" href="../start-here/#lesson-6">Start here, lesson 6</a>). A tick by LAN‑C means the cube is connected in LAN client mode.</li>
+    <li><strong>Arm it</strong> when you’re ready to project, with the beam block set first (<a class="link" href="../start-here/#lesson-8">Laser safety, lesson 8</a>): turn the key to ON. The EMISSION LEDs light and the I‑LOCK warning goes. With an E‑Stop connected, start it with the green START button (<a class="link" href="../start-here/#lesson-6">Laser safety, lesson 6</a>). A tick by LAN‑C means the cube is connected in LAN client mode.</li>
   </ol>
   <div class="two shots">
     <figure class="native">
@@ -697,7 +699,7 @@
     <li>By default it is a <strong>keep‑within</strong> zone, previewed in green: beams outside it are reduced by the attenuation setting, and 100% blanks them completely. Use it for the target area where the beams may safely end.</li>
     <li>With the invert toggle it becomes a <strong>keep‑out</strong> zone, previewed in red: for example to keep beams away from a camera or a video projector.</li>
     <li>The preview toggle projects the zone’s outline, with the laser interlock enabled.</li>
-    <li>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them (<a class="link" href="../start-here/#lesson-8">Start here, lesson 8</a>).</li>
+    <li>A zone works on top of the beam block and the 3&nbsp;m rule, never instead of them (<a class="link" href="../start-here/#lesson-8">Laser safety, lesson 8</a>).</li>
   </ul>
 
   <div class="practice">
@@ -712,7 +714,7 @@
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="yes">
-        <p class="s">The equaliser is drawn on a wall in an area closed to everyone, more than 3&nbsp;m from where guests stand. The cube is in the same closed‑off area, the beam block is set, and every other item on Start here’s pre‑show checklist is ticked. You add a keep‑within zone on the cube around the part of the wall where the beams end.</p>
+        <p class="s">The equaliser is drawn on a wall in an area closed to everyone, more than 3&nbsp;m from where guests stand. The cube is in the same closed‑off area, the beam block is set, and every other item on the pre‑show checklist in Laser safety is ticked. You add a keep‑within zone on the cube around the part of the wall where the beams end.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, go ahead</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
         <p class="why" hidden>The beams end in a restricted area away from people, the beam block is set, the rest of the pre‑show checklist is done, and the keep‑within zone marks the target area on top of those rules.</p>
         <p class="hint" hidden>Where do the beams end, and is the zone used on top of the rules or instead of them?</p>
@@ -1027,7 +1029,7 @@
       </div>
       <p class="small">Download not starting? Press and hold the certificate (on a computer, right-click it) and save the image.</p>
     </div>
-    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from <a class="link" href="../start-here/#lesson-10">Start here’s pre‑show checklist</a> applies whenever the laser is on.</p>
+    <p class="small" style="margin-top:24px">This is a certificate of completion. It is not a licence, a Laser Safety Officer (LSO) qualification or permission to run public laser shows. Every rule from the <a class="link" href="../start-here/#lesson-10">pre‑show checklist in Laser safety</a> applies whenever the laser is on.</p>
     <p class="small">More courses: <a class="link" href="../">LaserCube Academy</a>.</p>
   </div>
 </section>
