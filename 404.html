@@ -63,7 +63,7 @@ input{caret-color:var(--accent)}
 .brand-sep{width:1px;height:18px;background:var(--line-2)}
 .brand-name{font-size:14.5px;font-weight:500;color:var(--muted);white-space:nowrap}
 .nav{display:flex;gap:22px}
-.nav a{font-size:14.5px;color:var(--muted);transition:color .15s}
+.nav a{font-size:14.5px;color:var(--muted);transition:color .15s;white-space:nowrap}
 .nav a:hover{color:var(--text)}
 main{padding:88px 0 40px}
 h1{margin:0;font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.03em;font-weight:650;max-width:16ch;text-wrap:balance}
@@ -89,6 +89,9 @@ h1{margin:0;font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.03e
 .site-footer nav{display:flex;flex-wrap:wrap;gap:6px 22px}
 .site-footer nav a:hover{color:var(--text)}
 .site-footer .copy{margin-left:auto}
+@media (max-width:920px){
+  .nav{gap:14px}
+}
 @media (max-width:820px){
   .nav{display:none}
 }
@@ -143,12 +146,11 @@ h1{margin:0;font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-.03e
     <button class="btn" type="submit">Search</button>
   </form>
   <ul class="places">
-    <li><a href="/start/"><div><strong>Quick start</strong><span>New cube? Five steps from the box to your first projection</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+    <li><a href="/start/"><div><strong>Quick start</strong><span>New cube? Five steps from the box: Ultra MK2, Pro or WiFi</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
     <li><a href="/academy/"><div><strong>LaserCube Academy</strong><span>Free courses: laser safety, LaserOS basics, connecting and updating, control modes, laser mapping, shows to music and TouchDesigner</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
     <li><a href="/docs/guides/ultra-mk2-pro-manual/"><div><strong>Ultra MK2 &amp; Pro manual</strong><span>Look up any setting, spec or fix</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
     <li><a href="/#videos"><div><strong>Tutorials</strong><span>Step-by-step videos for LaserOS and the cubes</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
     <li><a href="/#downloads"><div><strong>Software and files</strong><span>LaserOS apps, firmware and SD card files</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-    <li><a href="https://www.laseros.com/CUBE2-CUBE2ULTRA.manual-20241003.pdf"><div><strong>LaserCube WiFi or original Ultra</strong><span>Their user manual (PDF)</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
     <li><a href="mailto:support@laseros.com"><div><strong>Email support</strong><span>support@laseros.com: setup questions, orders and repairs</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
   </ul>
 </main>
