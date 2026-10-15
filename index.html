@@ -81,7 +81,7 @@ input,textarea{caret-color:var(--accent)}
 .brand-sep{width:1px;height:18px;background:var(--line-2)}
 .brand-name{font-size:14.5px;font-weight:500;color:var(--muted);white-space:nowrap}
 .nav{display:flex;gap:22px}
-.nav a{font-size:14.5px;color:var(--muted);transition:color .15s}
+.nav a{font-size:14.5px;color:var(--muted);transition:color .15s;white-space:nowrap}
 .nav a:hover{color:var(--text)}
 .header-actions{margin-left:auto;display:flex;align-items:center;gap:6px}
 .search-pill{display:flex;align-items:center;gap:10px;height:36px;width:240px;padding:0 6px 0 12px;border-radius:8px;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:var(--subtle);font-size:14px;cursor:pointer;transition:border-color .15s,color .15s,opacity .2s,visibility .2s}
@@ -255,9 +255,12 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
 .search-foot span{display:inline-flex;align-items:center;gap:6px}
 .search-foot .kbd{margin:0}
 
+@media (max-width:1200px){
+  .nav{gap:14px}
+  .search-pill{width:156px}
+}
 @media (max-width:1100px){
-  .search-pill{width:200px}
-  .nav{gap:18px}
+  .nav{gap:12px}
   .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:32px;min-height:560px}
   .course,.vids{grid-template-columns:repeat(2,1fr)}
   .chapters{grid-template-columns:repeat(2,1fr)}
@@ -852,12 +855,12 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   // Keys stay words the manual doesn't use ("class" would catch laser class searches), and a word of one or two
   // letters must be a whole word, so "ce certificate" stays with the manual.
   var PAGES = [
-    ["Quick start", "start/", "Quick start: pick your model", "Five steps from the box, for each model", "quickstart quick unbox unboxing here start getting new first", "start new owner owners first steps getting started setup box"],
+    ["Quick start", "start/", "Quick start: pick your model", "Five steps from the box, for each model", "quickstart quick unbox unboxing here getting", "start new owner owners first steps getting started setup box"],
     ["Quick start", "start/ultra-mk2/", "Quick start: LaserCube Ultra MK2", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Quick start", "start/pro/", "Quick start: LaserCube Pro", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Quick start", "start/wifi/", "Quick start: LaserCube WiFi", "Five steps from the box to your first projection", "quickstart quick unbox unboxing", "start new owner owners first steps getting started setup box"],
     ["Academy", "academy/", "LaserCube Academy", "Free courses with a quiz and a certificate", "academy course courses lesson lessons learn training quiz certificate", "online"],
-    ["Academy", "academy/start-here/", "Laser safety: from setup to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners first", "safety safe first show setup mount estop e-stop key zones laseros checklist"],
+    ["Academy", "academy/start-here/", "Laser safety: from setup to your first safe show", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate beginner beginners", "start here safety safe first show setup mount estop e-stop key zones laseros checklist"],
     ["Academy", "academy/laseros-basics/", "LaserOS basics: your logo, text and effects", "Academy course · Beginner", "academy course courses lesson lessons learn training quiz certificate", "laseros logo text effects trace movement strobe import svg flicker render quality playlist autoplay midi apc colour color mono ttl"],
     ["Academy", "academy/connect/", "Connect, update and troubleshoot your Ultra MK2 or Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "wifi network router ethernet lan cable status firmware reset factory web admin power heat temperature"],
     ["Academy", "academy/control-modes/", "Control modes for the Ultra MK2 and Pro", "Academy course · Intermediate", "academy course courses lesson lessons learn training quiz certificate", "dmx artnet art-net midi playlist sd card visualizer music cubelink cube link"],

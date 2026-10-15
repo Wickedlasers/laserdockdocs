@@ -117,10 +117,11 @@ One self-contained file (HTML, CSS and JS inline), redesigned in October 2026. I
   word starts one of a page's keys ("acad", "course", "tutorials"), so "dmx" alone stays with the manual; every
   other word must be in the page's title, description, keys or topics ("dmx course", "safety course"). Keys must be
   words the manual doesn't use ("class" would catch laser-class searches), and a word of one or two letters must be
-  a whole word, so "ce certificate" stays with the manual. Exception on purpose (15 Oct 2026): the Quick start landing's keys
-  "start getting new first here" and course 1's "first", so a beginner's "getting started", "new cube", "how to start",
-  "start here", "first steps" or "first show" lands there; every other word of the search must still be in the page's own
-  text, so "start address", "start button" or "new firmware" stay with the manual (checked). Academy rows come
+  a whole word, so "ce certificate" stays with the manual. Exception on purpose (15 Oct 2026): the Quick start landing's keys "here getting",
+  so "start here" and "getting started" land there. Don't add "start", "new" or "first" as keys: the other words are
+  matched as plain substrings ("mode" is inside "model"), so they pulled "start mode", "first zone" and "laser won't
+  start" away from the manual (session review, 15 Oct). Course 1's topics carry its old name "start here", so "start
+  here course" still finds it. Academy rows come
   first; a search with "tutorial", "video" or "youtube" puts the Tutorials group before the manual. A new Academy course goes in
   this list here and in the manual (its paths start with `../../../`).
 - **Hotspots** on the hero photo are `--x`/`--y` percentages of `images/home/ultra-mk2-rear.webp`.
