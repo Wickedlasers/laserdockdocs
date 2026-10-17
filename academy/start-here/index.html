@@ -87,7 +87,7 @@
   </div>
 </header>
 
-<main id="main" data-course="start-here" data-version="1.4" data-title="Laser safety: from setup to your first safe show" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Beginner">
+<main id="main" data-course="start-here" data-version="1.5" data-title="Laser safety: from setup to your first safe show" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Beginner">
 
   <section class="hero stage">
     <div class="container">
@@ -184,7 +184,7 @@
   <ul class="points">
     <li><strong>Laser aperture (1):</strong> the window the laser light comes out of.</li>
     <li><strong>Beam block (2):</strong> blocks the beam and stops it from scanning into the audience. The screws on either side lock it.</li>
-    <li><strong>Safety key (7):</strong> stops the laser from being switched on by accident. After a power loss, or when the interlock is opened and closed again, the key has to be reset.</li>
+    <li><strong>Safety key (7):</strong> stops the laser from being switched on by accident. Each time the cube itself switches on (power switch, or after a flat battery), or when the interlock is opened and closed again, the key has to be turned again.</li>
     <li><strong>E‑STOP (interlock) ports (8):</strong> two network‑style (RJ45) sockets for the safety shut‑off. The safety jumper or an E‑Stop plugs in here. Never plug network (Ethernet) devices into them.</li>
     <li><strong>Interlock:</strong> the safety shut‑off circuit through those ports. The laser can only emit while it is closed by the safety jumper or an E‑Stop; if it opens, the laser stops.</li>
     <li><strong>EMISSION LEDs (9):</strong> when they’re lit, the laser can emit. It may or may not be emitting right now; either way, nothing is stopping it. Never cover them.</li>
@@ -367,7 +367,7 @@
     <li>Lasers can start fires at great distances. Don’t use the cube near flammable materials.</li>
     <li>Never let a beam hit an aircraft or go into the open sky. In the US, shining a laser at an aircraft is a federal crime punishable by fines or jail.</li>
     <li>The LaserCube is not a toy. Keep it away from children and from anyone not trained to use it, before, during and after a show.</li>
-    <li>Whoever runs the laser is responsible for it. Where people could get near the beams, as at a show, someone who can stop the laser keeps every beam in view (lesson 4). A fixed installation can run with nobody watching when its operator takes that responsibility and nobody can get into its beams: every beam at least 3 metres (10 feet) above anywhere people can be. The manual’s Power‑On Play is there for fixed installations (<a class="link" href="../control-modes/#lesson-3">Control modes, lesson 3</a>).</li>
+    <li>Whoever runs the laser is responsible for it. Where people could get into the beams, someone who can stop the laser stays at the stop and keeps every beam in view (lesson 4). With every beam at least 3 metres (10 feet) above the highest place anyone can stand, so nobody can get into the beams, the laser may run with nobody watching, at a show or as a fixed installation, on its operator’s responsibility. The manual’s Power‑On Play is there for fixed installations (<a class="link" href="../control-modes/#lesson-3">Control modes, lesson 3</a>).</li>
     <li>Don’t use the cube if you think it’s damaged or faulty, and never open or modify it. Email <a class="link" href="mailto:support@laseros.com">support@laseros.com</a> instead.</li>
     <li>The only maintenance allowed: cleaning the aperture window with a dry tissue that leaves no lint, and blowing dust out of the vents with compressed air (the manual also allows an alcohol prep wipe), with the cube switched off and the key out. Let any alcohol dry completely before you switch the laser on.</li>
   </ul>
@@ -452,7 +452,7 @@
   </ul>
 
   <h3>Watch the whole area</h3>
-  <p>For the whole show, someone who can stop the laser must have every beam, and every spot where a beam lands, in sight. If part of the room is out of your view, for example where beams land behind your position, put a second person there who can get the laser stopped at once. If anyone gets near the beams, say someone climbing onto a speaker, stop the laser straight away. A fixed installation where nobody can get into the beams can run with nobody watching, on its operator’s responsibility (lesson 3).</p>
+  <p>Where people could get into the beams, someone who can stop the laser stays at the stop for the whole show and has every beam, and every spot where a beam lands, in sight. If part of the room is out of your view, for example where beams land behind your position, put a second person there who can get the laser stopped at once. If anyone gets near the beams, say someone climbing onto a speaker, stop the laser straight away. With every beam at least 3&nbsp;m (10&nbsp;ft) above the highest place anyone can stand, so nobody can get into the beams, the laser may run with nobody watching, on the operator’s responsibility (lesson 3).</p>
 
   <h3>Outdoors</h3>
   <p>Beams must still end on something: a building, a screen, a wall. Never point them into the open sky or at vehicles: the cube’s own label says so.</p>
@@ -610,7 +610,7 @@
 
   <h3>Always have two ways to stop</h3>
   <p>Set up every show so you have a main and a backup way to stop the laser instantly, and keep both within reach: for example the E‑Stop and the key, or without an E‑Stop the key and the power switch. Before the show, check that they really stop it.</p>
-  <p>When the cube has lost power (switched off, or a flat battery), or after the interlock has been opened and closed again, the laser won’t start by itself. Reset the key first (turn it to OFF, then back to ON), and with an E‑Stop connected, do the E‑Stop start again. That’s on purpose, so a cube never fires the moment power comes back.</p>
+  <p>Each time the cube itself switches on (power switch, or after a flat battery), and after the interlock has been opened and closed again, the laser won’t start by itself. Turn the key again first (to OFF, then back to ON), and with an E‑Stop connected, do the E‑Stop start again. That’s on purpose, so a cube never fires the moment it switches on. A mains power cut alone doesn’t switch the cube off: it keeps running on its battery.</p>
   <p class="note"><strong>Playlist mode, on any cube:</strong> if the cube is in Playlist control mode, it starts the last playlist as soon as the interlock is enabled (“Power‑On Play” is on by default). If you don’t want that, set Power‑On Play to Disabled in the playlist options menu.</p>
 
   <div class="practice">
@@ -644,7 +644,7 @@
         <label class="opt"><input type="radio" name="l6q2" value="b"><span>The battery must be full before it can emit</span></label>
         <label class="opt"><input type="radio" name="l6q2" value="c"><span>The beam block slipped and blocks the beam</span></label>
       </div>
-      <p class="why" hidden>After losing power the cube waits for a reset: the key (OFF, then ON), and with an E‑Stop the E‑Stop start. So it never fires the moment power comes back.</p>
+      <p class="why" hidden>Once the cube has switched off, here with a flat battery, it waits for a reset when it switches on again: the key (OFF, then ON), and with an E‑Stop the E‑Stop start. So it never fires the moment it switches on.</p>
       <p class="feedback" aria-live="polite"></p>
     </fieldset>
     <fieldset class="check" data-answer="c">
@@ -1044,7 +1044,7 @@
       <li><label><input type="checkbox"><span>Beam block set and locked; safety zones set.</span></label></li>
       <li><label><input type="checkbox"><span>Laser warning signs up where the audience can go.</span></label></li>
       <li><label><input type="checkbox"><span>Jumper or E‑Stop connected; two ways to stop tested and within reach.</span></label></li>
-      <li><label><input type="checkbox"><span>Every beam and where it ends is in view. <span>A second person for anything you can’t see, who can get the laser stopped at once.</span></span></label></li>
+      <li><label><input type="checkbox"><span>Where people could get into the beams: every beam and where it ends is in view. <span>A second person for anything you can’t see, who can get the laser stopped at once. With every beam 3&nbsp;m above the highest place anyone can stand, it may run with nobody watching.</span></span></label></li>
       <li><label><input type="checkbox"><span>Nobody untrained or underage at the controls.</span></label></li>
       <li><label><input type="checkbox"><span>After the show: key off and out, cube out of reach.</span></label></li>
     </ul>
@@ -1064,10 +1064,10 @@
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="yes">
-        <p class="s">A club. The cube is clamped to a truss with a safety cable, and the beam block keeps every beam at least 3&nbsp;m above the highest place anyone can stand, the DJ riser included. Beams end on a concrete wall, signs are up, you can see every beam, the E‑Stop is in your hand, a backup way to stop is tested and within reach, and you’ve checked the local rules.</p>
+        <p class="s">A club. The cube is clamped to a truss with a safety cable, and the beam block keeps every beam at least 3&nbsp;m above the highest place anyone can stand, the DJ riser included. Beams end on a concrete wall, signs are up, the E‑Stop is in your hand, a backup way to stop is tested and within reach, and you’ve checked the local rules.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, run it</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
-        <p class="why" hidden>Secured, cabled, beams 3&nbsp;m above the highest place people stand and ending on a safe surface, signs up, every beam in view, a main and a backup way to stop within reach, and the rules checked. That’s a safe setup.</p>
-        <p class="hint" hidden>Go through the checklist: mounting, height, where beams end, signs, watching, ways to stop, local rules. Is anything missing?</p>
+        <p class="why" hidden>Secured, cabled, beams 3&nbsp;m above the highest place people stand and ending on a safe surface, signs up, a main and a backup way to stop within reach, and the rules checked. That’s a safe setup, and with every beam that high it may even run with nobody watching, on your responsibility.</p>
+        <p class="hint" hidden>Go through the checklist: mounting, height, where beams end, signs, ways to stop, local rules. Is anything missing?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="no">
@@ -1087,14 +1087,14 @@
       <div class="scenario" data-answer="no">
         <p class="s">A friend’s 12‑year‑old asks to run the show from LaserOS on their phone while you get a drink.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, run it</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
-        <p class="why" hidden>Keep the cube away from children and anyone untrained. During a show, someone trained runs it, and someone who can stop the laser keeps every beam in view.</p>
-        <p class="hint" hidden>Who would be at the controls, and who would be watching the laser?</p>
+        <p class="why" hidden>Keep the cube away from children and anyone untrained: a 12‑year‑old never runs the show. Where people could get into the beams, someone trained who can stop the laser stays at the stop.</p>
+        <p class="hint" hidden>Who would be at the controls?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
       <div class="scenario" data-answer="yes">
         <p class="s">A small theatre. From your desk you can’t see where the beams land on the back wall, so a second person watches it and can get the laser stopped at once.</p>
         <div class="choices"><button type="button" class="btn" data-a="yes" aria-pressed="false">Yes, run it</button><button type="button" class="btn" data-a="no" aria-pressed="false">No, stop</button></div>
-        <p class="why" hidden>Every beam and every spot where one lands must be in view of someone who can get the laser stopped. A second person on the back wall covers what you can’t see. With the rest of the checklist done, that’s a safe setup.</p>
+        <p class="why" hidden>Where people could get into the beams, every beam and every spot where one lands must be in view of someone who can get the laser stopped. A second person on the back wall covers what you can’t see. With the rest of the checklist done, that’s a safe setup.</p>
         <p class="hint" hidden>Is every spot where a beam lands watched by someone who can get the laser stopped?</p>
         <p class="feedback" aria-live="polite"></p>
       </div>
@@ -1183,16 +1183,16 @@
       <label class="opt"><input type="radio" value="b"><span>Take them down, well out of the beam area</span></label>
       <label class="opt"><input type="radio" value="c"><span>Lower the brightness of the beams near them</span></label></div>
       <p class="why" hidden>Lasers can start fires at great distances. Keep anything that burns out of the beam area.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="b" data-group="watch" data-lesson="4"><legend><span class="qn"></span>During the show, does anyone need to watch where the beams go?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Yes, but only the beams near the audience</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Yes: every beam and where it lands, all show</span></label>
+    <fieldset class="check" data-answer="b" data-group="watch" data-lesson="4"><legend><span class="qn"></span>Every beam is at least 3&nbsp;m above the highest place anyone can stand, so nobody can get into the beams. Must someone watch the laser all show?</legend><div class="opts">
+      <label class="opt"><input type="radio" value="a"><span>Yes: every beam and where it lands, all show</span></label>
+      <label class="opt"><input type="radio" value="b"><span>No, not while nobody can get into the beams</span></label>
       <label class="opt"><input type="radio" value="c"><span>Yes, until the first few songs have run</span></label></div>
-      <p class="why" hidden>Someone who can get the laser stopped must see every beam and every spot where one lands.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>With every beam 3&nbsp;m above the highest place anyone can stand, the laser may run with nobody watching, on the operator’s responsibility. Where people could get into the beams, someone who can get it stopped keeps every beam in view.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="watch" data-lesson="4"><legend><span class="qn"></span>Mid‑show you need a quick break. Guests are dancing, and some climb onto the speakers now and then. What about the laser?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Leave it running: the beam block keeps beams high</span></label>
       <label class="opt"><input type="radio" value="b"><span>Stop it, or hand over to someone who can stop it</span></label>
       <label class="opt"><input type="radio" value="c"><span>Turn the brightness right down until you’re back</span></label></div>
-      <p class="why" hidden>People can get near the beams here, so someone who can get the laser stopped must see every beam and every spot where one lands.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>People could get into the beams here, so someone who can get the laser stopped must see every beam and every spot where one lands.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="mount" data-lesson="8"><legend><span class="qn"></span>When do you adjust the beam block?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>With the cube switched off and the key taken out</span></label>
       <label class="opt"><input type="radio" value="b"><span>With the cube on and the key in, at low brightness</span></label>
@@ -1222,7 +1222,7 @@
       <label class="opt"><input type="radio" value="a"><span>A fault: stop using it and email support</span></label>
       <label class="opt"><input type="radio" value="b"><span>A safety feature: reset the key first</span></label>
       <label class="opt"><input type="radio" value="c"><span>The battery needs a few minutes’ charge first</span></label></div>
-      <p class="why" hidden>The key (and the E‑Stop start, with an E‑Stop connected) must be reset, so the cube never fires the moment power comes back.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>The key (and the E‑Stop start, with an E‑Stop connected) must be reset, so the cube never fires the moment it switches on.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="zones" data-lesson="8"><legend><span class="qn"></span>A camera is in the area your beams could reach. What do you use?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>A keep‑out zone around the camera</span></label>
       <label class="opt"><input type="radio" value="b"><span>A keep‑within zone around the camera</span></label>
