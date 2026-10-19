@@ -40,8 +40,16 @@ guide the same way before changing it (the test tools and the guide's source are
 
 Developer files (`developers/`): `developers/udp-streaming-protocol.pdf` is LaserDock's UDP DAC Streaming Protocol
 Specification for the Ultra MK2 and Pro (document v1.1, 10 October 2026), linked from the manual's "Writing Your Own
-Software" section. Keep the file name when a newer version comes out: replace the file in place, so every link to it
-gets the new version (the version and date are on its cover).
+Software" section. Since the firmware 2.2 update of the manual it is the copy attached to the firmware v2-2 release
+(`WiFiCube_Mk2_UDP_DAC_Streaming_Protocol_Spec_v1-1.pdf`, byte for byte). Keep the file name when a newer version comes
+out: replace the file in place, so every link to it gets the new version (the version and date are on its cover).
+LaserDock publishes documents only from a firmware release, never from work in progress: take new copies from the
+assets of LaserDock's firmware release, not from a branch.
+
+Firmware notes: LaserDock's "What's new" PDF for firmware 2.2 is NOT hosted here: its model-names page uses old
+internal model names that the wiki never uses. The manual follows LaserDock's manual v1.6 (firmware 2.2); where the wiki keeps its own wording
+on purpose (for example: LaserOS doesn't update the Ultra MK2 or Pro), the list of differences and reasons is kept
+outside this public repo.
 
 Compliance files (`compliance/`): `compliance/eu-declaration-of-conformity.pdf` is Laserdock Limited's signed EU
 Declaration of Conformity for the LaserCube (declaration 20261013-000, 13 October 2026; it replaces 20250410-000 of

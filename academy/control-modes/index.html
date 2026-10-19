@@ -87,7 +87,7 @@
   </div>
 </header>
 
-<main id="main" data-course="control-modes" data-version="1.2" data-title="Control modes for the Ultra MK2 and Pro" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
+<main id="main" data-course="control-modes" data-version="1.3" data-title="Control modes for the Ultra MK2 and Pro" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
 
   <section class="hero stage">
     <div class="container">
@@ -184,7 +184,7 @@
       <p><strong>The cube plays on its own</strong>, from its SD card. No computer needed.</p>
       <ul class="points">
         <li><strong>Playlist:</strong> plays playlists you made in LaserOS (lessons 2 and 3).</li>
-        <li><strong>Visualizer:</strong> 174 built‑in visuals that react to sound, since firmware 2.1 (lesson 4).</li>
+        <li><strong>Visualizer:</strong> 197 built‑in visuals that react to sound, since firmware 2.2 (lesson 4).</li>
         <li><strong>Laser Show:</strong> ready‑made laser shows with music, on one cube or several (lesson 5).</li>
       </ul>
       <p><strong>A lighting desk is in charge</strong></p>
@@ -227,7 +227,7 @@
   <h3>Which settings the cube uses</h3>
   <ul class="points">
     <li>In <strong>LaserOS</strong> mode, LaserOS handles the image setup, colour balance and safety zones, so those entries are greyed out on the cube.</li>
-    <li>When you choose one of the cube’s other modes, such as Visualizer, the cube’s own settings become available under <strong>Settings → Projection</strong>: Image Setup (power, rotation, size, flip and position), Colour Balance and Safety Zone. Set the safety zone there, as in <a class="link" href="../start-here/#lesson-8">Laser safety, lesson 8</a>.</li>
+    <li>When you choose one of the cube’s other modes, such as Visualizer, the cube’s own settings become available under <strong>Settings → Projection</strong>: Image Setup (power, zoom, rotation, size, flip, position and, since firmware 2.2, keystone), Colour Balance and Safety Zone. Set the safety zone there, as in <a class="link" href="../start-here/#lesson-8">Laser safety, lesson 8</a>.</li>
   </ul>
 
   <div class="warn">
@@ -237,7 +237,7 @@
 
   <h3>Before you start: update the firmware</h3>
   <ul class="points">
-    <li>This course follows the manual. Its lists, such as the 91 visualizers, come from firmware 2.0; where firmware 2.1 differs, for example 174 visualizers or changing the connection mode without a restart, the lessons say so.</li>
+    <li>This course follows the manual, which is written for firmware 2.2. Where older firmware differs, for example fewer visualizers, a simpler web app or a restart when you change the connection mode, the lessons say so.</li>
     <li>The manual’s preferred way to update is the SD card: when the card has newer firmware, the cube asks whether to update. The latest card contents on GitHub (lesson 2) include the newest firmware.</li>
   </ul>
   <div class="video" data-yt="Jtd9Il9sAus" data-from="141" data-to="214" data-title="LaserCube Ultra MK2 Firmware 2.0 upgrade: what's new and how to upgrade">
@@ -436,17 +436,19 @@
     <img src="../../images/home/videos/6w5rWiim6mI.webp" alt="" width="640" height="360" loading="lazy">
   </div>
   <p class="video-meta"><span>The playlist web app: pick a playlist, then a cue (6:41 to 7:30)</span><a href="https://www.youtube.com/watch?v=6w5rWiim6mI&amp;t=401s" target="_blank" rel="noopener">Watch on YouTube, from 6:41</a></p>
+  <p class="small video-note">Filmed on older firmware. Since firmware 2.2, the three buttons at the bottom left open Picture settings, Player settings and Effects (below).</p>
   <ul class="points">
     <li>Connect your phone or laptop to the cube, the same way as for LaserOS. With WiFi server, join the cube’s WiFi: “LaserCube”, password “Laser2020”, unless you changed them.</li>
-    <li>Open a web browser (the manual names Safari and Firefox) and type the cube’s IP address: 192.168.4.1 by default on WiFi server. It’s also shown at the bottom right of the status bar.</li>
+    <li>Open a web browser (Safari, Chrome or Firefox) and type the cube’s IP address: 192.168.4.1 by default on WiFi server. It’s also shown at the bottom right of the status bar.</li>
     <li>Pick a playlist at the top right, and tap a cue to play it.</li>
-    <li><strong>Quick image settings:</strong> rotation (up to 90° either way), zoom (10 to 100%) and power (0 to 100%).</li>
-    <li><strong>Quick player settings:</strong> shuffle, cue delay and play speed (100 is normal speed). At the bottom it shows the interlock status, the battery and the cube’s temperature.</li>
-    <li><strong>Quick effects:</strong> one image effect and one colour effect at a time (lesson 4).</li>
+    <li><strong>Picture settings:</strong> the cube’s projection settings in five tabs. Image has power (0 to 100%), zoom (10 to 100%), rotation (up to 90° either way), the picture’s size and position, the keystone, flips and a grid; then Colour, Safety (the safety zone), Test (test patterns) and Preview, the laser output live on your phone. Press Save to keep the changes.</li>
+    <li><strong>Player settings:</strong> shuffle, cue delay, fade time and play speed (100 is normal speed), the audio input with a live spectrum, and the page’s theme. The status bar above the buttons shows the WiFi signal, the cube’s temperature and the battery.</li>
+    <li><strong>Effects:</strong> one image effect and one colour effect at a time (lesson 4).</li>
+    <li>These are the buttons of firmware 2.2. Older firmware has a simpler web app with quick image settings (rotation, zoom and power), quick player settings and a quick effect menu.</li>
   </ul>
-  <figure>
-    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-webapp-960.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-webapp-960.webp" alt="The playlist web app in a browser, from the manual: a grid of cue previews from the Halloween 1 playlist, the current cue name at the top left and the playlist selector at the top right. Along the bottom: quick image settings, quick player settings, the quick effect menu, projection on or off (red means on), previous cue, auto-play play and pause, and next cue." width="960" height="848" loading="lazy"></a>
-    <figcaption>The playlist web app, from the manual. The projection button is red while the laser is on. Select the picture to open it full size in a new tab.</figcaption>
+  <figure class="native dark">
+    <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/webapp-playlist.jpg" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/webapp-playlist-1256.webp" alt="The playlist web app of firmware 2.2 on a phone, from the manual: the cube tabs and Rescan at the top, the cue playing and the playlist, a grid of cue previews, the status bar, and along the bottom the Picture settings, Player settings and Effects buttons, projection on or off, and previous, auto-play and next." width="628" height="726" loading="lazy"></a>
+    <figcaption>The playlist web app of firmware 2.2, from the manual. The projection button is red while the laser is on. Select the picture to open it full size in a new tab.</figcaption>
   </figure>
 
   <div class="practice">
@@ -504,9 +506,9 @@
     <p class="video-meta"><span>Visualizer mode on the cube: player, options and preview (0:22 to 2:39)</span></p>
   </div>
   <ul class="points">
-    <li>Firmware 2.1 has 174 sound‑reactive visualizers; firmware 2.0 has 91, so a cube still on 2.0 shows 91 until it is updated. They include spectrum and waveform meters, particles and trails, geometric patterns, beams and mirrors, and a few characters, such as a dancing stick figure. The manual lists the 91 of firmware 2.0, with a picture of each.</li>
+    <li>Firmware 2.2 has 197 sound‑reactive visualizers; a cube on older firmware has fewer (firmware 2.0 has 91) until it is updated. They include spectrum and waveform meters, particles and trails, geometric patterns, beams and mirrors, dancing characters and 21 Halloween figures. The manual lists all 197, with a picture of each.</li>
     <li>Choose <strong>Control Mode → Visualizer</strong>. Pick a playlist (“All” has every visual), then a visual, or let auto‑play move through the list. Picking a visual yourself, or pressing previous or next, cancels the auto‑play.</li>
-    <li>The Viz Options menu sets the transition time between visuals. Auto‑play at power‑on can be set too.</li>
+    <li>The Viz Options menu sets the transition time between visuals. Auto‑play at power‑on, the cue delay, shuffle and the web app’s source can be set there too.</li>
   </ul>
   <figure>
     <a href="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-visualizer-1286.webp" target="_blank" rel="noopener"><img src="../../docs/guides/ultra-mk2-pro-manual/Pictures/web/composite-visualizer-1286.webp" alt="The Audio Visualizer screen, from the manual: a playlist drop-down set to Classics, a visual drop-down set to Atomic, and buttons for previous, auto-play play and pause, next and projection on or off. Notes say that choosing a visual, previous or next cancels auto-play." width="1286" height="536" loading="lazy"></a>
@@ -526,18 +528,18 @@
     <li>Effects only work once they’re enabled. The manual recommends keeping them disabled when you don’t need them, so the projection doesn’t change by accident.</li>
     <li>The Master Effect slider sets how strongly all effects apply: 100% by default; at 0% no effect is applied.</li>
     <li>Effect settings you change on the cube are kept after a power cycle.</li>
-    <li>In the web apps’ quick effect menu, you pick one image effect and one colour effect at a time; “No Effect” turns one off.</li>
+    <li>In the web app’s Effects menu, you pick one image effect and one colour effect at a time; “No Effect” turns one off.</li>
   </ul>
 
   <h3>The Visualizer web app</h3>
-  <p>Visualizer mode has its own web app, opened like the playlist one. In it you pick playlists and make your own: long‑press a visual to add it to a playlist, and hold and drag to change the order. The built‑in “All” and “Classics” playlists can’t be deleted. If the previews show as blank squares, update the SD card from GitHub (lesson 2).</p>
+  <p>Visualizer mode uses the same web app as Playlist mode, with the visuals in its grid. In it you pick playlists and make your own: press and hold a visual to add it to a playlist, and press one and slide it sideways to change the order. “All” and the built‑in playlists, such as “Classics”, can’t be deleted. Its settings add a BPM tab with Tap BPM and Sync Beat (firmware 2.2). If the previews show as blank squares, update the SD card from GitHub (lesson 2).</p>
   <div class="pending-video">
     <div class="video" data-yt="7v1K0HiNlMk" data-from="169" data-to="235" data-title="Visualizer control mode: the web app on a phone">
       <button type="button" aria-label="Play video: opening the Visualizer web app on a phone"><span class="play"><svg><use href="#i-play"/></svg></span></button>
       <img src="../../images/academy/control-modes/l4-clip2.webp" alt="" width="1280" height="720" loading="lazy">
     </div>
     <p class="video-meta"><span>Opening the Visualizer web app on a phone (2:49 to 3:55)</span></p>
-    <p class="small video-note">Filmed on firmware 2.0. On firmware 2.1 and later, changing the connection mode doesn’t restart the cube.</p>
+    <p class="small video-note">Filmed on firmware 2.0. On firmware 2.1 and later, changing the connection mode doesn’t restart the cube and the web app looks different: the text above and <a class="link" href="#lesson-3">lesson 3</a>’s “Control it from a browser” follow firmware 2.2.</p>
   </div>
 
   <div class="practice">
@@ -933,9 +935,9 @@
   <ul class="points">
     <li><strong>A slider to a knob or fader:</strong> on the cube’s screen, push the knob on the slider to edit it, then long‑press for the menu and choose “Link MIDI Knob”. Then move the control on the APC.</li>
     <li>If that control is already mapped to something else, its MIDI info shows orange. Accept it, and it moves to this slider.</li>
-    <li>A mapped slider shows yellow on the screen instead of blue. Almost every slider can be mapped.</li>
+    <li>A mapped slider shows yellow on the screen instead of blue. Almost every slider can be mapped. Since firmware 2.2, none of the Colour Balance and Safety Zone controls (sliders or switches) can, and links made to them on older firmware stop working.</li>
     <li>APC40 faders are absolute: moving one always overrides the slider’s value. The dials turn without end stops, and the LED ring around each mapped dial shows the slider’s value.</li>
-    <li><strong>Buttons, switches and drop‑down lists</strong> (such as the playlist or the laser show list): highlight it (in a list, pick the item first), long‑press, choose “Link MIDI Note”, press a button on the APC and pick its light colour, one of 15.</li>
+    <li><strong>Buttons, switches and drop‑down lists</strong> (such as the playlist or the laser show list): highlight it (in a list, pick the item first), long‑press, choose “Link MIDI Note”, press a button on the APC and pick its light colour, one of 15. After updating from firmware older than 2.2, link the Test Patterns Enable switch again, to the same APC button.</li>
     <li>To remove a mapping, open the same menu and choose Unlink.</li>
   </ul>
   <p class="note"><strong>Safety:</strong> with the factory mapping, the yellow dials change the power, rotation, zoom and position of the image while it plays. Whatever the controller sends, the beam block is your hard stop (<a class="link" href="../start-here/#lesson-8">Laser safety, lesson 8</a>).</p>
@@ -1023,7 +1025,7 @@
       <label class="opt"><input type="radio" value="a"><span>In LaserOS’s own projection settings</span></label>
       <label class="opt"><input type="radio" value="b"><span>The Playlist Options menu</span></label>
       <label class="opt"><input type="radio" value="c"><span>Settings → Projection → Image Setup</span></label></div>
-      <p class="why" hidden>In the cube’s own modes, its own Image Setup applies: power, rotation, size, flip and position.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>In the cube’s own modes, its own Image Setup applies: power, zoom, rotation, size, flip, position and (since firmware 2.2) keystone.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="c" data-group="build" data-lesson="2"><legend><span class="qn"></span>A scrolling text should run once, then the next item should play. What do you set on it?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Assign Duration, time: 1 second</span></label>
@@ -1047,14 +1049,14 @@
       <label class="opt"><input type="radio" value="c"><span>The cue delay, with Auto‑Play on</span></label></div>
       <p class="why" hidden>With Auto‑Play on, the cube moves to the next cue every “cue delay” seconds.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="a" data-group="play" data-lesson="3"><legend><span class="qn"></span>In the playlist web app, where do you turn the projection power down?</legend><div class="opts">
-      <label class="opt"><input type="radio" value="a"><span>Quick image settings</span></label>
-      <label class="opt"><input type="radio" value="b"><span>Quick player settings</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The quick effect menu</span></label></div>
-      <p class="why" hidden>Quick image settings has rotation, zoom and power.</p><p class="feedback"></p></fieldset>
+      <label class="opt"><input type="radio" value="a"><span>Picture settings, Image tab</span></label>
+      <label class="opt"><input type="radio" value="b"><span>Player settings, Playlist tab</span></label>
+      <label class="opt"><input type="radio" value="c"><span>The Effects menu</span></label></div>
+      <p class="why" hidden>The Image tab of the picture settings has power, zoom and rotation.</p><p class="feedback"></p></fieldset>
     <fieldset class="check" data-answer="b" data-group="play" data-lesson="3"><legend><span class="qn"></span>Where do you turn Power‑On Play off?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Settings → General</span></label>
       <label class="opt"><input type="radio" value="b"><span>The Playlist Options menu</span></label>
-      <label class="opt"><input type="radio" value="c"><span>The web app’s image settings</span></label></div>
+      <label class="opt"><input type="radio" value="c"><span>The web app’s Picture settings</span></label></div>
       <p class="why" hidden>Power‑On Play is in the Playlist Options menu, below the Playlist Player.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="viz" data-lesson="4"><legend><span class="qn"></span>The Visualizer should follow the music from your mixer, through a cable. What do you choose?</legend><div class="opts">
@@ -1067,11 +1069,11 @@
       <label class="opt"><input type="radio" value="b"><span>Tap BPM in time, then Sync Beat</span></label>
       <label class="opt"><input type="radio" value="c"><span>Set the cue delay to the song length</span></label></div>
       <p class="why" hidden>In Settings → Tempo, tap “Tap BPM” to the beat, then press “Sync Beat” on the first beat of a bar.</p><p class="feedback"></p></fieldset>
-    <fieldset class="check" data-answer="c" data-group="viz" data-lesson="4"><legend><span class="qn"></span>In the web app’s quick effect menu, how many effects can be active at once?</legend><div class="opts">
+    <fieldset class="check" data-answer="c" data-group="viz" data-lesson="4"><legend><span class="qn"></span>In the web app’s Effects menu, how many effects can be active at once?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>As many as you like, up to all 78</span></label>
       <label class="opt"><input type="radio" value="b"><span>None: effects only work from the cube</span></label>
       <label class="opt"><input type="radio" value="c"><span>One image effect and one colour effect</span></label></div>
-      <p class="why" hidden>In the quick effect menu, one image effect and one colour effect can be active at once. Choose “No Effect” to turn one off.</p><p class="feedback"></p></fieldset>
+      <p class="why" hidden>In the Effects menu, one image effect and one colour effect can be active at once. Choose “No Effect” to turn one off.</p><p class="feedback"></p></fieldset>
 
     <fieldset class="check" data-answer="b" data-group="shows" data-lesson="5"><legend><span class="qn"></span>The Laser Show list on your cube is empty. What’s the likely cause?</legend><div class="opts">
       <label class="opt"><input type="radio" value="a"><span>Cube Link isn’t enabled on the cube</span></label>
