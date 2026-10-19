@@ -428,7 +428,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../">User Wiki</a><span aria-hidden="true">/</span><span aria-current="page">Manual</span></nav>
     <h1 id="manual-title">LaserCube Ultra MK2 &amp; Pro Manual</h1>
-    <p class="lead">Version 1.5, October 2026. For the LaserCube Ultra MK2 and the LaserCube Pro, the compact version of the Ultra MK2. Both run the same CubeOS firmware, so everything in this manual applies to both unless it says otherwise.</p>
+    <p class="lead">Version 1.6, October 2026, for firmware 2.2. For the LaserCube Ultra MK2 and the LaserCube Pro, the compact version of the Ultra MK2. Both run the same CubeOS firmware, so everything in this manual applies to both unless it says otherwise.</p>
     <div class="start">
       <ul class="start-grid" aria-label="Key sections">
         <li><a href="#safety-guidelines-and-proper-usage"><span class="ico"><svg class="icon"><use href="#i-warn"/></svg></span><span><strong>Safety guidelines</strong><span class="d">Class 4 laser: read these before your first show</span></span></a></li>
@@ -733,7 +733,7 @@ venue where persons are or are not allowed to be respectively. The “safe
 areas” should not be subject to any laser radiation either directly or
 indirectly. By protocol, there must be at least a 3 meter buffer between
 safe and restricted areas on all sides. In other words, all laser beams
-must terminate (ie. not be reflected away) in the restricted areas to
+must terminate (i.e. not be reflected away) in the restricted areas to
 avoid human contact. The laser must never be aimed at or allowed to be
 directed or reflected toward other people or reflective objects.</p>
 <p>19. Do not stand in front of the laser while active. All persons should
@@ -830,7 +830,7 @@ important messages or warnings. The background colour will also change
 to indicate certain connection states. e.g. a green background indicates
 active samples being received over the network, and a cyan background
 indicates the ILDA analog input is being used (overriding the current
-DAC data for the currently selected ctrl mode).</p>
+DAC data for the currently selected control mode).</p>
 <p>The status bar shows the battery level, the control mode, the connection
 mode, the cube’s IP address and, while the laser is not armed, an I-LOCK
 warning. In WiFi connection modes, a WiFi symbol at the bottom left is
@@ -854,7 +854,9 @@ what the knob does: in Visualizer mode, turn it to skip to the next visual,
 press it to leave the preview and hold it to switch between the 2D and 3D
 view. In the 3D view, turning the knob changes the point of view.
 <a href="#general-settings">General Settings</a> sets which view opens
-first.</p>
+first. On firmware 2.2 and later, while a phone or computer shows the web
+app’s live Preview, the cube’s own Preview closes and is greyed out (see
+<a href="#quick-image-settings">Picture Settings</a>).</p>
 <h1 id="control-modes"><span id="anchor-21"></span>Control Modes<a href="#control-modes" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The Ultra MK2 / Pro currently has 8 selectable control modes:</p>
 <ul><li>LaserOS control mode</li><li>ArtNet control mode</li><li>DMX control mode</li><li>Visualizer control mode</li><li>Playlist control mode</li><li>Laser show control mode</li><li>IDN (ILDA digital network protocol, streaming up to 35K pps)</li><li>Ether Dream (DAC network protocol)</li></ul>
@@ -880,8 +882,8 @@ settings may be changed under Settings -&gt; Network -&gt; WiFi Server.</li></ol
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140093C94D8-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001409D4CA66C-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140F4B55E87-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140BAFD1B0E-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <p>In order to get the best projection quality with minimal projection
-interruptions we recommend using the WiFi scan button in the WiFi server
-settings page to show the current congestion status of the available
+interruptions we recommend using the WiFi Scan button in the WiFi Server
+settings page (Settings→Network→WiFi Server) to show the current congestion status of the available
 2.4GHz WiFi channels. If the channel scan is heavily congested then we
 recommend using a wired connection method. Using WiFi outdoors should be
 absolutely fine, but in some apartment buildings it could likely result
@@ -897,10 +899,17 @@ and the cube will auto assign an IP address to your MacBook or
 Windows Laptop etc.</li></ol>
 <p>The images below show how to set the connection mode:</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140093C94D8-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014036541C9C-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140B71EF241-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<blockquote><p>On firmware before 2.1, if changing the connection method, the
-LaserCube will ask you to reboot the device. Highlight “YES” using the red
-cursor box then push the encoder knob to confirm. Firmware 2.1 and later
-change the connection method without a reboot.</p></blockquote>
+<p>Select the new connection method and push the encoder knob: on firmware
+2.1 and later the cube switches to it straight away, without a restart.
+While it switches, the status bar shows a yellow “...” beside the new mode
+(below, left); once it is connected, a green tick and the cube’s IP address
+take its place (below, right). A red cross means the connection could not
+be made, for example LAN Client with no cable connected. Changing the
+Control Mode still restarts the cube.</p>
+<div class="row"><div class="col"><img src="Pictures/web/cubeos-connection-switching-240.webp" width="240" height="320" alt="The cube’s screen while it changes the connection: a yellow “...” in the status bar." loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-connection-connected-240.webp" width="240" height="320" alt="The cube’s screen once connected: a green tick and the IP address in the status bar." loading="lazy" decoding="async"></div></div>
+<blockquote><p>On firmware before 2.1, the LaserCube asks you to reboot the
+device after a change of connection method instead. Highlight “YES” using
+the red cursor box then push the encoder knob to confirm.</p></blockquote>
 <img src="Pictures/web/10000000000000F00000014066AA589C_hu_bfa7317f3fba6911-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <h3 id="installing-laseros-0181-or-later"><span id="anchor-23"></span>Installing LaserOS 0.18.1 or later<a href="#installing-laseros-0181-or-later" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>Before you can add content to your Ultra MK2 / Pro, or directly stream to it,
@@ -963,7 +972,7 @@ centre pane, then click the small ‘+’ icon as shown in the image below:</p>
 <p>Once you create a playlist, you will now be able to drag content from
 the various categories into the playlist pane on the right hand side.
 You can also add content to a playlist by right clicking on any CUE
-within laserOS, and then use the “add to playlist” button.</p>
+within LaserOS, and then use the “add to playlist” button.</p>
 <p>This is the method we will show in this document, so for now you can
 simply save the empty playlist with the name of your choice as shown
 below:</p>
@@ -1050,7 +1059,7 @@ playlist player CUE delay time.</p>
 <p>Note: The “Assign Effect” option in right-click CUE popup is not
 currently supported on the LaserCube.</p>
 <h3 id="exporting-a-playlist-to-the-micro-sd-card"><span id="anchor-32"></span>Exporting a Playlist to the micro SD card<a href="#exporting-a-playlist-to-the-micro-sd-card" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>Once you have finished adding CUE’s to your new playlist, you can then
+<p>Once you have finished adding CUEs to your new playlist, you can then
 export the entire playlist to the micro SD card.</p>
 <p>Only playlists go on the card: LaserOS leaves Timeline shows out of an
 SD card export, so a Timeline show plays only while LaserOS (on a computer,
@@ -1139,7 +1148,7 @@ grid buttons.</p>
 <p>Note: The Ultra MK2 / Pro has this playlist and others as part of the demo
 SD card provided with the device.</p>
 <h3 id="using-the-new-playlist-on-the-ultra-mk2--evo"><span id="anchor-34"></span>Using the new playlist on the Ultra MK2 / Pro<a href="#using-the-new-playlist-on-the-ultra-mk2--evo" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>To project the CUE’s from the example “Content 1” playlist we just
+<p>To project the CUEs from the example “Content 1” playlist we just
 exported from LaserOS, you need to firstly safely eject the SD card from
 your PC/Mac. This can be done by right clicking the SD card in file
 manager and selecting “Eject”.</p>
@@ -1175,14 +1184,14 @@ the currently selected playlist every &lt;cue delay&gt; seconds. Auto play
 is enabled when the pause button is visible, and pressing the pause
 button will move to auto-play disabled, and UI will show the play
 button.</p>
-<p>Press the play button to re-enable the CUE Auo-Play. While Auto-Play is
+<p>Press the play button to re-enable the CUE Auto-Play. While Auto-Play is
 off, the playlist will remain at the last selected CUE.</p>
 <p>Note: If an APC MIDI device is connected and a CUE is manually selected
 using an APC button, or a CUE is manually selected via the playlist web
 app, then the device will no longer cycle through items in the playlist
 until the Auto-play button is selected again.</p>
 <p>The playlist can also be shuffled in order to randomize the order of
-CUE’s in the playlist.</p>
+CUEs in the playlist.</p>
 <img src="Pictures/web/10000000000000F0000001404A57E48E_hu_1d6ec62199639775-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <h3 id="cue-playback-speed"><span id="anchor-36"></span>CUE Playback Speed<a href="#cue-playback-speed" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The user can adjust the playback speed of any CUE being projected while
@@ -1193,60 +1202,112 @@ in the playlist control mode.</p>
 if using an APC40 MK2 or APC mini MK2 (see <a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii">MIDI Mapping</a>
 or the online wiki).</p>
 <h2 id="playlist-player-web-app"><span id="anchor-37"></span>Playlist Player Web App<a href="#playlist-player-web-app" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>The playlist control mode includes a web server which can be used to
-control the LaserCube from your mobile or Laptop/PC device via a web
-browser (tested with Safari / Mozilla Firefox).</p>
-<p>You firstly need to connect to the LaserCube using the chosen
-connection method. If WiFi server is your chosen connection method (see
-settings→connection menu), then look for the network “LaserCube” in the
-WiFi list and connect using the default password “Laser2020”.</p>
-<p>Once your device’s WiFi has connected to the LaserCube, go to your
-device web browser (Firefox, Safari etc) and enter the IP address of the
-cube. This is “192.168.4.1” by default, and can be checked in
-settings→network, or just look at the LCD status bar for the IP address,
-as it is located in the bottom right corner.</p>
-<p>Example image of the playlist web app being served from the cube to
-Firefox macOS browser:</p>
-<img src="Pictures/web/composite-webapp-960.webp" width="480" height="424" alt="" loading="lazy" decoding="async">
-<h3 id="quick-image-settings"><span id="anchor-38"></span>Quick Image Settings<a href="#quick-image-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>The Quick image settings allow you to adjust basic projection items such
-as projection size, rotation, and output power.</p>
-<p>An example of the quick image settings menu is shown below:</p>
-<img src="Pictures/web/100000010000048C0000066E8A66DA17-538.webp" width="269" height="380" alt="" loading="lazy" decoding="async">
-<p>Note: Any of the image settings can be reset to their default values by
-pressing the button to the right of any slider.</p>
-<ul><li><p>Rotation</p><p>This allows the image to be rotated from 0 to +/- 90 degrees</p></li><li><p>Zoom</p><p>This allows the image size to be adjusted from 10% to 100%</p></li><li><p>Power</p><p>This allows the projection power to be adjusted from 0% to 100%</p></li></ul>
-<h3 id="quick-player-settings"><span id="anchor-39"></span>Quick Player Settings<a href="#quick-player-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>The Quick player settings allow changes to how the player behaves,
-including its colour theme.</p>
-<p>This menu also shows the interlock status, current battery percentage,
-and cube internal temperature at the bottom of the menu.</p>
-<img src="Pictures/web/10000001000004920000068AE04DAA35-542.webp" width="271" height="388" alt="" loading="lazy" decoding="async">
-<ul><li>Theme Selection</li></ul>
-<blockquote><p>The theme selection allows the colour theme of the web app to be
-changed. Options are Dark Blue, Icy Green, Dark Red, Pink, Purple, or
-Orange. The theme choice is stored using local web storage on your
-device’s web browser.</p></blockquote>
-<ul><li><p>Animated Previews</p><p>This will show the playlist items as animated icons instead of static.
-Note that this is only possible on certain devices that have
-sufficient performance to allow many animated icons. (Apple devices
-have known issues with poor performance of animated image files such
-as animated .webp files, so it is recommended to have this set to
-off).</p></li><li><p>Shuffle Playlist</p><p>This allows the playlist items to be played in a random order, instead
-of in playlist sequence order.</p></li><li><p>CUE Delay</p><p>This changes how many seconds each CUE will be projected for, before
-moving on to the next CUE in the playlist (Only when Auto-Play is
-enabled).</p></li><li><p>Play Speed</p><p>This adjusts the animation speed of any animated projections (100 = 1x
-play speed)</p></li></ul>
-<h3 id="quick-effect-settings"><span id="anchor-40"></span>Quick Effect Settings<a href="#quick-effect-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>This menu allows you to quickly select an image effect and/or a colour
-effect. Most of these effects are also audio reactive. A long-press on
-items with a blue mark in the bottom right will bring up any adjustments
-that can be made to the selected effect. Note the effect must be
-selected before accessing the effects adjustments.</p>
-<p><img src="Pictures/web/10000001000004940000067CC273E75E-492.webp" width="246" height="348" alt="" loading="lazy" decoding="async"> <img src="Pictures/web/10000001000004900000067AF758D28F-462.webp" width="231" height="328" alt="" loading="lazy" decoding="async"></p>
-<p>You can see a description of all the available effects in the <a href="#available-effects">Effects Section</a></p>
-<p>Note: You can only have one image effect and one colour effect active at
-once. Choose “No Effect” to turn off any active image/colour effect.</p>
+<p>In playlist control mode the cube serves a web app: a control page for
+any phone, tablet or computer on its network, opened in the device’s web
+browser (Safari, Chrome or Firefox). The page is laid out for a phone, and
+works on a tablet or computer too.</p>
+<p>First connect your device to the cube, using the cube’s connection
+method. If it is WiFi Server (see <a href="#connection-settings">Connection
+Settings</a>), look for the network “LaserCube” in your device’s WiFi list
+and connect with the default password “Laser2020”.</p>
+<p>Then enter the cube’s IP address in the browser. This is 192.168.4.1 by
+default. The cube shows its address in the bottom right corner of the LCD
+status bar, and in Settings→Network.</p>
+<a href="Pictures/webapp-playlist.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-playlist-1256.webp" width="628" height="726" alt="The playlist web app on a phone, with labels: the cube tabs and Rescan at the top, the cue playing and the playlist, the grid of cue previews, the status bar, and along the bottom the Picture settings, Player settings and Effects buttons, Projection on/off, and Previous, Auto-Play and Next." loading="lazy" decoding="async"></a>
+<ul><li><strong>Your cubes</strong>: every cube on your network in playlist or
+visualizer control mode gets a tab, named by its model and the last 4
+digits of its MAC address, so one page controls them all. The cube serving the page is always the first tab. See
+<a href="#multi-cube-control">Multi-Cube Control</a> to set your cubes up
+for this.</li><li><strong>Cues</strong>: tap a preview to play that cue. If the SD card is
+missing, or has no previews on it, the page says so.</li><li><strong>Status bar</strong>: the WiFi signal and channel (in the WiFi
+modes), the cube’s temperature and its battery level.</li><li><strong>Projection on / off</strong>: starts and stops the projection. The
+button is red while the cube projects.</li><li><strong>Previous, Auto-Play and Next</strong>: with Auto-Play on, the next
+cue plays after the Cue Delay. Previous and Next turn Auto-Play off.</li></ul>
+<p>The three buttons on the left open the popups below. A popup closes with
+a tap outside it. The popups are those of firmware 2.2; a cube on older
+firmware has fewer settings in the web app until it is updated (see
+<a href="#firmware-update">Firmware Update</a>).</p>
+<h3 id="quick-image-settings"><span id="anchor-38"></span><span id="picture-settings"></span>Picture Settings<a href="#quick-image-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The picture button opens the cube’s projection settings in five tabs:
+Image, Colour, Safety, Test and Preview, the settings of the LCD’s
+Projection menu. A change shows on the laser straight away, and the LCD
+follows it.</p>
+<p>Press Save to keep the changes on every tab. An orange dot marks a tab
+with changes not saved yet; a change that is not saved is undone when the
+cube restarts. The button beside a slider sets it back to its default. Each
+pad has a reset button in its top left corner, or double tap the pad.</p>
+<a href="Pictures/webapp-picture-image.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-picture-image-1400.webp" width="700" height="367" alt="The Image tab, with labels: Save, the tabs, Power, Zoom and Rotation, the Keystone pad, the Position/Size pad, Flip X, Flip Y and Grid, and Lock X-Y." loading="lazy" decoding="async"></a>
+<p><strong>Image</strong></p>
+<ul><li><strong>Power</strong>: the projection power, 0 to 100%.</li><li><strong>Zoom</strong>: the picture size, 10 to 100%.</li><li><strong>Rotation</strong>: up to 90° either way.</li><li><strong>Position/Size pad</strong>: drag to move the picture, and pinch with
+two fingers to zoom. With Lock X-Y off, a pinch side to side sets X Size
+and a pinch up and down sets Y Size. The shaded area shows how far the
+picture can still move.</li><li><strong>Keystone pad</strong>: squares up the picture on a wall the cube
+does not face straight on, horizontally, vertically or both. Drag towards
+the side of the picture that is too big on the wall (see
+<a href="#keystone-correction">Keystone Correction</a>).</li><li><strong>Flip X, Flip Y and Grid</strong>: mirror the picture, or project a
+square to line it up (like Show Grid on the cube).</li><li><strong>X Size, Y Size and Lock X-Y</strong>: with Lock X-Y on, Y Size
+follows X Size.</li></ul>
+<a href="Pictures/webapp-picture-colour.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-picture-colour-1400.webp" width="700" height="254" alt="The Colour tab, with labels: Max R, G and B, the most power each colour is driven at; Min R, G and B, the least power a lit colour gets; Gamma, the brightness curve." loading="lazy" decoding="async"></a>
+<p><strong>Colour</strong> is the cube’s <a href="#colour-balance">Colour
+Balance</a>: the most and the least power each colour is driven at, and the
+gamma, the brightness curve.</p>
+<a href="Pictures/webapp-picture-safety.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-picture-safety-1400.webp" width="700" height="311" alt="The Safety tab, with labels: Enabled, Invert and Preview, the Shape buttons (rectangle, circle, ellipse) and the zone pad." loading="lazy" decoding="async"></a>
+<p><strong>Safety</strong> is the safety zone, the area the beam may draw in.
+Enabled turns it on, and Invert makes it a keep-out zone instead. Drag the
+zone on the pad to move it, pinch it to resize it, and choose its Shape:
+rectangle, circle or ellipse. Attenuation sets how much the beam is dimmed
+outside the zone: 100% blanks it. Preview projects the zone’s outline until
+you leave the Safety tab, close the popup or switch away from the page,
+or about 5 seconds after the cube stops hearing from the page (for example
+when the phone locks). See <a href="#safety-zone">Safety Zone</a> for
+more.</p>
+<a href="Pictures/webapp-picture-test.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-picture-test-1400.webp" width="700" height="187" alt="The Test tab, with labels: the Test Pattern switch and a button for each pattern." loading="lazy" decoding="async"></a>
+<p><strong>Test</strong> projects the cube’s test patterns: turn on Test
+Pattern, and tap a pattern.</p>
+<a href="Pictures/webapp-picture-preview.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-picture-preview-1400.webp" width="700" height="294" alt="The Preview tab, with labels: the live laser output, drawn as the cube projects it, and a note that one device at a time shows it." loading="lazy" decoding="async"></a>
+<p><strong>Preview</strong> shows the laser output live, as the audience sees
+it: after every picture setting, with any image and colour effects. One
+device shows it at a time: another shows a message instead, and takes the
+preview over with a tap. The LCD’s Preview closes while a device shows
+it.</p>
+<h3 id="quick-player-settings"><span id="anchor-39"></span><span id="player-settings"></span>Player Settings<a href="#quick-player-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The settings button opens three tabs: Playlist, Audio and General. Press
+Save to keep the changes on the Playlist and Audio tabs; an orange dot marks
+changes not saved yet. In visualizer control mode the first tab is called
+Visualizer and a BPM tab is added: see <a href="#visualizer-settings">Visualizer
+Settings</a>.</p>
+<a href="Pictures/webapp-settings-playlist.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-settings-playlist-1400.webp" width="700" height="241" alt="The Playlist tab, with labels: Save, Shuffle, Cue Delay, Fade Time and Play Speed." loading="lazy" decoding="async"></a>
+<p><strong>Playlist</strong></p>
+<ul><li><strong>Shuffle</strong>: plays the cues in a random order.</li><li><strong>Cue Delay</strong>: how long each cue plays with Auto-Play on, 1 to
+100 seconds.</li><li><strong>Fade Time</strong>: the fade between one cue and the next, 0 to 5
+seconds in 0.1 second steps. 0 is no fade.</li><li><strong>Play Speed</strong>: the speed of animated cues, 10 to 200. 100 is
+normal speed.</li></ul>
+<a href="Pictures/webapp-settings-audio.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-settings-audio-1400.webp" width="700" height="271" alt="The Audio tab, with labels: Audio Input, the maximum gain of the selected input, and the live spectrum in 20 bands from bass to treble." loading="lazy" decoding="async"></a>
+<p><strong>Audio</strong> is the cube’s audio input, as in the LCD’s
+<a href="#audio-settings">Audio</a> menu: Audio Input chooses where the
+sound comes from, with the maximum gain of that input below it. The live
+spectrum shows what the cube hears, in 20 bands from bass to treble. Bars
+that sit in the red mean the gain is too high.</p>
+<a href="Pictures/webapp-settings-general.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-settings-general-1400.webp" width="700" height="182" alt="The General tab, with labels: Animated Previews, Theme and Device Clock." loading="lazy" decoding="async"></a>
+<p><strong>General</strong></p>
+<ul><li><strong>Animated Previews</strong>: shows the cues as animated previews.
+This needs a fast device: Apple devices are slow with animated previews
+(animated .webp files), so leave it off on those.</li><li><strong>Theme</strong>: the page’s colour theme: Dark Blue, Icy Green, Dark
+Red, Pink, Purple or Orange. Your browser remembers it.</li><li><strong>Device Clock</strong>: on cubes with a clock (the Pro), the cube’s
+date and time. Sync sets it from your device; the page also sets it by
+itself when the cube’s clock has been lost or is more than a minute
+out.</li></ul>
+<h3 id="quick-effect-settings"><span id="anchor-40"></span><span id="effects-menu"></span>Effects Menu<a href="#quick-effect-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The colour wheel button opens the effects. The Image tab has the image
+effects and the Colorize tab the colour effects, and most of them react to
+the music. Tap an effect to turn it on, or No Effect to turn that tab’s
+effect off: one image effect and one colour effect can be on at once. An
+effect with settings, such as a speed, has a small triangle in the corner
+of its tile: press and hold it while it is on for its settings.</p>
+<a href="Pictures/webapp-effects.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-effects-1400.webp" width="700" height="448" alt="The effects popup, with labels: the Image and Colorize tabs, and an effect that is on, its tile marked with a triangle for its settings." loading="lazy" decoding="async"></a>
+<p>The effects are ready to use as soon as the page connects. See
+<a href="#built-in-effects">Built-in Effects</a> for what each one
+does.</p>
 <h3 id="playlist-options-menu"><span id="anchor-41"></span>Playlist Options Menu<a href="#playlist-options-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001403A1B507E_hu_94fb699fbd7a63db-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140EAAA4BDF_hu_d83191d558290e7f-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001402BDE43AB_hu_a6274ee7b57511aa-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140ECDB213E_hu_82845c533771f1c8-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
@@ -1269,8 +1330,8 @@ the provided web app, assuming the user has the relevant HTML/CSS/JS
 knowledge.</p>
 <p>Note: The web app is provided on the latest SD card image in the
 following location: /Lasercube/res/web/playlist_index.html</p>
-<p>The file is a single html file containing all html / css / javascript to
-run the web app.</p>
+<p>The file is a single HTML file containing all the HTML / CSS / JavaScript
+to run the web app.</p>
 <p><em>The latest SD card contents are available on our GitHub Here:</em>
 <a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">LaserCube SD
 Card Contents</a>
@@ -1339,16 +1400,17 @@ already selected on all devices.</p></blockquote>
 <img src="Pictures/web/10000000000000F000000140B9E9F4BA-240.webp" width="124" height="165" alt="" loading="lazy" decoding="async">
 <img src="Pictures/web/10000000000000F000000140E48D960F-240.webp" width="124" height="165" alt="" loading="lazy" decoding="async"></p></blockquote>
 <h2 id="visualizer-control-mode"><span id="anchor-46"></span>Visualizer Control Mode<a href="#visualizer-control-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>Since firmware 2.1, the Ultra MK2 / Pro has 174 built-in audio reactive
-visualizers. Firmware 2.0 has 91, so a cube still on 2.0 shows 91 until
-it is updated (see <a href="#firmware-update">Firmware Update</a>). More
-visualizers will be added in future firmware updates.</p>
+<p>Since firmware 2.2, the Ultra MK2 / Pro has 197 built-in audio reactive
+visualizers, all listed below. A cube on older firmware has fewer
+(firmware 2.0 has 91) until it is updated (see
+<a href="#firmware-update">Firmware Update</a>). More visualizers will be
+added in future firmware updates.</p>
 <p>The factory supplied SD card also includes example MIDI mapping of some
 of these visualizers to the APC40 MK2 / APC mini MK2 grid buttons.</p>
 <img src="Pictures/web/composite-visualizer-1286.webp" width="643" height="268" alt="" loading="lazy" decoding="async">
-<p>The built-in audio reactive visualizers can be
-manually selected via the drop-down list once an active playlist has
-been selected (or “All” playlist selected)</p>
+<p>They are all built into CubeOS, and can be manually selected via the
+drop-down list once an active playlist has been selected (the “All”
+playlist holds every one of them).</p>
 <img src="Pictures/web/10000000000000F000000140DDC28B22_hu_de600fe0d1d5bb98-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <p>These react to the Audio Input source configured in Settings -&gt; Audio
 -&gt; Audio Input, and the input can be either set to the built in
@@ -1356,19 +1418,18 @@ microphone, or the 3.5mm stereo audio line input jack. The audio gain
 may also need to be adjusted based on the volume of the external audio.</p>
 <p>Some of the visualizers are also affected by the current tempo setting
 which can be set in Settings→Tempo menu on the LCD. The transition time
-when moving between visualizer CUE’s can also be adjusted through the
-Viz Options menu. Auto play at power-on can also be adjusted.</p>
-<div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140F448796E_hu_733dacbc21bf3f89-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140C817037D_hu_fe27ee537fc3347b-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<p>Below are the 91 visualizers of the v2.0 Ultra MK2 / Pro firmware in visualizer ctrl mode.
-Firmware 2.1 adds more: classic visuals ported from LaserOS, and new ones
-such as Tesseract, Galaxy Arms, Spiral Stair and Ocean Swell.</p>
-<p>Spectrum, Waveform &amp; Audio Meters (16)</p>
+when moving between visualizer CUEs can also be adjusted through the
+Viz Options menu. Auto play at power-on, the Cue Delay, Shuffle and the
+source of the web app (WebApp HTML) can also be set there.</p>
+<div class="row"><div class="col"><img src="Pictures/web/cubeos-viz-options-menu-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-viz-options-1-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-viz-options-2-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
+<p>Below is the full list of the 197 visualizers in firmware 2.2, grouped by type.</p>
+<p>Spectrum, Waveform &amp; Audio Meters (26)</p>
 <div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078FC9B38E8-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 1</th><td>FFT spectrum analyser - a row of vertical frequency bars rising from the baseline, coloured across the spectrum.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078BEE9FFB2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 2</th><td>Spectrum-analyser variant drawn in a second bar style.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078F22564EB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum 3</th><td>Spectrum analyser mirrored about the centre line, bars growing up and down from the middle.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000780E614A5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Voice</th><td>Voice / FFT-reactive visualizer that shapes the beam to the vocal content of the audio.</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000784F5418FB-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum W1</th><td>Terrain-style spectrum wave (port of ldTerra) - the FFT drawn as a rolling illuminated waveform landscape.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078EE4516DE-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum W2</th><td>A second spectrum-wave style with a different rolling FFT waveform.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000780E614A5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Voice</th><td>Voice / FFT-reactive visualizer that shapes the beam to the vocal content of the audio.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078DE6B4469-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Vocoder</th><td>Vocoder-style channels - the spectrum split into bands that pump with the music.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078B0C7A570-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Waveform</th><td>A live oscilloscope trace of the raw audio waveform drawn straight across the frame.</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000782BAB296C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">FFT Beams</th><td>One radial beam per FFT bin fanning out from centre; length follows magnitude, hue runs bass=red to treble=violet.</td></tr>
@@ -1377,10 +1438,20 @@ such as Tesseract, Galaxy Arms, Spiral Stair and Ocean Swell.</p>
 <tr><td><img src="Pictures/web/100000000000007800000078CEB9FD54-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio Curtain</th><td>A column of hanging vertical strands that sway to their own FFT bin, with a travelling wave rippling through them.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078CAF7418B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Audio Marquee</th><td>Vertical FFT bars scroll in from the right and wrap around the edges like a marquee; height, speed and hue track audio.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078191C96CF-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Chord Choir</th><td>Seven staggered horizontal bars, each spanning with its own spectral band and drifting side to side; hues reshuffle on the beat.</td></tr>
-<tr><td><img src="Pictures/web/1000000000000078000000785EC89C97-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mesh Wave</th><td>A woven cross-hatch of six warp and six weft lines; the raw waveform pushes each vertex radially so the sound ripples through the cloth.</td></tr>
 <tr><td><img src="Pictures/web/10000000000000780000007876296A15-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pulse Matrix</th><td>A digital square-wave grid of rows toggling high/low with per-row FFT coupling; rows scroll together then split by phase on the beat.</td></tr>
+<tr><td><img src="Pictures/web/1000000000000078000000785EC89C97-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mesh Wave</th><td>A woven cross-hatch of six warp and six weft lines; the raw waveform pushes each vertex radially so the sound ripples through the cloth.</td></tr>
+<tr><td><img src="Pictures/web/viz-spectrum-blob-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum Blob</th><td>A rainbow spiral of three loops round the centre, mirrored left and right, bulging outward with the bass and low mids.</td></tr>
+<tr><td><img src="Pictures/web/viz-spect-band-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spect Band 1</th><td>Six bass-to-mid columns of dashes stacked green to red, each with a peak marker that drops back.</td></tr>
+<tr><td><img src="Pictures/web/viz-spect-band-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spect Band 2</th><td>Eight evenly spaced frequency columns of dashes, green at the bottom to red at the top, with falling peak markers.</td></tr>
+<tr><td><img src="Pictures/web/viz-spect-band-3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spect Band 3</th><td>Ten columns across the whole spectrum lit green to red over a dim blue grid of unlit dashes, with falling peak markers.</td></tr>
+<tr><td><img src="Pictures/web/viz-spectrum-flower-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum Flower</th><td>Three nested petal rings turning in 3D, each petal reaching out with its frequency band, the bloom swelling when loud.</td></tr>
+<tr><td><img src="Pictures/web/viz-spectrum-mtn-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spectrum Mtn</th><td>Mirrored spectrum ridges, bass below and highs above, with echoes trailing into the distance as the range tumbles in 3D.</td></tr>
+<tr><td><img src="Pictures/web/viz-sine-bands-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sine Bands</th><td>Mirrored rails of dotted sine waves, each band swelling with its own part of the music.</td></tr>
+<tr><td><img src="Pictures/web/viz-speaker-dots-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Speaker Dots</th><td>Rows of dots pushed outward by the sound like a speaker cone, the colours cycling faster when louder.</td></tr>
+<tr><td><img src="Pictures/web/viz-sound-ribbon-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sound Ribbon</th><td>A wide ribbon snaking across the frame, its width traced by the bass.</td></tr>
+<tr><td><img src="Pictures/web/viz-ocean-swell-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ocean Swell</th><td>Wave crests roll toward you, each wave’s height set by part of the music.</td></tr>
 </tbody></table></div>
-<p>Particles, Swarms &amp; Trails (22)</p>
+<p>Particles, Swarms &amp; Trails (37)</p>
 <div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/1000000000000078000000786C47F67C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Flying Stars</th><td>Stars flying through the frame to the beat (port of ldFlyingStars).</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078D32AFDD0-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Snake</th><td>A beam snake that slithers around the frame (port of ldBeamSnake).</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000782A7B5C81-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Warp Stars</th><td>Classic hyperspace warp - white stars streak outward from a vanishing point; bass drives the warp speed.</td></tr>
@@ -1403,8 +1474,23 @@ such as Tesseract, Galaxy Arms, Spiral Stair and Ocean Swell.</p>
 <tr><td><img src="Pictures/web/100000000000007800000078F00035FD-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Flow Field</th><td>Particles advected by a sin/cos vector field, leaving hue-aged curved trails.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078AB64A3A5-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Gale Ribbons</th><td>Wind-streak particles flowing along a turbulent vector field; raw audio gusts them into long braided ribbon tails.</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000784DD7B120-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Starfield Drift</th><td>A parallax star swarm streaming outward toward the viewer, bass warping the drift forward and easing back in quiet.</td></tr>
+<tr><td><img src="Pictures/web/viz-auto-draw-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Auto Draw 1</th><td>Three rainbow trails scribble over a turning sphere, changing course on the beat and spinning a new way on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-auto-draw-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Auto Draw 2</th><td>Two pens hatch zigzag arcs over a large and a small spinning sphere, reversing on peaks and changing colour on the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-auto-draw-3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Auto Draw 3</th><td>Two pens draw rings round a turning sphere, changing axis and ring size with the bars, its spin changing on beats and peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-bubbles-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Bubbles</th><td>Blue and white bubbles drift upward and squash into each other, pulsing with the beat and swapping in and out on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-lattice-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lattice</th><td>Trails crawl over a spinning 3D grid on the beat, the box swelling into a sphere and back; peaks reverse the spin.</td></tr>
+<tr><td><img src="Pictures/web/viz-particles-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Particles 1</th><td>Spinning squares flung out and curled back to the centre, bigger and wider when louder, colours stepping on each beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-particles-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Particles 2</th><td>Spinning squares burst from the centre, bigger and wider when louder, turning from blue to yellow and red on bass hits.</td></tr>
+<tr><td><img src="Pictures/web/viz-polar-symmetry-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Polar Symmetry</th><td>Three colour trails wander a spinning sphere, mirrored four ways; louder music spins it faster and loud peaks reverse it.</td></tr>
+<tr><td><img src="Pictures/web/viz-stream-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Stream</th><td>Four coloured ribbons pour down from one point at the top, each swaying with its own band; bass hits make them swell.</td></tr>
+<tr><td><img src="Pictures/web/viz-vortex-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Vortex</th><td>Coloured dashes spiral towards you down a swirling tunnel that flares on loud music, changing pattern every two bars.</td></tr>
+<tr><td><img src="Pictures/web/viz-worm-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Worm</th><td>A braided worm of coloured dots coiling in 3D; treble widens and brightens it, bass twists it, peaks change its spin.</td></tr>
+<tr><td><img src="Pictures/web/viz-plankton-storm-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Plankton Storm</th><td>Drifting clouds of plankton, each lit by its own frequency, shimmering with short tails.</td></tr>
+<tr><td><img src="Pictures/web/viz-starling-cloud-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Starling Cloud</th><td>A starling murmuration wheeling through space, stretching on the bass.</td></tr>
+<tr><td><img src="Pictures/web/viz-galaxy-arms-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Galaxy Arms</th><td>Spiral galaxy arms sweep from an empty core, and peaks fling stars across the frame.</td></tr>
+<tr><td><img src="Pictures/web/viz-school-fish-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">School Fish</th><td>A shoal of fish sweeping in banking formation, scattering on peaks and regrouping.</td></tr>
 </tbody></table></div>
-<p>Geometric &amp; Parametric Patterns (35)</p>
+<p>Geometric &amp; Parametric Patterns (78)</p>
 <div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078C4F438F3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Swirly Spheres</th><td>Nested swirling spheres of light (port of ldSwirlySphere).</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078933D4FDC-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Synesthesia</th><td>A flowing synesthetic colour-and-form field reacting to the music (port of ldSynesthesia3).</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078CA5A260B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cubes</th><td>A spinning 3D cube (port of ld3dCube).</td></tr>
@@ -1440,8 +1526,51 @@ such as Tesseract, Galaxy Arms, Spiral Stair and Ocean Swell.</p>
 <tr><td><img src="Pictures/web/1000000000000078000000780835EBC6-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Hypocycloid R</th><td>A single hypocycloid rosette whose inner-radius ratio sweeps each bar to morph cusp counts; treble runs hue, bass sharpens cusps.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078AC3A0208-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pie Beam</th><td>Two rotating pie cones of stratified rays sweeping the frame; bass opens the cone angle, modes cycle each bar.</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000781CC2637D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cissoid Flick</th><td>A mirrored pair of parametric cissoid cusps rotating with tempo; bass peaks flick the cusps to a new shape then settle.</td></tr>
+<tr><td><img src="Pictures/web/viz-black-hole-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Black Hole</th><td>A tunnel of rings flies toward you along a winding path that turns on peaks, the rings squashing on the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-chaos-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Chaos 1</th><td>A knot of spinning spiral-wound tendrils that shoot out on the beat, thicken with the mids and flash red on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-chaos-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Chaos 2</th><td>Nested shells of four leaf-shaped petals tumble in 3D, stretching with the volume and flashing red on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-chaos-3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Chaos 3</th><td>Propeller-like pairs of bent petals tumble on three axes, swelling on peaks and changing spin on beats and bars.</td></tr>
+<tr><td><img src="Pictures/web/viz-corners-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Corners</th><td>Six corner fans of a cube seen down its diagonal, morphing each bar between pyramid, cube and star shapes, the spin changing on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-dance-floor-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dance Floor</th><td>A 4x4 disco floor of red, green and blue tiles flashing with the beat and peaks, the lit tiles hopping across the grid.</td></tr>
+<tr><td><img src="Pictures/web/viz-disc-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Disc</th><td>Two rainbow rings, inner swelling with the bass, outer with the treble, with lightning striking between them on the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-echo-ellipse-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Echo Ellipse</th><td>Five echoing rings tumble in one slowly shifting colour, spreading apart with the bass and in depth on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-halo-rings-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Halo Rings</th><td>Two wavy rings seen edge-on make a wide rainbow band of crossing waves, one reversing on peaks, fraying when it gets loud.</td></tr>
+<tr><td><img src="Pictures/web/viz-hydra-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Hydra</th><td>Three serpent arms swim round the centre in 3D, swelling with the volume, swerving on peaks and changing colour each bar.</td></tr>
+<tr><td><img src="Pictures/web/viz-incal-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Incal</th><td>An octahedron of eight triangles folds open and shut every few bars, changing colour on the beat and its spin on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-polygon-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Polygon 1</th><td>Two nested rainbow seven-point stars; bass bends the sides inward, treble makes the star denser, beats turn it a step.</td></tr>
+<tr><td><img src="Pictures/web/viz-polygon-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Polygon 2</th><td>A smaller pair of nested seven-point stars whose sides bow outward with the bass, their colours sweeping with the volume.</td></tr>
+<tr><td><img src="Pictures/web/viz-rail-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Rail</th><td>A twisted ladder tumbles through space, its two ends changing speed on peaks, its spin each bar and its colours on beats.</td></tr>
+<tr><td><img src="Pictures/web/viz-ribbon-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ribbon</th><td>Six looping rainbow ribbons fan out from the centre, reshaping each beat, spreading or bunching each bar, turning on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-rotating-circles-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Rotating Circles</th><td>Seven rainbow stars swirl in a pattern that changes every two bars, growing with the volume and pulsing on the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-grid-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Grid 1</th><td>A rainbow line lattice with a white centre that opens with the volume, turns with the bass and shimmers with the mids.</td></tr>
+<tr><td><img src="Pictures/web/viz-grid-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Grid 2</th><td>A rainbow lattice of dots pushed in and out by a ripple that jumps on treble beats, opening with the volume.</td></tr>
+<tr><td><img src="Pictures/web/viz-sphere-dancing-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sphere Dancing</th><td>Five wavy rings round a tumbling sphere reverse their spin on each beat, reshape every two bars and recolour on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-spinning-arcs-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spinning Arcs</th><td>Nested rainbow quarter-circles spin, beats tipping them into a tumbling ball, the whole nest swelling with the volume.</td></tr>
+<tr><td><img src="Pictures/web/viz-spiral-tunnel-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spiral Tunnel</th><td>A rainbow spiral spinning to the tempo and slowly winding and unwinding, the sound rippling outward along its arm.</td></tr>
+<tr><td><img src="Pictures/web/viz-spirals-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spirals</th><td>Four spiral ribbons wound round a turning ball, reshaping over the bars, recolouring on beats and changing spin on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-stellar-sphere-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Stellar Sphere</th><td>Wire spheres of curved arcs morph every four bars into fans, sheets or nested rings, recolouring on each beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-super-symmetry-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Super Symmetry</th><td>A six-fold flower of comet trails for bass, mid and treble, swelling with the music and pulled to the centre on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry 1</th><td>A 3-fold kaleidoscope of elastic whips flicked by the volume, two sets in neighbouring colours, turning with the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry 2</th><td>A 4-fold kaleidoscope of elastic whips flicked by the volume, two sets in neighbouring colours, turning with the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry 3</th><td>A 5-fold kaleidoscope of elastic whips flicked by the volume, an opposite-colour set between the arms, turning with the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-4-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry 4</th><td>A 6-fold kaleidoscope of elastic whips flicked by the volume, an opposite-colour set in alternate gaps, turning with the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-5-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry 5</th><td>A six-armed jellyfish of whips kicked by the bass and beat, spreading wider on bass and reversing its spin on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-triangles-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Triangles</th><td>Three tumbling 3D triangles with sweeping arcs that reshape every bar, recolour on the beat and re-spin on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-tunnel-rects-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Tunnel Rects</th><td>Rectangular gates fly down a bending tunnel in tempo, sides filled like level meters and coloured blue to red by loudness.</td></tr>
+<tr><td><img src="Pictures/web/viz-wave-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Wave</th><td>A rolling sheet of striped wave rows that reshapes every bar, recolours every two beats and changes its ripples on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-lituus-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lituus</th><td>A spiral swept from centre to rim in rotating kaleidoscope copies, turning with the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-op-art-warp-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Op Art Warp</th><td>An op-art field of lines bent by a travelling bulge that deepens with the bass.</td></tr>
+<tr><td><img src="Pictures/web/viz-orbital-arcs-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Orbital Arcs</th><td>A sphere of orbiting arcs pulsing out in shells, one for each part of the music.</td></tr>
+<tr><td><img src="Pictures/web/viz-ripple-dome-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ripple Dome</th><td>Rings ripple over a dome: the bass raises the waves and the treble speeds them up.</td></tr>
+<tr><td><img src="Pictures/web/viz-spiral-stair-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spiral Stair</th><td>A spiral staircase round an empty core, each step driven by the music.</td></tr>
+<tr><td><img src="Pictures/web/viz-tesseract-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Tesseract</th><td>A 4D hypercube turning through its extra dimension, seen as two wireframe cubes trading places.</td></tr>
+<tr><td><img src="Pictures/web/viz-cyclone-eye-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cyclone Eye</th><td>Hurricane arms spiral round a calm eye that opens and closes with the volume.</td></tr>
+<tr><td><img src="Pictures/web/viz-phyllo-sphere-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Phyllo Sphere</th><td>A dotted sphere tumbling on every axis as ripples roll pole to pole and the bass swells it.</td></tr>
+<tr><td><img src="Pictures/web/viz-cassini-split-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cassini Split</th><td>Nested loops that pinch and tear into triangles of lobes as the music gets louder.</td></tr>
+<tr><td><img src="Pictures/web/viz-chord-cardioid-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Chord Cardioid</th><td>String-art chords forming morphing cardioid shapes in two counter-rotating webs.</td></tr>
+<tr><td><img src="Pictures/web/viz-clifford-bloom-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Clifford Bloom</th><td>Strange-attractor orbits trailing long filaments, reshaping with the music.</td></tr>
 </tbody></table></div>
-<p>Beams, Lines &amp; Mirrors (14)</p>
+<p>Beams, Lines &amp; Mirrors (21)</p>
 <div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078592D7B87-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Crossed Lines</th><td>Beams drawn as crossing lines sweeping the frame (port of ldBeamCrossedLines).</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078CC9ECA4B-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Solaris 1</th><td>A sun-flare beam burst radiating from centre (style 1).</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078A89957E9-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Solaris 2</th><td>A sun-flare beam burst radiating from centre (style 2).</td></tr>
@@ -1456,12 +1585,52 @@ such as Tesseract, Galaxy Arms, Spiral Stair and Ocean Swell.</p>
 <tr><td><img src="Pictures/web/100000000000007800000078FEC8D201-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Lines 1</th><td>A mirror-symmetric straight-line beam pattern (style 1).</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000784B6BE94F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Lines 2</th><td>A mirror-symmetric straight-line beam pattern (style 2).</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078F62A914C-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mirror Rays</th><td>Rays radiating with mirror symmetry across the frame.</td></tr>
+<tr><td><img src="Pictures/web/viz-hypnotic-lines-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Hypnotic Lines</th><td>Twelve rainbow lines form a turning cylinder, star, wave or comb, morphing every few bars, colours jumping on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-pendulums-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pendulums 1</th><td>A fan of pendulums swings from the centre, drifting in and out of step, their arms lengthening as the music gets louder.</td></tr>
+<tr><td><img src="Pictures/web/viz-pod-1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pod 1</th><td>Four rays from the centre bend into curved streaks as they tumble, changing spin every other bar and colour each beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-pod-2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pod 2</th><td>Six spikes whip round a pulsing core in warm and cool colours, trailing the spin, which flips direction on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-rosace-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Rosace</th><td>Five dashed, wavy beams cross the centre in a spinning rosette, reshaping every two beats and changing colour on peaks.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-flip-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry Flip</th><td>Three fading trails driven by bass, beat and treble, mirrored across both axes; loud bass pulls them inward.</td></tr>
+<tr><td><img src="Pictures/web/viz-symmetry-rotate-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Symmetry Rotate</th><td>Three fading trails driven by bass, beat and treble, copied in a quarter-turn pinwheel; loud bass pulls them inward.</td></tr>
 </tbody></table></div>
-<p>Characters &amp; Novelty (4)</p>
+<p>Characters &amp; Novelty (14)</p>
 <div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/100000000000007800000078407E8B5D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Disco Stu</th><td>A dancing stick figure that performs shuffled dance moves to the music, ending each on a bass kick with crossfaded poses.</td></tr>
 <tr><td><img src="Pictures/web/100000000000007800000078731B4095-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Sunflower</th><td>A potted sunflower that dances to the music, using the same move-sequencing engine as Disco Stu.</td></tr>
 <tr><td><img src="Pictures/web/10000000000000780000007892174A4D-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Cactus</th><td>A potted saguaro cactus that dances to the music, sharing the dancing-figure engine.</td></tr>
 <tr><td><img src="Pictures/web/1000000000000078000000788DC3449F-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Lazer Lips</th><td>Two animated lip curves whose openness, spread and sibilance follow the audio - a lip-sync mouth.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-w1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing W1</th><td>A dancer with 11 moves, including a leap, who breathes idly when the music goes quiet.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-man-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Man</th><td>A streetwear dancer with disco points, hip swings, twists and shuffles.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-w2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing W2</th><td>A dancer with a bob haircut, whose moves include a moonwalk and a spin.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-mj-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing MJ</th><td>A dancer in a low fedora, short jacket, cropped trousers and loafers.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-bear-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Bear</th><td>A teddy bear with round paws, dancing on its short legs.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-w3-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing W3</th><td>A dancer in a black dress, working through 15 moves on the beat.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-alien-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Alien</th><td>A grey alien with a big egg-shaped head and long stick limbs.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-bird-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Bird</th><td>A crow-like bird dancing with its wings for arms.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-elf-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Elf</th><td>A Christmas elf in a floppy hat with a pom-pom, and pointed ears.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-santa-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Santa</th><td>Santa Claus with a round belly, flowing beard and fur-topped boots.</td></tr>
+</tbody></table></div>
+<p>Halloween (21)</p>
+<div class="table-wrap"><table class="media"><tbody><tr><td><img src="Pictures/web/viz-zombie-z1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Zombie Z1</th><td>A shambling zombie dancing ten moves.</td></tr>
+<tr><td><img src="Pictures/web/viz-ghost-g1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Ghost G1</th><td>A sheet ghost that hovers, swoops and fades in and out, banking as it moves.</td></tr>
+<tr><td><img src="Pictures/web/viz-pumpkin-p1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pumpkin P1</th><td>A candle-lit jack-o’-lantern on a curly vine that headbangs and cackles; its head can spin or pop off.</td></tr>
+<tr><td><img src="Pictures/web/viz-pumpkin-p2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Pumpkin P2</th><td>A pumpkin-headed stick dancer with 17 moves, its grin following a voice.</td></tr>
+<tr><td><img src="Pictures/web/viz-skull-s1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Skull S1</th><td>A 3D skull with expressive brows, red eyes that keep eye contact, and a talking jaw.</td></tr>
+<tr><td><img src="Pictures/web/viz-dancing-bones-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Dancing Bones</th><td>A full skeleton dancing 12 moves locked to the beat, standing and breathing in the quiet.</td></tr>
+<tr><td><img src="Pictures/web/viz-spider-2d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spider 2D</th><td>A purple spider on a silk thread, riding up and down it, swinging and spinning to the music.</td></tr>
+<tr><td><img src="Pictures/web/viz-spider-3d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Spider 3D</th><td>The same spider built from solid shapes, seen in three-quarter view.</td></tr>
+<tr><td><img src="Pictures/web/viz-bat-b1-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Bat B1</th><td>A bat that flaps, swoops and barrel-rolls, and sleeps upside down when the music stops.</td></tr>
+<tr><td><img src="Pictures/web/viz-bat-b2-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Bat B2</th><td>The same bat drawn as one continuous silhouette line, with big round eyes.</td></tr>
+<tr><td><img src="Pictures/web/viz-witch-2d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Witch 2D</th><td>A witch on a broomstick, hat and cape streaming, cackling on the strong beats.</td></tr>
+<tr><td><img src="Pictures/web/viz-witch-3d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Witch 3D</th><td>The same witch in solid shapes, looping and diving through depth.</td></tr>
+<tr><td><img src="Pictures/web/viz-black-cat-2d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Black Cat 2D</th><td>A soft cat that sways, hisses and prowls, and grooms its paw in the quiet.</td></tr>
+<tr><td><img src="Pictures/web/viz-black-cat-3d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Black Cat 3D</th><td>The same cat in three-quarter view, with jointed legs and a long tail.</td></tr>
+<tr><td><img src="Pictures/web/viz-vampire-2d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Vampire 2D</th><td>Dracula sweeps his cape open on the bass and bursts into a swarm of bats on a drop.</td></tr>
+<tr><td><img src="Pictures/web/viz-vampire-3d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Vampire 3D</th><td>A vampire whose cape, purple outside and red inside, wraps forward like wings.</td></tr>
+<tr><td><img src="Pictures/web/viz-mummy-2d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mummy 2D</th><td>A stiff, lurching mummy whose bandage unravels and whips round him.</td></tr>
+<tr><td><img src="Pictures/web/viz-mummy-3d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Mummy 3D</th><td>A shuffling mummy with bandages wound round solid limbs.</td></tr>
+<tr><td><img src="Pictures/web/viz-thing-2d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Thing 2D</th><td>A disembodied hand that walks on its fingertips, taps, snaps and waves.</td></tr>
+<tr><td><img src="Pictures/web/viz-thing-3d-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Thing 3D</th><td>The same hand in solid shapes, doing handsprings, backflips and pirouettes.</td></tr>
+<tr><td><img src="Pictures/web/viz-slimer-80.webp" width="40" height="40" alt="" loading="lazy" decoding="async"></td><th scope="row">Slimer</th><td>A green ghost that flies about, chomps to the bass and eats from his hands.</td></tr>
 </tbody></table></div>
 <p>The Visualizers can also have additional audio reactive image/colour
 effects added to them, configured from the Effects menu.</p>
@@ -1485,29 +1654,100 @@ or list the currently active effects using the “Active Effects” button.</p>
 their own adjustments, and the above are only an example of some of
 these effects.</p>
 <h2 id="visualizer-web-app"><span id="anchor-47"></span>Visualizer Web App<a href="#visualizer-web-app" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>The visualizer control mode also has a built in web server, allowing
-control of the visualizer player and audio reactive image/colour
-effects, all from your mobile or desktop web browser.</p>
-<p><img src="Pictures/web/10000001000004940000072AE57E9A29-536.webp" width="268" height="419" alt="" loading="lazy" decoding="async"> <img src="Pictures/web/10000001000004940000072CF8C07777-536.webp" width="268" height="420" alt="" loading="lazy" decoding="async"></p>
-<p>Playlists can be selected from the top right corner (or select “all” for
-the entire built in list), and also new playlists can be created by long
-pressing on a visualizer, then adding that visualizer to a new playlist,
-or adding it to an existing playlist. You can also assign a pad colour
-for the playlist item when using a MIDI APC40 MK2 or APC mini MK2. Items
-can be removed from a playlist by a long press, then select “remove”
-option. The playlist order can also be changed by selecting a
-visualizer, then hold and drag the item horizontally, then move the item
-to anywhere in the playlist.</p>
-<p>Entire playlists can be deleted (except for the built in “All” and
-“Classics” playlists) by using the bin icon to the right of the playlist
-selection drop down.</p>
-<p>Image and colour effects can also be added using the quick effect menu
-(3<sup>rd</sup> icon from the bottom left). See the playlist web server
-section of this manual on the effects popup, and also check out the
-effects section to see all the available effects.</p>
-<p>Note: Ensure you have the latest SD card image from our GitHub, or the
-preview images for the visualizers and effects will not be displayed,
-and will instead be shown as blank grid items.</p>
+<p>In visualizer control mode the cube serves the same web app as in
+playlist mode (see <a href="#playlist-player-web-app">Playlist Player Web
+App</a>), with the visualizers in its grid. Connect to it in the same way:
+join the cube’s network, then enter the cube’s IP address in your web
+browser. The cube shows its address in the bottom right corner of the LCD
+status bar. In WiFi or LAN Server mode it is normally 192.168.4.1; on
+your home network, your router gives the cube its address.</p>
+<a href="Pictures/webapp-visualizer.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-visualizer-1256.webp" width="628" height="650" alt="The web app in visualizer mode, with labels: the cube tabs, Delete playlist, the playlist list, the grid of visualizers, the status bar, and the Picture settings, Player settings and Effects buttons." loading="lazy" decoding="async"></a>
+<ul><li><strong>Visualizers</strong>: tap one to play it.</li><li><strong>Playlist</strong>: All has every visualizer. There are also the
+built-in playlists, such as Classics, and the playlists you make yourself
+(see <a href="#your-playlists">Your Playlists</a> below). The SD card
+contents for firmware 2.2 add WL Halloween, a playlist of the 21 Halloween
+visualizers.</li><li><strong>Picture settings and Effects</strong> work as in playlist mode: see
+<a href="#quick-image-settings">Picture Settings</a> and
+<a href="#quick-effect-settings">Effects Menu</a>. The player settings have
+a Visualizer tab and a BPM tab: see <a href="#visualizer-settings">Visualizer
+Settings</a> below.</li></ul>
+<p>Note: make sure your SD card has the latest SD card contents from our
+GitHub (<a href="https://github.com/Wickedlasers/mk2SDContent" rel="external">MK2 SD Card
+Contents</a>, see <a href="#sd-card-information">SD Card Information</a>),
+or the visualizers and effects show as blank tiles instead of their
+previews.</p>
+<h3 id="your-playlists">Your Playlists<a href="#your-playlists" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>You can make your own playlists of visualizers, and change the built-in
+ones. Playlists are kept on the SD card, so the card must be in the
+cube.</p>
+<p><strong>Add a visualizer to a playlist</strong>: press and hold the
+visualizer (on a computer, right-click it). This popup opens:</p>
+<a href="Pictures/webapp-add-to-playlist.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-add-to-playlist-1256.webp" width="628" height="305" alt="The popup that adds a visualizer to a playlist, with labels: your playlists, each marked built-in, custom or customised; New playlist with a Create button; Pad colour; Remove; Close." loading="lazy" decoding="async"></a>
+<ul><li><strong>Playlists</strong>: tap one to add the visualizer to it. A playlist
+holds up to 128 visualizers, each once. Each is marked built-in, custom
+(one you made) or customised (a built-in playlist you changed).</li><li><strong>New playlist</strong>: type a name and press Create. The new
+playlist starts with this visualizer in it.</li><li><strong>Pad colour</strong>: shown when a playlist is chosen on the main page
+(not All). It is the colour of this visualizer’s pad on an APC40 MK2 or APC
+mini MK2 in that playlist. Tap it for the colours; Default lets the cube
+choose.</li><li><strong>Remove from</strong>: takes the visualizer out of the playlist chosen
+on the main page, when that is one of yours or a built-in one you changed.
+A playlist keeps at least one visualizer: to remove the last one, delete
+the playlist.</li></ul>
+<a href="Pictures/webapp-pad-colours.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-pad-colours-1256.webp" width="628" height="402" alt="The same popup with the pad colours open: Default, Red, Green, Blue, Yellow and more. Tap a colour to set it; Default lets the cube choose." loading="lazy" decoding="async"></a>
+<p><strong>Move a visualizer</strong>: choose the playlist on the main page
+(not All), press a visualizer, and slide it sideways before the popup
+opens. The visualizer follows your finger: drop it where it should go in
+the playlist. With a mouse, drag it in any direction.</p>
+<p><strong>Change a built-in playlist</strong>: add, move or colour its
+visualizers in the same way. The cube keeps your changed copy on the SD
+card, marked customised, and the built-in one stays in the firmware.</p>
+<p><strong>Delete a playlist</strong>: choose it on the main page and press
+the bin beside the playlist list, then Delete. For a built-in playlist you
+changed, the button resets it instead: it puts the playlist back as it
+came. All and the built-in playlists cannot be deleted.</p>
+<a href="Pictures/webapp-delete-playlist.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-delete-playlist-1256.webp" width="628" height="91" alt="The delete question for a playlist, with Cancel and Delete buttons. For a built-in playlist you changed, the button is Reset." loading="lazy" decoding="async"></a>
+<h3 id="visualizer-settings">Visualizer Settings<a href="#visualizer-settings" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>The settings button opens the player settings. In visualizer control
+mode the first tab is called Visualizer, and a BPM tab is added. The Audio
+and General tabs are as in playlist mode, except that Animated Previews
+is only there in playlist mode: see
+<a href="#quick-player-settings">Player Settings</a>. Press Save to keep the
+changes.</p>
+<a href="Pictures/webapp-settings-visualizer.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-settings-visualizer-1400.webp" width="700" height="193" alt="The Visualizer tab, with labels: Save, Shuffle, Cue Delay and Fade Time." loading="lazy" decoding="async"></a>
+<p><strong>Visualizer</strong>: Shuffle, Cue Delay and Fade Time, as in the
+Playlist tab, for the visualizers of the playlist chosen.</p>
+<a href="Pictures/webapp-settings-bpm.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webapp-settings-bpm-1400.webp" width="700" height="241" alt="The BPM tab, with labels: Tempo, 60 to 250 BPM; the beat display; Sync Beat; Tap BPM." loading="lazy" decoding="async"></a>
+<p><strong>BPM</strong>: most visualizers move to the music’s tempo.</p>
+<ul><li><strong>Tempo</strong>: the tempo the visualizers move to, 60 to 250 BPM,
+as in the LCD’s <a href="#tempo-settings">Tempo</a> menu.</li><li><strong>Beat display</strong>: the cube’s beat. The BPM pulses on every
+beat, with one block per beat of the bar (beat 1 in orange) and a cursor
+sweeping across them, so you can see whether the cube keeps time with the
+music.</li><li><strong>Tap BPM</strong>: tap along with the music to set the tempo. Your
+device times the taps, so the WiFi delay does not count.</li><li><strong>Sync Beat</strong>: press it on the first beat of a bar to line the
+cube’s beat up with the music.</li></ul>
+<h3 id="multi-cube-control">Multi-Cube Control<a href="#multi-cube-control" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<p>Firmware 2.1 and later can control several Ultra MK2 / Pro cubes from one
+phone, tablet or computer, when one cube is in LAN or WiFi Server mode and
+the others are in LAN or WiFi Client mode, connected to it. Each cube found
+on the network gets a tab along the top of the web app, named by its model
+and the last 4 digits of its MAC address.</p>
+<p>The most convenient configuration is one cube in WiFi Server mode and all
+the other cubes in WiFi Client mode. The client cubes then need the server
+cube’s SSID and password, so they can connect to it and be found by it. On
+firmware 2.1 and later, a cube in WiFi Server mode takes up to 8 phones,
+computers and cubes at once.</p>
+<ol><li>Set one cube to WiFi Server. In Settings→Network→WiFi Server, make a
+note of its SSID and password.</li><li>Set each of the other cubes to WiFi Client, and in
+Settings→Network→WiFi Client set its SSID and password to the server
+cube’s. On firmware 2.1 and later, a cube set to WiFi Client that has never
+been given WiFi details joins a WiFi Server cube that still has its factory
+network name and password, straight out of the box.</li><li>Make sure every cube is in Visualizer or Playlist control mode. They can
+be in either mode and still be controlled from your device.</li><li>Power on the WiFi Server cube, then each client cube, and watch for its
+blue LED to go from flashing to solid: it has connected to the server
+cube.</li><li>Connect your phone, tablet or computer to the WiFi Server cube, and
+enter the server cube’s IP address in its web browser (normally
+192.168.4.1), shown on the server cube’s LCD.</li><li>Choose the cube to control from the tabs along the top. If a cube is
+missing, press the Rescan button at the right of the tabs.</li></ol>
 <h2 id="artnet-control-mode"><span id="anchor-48"></span>ArtNet Control Mode<a href="#artnet-control-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <h3 id="setting-the-control-mode-to-artnet"><span id="anchor-49"></span>Setting the control mode to ArtNet<a href="#setting-the-control-mode-to-artnet" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>The ArtNet mode can be selected by going into Control Mode and selecting
@@ -2420,7 +2660,8 @@ MK2 and Pro over the network, with the cube in LaserOS control mode. Our
 protocol specification describes the commands and data packets and
 includes a complete example sender in Python:
 <a href="/developers/udp-streaming-protocol.pdf">UDP DAC
-Streaming Protocol Specification (PDF, 200 KB)</a>.</p>
+Streaming Protocol Specification (PDF, 210 KB)</a>. Firmware 2.2 changed
+how the cube answers some of its commands: see the specification.</p>
 <h2 id="filming-lasers">Filming Lasers<a href="#filming-lasers" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <ul><li>Keep the camera out of the projection area: a beam straight into the
 lens can damage its sensor. A keep-out zone can keep the beams away from a
@@ -2447,23 +2688,47 @@ remain greyed out.</p></blockquote>
 CubeOS stand-alone image settings are made available:</p></blockquote>
 <img src="Pictures/web/10000000000000F00000014030C31327_hu_1da3e1ce2e9a6b49-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async">
 <h3 id="image-setup"><span id="anchor-72"></span><span id="anchor-73"></span><span id="anchor-74"></span><span id="anchor-75"></span>Image Setup<a href="#image-setup" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140160D7C1D-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140A41929A1-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140A6D29B68-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<blockquote><p>Image power, rotation, X-size, Y-size, X-Flip, Y-Flip, X-Position and
-Y-Position are configurable. When X and Y size are at 100%, the
-position sliders have no effect as they cannot move the full-size
-image beyond the full-size projection area.</p></blockquote>
-<blockquote><p>The X and Y position sliders have a range of -128 to +128</p></blockquote>
-<blockquote><p>If the X and Y image size are reduced to 50%, then the X and Y
-position sliders will move the image with settings between -64 and +64</p></blockquote>
-<blockquote><p>A good way to get a feel for how the image size affects the amount of
-positional movement available, is to enable the RGB-THold test pattern
-(see Test Patterns below) then adjust image size and position in the
-Image Setup menu.</p></blockquote>
+<p>Image Setup holds the picture’s power, zoom and rotation, its size, flips
+and position, the keystone correction, and a grid to line the picture up.
+Each control has its own icon.</p>
+<div class="row"><div class="col"><img src="Pictures/web/cubeos-image-setup-1-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-image-setup-2-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-image-setup-3-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
+<ul><li><strong>Power</strong>: the projection power, 0 to 100%.</li><li><strong>Zoom</strong>: the picture size, 10 to 100%.</li><li><strong>Rotation</strong>: up to 90° either way.</li><li><strong>Lock X-Y</strong>: with it on, Y Size follows X Size, and the Y Size
+slider is greyed.</li><li><strong>X Size and Y Size</strong>: the picture’s width and height, 10 to
+100%.</li><li><strong>Flip X and Flip Y</strong>: mirror the picture.</li><li><strong>X Position and Y Position</strong>: move the picture, from -128 to
++128. When X and Y size are at 100%, the position sliders have no effect,
+as they cannot move the full-size image beyond the full-size projection
+area. If the X and Y size are reduced to 50%, the position sliders move the
+image with settings between -64 and +64.</li></ul>
+<div class="row"><div class="col"><img src="Pictures/web/cubeos-image-setup-4-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-image-setup-5-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
+<ul><li><strong>Keystone H and Keystone V</strong>: keystone correction, below.</li><li><strong>Show Grid</strong>: projects a square, to line the picture up. It
+stays off while a test pattern is showing, and goes off when you leave
+Image Setup.</li><li><strong>Defaults</strong>: sets every Image Setup setting back to its
+default, Zoom and keystone included. Show Grid stays as it is.</li></ul>
+<p>Keystone H, Keystone V and Show Grid are new in firmware 2.2.</p>
+<p>A good way to get a feel for how the image size affects the amount of
+positional movement available is to turn on Show Grid (or the RGB THold
+test pattern, see <a href="#test-patterns">Test Patterns</a> below), then
+adjust the image size and position.</p>
+<h4 id="keystone-correction">Keystone Correction<a href="#keystone-correction" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
+<p>Projecting onto a wall the cube isn’t facing straight on turns a square
+into a trapezoid. Keystone correction reshapes the picture so it lands
+square: horizontally (Keystone H), vertically (Keystone V) or both, up to
+45° each way.</p>
+<ol><li>Open Settings→Projection→Image Setup.</li><li>Turn on Show Grid: the cube projects a square.</li><li>Turn Keystone H and Keystone V until the square looks square on the
+wall.</li><li>If the square comes out a little wide or narrow, adjust X Size or Y
+Size.</li></ol>
+<p>The picture gets a little smaller so it stays inside the scan area: about
+90% of full size at 15°, 83% at 30° and 77% at 45°. Size, position and
+rotation still act on the picture as the audience sees it, and safety zones
+stay put in the room. The web app’s Keystone pad does the same from your
+phone: see <a href="#quick-image-settings">Picture Settings</a>. In LaserOS
+control mode, use the keystone corners in LaserOS instead (see
+<a href="#image-settings-in-laseros">Image Settings in LaserOS</a>).</p>
 <h3 id="colour-balance"><span id="anchor-76"></span>Colour Balance<a href="#colour-balance" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001404EE66917-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140EED9CFB7-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140470661B3-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
+<div class="row"><div class="col"><img src="Pictures/web/10000000000000F0000001404EE66917-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-colour-balance-min-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/cubeos-colour-balance-gamma-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <blockquote><p>Colour balance settings allow for fine adjustments of maximum and
-minimum outputs for each colour laser, plus the gamma curve for each.
-The default values should be adequate for most situations, but
+minimum outputs for each colour laser, plus one gamma curve for all three.
+The minimum outputs go up to 20%. The default values should be adequate for most situations, but
 adjustments are available to allow for precise colour matching of
 multiple projectors.</p></blockquote>
 <h3 id="safety-zone"><span id="anchor-77"></span>Safety Zone<a href="#safety-zone" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
@@ -2495,7 +2760,7 @@ located.</p>
 <h3 id="test-patterns"><span id="anchor-78"></span>Test Patterns<a href="#test-patterns" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140BE68634B-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001403BECC7E5-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <blockquote><p>The built-in test patterns are provided to verify correct operation of
-the lasers and the scanning system. The RGB Thold pattern is a low
+the lasers and the scanning system. The RGB THold pattern is a low
 brightness one, used for factory setting of the internal laser diode
 driver. It can also be useful for setting up projectors on site as it
 has a border that shows the projected image size. Note that this is
@@ -2648,7 +2913,7 @@ addresses, otherwise your home router (or network switch connected to
 your home router) will provide the IP address automatically.</p>
 <h4 id="lan-client-mode-customisations"><span id="anchor-92"></span>LAN Client Mode Customisations<a href="#lan-client-mode-customisations" class="anchor" aria-hidden="true" tabindex="-1">#</a></h4>
 <p>IP (Address) Mode - Auto IP / Static IP</p>
-<p>Auto mode. Uses DHCP server if present, or AIPIPA.</p>
+<p>Auto mode. Uses DHCP server if present, or APIPA.</p>
 <p>Static IP. Manual configuration of IP Address, Net Mask and Gateway</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140A6F2D637-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014062E83824-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014035799B1B-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F00000014076342E69-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
@@ -2678,10 +2943,12 @@ Mask</p>
 <p>The example images below show the manual WiFi server IP address and net
 mask entry</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140E4904C62-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001402613E951-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<p>The WiFi server page also has a “WiFi Scan” button, which when pressed
-will display a channel list showing other devices using the current
-2.4GHz wireless channel range, and also automatically choose the
-quietest channel after the channel scan completes.</p>
+<p>The WiFi Server page also has a “WiFi Scan” button under WiFi Channel.
+When pressed, it shows “Scanning...” while it checks the 2.4GHz channels,
+then a channel list showing how busy each channel is with other devices,
+with the quietest one marked as the best channel. The cube then moves its
+WiFi server to that channel, so devices connected to it drop off for a
+moment and join again.</p>
 <p>If the channel list is mostly red then your location is congested due
 too many other 2.4GHz devices in operation (like in an apartment /
 building complex), and you should consider using the provided USB→LAN
@@ -2695,8 +2962,10 @@ content locally from SD card rather than over the network.</p>
 <p>Example images of the WiFi server scan button and popup channel list
 page</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140A5EF5ED7_hu_5b3b6eaf58cf3897-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140761019F4_hu_66816558c0c709f6-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F0000001407743B4A1_hu_1bac7579dfaeafb9-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
-<p>Note: The “WiFi Scan” button will be greyed out if you are not currently
-in WiFi server network connection mode.</p>
+<p>Note: The “WiFi Scan” button is greyed out unless the cube is running
+its WiFi server (WiFi Server connection mode, in any control mode except
+DMX and Laser Show) and WiFi Channel is set to Auto. It also stays greyed
+out while a scan is running.</p>
 <h3 id="wifi-client-mode"><span id="anchor-99"></span>WiFi Client Mode<a href="#wifi-client-mode" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p>For connecting to an existing WiFi router. Performance may vary
 depending on the quality of the router, amount of WiFi congestion and
@@ -2772,7 +3041,7 @@ compatibility with original WiFi cubes, battery percent display, and
 preview mode style.</p>
 <p>When the battery percentage option is enabled, the battery gauge in the
 status bar will periodically display the actual percent remaining in
-addition to the simple battery guage.</p>
+addition to the simple battery gauge.</p>
 <p>The preview mode style can also be set to 2D or 3D, which will affect
 the preview screen when it is opened from the main menu.</p>
 <div class="row"><div class="col"><img src="Pictures/web/10000000000000F000000140C8349908_hu_c2f8fbeacdff9d3d-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F000000140DD055768_hu_b25d214c86f7ea79-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div><div class="col"><img src="Pictures/web/10000000000000F00000014004AB72D8_hu_59a43fbb6d7d7388-240.webp" width="240" height="320" alt="" loading="lazy" decoding="async"></div></div>
@@ -3133,6 +3402,8 @@ slave devices.</p>
 Gigabytes</p>
 <p><strong>SD Card Free:</strong> shows the remaining capacity of the SD Card in
 Gigabytes</p>
+<p><strong>UI Mem Free:</strong> shows the free memory of the LCD menu, as a
+percentage.</p>
 <blockquote><p><strong>PKT RX Events:</strong> shows the number of received packets. When in
 LaserOS Control Mode, this will increase rapidly as each packet of
 projection data is received.</p></blockquote>
@@ -3156,9 +3427,15 @@ Ethernet connection will minimize this. Clicking on this entry will
 reset the count to zero.</p></blockquote>
 <blockquote><p><strong>MAC Address:</strong> MAC Address, unique to each Ultra MK2 / Pro
 LaserCube.</p></blockquote>
+<p>The Pro 3W and 6W have a clock (firmware 2.1 and later): set the date and
+time on the cube in Settings → Date &amp; Time, from the web app (Device Clock
+in <a href="#quick-player-settings">Player Settings</a>) or on the web admin
+page’s <a href="#general-tab">General Tab</a>. Status Info then also
+shows the date and time, and how many hours the laser diode has been
+used.</p>
 <h1 id="midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii"><span id="anchor-133"></span>MIDI Mapping using an APC40 MK2 or APC mini MK2<a href="#midi-mapping-using-an-apc40-mk-ii-or-apc-mini-mk-ii" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The Ultra MK2 / Pro is capable of being controlled directly using an
-APC40 MK2 or an APC mini MK2 (others will be added TBD.) connected to the
+APC40 MK2 or an APC mini MK2 (support for others will be added later) connected to the
 USB port on the rear of the unit.</p>
 <p>In order for any MIDI mapping to be saved, an SD card must be inserted
 with the correct path to the settings folder present on the card. The
@@ -3198,7 +3475,9 @@ green.</p>
 the previous function will be un-mapped and re-assigned to the current
 UI slider.</p>
 <p>Almost all sliders in the LaserCube’s menu UI can be assigned to an
-external APC Dial or Fader.</p>
+external APC Dial or Fader. Since firmware 2.2, the Colour Balance and
+Safety Zone sliders can’t be assigned, and links made to them on older
+firmware stop working.</p>
 <p>Note: Faders on an APC40 are absolute controls and will always override
 the slider value when moved, unlike APC dials which are relative
 adjustment control with no physical end stops.</p>
@@ -3239,6 +3518,11 @@ colour drop down. Un-Linking is done by long pressing on a UI element
 and selecting “Unlink” from the context menu.</p>
 <p>MIDI mapped buttons / switches will also show in yellow on the LCD
 instead of a blue colour.</p>
+<p>Since firmware 2.2, the Safety Zone switches can’t be linked either.
+After updating from older firmware, link the Enable switch of the
+<a href="#test-patterns">Test Patterns</a> again, to the same APC button: its
+old link no longer finds it, and linking the same button again replaces
+the old link.</p>
 <p>The images below show the device in playlist control mode with it’s play
 button MIDI mapped to an APC button. If the APC button selected has an
 RGB LED associated with it then the button will light up on the APC with
@@ -3257,7 +3541,7 @@ currently selected item from the drop down to a button on the APC using
 the “Link MIDI Note” button. Previously linked items can also be
 un-linked using the same procedure of selecting the drop down item and
 then long pressing to bring up the context menu, followed by selecting
-the “UnLink MIDI Note” option.</p>
+the “Unlink MIDI Note” option.</p>
 <p>With an APC40 or APC mini connected, there are a total of 15 different
 colours selectable during the MIDI mapping process.</p>
 <p>Note: Some APC buttons do not contain an RGB LED, so consult the
@@ -3293,30 +3577,50 @@ also performing remote firmware updates.</p>
 <p>The Web Admin Page has 3 Menu sections:</p>
 <ul><li><a href="#home-menu"><strong>Home Menu</strong></a>, showing general info.</li><li><a href="#config-menu"><strong>Config Menu</strong></a>, for network and mode settings.</li><li><a href="#firmware-update"><strong>Update Menu</strong></a>, for remote firmware updates.</li></ul>
 <h2 id="home-menu"><span id="anchor-141"></span>Home Menu<a href="#home-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
-<p>The Home Menu shows the Model Name, Interlock type, firmware version and
-Firmware Active Partition. There are 2 partitions to allow fall back to
-a good working state should an update fail or be interrupted.</p>
+<p>The Home Menu shows the Model Name and Number, the Interlock Mode, the
+MAC ID, the Firmware Version and the Active Partition. There are 2
+partitions to allow fall back to a good working state should an update fail
+or be interrupted. The bar below the menu, shown on every page, gives the
+firmware version, network mode, active partition, battery level, interlock
+state and temperature.</p>
+<a href="Pictures/webadmin-home.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webadmin-home-1000.webp" width="500" height="578" alt="The web admin Home page on firmware 2.2: the HOME, CONFIG and UPDATE menu, the bar with firmware, mode, partition, battery, interlock and temperature, and the cube’s model name and number, interlock mode, MAC ID, firmware version and active partition." loading="lazy" decoding="async"></a>
 <h2 id="config-menu"><span id="anchor-142"></span><span id="anchor-143"></span>Config Menu<a href="#config-menu" class="anchor" aria-hidden="true" tabindex="-1">#</a></h2>
 <p>The Config Menu has 3 tabs, for network set-up and mode selection:</p>
-<ul><li><strong>WiFi Tab</strong>, for Wireless Connection Settings</li><li><strong>LAN Tab</strong>, for Wired Connection Settings</li><li><strong>General Tab</strong>, for Connection Mode Selection</li></ul>
+<ul><li><strong>WiFi Tab</strong>, for Wireless Connection Settings</li><li><strong>LAN Tab</strong>, for Wired Connection Settings</li><li><strong>General Tab</strong>, for Network Mode Selection and the Date &amp; Time</li></ul>
 <h3 id="wifi-tab"><span id="anchor-144"></span><span id="anchor-145"></span>WiFi Tab<a href="#wifi-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<a href="Pictures/webadmin-wifi.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webadmin-wifi-1120.webp" width="560" height="565" alt="The web admin WiFi tab: WiFi Access Point Config (WiFi Channel, Channel Bandwidth, IP Address, Subnet Mask, SSID and Password) and WiFi Client Config (SSID and Password)." loading="lazy" decoding="async"></a>
 <p>Where WiFi interference is present, the LaserCube WiFi channel can be
-changed.</p>
+changed, and the Channel Bandwidth set to 20 MHz instead of the default
+40 MHz. Either change briefly disconnects your device from the cube’s
+WiFi.</p>
 <p>The IP address and Subnet can be set for when the LaserCube is operating
 in WiFi Server mode, where it provides a DHCP service.</p>
 <p>The WiFi Server mode default SSID and Password can also be changed.</p>
 <p>If connecting to a router in WiFi Client mode, the SSID and WiFi
 password can be entered directly. This is useful if the router does not
 support WPS.</p>
+<p>After changing a setting, press the Update button that appears next to it
+to save it to the cube.</p>
 <h3 id="lan-tab"><span id="anchor-146"></span><span id="anchor-147"></span>LAN Tab<a href="#lan-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
+<a href="Pictures/webadmin-lan.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webadmin-lan-1120.webp" width="560" height="355" alt="The web admin LAN tab: LAN Server Config with IP Address and Subnet Mask." loading="lazy" decoding="async"></a>
 <p>The IP address and subnet can be set for when the LaserCube is operating
 in LAN Server mode, where it provides a DHCP service.</p>
 <h3 id="general-tab"><span id="anchor-148"></span><span id="anchor-149"></span>General Tab<a href="#general-tab" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
-<p>The network operating mode can be set from the drop down tab.</p>
-<p>The LaserCube will reboot after changing the mode.</p>
+<a href="Pictures/webadmin-general.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webadmin-general-1120.webp" width="560" height="344" alt="The web admin General tab: Network Mode and Date &amp; Time with a Sync from this device button." loading="lazy" decoding="async"></a>
+<p>The network operating mode can be set from the Network Mode drop down,
+then Update. On firmware 2.1 and later the LaserCube switches to the new
+mode about a second later: reconnect to it at its new address and reload
+the page. On older firmware the page only saves the new mode: it takes
+effect the next time the cube restarts.</p>
+<p>When the cube has a clock (the Pro), Date &amp; Time shows it, and Sync
+from this device sets it from your phone or computer. The page also sets it
+by itself when the cube’s clock has been lost or is more than a minute
+out.</p>
 <h1 id="firmware-update"><span id="anchor-150"></span>Firmware Update<a href="#firmware-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>The boot screen shows the firmware version when the LaserCube starts
-(firmware 2.0 and later).</p>
+(firmware 2.0 and later). This manual is written for firmware 2.2
+(October 2026); the SD card contents for each release include its
+release notes (Lasercube/Firmware/Firmware Release Info.txt).</p>
 <p>There are two ways to update. The LaserOS app doesn’t update the Ultra MK2 or Pro: its own firmware update is for
 the LaserCube WiFi and the first-generation Ultra.</p>
 <p>1. Via SD Card. This is the preferred update method. If the SD Card has
@@ -3341,7 +3645,12 @@ most recent OTA update binary from the <strong>Lasercube/Firmware</strong> folde
 <p>Password: <strong>Laser2020</strong></p>
 <p>Go to the Update Tab. Click Choose File and select the update binary.</p>
 <p>Click Upload.</p>
-<p>Wait for the update to complete and the LaserCube reboot.</p>
+<p>Wait for the update to complete and the LaserCube to reboot.</p>
+<a href="Pictures/webadmin-update.jpg" target="_blank" rel="noopener"><img class="app-shot" src="Pictures/web/webadmin-update-1120.webp" width="560" height="344" alt="The web admin Update page: Firmware Updates, with Choose file and Upload for the firmware file." loading="lazy" decoding="async"></a>
+<p>On firmware 2.2 and later, if an upload from the web page fails part way,
+for example when the connection drops, the cube shows Update Failed!,
+restarts into the firmware it already had and says that the previous
+firmware was kept.</p>
 <h1 id="factory-reset-procedure"><span id="anchor-151"></span>Factory Reset Procedure<a href="#factory-reset-procedure" class="anchor" aria-hidden="true" tabindex="-1">#</a></h1>
 <p>If you need to reset the LaserCube back to its factory firmware
 defaults, you can perform the factory reset as shown below. This should
@@ -3711,7 +4020,10 @@ cube’s own Image Setup, Colour Balance and Safety Zone are greyed out in
 this mode: that is normal.</li><li>The cube’s other modes: on the cube, open Settings → Projection →
 Image Setup. At 100% X and Y size, the position sliders have no effect:
 make the picture smaller first (see <a href="#image-setup">Image
-Setup</a>).</li><li>DMX or ArtNet mode: depending on the access mode, the desk’s channels
+Setup</a>).</li><li>Not square on a wall at an angle (a trapezoid): in the cube’s other
+modes, use Keystone H and Keystone V in Image Setup (firmware 2.2 and later;
+see <a href="#keystone-correction">Keystone Correction</a>); in LaserOS
+control mode, LaserOS’s keystone corners.</li><li>DMX or ArtNet mode: depending on the access mode, the desk’s channels
 6 to 11 also set the size, mirroring, rotation and position (see <a href="#dmxart-net-channel-layout">DMX/ArtNet
 Channel Layout</a>).</li><li>Upside down or mirrored: use Flip X and Flip Y.</li></ul>
 <p>The beam block and the 3&nbsp;m rule in
@@ -3852,7 +4164,9 @@ playlists and MIDI mappings from the old folder into the new one.</li><li>With t
 asks to update the firmware, accept.</li><li>Don’t switch the cube off during the update. It takes one to two
 minutes and shows its progress in percent. When the screen says F/W
 Updated, press OK.</li></ol>
-<p>The other way, by hand through the web admin page, is in <a href="#firmware-update">Firmware Update</a>.</p>
+<p>The other way, by hand through the web admin page, is in <a href="#firmware-update">Firmware Update</a>.
+On firmware 2.2 and later, an upload there that fails part way leaves the
+cube on the firmware it already had.</p>
 <h3 id="web-app-images-missing-after-an-update">Web App Images Missing After an Update<a href="#web-app-images-missing-after-an-update" class="anchor" aria-hidden="true" tabindex="-1">#</a></h3>
 <p><strong>Cause:</strong> the SD card doesn’t have all of the latest SD
 card contents, for example when only the firmware file was copied to

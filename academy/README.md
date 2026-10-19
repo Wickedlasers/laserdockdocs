@@ -9,12 +9,13 @@ no build step, no server, no database, no accounts, no analytics.
   Cube Link, DMX/Art-Net, MIDI; 8 lessons, 29 quiz questions in 10 topics). It builds on start-here and links back to it.
 - `connect/index.html`: built as the third course, "Connect, update and troubleshoot your Ultra MK2 or Pro" (the four connection
   modes, APIPA, status bar and Status Info, drop-outs, the web admin page, firmware updates, factory reset, power and heat;
-  8 lessons, 34 quiz questions in 10 topics; version 1.3). The web admin page is there in LaserOS control mode (Paul, LaserDock,
-  2026-10-07); the manual's old screenshots of it showed a LaserCube WiFi, so they were left out until new ones exist. Firmware
+  8 lessons, 34 quiz questions in 10 topics; version 1.4 since firmware 2.2). The web admin page is there in LaserOS control
+  mode (Paul, LaserDock, 2026-10-07); the manual's old screenshots of it showed a LaserCube WiFi, so they were left out until
+  new ones existed (LaserDock's manual v1.6 for firmware 2.2 has them; the wiki manual shows them since its firmware 2.2 update). Firmware
   2.1 and later change the connection mode without a restart (2.1 release notes in mk2SDContent, LaserDock manual v1.5 p.83);
-  older firmware asks to restart. Firmware updates: two ways, the SD card and the web admin page. LaserDock's manual v1.5 also
-  lists "Via LaserOS", but the LaserOS app (0.18.1, checked in its source 2026-10-12) only carries the LaserCube WiFi's update
-  and never offers one to an Ultra MK2 or Pro, so the wiki manual and this course (version 1.3) leave it out: don't put it
+  older firmware asks to restart. Firmware updates: two ways, the SD card and the web admin page. LaserDock's manuals v1.5 and v1.6
+  list "Via LaserOS", but the LaserOS app (0.18.1, checked in its source 2026-10-12) only carries the LaserCube WiFi's update
+  and never offers one to an Ultra MK2 or Pro, so the wiki manual and this course (since version 1.3) leave it out: don't put it
   back from a newer LaserDock manual unless a LaserOS release adds Ultra MK2/Pro updates.
   Its power and heat facts are in the manual's "Power, Battery and Temperature"
   section (owner decisions, added with the course). For one computer on a direct cable it leads with LAN server (owner

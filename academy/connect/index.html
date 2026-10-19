@@ -87,7 +87,7 @@
   </div>
 </header>
 
-<main id="main" data-course="connect" data-version="1.3" data-title="Connect, update and troubleshoot your Ultra MK2 or Pro" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
+<main id="main" data-course="connect" data-version="1.4" data-title="Connect, update and troubleshoot your Ultra MK2 or Pro" data-subtitle="LaserCube Ultra MK2 & Pro  ·  Intermediate">
 
   <section class="hero stage">
     <div class="container">
@@ -720,8 +720,8 @@
     <li>In LaserOS control mode, the cube has a web admin page (the manual calls it legacy) for some of its network settings and for firmware updates. In Playlist and Visualizer mode, the cube’s address opens that mode’s web app instead.</li>
     <li>Note the IP address at the bottom right of the cube’s screen. On a phone or computer connected to the cube, type that address into a web browser.</li>
     <li>Log in with the user name <strong>LaserCubeUser</strong> and the password <strong>Laser2020</strong>.</li>
-    <li><strong>Home:</strong> the model name, the interlock type, the firmware version and the active firmware partition. The cube has two partitions, so it can fall back to a working state if an update fails or is interrupted.</li>
-    <li><strong>Config → WiFi:</strong> the WiFi channel, WiFi Server mode’s address, subnet, network name and password, and your router’s network name and password for WiFi Client mode. <strong>Config → LAN:</strong> the address and subnet for LAN Server mode. <strong>Config → General:</strong> the network mode. The manual says the cube reboots after you change the mode on this page. (On the cube itself, Settings → Connection switches without a restart on firmware 2.1 and later: lesson 1.)</li>
+    <li><strong>Home:</strong> the model name and number, the interlock mode, the MAC ID, the firmware version and the active firmware partition. The cube has two partitions, so it can fall back to a working state if an update fails or is interrupted. A bar on every page shows the firmware version, network mode, partition, battery, interlock and temperature.</li>
+    <li><strong>Config → WiFi:</strong> the WiFi channel and channel bandwidth (20 or 40&nbsp;MHz), WiFi Server mode’s address, subnet, network name and password, and your router’s network name and password for WiFi Client mode. Press the Update button next to a setting to save it. <strong>Config → LAN:</strong> the address and subnet for LAN Server mode. <strong>Config → General:</strong> the network mode, and on the Pro the date and time (firmware 2.1 and later). On firmware 2.1 and later the cube switches to the new network mode about a second later: reconnect at its new address and reload the page. Older firmware only saves the new mode: it takes effect the next time the cube restarts.</li>
     <li><strong>Update:</strong> firmware updates by hand (below).</li>
   </ul>
 
@@ -729,7 +729,7 @@
   <p>The boot screen shows the firmware version when the cube starts (firmware 2.0 and later). The LaserOS app doesn’t update the Ultra MK2 or Pro: its update button is for the LaserCube WiFi and the first-generation Ultra.</p>
   <ul class="points">
     <li><strong>From the SD card</strong>, the manual’s preferred way: when the card has newer firmware, the cube asks whether to update. The latest card contents, with the newest firmware, are on <a class="link" href="https://github.com/Wickedlasers/mk2SDContent" target="_blank" rel="noopener">GitHub</a>. Step by step below.</li>
-    <li><strong>By hand, through the web admin page:</strong> download the newest update file from the Lasercube/Firmware folder on the same GitHub page. Put the cube in LaserOS control mode and WiFi Server mode, and join its network. In a browser, open 192.168.4.1 (the address the manual gives) and log in. On the Update page, click Choose File, pick the update file and click Upload. Wait until the update finishes and the cube restarts.</li>
+    <li><strong>By hand, through the web admin page:</strong> download the newest update file from the Lasercube/Firmware folder on the same GitHub page. Put the cube in LaserOS control mode and WiFi Server mode, and join its network. In a browser, open 192.168.4.1 (the address the manual gives) and log in. On the Update page, click Choose File, pick the update file and click Upload. Wait until the update finishes and the cube restarts. On firmware 2.2 and later, if the upload fails part way, the cube restarts into the firmware it already had and says so.</li>
   </ul>
 
   <h3>Updating from the SD card, step by step</h3>
