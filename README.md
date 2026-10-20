@@ -170,6 +170,12 @@ edit it by hand.
 - **The search code is a copy of the homepage's** (it indexes this page's own DOM instead of
   fetching it, and closes the dialog when a result on this page is picked). Function and variable
   names match the homepage's, so a fix can be copied across; see "Shared with the manual" above.
+- **3D models (`cad/`)**, linked from the manual's "3D Models for Mounts and Cases" (`#outside-3d-models`, under
+  Hardware Installation): one ZIP per cube with an outside-only STEP file and a README.txt (October 2026). The Ultra MK2
+  and WiFi files are marked approximate in their names, their README and the manual. They are built outside this repo
+  from LaserDock's design files (which never go in this repo); to update one, replace the ZIP in place under the same
+  name (or rename it and its link together) and update the size in the manual. A future merge of LaserDock's manual
+  must keep this section.
 
 ## 404 page (`404.html`)
 
