@@ -883,6 +883,8 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   function compact(s) { return s.replace(/[^a-z0-9]+/g, ""); }
   function esc(s) { return s.replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  // Words people search for that a manual section never uses itself: searched, never shown in its snippet.
+  var WORDS = { "making-a-beam-with-ai": "chatgpt chat gpt claude gemini copilot chatbot assistant" };
   var STOP = {};
   // "lasercube", "laser" and "cube" are in almost every section, so they only add noise.
   "a an and are can cannot cant cube do does doesnt dont for from how i in is isnt it its laser lasercube me my not of on or the to what when where which why with wont you your".split(" ").forEach(function (w) { STOP[w] = 1; });
@@ -894,7 +896,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   }
 
   var videoIndex = VIDEOS.map(function (v) { var t = norm(v[1] + " " + v[2]); return { id: v[0], title: v[1], t: t, tc: compact(t) }; });
-  var pageIndex = PAGES.map(function (p) { var t = norm(p.slice(2).join(" ")); return { group: p[0], href: p[1], title: p[2], path: p[3], t: t, tc: compact(t), k: norm(p[4]), nt: norm(p[2]) }; });
+  var pageIndex = PAGES.map(function (p) { var t = norm(p.slice(2).join(" ")); return { group: p[0], href: p[1], title: p[2], path: p[3], t: t, tc: compact(t), k: norm(p[4]), nt: norm(p[2]), w: norm(p[5] || "") }; });
   var TUTORIAL_KEYS = pageIndex.filter(function (p) { return p.group === "Tutorials"; }).map(function (p) { return p.k; }).join(" ");
   function isKey(c, keys) { return c.term.length > 2 && c.start.test(keys); }
 
@@ -937,7 +939,7 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
       });
       out.forEach(function (e) {
         e.t = norm(e.title); e.tc = compact(e.t);
-        e.x = norm(e.text); e.xc = compact(e.x);
+        e.x = norm(e.text + (WORDS[e.id] ? " " + WORDS[e.id] : "")); e.xc = compact(e.x);
       });
       index = out;
     }).catch(function () { clearTimeout(timer); failed = true; loading = null; });
@@ -993,15 +995,18 @@ dialog.search::backdrop{background:rgba(5,5,10,.6);backdrop-filter:blur(3px)}
   function searchPages(ts) {
     var cs = compile(ts), res = [];
     pageIndex.forEach(function (p) {
-      var score = 0, key = false, named = true; // named: every word is in the page's own title ("laser mapping", "music"; "laser" alone is a stop word, so no)
+      var score = 0, key = false, named = true, topic = true; // topic: every word is one of the page's own topic words (p[5]); listed with the titled ones, after the manual
+      // named: every word is in the page's own title ("laser mapping", "music"; "laser" alone is a stop word, so no)
       for (var i = 0; i < cs.length; i++) {
         var s = cs[i].term.length > 2 ? titleScore(p.t, p.tc, cs[i]) : cs[i].word.test(p.t) ? 12 : 0;
         if (!s) return;
         score += s;
         if (isKey(cs[i], p.k)) key = true;
         if (!(cs[i].term.length > 2 ? cs[i].start.test(p.nt) : cs[i].word.test(p.nt))) named = false;
+        if (!(cs[i].term.length > 2 && cs[i].start.test(p.w))) topic = false;
       }
       if (key || (named && (cs.length > 1 || (cs[0].term.length > 4 && !STOP[cs[0].term])))) res.push({ p: p, score: score, named: !key });
+      else if (topic) res.push({ p: p, score: score, named: true }); // "touch designer", "laser show": the course after the manual
     });
     res.sort(function (a, b) { return b.score - a.score; });
     return res; // { p, score, named }: named = found by its title only, shown after the manual
